@@ -2,6 +2,8 @@
 
 This repository is the GitHub source of truth for Custommade Agency Int. B.V. operating workflows, governance, SOPs and system documentation.
 
+Start with [`docs/00_governance/CM_OPERATING_MODEL.md`](docs/00_governance/CM_OPERATING_MODEL.md) as the primary document for understanding the complete CM operating system.
+
 ## Business lanes
 
 ### 01 Master Boutique
