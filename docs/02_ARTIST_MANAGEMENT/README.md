@@ -8,6 +8,23 @@ De Artist Management-lane omvat artist-clients, management, Brandbook, Release S
 
 Lead intake → Fit Check → Brand Audit → Brandbook → Business Audit → strategy Scope → Proposal → contract/payment → Onboarding → uitvoering → delivery → review → Close-Out → Upsell/archive.
 
+
+## Execution layer
+
+De genummerde execution layer voor Artist Management bestaat uit:
+
+- `01_ARTIST_ONBOARDING_FLOW.md`
+- `02_BRAND_AUDIT_FLOW.md`
+- `03_ARTIST_BRANDBOOK_FLOW.md`
+- `04_ARTIST_ROADMAP_FLOW.md`
+- `05_RELEASE_STRATEGY_FLOW.md`
+- `06_MONTHLY_MANAGEMENT_FLOW.md`
+- `07_DEAL_NEGOTIATION_FLOW.md`
+- `08_BRAND_PARTNERSHIP_FLOW.md`
+- `09_ARTIST_OFFBOARDING_FLOW.md`
+
+Elke Workflow bevat Doel, Reikwijdte, Eigenaar, Inputs, Workflow stappen, Beslismomenten, Deliverables, KPI's, Escalaties en Outputs.
+
 ## Operationele regel
 
 Artistspecifieke bestanden en deliverables staan in Google Drive. Uitvoeringstaken staan in ClickUp. Deze repository bewaart alleen de operationele regels.
