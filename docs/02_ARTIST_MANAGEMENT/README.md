@@ -4,6 +4,11 @@
 
 De Artist Management-lane omvat artist-clients, management, Brandbook, Release Strategie, Business Audit, artist roadmaps, rights checks, projectmanagement en retainers.
 
+
+## Entrypoint
+
+Start met `02_ARTIST_MANAGEMENT_MAP.md` voor de volledige artist lifecycle, workflowvolgorde, SOP-koppeling, deliverables, ClickUp templates en documentstatus.
+
 ## Client lifecycle
 
 Lead intake → Fit Check → Brand Audit → Brandbook → Business Audit → strategy Scope → Proposal → contract/payment → Onboarding → uitvoering → delivery → review → Close-Out → Upsell/archive.
