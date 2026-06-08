@@ -2,22 +2,22 @@
 
 ## Doel
 
-Standaardiseert client onboarding door intake, documentcollectie, folderinrichting en workflowactivatie te bewaken.
+Standaardiseert client Onboarding door intake, documentcollectie, folderinrichting en Workflowactivatie te bewaken.
 
 ## Verantwoordelijkheden
 
 - Controleren of intake-informatie compleet en consistent is.
 - Verzamelen en registreren van benodigde documenten.
 - Voorbereiden van folderstructuur volgens CM-standaarden.
-- Activeren van relevante workflows, checklists en taken.
+- Activeren van relevante Workflows, checklists en taken.
 - Rapporteren van client readiness en ontbrekende items.
 
 ## Inputs
 
 - Client intakeformulier of intake-notities.
-- Contractstatus en goedgekeurde scope.
+- Contractstatus en goedgekeurde Scope.
 - Documentenlijst en benodigde assets.
-- CM onboarding playbook.
+- CM Onboarding Playbook.
 - Drive-, ClickUp- en communicatiestandaarden.
 
 ## Outputs
@@ -30,18 +30,18 @@ Standaardiseert client onboarding door intake, documentcollectie, folderinrichti
 
 ## Triggercondities
 
-- Nieuwe client is goedgekeurd voor onboarding.
+- Nieuwe client is goedgekeurd voor Onboarding.
 - Intake is ontvangen en moet worden gecontroleerd.
 - Documenten of folders ontbreken.
 - Kick-off of eerste deliverable nadert.
 
 ## Gebruikte tools
 
-- Client onboarding playbook
+- Client Onboarding Playbook
 - Google Drive
 - ClickUp
 - Gmail-templates
-- Document standards
+- Documentatiestandaarden
 
 ## Escalatieregels
 
@@ -53,7 +53,7 @@ Standaardiseert client onboarding door intake, documentcollectie, folderinrichti
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 
@@ -74,4 +74,4 @@ Standaardiseert client onboarding door intake, documentcollectie, folderinrichti
 
 - Controleer of een nieuwe client klaar is voor kick-off.
 - Maak een missing items list na intake.
-- Bereid de folder- en taakstructuur voor onboarding voor.
+- Bereid de folder- en taakstructuur voor Onboarding voor.

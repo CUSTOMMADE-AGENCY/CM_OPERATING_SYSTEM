@@ -1,29 +1,31 @@
 # ClickUp Structure
 
-## Purpose
+## Doel
 
-Define how execution, pipeline and tasks should be organized.
+Definieer hoe execution, Pipeline en taken worden georganiseerd.
 
-## Recommended spaces
+## Aanbevolen spaces
 
 - Master Boutique Pipeline.
 - Artist Management Clients.
 - Shared Operations.
 - Internal Governance.
 
-## Task rules
+## Regels
 
-- Every active workflow has an owner and due date.
-- Tasks link to GitHub SOPs for process and Drive folders for files.
-- Pipeline statuses should reflect real decision stages, not vague activity.
+- Elke actieve Workflow heeft een owner en deadline.
+- Taken bevatten context, source links, status en required evidence.
+- Pipeline-stages moeten beslismomenten en blockers zichtbaar maken.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

@@ -1,20 +1,20 @@
 # Release Campaign Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM single-, EP- en albumcampagnes uitvoert van strategie tot KPI-review. De focus ligt op planning, distributie, content, DSP pitching, press, influencers en meetbare momentumopbouw.
+Dit Playbook beschrijft hoe CM single-, EP- en albumcampagnes uitvoert van strategie tot KPI-review. De focus ligt op planning, distributie, content, DSP pitching, press, influencers en meetbare momentumopbouw.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Bij elke release waar CM release-strategie, projectmanagement of campagne-executie ondersteunt.
 - Wanneer een single, EP of album release-ready moet worden gemaakt.
 - Wanneer content, pitching, pers en KPI-tracking centraal moeten worden aangestuurd.
 
-## OBJECTIVE
+## Doelstelling
 
 Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoordelijkheden, contentritme, pitchingmomenten en post-release optimalisatie.
 
-## INPUTS
+## Inputs
 
 - Release goals en doelgroep.
 - Audio masters, artwork, credits, metadata en release date.
@@ -24,7 +24,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Influencer/press target list.
 - KPI baseline.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - Artist/client.
 - CM campaign lead.
@@ -34,7 +34,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Influencers en content creators.
 - Creative team.
 
-## CM PROCESS
+## CM-proces
 
 - Bepaal releasetype: single voor momentum, EP voor verhaalboog, album voor volledige campagnecyclus.
 - Maak een release calendar met pre-save, pitching, content drops, press moments en post-release pushes.
@@ -44,7 +44,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Benader press en influencers alleen met passende angles en concrete assets.
 - Meet KPI’s wekelijks en pas content, ads of outreach aan op basis van signalen.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Kick-off met artist: doel, verhaal, doelgroep, budget en release date.
 2. Controleer master, artwork, metadata, credits, splits en delivery deadline.
@@ -58,7 +58,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 10. Post-release: push best performing content, update DSP/press, verzamel user-generated content en rapporteer KPI’s.
 11. Sluit campagne af met learnings voor volgende release.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Distributor dashboard.
 - DSP pitching tools.
@@ -68,7 +68,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Meta/TikTok/YouTube analytics.
 - Press en influencer trackers.
 
-## DELIVERABLES
+## Deliverables
 
 - Release campaign brief.
 - Content calendar.
@@ -78,7 +78,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Weekly KPI report.
 - Post-release recap.
 
-## KPIS
+## KPIs
 
 - Pre-save conversie.
 - Streams per DSP.
@@ -89,7 +89,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Influencer deliverable completion.
 - Revenue en audience growth na 30/60/90 dagen.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Te late delivery.
 - Content niet klaar vóór releaseweek.
@@ -97,7 +97,7 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - DSP pitch zonder bewijs van campagne.
 - Influencers leveren niet of passen niet bij audience.
 
-## RED FLAGS
+## Red flags
 
 - Metadatafouten of splitdisputes.
 - Artwork of samples niet cleared.
@@ -105,17 +105,17 @@ Een release op tijd, professioneel en meetbaar lanceren met duidelijke verantwoo
 - Persclaim of marketingclaim is niet verifieerbaar.
 - Budget wordt uitgegeven zonder KPI-tracking.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

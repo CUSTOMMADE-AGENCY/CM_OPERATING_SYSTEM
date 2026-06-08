@@ -1,32 +1,40 @@
 # Artist Deliverables Register
 
-## Purpose
+## Doel
 
-Track promised and delivered artist management outputs.
+Volg beloofde en geleverde artist-managementoutputs.
 
-## Register fields
+## Registervelden
 
 - Deliverable name.
 - Client/workstream.
 - Scope reference.
 - Owner.
-- Due date.
 - Status.
+- Due date.
 - Approval owner.
-- Drive link.
-- Notes and dependencies.
+- Google Drive-link.
+- Evidence of delivery.
 
-## Completion standard
+## Regel
 
-A deliverable is complete only when it is delivered, approved or explicitly accepted as closed.
+Een deliverable is pas afgerond wanneer de juiste approval, versie, Drive-locatie en eventuele next action zijn vastgelegd.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

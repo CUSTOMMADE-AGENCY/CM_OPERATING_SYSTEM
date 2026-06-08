@@ -18,12 +18,12 @@ Identificeert sync-kansen en ondersteunt pitchvoorbereiding voor muziekgebruik i
 - Instrumentals, clean versions en stems-status.
 - Sync briefs en marktinformatie.
 - Contactgegevens van supervisors en agencies.
-- CM sync playbook.
+- CM sync Playbook.
 
 ## Outputs
 
 - Sync Opportunity Report
-- Pitch Recommendations
+- Pitch-aanbevelingen
 - Sync Readiness Checklist
 - Contactshortlist
 - Clearance risk notes
@@ -37,7 +37,7 @@ Identificeert sync-kansen en ondersteunt pitchvoorbereiding voor muziekgebruik i
 
 ## Gebruikte tools
 
-- Sync playbook
+- Sync Playbook
 - Google Drive
 - ClickUp
 - Rights audit input
@@ -53,7 +53,7 @@ Identificeert sync-kansen en ondersteunt pitchvoorbereiding voor muziekgebruik i
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

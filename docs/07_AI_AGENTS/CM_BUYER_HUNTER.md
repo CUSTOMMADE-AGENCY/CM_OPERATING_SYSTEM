@@ -2,7 +2,7 @@
 
 ## Doel
 
-Bouwt en onderhoudt een gekwalificeerde buyer pipeline voor catalogus-, master-, publishing- en rechtenkansen.
+Bouwt en onderhoudt een gekwalificeerde buyer Pipeline voor catalogus-, master-, publishing- en rechtenkansen.
 
 ## Verantwoordelijkheden
 
@@ -17,21 +17,21 @@ Bouwt en onderhoudt een gekwalificeerde buyer pipeline voor catalogus-, master-,
 - Buyerprofielen en contactgegevens.
 - Historische buyerinteracties.
 - Dealcriteria en assetinformatie.
-- CM buyer outreach playbook.
+- CM buyer outreach Playbook.
 - Goedgekeurde communicatie-instructies.
 
 ## Outputs
 
 - Buyer List
 - Buyer Scorecard
-- Outreach Recommendations
+- Outreach-aanbevelingen
 - Segmentatieoverzicht
 - Contacttracking-update
 
 ## Triggercondities
 
 - Nieuwe verkoop- of licentiekans vraagt om buyer mapping.
-- Periodieke pipeline-opschoning is nodig.
+- Periodieke Pipeline-opschoning is nodig.
 - Een CM-owner vraagt om outreachvoorbereiding.
 - Nieuwe buyerinformatie komt binnen via netwerk of research.
 
@@ -41,7 +41,7 @@ Bouwt en onderhoudt een gekwalificeerde buyer pipeline voor catalogus-, master-,
 - ClickUp
 - Google Drive
 - Gmail-templates
-- Buyer outreach playbook
+- Buyer outreach Playbook
 
 ## Escalatieregels
 
@@ -53,7 +53,7 @@ Bouwt en onderhoudt een gekwalificeerde buyer pipeline voor catalogus-, master-,
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

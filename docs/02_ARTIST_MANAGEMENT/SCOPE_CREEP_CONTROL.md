@@ -1,32 +1,40 @@
 # Scope Creep Control
 
-## Purpose
+## Doel
 
-Protect project quality and commercial discipline by managing out-of-scope requests.
+Bescherm projectkwaliteit en commerciële discipline door out-of-Scope verzoeken actief te beheren.
 
-## Definition
+## Definitie
 
-Scope creep occurs when new work, extra revisions, expanded deliverables or compressed timelines are requested without adjusted fee, timeline or priority tradeoff.
+Scope creep ontstaat wanneer nieuw werk, extra revisies, uitgebreidere deliverables of verkorte timelines worden gevraagd zonder aangepaste fee, timeline of prioriteitskeuze.
 
-## Control process
+## Controleproces
 
-1. Acknowledge the request.
-2. Compare it to the approved scope.
-3. Classify as included, tradeoff, paid change or future phase.
-4. Confirm impact on fee, timeline or deliverables.
-5. Update ClickUp and proposal documentation if approved.
+1. Ontvang het verzoek zonder reflexmatig af te wijzen.
+2. Vergelijk het verzoek met de goedgekeurde Scope, deliverables en aannames.
+3. Classificeer als binnen Scope, out-of-Scope of onduidelijk.
+4. Vertaal out-of-Scope werk naar opties met fee, timing en impact.
+5. Vraag schriftelijke approval voordat uitvoering start.
 
-## Standard response
+## Regel
 
-Do not reject reflexively. Translate the request into a clear option with cost, timing and priority impact.
+Wijs niet reflexmatig af. Vertaal het verzoek naar een duidelijke optie met kosten, timing en prioriteitstrade-off.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

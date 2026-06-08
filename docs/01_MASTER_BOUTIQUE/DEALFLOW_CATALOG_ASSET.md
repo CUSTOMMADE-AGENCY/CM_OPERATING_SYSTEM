@@ -1,35 +1,44 @@
 # Catalog Asset Dealflow
 
-## Purpose
+## Doel
 
-Provide the controlled process for evaluating and moving catalog, master or publishing asset opportunities through the boutique pipeline.
+Bied het gecontroleerde proces om catalogus-, master- of publishing-Assets te beoordelen en door de boutique Pipeline te bewegen.
 
-## Stages
+## Fases
 
-1. Lead captured with asset type, seller context and source.
-2. Initial rights screen confirms ownership path, territory and known encumbrances.
-3. Data availability check confirms revenue statements, metadata, repertoire list and chain-of-title materials.
-4. Commercial screen estimates revenue quality, concentration risk, growth drivers and buyer fit.
-5. Internal decision determines decline, nurture, prepare, or launch.
-6. Buyer strategy defines target buyer categories and outreach sequencing.
-7. NDA and data-room process begins only after buyer qualification.
-8. LOI, diligence, APA and closing are managed through controlled deal stages.
+1. Lead wordt vastgelegd met Asset-type, Seller-context en bron.
+2. Eerste rechtencheck bevestigt eigendomspad, territorium en bekende encumbrances.
+3. Databeschikbaarheidscheck bevestigt revenue statements, metadata, repertoirelijst en chain-of-title-materialen.
+4. Commerciële screen beoordeelt revenue quality, concentratierisico, groeidrivers en Buyer fit.
+5. Interne go/no-go bepaalt of waardering en Buyer-strategie worden voorbereid.
+6. Valuation Playbook bepaalt range, aannames en risicoaanpassingen.
+7. Buyer outreach wordt pas gestart na goedgekeurde thesis en disclosure-plan.
+8. LOI-, Due Diligence- en APA-fases worden in ClickUp gevolgd met eigenaren en deadlines.
 
 ## Outputs
 
-- Deal summary.
-- Valuation range.
-- Buyer universe.
-- Diligence tracker.
-- Closing checklist.
+- Deal thesis.
+- Risico-overzicht.
+- Waarderingsrange.
+- Buyer shortlist.
+- Data Room-plan.
+- Go/no-go-besluit per fase.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

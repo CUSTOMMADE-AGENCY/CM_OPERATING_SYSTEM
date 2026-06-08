@@ -1,26 +1,28 @@
 # Client Onboarding
 
-## Purpose
+## Doel
 
-Start every client engagement with the correct files, tasks, communication norms and approvals.
+Start elk client-engagement met de juiste bestanden, taken, communicatienormen en approvals.
 
 ## Checklist
 
-- Signed agreement or written authorization.
-- Initial payment confirmation where applicable.
-- Drive folder created.
-- ClickUp project/list created.
-- Kickoff meeting scheduled.
-- Decision owners and communication cadence confirmed.
-- Immediate inputs requested.
+- Getekende overeenkomst of schriftelijke authorization.
+- Bevestiging van eerste betaling waar van toepassing.
+- Google Drive-map aangemaakt.
+- ClickUp project/list aangemaakt.
+- Communication cadence en decision owners bevestigd.
+- Scope, deliverables, deadlines en exclusions gedeeld.
+- Benodigde inputs en toegang aangevraagd.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

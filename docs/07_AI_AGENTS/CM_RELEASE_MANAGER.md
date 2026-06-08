@@ -37,7 +37,7 @@ Coördineert releasecampagnes door timelines, content, DSP-deadlines en rapporta
 
 ## Gebruikte tools
 
-- Release campaign playbook
+- Release campaign Playbook
 - ClickUp
 - Google Drive
 - Distributie- en DSP-overzichten
@@ -53,7 +53,7 @@ Coördineert releasecampagnes door timelines, content, DSP-deadlines en rapporta
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

@@ -1,6 +1,6 @@
 # ARTIST AUDIT TEMPLATE
 
-## DOCUMENT INFO
+## Documentinformatie
 
 | Veld | Informatie |
 | --- | --- |
@@ -9,12 +9,12 @@
 | Prepared by | [CM consultant / teamlid] |
 | Date | [DD-MM-JJJJ] |
 | Version | [v1.0 / v1.1 / final] |
-| Status | [Draft / Internal Review / Client Ready / Final] |
+| Status | [Concept / Interne review / Client-ready / Final] |
 
 **Gebruik van dit document**  
-Dit audittemplate is bedoeld om vóór een voorstel voor brandbook, business audit, release strategy, artist roadmap of managementretainer scherp te bepalen waar de artiest nu staat, waar waarde unlocked kan worden en welke risico’s eerst opgelost moeten worden. Vul elke sectie in op basis van aantoonbare signalen: muziekdata, social analytics, gesprekken met artiest/team, bestaande contracten, publieke positionering, visuele assets en commerciële context. Vermijd aannames zonder bron; markeer onzekerheden als auditpunt.
+Dit audittemplate is bedoeld om vóór een voorstel voor Brandbook, business audit, release strategy, artist roadmap of managementretainer scherp te bepalen waar de artiest nu staat, waar waarde unlocked kan worden en welke risico’s eerst opgelost moeten worden. Vul elke sectie in op basis van aantoonbare signalen: muziekdata, social analytics, gesprekken met artiest/team, bestaande contracten, publieke positionering, visuele assets en commerciële context. Vermijd aannames zonder bron; markeer onzekerheden als auditpunt.
 
-## EXECUTIVE SUMMARY
+## Managementsamenvatting
 
 **Huidige artistieke positie**  
 [Beschrijf in 5–7 zinnen waar de artiest nu staat: fase van carrière, zichtbaarheid, marktcontext, momentum, publiekssignalen en mate van professionalisering. Benoem concreet of de artiest zich bevindt in opbouwfase, doorbraakfase, herpositionering, catalogusfase of commerciële schaalfase.]
@@ -39,7 +39,7 @@ Dit audittemplate is bedoeld om vóór een voorstel voor brandbook, business aud
 
 ---
 
-## 1. ARTIST IDENTITY
+## 1. ARTIST-IDENTITEIT
 
 **Doel van de beoordeling**  
 Bepalen of de artiest een herkenbare, verdedigbare en commercieel bruikbare identiteit heeft die verder gaat dan genre, losse visuals of momentane hype.
@@ -189,7 +189,7 @@ Beoordelen of de contentmachine de artistieke identiteit, releases, community en
 
 ---
 
-## 5. MUSIC & RELEASE HISTORY
+## 5. MUZIEK- EN RELEASEGESCHIEDENIS
 
 **Doel van de beoordeling**  
 Beoordelen of de muziekcatalogus, releasecadans en samenwerkingen genoeg strategische basis vormen voor groei, monetisatie en marktvertrouwen.
@@ -288,7 +288,7 @@ Bepalen of de zakelijke basis veilig genoeg is om groei, investeringen, releases
 | Sena | [Aanmelding uitvoerend producent/artiest, masterrechten, naburige rechten.] |
 | Splits | [Zijn splits vóór release schriftelijk bevestigd per track?] |
 | Existing agreements | [Mondelinge afspraken, contracten, side letters, producer agreements, feature agreements, beat licenses.] |
-| Revenue streams | [Streaming, live, publishing, neighbouring rights, merch, brand deals, sync, content, grants/subsidies.] |
+| Inkomstenstromen | [Streaming, live, publishing, neighbouring rights, merch, brand deals, sync, content, grants/subsidies.] |
 
 **Score: [ ] / 10**
 
@@ -298,7 +298,7 @@ Bepalen of de zakelijke basis veilig genoeg is om groei, investeringen, releases
 - [Ontbrekend onderdeel 2]
 - [Ontbrekend onderdeel 3]
 
-**Risk level: [Low / Medium / High]**
+**Risiconiveau: [Low / Medium / High]**
 
 **Belangrijkste risico-indicatoren**
 
@@ -318,7 +318,7 @@ Bepalen of de zakelijke basis veilig genoeg is om groei, investeringen, releases
 
 ---
 
-## 8. COMMERCIAL OPPORTUNITY
+## 8. COMMERCIËLE KANS
 
 **Doel van de beoordeling**  
 Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig zijn in de komende 3–12 maanden.
@@ -350,9 +350,9 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 
 ---
 
-## 9. RISK ASSESSMENT
+## 9. RISICOBEOORDELING
 
-| Risico | Risk level | Uitleg | Required action |
+| Risico | Risiconiveau | Uitleg | Vereiste actie |
 | --- | --- | --- | --- |
 | Brand risk | [Low / Medium / High] | [Risico dat identiteit, visuals, communicatie of partnerships de gewenste perceptie verzwakken.] | [Actie: brand rules, content review, partnercriteria, herpositionering.] |
 | Rights risk | [Low / Medium / High] | [Risico op conflicten rond masters, publishing, samples, splits, features, producers of bestaande deals.] | [Actie: rights audit, split sheets, contractreview, claims corrigeren.] |
@@ -392,7 +392,7 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 
 ---
 
-## 11. QUICK WINS — NEXT 14 DAYS
+## 11. QUICK WINS — VOLGENDE 14 DAGEN
 
 1. **Profielhygiëne afronden:** update Spotify, Instagram, TikTok, YouTube en bio zodat naam, visuals, contact, links en releasefocus overal consistent zijn.
 2. **Top 3 assets activeren:** selecteer de drie sterkste tracks, visuals of contentmomenten en maak per asset één concrete herpublicatie- of conversieactie.
@@ -402,7 +402,7 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 
 ---
 
-## 12. PRIORITIES — NEXT 90 DAYS
+## 12. PRIORITEITEN — VOLGENDE 90 DAGEN
 
 - **Priority 1 — Positionering aanscherpen:** finaliseer artist claim, doelgroep, vergelijkingsveld en visuele richting zodat alle beslissingen één strategische lijn volgen.
 - **Priority 2 — Business foundation veiligstellen:** documenteer deals, splits, registraties, inkomstenstromen en verantwoordelijkheden voordat nieuwe investeringen of releases worden opgeschaald.
@@ -412,7 +412,7 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 
 ---
 
-## 13. RECOMMENDED CM NEXT STEP
+## 13. AANBEVOLEN CM NEXT STEP
 
 **Selecteer één of meer aanbevolen CM-vervolgstappen:**
 
@@ -435,14 +435,14 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 - **Release Strategy:** wanneer muziek en momentum aanwezig zijn, maar planning, content, audience activation en distributieaanpak te ad hoc zijn.
 - **Artist Roadmap:** wanneer meerdere domeinen tegelijk structuur nodig hebben en de artiest/team behoefte heeft aan prioriteiten voor 90 dagen tot 12 maanden.
 - **Monthly Management Retainer:** alleen wanneer de artiest commercieel levensvatbaar is, budget of inkomsten aanwezig zijn, rollen duidelijk zijn en CM structureel waarde kan toevoegen.
-- **Project Management:** wanneer er een afgebakend project is met duidelijke scope, deadlines, stakeholders en deliverables, maar geen volledige managementrol nodig is.
+- **Project Management:** wanneer er een afgebakend project is met duidelijke Scope, deadlines, stakeholders en deliverables, maar geen volledige managementrol nodig is.
 
 **Aanbevolen fasering**  
 [Fase 1: noodzakelijke audit/structuur. Fase 2: strategie en packaging. Fase 3: uitvoering, management of commerciële activatie. Benoem afhankelijkheden en go/no-go criteria.]
 
 ---
 
-## 14. INTERNAL CM NOTES
+## 14. INTERNE CM-NOTITIES
 
 **Alleen intern — niet delen met artiest, team of externe partners.**
 
@@ -450,15 +450,15 @@ Identificeren welke inkomstenkansen realistisch, merkveilig en prioriteitwaardig
 | --- | --- |
 | Is this artist commercially viable? | [Ja / Nee / Nog niet — onderbouw met markt, publiek, assets, team en omzetpotentieel.] |
 | Is this artist ready to pay? | [Ja / Nee / Onzeker — onderbouw met budgetsignalen, urgentie, professionaliteit en bereidheid tot investeren.] |
-| Is this artist high maintenance? | [Laag / Middel / Hoog — onderbouw met communicatiegedrag, besluitvorming, emotionele belasting, scope creep-risico en teamdynamiek.] |
+| Is this artist high maintenance? | [Laag / Middel / Hoog — onderbouw met communicatiegedrag, besluitvorming, emotionele belasting, Scope creep-risico en teamdynamiek.] |
 | Should CM proceed? | [Ja / Nee / Alleen onder voorwaarden — benoem voorwaarden.] |
-| Recommended offer | [Concreet aanbod: deliverable, prijsrange indien intern bekend, scope, duur, betalingsvoorwaarden en belangrijkste exclusions.] |
+| Recommended offer | [Concreet aanbod: deliverable, prijsrange indien intern bekend, Scope, duur, betalingsvoorwaarden en belangrijkste exclusions.] |
 
 **Interne commerciële beoordeling**
 
 - **Waarde voor CM:** [Waarom is deze artiest strategisch, financieel of netwerkmatig interessant?]
 - **Risico voor CM:** [Waar kan dit traject marge, tijd, reputatie of focus kosten?]
-- **Benodigde grenzen:** [Welke scope, responstijden, beslissingsrechten en exclusions moeten vooraf worden vastgelegd?]
+- **Benodigde grenzen:** [Welke Scope, responstijden, beslissingsrechten en exclusions moeten vooraf worden vastgelegd?]
 - **Go/no-go criteria:** [Welke voorwaarden moeten vóór voorstel of start bevestigd zijn?]
 
 **Aanbevolen offerstructuur**  

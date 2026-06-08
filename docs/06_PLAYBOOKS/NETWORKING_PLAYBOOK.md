@@ -1,20 +1,20 @@
 # Networking Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM strategische relaties bouwt en onderhoudt met introducers, buyers, managers, lawyers, publishers, labels, DSP contacts en brand contacts. Networking is bij CM geen losse activiteit maar dealflow-, kennis- en reputatiemanagement.
+Dit Playbook beschrijft hoe CM strategische relaties bouwt en onderhoudt met introducers, buyers, managers, lawyers, publishers, labels, DSP contacts en brand contacts. Networking is bij CM geen losse activiteit maar dealflow-, kennis- en reputatiemanagement.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer CM relaties wil bouwen voor catalog deals, artist development, brand partnerships, sync, publishing of toekomstige hires.
 - Wanneer een introductie, meeting, event of follow-up strategisch moet worden vastgelegd.
 - Wanneer relatiekapitaal nodig is voor buyer outreach, referrals of market intelligence.
 
-## OBJECTIVE
+## Doelstelling
 
 Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introducties, betere informatie, snellere uitvoering en premium reputatie oplevert.
 
-## INPUTS
+## Inputs
 
 - Relatielijst en contacthistorie.
 - CM priority areas: buyers, sellers, artists, brands, sync, publishing, labels, DSPs.
@@ -22,7 +22,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Introductiecontext en mutual contacts.
 - Follow-up templates.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - CM founders/leads.
 - Introducers.
@@ -35,7 +35,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Brand contacts.
 - Freelancers en future employees waar relevant.
 
-## CM PROCESS
+## CM-proces
 
 - Segmenteer netwerk op functie: introducers, buyers, managers, lawyers, publishers, labels, DSP contacts, brand contacts en specialist advisors.
 - Kwalificeer relaties op trust, relevance, reciprocity, decision power en timing.
@@ -44,7 +44,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Onderhoud relaties met relevante updates, niet met generieke check-ins.
 - Gebruik introducties zorgvuldig: vraag expliciet, geef context en sluit de loop terug.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Maak relationship map per segment en prioriteit.
 2. Definieer voor elke toprelatie: waarom belangrijk, laatste contact, persoonlijke context, mogelijke waarde en risico.
@@ -57,7 +57,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 9. Geef introducer na afloop terugkoppeling zonder vertrouwelijke details te lekken.
 10. Review netwerk per kwartaal: nieuwe relaties, slapende relaties, dealflow, reputatierisico’s.
 
-## TOOLS USED
+## Gebruikte tools
 
 - CRM/ClickUp relationship tracker.
 - Gmail.
@@ -66,7 +66,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Google Drive pitch/context assets.
 - Intro tracking sheet.
 
-## DELIVERABLES
+## Deliverables
 
 - Relationship map.
 - Meeting briefs.
@@ -75,7 +75,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Quarterly network review.
 - Strategic contact shortlist.
 
-## KPIS
+## KPIs
 
 - Aantal kwalitatieve meetings per maand.
 - Intro-to-meeting conversion.
@@ -84,7 +84,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Follow-up completion binnen 24 uur.
 - Relaties met actuele notes.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Generieke outreach zonder waarde.
 - Te veel vragen en te weinig geven.
@@ -92,7 +92,7 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Relaties worden alleen benaderd bij nood.
 - Vertrouwelijke dealinformatie wordt te breed gedeeld.
 
-## RED FLAGS
+## Red flags
 
 - Contact vraagt ongepaste fee, kickback of vertrouwelijke informatie.
 - Introducer overdrijft toegang of mandaat.
@@ -100,17 +100,17 @@ Een betrouwbaar netwerk onderhouden dat kwalitatieve dealflow, warme introductie
 - Buyer/brand/lawyer probeert CM te omzeilen.
 - Er is conflict of interest zonder disclosure.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

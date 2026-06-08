@@ -1,20 +1,20 @@
 # Sync Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM muziek sync-ready maakt, supervisors benadert, pitches beheert en licenties onderhandelt voor film, televisie, advertising, games, trailers en online media.
+Dit Playbook beschrijft hoe CM muziek sync-ready maakt, supervisors benadert, pitches beheert en licenties onderhandelt voor film, televisie, advertising, games, trailers en online media.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer CM synckansen ontwikkelt voor masters, publishing of one-stop repertoire.
 - Wanneer een music supervisor of brand om muziek vraagt.
 - Wanneer metadata, rechten of licentievoorwaarden moeten worden gecontroleerd.
 
-## OBJECTIVE
+## Doelstelling
 
 Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtenstatus, complete metadata en onderhandelbare licentievoorwaarden.
 
-## INPUTS
+## Inputs
 
 - Audio files: clean, explicit, instrumental, stems indien beschikbaar.
 - Metadata: ISRC, ISWC, writers, publishers, master owner, splits, contactgegevens.
@@ -23,7 +23,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Rate guidance en approval protocol.
 - Prior sync history.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - CM sync lead.
 - Artist/client.
@@ -33,7 +33,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Brands, agencies, production companies.
 - Legal/licensing counsel.
 
-## CM PROCESS
+## CM-proces
 
 - Sync readiness vereist complete audio, metadata en rechtencontrole vóór pitching.
 - One-stop repertoire krijgt prioriteit omdat snelheid vaak bepalend is.
@@ -42,7 +42,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Negotiation behandelt fee, media, territory, term, exclusiviteit, versions en MFN.
 - Licensing wordt afgerond met schriftelijke approvals, invoice, signed license en cue sheet follow-up.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Maak sync-ready folder per track met WAV, instrumental, clean, stems en lyrics.
 2. Controleer metadata en splits; los ontbrekende writer/publisher data op.
@@ -56,16 +56,16 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 10. Onderhandel fee en voorwaarden; voorkom onbeperkte usage zonder passende vergoeding.
 11. Lever assets en licentiegegevens; volg cue sheet en betaling op.
 
-## TOOLS USED
+## Gebruikte tools
 
 - DISCO/Songspace of private playlist tool.
 - Google Drive audio folders.
 - Metadata sheet.
-- CRM/ClickUp sync pipeline.
+- CRM/ClickUp sync Pipeline.
 - Licentie template.
 - Cue sheet tracker.
 
-## DELIVERABLES
+## Deliverables
 
 - Sync-ready catalog sheet.
 - Supervisor target list.
@@ -74,7 +74,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - License summary.
 - Cue sheet/payment tracker.
 
-## KPIS
+## KPIs
 
 - Aantal sync-ready tracks.
 - Brief response time.
@@ -84,7 +84,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Aantal clearance issues.
 - Cue sheet/payment completion.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Metadata incompleet.
 - Track wordt gepitcht zonder rechtencontrole.
@@ -92,7 +92,7 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Supervisor krijgt trage reactie.
 - Approvals lopen via meerdere partijen zonder eigenaar.
 
-## RED FLAGS
+## Red flags
 
 - Geen one-stop terwijl dat wel wordt geclaimd.
 - Onbekende sample, interpolatie of writer claim.
@@ -100,17 +100,17 @@ Muziek snel, accuraat en professioneel aanbieden voor sync, met heldere rechtens
 - Usage is politiek, alcohol, gambling of sensitive category zonder client approval.
 - License vraagt buyout of perpetuity zonder duidelijke fee.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

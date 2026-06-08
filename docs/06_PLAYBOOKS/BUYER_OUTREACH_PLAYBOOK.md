@@ -1,21 +1,21 @@
 # Buyer Outreach Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM potentiële kopers voor catalogi, masters, publishingrechten of royaltystromen onderzoekt, kwalificeert, benadert en opvolgt. Het doel is gecontroleerde marktexposure zonder vertrouwelijkheid, onderhandelingspositie of dealkwaliteit te verliezen.
+Dit Playbook beschrijft hoe CM potentiële kopers voor catalogi, masters, publishingrechten of royaltystromen onderzoekt, kwalificeert, benadert en opvolgt. Het doel is gecontroleerde marktexposure zonder vertrouwelijkheid, onderhandelingspositie of dealkwaliteit te verliezen.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer CM een sell-side mandaat heeft voor een catalogus of rechtenpakket.
 - Wanneer een bestaande koperlijst moet worden geactualiseerd voor een specifieke asset.
 - Wanneer een teaser, NDA, dataroom of biedproces wordt geopend.
 - Wanneer buyer feedback moet worden vertaald naar offer management en dealstrategie.
 
-## OBJECTIVE
+## Doelstelling
 
 Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot informatie en biedingen verzamelen die vergelijkbaar, onderbouwd en onderhandelbaar zijn.
 
-## INPUTS
+## Inputs
 
 - Goedgekeurd verkoopmandaat en seller objectives.
 - Asset summary, repertoirelijst, financiële samenvatting en rechtenperimeter.
@@ -25,7 +25,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Dataroom-index en toegangsrechten.
 - Outreach copy, Q&A-log en bieddeadline.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - CM deal lead: eigenaar van buyer strategy, messaging en offer management.
 - Seller of seller representative: keurt teaser, buyerlijst, NDA en dataroomtoegang goed.
@@ -33,7 +33,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Legal counsel: NDA, procesbrief en transactiedocumentatie.
 - Finance/royalty support: cijfers, vragen en aanvullende analyses.
 
-## CM PROCESS
+## CM-proces
 
 - Start met buyer research: segment, acquisitiecriteria, ticket size, territorium, genre-fit, eerdere transacties en reputatie.
 - Kwalificeer buyers vóór outreach: strategische fit, kapitaal, snelheid, beslissingsbevoegdheid, vertrouwelijkheid en conflicten.
@@ -44,7 +44,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Beheer biedingen centraal en vergelijk prijs, structuur, timing, voorwaarden, diligence burden en closing certainty.
 - Gebruik professionele, korte communicatie: geen druk zonder reden, geen speculatieve cijfers, geen client-confidentiële context buiten goedgekeurde materialen.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Bevestig seller mandate, gewenste koperprofielen, minimale prijsverwachting en no-go partijen.
 2. Maak een buyer longlist met naam, organisatie, rol, investeringsfocus, laatste contact, vermoedelijke appetite en introductieroute.
@@ -62,16 +62,16 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 14. Stuur vervolgvragen of counterposition naar buyers op basis van seller decision.
 15. Sluit buyers netjes af en behoud relatie voor toekomstige deals.
 
-## TOOLS USED
+## Gebruikte tools
 
-- ClickUp of CRM voor buyer pipeline.
+- ClickUp of CRM voor buyer Pipeline.
 - Google Drive/dataroom voor goedgekeurde materialen.
 - Gmail voor outreach en follow-up.
 - NDA-template en process letter.
 - Offer comparison sheet.
 - Buyer qualification scorecard.
 
-## DELIVERABLES
+## Deliverables
 
 - Buyer longlist en shortlist.
 - Goedgekeurde teaser.
@@ -82,7 +82,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Buyer feedback memo.
 - Seller recommendation.
 
-## KPIS
+## KPIs
 
 - Aantal gekwalificeerde buyers op shortlist.
 - Outreach response rate.
@@ -93,7 +93,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Offer quality: prijs, closing certainty en voorwaarden.
 - Aantal confidentiality breaches: doel is nul.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Te brede outreach waardoor marktmoeheid ontstaat.
 - Ongekwalificeerde buyers krijgen te veel informatie.
@@ -102,7 +102,7 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Vage biedingen zonder aannames of closing path.
 - Dataroom bevat onvolledige of tegenstrijdige cijfers.
 
-## RED FLAGS
+## Red flags
 
 - Buyer vraagt om clientnaam, repertoire of brondata vóór NDA.
 - Buyer weigert beslisser of funding source te bevestigen.
@@ -111,17 +111,17 @@ Een gekwalificeerde koperpijplijn bouwen, buyers gecontroleerd toegang geven tot
 - Bod bevat onduidelijke assets, open-ended diligence of oneindige exclusiviteit.
 - Legal of compliance issues rond koper, financiering of sancties.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

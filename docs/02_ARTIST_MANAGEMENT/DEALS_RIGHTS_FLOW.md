@@ -1,29 +1,37 @@
 # Deals and Rights Flow
 
-## Purpose
+## Doel
 
-Manage artist deal opportunities and rights questions in a structured way.
+Beheer artist-deal opportunities en rights-vragen op een gestructureerde manier.
 
-## Process
+## Proces
 
-- Capture deal source, counterparty and proposed terms.
-- Identify rights affected, term, territory, exclusivity and economics.
-- Compare against artist roadmap and existing obligations.
-- Flag legal review needs.
-- Record decision, negotiation points and approval owner.
-- Store signed materials in Drive after execution.
+- Leg dealbron, counterparty en voorgestelde terms vast.
+- Identificeer geraakte rights, term, territorium, exclusiviteit en economics.
+- Vergelijk met artist roadmap en bestaande verplichtingen.
+- Markeer behoefte aan legal review.
+- Leg decision, negotiation points en approval owner vast.
+- Update ClickUp en Google Drive met evidence en next actions.
 
-## Red flags
+## Output
 
-Long exclusive terms, unclear rights grants, broad likeness usage, unapproved recoupment, missing audit rights and ambiguous deliverables.
+Deal/rights memo met risico’s, aanbevolen positie, benodigde approvals en eerstvolgende actie.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

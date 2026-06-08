@@ -8,16 +8,16 @@ Onderhoudt de CM knowledge base zodat documentatie actueel, consistent, governan
 
 - Bijwerken van documentatie op basis van goedgekeurde wijzigingen.
 - Controleren op governance compliance, structuur en versiehygiëne.
-- Organiseren van kennis per domein, workflow en deliverable.
+- Organiseren van kennis per domein, Workflow en deliverable.
 - Signaleren van verouderde, dubbele of ontbrekende documentatie.
 - Voorbereiden van documentatiereviews voor menselijke goedkeuring.
 
 ## Inputs
 
 - Bestaande CM-documentatie.
-- Goedgekeurde SOP- en playbookwijzigingen.
+- Goedgekeurde SOP- en Playbookwijzigingen.
 - Reviewnotities en auditbevindingen.
-- Document standards en governance rules.
+- Documentatiestandaarden en Governance-regels.
 - Feedback van teamleden en operators.
 
 ## Outputs
@@ -25,12 +25,12 @@ Onderhoudt de CM knowledge base zodat documentatie actueel, consistent, governan
 - Documentation Reviews
 - Knowledge Reports
 - Gap List
-- Update Recommendations
+- Update-aanbevelingen
 - Governance Notes
 
 ## Triggercondities
 
-- Nieuwe workflow of playbook wordt goedgekeurd.
+- Nieuwe Workflow of Playbook wordt goedgekeurd.
 - Documentatie-review staat gepland.
 - Inconsistentie of kennisgap wordt gevonden.
 - CM-owner vraagt om kennisbankopschoning.
@@ -38,7 +38,7 @@ Onderhoudt de CM knowledge base zodat documentatie actueel, consistent, governan
 ## Gebruikte tools
 
 - GitHub repository
-- Document standards
+- Documentatiestandaarden
 - Governance rules
 - Google Drive references
 - ClickUp reviewtaken
@@ -53,7 +53,7 @@ Onderhoudt de CM knowledge base zodat documentatie actueel, consistent, governan
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 
@@ -72,6 +72,6 @@ Onderhoudt de CM knowledge base zodat documentatie actueel, consistent, governan
 
 ## Voorbeeldtaken
 
-- Controleer of een playbook de vereiste secties bevat.
+- Controleer of een Playbook de vereiste secties bevat.
 - Maak een overzicht van ontbrekende kennisartikelen.
 - Herschik documentatie volgens CM-structuur.

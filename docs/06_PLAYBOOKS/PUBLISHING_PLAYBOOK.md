@@ -1,21 +1,21 @@
 # Publishing Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM publishingactiviteiten organiseert: registratie, administratie, collectie, splits, sub-publishing en exploitatie. Het doel is dat composities correct geregistreerd zijn, inkomsten worden geïncasseerd en exploitatiekansen actief worden benut.
+Dit Playbook beschrijft hoe CM publishingactiviteiten organiseert: registratie, administratie, collectie, splits, sub-publishing en exploitatie. Het doel is dat composities correct geregistreerd zijn, inkomsten worden geïncasseerd en exploitatiekansen actief worden benut.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer CM publishingrechten of writer business beheert of adviseert.
 - Wanneer nieuwe werken geregistreerd moeten worden.
 - Wanneer royalty leaks, splitproblemen of sub-publishingvragen ontstaan.
 - Wanneer publishing repertoire exploitatie nodig heeft.
 
-## OBJECTIVE
+## Doelstelling
 
 Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar maken, zodat inkomsten worden verzameld en kansen niet verloren gaan.
 
-## INPUTS
+## Inputs
 
 - Werkgegevens: titel, writers, publishers, splits, ISWC, ISRC-links.
 - Split sheets en producer/writer agreements.
@@ -25,7 +25,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Royalty statements en claim reports.
 - Sync en exploitation priorities.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - Writer/artist/client.
 - CM publishing lead.
@@ -35,7 +35,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Labels/distributors.
 - Legal counsel.
 
-## CM PROCESS
+## CM-proces
 
 - Registratie begint zodra splits en ownership bevestigd zijn.
 - Administratie bewaakt dat works, recordings en identifiers aan elkaar gekoppeld zijn.
@@ -44,7 +44,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Sub-publishing wordt ingezet waar lokale collectie of exploitatie nodig is.
 - Exploitation koppelt repertoire aan sync, cuts, co-writes, brand en catalog opportunities.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Maak repertoire intake met alle composities en recordings.
 2. Controleer split sheets en ontbrekende handtekeningen.
@@ -57,16 +57,16 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 9. Pitch repertoire naar sync, A&R, writers camps of catalog partners.
 10. Rapporteer collection status, claims en exploitatieactiviteit aan client.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Publishing metadata sheet.
 - PRO/CMO portals.
 - Admin dashboard.
 - Google Drive agreements folder.
 - Royalty tracker.
-- Sync/pitch pipeline.
+- Sync/pitch Pipeline.
 
-## DELIVERABLES
+## Deliverables
 
 - Registered works list.
 - Split sheet status report.
@@ -75,7 +75,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Sub-publishing map.
 - Exploitation pitch list.
 
-## KPIS
+## KPIs
 
 - Percentage werken correct geregistreerd.
 - Aantal unresolved split issues.
@@ -84,7 +84,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Sub-publisher registration completion.
 - Aantal exploitation pitches en placements.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Splits worden achteraf betwist.
 - Titelvarianten veroorzaken duplicate registrations.
@@ -92,7 +92,7 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Client begrijpt verschil master/publishing niet.
 - Geen bewijs bij claims.
 
-## RED FLAGS
+## Red flags
 
 - Geen getekende split sheet.
 - IPI/CAE ontbreekt of is fout.
@@ -100,17 +100,17 @@ Composities administratief correct, wereldwijd vindbaar en commercieel inzetbaar
 - Sample of interpolatie niet cleared.
 - Sub-publisher rapporteert niet of houdt inkomsten vast.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

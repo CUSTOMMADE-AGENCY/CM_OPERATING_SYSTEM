@@ -1,32 +1,40 @@
 # Data Room Access Model
 
-## Purpose
+## Doel
 
-Control access to sensitive deal materials through staged disclosure.
+Beheer toegang tot gevoelige dealmaterialen via gefaseerde disclosure.
 
-## Access levels
+## Toegangsniveaus
 
-| Level | Content | Requirement |
+| Niveau | Content | Vereiste |
 |---|---|---|
-| Teaser | Non-confidential summary | Internal approval |
-| Level 1 | Redacted financial and catalog overview | Buyer qualification and NDA |
-| Level 2 | Detailed revenue, metadata and rights materials | Serious process participation |
-| Level 3 | Legal, tax, chain-of-title and closing materials | LOI or advanced negotiation |
+| Teaser | Niet-vertrouwelijke samenvatting | Interne approval |
+| Level 1 | Geredigeerd financieel en catalogusoverzicht | Buyer-kwalificatie en NDA |
+| Level 2 | Gedetailleerde statements, contracten en metadata | Goedgekeurde Buyer en deal lead-approval |
+| Level 3 | Zeer gevoelige juridische, fiscale of closing-documenten | Strikte need-to-know approval |
 
-## Rules
+## Regels
 
-- Never grant blanket access before qualification.
-- Track every invite, permission change and removal in ClickUp.
-- Store source files in Drive, not GitHub.
-- Remove access when a buyer exits or the process closes.
+- Deel nooit getekende contracten of volledige statements zonder juiste approval.
+- Registreer per Buyer welke toegang is verleend, wanneer en door wie.
+- Trek toegang in wanneer de Buyer afhaakt, deadlines mist of disclosure-regels schendt.
+- Gebruik watermarks en access logs waar mogelijk.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

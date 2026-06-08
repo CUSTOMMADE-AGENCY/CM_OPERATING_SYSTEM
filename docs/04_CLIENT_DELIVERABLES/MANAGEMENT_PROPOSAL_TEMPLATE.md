@@ -1,6 +1,6 @@
-# MANAGEMENT PROPOSAL TEMPLATE
+# MANAGEMENT Proposal TEMPLATE
 
-## 1. DOCUMENT INFO
+## 1. DOCUMENTINFORMATIE
 
 | Veld | Informatie |
 | --- | --- |
@@ -14,10 +14,10 @@
 | Connected deliverables | Artist Audit, Business Audit, Rights Audit, Artist Roadmap en Release Strategy |
 
 **Purpose**
-Dit management proposal beschrijft hoe Custommade Agency de artiest zakelijk, strategisch en operationeel kan vertegenwoordigen of begeleiden na afronding van de audits en roadmap. Het voorstel maakt expliciet welke waarde CM toevoegt, welke verantwoordelijkheden CM wel en niet draagt, welke rechten- en revenuevraagstukken eerst veilig moeten zijn, welke commerciële kansen worden ontwikkeld en hoe succes maandelijks wordt gerapporteerd.
+Dit management Proposal beschrijft hoe Custommade Agency de artiest zakelijk, strategisch en operationeel kan vertegenwoordigen of begeleiden na afronding van de audits en roadmap. Het voorstel maakt expliciet welke waarde CM toevoegt, welke verantwoordelijkheden CM wel en niet draagt, welke rechten- en revenuevraagstukken eerst veilig moeten zijn, welke commerciële kansen worden ontwikkeld en hoe succes maandelijks wordt gerapporteerd.
 
 **Scope**
-Het voorstel kan betrekking hebben op strategisch management, day-to-day management, release projectmanagement, business cleanup, rights coordination, partnership development, sync positioning, live/business development of een gefaseerde management pilot. Juridische vertegenwoordiging, boekhouding, belastingadvies, labeldiensten, publishing administration, booking agency taken en financiële guarantees vallen buiten scope tenzij apart contractueel vastgelegd.
+Het voorstel kan betrekking hebben op strategisch management, day-to-day management, release projectmanagement, business cleanup, rights coordination, partnership development, sync positioning, live/business development of een gefaseerde management pilot. Juridische vertegenwoordiging, boekhouding, belastingadvies, labeldiensten, publishing administration, booking agency taken en financiële guarantees vallen buiten Scope tenzij apart contractueel vastgelegd.
 
 **Inputs**
 
@@ -30,16 +30,16 @@ Het voorstel kan betrekking hebben op strategisch management, day-to-day managem
 
 **Deliverables**
 
-- Management scope met rollen, verantwoordelijkheden, grenzen en beslissingsrechten.
+- Management Scope met rollen, verantwoordelijkheden, grenzen en beslissingsrechten.
 - Strategic objectives voor artist development, releases, rights, revenue, partnerships, sync en teamstructuur.
 - 90-day management plan met concrete acties, owners en decision gates.
-- Commercial opportunity pipeline voor live, brand, sync, publishing, catalogus, content en partnerships.
-- Risk register met mitigation plan en no-go criteria.
+- Commercial opportunity Pipeline voor live, brand, sync, publishing, catalogus, content en partnerships.
+- Risicoregister met mitigation plan en no-go criteria.
 - Fee model, reporting cadence, approval matrix en version control.
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
 **Management rationale**
 Beschrijf waarom management of projectmanagement op dit moment waarde creëert. Koppel de motivatie aan de audituitkomsten: artistieke potentie, zakelijke readiness, rechtencontrole, release momentum, commerciële kansen en teamgaten. Benoem ook waarom CM niet instapt wanneer fundamentele rechten, teamclaims of budgetten onduidelijk blijven.
@@ -72,8 +72,8 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 | Artist development | Positionering bewaken, keuzes structureren, roadmap bijsturen | Creatieve input, beschikbaarheid, content en performance | Artist development plan |
 | Releases | Strategie, planning, teamcadence, issue management en reporting | Masterdelivery, approvals, contentdeelname en artistiek sign-off | Release execution tracker |
 | Rights management | Rights gates coördineren, cleanup prioriteren, approvals bewaken | Documenten aanleveren, rechthebbenden betrekken, legal beslissingen nemen | Rights action log |
-| Revenue streams | Kansen signaleren en prioriteren per bron | Financiële data delen en contractuele keuzes goedkeuren | Revenue dashboard |
-| Partnerships | Partnerfit beoordelen, proposition bouwen, outreach sturen | Merkgrenzen, approval en deliverables bevestigen | Partnership pipeline |
+| Inkomstenstromen | Kansen signaleren en prioriteren per bron | Financiële data delen en contractuele keuzes goedkeuren | Revenue dashboard |
+| Partnerships | Partnerfit beoordelen, proposition bouwen, outreach sturen | Merkgrenzen, approval en deliverables bevestigen | Partnership Pipeline |
 | Sync | Sync-ready repertoire selecteren en pitchpacks voorbereiden | Snelle master/publishing approvals faciliteren | Sync pitch list |
 | Team coordination | Rollen, meetings, deadlines en besluitvorming structureren | Teamleden mandaat geven en conflicten escaleren | Responsibility matrix |
 | Commercial negotiation | Dealstrategie, term sheet input en business impact beoordelen | Juridisch advies inschakelen en finale beslissingen nemen | Deal decision memo |
@@ -84,17 +84,17 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 
 | Fase | Timing | Acties | Output |
 | --- | --- | --- | --- |
-| Proposal alignment | Voor start | Scope, fee, term, deliverables, approvalmatrix en no-go criteria bespreken | Approved proposal |
-| Onboarding | Week 1 | Data room, logins, contracten, roadmap, releasekalender en teamlijst inrichten | Management operating file |
+| Proposal alignment | Voor start | Scope, fee, term, deliverables, approvalmatrix en no-go criteria bespreken | Approved Proposal |
+| Onboarding | Week 1 | Data Room, logins, contracten, roadmap, releasekalender en teamlijst inrichten | Management operating file |
 | Stabilisation | Week 1-4 | Rights issues, teamrollen, budget, communicatiecadence en urgente deadlines oplossen | 30-day stabilisation report |
 | Growth sprint | Week 5-12 | Release execution, partnerships, sync, live, content en revenue acties uitvoeren | 90-day management review |
 | Monthly management | Maandelijks | KPI’s, risks, opportunities, cash/revenue signals en decisions rapporteren | Monthly Report |
-| Quarterly strategy | Per kwartaal | Roadmap actualiseren, scope evalueren en commerciële prioriteiten herijken | Quarter strategy update |
+| Quarterly strategy | Per kwartaal | Roadmap actualiseren, Scope evalueren en commerciële prioriteiten herijken | Quarter strategy update |
 | Renewal / close-out | Einde termijn | Resultaten, open risico’s, assets, lessons learned en vervolgadvies afronden | Renewal or close-out memo |
 
 ---
 
-## 5. COMMERCIAL OPPORTUNITY PLAN
+## 5. COMMERCIËLE KANS PLAN
 
 | Opportunity | Waarom relevant | CM-aanpak | Besliscriterium |
 | --- | --- | --- | --- |
@@ -108,11 +108,11 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 
 ---
 
-## 6. Risk Assessment
+## 6. Risicobeoordeling
 
 | Risico | Impact | Managementvoorwaarde | Mitigatie |
 | --- | --- | --- | --- |
-| Onopgeloste rights claims | Releases, sync en deals kunnen blokkeren | Conditional scope of rights cleanup eerst | Rights action log met legal approval |
+| Onopgeloste rights claims | Releases, sync en deals kunnen blokkeren | Conditional Scope of rights cleanup eerst | Rights action log met legal approval |
 | Onduidelijke bestaande manager/labelrol | Conflicten over mandaat, commissie en communicatie | Geen start zonder role confirmation | Team responsibility matrix en contractreview |
 | Te laag werkbudget | Strategie kan niet professioneel worden uitgevoerd | Scope aanpassen of budget verhogen | Prioriteiten beperken tot high-leverage acties |
 | Artist availability laag | Content, approvals en relaties vertragen | Minimale response SLA vastleggen | Weekly planning en escalation route |
@@ -122,7 +122,7 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 
 ---
 
-## 7. Recommendations
+## 7. Aanbevelingen
 
 1. Start met een 90-day management pilot wanneer de artiest potentieel heeft maar team, rechten of reporting nog niet volledig volwassen zijn.
 2. Start full management alleen wanneer mandaten, rechten, fee model, budget en approvalprocessen schriftelijk zijn bevestigd.
@@ -130,19 +130,19 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 4. Gebruik de Artist Roadmap als strategisch kompas en de Monthly Report als accountability-instrument.
 5. Prioriteer maximaal drie groeipijlers per kwartaal, bijvoorbeeld release execution, sync readiness en live partnerships.
 6. Maak commerciële outreach pas actief wanneer proposition, rechten, usage boundaries en follow-upcapaciteit professioneel zijn.
-7. Neem een scope creep control op: extra deliverables, crisiswerk, dealonderhandeling of travel vallen buiten basisretainer tenzij vooraf goedgekeurd.
+7. Neem een Scope creep control op: extra deliverables, crisiswerk, dealonderhandeling of travel vallen buiten basisretainer tenzij vooraf goedgekeurd.
 
 ---
 
 ## 8. Checklists
 
-### Start readiness checklist
+### Start-readiness checklist
 
 - Artist Audit, Business Audit en Rights Audit zijn afgerond of formeel als input geaccepteerd.
 - Roadmap en eerstvolgende releaseprioriteiten zijn duidelijk.
-- Managementscope, fee model, term, commissionbasis en exclusiviteit zijn schriftelijk afgestemd.
+- ManagementScope, fee model, term, commissionbasis en exclusiviteit zijn schriftelijk afgestemd.
 - Teamrollen, mandaten en bestaande deals zijn bevestigd.
-- Data room, portals, statements en contractarchief zijn toegankelijk.
+- Data Room, portals, statements en contractarchief zijn toegankelijk.
 - Budget voor releases, content, PR, legal, design en eventuele leveranciers is goedgekeurd.
 - Approvalmatrix en response SLA zijn vastgelegd.
 
@@ -152,7 +152,7 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 - Release en content acties beoordeeld op KPI’s en learnings.
 - Rights issues en collection gaps geüpdatet.
 - Revenue signals en statements gecontroleerd.
-- Partnership, sync, live en brand pipeline bijgewerkt.
+- Partnership, sync, live en brand Pipeline bijgewerkt.
 - Risico’s geëscaleerd of gesloten.
 - Beslissingen voor de komende maand schriftelijk bevestigd.
 
@@ -167,7 +167,7 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 
 ---
 
-## 9. Approval Requirements
+## 9. Approval-vereisten
 
 | Approval | Wanneer verplicht | Approver |
 | --- | --- | --- |
@@ -176,7 +176,7 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 | Budget approval | Voor paid campaigns, leveranciers, legal, contentproductie en travel | Client business owner |
 | Creative approval | Releases, visuals, partnerships en publieke uitingen | Artiest |
 | Commercial approval | Partnerships, sync, brand, label, publishing en live deals | Artiest + CM management lead |
-| Scope change approval | Extra werk buiten retainer of projectscope | Client + CM lead |
+| Scope change approval | Extra werk buiten retainer of projectScope | Client + CM lead |
 | Monthly report approval | Voor definitieve maandafsluiting en next-month priorities | Artiest / manager + CM lead |
 
 ---
@@ -185,10 +185,10 @@ Beschrijf waarom management of projectmanagement op dit moment waarde creëert. 
 
 | Versie | Datum | Eigenaar | Wijziging | Status |
 | --- | --- | --- | --- | --- |
-| v1.0 | Proposaldatum | CM management lead | Eerste management proposal opgesteld | Draft |
+| v1.0 | Proposaldatum | CM management lead | Eerste management Proposal opgesteld | Draft |
 | v1.1 | Bespreekdatum | CM + client | Scope, fee, term en risico’s aangescherpt | Negotiation |
 | v2.0 | Startdatum | CM lead | Definitieve afspraken goedgekeurd | Approved |
-| v2.1+ | Tijdens termijn | CM management lead | Amendments, scope changes en kwartaalupdates toegevoegd | Active |
+| v2.1+ | Tijdens termijn | CM management lead | Amendments, Scope changes en kwartaalupdates toegevoegd | Active |
 
 **Archiefregel**
-Elke goedgekeurde versie wordt gekoppeld aan contract, approvalmatrix, roadmap en monthly reports. Bij scopewijziging wordt nooit alleen per e-mail gewerkt; het proposal of amendment krijgt een nieuw versienummer zodat verantwoordelijkheden, fees en risico’s controleerbaar blijven.
+Elke goedgekeurde versie wordt gekoppeld aan contract, approvalmatrix, roadmap en monthly reports. Bij Scopewijziging wordt nooit alleen per e-mail gewerkt; het Proposal of amendment krijgt een nieuw versienummer zodat verantwoordelijkheden, fees en risico’s controleerbaar blijven.

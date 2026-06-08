@@ -1,18 +1,18 @@
 # Deal Terms
 
-## OVERVIEW
+## Overzicht
 
-Deal terms zijn de commerciële en juridische bouwstenen van een afspraak: prijs, scope, term, exclusiviteit, royalties, recoupment, audit, approvals, warranties, indemnity, reporting en termination.
+Deal terms zijn de commerciële en juridische bouwstenen van een afspraak: prijs, Scope, term, exclusiviteit, royalties, recoupment, audit, approvals, warranties, indemnity, reporting en termination.
 
-## WHY IT MATTERS
+## Waarom dit belangrijk is
 
 CM moet deal terms praktisch kunnen lezen, omdat dezelfde headline value compleet anders kan uitpakken door definities en mechanics. Goede terms beschermen waarde en voorkomen operationele chaos.
 
-## HOW CM USES IT
+## Hoe CM dit gebruikt
 
 CM maakt per deal een term summary met business meaning, money impact, operational burden en red flags. Terms worden altijd gekoppeld aan de relevante rechten en revenue streams.
 
-## KEY TERMS
+## Kernbegrippen
 
 - **Term:** Duur van de afspraak.
 - **Exclusivity:** Mate waarin partijen beperkt zijn om met anderen te werken.
@@ -20,26 +20,26 @@ CM maakt per deal een term summary met business meaning, money impact, operation
 - **Set-off:** Verrekening van bedragen tussen inkomsten, kosten of projecten.
 - **KPI:** Meetbare prestatieverplichting.
 
-## COMMON MISTAKES
+## Veelgemaakte fouten
 
 - Alle aandacht op fee/advance richten.
 - Definities van net receipts niet lezen.
 - Geen termination right opnemen.
 - Audit rights vergeten.
 
-## RED FLAGS
+## Red flags
 
 - Unlimited set-off.
-- No end date.
-- No KPIs bij service commitments.
+- Geen einddatum.
+- Geen KPIs bij service commitments.
 - Buyer discretion bij betaling.
 
-## EXAMPLES
+## Voorbeelden
 
 - Een hoog advance kan slecht zijn als het tegen alle toekomstige inkomsten recoupeert.
 - Een brand exclusivity in “lifestyle” is te breed als het alle toekomstige categories blokkeert.
 
-## CHECKLIST
+## Checklist
 
 - [ ] Maak term sheet summary.
 - [ ] Check definitions en payment mechanics.
@@ -47,7 +47,7 @@ CM maakt per deal een term summary met business meaning, money impact, operation
 - [ ] Neem reporting en audit op.
 - [ ] Koppel termination aan breach en deadlines.
 
-## RELATED
+## Gerelateerd
 
 - [LOI_GUIDE](LOI_GUIDE.md)
 - [APA_GUIDE](APA_GUIDE.md)

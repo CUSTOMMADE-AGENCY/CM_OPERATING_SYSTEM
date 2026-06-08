@@ -1,30 +1,38 @@
 # Master Boutique
 
-## Purpose
+## Doel
 
-The Master Boutique lane covers catalog, master, publishing, rights acquisition, buyer, data-room, LOI, APA and closing workflows.
+De Master Boutique-lane omvat catalogus-, master-, publishing-, rights acquisition-, Buyer-, Data Room-, LOI-, APA- en closing Workflows.
 
-## Core workflow
+## Kernworkflow
 
-1. Identify catalog or asset opportunity.
-2. Qualify rights, ownership, data availability and commercial fit.
-3. Prepare internal valuation and deal thesis.
-4. Qualify buyer universe.
-5. Control outreach and NDA flow.
-6. Grant staged data-room access.
-7. Manage LOI, diligence, APA negotiation and closing.
+1. Identificeer catalogus- of Asset-opportunity.
+2. Kwalificeer rechten, eigendom, databeschikbaarheid en commerciële fit.
+3. Bereid interne waardering en deal thesis voor.
+4. Kwalificeer de Buyer universe.
+5. Voer gecontroleerde outreach en NDA-proces uit.
+6. Open Data Room-toegang per fase.
+7. Ondersteun LOI, Due Diligence, APA, closing en post-closing acties.
 
-## Source-of-truth boundaries
+## Operationele regel
 
-GitHub documents the dealflow and playbooks. Drive stores deal files. ClickUp tracks pipeline stages, owners and tasks.
+GitHub documenteert Dealflow en Playbooks. Google Drive bewaart dealbestanden. ClickUp volgt Pipeline-fases, eigenaren en eerstvolgende acties.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

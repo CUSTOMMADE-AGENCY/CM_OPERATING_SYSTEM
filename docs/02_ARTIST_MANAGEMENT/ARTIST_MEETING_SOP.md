@@ -1,31 +1,38 @@
 # Artist Meeting SOP
 
-## Purpose
+## Doel
 
-Make artist meetings useful, decision-oriented and documented.
+Maak artist-meetings nuttig, besluitgericht en traceerbaar.
 
-## Standard agenda
+## Standaardagenda
 
-1. Wins and urgent updates.
-2. Active roadmap items.
-3. Decisions needed.
-4. Risks, blockers and dependencies.
-5. Next actions, owners and dates.
+1. Wins en urgente updates.
+2. Actieve roadmap-items.
+3. Benodigde beslissingen.
+4. Risico’s, blockers en dependencies.
+5. Taken, eigenaren en deadlines.
+6. Nieuwe verzoeken en Scope-check.
+7. Samenvatting van besluiten en next actions.
 
-## After the meeting
+## Regel
 
-- Send concise recap.
-- Update ClickUp tasks.
-- Store meeting notes in Drive if client-specific.
-- Escalate any scope or approval issue.
+Elke meeting eindigt met vastgelegde decisions, action items, owners en deadlines in ClickUp.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

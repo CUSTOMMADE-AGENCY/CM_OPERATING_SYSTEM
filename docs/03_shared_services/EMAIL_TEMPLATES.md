@@ -1,30 +1,31 @@
 # Email Templates
 
-## Purpose
+## Doel
 
-Maintain reusable Gmail template guidance without storing private correspondence in GitHub.
+Beheer herbruikbare Gmail-template guidance zonder private correspondentie in GitHub op te slaan.
 
-## Template categories
+## Template-categorieën
 
-- Intro and discovery scheduling.
+- Intro en discovery scheduling.
 - Proposal follow-up.
-- NDA/data-room next steps.
-- Artist onboarding.
+- NDA/Data Room next steps.
+- Artist Onboarding.
 - Meeting recap.
-- Approval reminder.
-- Close-out and next phase.
+- Close-Out of next phase.
 
-## Template standard
+## Template-eisen
 
-Each template should include purpose, subject line, body, required personalization fields and when not to use it.
+Elke template bevat doel, subject line, body, verplichte personalisatievelden en wanneer de template niet gebruikt mag worden.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

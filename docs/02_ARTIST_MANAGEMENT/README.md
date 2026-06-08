@@ -1,24 +1,32 @@
 # Artist Management
 
-## Purpose
+## Doel
 
-The Artist Management lane covers artist clients, management, brandbook, release strategy, business audits, artist roadmaps, rights checks, project management and retainers.
+De Artist Management-lane omvat artist-clients, management, Brandbook, Release Strategie, Business Audit, artist roadmaps, rights checks, projectmanagement en retainers.
 
 ## Client lifecycle
 
-Lead intake → fit check → brand audit → brandbook → business audit → strategy scope → proposal → contract/payment → onboarding → execution → delivery → review → close-out → upsell/archive.
+Lead intake → Fit Check → Brand Audit → Brandbook → Business Audit → strategy Scope → Proposal → contract/payment → Onboarding → uitvoering → delivery → review → Close-Out → Upsell/archive.
 
-## Operating rule
+## Operationele regel
 
-Artist-specific files and deliverables live in Drive. Execution tasks live in ClickUp. This repository documents the repeatable workflow.
+Artistspecifieke bestanden en deliverables staan in Google Drive. Uitvoeringstaken staan in ClickUp. Deze repository bewaart alleen de operationele regels.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

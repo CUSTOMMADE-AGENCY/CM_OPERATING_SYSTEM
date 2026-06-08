@@ -1,241 +1,130 @@
 # Artist Brandbook Flow
 
-## Purpose
+## Doel
 
-This flow defines how CM creates an artist brandbook that can be used by the artist, management team, designers, marketers, publicists, labels, distributors, collaborators and commercial partners. The brandbook translates artist strategy into clear rules for positioning, story, tone, visuals, content and public-facing communication.
+Deze Workflow definieert hoe CM een artist Brandbook maakt dat bruikbaar is voor artist, management team, designers, marketers, publicists, labels, distributors, collaborators en commercial partners. Het Brandbook vertaalt artist strategy naar duidelijke regels voor positioning, story, tone, visuals, content en public-facing communication.
 
-The goal is to make brand decisions usable in execution. A finished brandbook should help collaborators understand what the artist stands for, how the artist should be described, what the artist should not sound like, what visual direction is appropriate and what approvals are required before public use.
+Het doel is brand decisions uitvoerbaar te maken. Een afgerond Brandbook helpt collaborators begrijpen waar de artist voor staat, hoe de artist beschreven moet worden, welke visuele richting past en welke approvals nodig zijn vóór public use.
 
-## Scope
+## Reikwijdte
 
-This flow applies when CM is responsible for developing, refreshing or formalizing an artist brandbook. It may be used for:
+Deze Workflow geldt wanneer CM een artist Brandbook ontwikkelt, vernieuwt of formaliseert. De Workflow kan volgen op intake, Brand Audit, Release Strategie, rebrand, management start of commercial partnership preparation.
 
-- New artist onboarding.
-- Pre-release strategy.
-- Rebrand or repositioning work.
-- Press, EPK, website or social profile updates.
-- Label, distributor, publicist, designer or partner alignment.
-- Internal management reference for ongoing decisions.
+## Eigenaar
 
-This flow does not replace final artwork production, trademark clearance, legal review, campaign-specific creative direction or paid media strategy. Those workstreams may use the brandbook as an input, but they require their own owners and approvals.
-
-## Owner
-
-The brand strategy owner or artist manager owns the brandbook process. The artist owns final approval of identity, tone, public-facing language and sensitive positioning. Designers, photographers, marketers, publicists, labels and other collaborators provide inputs only for the areas assigned to them.
-
-If brand direction affects legal rights, name usage, marks, samples, third-party images or contractual obligations, the artist manager must escalate the issue to counsel or the appropriate advisor before final approval.
+De CM strategy lead owns de Brandbook-Workflow. De artist owns final approval. Creative, marketing, PR, label, distributor of partner stakeholders leveren input waar relevant, maar veranderen de approved positioning niet zonder artist approval.
 
 ## Inputs
 
-Collect the following before drafting:
-
-- Artist intake notes.
-- Artist business audit output, if available.
-- Brand audit findings, if available.
-- Existing bios, EPKs, one-sheets, website copy and press language.
-- Current social profiles, content examples and platform performance notes.
-- Existing logos, artwork, photography, typography, color references and visual assets.
-- Release strategy, upcoming campaigns and target audience notes.
-- Reference artists, cultural references, creative influences and visual inspiration.
-- Topics, language, images or positioning the artist wants to avoid.
-- Known legal, contractual or partner constraints.
-- Collaborator list and approval requirements.
-
-If assets are missing, the process owner must decide whether to proceed with available materials, request more inputs or narrow the brandbook scope.
+- Artist interviews, goals, boundaries en references.
+- Brand Audit-output en existing materials.
+- Music, lyrics, visuals, photos, video, live footage en press history.
+- Audience data, social analytics en fan feedback.
+- Competitive landscape en comparable artists.
+- Release plans, partnership opportunities en commercial priorities.
 
 ## Brandbook sections
 
-A complete artist brandbook should include the sections below when relevant to the engagement scope.
-
 ### 1. Artist positioning
 
-- One-sentence positioning statement.
-- Short explanation of the artist's lane, audience and cultural context.
-- Key differentiators.
-- What the artist is not.
-- Strategic tension or contrast that makes the artist memorable.
+Beschrijf core identity, differentiatie, audience, cultural context, values en strategic lane.
 
 ### 2. Artist story
 
-- Core artist narrative.
-- Origin, values, influences and creative direction.
-- Approved proof points.
-- Sensitive topics and boundaries.
-- Approved long, medium and short bio variants.
+Leg origin, conflict, ambition, current phase en “why now” vast in taal die extern bruikbaar is.
 
 ### 3. Tone of voice
 
-- Voice attributes.
-- Words and phrases that fit the artist.
-- Words and phrases to avoid.
-- Examples of approved captions, press lines, pitch language or announcements.
-- Difference between personal voice, official voice and partner-facing voice.
+Definieer taal, energie, woorden die passen, woorden die vermeden worden en voorbeeldcopy.
 
 ### 4. Visual identity guidance
 
-- Mood, atmosphere and visual references.
-- Color, type, layout or photography direction where available.
-- Artwork and image-use guidance.
-- Examples of visuals that fit and do not fit.
-- Rules for using unlicensed references as inspiration only.
+Leg richting vast voor fotografie, kleur, typography, styling, artwork, social formats en visuele do/don’ts.
 
 ### 5. Content pillars
 
-- Primary content themes.
-- Recurring formats or series ideas.
-- Behind-the-scenes, performance, lifestyle, educational, community or narrative content guidance.
-- Platform-specific notes where relevant.
-- Content boundaries and approval triggers.
+Definieer terugkerende content themes, formats, platforms, frequency assumptions en approval needs.
 
 ### 6. Release communication principles
 
-- How releases should be described.
-- Themes, language and story angles for campaigns.
-- Announcement, pre-save, launch and post-release messaging notes.
-- Press and partner talking points.
-- Sensitive claims that require verification before use.
+Koppel release messaging aan artist story, audience, campaign moments en public-facing claims.
 
 ### 7. Collaboration and partner use
 
-- Who may receive the brandbook.
-- What collaborators may use it for.
-- What requires artist approval before external use.
-- How outdated versions should be retired.
+Definieer hoe labels, PR, brands, designers en commercial partners het Brandbook mogen gebruiken.
 
-## Process steps
+## Processtappen
 
-### 1. Confirm the brandbook brief
+### 1. Bevestig de Brandbook brief
 
-- Identify why the brandbook is needed now.
-- Confirm the intended users.
-- Confirm required sections and level of detail.
-- Confirm deadline, review dates and approval owner.
-- Confirm whether the deliverable is internal-only or external-facing.
+Bevestig doel, Scope, deadline, users, required sections, approval owner en gewenste format.
 
-### 2. Gather and organize materials
+### 2. Verzamel en organiseer materialen
 
-- Collect existing artist materials.
-- Review public channels and current language.
-- Gather references and inspiration.
-- Identify missing assets or unclear positioning.
-- Store source materials in the approved client workspace.
+Plaats source materials in Google Drive en documenteer wat ontbreekt of verouderd is.
 
-### 3. Run discovery
+### 3. Voer discovery uit
 
-- Ask the artist about goals, influences, audience, values and boundaries.
-- Identify what the artist wants to be known for.
-- Identify what the artist wants to avoid.
-- Capture direct artist language that may inform tone.
-- Confirm near-term release, content or partnership needs.
+Interview artist en relevante stakeholders over story, boundaries, audience, ambition en creative direction.
 
 ### 4. Draft strategic direction
 
-- Write the positioning statement.
-- Draft the core narrative and bio variants.
-- Define voice attributes and language guardrails.
-- Identify content pillars and communication themes.
-- Draft partner-facing use guidance.
+Maak conceptpositioning, story, audience, differentiatie, tone of voice en messaging pillars.
 
 ### 5. Draft visual direction
 
-- Translate references into usable visual guidance.
-- Explain the mood, texture, color, framing or style principles.
-- Label references as inspiration rather than cleared assets.
-- Identify visual rules, constraints and approval triggers.
+Vertaal strategie naar visual references, do/don’ts, Asset rules en examples zonder creative freedom onnodig te beperken.
 
-### 6. Review internally
+### 6. Review intern
 
-- Check the draft against artist goals and existing public presence.
-- Remove generic language.
-- Confirm that examples are practical and usable.
-- Flag legal, rights, image, mark or claim issues for escalation.
-- Prepare a clean review draft for the artist.
+Check consistency, evidence, public claims, rights/reputation risk en bruikbaarheid voor execution.
 
-### 7. Review with the artist
+### 7. Review met artist
 
-- Walk through positioning, story, tone, visuals and content pillars.
-- Capture requested changes.
-- Identify any language that feels inaccurate or uncomfortable.
-- Confirm what may be shared externally.
-- Set a deadline for final approval.
+Bespreek inhoud op gevoel, juistheid, boundaries en practical usability. Leg feedback en decisions vast.
 
-### 8. Finalize and approve
+### 8. Finalize en approve
 
-- Revise the brandbook based on approved feedback.
-- Confirm final artist approval in writing.
-- Label the approved version with the approval date.
-- Store the final version in the correct Google Drive folder.
-- Update related ClickUp tasks and link the final deliverable.
+Werk revisions door, bevestig final version en leg artist approval schriftelijk vast.
 
-### 9. Distribute and maintain
+### 9. Distribute en maintain
 
-- Share the approved brandbook only with approved recipients.
-- Tell collaborators what the brandbook may be used for.
-- Mark old drafts as superseded.
-- Update active templates, bios or public profiles where in scope.
-- Schedule a review after major brand or release changes.
+Deel approved Brandbook met relevante users, archiveer source files en plan review bij rebrand, nieuwe releasefase of major partnership.
 
 ## Approval standard
 
-The artist must approve:
-
-- Positioning statement.
-- Artist story and bio variants.
-- Tone of voice guidance.
-- Sensitive topics and exclusions.
-- Public-facing language.
-- Distribution list for external collaborators.
-
-The artist manager may approve formatting, internal organization and minor typo corrections if the substance does not change.
+Een Brandbook is pas approved wanneer artist approval, version, Drive location, intended users en usage restrictions zijn vastgelegd.
 
 ## Outputs
 
-A completed brandbook should produce:
-
-- Approved artist positioning statement.
-- Approved artist story and bio variants.
-- Tone of voice guide.
-- Visual identity guidance.
+- Approved Brandbook.
+- Messaging toolkit.
+- Visual direction guide.
 - Content pillars.
-- Release communication principles.
-- Do/don't examples.
-- Collaborator-use and approval guidance.
-- Versioned final file stored in Google Drive.
-- ClickUp task record with approval evidence and final link.
+- Do/don’t list.
+- Usage and approval notes.
 
-## Quality checks
+## Kwaliteitschecks
 
-Before marking the brandbook complete, confirm:
-
-- The artist has approved all public-facing language.
-- The brandbook is specific to the artist and not generic.
-- A collaborator can use the document without needing a separate explanation.
-- Visual references are clearly treated as references unless rights are confirmed.
-- Sensitive topics and prohibited language are documented.
-- Bios are ready for actual use in the formats requested.
-- Drafts and final versions are clearly labeled.
-- Distribution is limited to approved recipients.
-- No confidential client files or unapproved assets are committed to the repository.
+- Positioning is specifiek, evidence-based en niet generiek.
+- Public claims zijn controleerbaar.
+- Tone en visuals voelen authentiek voor de artist.
+- Partners kunnen het document gebruiken zonder nieuwe interpretatie.
+- Usage restrictions en approval rules zijn duidelijk.
 
 ## System of record
 
-- GitHub stores this flow and operating documentation.
-- Google Drive stores source materials, drafts, final brandbook files, approved bios and visual references.
-- ClickUp stores assigned tasks, review deadlines, approval evidence and delivery links.
-- Gmail stores artist feedback, collaborator correspondence and final approval messages.
+- GitHub: Workflow en Governance.
+- Google Drive: Brandbook, source materials en approved exports.
+- ClickUp: tasks, reviews, approvals en deadlines.
+- Gmail: formele approvals en externe distributie.
 
 ## Review cadence
 
-Review the brandbook:
+Review het Brandbook bij nieuwe releasefase, rebrand, managementwissel, major partnership of minimaal jaarlijks voor actieve clients.
 
-- After each major release campaign.
-- After a visual rebrand or repositioning.
-- Before publicist, label, distributor or partner onboarding.
-- When the artist changes name, project direction, audience focus or public narrative.
-- At least twice per year for active management clients.
+## Repository-hygiëne
 
-## Repository hygiene
-
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

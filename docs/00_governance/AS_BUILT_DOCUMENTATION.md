@@ -1,37 +1,21 @@
-# As-Built Documentation
+# As-Built Documentatie
 
-## Purpose
+## Doel
 
-As-built documentation records how the system is actually configured today, not how it was originally imagined.
+As-built documentatie legt vast hoe het systeem vandaag daadwerkelijk is ingericht, niet hoe het oorspronkelijk was bedacht.
 
-## What to document
+## Wat documenteren
 
-- Folder structures in Drive.
-- ClickUp spaces, folders, lists, statuses and custom fields.
-- Gmail template names and intended use.
-- Automations, triggers, owners and failure handling.
-- AI agents, scopes, permissions and review requirements.
+- Mapstructuren in Google Drive.
+- ClickUp spaces, folders, lists, statussen en custom fields.
+- Gmail-template-namen en bedoeld gebruik.
+- Automations, triggers, eigenaren en failure handling.
+- Integraties, scripts en handmatige workarounds.
 
-## Update triggers
+## Reviewritme
 
-Update as-built documentation whenever:
+Review elk kwartaal en na iedere grote rebuild van het operating system.
 
-- A top-level folder changes.
-- A ClickUp status, custom field or automation changes.
-- A Gmail template is added, renamed or retired.
-- A recurring workflow changes ownership.
+## Kwaliteitsstandaard
 
-## Review cadence
-
-Review quarterly and after each major operating-system rebuild.
-
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
-
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+As-built documentatie moet specifiek genoeg zijn om het systeem opnieuw op te bouwen, te auditen en veilig over te dragen aan een nieuwe owner.

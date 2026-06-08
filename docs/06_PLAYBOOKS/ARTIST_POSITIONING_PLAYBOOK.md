@@ -1,20 +1,20 @@
 # Artist Positioning Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM een artiest positioneert via archetype, verhaal, audience, differentiatie en messaging. Het resultaat moet direct bruikbaar zijn voor bio, releasecampagne, socials, press, brand deals en teamcommunicatie.
+Dit Playbook beschrijft hoe CM een artiest positioneert via archetype, verhaal, audience, differentiatie en messaging. Het resultaat moet direct bruikbaar zijn voor bio, releasecampagne, socials, press, brand deals en teamcommunicatie.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
-- Bij onboarding van artist-clients.
-- Voor releases, brandbooks, press kits of career audits.
+- Bij Onboarding van artist-clients.
+- Voor releases, Brandbooks, press kits of career audits.
 - Wanneer doelgroep, verhaal of differentiatie onduidelijk is.
 
-## OBJECTIVE
+## Doelstelling
 
 Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is voor externe communicatie en concreet genoeg voor dagelijkse beslissingen.
 
-## INPUTS
+## Inputs
 
 - Artist interviews.
 - Music, lyrics, visuals en live footage.
@@ -23,7 +23,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Press/social history.
 - Artist values, boundaries en ambitions.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - Artist/client.
 - CM strategy lead.
@@ -31,7 +31,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Manager/team.
 - PR, label, publisher en brand partners die messaging gebruiken.
 
-## CM PROCESS
+## CM-proces
 
 - Archetypes helpen gedrag en energie te definiëren, maar worden nooit als label naar buiten gebruikt zonder nuance.
 - Story verbindt oorsprong, conflict, visie en huidige fase.
@@ -39,7 +39,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Differentiatie benoemt wat de artist onderscheidt in sound, verhaal, community, esthetiek of business.
 - Messaging vertaalt positionering naar bio, captions, pitch copy en talking points.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Interview artist over herkomst, motivatie, thema’s, grenzen en ambities.
 2. Analyseer muziek en visuals op terugkerende motieven, energie en emotionele kern.
@@ -52,7 +52,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 9. Maak do/don’t lijst voor visuals, taal, partnerships en content.
 10. Archiveer approved positioning en gebruik deze in campaigns.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Interview template.
 - Brand audit template.
@@ -61,7 +61,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Google Drive brand folder.
 - Messaging sheet.
 
-## DELIVERABLES
+## Deliverables
 
 - Artist positioning memo.
 - Archetype map.
@@ -70,7 +70,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Messaging toolkit.
 - Do/don’t guide.
 
-## KPIS
+## KPIs
 
 - Team alignment score.
 - Aantal assets dat messaging consistent gebruikt.
@@ -78,7 +78,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Content engagement op kernboodschappen.
 - Brand fit verbeteringen.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Positionering is te generiek.
 - Artist accepteert tekst rationeel maar voelt het niet.
@@ -86,7 +86,7 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Messaging klinkt als marketingtaal in plaats van artist voice.
 - Differentiatie is gebaseerd op claims zonder bewijs.
 
-## RED FLAGS
+## Red flags
 
 - Artist wil meerdere tegenstrijdige identiteiten tegelijk pushen.
 - Positionering imiteert concurrenten.
@@ -94,17 +94,17 @@ Een scherpe en uitvoerbare artist positionering maken die consistent genoeg is v
 - Team gebruikt verschillende verhalen extern.
 - Brand opportunity vraagt positionering te vervormen.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

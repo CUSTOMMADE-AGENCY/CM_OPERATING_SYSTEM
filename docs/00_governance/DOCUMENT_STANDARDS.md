@@ -1,37 +1,30 @@
-# Document Standards
+# Documentatiestandaarden
 
-## Required sections for SOPs and playbooks
+## Vereiste secties voor SOPs en Playbooks
 
-Every operating document should include:
+Elk operationeel document bevat minimaal:
 
-1. Purpose
-2. Scope
-3. Owner
+1. Doel
+2. Reikwijdte
+3. Eigenaar
 4. Inputs
-5. Process steps
+5. Processtappen
 6. Outputs
-7. Quality checks
-8. System of record
-9. Review cadence
+7. Toolgrenzen
+8. Kwaliteitschecks
+9. Escalatiecriteria
+10. Reviewritme
 
-## Writing standard
+## Schrijfstandaard
 
-- Write for execution, not theory.
-- State decision points and owners clearly.
-- Link to adjacent SOPs instead of duplicating large sections.
-- Keep client names and confidential terms out of repository documentation.
+- Schrijf interne documentatie in professioneel Nederlands.
+- Houd officiële CM-termen exact ongewijzigd.
+- Schrijf uitvoerbaar: elke stap moet een owner, trigger of beslisregel kunnen dragen.
+- Vermijd vage formuleringen zoals “bijhouden indien nodig”.
+- Houd clientnamen en vertrouwelijke terms buiten repository-documentatie.
+- Gebruik tabellen voor registers, beslismatrices en statusoverzichten.
+- Gebruik checklists voor herhaalbare controles.
 
-## Quality bar
+## Approval
 
-A new team member should be able to follow the document without asking where the work lives, who owns it or what output is expected.
-
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
-
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+Nieuwe of gewijzigde SOPs en Playbooks worden gereviewd door de process owner voordat ze operationele standaard worden.

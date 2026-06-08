@@ -1,29 +1,37 @@
 # Artist Brand Audit Flow
 
-## Purpose
+## Doel
 
-Evaluate whether the artist's public identity, story and materials support the intended business and creative goals.
+Beoordeel of de publieke identiteit, het verhaal en de materialen van de artist de beoogde business- en creatieve doelen ondersteunen.
 
-## Audit areas
+## Auditgebieden
 
-- Artist positioning and narrative.
-- Visual identity and consistency.
-- Social and platform presence.
-- Audience signals and community behavior.
-- Press, EPK and public assets.
-- Competitive and reference landscape.
+- Artist positioning en narratief.
+- Visuele identiteit en consistentie.
+- Social en platform presence.
+- Audience signals en communitygedrag.
+- Press, bio, content en pitchmateriaal.
+- Brand fit en partnergeschiktheid.
 
 ## Output
 
-A brand audit summary with strengths, gaps, risks and recommended next actions.
+Brand Audit-memo met bevindingen, prioriteiten, risico’s en concrete verbeteracties.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

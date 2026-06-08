@@ -1,32 +1,44 @@
 # Due Diligence Checklist
 
-## Purpose
+## Doel
 
-Define the required diligence materials for catalog, master, publishing and rights acquisition transactions.
+Definieer de vereiste Due Diligence-materialen voor catalogus-, master-, publishing- en rechtenacquisitietransacties.
 
 ## Checklist
 
-- Rights ownership and chain of title.
-- Writer, producer, artist and label agreements.
-- Publishing, administration and collection agreements.
-- Revenue statements and source reports.
-- Metadata, ISRC, ISWC and work identifiers.
-- Territory, term and reversion information.
-- Liens, claims, disputes and consent requirements.
-- Tax, payment and entity information.
-- Closing deliverables and transfer mechanics.
+- Rechteneigendom en chain of title.
+- Writer-, producer-, artist- en labelovereenkomsten.
+- Publishing-, administratie- en collection agreements.
+- Revenue statements en bronrapportages.
+- Metadata, ISRC, ISWC, titels en repertoirelijsten.
+- Splits, participations, royalty rates en payment waterfalls.
+- Claims, disputes, liens, samples, interpolations en consent requirements.
+- Term, territorium, reversions, renewal- en termination-rechten.
+- Tax, accounting en corporate approvals waar relevant.
 
 ## Completion standard
 
-Diligence is complete when open issues are either resolved, allocated in the APA or accepted in writing by the decision owner.
+Due Diligence is compleet wanneer open issues zijn opgelost, in de APA zijn toegewezen of schriftelijk door de decision owner zijn geaccepteerd.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Escalatie
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+Escaleren naar legal, tax, accounting of rights-specialist wanneer eigendom, overdraagbaarheid, consent, claims of waardering niet betrouwbaar kan worden vastgesteld.
+
+## Kwaliteitschecks
+
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

@@ -1,216 +1,116 @@
 # Catalog Valuation Playbook
 
-## Purpose
+## Doel
 
-This playbook defines how CM prepares a disciplined internal valuation view for catalog, master, publishing and related music-rights assets before outreach, LOI response, counteroffer, diligence negotiation or deal approval.
+Dit Playbook definieert hoe CM een gedisciplineerde interne valuation view voorbereidt voor catalogus-, master-, publishing- en gerelateerde music-rights Assets vóór outreach, LOI-response, counteroffer, Due Diligence-onderhandeling of deal approval.
 
-The objective is to produce a valuation range that is tied to evidence, risk, buyer behavior and deal strategy. The valuation should make clear what is known, what is assumed, what is unresolved and how those items affect price, structure and negotiation posture.
+De output is een valuation range die is gekoppeld aan evidence, risk, Buyer behavior en deal strategy. De valuation maakt duidelijk wat bekend is, wat wordt aangenomen, wat unresolved is en hoe die punten price, structure en negotiation posture beïnvloeden.
 
-## Scope
+## Reikwijdte
 
-This playbook applies to valuation work for:
+Dit Playbook geldt voor valuation work rond master recording catalogs, publishing catalogs, writer/producer/artist royalty streams, Neighbouring Rights en mixed Asset packages. Het ondersteunt sell-side preparation, Buyer outreach, LOI review, negotiation support en interne besluitvorming.
 
-- Master recording catalogs.
-- Publishing catalogs.
-- Writer, producer or artist royalty streams.
-- Neighboring rights or other recurring rights income where applicable.
-- Mixed asset packages that require segmentation by income source, ownership, term or risk.
-- Sell-side preparation, buyer outreach, LOI review, negotiation support and internal decision-making.
+Het is geen formal appraisal, fairness opinion, legal opinion, tax opinion of accounting opinion. Legal, tax en accounting conclusions komen van de juiste advisors.
 
-This playbook supports business analysis and deal planning. It is not a formal appraisal, fairness opinion, legal opinion, tax opinion or accounting opinion. Legal, tax and accounting conclusions must come from the appropriate advisors.
+## Eigenaar
 
-## Owner
-
-The deal lead owns the valuation process, buyer strategy and final internal recommendation.
-
-Finance or royalty analysis support owns workbook preparation, revenue normalization and statement reconciliation when assigned.
-
-Rights, legal, tax and accounting advisors own specialist review of ownership, term, claims, consents, tax treatment, accounting treatment and legal risk.
-
-The client or designated decision owner approves the valuation range and negotiation posture before numbers are used externally.
+De deal lead owns valuation process, Buyer strategy en final internal recommendation. Finance/royalty analysis support owns workbook preparation, revenue normalization en statement reconciliation waar toegewezen. Rights, legal, tax en accounting advisors own specialist review.
 
 ## Inputs
 
-Collect the following before completing the valuation:
+- Historical royalty statements en source reports.
+- Revenue per composition, master, recording, writer share, publisher share, territory en platform.
+- Repertoire schedule, metadata, ISRC, ISWC, titles, writers, artists en release dates.
+- Ownership splits, royalty rates, participation rates en payment waterfalls.
+- Contract summaries, administration/distribution/label/producer/writer agreements.
+- Term, reversion, renewal, termination en post-term collection details.
+- Recoupment balances, reserves, deductions, commissions en fees.
+- Claims, disputes, liens, samples, interpolations, side letters en consent requirements.
+- Prior offers, Buyer feedback, comparable deal notes en marktcontext.
+- Seller objectives, timing constraints, minimum price expectations en non-price priorities.
 
-- Historical royalty statements.
-- Source reports by payor, platform, territory and period where available.
-- Revenue by composition, master, recording, writer share, publisher share, territory and platform where available.
-- Repertoire schedule.
-- Metadata including ISRC, ISWC, titles, writers, artists, release dates and identifiers where available.
-- Ownership splits, royalty rates, participation rates and payment waterfalls.
-- Contract summaries, administration agreements, distribution agreements, label agreements, producer agreements and writer agreements where relevant.
-- Term, reversion, renewal, termination and post-term collection details.
-- Recoupment balances, reserves, deductions, commissions and fees.
-- Known claims, disputes, liens, samples, interpolations, side letters or consent requirements.
-- Prior offers, buyer feedback, comparable deal notes and current market context.
-- Seller objectives, timing constraints, minimum price expectations and non-price priorities.
+## Waarderingsprincipes
 
-If material inputs are missing, the valuation must identify the gap and explain whether the gap affects price, structure, diligence or buyer outreach.
+- Valuation start met Asset perimeter; waardeer geen Assets die niet bevestigd zijn.
+- Revenue wordt genormaliseerd voordat multiples of Buyer assumptions worden toegepast.
+- Risk beïnvloedt de valuation range, niet alleen de narrative.
+- One-time income wordt niet als recurring behandeld zonder evidence.
+- Declining, concentrated, disputed of short-term income wordt zichtbaar in case structure.
+- Buyer strategy moet aansluiten op valuation en presentation choices.
+- Scheid facts, assumptions en unresolved Due Diligence-vragen.
 
-## Valuation principles
+## Processtappen
 
-- Valuation must start with asset perimeter. Do not value assets that are not confirmed as included.
-- Revenue must be normalized before applying multiples or buyer assumptions.
-- Risk must affect the valuation range, not only the narrative.
-- One-time income should not be treated as recurring without evidence.
-- Declining, concentrated, disputed or short-term income should be reflected in the case structure.
-- Buyer strategy should connect to valuation. A broad auction, targeted outreach and single-buyer negotiation may justify different presentation choices.
-- The valuation must distinguish facts, assumptions and unresolved diligence questions.
+### 1. Bevestig het valuation mandate
 
-## Process steps
+Bevestig doel, decision owner, output format, deadline en of de valuation extern wordt gedeeld.
 
-### 1. Confirm the valuation mandate
+### 2. Definieer de Asset perimeter
 
-- Identify why the valuation is being prepared.
-- Confirm whether it is for internal planning, buyer outreach, LOI response, negotiation, financing or client decision-making.
-- Confirm the decision owner.
-- Confirm the expected output format and deadline.
-- Confirm whether the valuation will be shared externally.
+Maak duidelijk welke Assets zijn inbegrepen, uitgesloten, term-limited, territoriaal beperkt of niet overdraagbaar. Flag Assets waarvan title/control nog niet bevestigd is.
 
-### 2. Define the asset perimeter
+### 3. Verzamel en organiseer source data
 
-- List the assets included in the analysis.
-- Identify excluded assets.
-- Confirm ownership type and percentage for each asset category.
-- Identify term-limited rights, reversions, territory restrictions or income streams not transferable.
-- Flag assets where title or control is not yet confirmed.
-
-### 3. Collect and organize source data
-
-- Gather statements and source reports.
-- Organize reports by payor, period and income type.
-- Store confidential financial materials in the approved client workspace or data room.
-- Create a source index so every number in the analysis can be traced back to evidence.
+Verzamel statements en reports per payor, period en income type. Bewaar vertrouwelijke financiële materialen in de goedgekeurde client workspace of Data Room. Maak een source index.
 
 ### 4. Reconcile revenue
 
-- Compare summary royalty statements to source reports where possible.
-- Identify missing periods, duplicate reports, reserves, adjustments and delayed payments.
-- Separate gross income, net income, fees, commissions and recoupment effects.
-- Document any unreconciled differences.
+Vergelijk summary statements met source reports, identificeer missing periods, duplicates, reserves, adjustments en delayed payments. Scheid gross income, net income, fees, commissions en recoupment effects.
 
 ### 5. Normalize revenue
 
-- Build trailing twelve-month revenue.
-- Build multi-year revenue history where available.
-- Remove or isolate non-recurring items.
-- Identify declining, growing, seasonal or volatile income.
-- Adjust for known changes in ownership, administration, distribution, royalty rate or collection status.
-- Separate revenue that may not continue after closing.
+Bouw trailing twelve-month revenue en multi-year history waar beschikbaar. Isoleer non-recurring items, trends, seasonality, volatility en known changes in ownership, administration, distribution, royalty rate of collection status.
 
 ### 6. Segment risk
 
-Analyze risk by:
+Analyseer concentration, payor, platform, territory, Asset type, term/reversion, disputes, claims, consent exposure, metadata quality, collection quality en dependency on active artist promotion.
 
-- Work or recording concentration.
-- Payor concentration.
-- Platform concentration.
-- Territory concentration.
-- Asset type.
-- Term and reversion exposure.
-- Dispute, claim or consent exposure.
-- Metadata and collection quality.
-- Dependency on active artist promotion or future services.
+### 7. Bouw valuation cases
 
-### 7. Build valuation cases
+Maak low, base en high cases. Elke case vermeldt revenue base, multiple/cash-flow assumption, rationale, risk adjustments, non-recurring income treatment en key sensitivities.
 
-Create low, base and high cases. Each case should state:
+### 8. Vertaal Due Diligence-issues naar deal impact
 
-- Revenue base used.
-- Multiple or cash-flow assumption.
-- Rationale for the assumption.
-- Risk adjustments.
-- Treatment of non-recurring income.
-- Treatment of disputed or unverified income.
-- Implied value and key sensitivity.
+Bepaal per issue of het impact heeft op price, holdback, condition, disclosure, indemnity, Buyer universe of no-go.
 
-### 8. Convert diligence issues into deal impact
+### 9. Bereid de valuation memo voor
 
-For each material issue, identify whether it should affect:
+Vat perimeter, inputs, methodology, cases, assumptions, risks, unresolved issues en recommendation samen.
 
-- Purchase price.
-- Holdback.
-- Earnout.
-- Excluded asset schedule.
-- Representation and warranty.
-- Indemnity.
-- Closing condition.
-- Buyer outreach strategy.
-- Client walk-away position.
+### 10. Verkrijg approval vóór extern gebruik
 
-### 9. Prepare the valuation memo
-
-The memo must include:
-
-- Asset description.
-- Data reviewed.
-- Revenue summary.
-- Normalization approach.
-- Low, base and high valuation cases.
-- Key assumptions.
-- Key risks.
-- Unresolved diligence questions.
-- Recommended buyer strategy.
-- Recommended target, stretch and walk-away positions where applicable.
-
-### 10. Obtain approval before external use
-
-- Review the valuation with the decision owner.
-- Confirm what numbers may be shared externally.
-- Confirm what assumptions must remain internal.
-- Confirm the approved negotiation posture.
-- Record approval in the appropriate system of record.
+Gebruik numbers extern pas na approval door decision owner en afstemming met relevante advisors.
 
 ## Outputs
 
-A complete valuation process should produce:
-
-- Valuation memo.
-- Revenue normalization workbook or analysis file.
+- Valuation workbook.
 - Source index.
-- Diligence issue log with valuation impact.
-- Low, base and high valuation cases.
-- Recommended buyer strategy.
-- Approved internal target, stretch and walk-away positions where applicable.
-- List of assumptions and unresolved questions.
+- Risk segmentation.
+- Low/base/high valuation cases.
+- Valuation memo.
+- Approval record.
 
-## Quality checks
+## Kwaliteitschecks
 
-Before using a valuation, confirm:
-
-- The included asset perimeter is clear.
-- The revenue base can be traced to source materials.
-- Non-recurring, disputed and declining income is separated.
-- Concentration risk is reflected in the valuation cases.
-- Ownership, term, reversion and consent issues are flagged.
-- Missing data is disclosed as an assumption or diligence gap.
-- Buyer-facing numbers are approved.
-- Internal walk-away and target positions are documented where needed.
-- Confidential financial materials remain in the approved client workspace or data room.
+- Elke number is herleidbaar naar source evidence.
+- Missing inputs zijn zichtbaar met deal impact.
+- Facts, assumptions en unresolved issues zijn gescheiden.
+- Valuation range weerspiegelt risk en revenue quality.
+- Geen extern gebruik zonder approval.
 
 ## System of record
 
-- GitHub stores this playbook and operating documentation.
-- Google Drive stores confidential financial files, royalty statements, source reports, valuation workbooks, valuation memos and client materials.
-- ClickUp stores valuation tasks, owners, due dates, diligence issues, approvals and buyer-process actions.
-- Gmail stores client approvals, buyer correspondence, advisor communications and valuation-related requests.
+- GitHub: Playbook en Governance.
+- Google Drive/Data Room: source documents, workbooks en memos.
+- ClickUp: owners, deadlines, status, open issues en approvals.
+- Gmail: formele correspondence en approvals.
 
 ## Review cadence
 
-Refresh the valuation:
+Review valuation na ontvangst van nieuwe statements, Buyer feedback, Due Diligence findings of gewijzigde deal structure.
 
-- Before buyer outreach.
-- Before responding to an LOI.
-- Before sending or accepting a counteroffer.
-- When material new diligence arrives.
-- When revenue, ownership, claim, consent or market assumptions change.
-- Before final deal approval.
+## Repository-hygiëne
 
-Review this playbook semiannually or when market multiples, buyer behavior, diligence standards or CM deal process changes materially.
-
-## Repository hygiene
-
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

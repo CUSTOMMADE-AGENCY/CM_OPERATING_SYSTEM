@@ -1,42 +1,22 @@
-# Naming Conventions
+# Naamgevingsconventies
 
-## Purpose
+## Doel
 
-Naming must make documents findable without creating duplicate or uncontrolled variants.
+Naamgeving moet documenten vindbaar maken zonder dubbele of ongecontroleerde varianten te creëren.
 
-## Folder naming
+## Mapnaamgeving
 
-- Use numbered prefixes for controlled navigation: `01_MASTER_BOUTIQUE`.
-- Use uppercase for system folders and markdown playbooks.
-- Use descriptive nouns, not internal shorthand.
+- Gebruik genummerde prefixes voor gecontroleerde navigatie: `01_MASTER_BOUTIQUE`.
+- Gebruik uppercase voor systeemmappen en markdown Playbooks waar de repository-structuur dat al doet.
+- Gebruik beschrijvende zelfstandige naamwoorden, geen interne afkortingen zonder context.
 
-## File naming
+## Bestandsnaamgeving
 
-- Markdown documentation: `PROCESS_NAME.md`.
-- Client Drive folders: `CLIENT_NAME - WORKSTREAM - YYYY`.
-- Deal Drive folders: `CATALOG_OR_ASSET - COUNTERPARTY - YYYY`.
-- Meeting notes in Drive: `YYYY-MM-DD - Meeting Topic - Client`.
+- Behoud bestaande bestandsnamen wanneer content in-place wordt bijgewerkt.
+- Gebruik korte, duidelijke namen die het proces of de deliverable beschrijven.
+- Gebruik geen `final_final`, `new`, `copy`, `old` of willekeurige datumvarianten.
+- Gebruik GitHub-commits en pull requests voor version control.
 
-## Prohibited patterns
+## Taal
 
-- `final_final`
-- `latest`
-- `newest`
-- `copy of`
-- unsorted exports
-- duplicate folders with near-identical names
-
-## Versioning
-
-Use Git commits for documentation history. Use dated Drive filenames only when a file is a discrete deliverable or executed document.
-
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
-
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+Interne documenttitels en headings zijn Nederlands, behalve officiële CM-termen die exact behouden blijven.

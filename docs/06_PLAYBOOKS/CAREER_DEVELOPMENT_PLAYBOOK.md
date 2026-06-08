@@ -1,20 +1,20 @@
 # Career Development Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM de carrièreontwikkeling van een artiest of creative client structureert rond positionering, brand, audience, music, revenue en team. Het is een uitvoeringsplan voor groei, niet een abstract strategiedocument.
+Dit Playbook beschrijft hoe CM de carrièreontwikkeling van een artiest of creative client structureert rond positionering, brand, audience, music, revenue en team. Het is een uitvoeringsplan voor groei, niet een abstract strategiedocument.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Bij nieuwe management-, advisory- of development-clients.
 - Wanneer een artist direction, inkomstenmodel of teamstructuur onduidelijk is.
 - Wanneer een volgende groeifase moet worden gepland.
 
-## OBJECTIVE
+## Doelstelling
 
 Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audience growth, releases, inkomsten en teamcapaciteit met elkaar verbindt.
 
-## INPUTS
+## Inputs
 
 - Artist goals en constraints.
 - Music catalog, unreleased music en release history.
@@ -23,7 +23,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Team map: manager, label, publisher, lawyer, agents, creatives.
 - Budget en beschikbare tijd.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - Artist/client.
 - CM development lead.
@@ -33,7 +33,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Booking agent.
 - Legal/finance advisors.
 
-## CM PROCESS
+## CM-proces
 
 - Positioning bepaalt waarom deze artist bestaat en voor wie.
 - Brand vertaalt positioning naar visuele, verbale en gedragsmatige keuzes.
@@ -42,7 +42,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Revenue planning maakt inkomstenstromen concreet en meetbaar.
 - Team planning bepaalt welke functies nodig zijn en welke nog te vroeg zijn.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Voer career audit uit: doelen, assets, cijfers, team, rechten, cashflow en blokkades.
 2. Definieer artist positioning en 3 prioritaire audience segments.
@@ -54,7 +54,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 8. Plan maandelijkse review op KPI’s, deliverables en beslissingen.
 9. Documenteer learnings en update roadmap elk kwartaal.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Artist audit template.
 - ClickUp roadmap.
@@ -63,7 +63,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Revenue tracker.
 - Team map.
 
-## DELIVERABLES
+## Deliverables
 
 - Career audit memo.
 - Positioning statement.
@@ -72,7 +72,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Revenue map.
 - Team development plan.
 
-## KPIS
+## KPIs
 
 - Audience growth.
 - Release output en completion rate.
@@ -81,7 +81,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Team role coverage.
 - Decision turnaround time.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Te veel doelen tegelijk.
 - Brand verandert per release zonder rationale.
@@ -89,7 +89,7 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Revenueverwachting is niet gekoppeld aan assets.
 - Team wordt te vroeg of verkeerd uitgebreid.
 
-## RED FLAGS
+## Red flags
 
 - Artist en CM verschillen over kernrichting.
 - Contracten blokkeren exploitatie.
@@ -97,17 +97,17 @@ Een heldere 90-dagen en 12-maanden route bouwen die artistieke identiteit, audie
 - Teamconflict vertraagt uitvoering.
 - Mental health, reputatie of legal issues beïnvloeden planning.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

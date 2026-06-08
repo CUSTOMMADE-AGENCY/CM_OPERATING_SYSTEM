@@ -1,30 +1,19 @@
 # Governance
 
-## Purpose
+## Doel
 
-This folder defines how the Custommade Agency operating system is structured, maintained and governed.
+Deze map definieert hoe het Custommade Agency operating system is gestructureerd, onderhouden en bestuurd.
 
-## Governance index
+## Governance-index
 
-- `CM_OPERATING_MODEL.md` — executive overview and primary map of the complete CM operating system.
-- `DRIVE_STRUCTURE.md` — approved Google Drive structure and lane ownership.
-- `NAMING_CONVENTIONS.md` — file, folder and version naming standards.
-- `DOCUMENT_STANDARDS.md` — required sections and quality bar for SOPs/playbooks.
-- `VERSION_CONTROL.md` — GitHub branching, review and change control rules.
-- `WORKFLOW_DOCUMENTATION.md` — how to document repeatable processes.
-- `AS_BUILT_DOCUMENTATION.md` — how to record the current implemented system state.
+- `CM_OPERATING_MODEL.md` — executive overview en primaire kaart van het volledige CM operating system.
+- `DRIVE_STRUCTURE.md` — goedgekeurde Google Drive-structuur en lane ownership.
+- `NAMING_CONVENTIONS.md` — standaarden voor bestands-, map- en versienaamgeving.
+- `DOCUMENT_STANDARDS.md` — vereiste secties en kwaliteitslat voor SOPs/Playbooks.
+- `VERSION_CONTROL.md` — GitHub-werkwijze voor gecontroleerde wijzigingen.
+- `Workflow_DOCUMENTATION.md` — standaard voor het documenteren van Workflows.
+- `AS_BUILT_DOCUMENTATION.md` — vastlegging van hoe systemen daadwerkelijk zijn ingericht.
 
-## Guiding principle
+## Regel
 
-GitHub is the clean operational brain. Drive is for files, ClickUp is for execution and Gmail is for correspondence.
-
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
-
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+Governance-documenten zijn intern en worden in professioneel Nederlands geschreven, met officiële CM-termen exact behouden.
