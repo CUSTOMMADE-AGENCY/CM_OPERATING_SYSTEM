@@ -28,6 +28,7 @@ For artist clients, management, brandbook, release strategy, business audits, ar
 - `docs/02_artist_management/` — artist client lifecycle, management SOPs, audits, approvals and retainers.
 - `docs/03_shared_services/` — reusable onboarding, email, proposals, meetings and file management.
 - `docs/04_systems/` — Google Drive, ClickUp, Gmail, AI agent and automation documentation.
+- `docs/05_KNOWLEDGE_BASE/` — Dutch practical music business knowledge base for CM team members, freelancers, interns, future employees and AI agents.
 - `scripts/google-drive/` — Google Apps Script utilities for creating the approved Drive folder structure.
 
 ## Non-negotiable repository rules
