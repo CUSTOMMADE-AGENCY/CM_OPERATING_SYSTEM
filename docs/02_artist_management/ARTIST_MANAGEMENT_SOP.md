@@ -2,85 +2,240 @@
 
 ## Purpose
 
-Set the standard operating model for ongoing artist management retainers and project-based management support.
+This SOP defines how CM runs ongoing artist management work from onboarding through execution, reporting, escalation and close-out. It gives the artist and internal team one operating standard for priorities, decisions, approvals, communication, file handling and accountability.
+
+The SOP is designed to prevent reactive management, undocumented approvals, missed deadlines, unmanaged scope creep and scattered client information. Every active artist engagement should have a current roadmap, a clear task system, documented decisions and a predictable review rhythm.
 
 ## Scope
 
-This SOP applies once an artist has been onboarded, the management scope has been approved and active work is being run through the shared operating system. It covers strategic planning, execution management, communication, approvals, documentation and escalation.
+This SOP applies to:
 
-This SOP does not replace legal, accounting, tax or business affairs advice. Specialist advisors own their respective recommendations and sign-offs.
+- Monthly artist management retainers.
+- Project-based artist management engagements.
+- Release, brand, catalog, rights, partnership or business-development workstreams managed for an artist.
+- Coordination with external advisors, distributors, labels, publishers, creatives, agents, publicists, accountants and counsel.
+- Internal management tasks that affect artist strategy, deliverables, approvals, deadlines or business risk.
+
+This SOP does not replace specialist advice. Legal counsel owns legal advice and drafting. Accountants own tax and accounting advice. Business affairs or rights specialists own detailed contract, royalty and rights analysis when assigned. The artist manager is responsible for identifying when those specialists must be involved and for keeping work moving once advice is received.
 
 ## Owner
 
-The artist manager owns the operating cadence, roadmap, task follow-through and escalation path. The artist owns creative and business approvals. External advisors own specialist workstreams assigned to them.
+The artist manager is the process owner. The artist manager owns the roadmap, cadence, task hygiene, communication flow, decision log, escalation path and completion standard.
+
+The artist is the approval owner for creative direction, public-facing language, release choices, commercial commitments, budget approvals and major strategic decisions.
+
+Assigned workstream owners are responsible for completing their tasks, maintaining evidence of completion and escalating blockers before deadlines are missed.
 
 ## Inputs
 
-- Signed scope of work, management agreement or approved project brief.
-- Artist intake, business audit and brand audit outputs.
-- Active roadmap, release calendar and commercial pipeline.
-- Current contracts, rights summaries and royalty collection notes.
-- Team roster with roles, permissions and communication preferences.
-- Open approvals, risks, deadlines and dependencies.
+Before active management begins, the artist manager must confirm that the following inputs are available or that a task exists to collect them:
+
+- Approved scope of work, management agreement or project brief.
+- Artist intake notes and stated goals.
+- Current artist roadmap or initial priority list.
+- Artist business audit output, if completed.
+- Brand audit or brandbook output, if completed.
+- Release calendar, content calendar, touring calendar or campaign timeline, if applicable.
+- Current agreements, rights summaries, royalty notes and known deal obligations.
+- Team roster with names, roles, contact details, responsibilities and approval authority.
+- Artist communication preferences, meeting cadence and response expectations.
+- Active opportunities, deadlines, risks, approvals and dependencies.
+- Current budget, commercial pipeline or payment obligations where relevant.
+
+If any required input is missing, the artist manager must either collect it during onboarding or record the gap as an open task with an owner and due date.
+
+## Operating principles
+
+- Strategy comes before activity. Tasks must connect to the artist's approved goals or an agreed operational need.
+- One owner is accountable for each active workstream.
+- Every priority must have a next action, due date and system of record.
+- Decisions that affect public messaging, money, rights, contracts or reputation must be captured in writing.
+- Scope must be checked before new work begins.
+- Confidential client information belongs in the approved client workspace, not in this repository.
+- The artist should always know what is active, what is blocked and what decision is needed next.
 
 ## Operating cadence
 
-- Weekly priority review for active decisions, blockers and deliverables.
-- Monthly roadmap review for goals, budgets, opportunities and completed work.
-- Quarterly business audit refresh for rights, royalties, team structure and risk items.
-- Release-specific sprint planning when recording, rollout, marketing or distribution timelines require tighter management.
-- Ad hoc escalation when legal, financial, reputational or deadline-sensitive decisions arise.
+### Weekly priority review
 
-## Manager responsibilities
+Run weekly for active retainers and time-sensitive projects. The review should confirm:
 
-- Protect the artist's strategic direction and avoid reactive decision-making.
-- Convert ideas into decisions, tasks, owners and timelines.
-- Coordinate advisors, creative partners, commercial opportunities and internal execution.
-- Maintain rights, royalty, deal and approval awareness.
-- Document approvals, scope changes, key assumptions and decision rationale.
-- Keep communication clear, timely and appropriate for the artist's preferred working style.
-- Identify scope creep before it becomes unpaid or unmanaged work.
+- Top priorities for the week.
+- Completed work since the last review.
+- Decisions needed from the artist.
+- Blockers or missing inputs.
+- Upcoming deadlines.
+- Scope changes or new requests.
+- Tasks that need reassignment, escalation or closure.
+
+### Monthly roadmap review
+
+Run once per month for active management clients. The review should confirm:
+
+- Progress against the artist roadmap.
+- Priorities for the next month.
+- Completed deliverables.
+- Open approvals and delayed decisions.
+- Rights, royalty, legal, budget or commercial items requiring follow-up.
+- Opportunities to pause, accelerate, delegate or upsell work.
+
+### Quarterly business review
+
+Run quarterly when the engagement includes ongoing business management. The review should confirm:
+
+- Rights ownership and royalty collection status.
+- Contract or deal changes.
+- Team structure and communication effectiveness.
+- Release, content, touring, sync, partnership or catalog opportunities.
+- Budget, invoicing and commercial pipeline status.
+- Risks that should be escalated or resolved before the next quarter.
+
+### Release sprint cadence
+
+When a release is active, the artist manager may replace the weekly cadence with a sprint cadence. Release sprint planning should confirm recording, delivery, distribution, content, marketing, press, approvals, budget and launch responsibilities.
 
 ## Process steps
 
-1. Confirm the active scope, goals, time horizon and communication cadence.
-2. Review the artist roadmap, open workstreams and upcoming deadlines.
-3. Translate priorities into ClickUp tasks with owners, due dates and evidence requirements.
-4. Collect missing inputs from the artist, advisors or collaborators before work is delegated.
-5. Run weekly or release-specific check-ins against decisions, blockers and next actions.
-6. Capture artist approvals in writing before public, financial, contractual or creative commitments are made.
-7. Escalate legal, financial, rights, brand or reputational risks to the correct decision owner.
-8. Maintain the monthly summary and update the roadmap after completed work or changed priorities.
-9. Close completed workstreams with deliverables, final files and lessons learned in the correct system of record.
+### 1. Confirm engagement setup
+
+- Review the approved scope, fee structure, term and included workstreams.
+- Confirm the artist's goals, constraints and preferred communication style.
+- Confirm whether the engagement is retainer-based, project-based or release-specific.
+- Identify the decision owners for creative, commercial, legal, financial and public-facing matters.
+- Create or update the client workspace and ClickUp structure.
+
+### 2. Build the active roadmap
+
+- Convert artist goals into workstreams.
+- Prioritize workstreams by urgency, business impact and dependency sequence.
+- Define target outcomes for each workstream.
+- Identify deadlines, risks and known dependencies.
+- Separate current-month priorities from later roadmap items.
+
+### 3. Translate work into tasks
+
+- Create ClickUp tasks for each active next action.
+- Assign one owner per task.
+- Add due dates, context, source links and required evidence.
+- Mark dependencies where work cannot begin until another decision or file is received.
+- Use task comments for execution updates instead of scattered messages.
+
+### 4. Run the weekly operating rhythm
+
+- Review completed tasks.
+- Confirm blocked tasks and missing inputs.
+- Decide the next action for every active priority.
+- Record artist decisions in writing.
+- Update due dates and owners where needed.
+- Escalate legal, financial, rights, reputation or timeline risks.
+
+### 5. Manage approvals
+
+Approval must be captured before:
+
+- Public announcements or public-facing copy is released.
+- Budgets, payments or expenses are committed.
+- Contracts, deal terms or amendments are accepted.
+- Creative assets are delivered as final.
+- Third parties are engaged on behalf of the artist.
+- Sensitive artist, business or rights information is shared externally.
+
+Approval evidence may be an email, signed document, recorded task comment or other written confirmation stored in the correct system of record.
+
+### 6. Manage scope changes
+
+When a request falls outside the approved scope, the artist manager must:
+
+- Clarify the request and expected outcome.
+- Identify the time, cost, urgency and owner impact.
+- Decide whether the work should be declined, deferred, added to a future phase or quoted separately.
+- Capture the decision in writing.
+- Create tasks only after the scope path is approved.
+
+### 7. Coordinate advisors and collaborators
+
+- Confirm each advisor's role and deliverable.
+- Provide only the information needed for the assigned work.
+- Track requested documents, comments, approvals and deadlines.
+- Translate advisor feedback into business decisions for the artist.
+- Avoid giving legal, tax or accounting conclusions unless provided by the appropriate advisor.
+
+### 8. Report progress
+
+At minimum, the monthly management summary must include:
+
+- Completed work.
+- Open priorities.
+- Decisions made.
+- Decisions needed.
+- Blockers and risks.
+- Upcoming deadlines.
+- Next-month priorities.
+- Owner assignments and follow-up actions.
+
+### 9. Close workstreams
+
+A workstream may be closed when:
+
+- The deliverable is complete and filed.
+- Final approvals are documented.
+- Relevant tasks are closed with evidence.
+- Follow-up obligations are assigned.
+- Lessons learned or next-phase recommendations are captured.
 
 ## Outputs
 
-- Current artist roadmap.
-- Weekly or sprint-level priority list.
+Each active management engagement should maintain:
+
+- Artist roadmap.
+- Weekly priority list or sprint plan.
 - Monthly management summary.
-- Updated ClickUp task board with owners, due dates and evidence.
-- Documented approvals and decision log.
-- Escalation notes for legal, accounting, rights, brand or commercial issues.
+- ClickUp board with active tasks, owners, due dates and evidence.
+- Decision log for approvals, deferrals and escalations.
+- Risk log or issue list for rights, legal, financial, brand, reputation or delivery concerns.
+- Team roster and communication preferences.
+- Close-out notes for completed workstreams.
 
 ## Quality checks
 
-- Every active workstream has one owner, one next action and one due date.
-- Artist approvals are captured before external commitments are made.
-- Confidential documents and client-specific files stay out of the repository.
-- Rights, royalty and deal questions are escalated instead of assumed.
-- New work is checked against the approved scope before execution begins.
-- The artist can understand the current priorities without searching across tools.
+Use these checks weekly for active work and monthly for reporting:
+
+- Every active priority has one owner, one next action and one due date.
+- The artist has approved all public-facing, financial, contractual and strategic decisions before execution.
+- No task is open without enough context for the owner to complete it.
+- Blockers are escalated before they threaten the deadline.
+- Scope changes are documented before work begins.
+- Rights, royalty, legal, accounting and tax questions are routed to the correct specialist.
+- Current priorities are visible in ClickUp and do not rely on memory or scattered messages.
+- Client files, signed documents, exports and confidential terms are not stored in the repository.
+- The monthly summary gives the artist a clear operating picture without requiring tool-by-tool searching.
 
 ## System of record
 
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+- GitHub stores this SOP, governance documentation and operating-system standards.
+- Google Drive stores live client folders, signed documents, client deliverables, working files, financial documents and confidential materials.
+- ClickUp stores tasks, owners, due dates, task evidence, statuses, blockers and operating cadence.
+- Gmail stores correspondence, approvals, external communication and approved email templates.
+
+When information appears in more than one system, the artist manager must ensure the task record links to the correct source file or communication rather than duplicating confidential content into GitHub.
+
+## Escalation rules
+
+Escalate immediately when any of the following occurs:
+
+- A legal, rights, royalty, tax or accounting question affects a decision.
+- A deadline will be missed without artist or advisor input.
+- A third party requests rights, approvals, confidential information or financial concessions.
+- A public communication could create reputational risk.
+- A budget, fee, commission, recoupment or payment issue is unclear.
+- A new request materially expands the approved scope.
+- A conflict appears between artist preference, advisor guidance and existing obligations.
+
+Escalation must identify the issue, decision needed, deadline, recommendation and owner.
 
 ## Review cadence
 
-Review this SOP quarterly, or sooner when the management offer, tooling stack, approval model or client delivery standard changes.
+Review this SOP quarterly. Update it sooner if the management offer, approval model, reporting cadence, client tooling, team structure or delivery standard changes.
 
 ## Repository hygiene
 
