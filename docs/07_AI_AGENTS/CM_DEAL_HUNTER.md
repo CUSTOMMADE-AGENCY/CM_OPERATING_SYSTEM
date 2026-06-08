@@ -17,8 +17,8 @@ Identificeert potentiële acquisitie-, licentie-, publishing- en rechtenkansen v
 - Goedgekeurde markt- en netwerknotities.
 - Catalogus-, rechten- of assetinformatie.
 - Buyer-, seller- of introducerinformatie.
-- CM dealflowcriteria en playbooks.
-- Historische pipeline- en benchmarkgegevens.
+- CM dealflowcriteria en Playbooks.
+- Historische Pipeline- en benchmarkgegevens.
 
 ## Outputs
 
@@ -39,8 +39,8 @@ Identificeert potentiële acquisitie-, licentie-, publishing- en rechtenkansen v
 
 - CM dealflowregister
 - Google Drive-documentatie
-- ClickUp-taken en pipeline
-- CM playbooks
+- ClickUp-taken en Pipeline
+- CM Playbooks
 - Goedgekeurde researchbronnen
 
 ## Escalatieregels
@@ -53,7 +53,7 @@ Identificeert potentiële acquisitie-, licentie-, publishing- en rechtenkansen v
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

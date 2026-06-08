@@ -2,13 +2,13 @@
 
 ## Doel
 
-Dit document definieert de governance voor alle CM AI agents. De agentlaag functioneert als een schaalbare operationele laag bovenop CM-governance, workflows, playbooks en deliverables. Agents versnellen analyse, voorbereiding, documentatie en kwaliteitscontrole, maar nemen geen eindbeslissingen.
+Dit document definieert de governance voor alle CM AI agents. De agentlaag functioneert als een schaalbare operationele laag bovenop CM-governance, Workflows, Playbooks en deliverables. Agents versnellen analyse, voorbereiding, documentatie en kwaliteitscontrole, maar nemen geen eindbeslissingen.
 
 ## Agenthiërarchie
 
 1. **CM Operations Manager** bewaakt de werking van het totale operating system en signaleert procesrisico’s.
 2. **CM Knowledge Manager** bewaakt documentatie, kennisorganisatie en governance-compliance.
-3. **Domeinagents** voeren specialistische voorbereiding uit binnen hun eigen workflow:
+3. **Domeinagents** voeren specialistische voorbereiding uit binnen hun eigen Workflow:
    - CM Deal Hunter
    - CM Buyer Hunter
    - CM Rights Auditor
@@ -26,7 +26,7 @@ Dit document definieert de governance voor alle CM AI agents. De agentlaag funct
 
 - Domeinagenten escaleren naar de relevante CM-owner wanneer een beslissing, risico of externe stap nodig is.
 - CM Knowledge Manager escaleert documentatieconflicten, governancegaps en verouderde standaarden naar de eigenaar van het betreffende domein.
-- CM Operations Manager escaleert structurele workflowproblemen, compliance-afwijkingen en proceswijzigingen naar leadership of de aangewezen operations-owner.
+- CM Operations Manager escaleert structurele Workflowproblemen, compliance-afwijkingen en proceswijzigingen naar leadership of de aangewezen operations-owner.
 - Juridische, financiële, contractuele, privacy- en reputatierisico’s worden altijd direct aan een mens voorgelegd.
 
 ## Menselijke goedkeuringsvereisten
@@ -57,7 +57,7 @@ Elke agentoutput moet voldoen aan deze standaard:
 
 - Het doel, de brondata en de gebruikte aannames zijn duidelijk.
 - Feiten, risico’s, interpretaties en aanbevelingen zijn gescheiden.
-- Output verwijst naar relevante CM-workflows, playbooks, templates of deliverables.
+- Output verwijst naar relevante CM-Workflows, Playbooks, templates of deliverables.
 - Onzekerheden, ontbrekende data en afhankelijkheden zijn expliciet gemarkeerd.
 - Een menselijke reviewer kan snel zien welke beslissing of vervolgstap gevraagd wordt.
 - De output is bruikbaar voor uitvoering, audit en overdracht aan teamleden, freelancers, toekomstige medewerkers en AI operators.
@@ -96,4 +96,4 @@ Voor elke relevante agentactie moet herleidbaar zijn:
 
 ## Operationele kwaliteitslat
 
-De AI agent layer moet aanvoelen als een schaalbare operationele laag bovenop CM-governance, workflows, playbooks en deliverables. Dat betekent dat agents niet los opereren, maar altijd werken vanuit bestaande CM-standaarden, duidelijke eigenaarschapstructuren, menselijke goedkeuring en volledige herleidbaarheid.
+De AI agent layer moet aanvoelen als een schaalbare operationele laag bovenop CM-governance, Workflows, Playbooks en deliverables. Dat betekent dat agents niet los opereren, maar altijd werken vanuit bestaande CM-standaarden, duidelijke eigenaarschapstructuren, menselijke goedkeuring en volledige herleidbaarheid.

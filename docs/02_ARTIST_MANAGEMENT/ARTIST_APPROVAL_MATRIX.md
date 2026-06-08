@@ -1,31 +1,40 @@
 # Artist Approval Matrix
 
-## Purpose
+## Doel
 
-Clarify who approves artist management decisions and deliverables.
+Maak duidelijk wie artist-managementbeslissingen en deliverables goedkeurt.
 
-## Approval categories
+## Approval-categorieën
 
-| Category | Default approver |
+| Categorie | Default approver |
 |---|---|
 | Brand positioning | Artist |
 | Public biography | Artist |
-| Release dates | Artist and management lead |
-| Budget commitments | Artist or authorized business representative |
-| Deal terms | Artist with legal/commercial review as required |
-| Final deliverables | Named approval owner in scope |
+| Release Strategie | Artist en manager |
+| Budget | Artist of aangewezen budget owner |
+| Deal terms | Artist met legal/commercial review waar vereist |
+| Creative Asset | Artist of creative lead |
+| Public announcement | Artist en verantwoordelijke CM-lead |
 
-## Rule
+## Regel
 
-When approval authority is unclear, pause execution and confirm in writing.
+Wanneer approval-bevoegdheid onduidelijk is, pauzeer de uitvoering en bevestig schriftelijk wie mag besluiten.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

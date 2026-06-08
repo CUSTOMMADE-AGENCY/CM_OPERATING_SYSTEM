@@ -1,32 +1,40 @@
 # Upsell Next Phase Flow
 
-## Purpose
+## Doel
 
-Identify and propose the right next phase after audit, brandbook, release strategy or management work.
+Identificeer en stel de juiste next phase voor na audit-, Brandbook-, Release Strategie- of managementwerk.
 
 ## Triggers
 
-- Completed deliverable reveals new priority.
-- Artist roadmap requires ongoing execution.
-- Release campaign needs management support.
-- Rights or royalty issues need remediation.
-- Client asks for continued involvement.
+- Afgeronde deliverable onthult een nieuwe prioriteit.
+- Artist roadmap vraagt ongoing execution.
+- Release campaign heeft management support nodig.
+- Rights- of royalty-issues vragen remediation.
+- Client vraagt om verbreding of verdieping van Scope.
 
-## Process
+## Stappen
 
-1. Summarize achieved outcomes.
-2. Identify unresolved or newly discovered needs.
-3. Recommend next phase options.
-4. Confirm scope, fee, timeline and success measures.
-5. Move to proposal, renewal or archive.
+1. Vat afgeronde waarde en open punten samen.
+2. Koppel next phase aan concreet risico, kans of doel.
+3. Definieer Scope, deliverables, timeline, fee en exclusions.
+4. Bespreek Proposal met decision owner.
+5. Start pas na approval, contract/payment en Onboarding.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

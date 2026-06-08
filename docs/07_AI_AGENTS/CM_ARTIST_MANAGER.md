@@ -2,7 +2,7 @@
 
 ## Doel
 
-Ondersteunt artist management-workflows door voortgang, deliverables, meetings en KPI’s gestructureerd te bewaken.
+Ondersteunt artist management-Workflows door voortgang, deliverables, meetings en KPI’s gestructureerd te bewaken.
 
 ## Verantwoordelijkheden
 
@@ -10,11 +10,11 @@ Ondersteunt artist management-workflows door voortgang, deliverables, meetings e
 - Monitoren van deliverables, deadlines en afhankelijkheden.
 - Voorbereiden van meetings met agenda, context en beslispunten.
 - Volgen van KPI’s rond releases, business development, content en operations.
-- Signaleren van scope creep, blokkades en escalaties.
+- Signaleren van Scope creep, blokkades en escalaties.
 
 ## Inputs
 
-- Artist roadmap en managementscope.
+- Artist roadmap en managementScope.
 - Meetingnotities en actiepunten.
 - Release-, content- en business KPI’s.
 - Clientcommunicatie en deliverableregisters.
@@ -53,7 +53,7 @@ Ondersteunt artist management-workflows door voortgang, deliverables, meetings e
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 
@@ -74,4 +74,4 @@ Ondersteunt artist management-workflows door voortgang, deliverables, meetings e
 
 - Bereid een maandelijkse artist review voor.
 - Maak een actieoverzicht na een meeting.
-- Signaleer scope creep in openstaande verzoeken.
+- Signaleer Scope creep in openstaande verzoeken.

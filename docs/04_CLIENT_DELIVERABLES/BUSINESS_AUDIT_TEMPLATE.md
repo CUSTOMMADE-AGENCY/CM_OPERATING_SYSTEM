@@ -1,6 +1,6 @@
-# BUSINESS AUDIT TEMPLATE
+# Business Audit TEMPLATE
 
-## 1. DOCUMENT INFO
+## 1. DOCUMENTINFORMATIE
 
 | Veld | Informatie |
 | --- | --- |
@@ -10,7 +10,7 @@
 | Audit date | [DD-MM-JJJJ] |
 | Prepared by | [CM consultant / teamlid] |
 | Version | [v1.0 / v1.1 / final] |
-| Status | [Internal Draft / Client Review / Final] |
+| Status | [Intern concept / Client review / Final] |
 | Scope | Business foundation audit vóór rights audit, release strategy, roadmap, management of project management |
 | Reviewed period | [Bijv. laatste 24 maanden + volledige actieve catalogus] |
 
@@ -30,7 +30,7 @@ Dit document wordt gebruikt vóór CM een verdere samenwerking voorstelt. De uit
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
 **Zakelijke hoofdconclusie**  
 [Beschrijf in 6–8 zinnen of de artiest zakelijk klaar is voor groei. Benoem de huidige fase, mate van controle over rechten, teamcapaciteit, contractuele helderheid, financiële volwassenheid en directe commerciële kansen. Maak expliciet of CM veilig kan instappen en onder welke voorwaarden.]
@@ -72,12 +72,12 @@ Dit document wordt gebruikt vóór CM een verdere samenwerking voorstelt. De uit
 
 ---
 
-## 3. CURRENT BUSINESS POSITION
+## 3. HUIDIGE BUSINESSPOSITIE
 
 **Doel van de beoordeling**  
 Vaststellen waar de artiest zakelijk staat: hobbyfase, zelfstandige professional, opkomende commerciële act, label-/managementgedreven project, of schaalbare onderneming.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Juridische en praktische structuur achter de artiest: eenmanszaak, BV, stichting, labelentity, managemententity of informele setup.
 - Wie momenteel beslissingen neemt over muziek, releases, budgetten, deals, facturatie, rechten en planning.
@@ -85,7 +85,7 @@ Vaststellen waar de artiest zakelijk staat: hobbyfase, zelfstandige professional
 - Of de artiest beschikt over een professioneel archief met contracten, splits, invoices, statements, assets en loginbeheer.
 - Of groei afhankelijk is van één persoon, één platform, één deal, één track of één niet-geformaliseerde relatie.
 
-### Required documents
+### Vereiste documenten
 
 - KVK-inschrijving of bedrijfsgegevens indien aanwezig.
 - Overzicht van bankrekening(en), facturatieproces en boekhouder/accountant.
@@ -94,7 +94,7 @@ Vaststellen waar de artiest zakelijk staat: hobbyfase, zelfstandige professional
 - Platformoverzichten: distributor, Spotify for Artists, YouTube, Buma/Stemra, Sena, publisher, neighbouring rights, ticketing, merch.
 - Team- en contactlijst met rollen en beslissingsbevoegdheid.
 
-### Findings
+### Bevindingen
 
 | Onderdeel | Bevinding |
 | --- | --- |
@@ -104,16 +104,16 @@ Vaststellen waar de artiest zakelijk staat: hobbyfase, zelfstandige professional
 | Schaalbaarheid | [Kan de huidige setup meer releases, grotere budgetten en meerdere partners dragen?] |
 | Afhankelijkheden | [Noem kritieke personen, platforms of deals.] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw het niveau. Hoog risico ontstaat wanneer beslissingen, inkomsten, rechten of documenten niet controleerbaar zijn.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer of CM kan doorpakken met strategie of eerst basisstructuur moet herstellen. Benoem concreet welke infrastructuur vóór commerciële groei nodig is.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -123,12 +123,12 @@ Vaststellen waar de artiest zakelijk staat: hobbyfase, zelfstandige professional
 
 ---
 
-## 4. TEAM STRUCTURE
+## 4. TEAMSTRUCTUUR
 
 **Doel van de beoordeling**  
 Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij genoeg is om groei te ondersteunen.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Wie onderdeel is van het kernteam: manager, label, distributor, publisher, boekhouder, creative director, producer, A&R, plugger, PR, booking agent, social/content, advocaat.
 - Welke rollen formeel zijn vastgelegd en welke alleen informeel bestaan.
@@ -136,7 +136,7 @@ Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij
 - Of de artiest begrijpt wie waarvoor verantwoordelijk is en wie inkomsten ontvangt.
 - Of er duidelijke approvalprocessen zijn voor releases, budgetten, deals en contracten.
 
-### Required documents
+### Vereiste documenten
 
 - Managementovereenkomst of managementterm sheet.
 - Label-, services-, distributie-, booking-, PR- en publishingovereenkomsten.
@@ -144,7 +144,7 @@ Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij
 - Mail- of schriftelijke bevestigingen van informele rollen.
 - Mandaten, volmachten of tekenbevoegdheden.
 
-### Findings
+### Bevindingen
 
 | Rol | Persoon/partij | Formeel vastgelegd? | Vergoeding | Risico/opmerking |
 | --- | --- | --- | --- | --- |
@@ -155,16 +155,16 @@ Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij
 | Booking | [Naam/partij] | [Ja/Nee] | [% / fee] | [Opmerking] |
 | Finance/admin | [Naam/partij] | [Ja/Nee] | [Fee] | [Opmerking] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw op basis van rolhelderheid, schriftelijke afspraken, belangenconflicten en operationele capaciteit.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer welke rollen moeten worden bevestigd, vervangen, uitgebreid of contractueel begrensd voordat CM opschaling adviseert.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij
 | Leg ontbrekende teamafspraken schriftelijk vast of beëindig informele claims. | [Naam] | [Datum] | Hoog |
 | Controleer mogelijke management-, label- of belangenconflicten juridisch. | [Naam] | [Datum] | Hoog |
 
-**Score TEAM STRUCTURE: [ ] / 10**
+**Score TEAMSTRUCTUUR: [ ] / 10**
 
 ---
 
@@ -181,7 +181,7 @@ Beoordelen of het team rond de artiest professioneel, schaalbaar en conflictvrij
 **Doel van de beoordeling**  
 Een totaalbeeld vormen van wie welke rechten bezit, beheert, exploiteert of claimt rond de artiest.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of masterrechten, publishingrechten, neighbouring rights, artworkrechten, videorechten, merkrechten en contentrechten van elkaar zijn gescheiden.
 - Of per release duidelijk is wie eigenaar is, wie royalty’s ontvangt en wie toestemming moet geven voor exploitatie.
@@ -189,7 +189,7 @@ Een totaalbeeld vormen van wie welke rechten bezit, beheert, exploiteert of clai
 - Of splits vóór release schriftelijk zijn bevestigd.
 - Of er territoriale of termijnbeperkingen bestaan.
 
-### Required documents
+### Vereiste documenten
 
 - Rechtenmatrix per track en release.
 - Split sheets en producer agreements.
@@ -199,7 +199,7 @@ Een totaalbeeld vormen van wie welke rechten bezit, beheert, exploiteert of clai
 - Licenties voor samples, beats, artwork, fotografie, video en fonts.
 - E-mails of deal memo’s waarin rechtenclaims worden genoemd.
 
-### Findings
+### Bevindingen
 
 | Rechtengebied | Huidige status | Belangrijkste risico | Bewijs/document |
 | --- | --- | --- | --- |
@@ -209,16 +209,16 @@ Een totaalbeeld vormen van wie welke rechten bezit, beheert, exploiteert of clai
 | Content/video/artwork | [Duidelijk / deels / onduidelijk] | [Risico] | [Document] |
 | Merk/naam | [Duidelijk / deels / onduidelijk] | [Risico] | [Document] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Kritiek wanneer meerdere personen rechten claimen, splits ontbreken, masterownership onduidelijk is of commerciële exploitatie niet veilig kan worden toegestaan.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer of een volledige rights audit nodig is. Benoem welke rechten eerst moeten worden opgeschoond voordat releases, sync, labels, management of investeringen verantwoord zijn.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -228,12 +228,12 @@ Een totaalbeeld vormen van wie welke rechten bezit, beheert, exploiteert of clai
 
 ---
 
-## 6. MASTER RIGHTS
+## 6. Master Rights
 
 **Doel van de beoordeling**  
 Vaststellen wie eigenaar is van de opnames, wie exploitatierechten heeft en of de masterstructuur schaalbaar en deal-ready is.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Per master: eigenaar, financier, producer, label, licentienemer, distributor en royalty split.
 - Of masters zijn verkocht, gelicentieerd, gedeeld of ondergebracht bij een label/services partij.
@@ -241,7 +241,7 @@ Vaststellen wie eigenaar is van de opnames, wie exploitatierechten heeft en of d
 - Of er sample-, beat- of stemlicenties ontbreken.
 - Of de artiest nieuwe masters vrij kan exploiteren of gebonden is aan exclusiviteit, options of delivery obligations.
 
-### Required documents
+### Vereiste documenten
 
 - Master ownership agreements.
 - Label-, license-, distribution- en servicesovereenkomsten.
@@ -251,23 +251,23 @@ Vaststellen wie eigenaar is van de opnames, wie exploitatierechten heeft en of d
 - Royalty statements voor masterinkomsten.
 - Takedown-, exclusiviteit- of optionbepalingen.
 
-### Findings
+### Bevindingen
 
 | Track/release | ISRC | Master owner | Exploitant | Termijn/territorium | Royalty split | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | [Titel] | [ISRC] | [Naam/partij] | [Label/distributor] | [Termijn] | [Split] | [Duidelijk/onduidelijk] |
 | [Titel] | [ISRC] | [Naam/partij] | [Label/distributor] | [Termijn] | [Split] | [Duidelijk/onduidelijk] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw met name op ownership, exclusiviteit, recoupment, ontbrekende producerafspraken en distributor/labelcontrole.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer of masters kunnen worden gebruikt voor nieuwe deals, sync, compilaties, remixes of cataloguscampagnes. Geef aan welke masters deal-ready zijn en welke eerst moeten worden opgeschoond.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -275,16 +275,16 @@ Vaststellen wie eigenaar is van de opnames, wie exploitatierechten heeft en of d
 | Rond ontbrekende producer/beat agreements af vóór nieuwe exploitatie. | [Naam] | [Datum] | Hoog |
 | Maak één ISRC- en masterregister voor catalogusbeheer. | [Naam] | [Datum] | Hoog |
 
-**Score MASTER RIGHTS: [ ] / 10**
+**Score Master Rights: [ ] / 10**
 
 ---
 
-## 7. PUBLISHING RIGHTS
+## 7. Publishing Rights
 
 **Doel van de beoordeling**  
 Controleren of compositierechten correct zijn verdeeld, geregistreerd en collecteerbaar zijn.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of iedere songwriter, componist, producer en topliner correct in splits is opgenomen.
 - Of splits optellen tot 100% en overeenkomen met Buma/Stemra- of publisherregistraties.
@@ -293,7 +293,7 @@ Controleren of compositierechten correct zijn verdeeld, geregistreerd en collect
 - Of er samples, interpolaties of vertalingen zijn die extra toestemming vereisen.
 - Of mechanicals, performance royalties en sync approvals goed geregeld zijn.
 
-### Required documents
+### Vereiste documenten
 
 - Split sheets per compositie.
 - Publishing agreement of administratieovereenkomst.
@@ -303,23 +303,23 @@ Controleren of compositierechten correct zijn verdeeld, geregistreerd en collect
 - Sample/interpolation clearances.
 - Overzicht van niet-geregistreerde werken.
 
-### Findings
+### Bevindingen
 
 | Werk/compositie | Writers | Split bevestigd? | Buma/Stemra geregistreerd? | Publisher/admin | Risico |
 | --- | --- | --- | --- | --- | --- |
 | [Titel] | [Namen] | [Ja/Nee] | [Ja/Nee] | [Partij/geen] | [Risico] |
 | [Titel] | [Namen] | [Ja/Nee] | [Ja/Nee] | [Partij/geen] | [Risico] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer splits ontbreken, registraties niet kloppen, songwriterclaims openstaan of de artiest niet weet wie publishinginkomsten collecteert.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer publishing cleanup, publisher pitch, publishing admin setup of registratiecorrecties. Benoem welke werken prioriteit hebben op basis van omzet, releaseplanning of syncpotentieel.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -327,16 +327,16 @@ Controleren of compositierechten correct zijn verdeeld, geregistreerd en collect
 | Registreer of corrigeer werken bij Buma/Stemra of publisher. | [Naam] | [Datum] | Hoog |
 | Maak een publishing tracker met writers, splits, IPI’s, ISWC’s en registratiebewijzen. | [Naam] | [Datum] | Hoog |
 
-**Score PUBLISHING RIGHTS: [ ] / 10**
+**Score Publishing Rights: [ ] / 10**
 
 ---
 
-## 8. NEIGHBOURING RIGHTS
+## 8. Neighbouring Rights
 
 **Doel van de beoordeling**  
 Vaststellen of uitvoerende kunstenaars- en producentenrechten correct zijn geregistreerd en geïncasseerd, met bijzondere aandacht voor Sena.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of de artiest als uitvoerend kunstenaar is aangesloten bij Sena of een buitenlandse CMO.
 - Of de mastereigenaar/producent als producent is geregistreerd voor neighbouring rights.
@@ -345,7 +345,7 @@ Vaststellen of uitvoerende kunstenaars- en producentenrechten correct zijn gereg
 - Of radio, tv, openbare uitvoering en achtergrondmuziek inkomsten opleveren of gemist worden.
 - Of internationale neighbouring rights via juiste societies worden geclaimd.
 
-### Required documents
+### Vereiste documenten
 
 - Sena accountgegevens of registratiebewijs.
 - Trackregistraties bij Sena inclusief performer/producer claims.
@@ -354,7 +354,7 @@ Vaststellen of uitvoerende kunstenaars- en producentenrechten correct zijn gereg
 - Radio-/airplayoverzichten.
 - Neighbouring rights statements.
 
-### Findings
+### Bevindingen
 
 | Onderdeel | Status | Bevinding | Risico |
 | --- | --- | --- | --- |
@@ -363,16 +363,16 @@ Vaststellen of uitvoerende kunstenaars- en producentenrechten correct zijn gereg
 | Performer claims | [Compleet/onvolledig] | [Bevinding] | [Risico] |
 | Internationale claims | [Relevant/niet relevant/onbekend] | [Bevinding] | [Risico] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer geen Sena setup bestaat, claims niet zijn geregistreerd of mastereigenaar en performerrechten door elkaar lopen.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer Sena setup, claimcorrecties, internationale neighbouring rights collecties of performer agreement cleanup.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -382,12 +382,12 @@ Vaststellen of uitvoerende kunstenaars- en producentenrechten correct zijn gereg
 
 ---
 
-## 9. DISTRIBUTION SETUP
+## 9. DISTRIBUTIE-SETUP
 
 **Doel van de beoordeling**  
 Beoordelen of distributievoorwaarden, platformtoegang, royaltyflow en releasecontrole geschikt zijn voor professionele groei.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Welke distributor of labelservicespartij releases exploiteert.
 - Dealtype: DIY, aggregator, artist services, label, license, JV of upstreamconstructie.
@@ -396,7 +396,7 @@ Beoordelen of distributievoorwaarden, platformtoegang, royaltyflow en releasecon
 - Of UPC’s, ISRC’s, metadata en deliveryprocessen consistent zijn.
 - Of de artiest vrij is om nieuwe releases elders uit te brengen.
 
-### Required documents
+### Vereiste documenten
 
 - Distribution agreement en algemene voorwaarden.
 - Distributor statements en payout history.
@@ -405,7 +405,7 @@ Beoordelen of distributievoorwaarden, platformtoegang, royaltyflow en releasecon
 - Bank- en payoutinstellingen.
 - Correspondentie over exclusiviteit, advances, marketing support of takedowns.
 
-### Findings
+### Bevindingen
 
 | Onderdeel | Bevinding |
 | --- | --- |
@@ -417,16 +417,16 @@ Beoordelen of distributievoorwaarden, platformtoegang, royaltyflow en releasecon
 | Portalcontrole | [Wie heeft toegang?] |
 | Vrijheid nieuwe releases | [Ja/Nee/onder voorwaarden] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer distributor terms onduidelijk zijn, logincontrole ontbreekt, statements ontbreken of exclusiviteit toekomstige releases blokkeert.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer of huidige distributie behouden, heronderhandeld, opgeschoond of vervangen moet worden. Geef aan welke voorwaarden CM minimaal nodig heeft voor release strategy of project management.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -438,12 +438,12 @@ Beoordelen of distributievoorwaarden, platformtoegang, royaltyflow en releasecon
 
 ---
 
-## 10. RELEASE ADMINISTRATION
+## 10. RELEASE-ADMINISTRATIE
 
 **Doel van de beoordeling**  
 Controleren of releases administratief correct worden voorbereid, zodat inkomsten, rechten, credits en platformdata niet verloren gaan.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of per release een release dossier bestaat met audio masters, artwork, credits, splits, metadata, ISRC/UPC, lyrics, canvas, pitchteksten en marketingassets.
 - Of credits en metadata consistent zijn op DSP’s, YouTube, distributor, Buma/Stemra, Sena en internal trackers.
@@ -451,7 +451,7 @@ Controleren of releases administratief correct worden voorbereid, zodat inkomste
 - Of er een deadlineproces bestaat voor delivery, pitching, pre-save, content, PR en reporting.
 - Of releasebudgetten en kosten vooraf worden goedgekeurd.
 
-### Required documents
+### Vereiste documenten
 
 - Release dossiers per single/EP/album.
 - Metadata sheets.
@@ -461,23 +461,23 @@ Controleren of releases administratief correct worden voorbereid, zodat inkomste
 - DSP pitchteksten en releaseplannen.
 - Releasebudget en post-release performance report.
 
-### Findings
+### Bevindingen
 
 | Release | Dossier compleet? | Metadata correct? | Splits klaar? | Budget goedgekeurd? | Belangrijkste gap |
 | --- | --- | --- | --- | --- | --- |
 | [Titel] | [Ja/Nee] | [Ja/Nee] | [Ja/Nee] | [Ja/Nee] | [Gap] |
 | [Titel] | [Ja/Nee] | [Ja/Nee] | [Ja/Nee] | [Ja/Nee] | [Gap] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer releases live staan zonder splits, foutieve metadata, ontbrekende credits of geen bewijs van approvals.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer invoering van een release admin operating system, verplichte pre-release gate of cleanup van bestaande catalogusmetadata.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -492,7 +492,7 @@ Controleren of releases administratief correct worden voorbereid, zodat inkomste
 **Doel van de beoordeling**  
 Beoordelen of alle relevante royalty’s correct worden geïncasseerd, gecontroleerd en verdeeld.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Master royalties via distributor/label.
 - Publishing performance en mechanical royalties via Buma/Stemra, publisher of buitenlandse societies.
@@ -502,7 +502,7 @@ Beoordelen of alle relevante royalty’s correct worden geïncasseerd, gecontrol
 - Of statements periodiek worden ontvangen, gecontroleerd en gearchiveerd.
 - Of royalty’s worden doorbetaald aan producers, writers, featured artists of investeerders volgens afspraak.
 
-### Required documents
+### Vereiste documenten
 
 - Distributor/label royalty statements.
 - Buma/Stemra statements.
@@ -513,7 +513,7 @@ Beoordelen of alle relevante royalty’s correct worden geïncasseerd, gecontrol
 - Bank/payout exports.
 - Royalty tracker per bron en periode.
 
-### Findings
+### Bevindingen
 
 | Royaltybron | Collectie actief? | Statements aanwezig? | Laatste betaling | Controle uitgevoerd? | Risico |
 | --- | --- | --- | --- | --- | --- |
@@ -522,16 +522,16 @@ Beoordelen of alle relevante royalty’s correct worden geïncasseerd, gecontrol
 | Sena/neighbouring | [Ja/Nee] | [Ja/Nee] | [Datum/bedrag] | [Ja/Nee] | [Risico] |
 | YouTube/UGC | [Ja/Nee] | [Ja/Nee] | [Datum/bedrag] | [Ja/Nee] | [Risico] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Kritiek wanneer inkomsten niet worden geïncasseerd, statements ontbreken of derde partijen recht hebben op payouts zonder administratie.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer royalty recovery, statement audit, royalty tracker, claimcorrecties of inrichting van periodieke royaltycontrole.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -543,12 +543,12 @@ Beoordelen of alle relevante royalty’s correct worden geïncasseerd, gecontrol
 
 ---
 
-## 12. REVENUE STREAMS
+## 12. INKOMSTENSTROMEN
 
 **Doel van de beoordeling**  
 In kaart brengen welke inkomsten bestaan, welke onderontwikkeld zijn en welke op korte termijn schaalbaar of monetiseerbaar zijn.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Streaming/masterinkomsten.
 - Publishing en neighbouring rights.
@@ -558,7 +558,7 @@ In kaart brengen welke inkomsten bestaan, welke onderontwikkeld zijn en welke op
 - Producer/songwriter income indien de artiest ook voor anderen werkt.
 - Afhankelijkheid van één bron of één partner.
 
-### Required documents
+### Vereiste documenten
 
 - Inkomstenoverzicht laatste 12–24 maanden per bron.
 - Facturen, bankexports en boekhoudrapporten.
@@ -567,7 +567,7 @@ In kaart brengen welke inkomsten bestaan, welke onderontwikkeld zijn en welke op
 - Brand/sync/partnership agreements.
 - Platform analytics en royalty statements.
 
-### Findings
+### Bevindingen
 
 | Revenue stream | Huidige status | Laatste 12 maanden | Schaalbaarheid | Opmerking |
 | --- | --- | --- | --- | --- |
@@ -578,16 +578,16 @@ In kaart brengen welke inkomsten bestaan, welke onderontwikkeld zijn en welke op
 | Merch/direct-to-fan | [Actief/niet actief] | [Bedrag of bandbreedte] | [Laag/middel/hoog] | [Opmerking] |
 | Sync/brand | [Actief/niet actief] | [Bedrag of bandbreedte] | [Laag/middel/hoog] | [Opmerking] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer inkomsten niet worden getrackt, één bron dominant is of potentiële inkomsten door ontbrekende rechtenregistratie niet kunnen worden geïncasseerd.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer welke inkomstenstromen direct versterkt kunnen worden en welke pas na rechten- of admin-cleanup veilig zijn.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -595,24 +595,24 @@ In kaart brengen welke inkomsten bestaan, welke onderontwikkeld zijn en welke op
 | Identificeer drie inkomstenstromen die binnen 90 dagen geactiveerd kunnen worden. | [Naam] | [Datum] | Middel |
 | Koppel elke revenue stream aan benodigde rechten, assets en eigenaar. | [Naam] | [Datum] | Hoog |
 
-**Score REVENUE STREAMS: [ ] / 10**
+**Score INKOMSTENSTROMEN: [ ] / 10**
 
 ---
 
-## 13. EXISTING AGREEMENTS
+## 13. BESTAANDE OVEREENKOMSTEN
 
 **Doel van de beoordeling**  
 Vaststellen welke contracten, mondelinge afspraken en informele claims de commerciële vrijheid van de artiest beïnvloeden.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Management-, label-, distributie-, publishing-, booking-, PR-, producer-, feature-, investment-, loan-, sponsorship- en serviceovereenkomsten.
-- Looptijd, opzegging, exclusiviteit, opties, territory, scope, revenue share, recoupment en approvalrechten.
+- Looptijd, opzegging, exclusiviteit, opties, territory, Scope, revenue share, recoupment en approvalrechten.
 - Of er mondelinge afspraken bestaan die nog niet juridisch zijn vastgelegd.
 - Of meerdere partijen dezelfde rol of rechten claimen.
 - Of de artiest de eigen dealstructuur begrijpt.
 
-### Required documents
+### Vereiste documenten
 
 - Alle ondertekende contracten en addenda.
 - Deal memo’s, term sheets en e-mailbevestigingen.
@@ -621,23 +621,23 @@ Vaststellen welke contracten, mondelinge afspraken en informele claims de commer
 - Juridische correspondentie of geschilcommunicatie.
 - Contractarchive index.
 
-### Findings
+### Bevindingen
 
 | Agreement | Partij | Scope | Termijn | Vergoeding | Belangrijkste verplichting | Risico |
 | --- | --- | --- | --- | --- | --- | --- |
 | [Contract] | [Partij] | [Scope] | [Termijn] | [Fee/%] | [Verplichting] | [Risico] |
 | [Contract] | [Partij] | [Scope] | [Termijn] | [Fee/%] | [Verplichting] | [Risico] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Kritiek wanneer er alleen mondelinge afspraken bestaan, conflicterende exclusiviteit geldt, rechten dubbel zijn toegekend of de artiest de eigen dealstructuur niet begrijpt.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer contract review, renegotiation, termination, confirmation letters of juridisch advies. Benoem welke agreements CM moet zien vóór een voorstel.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -649,12 +649,12 @@ Vaststellen welke contracten, mondelinge afspraken en informele claims de commer
 
 ---
 
-## 14. FINANCIAL STRUCTURE
+## 14. FINANCIËLE STRUCTUUR
 
 **Doel van de beoordeling**  
 Beoordelen of de artiest voldoende financiële controle heeft voor budgetten, facturatie, investeringen en rapportage.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of inkomsten en uitgaven via een zakelijke rekening lopen.
 - Of er een boekhouder/accountant is en BTW/inkomstenbelasting correct worden beheerd.
@@ -663,7 +663,7 @@ Beoordelen of de artiest voldoende financiële controle heeft voor budgetten, fa
 - Of recoupment, advances, loans en investeringen worden bijgehouden.
 - Of de artiest maandelijkse cashflow en runway begrijpt.
 
-### Required documents
+### Vereiste documenten
 
 - KVK- en BTW-gegevens.
 - Bankexports en boekhoudrapporten.
@@ -673,7 +673,7 @@ Beoordelen of de artiest voldoende financiële controle heeft voor budgetten, fa
 - Overzicht van schulden, advances, recoupment en investeringen.
 - Kostenoverzicht per leverancier.
 
-### Findings
+### Bevindingen
 
 | Onderdeel | Status | Bevinding | Risico |
 | --- | --- | --- | --- |
@@ -683,16 +683,16 @@ Beoordelen of de artiest voldoende financiële controle heeft voor budgetten, fa
 | Budgetcontrole | [Sterk/deels/ontbreekt] | [Bevinding] | [Risico] |
 | Cashflow inzicht | [Sterk/deels/ontbreekt] | [Bevinding] | [Risico] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Hoog wanneer geen invoice process bestaat, budgetcontrole ontbreekt, inkomsten niet worden getrackt of zakelijke en privébetalingen door elkaar lopen.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer financial operating system, boekhoudcleanup, budgettemplate, maandrapportage of investering/recoupment tracker.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -709,7 +709,7 @@ Beoordelen of de artiest voldoende financiële controle heeft voor budgetten, fa
 **Doel van de beoordeling**  
 Prioriteren welke zakelijke risico’s groei, inkomsten, dealwaarde of reputatie direct kunnen schaden.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Rechtenrisico’s: masters, publishing, neighbouring rights, samples, splits, claimconflicten.
 - Contractrisico’s: exclusiviteit, opties, recoupment, mondelinge afspraken, onduidelijke termination.
@@ -718,9 +718,9 @@ Prioriteren welke zakelijke risico’s groei, inkomsten, dealwaarde of reputatie
 - Operationele risico’s: ontbrekend contractarchief, login-chaos, geen releaseproces, geen royaltycontrole.
 - Reputatie- en dealrisico’s: claims van voormalige teamleden, content/licentieproblemen, onprofessionele communicatie.
 
-### Required documents
+### Vereiste documenten
 
-- Risk register.
+- Risicoregister.
 - Contractregister.
 - Rechtenmatrix.
 - Financieel overzicht.
@@ -728,7 +728,7 @@ Prioriteren welke zakelijke risico’s groei, inkomsten, dealwaarde of reputatie
 - Open claims/disputes overview.
 - Platform login en ownership overview.
 
-### Findings
+### Bevindingen
 
 | Risico | Impact | Waarschijnlijkheid | Bewijs | Mitigatie |
 | --- | --- | --- | --- | --- |
@@ -741,32 +741,32 @@ Markeer iedere red flag als **Aanwezig**, **Niet aanwezig** of **Onbekend**. Onb
 
 | Red flag | Status | Impact | Vereiste correctie |
 | --- | --- | --- | --- |
-| No written splits | [Aanwezig/Niet aanwezig/Onbekend] | Claims, non-payment, releaseblokkade | Split sheets afronden vóór exploitatie |
-| No clear master ownership | [Aanwezig/Niet aanwezig/Onbekend] | Geen veilige licensing of dealmaking | Master chain-of-title vastleggen |
-| No publishing registration | [Aanwezig/Niet aanwezig/Onbekend] | Gemiste publishinginkomsten | Works registreren/corrigeren |
-| No Buma/Stemra setup | [Aanwezig/Niet aanwezig/Onbekend] | Performance/mechanical inkomsten missen | Account en registraties inrichten |
-| No Sena setup | [Aanwezig/Niet aanwezig/Onbekend] | Neighbouring rights missen | Performer/producer claims registreren |
+| Geen schriftelijke splits | [Aanwezig/Niet aanwezig/Onbekend] | Claims, non-payment, releaseblokkade | Split sheets afronden vóór exploitatie |
+| Geen duidelijke master ownership | [Aanwezig/Niet aanwezig/Onbekend] | Geen veilige licensing of dealmaking | Master chain-of-title vastleggen |
+| Geen publishing registration | [Aanwezig/Niet aanwezig/Onbekend] | Gemiste publishinginkomsten | Works registreren/corrigeren |
+| Geen Buma/Stemra-setup | [Aanwezig/Niet aanwezig/Onbekend] | Performance/mechanical inkomsten missen | Account en registraties inrichten |
+| Geen Sena-setup | [Aanwezig/Niet aanwezig/Onbekend] | Neighbouring rights missen | Performer/producer claims registreren |
 | Unclear distributor terms | [Aanwezig/Niet aanwezig/Onbekend] | Onzekerheid over inkomsten en vrijheid | Agreement en terms verifiëren |
 | Missing royalty statements | [Aanwezig/Niet aanwezig/Onbekend] | Geen controle over geldstromen | Statements verzamelen en reconciliëren |
 | Oral agreements only | [Aanwezig/Niet aanwezig/Onbekend] | Juridisch en relationeel conflict | Schriftelijke bevestiging of beëindiging |
 | Multiple people claiming rights | [Aanwezig/Niet aanwezig/Onbekend] | Exploitatieblokkade | Claims juridisch en administratief oplossen |
-| No invoice process | [Aanwezig/Niet aanwezig/Onbekend] | Gemiste of vertraagde inkomsten | Facturatieproces opzetten |
-| No budget control | [Aanwezig/Niet aanwezig/Onbekend] | Cashflowverlies en oncontroleerbare investeringen | Budget- en approvalproces instellen |
-| No revenue tracking | [Aanwezig/Niet aanwezig/Onbekend] | Geen stuurinformatie | Revenue dashboard maken |
+| Geen facturatieproces | [Aanwezig/Niet aanwezig/Onbekend] | Gemiste of vertraagde inkomsten | Facturatieproces opzetten |
+| Geen budgetcontrole | [Aanwezig/Niet aanwezig/Onbekend] | Cashflowverlies en oncontroleerbare investeringen | Budget- en approvalproces instellen |
+| Geen revenue tracking | [Aanwezig/Niet aanwezig/Onbekend] | Geen stuurinformatie | Revenue dashboard maken |
 | No contract archive | [Aanwezig/Niet aanwezig/Onbekend] | Geen dealcontrole | Contractarchief bouwen |
 | Management or label conflict | [Aanwezig/Niet aanwezig/Onbekend] | Belangenconflict en onderhandelingsrisico | Onafhankelijke review uitvoeren |
 | Artist does not understand own deal structure | [Aanwezig/Niet aanwezig/Onbekend] | Slechte besluitvorming | Deal education + contract summary maken |
 
-### Risk level
+### Risiconiveau
 
 **Totaal risiconiveau: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw op basis van aantal red flags, ernst, bewijsbaarheid en commerciële impact.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer welke risico’s eerst moeten worden gemitigeerd. Maak onderscheid tussen deal blockers, operational fixes en verbeterpunten die later kunnen.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -781,7 +781,7 @@ Markeer iedere red flag als **Aanwezig**, **Niet aanwezig** of **Onbekend**. Onb
 **Doel van de beoordeling**  
 Bepalen waar directe en middellange termijn waarde ligt, mits de zakelijke basis voldoende veilig is.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Welke catalogus, unreleased muziek, liveformaten, contentassets, community, brandfit of synckansen direct inzetbaar zijn.
 - Welke kansen worden geblokkeerd door ontbrekende rechten, contracten of administratie.
@@ -789,7 +789,7 @@ Bepalen waar directe en middellange termijn waarde ligt, mits de zakelijke basis
 - Welke CM-service de hoogste commerciële hefboom heeft.
 - Welke opportunity niet moet worden benut omdat het fundament te zwak is.
 
-### Required documents
+### Vereiste documenten
 
 - Catalogusoverzicht met performance data.
 - Unreleased release inventory.
@@ -799,23 +799,23 @@ Bepalen waar directe en middellange termijn waarde ligt, mits de zakelijke basis
 - Rechtenmatrix en red flag status.
 - Budget en teamcapaciteit.
 
-### Findings
+### Bevindingen
 
 | Opportunity | Potentiële waarde | Benodigde basis | Blokkade | Timing | CM rol |
 | --- | --- | --- | --- | --- | --- |
 | [Kans] | [Laag/Middel/Hoog] | [Rechten/assets/team/budget] | [Blokkade] | [30/90/180 dagen] | [Service] |
 | [Kans] | [Laag/Middel/Hoog] | [Rechten/assets/team/budget] | [Blokkade] | [30/90/180 dagen] | [Service] |
 
-### Risk level
+### Risiconiveau
 
 **Risiconiveau bij monetisatie: [Laag / Middel / Hoog / Kritiek]**  
 [Beoordeel of de kansen veilig kunnen worden geactiveerd zonder claims, cashflowproblemen of teamconflict.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer de top drie kansen in volgorde van veiligheid en impact. Vermijd kansen die juridisch of administratief nog niet veilig zijn.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
@@ -840,12 +840,12 @@ De scorecard vertaalt de audit naar één duidelijk business-readiness oordeel. 
 
 | Categorie | Score | Beoordelingsbasis |
 | --- | ---: | --- |
-| TEAM STRUCTURE | [ ] / 10 | Rollen, mandaten, capaciteit, conflictvrijheid en schriftelijke afspraken |
-| MASTER RIGHTS | [ ] / 10 | Chain-of-title, producerafspraken, ISRC-register, label/distributorcontrole |
-| PUBLISHING RIGHTS | [ ] / 10 | Splits, Buma/Stemra, publisher/admin, work registrations, writer claims |
+| TEAMSTRUCTUUR | [ ] / 10 | Rollen, mandaten, capaciteit, conflictvrijheid en schriftelijke afspraken |
+| Master Rights | [ ] / 10 | Chain-of-title, producerafspraken, ISRC-register, label/distributorcontrole |
+| Publishing Rights | [ ] / 10 | Splits, Buma/Stemra, publisher/admin, work registrations, writer claims |
 | DISTRIBUTION | [ ] / 10 | Terms, portalcontrole, statements, metadata, releasevrijheid |
 | ROYALTY COLLECTION | [ ] / 10 | Statements, claims, payoutcontrole, collection setup per inkomstenbron |
-| REVENUE STREAMS | [ ] / 10 | Diversificatie, trackbaarheid, directe monetisatie, groeipotentieel |
+| INKOMSTENSTROMEN | [ ] / 10 | Diversificatie, trackbaarheid, directe monetisatie, groeipotentieel |
 | CONTRACT STRUCTURE | [ ] / 10 | Contractarchief, looptijden, exclusiviteit, mondelinge afspraken, dealbegrip |
 | FINANCIAL CONTROL | [ ] / 10 | Facturatie, boekhouding, budgetten, cashflow, recoupment en reporting |
 | **Total score** | **[ ] / 80** | Som van alle categorieën |
@@ -854,7 +854,7 @@ De scorecard vertaalt de audit naar één duidelijk business-readiness oordeel. 
 
 | Score | Interpretatie | CM-conclusie |
 | ---: | --- | --- |
-| 65–80 | Business foundation ready for growth | CM kan strategie, roadmap, release- of managementtraject voorstellen met normale onboardingchecks. |
+| 65–80 | Business foundation ready for growth | CM kan strategie, roadmap, release- of managementtraject voorstellen met normale Onboardingchecks. |
 | 50–64 | Promising but operationally incomplete | CM kan werken onder voorwaarden; start met gerichte cleanup of projectmanagement voordat grote commerciële stappen worden gezet. |
 | 35–49 | High risk, needs clean-up before scaling | CM moet eerst business cleanup, rights audit en contractstructuur adviseren; geen agressieve groei of deals. |
 | 0–34 | Not ready for serious commercial expansion | CM werkt alleen aan fundamentherstel of verwijst door; geen management-, release- of commerciële groeipropositie. |
@@ -870,7 +870,7 @@ De scorecard vertaalt de audit naar één duidelijk business-readiness oordeel. 
 **Doel van de beoordeling**  
 Bepalen welke acties onmiddellijk nodig zijn om risico’s te verlagen en basiscontrole te creëren.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Welke red flags deal blockers zijn.
 - Welke documenten ontbreken voor een veilige CM-beslissing.
@@ -878,16 +878,16 @@ Bepalen welke acties onmiddellijk nodig zijn om risico’s te verlagen en basisc
 - Welke quick wins inkomsten kunnen veiligstellen zonder extra risico.
 - Wie verantwoordelijk is voor uitvoering.
 
-### Required documents
+### Vereiste documenten
 
 - Open document request list.
-- Risk register.
+- Risicoregister.
 - Rights matrix draft.
 - Contractregister draft.
 - Statement request list.
 - Team responsibility matrix.
 
-### Findings
+### Bevindingen
 
 | 30-dagen prioriteit | Waarom nu | Gewenst resultaat |
 | --- | --- | --- |
@@ -895,16 +895,16 @@ Bepalen welke acties onmiddellijk nodig zijn om risico’s te verlagen en basisc
 | [Prioriteit] | [Risico/kans] | [Meetbare uitkomst] |
 | [Prioriteit] | [Risico/kans] | [Meetbare uitkomst] |
 
-### Risk level
+### Risiconiveau
 
 **Risico als dit niet binnen 30 dagen gebeurt: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw welke inkomsten, releases of deals gevaar lopen.]
 
-### Recommendation
+### Aanbeveling
 
-[Adviseer een compacte cleanup sprint met maximaal vijf acties. Houd de scope strak: eerst bewijs, controle en blokkades.]
+[Adviseer een compacte cleanup sprint met maximaal vijf acties. Houd de Scope strak: eerst bewijs, controle en blokkades.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit | Succescriterium |
 | --- | --- | --- | --- | --- |
@@ -921,7 +921,7 @@ Bepalen welke acties onmiddellijk nodig zijn om risico’s te verlagen en basisc
 **Doel van de beoordeling**  
 Vertalen van de audit naar een realistische business roadmap voor herstel, professionalisering en gecontroleerde monetisatie.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Welke fundamentacties na 30 dagen nog openstaan.
 - Welke commerciële kansen na cleanup veilig geactiveerd kunnen worden.
@@ -929,17 +929,17 @@ Vertalen van de audit naar een realistische business roadmap voor herstel, profe
 - Welke systemen maandelijks moeten draaien: royalty, finance, release admin, contract archive.
 - Of een release strategy, roadmap of managementvoorstel na 90 dagen verantwoord is.
 
-### Required documents
+### Vereiste documenten
 
 - Gesloten en open actiepuntenlijst.
 - Geüpdatete rights matrix.
-- Release pipeline.
+- Release Pipeline.
 - 90-dagen budget.
 - Revenue dashboard.
 - Team capacity plan.
 - Contract summaries.
 
-### Findings
+### Bevindingen
 
 | 90-dagen doel | Business impact | Benodigde middelen | Afhankelijkheid |
 | --- | --- | --- | --- |
@@ -947,16 +947,16 @@ Vertalen van de audit naar een realistische business roadmap voor herstel, profe
 | [Doel] | [Impact] | [Team/budget/docs] | [Afhankelijkheid] |
 | [Doel] | [Impact] | [Team/budget/docs] | [Afhankelijkheid] |
 
-### Risk level
+### Risiconiveau
 
 **Risico als 90-dagen roadmap niet wordt uitgevoerd: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw of de artiest terugvalt in ad-hoc releases, gemiste inkomsten of dealonzekerheid.]
 
-### Recommendation
+### Aanbeveling
 
 [Adviseer een gefaseerde roadmap: eerst control, daarna monetisation, daarna growth. Benoem welke CM-service per fase past.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit | Succescriterium |
 | --- | --- | --- | --- | --- |
@@ -964,16 +964,16 @@ Vertalen van de audit naar een realistische business roadmap voor herstel, profe
 | Implementeer maandelijkse royalty en finance review. | [Naam] | [Datum] | Hoog | Eerste review afgerond en afwijkingen gelogd |
 | Beslis over distributie/publishing optimalisatie. | [Naam] | [Datum] | Middel | Huidige setup behouden, heronderhandelen of vervangen |
 | Activeer één veilige revenue opportunity. | [Naam] | [Datum] | Middel | Pitch, campaign of salesproces live |
-| Bereid CM next-service proposal voor. | [Naam] | [Datum] | Hoog | Scope, budget, timeline en voorwaarden klaar |
+| Bereid CM next-service Proposal voor. | [Naam] | [Datum] | Hoog | Scope, budget, timeline en voorwaarden klaar |
 
 ---
 
-## 20. RECOMMENDED CM NEXT STEP
+## 20. AANBEVOLEN CM NEXT STEP
 
 **Doel van de beoordeling**  
 Bepalen welke CM-dienst het meest logisch, veilig en commercieel waardevol is na deze audit.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of de score en red flags directe strategie toelaten of eerst cleanup vereisen.
 - Welke dienst de grootste risicoreductie of waardecreatie oplevert.
@@ -981,7 +981,7 @@ Bepalen welke CM-dienst het meest logisch, veilig en commercieel waardevol is na
 - Of de artiest bereid en in staat is om zakelijke basisafspraken te volgen.
 - Of externe juridische, fiscale of administratieve support nodig is.
 
-### Required documents
+### Vereiste documenten
 
 - Final audit scorecard.
 - Red flag status.
@@ -990,7 +990,7 @@ Bepalen welke CM-dienst het meest logisch, veilig en commercieel waardevol is na
 - Mandaatbevestiging van artiest/team.
 - Scopevoorwaarden voor de voorgestelde CM-dienst.
 
-### Findings
+### Bevindingen
 
 | Mogelijke CM next step | Geschikt? | Waarom wel/niet | Voorwaarde |
 | --- | --- | --- | --- |
@@ -1001,32 +1001,32 @@ Bepalen welke CM-dienst het meest logisch, veilig en commercieel waardevol is na
 | Project Management | [Ja/Nee/Voorwaardelijk] | [Motivatie] | [Voorwaarde] |
 | Business Cleanup Sprint | [Ja/Nee/Voorwaardelijk] | [Motivatie] | [Voorwaarde] |
 
-### Risk level
+### Risiconiveau
 
 **Risico voor CM bij instappen: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw professioneel: aansprakelijkheid, reputatie, tijdverlies, conflict, oncollecteerbare inkomsten of onduidelijk mandaat.]
 
-### Recommendation
+### Aanbeveling
 
 **Aanbevolen next step:** [CM-dienst]  
 [Leg in 5–7 zinnen uit waarom dit de juiste volgorde is. Benoem wat niet geadviseerd wordt en waarom.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
-| Bevestig scope, deliverables en voorwaarden voor de aanbevolen CM-dienst. | [Naam] | [Datum] | Hoog |
+| Bevestig Scope, deliverables en voorwaarden voor de aanbevolen CM-dienst. | [Naam] | [Datum] | Hoog |
 | Laat artist/team schriftelijk akkoord geven op document request en werkproces. | [Naam] | [Datum] | Hoog |
 | Plan kickoff pas na ontvangst van kritieke documenten. | [Naam] | [Datum] | Kritiek |
 
 ---
 
-## 21. INTERNAL CM NOTES
+## 21. INTERNE CM-NOTITIES
 
 **Doel van deze sectie**  
 Vastleggen wat CM intern moet weten voordat een voorstel, onderhandeling of samenwerking wordt gestart. Deze sectie is niet bedoeld voor externe distributie zonder interne review.
 
-### What must be checked
+### Wat moet worden gecontroleerd
 
 - Of de artiest professioneel communiceert, afspraken nakomt en documenten tijdig aanlevert.
 - Of er signalen zijn van conflict, onrealistische verwachtingen, druk van derden of gebrek aan dealbegrip.
@@ -1034,16 +1034,16 @@ Vastleggen wat CM intern moet weten voordat een voorstel, onderhandeling of same
 - Of de commerciële kans opweegt tegen cleanupbelasting en risico.
 - Of CM externe specialisten moet betrekken.
 
-### Required documents
+### Vereiste documenten
 
 - Interne gespreksnotities.
 - Document request log.
-- Risk register.
+- Risicoregister.
 - Proposal assumptions.
 - Budgetinschatting CM-uren.
 - Lijst met benodigde externe advisors.
 
-### Findings
+### Bevindingen
 
 | Intern punt | Observatie | Impact op CM |
 | --- | --- | --- |
@@ -1053,38 +1053,38 @@ Vastleggen wat CM intern moet weten voordat een voorstel, onderhandeling of same
 | Risicotolerantie | [Observatie] | [Impact] |
 | Upside | [Observatie] | [Impact] |
 
-### Risk level
+### Risiconiveau
 
 **Intern CM-risico: [Laag / Middel / Hoog / Kritiek]**  
 [Onderbouw of CM veilig kan offreren en welke voorwaarden contractueel moeten worden opgenomen.]
 
-### Recommendation
+### Aanbeveling
 
-[Adviseer interne go / conditional go / no-go en benoem minimale commerciële voorwaarden, zoals betaling vooraf, beperkte scope, expliciete disclaimers, juridische review of gefaseerde oplevering.]
+[Adviseer interne go / conditional go / no-go en benoem minimale commerciële voorwaarden, zoals betaling vooraf, beperkte Scope, expliciete disclaimers, juridische review of gefaseerde oplevering.]
 
-### Required action
+### Vereiste actie
 
 | Actie | Eigenaar | Deadline | Prioriteit |
 | --- | --- | --- | --- |
-| Bepaal intern of CM een proposal uitbrengt en onder welke voorwaarden. | [Naam] | [Datum] | Hoog |
+| Bepaal intern of CM een Proposal uitbrengt en onder welke voorwaarden. | [Naam] | [Datum] | Hoog |
 | Formuleer exclusions en assumptions voor offerte. | [Naam] | [Datum] | Hoog |
 | Escaleer kritieke juridische of fiscale vragen naar externe specialist. | [Naam] | [Datum] | Indien nodig |
 
 ---
 
-## CM COMMERCIAL CONCLUSION
+## CM commerciële conclusie
 
 Deze slotconclusie moet scherp, commercieel en besluitvormend zijn. Gebruik geen vrijblijvende formulering. CM moet na deze sectie weten of het veilig en zinvol is om verder te gaan.
 
-### Is this artist business-ready?
+### Is deze artist business-ready?
 
 [Antwoord duidelijk: ja, deels of nee. Onderbouw met score, red flags en documentbewijs. Benoem welke onderdelen sterk genoeg zijn om op te schalen en welke onderdelen groei blokkeren.]
 
-### Can CM safely work with this artist?
+### Kan CM veilig met deze artist werken?
 
 [Antwoord met go / conditional go / no-go. Benoem de voorwaarden waaronder CM kan werken, zoals ontvangst van contracten, cleanup van splits, bevestiging masterownership, royalty statements of mandaat van het team.]
 
-### What must be fixed first?
+### Wat moet eerst worden hersteld?
 
 1. [Eerste fix: altijd gekoppeld aan risico en concreet document/resultaat.]
 2. [Tweede fix.]

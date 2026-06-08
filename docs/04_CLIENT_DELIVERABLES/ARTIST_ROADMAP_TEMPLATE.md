@@ -1,6 +1,6 @@
 # ARTIST ROADMAP TEMPLATE
 
-## 1. DOCUMENT INFORMATION
+## 1. DOCUMENTINFORMATIERMATION
 
 | Veld | Informatie |
 | --- | --- |
@@ -24,9 +24,9 @@ Gebruik deze roadmap niet als algemene planning, maar als besliskader. Elke aanb
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
-### Current position
+### Huidige positie
 
 [Beschrijf de huidige positie van de artiest in 7–10 zinnen. Benoem carrièrestadium, marktperceptie, artistieke lane, publiekssignalen, cataloguspositie, zakelijke volwassenheid, teamstructuur en huidige commerciële tractie. Maak expliciet of de artiest zich bevindt in een opbouwfase, momentumfase, herpositioneringsfase, catalogusfase, internationale schaalfase of herstel-/structuurfase.]
 
@@ -38,39 +38,39 @@ De huidige positie wordt beoordeeld op basis van vier vragen:
 3. Is de zakelijke infrastructuur betrouwbaar genoeg om inkomsten te innen, deals te sluiten en risico’s te beperken?
 4. Is er bewijs dat de markt reageert: streams, saves, shares, tickets, comments, mailinschrijvingen, inbound verzoeken of partnerinteresse?
 
-### Key strengths
+### Belangrijkste sterktes
 
 - **[Sterkte 1]** — [Onderbouw met bewijs uit audit: bijvoorbeeld hoge engagement, sterke live-performance, duidelijke community, herkenbare visuele stijl, consistente songwriting of sterke catalogusdata.]
 - **[Sterkte 2]** — [Onderbouw met bewijs en benoem waarom dit schaalbaar is.]
 - **[Sterkte 3]** — [Onderbouw met bewijs en benoem hoe CM dit kan omzetten naar groei of omzet.]
 
-### Key challenges
+### Belangrijkste uitdagingen
 
 - **[Challenge 1]** — [Beschrijf het remmende effect op groei, omzet of professionalisering.]
 - **[Challenge 2]** — [Beschrijf of dit een strategisch, creatief, administratief, financieel of teamrisico is.]
 - **[Challenge 3]** — [Beschrijf welke beslissing niet verantwoord genomen kan worden zolang dit punt openstaat.]
 
-### Biggest growth opportunity
+### Grootste groeikans
 
 [Beschrijf de grootste groeikans: bijvoorbeeld een herkenbare contentserie, betere releasecadans, lokale sceneclaim, internationale niche, fan community, YouTube-format, livepositie of catalogusactivatie. Leg uit waarom dit nu de hoogste kans op audience growth heeft en welke investering nodig is.]
 
-### Biggest commercial opportunity
+### Grootste commerciële kans
 
 [Beschrijf de meest kansrijke omzetroute: live, brand partnership, sync, publishing, direct-to-fan, merch, catalogus, corporate events, creator partnerships of internationale exploitatie. Benoem verwachte waarde, vereisten en tijdshorizon.]
 
-### Biggest operational risk
+### Grootste operationele risico
 
 [Beschrijf het grootste risico dat groei kan blokkeren: onduidelijke rechten, ontbrekende splits, zwakke administratie, geen owner op planning, afhankelijkheid van één persoon, inconsistent budgetbeheer, geen contractarchief of ontbrekend rapportageproces.]
 
-### Recommended focus
+### Aanbevolen focus
 
-**Aanbevolen focus voor de komende 90 dagen:** [bijvoorbeeld “fundament herstellen en release engine bouwen” / “merkpositionering aanscherpen en contentconsistentie verhogen” / “rechten opschonen en commerciële pipeline openen”.]
+**Aanbevolen focus voor de komende 90 dagen:** [bijvoorbeeld “fundament herstellen en release engine bouwen” / “merkpositionering aanscherpen en contentconsistentie verhogen” / “rechten opschonen en commerciële Pipeline openen”.]
 
 **Waarom nu:** [Leg uit waarom deze focus de beste volgorde is. Benoem wat níet prioriteit heeft omdat het te vroeg, te duur of te risicovol is.]
 
 ---
 
-## 3. STRATEGIC OBJECTIVES
+## 3. STRATEGISCHE DOELEN
 
 **Doel van deze sectie**  
 De strategische objectives verbinden auditbevindingen aan meetbare beslissingen. Elk doel moet een eigenaar, deadline en KPI hebben. Vermijd brede ambities zonder meetbaar resultaat.
@@ -88,7 +88,7 @@ De strategische objectives verbinden auditbevindingen aan meetbare beslissingen.
 | Objective | Goal | Reason | KPI | Owner | Deadline |
 | --- | --- | --- | --- | --- | --- |
 | Audience growth | [Bijv. structurele groei op 2 kernplatforms.] | [Nodig om marktvalidatie en onderhandelingspositie te versterken.] | [+X% volgers / +X% engagement / +X mailinschrijvingen.] | [Naam/rol] | [Datum] |
-| Commercial pipeline | [Bijv. eerste partnership-, sync-, live- of publishingpipeline openen.] | [Nodig om commerciële kansen te testen zonder overinvestering.] | [X warme leads / X gesprekken / X voorstellen verstuurd.] | [Naam/rol] | [Datum] |
+| Commercial Pipeline | [Bijv. eerste partnership-, sync-, live- of publishingPipeline openen.] | [Nodig om commerciële kansen te testen zonder overinvestering.] | [X warme leads / X gesprekken / X voorstellen verstuurd.] | [Naam/rol] | [Datum] |
 | Team process | [Bijv. vaste maandelijkse managementrapportage en approvalflow.] | [Nodig om uitvoering te borgen.] | [Maandrapport op tijd / besluiten binnen X dagen.] | [Naam/rol] | [Datum] |
 
 ### 365 Days
@@ -101,18 +101,18 @@ De strategische objectives verbinden auditbevindingen aan meetbare beslissingen.
 
 ---
 
-## 4. BRAND OBJECTIVES
+## 4. BRAND-DOELEN
 
 **Doel van deze sectie**  
 Bepalen of het merk van de artiest sterk genoeg is om aandacht om te zetten in herkenning, herkenning in vertrouwen en vertrouwen in commerciële waarde.
 
-| Brand area | Current state | Desired state | Gap | Action plan | Priority |
+| Brand area | Huidige situatie | Gewenste situatie | Gap | Actieplan | Priority |
 | --- | --- | --- | --- | --- | --- |
 | Positioning | [Huidige marktplek, genreclaim, vergelijkbare artiesten en doelgroepperceptie.] | [Heldere positie: “de artiest voor ___ die ___ vertegenwoordigt”.] | [Wat maakt de huidige positie onduidelijk of te breed?] | [Positioning statement, 3 referentie-acts, doelgroepdefinitie en marktclaim vastleggen.] | [Hoog/Middel/Laag] |
 | Identity | [Artist DNA, waarden, gedrag, tone of voice en emotionele belofte.] | [Consistente identiteit die in muziek, socials, interviews en visuals herkenbaar is.] | [Welke onderdelen voelen inconsistent of onvoldoende eigen?] | [Identity pillars, do/don’t lijst en kernwoorden ontwikkelen.] | [Hoog/Middel/Laag] |
 | Story | [Huidige biografie, origin story, conflict, ambitie en culturele relevantie.] | [Een verhaal dat fans, media en partners snel begrijpen en willen doorvertellen.] | [Ontbrekende spanning, urgentie, bewijs of menselijkheid.] | [Bio’s van 25/50/150 woorden, pitchtekst, interview talking points en EPK-story schrijven.] | [Hoog/Middel/Laag] |
 | Differentiation | [Wat maakt de artiest hoorbaar, zichtbaar of cultureel anders?] | [Verdedigbaar onderscheid dat niet alleen op genre of looks leunt.] | [Te veel overlap met vergelijkbare acts of te weinig bewijs van eigen lane.] | [Unieke codes, signature formats en duidelijke anti-positionering formuleren.] | [Hoog/Middel/Laag] |
-| Visual identity | [Logo, fotografie, kleur, typografie, artwork, styling, video en social grid.] | [Visuele wereld die professioneel, herhaalbaar en herkenbaar is.] | [Inconsistentie, lage assetkwaliteit, geen art direction of geen formatsysteem.] | [Mini-brandbook, assetlist, shootplan, artworkrichtlijnen en templates maken.] | [Hoog/Middel/Laag] |
+| Visual identity | [Logo, fotografie, kleur, typografie, artwork, styling, video en social grid.] | [Visuele wereld die professioneel, herhaalbaar en herkenbaar is.] | [Inconsistentie, lage assetkwaliteit, geen art direction of geen formatsysteem.] | [Mini-Brandbook, assetlist, shootplan, artworkrichtlijnen en templates maken.] | [Hoog/Middel/Laag] |
 | Community positioning | [Wie voelt zich aangesproken en hoe spreken fans over de artiest?] | [Duidelijke communityclaim met taal, rituelen, formats en betrokkenheid.] | [Geen naam, geen fan journey, weinig interactie of alleen broadcastcommunicatie.] | [Community narrative, recurring prompts, mailinglist-aanbod en fan activation flow maken.] | [Hoog/Middel/Laag] |
 
 **Strategische aanbeveling**  
@@ -120,20 +120,20 @@ Bepalen of het merk van de artiest sterk genoeg is om aandacht om te zetten in h
 
 ---
 
-## 5. MUSIC OBJECTIVES
+## 5. MUZIEKDOELEN
 
 **Doel van deze sectie**  
 Vertalen van artistieke bevindingen naar een muziekstrategie die cataloguswaarde, audience growth en commerciële exploitatie ondersteunt.
 
-| Music area | Current state | Desired state | Gap | Action plan | Priority |
+| Music area | Huidige situatie | Gewenste situatie | Gap | Actieplan | Priority |
 | --- | --- | --- | --- | --- | --- |
 | Catalog strategy | [Aantal releases, performance per track, evergreen potentie, cataloguscoherentie.] | [Catalogus met duidelijke rollen: discovery, fan favorite, live anchor, sync potential, streaming driver.] | [Geen cataloguslogica of onvoldoende heractivatie.] | [Catalogus audit, track tagging, exploitatiekansen en reactivatieplanning.] | [Hoog/Middel/Laag] |
-| Release strategy | [Huidige cadans, planning, distributie, marketing en learnings.] | [Voorspelbare release engine met pre-release, launch en post-release fases.] | [Losse releases zonder momentum of datafeedback.] | [12-maands releasekalender, decision gates, assetplanning en budget per release.] | [Hoog/Middel/Laag] |
+| Release Strategie | [Huidige cadans, planning, distributie, marketing en learnings.] | [Voorspelbare release engine met pre-release, launch en post-release fases.] | [Losse releases zonder momentum of datafeedback.] | [12-maands releasekalender, decision gates, assetplanning en budget per release.] | [Hoog/Middel/Laag] |
 | Singles | [Kwaliteit, timing, hook, doelgroepfit en promotiehistorie.] | [Singles met duidelijke functie: bereik, fanbinding, radio, playlist, TikTok of live.] | [Onvoldoende selectiecriteria of te weinig content rondom single.] | [Single scoring model, assetpakket, teaserplan en KPI per single.] | [Hoog/Middel/Laag] |
 | EP | [Bestaande of geplande EP, thematische samenhang en marktfunctie.] | [EP als positioneringsmoment of fan deepening asset.] | [Geen duidelijke reden voor EP of timing te vroeg.] | [EP-concept, tracklistlogica, budget en campagnehaak bepalen.] | [Hoog/Middel/Laag] |
 | Album | [Albumambitie, catalogusgrootte, fanbase en budget.] | [Album pas inzetten wanneer publiek, verhaal en middelen voldoende zijn.] | [Album kan te vroeg zijn zonder audience, campagnebudget of commerciële partners.] | [Album readiness check en milestoneplan vóór greenlight.] | [Hoog/Middel/Laag] |
 | Features | [Huidige featurehistorie, kwaliteit en publieksoverlap.] | [Features die strategisch bereik, geloofwaardigheid of markttoegang vergroten.] | [Te opportunistisch of onvoldoende contractueel vastgelegd.] | [Feature wishlist, selectiecriteria, splits/clearanceproces en rolloutafspraken.] | [Hoog/Middel/Laag] |
-| Collaborations | [Producers, writers, creatives, brands of andere disciplines.] | [Samenwerkingen met duidelijke creatieve en commerciële rol.] | [Geen pipeline of geen eigenaar voor outreach.] | [Collab pipeline, owner, pitchpakket en evaluatiecriteria.] | [Hoog/Middel/Laag] |
+| Collaborations | [Producers, writers, creatives, brands of andere disciplines.] | [Samenwerkingen met duidelijke creatieve en commerciële rol.] | [Geen Pipeline of geen eigenaar voor outreach.] | [Collab Pipeline, owner, pitchpakket en evaluatiecriteria.] | [Hoog/Middel/Laag] |
 | Production quality | [Mix/master, vocal production, sounddesign, arrangement en consistency.] | [Release-ready kwaliteit die past bij marktambitie.] | [Kwaliteit wisselt of is niet competitief genoeg.] | [Quality control proces, referentietracks, producer/mix shortlist en budget.] | [Hoog/Middel/Laag] |
 | Songwriting development | [Hooks, teksten, structuur, taal, emotionele scherpte en replay value.] | [Schrijfproces dat herkenbare songs en schaalbare kwaliteit oplevert.] | [Sterke ideeën maar wisselende afwerking of onvoldoende sessies.] | [Writing camps, feedbackrondes, topline review en song scoring.] | [Hoog/Middel/Laag] |
 | Publishing opportunities | [Registraties, co-writes, syncfit, pitchbaarheid en publisherrelaties.] | [Publishingrechten volledig geregistreerd en actief exploitabel.] | [Geen work registrations, onduidelijke splits of geen pitchmateriaal.] | [Publishing audit, split sheets, song metadata en pitchlist.] | [Hoog/Middel/Laag] |
@@ -143,12 +143,12 @@ Vertalen van artistieke bevindingen naar een muziekstrategie die cataloguswaarde
 
 ---
 
-## 6. BUSINESS OBJECTIVES
+## 6. BUSINESS-DOELEN
 
 **Doel van deze sectie**  
 Vaststellen welke zakelijke infrastructuur nodig is om groei veilig te maken. Een artiest is pas schaalbaar wanneer rechten, inkomsten, rapportage en contracten controleerbaar zijn.
 
-| Business area | Current state | Desired state | Gap | Action plan | Priority |
+| Business area | Huidige situatie | Gewenste situatie | Gap | Actieplan | Priority |
 | --- | --- | --- | --- | --- | --- |
 | Rights administration | [Overzicht per track, splits, ISRC, ISWC, contributors en registraties.] | [Volledige rechtenmatrix per release.] | [Ontbrekende splits, dubbele claims of onvolledige metadata.] | [Rights audit uitvoeren, matrix vullen, ontbrekende bevestigingen ophalen.] | [Hoog/Middel/Laag] |
 | Master ownership | [Wie bezit masters en onder welke voorwaarden?] | [Per opname duidelijk eigendom, licentie, termijn, territorium en royalty.] | [Onzekere claims of mondelinge afspraken.] | [Master agreements verzamelen, ownership bevestigen, risico’s markeren.] | [Hoog/Middel/Laag] |
@@ -165,12 +165,12 @@ Vaststellen welke zakelijke infrastructuur nodig is om groei veilig te maken. Ee
 
 ---
 
-## 7. CONTENT OBJECTIVES
+## 7. CONTENTDOELEN
 
 **Doel van deze sectie**  
 Bepalen welke content de merkpositie, releases, community en commerciële bewijsvoering ondersteunt. Content moet niet alleen zichtbaar maken, maar ook data produceren voor beslissingen.
 
-| Platform | Current situation | Growth opportunities | Content pillars | Recommended frequency | Required assets | Success indicators |
+| Platform | Huidige situatie | Groeikansen | Content pillars | Aanbevolen frequentie | Vereiste Assets | Success indicators |
 | --- | --- | --- | --- | --- | --- | --- |
 | Instagram | [Volgers, engagement, Reels-performance, feedconsistentie, Storygebruik, DM-activiteit.] | [Visuele premiumisering, Reels-series, behind-the-scenes, community polls, partnership proof.] | [Identity, lifestyle, music moments, community, proof of work.] | [Bijv. 3–5 Reels p/w, dagelijkse Stories rond campagne, 1 carousel p/w.] | [Shootbank, captionbank, templates, short clips, cover assets.] | [Engagement rate, saves, shares, profielbezoeken, DM’s, link clicks.] |
 | TikTok | [Huidige formatfit, views, completion, comments, soundgebruik en postingritme.] | [Discovery via hooks, personality, storytelling, snippets, creator collabs.] | [Song hooks, artist POV, humor/realness, process, fan challenges.] | [Bijv. 5–7 posts p/w tijdens releasefase, minimaal 3 p/w in always-on.] | [Vertical clips, hookvarianten, lyric moments, trendreacties, creator briefs.] | [Watch time, saves, shares, comments, sound creations, follower conversion.] |
@@ -184,7 +184,7 @@ Bepalen welke content de merkpositie, releases, community en commerciële bewijs
 
 ---
 
-## 8. COMMERCIAL OBJECTIVES
+## 8. COMMERCIËLE DOELEN
 
 **Doel van deze sectie**  
 Commerciële kansen beoordelen op haalbaarheid, timing, vereisten en potentiële waarde. Niet elke kans is nu verkoopbaar; sommige vereisen eerst merkbewijs, rechtencontrole, liveproof of audience data.
@@ -205,7 +205,7 @@ Commerciële kansen beoordelen op haalbaarheid, timing, vereisten en potentiële
 
 ---
 
-## 9. PRIORITY MATRIX
+## 9. PRIORITEITENMATRIX
 
 **Doel van deze sectie**  
 Prioriteiten bepalen op basis van impact en effort. Taken met hoge impact en lage effort worden direct ingepland. Taken met hoge impact en hoge effort krijgen budget, eigenaar en fasering. Lage impact/hoge effort wordt uitgesteld of geschrapt.
@@ -228,7 +228,7 @@ Prioriteiten bepalen op basis van impact en effort. Taken met hoge impact en lag
 
 ---
 
-## 10. 30 DAY EXECUTION PLAN
+## 10. 30-DAGEN EXECUTION PLAN
 
 **Doel van deze sectie**  
 De eerste 30 dagen moeten helderheid, controle en momentum creëren. Dit is geen volledige groeifase, maar de fase waarin beslissingen worden omgezet in werkbare assets, processen en owners.
@@ -262,45 +262,45 @@ De eerste 30 dagen moeten helderheid, controle en momentum creëren. Dit is geen
 | Tasks | Owner | Deliverables | Deadline | Dependencies |
 | --- | --- | --- | --- | --- |
 | Roadmap review met artiest/team. | [Naam] | Goedgekeurde prioriteiten en next steps. | [Datum] | Alle week 1–3 deliverables. |
-| CM servicevoorstel faseren. | [Naam] | Aanbevolen scope, budget en retainer/projectstructuur. | [Datum] | Roadmap approval. |
+| CM servicevoorstel faseren. | [Naam] | Aanbevolen Scope, budget en retainer/projectstructuur. | [Datum] | Roadmap approval. |
 | Uitvoering starten op hoogste prioriteiten. | [Naam] | Actieve projectplanning in CM-systeem. | [Datum] | Scope akkoord. |
 
 ---
 
-## 11. 90 DAY EXECUTION PLAN
+## 11. 90-DAGEN EXECUTION PLAN
 
 **Doel van deze sectie**  
 De 90-dagenplanning vertaalt strategie naar projecten met concrete output en meetbare signalen. Elke maand moet eindigen met een beslissing: doorgaan, aanpassen, opschalen of pauzeren.
 
-### Month 1
+### Maand 1
 
 | Goals | Projects | Deliverables | KPIs |
 | --- | --- | --- | --- |
 | Controle krijgen over fundament en focus. | Rights/revenue cleanup, brand positioning, KPI dashboard. | Rechtenmatrix, brand one-pager, dashboard v1, projectplanning. | [% documenten compleet, brand approval, dashboard live.] |
 
-### Month 2
+### Maand 2
 
 | Goals | Projects | Deliverables | KPIs |
 | --- | --- | --- | --- |
 | Momentum bouwen rond merk, content en releaseplanning. | Content engine, release/campaign planning, assetproductie. | Contentkalender, assetbank, releaseplan, EPK update. | [Posting consistency, engagement, saves, pre-saves, asset completion.] |
 
-### Month 3
+### Maand 3
 
 | Goals | Projects | Deliverables | KPIs |
 | --- | --- | --- | --- |
-| Commerciële kansen testen en managementritme borgen. | Deal pipeline, live/brand/sync outreach, maandrapportage. | Targetlists, pitches, outreach tracker, monthly report. | [Aantal leads, gesprekken, voorstellen, bookings, pipelinewaarde.] |
+| Commerciële kansen testen en managementritme borgen. | Deal Pipeline, live/brand/sync outreach, maandrapportage. | Targetlists, pitches, outreach tracker, monthly report. | [Aantal leads, gesprekken, voorstellen, bookings, Pipelinewaarde.] |
 
 **90-dagen beslismoment**  
 Aan het einde van dag 90 bepaalt CM of de artiest klaar is voor een volgende fase: intensiever management, releasecampagne, partnershipontwikkeling, rights/publishing support, live expansion of internationale marktverkenning.
 
 ---
 
-## 12. KPI DASHBOARD
+## 12. KPI Dashboard
 
 **Doel van deze sectie**  
 Een compacte set metrics vastleggen die zowel artistieke groei als zakelijke waarde meet. Kies per artiest alleen KPI’s die relevant zijn voor de gekozen strategie.
 
-| KPI | Current value | Target value | Deadline |
+| KPI | Huidige waarde | Doelwaarde | Deadline |
 | --- | --- | --- | --- |
 | Followers | [Huidige totaal / per platform] | [Target] | [Datum] |
 | Listeners | [Huidige unieke luisteraars indien beschikbaar] | [Target] | [Datum] |
@@ -310,9 +310,9 @@ Een compacte set metrics vastleggen die zowel artistieke groei als zakelijke waa
 | Email subscribers | [Aantal] | [Target] | [Datum] |
 | Revenue | [€ per maand/kwartaal/jaar] | [Target] | [Datum] |
 | Catalog value | [Indicatieve cataloguswaarde of revenue multiple indien toepasbaar] | [Target] | [Datum] |
-| Deal pipeline | [Aantal leads / pipelinewaarde] | [Target] | [Datum] |
-| Partnership pipeline | [Aantal prospects / proposals] | [Target] | [Datum] |
-| Sync pipeline | [Aantal pitchbare tracks / pitches] | [Target] | [Datum] |
+| Deal Pipeline | [Aantal leads / Pipelinewaarde] | [Target] | [Datum] |
+| Partnership Pipeline | [Aantal prospects / Proposals] | [Target] | [Datum] |
+| Sync Pipeline | [Aantal pitchbare tracks / pitches] | [Target] | [Datum] |
 | Live bookings | [Aantal boekingen / fee range] | [Target] | [Datum] |
 
 **KPI-interpretatie**
@@ -324,7 +324,7 @@ Een compacte set metrics vastleggen die zowel artistieke groei als zakelijke waa
 
 ---
 
-## 13. RECOMMENDED CM SERVICES
+## 13. AANBEVOLEN CM SERVICES
 
 **Doel van deze sectie**  
 Bepalen welke Custommade Agency-services nu verkocht moeten worden en welke pas later logisch zijn. Advies moet voortkomen uit risico, opportunity en uitvoeringscapaciteit.
@@ -351,7 +351,7 @@ Bepalen welke Custommade Agency-services nu verkocht moeten worden en welke pas 
 **Doel van deze sectie**  
 Definiëren hoe succes er na 12 maanden uitziet. Succes moet breder zijn dan streams: het gaat om merkwaarde, publiek, rechten, omzet, deals, infrastructuur en teamcapaciteit.
 
-### What success looks like after 12 months
+### Hoe succes eruitziet na 12 maanden
 
 | Area | Success definition | Evidence |
 | --- | --- | --- |
@@ -359,7 +359,7 @@ Definiëren hoe succes er na 12 maanden uitziet. Succes moet breder zijn dan str
 | Audience | Groei is niet alleen zichtbaar in followers, maar ook in engagement, saves, mailinglist, ticketvraag en communityactiviteit. | [Dashboard, platformanalytics, email data, ticketing data.] |
 | Music | De catalogus heeft duidelijke rollen per release en nieuwe muziek wordt volgens een strategische release engine uitgebracht. | [Releasekalender, streamingdata, save rates, playlistdata, fanrespons.] |
 | Revenue | Inkomstenstromen zijn meetbaar, opgesplitst per bron en groeien op basis van bewuste investeringen. | [Revenue report, payout statements, live fees, partnership deals.] |
-| Deals | De artiest heeft een actieve pipeline met passende partners en betere onderhandelingspositie. | [Outreach tracker, proposals, onderhandelingen, getekende deals.] |
+| Deals | De artiest heeft een actieve Pipeline met passende partners en betere onderhandelingspositie. | [Outreach tracker, Proposals, onderhandelingen, getekende deals.] |
 | Infrastructure | Rechten, contracten, administratie, rapportage en approvals zijn professioneel georganiseerd. | [Contract register, rights matrix, monthly reports, decision log.] |
 | Team | Rollen, owners en verantwoordelijkheden zijn duidelijk en schaalbaar. | [Responsibility matrix, meetingritme, projectplanning, SLA’s.] |
 
@@ -373,44 +373,44 @@ Definiëren hoe succes er na 12 maanden uitziet. Succes moet breder zijn dan str
 
 ---
 
-## 15. FINAL CM CONCLUSION
+## 15. FINALE CM-CONCLUSIE
 
 **Doel van deze sectie**  
 Een duidelijke management- en salesconclusie formuleren. De conclusie moet richting geven aan de artiest én aan CM’s commerciële vervolgstap.
 
-### Is the artist ready to scale?
+### Is de artist klaar om op te schalen?
 
 [Ja / Gedeeltelijk / Nog niet.]  
 [Onderbouw met concrete auditlogica. “Ready to scale” betekent dat merk, muziek, rechten, team, content en inkomstenstructuur voldoende betrouwbaar zijn om extra budget, deals of managementcapaciteit te rechtvaardigen.]
 
-### What should happen first?
+### Wat moet eerst gebeuren?
 
 [Noem de eerste 1–3 acties. Focus op de acties die risico verwijderen of de grootste strategische hefboom activeren.]
 
-### What should not happen yet?
+### Wat mag nog niet gebeuren?
 
 [Noem wat CM afraadt: bijvoorbeeld albumcampagne, internationale expansie, grote branddeals, dure visuals, tourrouting of publishingdeal voordat fundament/rechten/data op orde zijn. Leg uit welk risico daarmee wordt voorkomen.]
 
-### What is the biggest growth lever?
+### Wat is de grootste growth lever?
 
 [Beschrijf de groeilever met hoogste impact: merkpositionering, contentformat, releasecadans, community, live, catalogus, creators, YouTube, TikTok of internationale niche. Benoem waarom deze hefboom past bij de huidige fase.]
 
-### What is the biggest revenue opportunity?
+### Wat is de grootste revenue opportunity?
 
 [Beschrijf de meest realistische commerciële kans op basis van bewijs. Maak onderscheid tussen korte termijn cashflow en lange termijn waardeopbouw.]
 
-### Which CM services should be sold first?
+### Welke CM services moeten eerst worden verkocht?
 
 1. **[Service 1]** — [Waarom nu, welk probleem wordt opgelost, verwacht resultaat binnen 30–90 dagen.]
 2. **[Service 2]** — [Waarom nu, afhankelijkheden, verwachte impact.]
 3. **[Service 3]** — [Optioneel indien urgent en uitvoerbaar.]
 
-### Which CM services should be sold later?
+### Welke CM services moeten later worden verkocht?
 
 1. **[Service 1]** — [Waarom later: vereist eerst data, rechten, merkbewijs, contentcapaciteit of budget.]
 2. **[Service 2]** — [Welke milestone moet eerst behaald worden.]
 3. **[Service 3]** — [Wanneer deze service commercieel logisch wordt.]
 
-### Final recommendation
+### Finale aanbeveling
 
 [Sluit af met een scherpe consultingconclusie van 5–8 zinnen. Benoem de aanbevolen route, de volgorde, de belangrijkste risico’s, de grootste kansen en de concrete CM-next step. De toon moet adviserend, zakelijk en besluitvaardig zijn: geen vrijblijvende observaties, maar een duidelijk groeipad dat de artiest kan goedkeuren en CM kan uitvoeren.]

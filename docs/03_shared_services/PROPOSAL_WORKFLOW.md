@@ -1,25 +1,27 @@
 # Proposal Workflow
 
-## Purpose
+## Doel
 
-Convert qualified opportunities into clear commercial proposals.
+Zet gekwalificeerde opportunities om in duidelijke commerciële Proposals.
 
-## Steps
+## Stappen
 
-1. Confirm problem, desired outcome and decision owner.
-2. Define scope, deliverables, timeline and assumptions.
-3. Price based on value, complexity and delivery capacity.
-4. Identify exclusions and change-control terms.
-5. Send proposal and log follow-up in ClickUp.
-6. Convert accepted proposals into contract/payment/onboarding.
+1. Bevestig probleem, gewenste uitkomst en decision owner.
+2. Definieer Scope, deliverables, timeline en aannames.
+3. Prijs op basis van waarde, complexiteit en delivery capacity.
+4. Identificeer exclusions en change-control terms.
+5. Laat Proposal intern reviewen.
+6. Verstuur Proposal en leg follow-up vast in ClickUp.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

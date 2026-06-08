@@ -18,14 +18,14 @@ Vergroot en onderhoudt strategische relaties voor CM door contacten, introducers
 - Introductienotities en meetinguitkomsten.
 - Strategische CM-prioriteiten.
 - Deal-, buyer- en partnershipbehoeften.
-- Goedgekeurde netwerkplaybooks.
+- Goedgekeurde netwerkPlaybooks.
 
 ## Outputs
 
 - Contact Lists
 - Opportunity Maps
 - Relationship Reports
-- Follow-up Recommendations
+- Follow-up-aanbevelingen
 - Introductiebriefings
 
 ## Triggercondities
@@ -40,7 +40,7 @@ Vergroot en onderhoudt strategische relaties voor CM door contacten, introducers
 - Contactregister
 - ClickUp
 - Google Drive
-- Networking playbook
+- Networking Playbook
 - Gmail-templates
 
 ## Escalatieregels
@@ -53,7 +53,7 @@ Vergroot en onderhoudt strategische relaties voor CM door contacten, introducers
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

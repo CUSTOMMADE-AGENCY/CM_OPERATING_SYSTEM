@@ -1,21 +1,21 @@
 # Catalog Acquisition Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM een catalogusacquisitie uitvoert van asset intake tot closing. Het document is bedoeld voor situaties waarin CM de kwaliteit, rechten, financiële prestaties, waardering en transactiestappen van een muziekasset moet organiseren.
+Dit Playbook beschrijft hoe CM een catalogusacquisitie uitvoert van asset intake tot closing. Het document is bedoeld voor situaties waarin CM de kwaliteit, rechten, financiële prestaties, waardering en transactiestappen van een muziekasset moet organiseren.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer CM een catalogus, masterpakket, publishingpakket of royaltystream voor verkoop of aankoop analyseert.
 - Wanneer een buyer of seller CM vraagt om transactiebegeleiding.
 - Wanneer een LOI, due diligence, APA of closingproces moet worden voorbereid.
 - Wanneer assetkwaliteit en dealbaarheid moeten worden vastgesteld.
 
-## OBJECTIVE
+## Doelstelling
 
 Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en door een gecontroleerd transactieproces brengen met zo min mogelijk verrassingen bij closing.
 
-## INPUTS
+## Inputs
 
 - Asset intake formulier.
 - Repertoirelijst met ISRC, ISWC, titels, artiesten, writers, masters en publishers.
@@ -25,7 +25,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - Seller objectives, minimumprijs, timing en preferred deal structure.
 - Buyer target universe en marktcontext.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - CM deal lead.
 - Seller of buyer principal.
@@ -35,19 +35,19 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - Potential buyers of seller counterparty.
 - Administrators, labels, distributors en publishers die data leveren.
 
-## CM PROCESS
+## CM-proces
 
 - Asset intake bepaalt wat de catalogus precies is en welke inkomstenstromen overdraagbaar zijn.
 - Rights review bevestigt eigendom, controle, term, territorium, overdraagbaarheid en consent requirements.
 - Financial review reconcilieert inkomsten, normaliseert revenue en identificeert non-recurring posten.
 - Valuation vertaalt kwaliteit, risico en marktappetite naar low/base/high cases.
 - Buyer targeting koppelt assetprofiel aan kopers met bewezen appetite.
-- LOI-fase test prijs, structuur, exclusiviteit, diligence scope en closing certainty.
+- LOI-fase test prijs, structuur, exclusiviteit, diligence Scope en closing certainty.
 - Due diligence valideert rechten, cijfers, claims, metadata en operationele overdracht.
 - APA-fase zet economische en juridische afspraken om in bindende transactiedocumentatie.
 - Closing rondt betaling, assignments, notices, access transfers en post-closing obligations af.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Open een deal workspace en maak intake-, rechten-, finance-, valuation-, buyer- en legal-taken aan.
 2. Verzamel assetgegevens en maak een asset perimeter memo: inbegrepen, uitgesloten en onzeker.
@@ -65,7 +65,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 14. Bereid closing checklist voor met betalingsinstructies, assignments, notices, releases, access transfers en signatures.
 15. Voer post-closing handover uit en sluit deal file met lessons learned.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Google Drive/dataroom.
 - ClickUp deal board.
@@ -75,7 +75,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - Q&A-log.
 - Closing checklist.
 
-## DELIVERABLES
+## Deliverables
 
 - Asset perimeter memo.
 - Rights review memo.
@@ -88,7 +88,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - APA issue list.
 - Closing binder.
 
-## KPIS
+## KPIs
 
 - Tijd van intake tot investment-ready package.
 - Aantal unresolved rights issues voor outreach.
@@ -98,7 +98,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - Price variance tussen valuation base case en final economics.
 - Closing zonder post-closing disputes.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Onvolledige chain of title.
 - Statements zonder bronrapporten.
@@ -107,7 +107,7 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - APA schedules sluiten niet aan op repertoirelijst.
 - Post-closing notices worden vergeten.
 
-## RED FLAGS
+## Red flags
 
 - Disputed ownership, samples of liens zonder oplossing.
 - Assignment verboden of consent vereist zonder realistische route.
@@ -116,17 +116,17 @@ Een verkoopbare of koopbare catalogus definiëren, waarderen, positioneren en do
 - Buyer vraagt lange exclusiviteit zonder harde closing path.
 - Tax, sanctions, fraud of litigation exposure.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.

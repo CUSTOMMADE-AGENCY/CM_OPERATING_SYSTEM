@@ -1,82 +1,82 @@
-# CUSTOMMADE AGENCY OPERATING MODEL
+# Custommade Agency Operating Model
 
-## PURPOSE
+## Doel
 
-Custommade Agency operates through two distinct revenue engines supported by shared services, systems and governance.
+Custommade Agency werkt met twee duidelijke revenue engines die worden ondersteund door shared services, systemen en Governance.
 
-## REVENUE ENGINE 1 — MASTER BOUTIQUE
+## Revenue Engine 1 — Master Boutique
 
-Purpose:
-Represent catalog, master and publishing rights holders in acquisition, licensing and transaction opportunities.
+Doel:
+CM vertegenwoordigt catalogus-, master- en publishing Rights Holder-partijen bij acquisitie-, licensing- en transactie-opportunities.
 
 Revenue:
-- Success Fees
-- Acquisition Fees
-- Rights Brokerage
-- Advisory Fees
+- Success Fee
+- Acquisition fees
+- Rights brokerage
+- Advisory fees
 
-Core Workflow:
+Kernworkflow:
 
 INTRODUCER
 ↓
-ASSET INTAKE
+Asset INTAKE
 ↓
 RIGHTS REVIEW
 ↓
 FINANCIAL REVIEW
 ↓
-BUYER TARGETING
+Buyer TARGETING
 ↓
 NDA
 ↓
 TEASER
 ↓
-DATA ROOM
+Data Room
 ↓
 INDICATIVE OFFER
 ↓
 LOI
 ↓
-DUE DILIGENCE
+Due Diligence
 ↓
 APA
 ↓
 CLOSING
 ↓
-SUCCESS FEE
+Success Fee
 
-## REVENUE ENGINE 2 — ARTIST MANAGEMENT
+## Revenue Engine 2 — Artist Management
 
-Purpose:
-Help artists build sustainable careers through strategy, business development, release planning and project execution.
+Doel:
+CM helpt artists duurzame carrières bouwen via strategie, business development, release planning en projectuitvoering.
 
 Revenue:
 - Retainers
-- Project Fees
-- Strategy Fees
-- Advisory Fees
+- Project fees
+- Strategy fees
+- Advisory fees
 
-Core Workflow:
+Kernworkflow:
 
-LEAD
+Lead
 ↓
-FIT CHECK
+Fit Check
 ↓
-BRAND AUDIT
+Brand Audit
 ↓
-BRANDBOOK
+Brandbook
 ↓
-BUSINESS AUDIT
+Business Audit
 ↓
-SCOPE
+Scope
 ↓
-PROPOSAL
+Proposal
 ↓
 CONTRACT
 ↓
 PAYMENT
 ↓
-ONBOARDING
+Onboarding
 ↓
 EXECUTION
 ↓
@@ -86,9 +86,9 @@ REVIEW
 ↓
 CLOSE-OUT
 ↓
-UPSELL
+Upsell
 
-## SHARED SERVICES
+## Shared services
 
 - Client Onboarding
 - Proposals
@@ -97,27 +97,27 @@ UPSELL
 - Meetings
 - File Management
 
-## SYSTEMS
+## Systems
 
 GitHub
-= Governance / SOPs / Playbooks / Documentation
+= Governance / SOPs / Playbooks / documentatie
 
 Google Drive
-= Files / Deliverables / Signed Documents
+= bestanden / deliverables / getekende documenten
 
 ClickUp
-= Execution / Tasks / Pipeline
+= execution / tasks / Pipeline
 
 Gmail
-= Communication
+= communicatie
 
-## GOVERNANCE
+## Governance
 
-Every workflow requires:
-- Workflow Documentation
-- As-Built Documentation
+Elke Workflow vereist:
+- Workflow-documentatie
+- As-built documentatie
 
-No duplicate documents.
-No duplicate workflows.
-No signed contracts in GitHub.
-No confidential client files in GitHub.
+Geen dubbele documenten.
+Geen dubbele Workflows.
+Geen getekende contracten in GitHub.
+Geen vertrouwelijke clientbestanden in GitHub.

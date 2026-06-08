@@ -1,29 +1,37 @@
 # Rights Royalty Audit Flow
 
-## Purpose
+## Doel
 
-Review rights and royalty flows to identify missing income, incorrect registrations or unresolved ownership issues.
+Review rights en royalty-flows om ontbrekende inkomsten, incorrecte registraties of onopgeloste ownership issues te identificeren.
 
-## Audit steps
+## Auditstappen
 
-1. Gather release list, works, recordings and identifiers.
-2. Confirm splits and registration status.
-3. Review distributor, PRO, publisher and neighboring rights sources.
-4. Compare expected income sources against statements received.
-5. Identify missing metadata, unpaid income or contractual blockers.
-6. Create remediation task list.
+1. Verzamel release list, works, recordings en identifiers.
+2. Bevestig splits en registration status.
+3. Review distributor-, PRO-, publisher- en Neighbouring Rights-bronnen.
+4. Vergelijk verwachte inkomstenbronnen met ontvangen statements.
+5. Markeer gaps, duplicates, claims en late payments.
+6. Prioriteer recovery- of cleanup-acties.
 
 ## Output
 
-Audit tracker with issue, source, owner, priority and next action.
+Audit tracker met issue, source, owner, prioriteit en next action.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

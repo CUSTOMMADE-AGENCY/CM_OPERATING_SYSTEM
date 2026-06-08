@@ -1,48 +1,48 @@
 # Custommade Agency Operating System
 
-This repository is the GitHub source of truth for Custommade Agency Int. B.V. operating workflows, governance, SOPs and system documentation.
+Deze repository is de GitHub source of truth voor de operating Workflows, Governance, SOPs en systeemdocumentatie van Custommade Agency Int. B.V.
 
-Start with [`docs/00_governance/CM_OPERATING_MODEL.md`](docs/00_governance/CM_OPERATING_MODEL.md) as the primary document for understanding the complete CM operating system.
+Start met [`docs/00_governance/CM_OPERATING_MODEL.md`](docs/00_governance/CM_OPERATING_MODEL.md) als primair document om het volledige CM operating system te begrijpen.
 
 ## Business lanes
 
 ### 01 Master Boutique
-For catalog, master, publishing, rights acquisition, buyers, data rooms, LOI, APA and transaction workflows.
+Voor catalogus-, master-, publishing-, rechtenacquisitie-, Buyer-, Data Room-, LOI-, APA- en transactieWorkflows.
 
 ### 02 Artist Management
-For artist clients, management, brandbook, release strategy, business audits, artist roadmaps, rights checks, project management and retainers.
+Voor artist-clients, management, Brandbook, Release Strategie, Business Audit, artist roadmaps, rights checks, projectmanagement en retainers.
 
-## System boundaries
+## Systeemgrenzen
 
-| System | Source-of-truth role |
+| Systeem | Source-of-truth rol |
 |---|---|
-| GitHub | Governance, workflows, SOPs, playbooks and as-built system documentation |
-| Google Drive | Live client folders, signed documents, deliverables and operational files |
-| ClickUp | Execution, pipeline, task ownership, due dates and task history |
-| Gmail | Communication templates and correspondence |
+| GitHub | Governance, Workflows, SOPs, Playbooks en as-built systeemdocumentatie |
+| Google Drive | Live clientmappen, getekende documenten, deliverables en operationele bestanden |
+| ClickUp | Uitvoering, Pipeline, taakeigenaarschap, deadlines en taakgeschiedenis |
+| Gmail | Communicatietemplates en correspondentie |
 
-## Repository map
+## Repository-overzicht
 
-- `docs/00_governance/` — operating rules, naming, documentation, version control and as-built standards.
-- `docs/01_master_boutique/` — catalog asset transaction workflow and buyer/data-room playbooks.
-- `docs/02_artist_management/` — artist client lifecycle, management SOPs, audits, approvals and retainers.
-- `docs/03_shared_services/` — reusable onboarding, email, proposals, meetings and file management.
-- `docs/04_systems/` — Google Drive, ClickUp, Gmail, AI agent and automation documentation.
-- `docs/05_KNOWLEDGE_BASE/` — Dutch practical music business knowledge base for CM team members, freelancers, interns, future employees and AI agents.
-- `scripts/google-drive/` — Google Apps Script utilities for creating the approved Drive folder structure.
+- `docs/00_governance/` — operationele regels, naamgeving, documentatie, version control en as-built standaarden.
+- `docs/01_master_boutique/` — Workflow voor catalogus- en Asset-transacties en Buyer/Data Room Playbooks.
+- `docs/02_artist_management/` — artist-client lifecycle, management SOPs, audits, approvals en retainers.
+- `docs/03_shared_services/` — herbruikbare Onboarding, e-mail, Proposals, meetings en bestandsbeheer.
+- `docs/04_systems/` — Google Drive-, ClickUp-, Gmail-, AI-agent- en automatiseringsdocumentatie.
+- `docs/05_KNOWLEDGE_BASE/` — praktische muziekbusiness-kennisbank voor CM-teamleden, freelancers, stagiairs, toekomstige medewerkers en AI agents.
+- `scripts/google-drive/` — Google Apps Script-hulpmiddelen voor het aanmaken van de goedgekeurde Drive-mapstructuur.
 
-## Non-negotiable repository rules
+## Niet-onderhandelbare repository-regels
 
-- No legacy clutter is copied into this repository.
-- No signed contracts, confidential client files or private commercial data.
-- No duplicate folders, random exports or uncontrolled archive dumps.
-- No `final_final` naming. Use version control and dated decisions instead.
-- Drive may be used as reference, but GitHub remains the clean operating source of truth.
+- Er wordt geen legacy-rommel naar deze repository gekopieerd.
+- Geen getekende contracten, vertrouwelijke clientbestanden of private commerciële data.
+- Geen dubbele mappen, willekeurige exports of ongecontroleerde archiefdumps.
+- Geen `final_final`-naamgeving. Gebruik version control en gedateerde beslissingen.
+- Drive mag als referentie worden gebruikt, maar GitHub blijft de schone operationele source of truth.
 
-## How to update this OS
+## Hoe dit OS wordt bijgewerkt
 
-1. Propose workflow changes in a branch.
-2. Update the relevant SOP or playbook.
-3. Keep tooling boundaries clear.
-4. Commit with a descriptive message.
-5. Merge only after review by the process owner.
+1. Stel Workflow-wijzigingen voor in een branch.
+2. Werk de relevante SOP of Playbook bij.
+3. Houd toolgrenzen duidelijk.
+4. Commit met een beschrijvend bericht.
+5. Merge pas na review door de process owner.

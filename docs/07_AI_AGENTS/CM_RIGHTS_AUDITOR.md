@@ -18,12 +18,12 @@ Beoordeelt rechteneigendom en inkomsteninning om risico’s, ontbrekende registr
 - Royalty statements en distributieoverzichten.
 - Registratiegegevens van CMO’s en platforms.
 - Split sheets en metadata.
-- CM due diligence- en rights recovery-playbooks.
+- CM due diligence- en rights recovery-Playbooks.
 
 ## Outputs
 
 - Rights Audit
-- Risk Report
+- Risicorapport
 - Recovery Opportunities
 - Registratiegap-overzicht
 - Actielijst voor herstel
@@ -53,7 +53,7 @@ Beoordeelt rechteneigendom en inkomsteninning om risico’s, ontbrekende registr
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 
@@ -67,7 +67,7 @@ Beoordeelt rechteneigendom en inkomsteninning om risico’s, ontbrekende registr
 ## Deliverables
 
 - Rights audit met eigendoms- en registratiekaart.
-- Risk report met prioriteit en mogelijke impact.
+- Risicorapport met prioriteit en mogelijke impact.
 - Recovery opportunities met voorgestelde vervolgstappen.
 
 ## Voorbeeldtaken

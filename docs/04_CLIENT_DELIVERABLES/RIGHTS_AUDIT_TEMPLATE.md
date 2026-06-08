@@ -1,6 +1,6 @@
 # RIGHTS AUDIT TEMPLATE
 
-## 1. DOCUMENT INFO
+## 1. DOCUMENTINFORMATIE
 
 | Veld | Informatie |
 | --- | --- |
@@ -33,13 +33,13 @@ De audit behandelt master ownership, publishing splits, producerrechten, neighbo
 - Rights Control Summary met go, conditional go of no-go voor commerciële exploitatie.
 - Track-by-track rights matrix met master, publishing, neighbouring rights, content en registratie status.
 - Revenue Leakage Overview met ontbrekende registraties, foutieve splits, niet-geclaimde inkomsten en statement gaps.
-- Risk Register met prioriteit, impact, eigenaar, deadline en vereiste approval.
+- Risicoregister met prioriteit, impact, eigenaar, deadline en vereiste approval.
 - Cleanup Roadmap voor 30, 60 en 90 dagen als input voor Artist Roadmap, Release Strategy of Management Proposal.
 - Sync & Partnership Readiness Statement voor repertoire dat veilig gepitcht mag worden.
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
 **Hoofdconclusie rechtenpositie**
 Beschrijf in maximaal één pagina of het repertoire exploitatieklaar is. Benoem expliciet of masters controleerbaar zijn, of publishing splits bevestigd zijn, of neighbouring rights worden geïnd, of contracten commerciële restricties bevatten en of er repertoire is dat niet gebruikt mag worden voor release, sync, brand partnerships of catalogusdeals totdat bewijs is aangeleverd.
@@ -99,7 +99,7 @@ De rights audit eindigt altijd met één van drie besluiten: **Go** wanneer rech
 | 1. Intake | Repertoire, contractarchief, portaltoegang en teamrollen verzamelen | CM rights lead + client | Intake completeness check |
 | 2. Mapping | Alle tracks, composities, recordings, versies, features en assets koppelen | CM rights lead | Repertoire universe |
 | 3. Verification | Contracten, statements en registraties vergelijken met claims uit gesprekken | CM + team + externe partijen | Evidence log |
-| 4. Risk classification | Iedere track en deal labelen als groen, oranje, rood of geblokkeerd | CM rights lead | Risk register |
+| 4. Risk classification | Iedere track en deal labelen als groen, oranje, rood of geblokkeerd | CM rights lead | Risicoregister |
 | 5. Revenue review | Collection routes en statements naast bankontvangsten leggen | CM business consultant | Revenue leakage overview |
 | 6. Cleanup planning | Acties prioriteren op commerciële impact en juridische urgentie | CM + client | 30/60/90 cleanup roadmap |
 | 7. Approval | Client, manager, legal counsel en rechthebbenden laten bevestigen | Client owner | Approved rights position |
@@ -119,7 +119,7 @@ De rights audit eindigt altijd met één van drie besluiten: **Go** wanneer rech
 
 ---
 
-## 6. Risk Assessment
+## 6. Risicobeoordeling
 
 | Risico | Impact op artiest | Impact op CM-advies | Mitigatie |
 | --- | --- | --- | --- |
@@ -127,13 +127,13 @@ De rights audit eindigt altijd met één van drie besluiten: **Go** wanneer rech
 | Onduidelijke master ownership | Takedown, claims, dealbreuk of verlies van inkomsten | No-go voor catalogusmonetisatie | Ownership chain reconstrueren en laten tekenen |
 | Niet-geclearde samples | Release takedown, schadeclaim, sync-afwijzing | Track uitgesloten van strategie | Sample clearance of alternatieve productie |
 | Verkeerde registraties | Inkomstenlek en vertraagde statements | Cleanup vóór revenue forecast | Registraties corrigeren bij PRO/CMO/distributor |
-| Dubbele teamclaims | Conflict over approvals en inkomsten | Management proposal alleen onder voorwaarden | Mandaten en rollen schriftelijk vastleggen |
+| Dubbele teamclaims | Conflict over approvals en inkomsten | Management Proposal alleen onder voorwaarden | Mandaten en rollen schriftelijk vastleggen |
 | Recoupment onduidelijk | Onjuiste cashflowverwachting | Geen business forecast zonder statement review | Recoupment schedule opvragen en controleren |
-| Contentrechten beperkt | Brand partnership of campagne kan niet worden gebruikt | Creatieve assets niet inzetten buiten scope | Creator agreements uitbreiden |
+| Contentrechten beperkt | Brand partnership of campagne kan niet worden gebruikt | Creatieve assets niet inzetten buiten Scope | Creator agreements uitbreiden |
 
 ---
 
-## 7. Recommendations
+## 7. Aanbevelingen
 
 1. Bouw één centrale rights data room met contracten, split sheets, ISRC/ISWC, registraties, statements, approvals en assetlicenties.
 2. Voer vóór iedere release een pre-release rights gate uit: master, publishing, neighbouring rights, samples, metadata, artwork, video en marketing usage.
@@ -177,7 +177,7 @@ De rights audit eindigt altijd met één van drie besluiten: **Go** wanneer rech
 
 ---
 
-## 9. Approval Requirements
+## 9. Approval-vereisten
 
 | Approval | Wanneer verplicht | Approver |
 | --- | --- | --- |
@@ -186,7 +186,7 @@ De rights audit eindigt altijd met één van drie besluiten: **Go** wanneer rech
 | Legal approval | Bij ownership disputes, sample clearance, dealbeëindiging, exclusiviteit, options of overdracht | Entertainmentadvocaat |
 | Publisher approval | Bij sync, compositiewijzigingen of publishingregistratiecorrecties | Publisher / writers |
 | Label/distributor approval | Bij takedowns, territory changes, releases, sync master consent of statementdisputes | Label / distributor |
-| CM approval | Voor vervolg naar release strategy, management proposal of partnership pitch | CM lead + rights lead |
+| CM approval | Voor vervolg naar release strategy, management Proposal of partnership pitch | CM lead + rights lead |
 
 ---
 

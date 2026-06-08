@@ -1,44 +1,44 @@
 # Sync Licensing
 
-## OVERVIEW
+## Overzicht
 
 Sync licensing is het koppelen van muziek aan beeld: film, serie, reclame, game, trailer, online video of social campagne. Meestal zijn master clearance en publishing clearance nodig.
 
-## WHY IT MATTERS
+## Waarom dit belangrijk is
 
 Sync kan hoge fees, exposure en catalogwaarde opleveren, maar ook reputatierisico. Een fout geclearde sync kan leiden tot takedowns, claims of buyer concerns in een catalog sale.
 
-## HOW CM USES IT
+## Hoe CM dit gebruikt
 
 CM beoordeelt sync-aanvragen op brand fit, fee, usage, media, term, territory, exclusiviteit, edit rights, most-favoured-nations en benodigde approvals. CM legt master en publishing clearance apart vast.
 
-## KEY TERMS
+## Kernbegrippen
 
 - **Sync fee:** Vergoeding voor gebruik van muziek bij beeld.
 - **MFN:** Partijen krijgen gelijke financiële voorwaarden.
 - **Media buy:** Betaalde verspreiding; verhoogt waarde en risico.
 - **Clearance:** Toestemming van alle relevante rechthebbenden.
 
-## COMMON MISTAKES
+## Veelgemaakte fouten
 
 - Alleen de master owner om toestemming vragen.
 - Online usage te vaag omschrijven.
 - Geen approval voor lyric change of edit.
 - Gratis sync accepteren voor “exposure” zonder strategie.
 
-## RED FLAGS
+## Red flags
 
 - Politieke, alcohol-, gok- of gevoelige brand zonder artist approval.
 - All media in perpetuity voor lage fee.
 - Geen cue sheet verplichting.
 - Onbekende co-writer blokkeert publishing clearance.
 
-## EXAMPLES
+## Voorbeelden
 
 - Een 30 seconden social ad voor 3 maanden Benelux is anders geprijsd dan worldwide TV en online voor 2 jaar.
 - Bij een cover is nieuwe master clearance nodig, maar compositie-clearance blijft vereist.
 
-## CHECKLIST
+## Checklist
 
 - [ ] Identificeer master en publishing owners.
 - [ ] Vraag storyboard/brand/context op.
@@ -46,7 +46,7 @@ CM beoordeelt sync-aanvragen op brand fit, fee, usage, media, term, territory, e
 - [ ] Leg fee en MFN vast.
 - [ ] Bewaar approvals en final agreement.
 
-## RELATED
+## Gerelateerd
 
 - [LICENSING](LICENSING.md)
 - [MASTER_RIGHTS](MASTER_RIGHTS.md)

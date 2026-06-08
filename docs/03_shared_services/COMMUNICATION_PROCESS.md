@@ -1,24 +1,26 @@
 # Communication Process
 
-## Purpose
+## Doel
 
-Ensure communication is clear, documented and routed through the correct system.
+Zorg dat communicatie duidelijk, gedocumenteerd en via het juiste systeem verloopt.
 
-## Channel rules
+## Kanaalregels
 
-- Use Gmail for formal external correspondence.
-- Use ClickUp comments for task-specific execution updates.
-- Use Drive comments only for file-specific review.
-- Confirm material approvals in writing.
-- Escalate urgent blockers with a clear ask, owner and deadline.
+- Gebruik Gmail voor formele externe correspondentie.
+- Gebruik ClickUp-comments voor taakgerichte execution updates.
+- Gebruik Google Drive-comments alleen voor file-specific review.
+- Bevestig materiële approvals schriftelijk.
+- Leg calls en meetings vast met decisions, owners en deadlines.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

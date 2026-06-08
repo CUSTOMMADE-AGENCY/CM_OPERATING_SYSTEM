@@ -1,6 +1,6 @@
 # RELEASE STRATEGY TEMPLATE
 
-## 1. DOCUMENT INFO
+## 1. DOCUMENTINFORMATIE
 
 | Veld | Informatie |
 | --- | --- |
@@ -17,7 +17,7 @@
 Deze release strategy vertaalt de Artist Audit, Business Audit, Rights Audit en Artist Roadmap naar een uitvoerbare campagne die artistieke positionering, rechtencontrole, commerciële kansen en operationele planning samenbrengt. Het document bepaalt niet alleen wanneer muziek uitkomt, maar waarom deze release nu moet bestaan, welk publiek geactiveerd wordt, welke inkomstenstromen worden gebouwd en welke teamacties nodig zijn om momentum meetbaar te maken.
 
 **Scope**
-De strategie omvat releasekeuze, repertoirevolgorde, narratief, doelgroep, DSP, socials, content, PR, radio, live, partnerships, sync, publishing, budget, rechten-gates, teamworkflow, approvals, risico’s en maandelijkse rapportage. Productie van muziek, juridische contractonderhandeling, boekhouding en volledige tourplanning vallen buiten scope tenzij apart in de management- of projectmanagementopdracht opgenomen.
+De strategie omvat releasekeuze, repertoirevolgorde, narratief, doelgroep, DSP, socials, content, PR, radio, live, partnerships, sync, publishing, budget, rechten-gates, teamWorkflow, approvals, risico’s en maandelijkse rapportage. Productie van muziek, juridische contractonderhandeling, boekhouding en volledige tourplanning vallen buiten Scope tenzij apart in de management- of projectmanagementopdracht opgenomen.
 
 **Inputs**
 
@@ -40,7 +40,7 @@ De strategie omvat releasekeuze, repertoirevolgorde, narratief, doelgroep, DSP, 
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
 **Release rationale**
 Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe artistieke fase openen, catalogus reactiveren, livevraag creëren, internationale lane testen, publisher/syncwaarde verhogen, labelinterest aantonen of managementmomentum bewijzen. De rationale moet direct gekoppeld zijn aan de Artist Roadmap en mag niet gebaseerd zijn op alleen “muziek uitbrengen omdat de track af is”.
@@ -66,7 +66,7 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ---
 
-## 3. STRATEGIC RELEASE FRAMEWORK
+## 3. STRATEGISCH RELEASE FRAMEWORK
 
 | Onderdeel | Strategische vraag | Beslissing |
 | --- | --- | --- |
@@ -98,14 +98,14 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ## 5. CHANNEL STRATEGY
 
-### DSP strategy
+### DSP-strategie
 
 - Positioneer de release met een scherpe pitchtekst die artist narrative, genre lane, cultural moment en concrete comparable usage beschrijft.
 - Lever metadata foutloos aan: credits, lyrics, genre, moods, explicit status, territories, release date, ISRC en artwork.
 - Maak onderscheid tussen editorial playlist pitch, algorithmic triggers, fan saves, pre-save, release radar en catalogusretentie.
 - Monitor saves, skip rate, playlist source, listener-to-follower conversion, repeat listens en territory shifts.
 
-### Content & social strategy
+### Content & social strategie
 
 - Bouw content rond drie vaste lagen: verhaal achter de track, bewijs van artistieke identiteit en fanparticipatie.
 - Gebruik short-form niet alleen als promo, maar als testomgeving voor hooks, lyrics, visual codes en audience segments.
@@ -126,7 +126,7 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ---
 
-## 6. COMMERCIAL OPPORTUNITIES
+## 6. COMMERCIËLE KANSEN
 
 | Kans | Voorwaarde | Actie |
 | --- | --- | --- |
@@ -139,7 +139,7 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ---
 
-## 7. Risk Assessment
+## 7. Risicobeoordeling
 
 | Risico | Signaal | Impact | Mitigatie |
 | --- | --- | --- | --- |
@@ -152,14 +152,14 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ---
 
-## 8. Recommendations
+## 8. Aanbevelingen
 
 1. Zet de release alleen door wanneer de Rights Audit groen of conditional groen is voor de gekozen assets.
 2. Formuleer één release sentence die elke pitch, caption, visual en salesgesprek draagt.
 3. Kies maximaal drie primaire kanalen; ondersteunende kanalen volgen het verhaal en krijgen geen eigen losse strategie.
 4. Maak de eerste 14 dagen na release operationeel zwaarder dan de week vóór release; daar ontstaan de belangrijkste learnings.
 5. Koppel iedere commerciële kans aan een eigenaar: sync, publishing, live, brand, DSP, content en PR.
-6. Gebruik de release als bewijsinstrument voor de volgende stap: roadmap update, management proposal, partnershipdeck of catalogusstrategie.
+6. Gebruik de release als bewijsinstrument voor de volgende stap: roadmap update, management Proposal, partnershipdeck of catalogusstrategie.
 
 ---
 
@@ -175,7 +175,7 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 - Budget, owners, deadlines en escalation route zijn vastgelegd.
 - KPI dashboard en reportingmomenten zijn ingericht.
 
-### Release week checklist
+### Release-week checklist
 
 - DSP links, credits en artwork gecontroleerd op releasedag.
 - Social posts, stories, reels, shorts en community updates gepubliceerd volgens campaign calendar.
@@ -193,7 +193,7 @@ Beschrijf welke strategische functie de release heeft: fanbase opbouwen, nieuwe 
 
 ---
 
-## 10. Approval Requirements
+## 10. Approval-vereisten
 
 | Approval | Vereist voor | Approver |
 | --- | --- | --- |

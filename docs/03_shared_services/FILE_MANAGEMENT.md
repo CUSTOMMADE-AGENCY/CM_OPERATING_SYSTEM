@@ -1,24 +1,26 @@
 # File Management
 
-## Purpose
+## Doel
 
-Keep files in the correct system and prevent uncontrolled duplication.
+Houd bestanden in het juiste systeem en voorkom ongecontroleerde duplicatie.
 
-## Rules
+## Regels
 
-- GitHub stores process documents only.
-- Drive stores client files, signed documents and deliverables.
-- ClickUp stores task evidence and links.
-- Gmail stores correspondence.
-- Do not download and recommit exports unless they are transformed into clean documentation.
+- GitHub bewaart alleen procesdocumenten.
+- Google Drive bewaart clientbestanden, getekende documenten en deliverables.
+- ClickUp bewaart taakbewijs en links.
+- Gmail bewaart correspondentie.
+- Verplaats vertrouwelijke data nooit naar deze repository.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Opslag- en toolgrenzen
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

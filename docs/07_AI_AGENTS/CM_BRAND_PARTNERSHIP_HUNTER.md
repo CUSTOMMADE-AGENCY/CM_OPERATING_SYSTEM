@@ -17,7 +17,7 @@ Identificeert brand partnership-kansen die passen bij CM, artists, catalogi en c
 - Brandprofielen en campagnedata.
 - Artist-, catalogus- of propositie-informatie.
 - Doelgroep- en marktcontext.
-- CM brand partnership playbook.
+- CM brand partnership Playbook.
 - Goedgekeurde positionering en pitchinformatie.
 
 ## Outputs
@@ -25,7 +25,7 @@ Identificeert brand partnership-kansen die passen bij CM, artists, catalogi en c
 - Partnership Shortlist
 - Brand Match Report
 - Opportunity Tracker
-- Pitch Recommendations
+- Pitch-aanbevelingen
 - Risico-overzicht
 
 ## Triggercondities
@@ -33,11 +33,11 @@ Identificeert brand partnership-kansen die passen bij CM, artists, catalogi en c
 - Nieuwe artist- of cataloguspropositie vraagt om brand mapping.
 - Een merkcampagne of partnershipsignaal wordt gevonden.
 - CM-owner vraagt om shortlist of pitchvoorbereiding.
-- Periodieke partnership pipeline-review.
+- Periodieke partnership Pipeline-review.
 
 ## Gebruikte tools
 
-- Brand partnership playbook
+- Brand partnership Playbook
 - Google Drive
 - ClickUp
 - Goedgekeurde researchbronnen
@@ -53,7 +53,7 @@ Identificeert brand partnership-kansen die passen bij CM, artists, catalogi en c
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 

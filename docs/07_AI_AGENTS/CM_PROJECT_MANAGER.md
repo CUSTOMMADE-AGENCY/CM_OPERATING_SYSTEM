@@ -14,24 +14,24 @@ Coördineert projecten en deadlines door planning, resources en afhankelijkheden
 
 ## Inputs
 
-- Projectbrief en scope.
+- Projectbrief en Scope.
 - Taken, deadlines en owners.
 - Resourcebeschikbaarheid en afhankelijkheden.
 - Meetingnotities en besluitvorming.
-- CM project- en workflowstandaarden.
+- CM project- en Workflowstandaarden.
 
 ## Outputs
 
 - Project Status Reports
 - Timeline Updates
 - Dependency Register
-- Risk Notes
+- Risiconotities
 - Decision Log
 
 ## Triggercondities
 
 - Nieuw project wordt gestart.
-- Deadline, scope of resourceplanning wijzigt.
+- Deadline, Scope of resourceplanning wijzigt.
 - Projectstatusreview staat gepland.
 - Blokkade of afhankelijkheid bedreigt levering.
 
@@ -53,7 +53,7 @@ Coördineert projecten en deadlines door planning, resources en afhankelijkheden
 ## Kwaliteitscontrole
 
 - Controleer input op volledigheid, actualiteit en bronvermelding.
-- Gebruik alleen goedgekeurde CM-workflows, playbooks, templates en systemen.
+- Gebruik alleen goedgekeurde CM-Workflows, Playbooks, templates en systemen.
 - Markeer aannames expliciet en scheid feiten van aanbevelingen.
 - Laat output reviewen door een mens voordat deze operationeel of extern wordt gebruikt.
 
@@ -73,5 +73,5 @@ Coördineert projecten en deadlines door planning, resources en afhankelijkheden
 ## Voorbeeldtaken
 
 - Maak een projectstatus voor een lopende campagne.
-- Identificeer afhankelijkheden in een onboardingproject.
+- Identificeer afhankelijkheden in een Onboardingproject.
 - Bereid een risicoupdate voor de CM-owner voor.

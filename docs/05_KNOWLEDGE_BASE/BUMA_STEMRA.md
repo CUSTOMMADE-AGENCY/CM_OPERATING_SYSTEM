@@ -1,44 +1,44 @@
 # Buma/Stemra
 
-## OVERVIEW
+## Overzicht
 
 Buma/Stemra is in Nederland de collectieve organisatie voor auteurs en publishers rond openbaarmaking en mechanische reproductie van composities. Praktisch is het de plek waar werken, writers, publishers en splits correct geregistreerd moeten zijn om inkomsten te ontvangen.
 
-## WHY IT MATTERS
+## Waarom dit belangrijk is
 
 Foutieve of late registraties veroorzaken gemiste inkomsten, unmatched royalties en conflict bij catalog verkoop. Voor CM is Buma/Stemra-data een controlemiddel voor publishing ownership, niet automatisch bewijs dat alles juridisch klopt.
 
-## HOW CM USES IT
+## Hoe CM dit gebruikt
 
 CM controleert Buma/Stemra-registraties tegen split sheets, publishing deals en statements. Bij audits maakt CM een issue list voor missing works, verkeerde shares, dubbele titels en ontbrekende publisher gegevens.
 
-## KEY TERMS
+## Kernbegrippen
 
 - **Buma:** Inning rond openbaarmaking/performance.
 - **Stemra:** Inning rond mechanische reproductie.
 - **Work registration:** Registratie van compositie en splits.
 - **IPI/CAE:** Unieke maker/publisher identificatie.
 
-## COMMON MISTAKES
+## Veelgemaakte fouten
 
 - Registratie zien als vervanging voor een split sheet.
 - Tracks pas registreren nadat inkomsten binnenkomen.
 - Verkeerde titelvarianten niet matchen.
 - Publisher share invullen zonder publishing deal.
 
-## RED FLAGS
+## Red flags
 
 - Werk staat niet geregistreerd.
 - Split wijkt af van signed split sheet.
 - Co-writer ontbreekt.
 - Conflicterende publisher claim.
 
-## EXAMPLES
+## Voorbeelden
 
 - Een release staat live maar work registration ontbreekt; CM zet dit in de release checklist vóór marketing spend.
 - Bij diligence vergelijkt CM Buma/Stemra statements met claimed ownership.
 
-## CHECKLIST
+## Checklist
 
 - [ ] Vraag leden-/publishergegevens op.
 - [ ] Match werken met ISWC/titel/writers.
@@ -46,7 +46,7 @@ CM controleert Buma/Stemra-registraties tegen split sheets, publishing deals en 
 - [ ] Flag unmatched of suspended income.
 - [ ] Documenteer correctieverzoeken.
 
-## RELATED
+## Gerelateerd
 
 - [PUBLISHING_RIGHTS](PUBLISHING_RIGHTS.md)
 - [SPLIT_SHEETS](SPLIT_SHEETS.md)

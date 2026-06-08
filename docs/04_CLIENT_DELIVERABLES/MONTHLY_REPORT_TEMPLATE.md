@@ -1,6 +1,6 @@
 # MONTHLY REPORT TEMPLATE
 
-## 1. DOCUMENT INFO
+## 1. DOCUMENTINFORMATIE
 
 | Veld | Informatie |
 | --- | --- |
@@ -23,9 +23,9 @@ Het rapport behandelt voortgang op roadmap, releasecampagnes, rechtenacties, rev
 
 - Artist Roadmap: kwartaaldoelen, prioriteiten, KPI’s en mijlpalen.
 - Release Strategy: campaign timeline, KPI framework, channel owners en learnings.
-- Management Proposal: scope, deliverables, fee model, responsibilities en approvalmatrix.
+- Management Proposal: Scope, deliverables, fee model, responsibilities en approvalmatrix.
 - Rights Audit: open rights actions, collection gaps, blocked repertoire en approvals.
-- Data: DSP analytics, social analytics, YouTube, ticketing, merch, mailinglist, royalty statements, partnership pipeline, sync leads, PR/radio updates en budgetoverzicht.
+- Data: DSP analytics, social analytics, YouTube, ticketing, merch, mailinglist, royalty statements, partnership Pipeline, sync leads, PR/radio updates en budgetoverzicht.
 - Team updates: completed actions, blockers, approvals, decisions, supplier output en clientfeedback.
 
 **Deliverables**
@@ -34,13 +34,13 @@ Het rapport behandelt voortgang op roadmap, releasecampagnes, rechtenacties, rev
 - KPI dashboard met interpretatie, niet alleen cijfers.
 - Roadmap progress update per prioriteit.
 - Release, rights, revenue en opportunity updates.
-- Risk register met mitigation en eigenaar.
+- Risicoregister met mitigation en eigenaar.
 - Next-month action plan met approvals en deadlines.
-- Version-controlled record voor kwartaalreview, renewal, close-out of upsell.
+- Version-controlled record voor kwartaalreview, renewal, close-out of Upsell.
 
 ---
 
-## 2. EXECUTIVE SUMMARY
+## 2. MANAGEMENTSAMENVATTING
 
 **Maandconclusie**
 Vat in 6-10 zinnen samen of de artiest deze maand dichter bij de strategische doelen is gekomen. Benoem concrete vooruitgang, commerciële signalen, fanrespons, rights cleanup, release performance, teamdiscipline en risico’s. Vermijd vanity reporting: een stijging in views is alleen relevant wanneer duidelijk is wat dit betekent voor fan conversion, revenue, partners, livevraag of artist positioning.
@@ -53,7 +53,7 @@ Vat in 6-10 zinnen samen of de artiest deze maand dichter bij de strategische do
 | Belangrijkste win | Een meetbare of strategisch relevante prestatie met bewijsbron |
 | Belangrijkste blokkade | Rechten, budget, teamcapaciteit, content, timing, deal of marktrespons |
 | Grootste commerciële kans | Release, live, sync, brand, publishing, catalogus, direct-to-fan of partnership |
-| Beslissing nodig | Concrete approval, budgetkeuze, scopewijziging, releasebesluit of dealrichting |
+| Beslissing nodig | Concrete approval, budgetkeuze, Scopewijziging, releasebesluit of dealrichting |
 | CM advies | Doorgaan, bijsturen, vertragen, opschalen, cleanup eerst of no-go op specifieke actie |
 
 ---
@@ -65,9 +65,9 @@ Vat in 6-10 zinnen samen of de artiest deze maand dichter bij de strategische do
 | Artist development | Positionering, contentkwaliteit, fanrespons, livekwaliteit en consistentie | Laat zien of de artiest sterker en herkenbaarder wordt | Roadmap bijsturen of verdiepen |
 | Releases | Streams, saves, playlisting, skip/retentie, socials, PR, radio en audience source | Meet releasefunctie en campagne-effect | Volgende release, remix, content sprint of budgetkeuze |
 | Rights management | Open splits, registrations, statements, claims, Content ID en approvals | Voorkomt inkomstenlek en exploitatieblokkades | Cleanup prioriteit of legal escalation |
-| Revenue streams | Streaming, publishing, neighbouring rights, live, merch, sync, brand en direct-to-fan | Toont waar businesswaarde ontstaat | Investeren, stoppen of pipeline bouwen |
+| Inkomstenstromen | Streaming, publishing, neighbouring rights, live, merch, sync, brand en direct-to-fan | Toont waar businesswaarde ontstaat | Investeren, stoppen of Pipeline bouwen |
 | Partnerships & sync | Leads, pitches, responses, terms, usage fit en next steps | Bouwt commerciële opportunities buiten DSP | Outreach vervolgen, herpositioneren of afwijzen |
-| Team operation | Deadlines, owners, response times, meeting outcomes en blockers | Bepaalt managementkwaliteit | Rollen wijzigen, scope aanpassen of escaleren |
+| Team operation | Deadlines, owners, response times, meeting outcomes en blockers | Bepaalt managementkwaliteit | Rollen wijzigen, Scope aanpassen of escaleren |
 | Risk | Juridisch, financieel, reputatie, timing, rights en teamconflict | Beschermt artiest en CM | Mitigatie, approval of no-go |
 
 ---
@@ -76,16 +76,16 @@ Vat in 6-10 zinnen samen of de artiest deze maand dichter bij de strategische do
 
 | Fase | Timing | Acties | Output |
 | --- | --- | --- | --- |
-| Data collection | Laatste 3 werkdagen van maand | Analytics, statements, pipeline, teamupdates en budgetsignalen verzamelen | Data pack |
+| Data collection | Laatste 3 werkdagen van maand | Analytics, statements, Pipeline, teamupdates en budgetsignalen verzamelen | Data pack |
 | Internal analysis | Dag 1-3 nieuwe maand | Signalen interpreteren, risico’s classificeren en acties toetsen aan roadmap | Internal report draft |
 | Client review | Dag 4-7 | Rapport bespreken, vragen verwerken en decisions formuleren | Client review version |
 | Approval | Binnen 10 dagen | Next-month actions, budget, approvals en owners vastleggen | Approved monthly report |
 | Execution handover | Direct na approval | Taken in planning/projectsystem zetten en owners briefen | Next-month action tracker |
-| Quarter review | Elke derde maand | Trends, scope, budget, roadmap en managementwaarde evalueren | Quarter strategy update |
+| Quarter review | Elke derde maand | Trends, Scope, budget, roadmap en managementwaarde evalueren | Quarter strategy update |
 
 ---
 
-## 5. KPI DASHBOARD
+## 5. KPI Dashboard
 
 | KPI-categorie | Indicatoren | Interpretatie |
 | --- | --- | --- |
@@ -94,15 +94,15 @@ Vat in 6-10 zinnen samen of de artiest deze maand dichter bij de strategische do
 | Content performance | Format winnaars, retention, share rate, sentiment, CTA-conversie en fanparticipatie | Welke verhalen en formats publiek activeren |
 | Revenue | Distributor income, publishing, neighbouring rights, live fees, merch, sync/brand invoices en outstanding payments | Welke businesslijnen werkelijk waarde leveren |
 | Rights health | Cleared tracks, open splits, registrations corrected, claims closed, blocked works | Of exploitatie veiliger wordt |
-| Opportunity pipeline | New leads, warm leads, proposals sent, negotiations, closed deals en declined opportunities | Commerciële tractie buiten releases |
-| Operational health | Completed actions, late actions, approval speed, unresolved blockers en scope creep | Of het team professioneel kan opschalen |
+| Opportunity Pipeline | New leads, warm leads, Proposals sent, negotiations, closed deals en declined opportunities | Commerciële tractie buiten releases |
+| Operational health | Completed actions, late actions, approval speed, unresolved blockers en Scope creep | Of het team professioneel kan opschalen |
 
 **Reportingregel**
 Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboard zonder beslissing is geen managementrapport maar administratie.
 
 ---
 
-## 6. MONTHLY UPDATES
+## 6. MAANDELIJKSE UPDATES
 
 ### Artist development
 
@@ -110,7 +110,7 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 - Benoem welke fan- of marktsignalen de positionering bevestigen of tegenspreken.
 - Koppel artistieke learnings aan roadmapkeuzes voor repertoire, visuals, live, partners of media.
 
-### Release strategy
+### Release Strategie
 
 - Rapporteer status van lopende en komende releases: rights gate, assets, delivery, content, PR, DSP, radio en post-release growth.
 - Benoem welke hypotheses uit de release strategy zijn bewezen, verzwakt of nog niet meetbaar.
@@ -122,7 +122,7 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 - Markeer repertoire als Pitch Ready, Release Ready, Cleanup Required of Blocked.
 - Escaleer iedere rights issue die commerciële exploitatie, sync, brand usage of revenue collection belemmert.
 
-### Revenue streams
+### Inkomstenstromen
 
 - Verdeel inkomsten en signalen over streaming, publishing, neighbouring rights, live, merch, sync, brand, direct-to-fan en catalogus.
 - Benoem niet alleen ontvangen geld, maar ook expected revenue, outstanding payments, registration delays en unpaid claims.
@@ -130,19 +130,19 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 
 ### Partnerships, sync & live
 
-- Toon pipeline status: approached, warm, proposal sent, negotiation, won, lost of paused.
+- Toon Pipeline status: approached, warm, Proposal sent, negotiation, won, lost of paused.
 - Beoordeel fit met artist positioning, rechtenstatus, fee, usage, reputatierisico en effort.
 - Bepaal welke partners, supervisors, brands, bookers of media opnieuw worden benaderd.
 
 ### Team & management
 
-- Rapporteer completed actions, late actions, blockers, scope creep, approvals en communicatiekwaliteit.
+- Rapporteer completed actions, late actions, blockers, Scope creep, approvals en communicatiekwaliteit.
 - Benoem of de huidige teamstructuur past bij de ambities voor de komende maand.
-- Adviseer eventuele rolwijziging, leverancier, extra budget of scope-aanpassing.
+- Adviseer eventuele rolwijziging, leverancier, extra budget of Scope-aanpassing.
 
 ---
 
-## 7. Risk Assessment
+## 7. Risicobeoordeling
 
 | Risico | Status | Impact | Eigenaar | Actie komende maand |
 | --- | --- | --- | --- | --- |
@@ -150,12 +150,12 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 | Release delay | Planning, assets, delivery of approvals lopen achter | Momentum en budget | Campaign owner | Timeline aanpassen of go/no-go beslissen |
 | Revenue leakage | Registratie, statement of invoice ontbreekt | Cashflow en waardebepaling | Business owner | Claim indienen of statement reconciliëren |
 | Partnership mismatch | Deal past niet bij artist identity of rights usage | Merkverwatering of contractconflict | CM lead | Afwijzen of voorwaarden heronderhandelen |
-| Team capacity | Deadlines worden structureel gemist | Execution quality | Management lead | Rollen herverdelen of scope beperken |
+| Team capacity | Deadlines worden structureel gemist | Execution quality | Management lead | Rollen herverdelen of Scope beperken |
 | Budget pressure | Kosten lopen voor op waarde of cashflow | Financiële druk | Client owner | Budget freeze, prioritering of extra approval |
 
 ---
 
-## 8. Recommendations
+## 8. Aanbevelingen
 
 1. Kies voor de volgende maand maximaal vijf prioriteiten die direct voortkomen uit roadmap, release strategy en open risks.
 2. Sluit rights issues vóór nieuwe commerciële pitches worden verstuurd.
@@ -175,8 +175,8 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 - PR, radio, playlist, creator en community updates toegevoegd.
 - Rights action log bijgewerkt.
 - Revenue, invoices, outstanding payments en expected income genoteerd.
-- Partnership, sync, live en brand pipeline bijgewerkt.
-- Budget en scope creep signalen beoordeeld.
+- Partnership, sync, live en brand Pipeline bijgewerkt.
+- Budget en Scope creep signalen beoordeeld.
 
 ### Decision checklist
 
@@ -187,7 +187,7 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 - Rights of legal blockers zijn niet genegeerd in commerciële planning.
 - Client heeft akkoord gegeven op next-month action plan.
 
-### Close-out checklist
+### Close-Out checklist
 
 - Final report opgeslagen in client data room.
 - Acties overgezet naar projectplanning.
@@ -197,7 +197,7 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 
 ---
 
-## 10. Approval Requirements
+## 10. Approval-vereisten
 
 | Approval | Wanneer vereist | Approver |
 | --- | --- | --- |
@@ -205,8 +205,8 @@ Cijfers worden altijd gekoppeld aan een interpretatie en een actie. Een dashboar
 | Budget approval | Voor extra spend, leveranciers, paid media, legal of travel | Client business owner |
 | Release approval | Voor go/no-go, datumwijziging, contentwijziging of campagne-escalatie | Artiest + campaign owner |
 | Rights approval | Voor gebruik van repertoire in release, sync, brand, content of takedown | Rights lead + rechthebbenden |
-| Deal approval | Voor partnership, sync, brand, live of label/publishing proposal | Artiest + CM management lead + legal waar nodig |
-| Scope approval | Voor werk buiten bestaande management- of projectscope | Client + CM lead |
+| Deal approval | Voor partnership, sync, brand, live of label/publishing Proposal | Artiest + CM management lead + legal waar nodig |
+| Scope approval | Voor werk buiten bestaande management- of projectScope | Client + CM lead |
 
 ---
 

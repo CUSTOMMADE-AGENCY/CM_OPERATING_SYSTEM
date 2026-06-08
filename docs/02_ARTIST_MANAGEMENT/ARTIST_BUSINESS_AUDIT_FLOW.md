@@ -1,30 +1,37 @@
 # Artist Business Audit Flow
 
-## Purpose
+## Doel
 
-Assess the artist's business foundation before roadmap, retainer or release strategy decisions.
+Beoordeel de business foundation van de artist voordat roadmap-, retainer- of Release Strategie-beslissingen worden genomen.
 
-## Review areas
+## Reviewgebieden
 
-- Rights ownership and splits.
-- Distribution, label, publishing and management agreements.
-- Royalty collection and reporting.
-- Entity, invoicing and payment setup.
-- Team roles and communication structure.
-- Release history and monetization.
-- Open risks or missing documentation.
+- Rights ownership en splits.
+- Distribution-, label-, publishing- en management agreements.
+- Royalty collection en reporting.
+- Entity, invoicing en payment setup.
+- Teamrollen, approvals en bestaande verplichtingen.
+- Contractuele risico’s en commerciële kansen.
 
 ## Output
 
-Business audit memo with risk ranking, immediate fixes and roadmap implications.
+Business Audit-memo met risicorangschikking, directe fixes en roadmap-implicaties.
 
-## Storage and tooling boundaries
-- GitHub stores this workflow, governance, SOP and system documentation.
-- Google Drive stores live client folders, signed documents, deliverables and working files.
-- ClickUp stores execution, pipeline stages, owners, due dates and task evidence.
-- Gmail stores correspondence and approved communication templates.
+## Kwaliteitschecks
 
-## Repository hygiene
-- Do not commit signed contracts, confidential client files, exports, duplicate folders or ad hoc drafts.
-- Use clear version history through commits and pull requests instead of `final_final` filenames.
-- Keep client-specific details in the appropriate live workspace, not in this repository.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
+
+## Opslag- en toolgrenzen
+
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

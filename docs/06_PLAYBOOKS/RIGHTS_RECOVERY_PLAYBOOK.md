@@ -1,21 +1,21 @@
 # Rights Recovery Playbook
 
-## PURPOSE
+## Doel
 
-Dit playbook beschrijft hoe CM ontbrekende rechten, registraties, claims en royalties identificeert en herstelt. De focus ligt op bewijs, prioritering, claimroute, opvolging en collection impact.
+Dit Playbook beschrijft hoe CM ontbrekende rechten, registraties, claims en royalties identificeert en herstelt. De focus ligt op bewijs, prioritering, claimroute, opvolging en collection impact.
 
-## WHEN TO USE
+## Wanneer gebruiken
 
 - Wanneer royalties ontbreken, dalen of niet verklaarbaar zijn.
 - Wanneer works/recordings niet of fout geregistreerd zijn.
 - Wanneer splits, metadata, payors of territories niet kloppen.
 - Wanneer een client vermoedt dat inkomsten niet worden geïncasseerd.
 
-## OBJECTIVE
+## Doelstelling
 
 Missing income en rights issues vinden, documenteren, claimen en herstellen met een audit trail die betaling en toekomstige collectie ondersteunt.
 
-## INPUTS
+## Inputs
 
 - Royalty statements.
 - Metadata: ISRC, ISWC, IPI, titles, writers, splits.
@@ -25,7 +25,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Historical claims en correspondence.
 - Client repertoire list.
 
-## STAKEHOLDERS
+## Stakeholders
 
 - CM rights recovery lead.
 - Client.
@@ -34,7 +34,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Legal counsel bij disputes.
 - Accountant/royalty auditor indien nodig.
 
-## CM PROCESS
+## CM-proces
 
 - Identificeer eerst waar geld kan lekken: ontbrekende registratie, verkeerde splits, duplicate claims, unmatched works, territory gaps, payor errors of contract interpretation.
 - Prioriteer op waarde, bewijsbaarheid, deadline/verjaring en snelheid van herstel.
@@ -43,7 +43,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Controleer na correctie of betaling en toekomstige statements kloppen.
 - Rapporteer recovered amounts, pending claims en structurele fixes.
 
-## STEP BY STEP EXECUTION
+## Stap-voor-stap uitvoering
 
 1. Maak repertoire baseline met alle works/recordings en identifiers.
 2. Vergelijk metadata tegen dashboards van distributor, publisher/admin en PRO/CMO.
@@ -56,7 +56,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 9. Controleer eerstvolgende statement op correctie en retroactive payment.
 10. Sluit issue pas wanneer registratie, betaling of formele afwijzing is gedocumenteerd.
 
-## TOOLS USED
+## Gebruikte tools
 
 - Metadata sheet.
 - Royalty tracker.
@@ -65,7 +65,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - ClickUp issue log.
 - Gmail claim templates.
 
-## DELIVERABLES
+## Deliverables
 
 - Rights recovery audit.
 - Issue log.
@@ -74,7 +74,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Recovered royalty report.
 - Future prevention checklist.
 
-## KPIS
+## KPIs
 
 - Aantal geïdentificeerde issues.
 - Estimated versus recovered amount.
@@ -83,7 +83,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Registratie completeness.
 - Aantal terugkerende fouten per payor.
 
-## COMMON RISKS
+## Veelvoorkomende risico’s
 
 - Claim zonder bewijs wordt afgewezen.
 - Te veel kleine issues blokkeren grote claims.
@@ -91,7 +91,7 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Metadata inconsistent tussen systemen.
 - Client heeft geen split sheets.
 
-## RED FLAGS
+## Red flags
 
 - Verjaring/deadline dreigt.
 - Conflicterende ownership claims.
@@ -99,17 +99,17 @@ Missing income en rights issues vinden, documenteren, claimen en herstellen met 
 - Contract geeft ander recht dan client verwacht.
 - Grote inkomsten ontbreken over meerdere periodes.
 
-## QUALITY CONTROL
+## Kwaliteitscontrole
 
 - Controleer of het doel, de eigenaar, de deadline en de eerstvolgende actie expliciet zijn vastgelegd.
 - Verifieer dat alle externe communicatie aansluit op de goedgekeurde CM-positionering en geen onbevestigde claims bevat.
 - Leg bewijs vast in ClickUp: bronbestanden, beslissingen, verzonden e-mails, feedback, risico's en open punten.
-- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client scope geraakt wordt.
+- Escaleer zodra prijs, rechten, reputatie, juridische exposure of client Scope geraakt wordt.
 - Sluit geen stap af zonder deliverable, eigenaar en datum voor opvolging.
 
-## CHECKLIST
+## Checklist
 
-- [ ] Mandaat, scope en gewenste uitkomst bevestigd.
+- [ ] Mandaat, Scope en gewenste uitkomst bevestigd.
 - [ ] Inputs compleet of ontbrekende inputs als risico gelogd.
 - [ ] Stakeholders en beslissers geïdentificeerd.
 - [ ] Processtappen in ClickUp aangemaakt met eigenaar en deadline.
