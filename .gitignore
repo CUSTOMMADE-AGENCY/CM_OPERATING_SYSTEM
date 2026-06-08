@@ -1,0 +1,32 @@
+# Operating system noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+
+# Local/editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Do not commit client/confidential operational material
+signed-contracts/
+client-files/
+confidential/
+exports/
+random-exports/
