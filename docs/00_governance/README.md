@@ -6,6 +6,7 @@ This folder defines how the Custommade Agency operating system is structured, ma
 
 ## Governance index
 
+- `CM_OPERATING_MODEL.md` — executive overview and primary map of the complete CM operating system.
 - `DRIVE_STRUCTURE.md` — approved Google Drive structure and lane ownership.
 - `NAMING_CONVENTIONS.md` — file, folder and version naming standards.
 - `DOCUMENT_STANDARDS.md` — required sections and quality bar for SOPs/playbooks.
