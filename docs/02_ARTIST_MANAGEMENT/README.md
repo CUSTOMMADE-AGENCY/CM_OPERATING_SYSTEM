@@ -7,7 +7,7 @@ De Artist Management-lane omvat artist-clients, management, Brandbook, Release S
 
 ## Entrypoint
 
-Start met `02_ARTIST_MANAGEMENT_MAP.md` voor de volledige artist lifecycle, workflowvolgorde, SOP-koppeling, deliverables, ClickUp templates en documentstatus.
+Start met `00_ARTIST_MANAGEMENT_MAP.md` voor de actuele Artist Management-inventory, lifecycle, workflowvolgorde, SOP-koppeling, checklists, templates en ClickUp templates. `02_ARTIST_MANAGEMENT_MAP.md` blijft beschikbaar als legacy review- en documentstatusoverzicht.
 
 ## Client lifecycle
 
@@ -16,7 +16,7 @@ Lead intake → Fit Check → Brand Audit → Brandbook → Business Audit → s
 
 ## Execution layer
 
-De genummerde execution layer voor Artist Management bestaat uit:
+De stable links voor Artist Management staan in `00_ARTIST_MANAGEMENT_MAP.md`. De genummerde execution layer voor de inhoudelijke Workflows bestaat uit:
 
 - `01_ARTIST_ONBOARDING_FLOW.md`
 - `02_BRAND_AUDIT_FLOW.md`
