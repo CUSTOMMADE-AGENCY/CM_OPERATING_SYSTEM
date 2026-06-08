@@ -10,6 +10,7 @@ Deze map definieert hoe het Custommade Agency operating system is gestructureerd
 - `DRIVE_STRUCTURE.md` — goedgekeurde Google Drive-structuur en lane ownership.
 - `NAMING_CONVENTIONS.md` — standaarden voor bestands-, map- en versienaamgeving.
 - `DOCUMENT_STANDARDS.md` — vereiste secties en kwaliteitslat voor SOPs/Playbooks.
+- `TEMPLATE_DESIGN_STANDARD.md` — ontwerpstandaard voor CM templates als operationele tools.
 - `VERSION_CONTROL.md` — GitHub-werkwijze voor gecontroleerde wijzigingen.
 - `Workflow_DOCUMENTATION.md` — standaard voor het documenteren van Workflows.
 - `AS_BUILT_DOCUMENTATION.md` — vastlegging van hoe systemen daadwerkelijk zijn ingericht.
