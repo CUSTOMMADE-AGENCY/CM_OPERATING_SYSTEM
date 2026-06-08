@@ -17,7 +17,7 @@ Voor artist-clients, management, Brandbook, Release Strategie, Business Audit, a
 | Systeem | Source-of-truth rol |
 |---|---|
 | GitHub | Governance, Workflows, SOPs, Playbooks en as-built systeemdocumentatie |
-| Google Drive | Live clientmappen, getekende documenten, deliverables en operationele bestanden |
+| Google Drive | Operationele working environment onder `OS_CUSTOMMADE` voor live clientmappen, getekende documenten, deliverables, finance, legal, content en archieven |
 | ClickUp | Uitvoering, Pipeline, taakeigenaarschap, deadlines en taakgeschiedenis |
 | Gmail | Communicatietemplates en correspondentie |
 
@@ -29,7 +29,7 @@ Voor artist-clients, management, Brandbook, Release Strategie, Business Audit, a
 - `docs/03_shared_services/` — herbruikbare Onboarding, e-mail, Proposals, meetings en bestandsbeheer.
 - `docs/04_systems/` — Google Drive-, ClickUp-, Gmail-, AI-agent- en automatiseringsdocumentatie.
 - `docs/05_KNOWLEDGE_BASE/` — praktische muziekbusiness-kennisbank voor CM-teamleden, freelancers, stagiairs, toekomstige medewerkers en AI agents.
-- `scripts/google-drive/` — Google Apps Script-hulpmiddelen voor het aanmaken van de goedgekeurde Drive-mapstructuur.
+- `scripts/google-drive/` — Google Apps Script-hulpmiddelen voor het aanmaken van de goedgekeurde `OS_CUSTOMMADE` Drive-mapstructuur.
 
 ## Niet-onderhandelbare repository-regels
 
