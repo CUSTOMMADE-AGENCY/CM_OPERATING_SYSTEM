@@ -49,12 +49,12 @@ const CM_DRIVE_STRUCTURE = {
     '05_MARKETING',
     '06_ARCHIVE',
   ],
-  '03_EXECUTIVE': [
+  '03_SHARED_SERVICES': [
     '01_GOVERNANCE',
-    '02_TEMPLATES',
+    '02_RESOURCES',
     '03_OPERATION',
     '04_REPORTS',
-    '05_SOPS&FLOWS',
+    '05_SOPS_FLOWS',
   ],
   '04_BUSINESS': [
     '01_FINANCE',
