@@ -14,6 +14,7 @@ Deze map definieert hoe het Custommade Agency operating system is gestructureerd
 - `VERSION_CONTROL.md` — GitHub-werkwijze voor gecontroleerde wijzigingen.
 - `Workflow_DOCUMENTATION.md` — standaard voor het documenteren van Workflows.
 - `AS_BUILT_DOCUMENTATION.md` — vastlegging van hoe systemen daadwerkelijk zijn ingericht.
+- `AGILE_OPERATING_CYCLE.md` — lean verbetercadans voor wekelijkse, maandelijkse, kwartaal- en halfjaarlijkse OS-updates.
 
 ## Regel
 
