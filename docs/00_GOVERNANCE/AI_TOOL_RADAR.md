@@ -1,27 +1,30 @@
-# AI & Tool Radar
+# AI Tool Radar
 
-De AI & Tool Radar houdt bij welke tools CM volgt, test, gebruikt, afwijst of vervangt. Geen tool wordt toegevoegd zonder duidelijke use case, owner, kostenbeeld en ROI.
+Overzicht van AI- en operationele tools die CM volgt, test, gebruikt of afwijst.
+Doel: geen losse tool-experimenten zonder nut.
 
-## Statussen
+## Status
 
-- WATCH
-- TEST
-- ADOPT
-- REJECT
-- REPLACE
+| Status | Betekenis |
+|---|---|
+| WATCH | Volgen, nog niet gebruiken |
+| TEST | Kleine test met succescriteria |
+| ADOPT | Onderdeel van de CM-stack |
+| REPLACE | Vervangt of faseert iets uit |
+| REJECT | Bewust niet gebruiken |
 
-## Categorieën
+## Criteria
 
-- AI Agents
-- Music Rights
-- Royalty Accounting
-- CRM / Pipeline
-- Project Management
-- Automations
-- Design / Content
-- Legal / Contracts
-- Finance
+Een tool gaat alleen naar TEST of ADOPT als duidelijk is:
 
-| TOOL | CATEGORY | USE CASE | STATUS | COST | ROI | OWNER | REVIEW DATE |
-|---|---|---|---|---|---|---|---|
-| Toolnaam | AI Agents / Music Rights / Royalty Accounting / CRM / Pipeline / Project Management / Automations / Design / Content / Legal / Contracts / Finance | Beschrijf de use case. | WATCH / TEST / ADOPT / REJECT / REPLACE | Kosten per maand/jaar of n.v.t. | Verwachte of bewezen opbrengst. | Naam/rol | YYYY-MM-DD |
+- welk probleem het oplost;
+- hoeveel tijd, geld of fouten het bespaart;
+- wie owner is;
+- welke data- of legal-risico's bestaan;
+- wanneer de tool opnieuw wordt beoordeeld.
+
+## Radar
+
+| Tool | Categorie | Use case | Status | Kosten | Verwachte opbrengst | Risico | Owner | Review |
+|---|---|---|---|---|---|---|---|---|
+| Toolnaam | AI / Rights / CRM / Projecten / Finance / Legal / Content / Automation | Kort probleem of gebruik | WATCH / TEST / ADOPT / REPLACE / REJECT | €/maand of n.v.t. | Tijdwinst, omzet, kwaliteit of foutreductie | Data, rechten, contracten of n.v.t. | Naam/rol | YYYY-MM-DD |

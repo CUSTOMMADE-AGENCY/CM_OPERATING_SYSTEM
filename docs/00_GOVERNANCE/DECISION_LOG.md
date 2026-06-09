@@ -1,7 +1,17 @@
 # Decision Log
 
-Dit log bevat belangrijke systeemkeuzes voor het CM Operating System. Gebruik het voor beslissingen die impact hebben op workflows, tools, templates, governance, dealstructuren, rights-processen of klantoperaties.
+Plek voor keuzes met blijvende impact op het CM Operating System.
+Gebruik dit niet voor losse taken, maar voor besluiten die later teruggevonden moeten worden.
 
-| DATE | DECISION | WHY | ALTERNATIVES | IMPACT | OWNER | REVIEW DATE |
+## Wanneer vastleggen
+
+- Workflow, template of documentstructuur verandert.
+- Tool wordt getest, gekozen, vervangen of afgewezen.
+- Service, klantcriterium, deal-aanpak of rights-proces verandert.
+- Een besluit heeft een reviewmoment nodig.
+
+## Log
+
+| Datum | Besluit | Waarom | Alternatieven | Impact | Owner | Review |
 |---|---|---|---|---|---|---|
-| YYYY-MM-DD | Beschrijf het besluit. | Waarom is dit nodig? | Welke opties zijn overwogen? | Wat verandert er voor CM? | Naam/rol | YYYY-MM-DD |
+| YYYY-MM-DD | Wat is besloten? | Waarom nu? | Welke opties zijn bekeken? | Wat verandert er? | Naam/rol | YYYY-MM-DD |
