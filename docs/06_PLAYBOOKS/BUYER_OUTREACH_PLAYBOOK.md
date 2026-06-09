@@ -1,4 +1,4 @@
-# Buyer Outreach Playbook
+# BUYER OUTREACH PLAYBOOK
 
 ## Doel
 

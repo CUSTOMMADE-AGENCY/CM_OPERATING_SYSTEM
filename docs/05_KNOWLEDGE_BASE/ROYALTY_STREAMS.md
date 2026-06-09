@@ -1,4 +1,4 @@
-# Royalty Streams
+# ROYALTY STREAMS
 
 ## Overzicht
 

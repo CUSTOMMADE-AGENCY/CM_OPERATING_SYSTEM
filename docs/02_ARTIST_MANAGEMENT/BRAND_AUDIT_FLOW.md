@@ -1,4 +1,4 @@
-# Brand Audit Flow
+# BRAND AUDIT FLOW
 
 Canonical workflow: `02_BRAND_AUDIT_FLOW.md`.
 

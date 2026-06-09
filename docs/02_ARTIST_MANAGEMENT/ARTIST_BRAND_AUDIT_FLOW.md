@@ -1,4 +1,4 @@
-# Artist Brand Audit Flow
+# ARTIST BRAND AUDIT FLOW
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# Artist Management SOP
+# ARTIST MANAGEMENT SOP
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# Buyer Qualification Model
+# BUYER QUALIFICATION MODEL
 
 ## Doel
 

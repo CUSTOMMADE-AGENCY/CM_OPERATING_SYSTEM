@@ -1,4 +1,4 @@
-# Licensing
+# LICENSING
 
 ## Overzicht
 

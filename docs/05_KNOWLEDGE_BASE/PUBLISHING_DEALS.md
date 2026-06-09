@@ -1,4 +1,4 @@
-# Publishing Deals
+# PUBLISHING DEALS
 
 ## Overzicht
 

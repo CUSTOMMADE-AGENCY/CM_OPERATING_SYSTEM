@@ -1,4 +1,4 @@
-# CM Brand Partnership Hunter
+# CM BRAND PARTNERSHIP HUNTER
 
 ## Doel
 

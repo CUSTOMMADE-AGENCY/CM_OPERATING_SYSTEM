@@ -1,4 +1,4 @@
-# Publishing Rights
+# PUBLISHING RIGHTS
 
 ## Overzicht
 

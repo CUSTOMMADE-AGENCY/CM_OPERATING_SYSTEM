@@ -1,4 +1,4 @@
-# Buyer Outreach Workflow
+# BUYER OUTREACH WORKFLOW
 
 ## Doel
 

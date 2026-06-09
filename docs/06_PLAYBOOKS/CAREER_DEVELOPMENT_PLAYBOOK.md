@@ -1,4 +1,4 @@
-# Career Development Playbook
+# CAREER DEVELOPMENT PLAYBOOK
 
 ## Doel
 

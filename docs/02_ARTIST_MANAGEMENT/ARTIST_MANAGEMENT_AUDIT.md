@@ -1,4 +1,4 @@
-# Artist Management Audit
+# ARTIST MANAGEMENT AUDIT
 
 ## Scope
 

@@ -1,4 +1,4 @@
-# Artist Roadmap Flow
+# ARTIST ROADMAP FLOW
 
 Canonical workflow: `04_ARTIST_ROADMAP_FLOW.md`.
 

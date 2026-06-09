@@ -1,4 +1,4 @@
-# Artist Approval Matrix
+# ARTIST APPROVAL MATRIX
 
 ## Doel
 

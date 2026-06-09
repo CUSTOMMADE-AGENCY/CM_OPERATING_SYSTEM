@@ -1,4 +1,4 @@
-# Record Label Deals
+# RECORD LABEL DEALS
 
 ## Overzicht
 

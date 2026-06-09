@@ -1,4 +1,4 @@
-# 02 Brand Audit Flow
+# 02 BRAND AUDIT FLOW
 
 ## Doel
 

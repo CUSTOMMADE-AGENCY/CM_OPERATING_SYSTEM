@@ -1,4 +1,4 @@
-# 08 Brand Partnership Flow
+# 08 BRAND PARTNERSHIP FLOW
 
 ## Doel
 

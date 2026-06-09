@@ -1,4 +1,4 @@
-# Deals and Rights Flow
+# DEALS AND RIGHTS FLOW
 
 ## Doel
 

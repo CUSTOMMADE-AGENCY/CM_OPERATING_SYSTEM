@@ -1,4 +1,4 @@
-# APA Guide
+# APA GUIDE
 
 ## Overzicht
 

@@ -1,4 +1,4 @@
-# 02 Artist Management Map
+# 02 ARTIST MANAGEMENT MAP
 
 ## Doel en gebruik
 

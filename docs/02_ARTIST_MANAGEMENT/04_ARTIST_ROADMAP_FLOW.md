@@ -1,4 +1,4 @@
-# 04 Artist Roadmap Flow
+# 04 ARTIST ROADMAP FLOW
 
 ## Doel
 

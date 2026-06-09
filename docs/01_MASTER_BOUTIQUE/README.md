@@ -1,4 +1,4 @@
-# Master Boutique
+# MASTER BOUTIQUE
 
 ## Doel
 

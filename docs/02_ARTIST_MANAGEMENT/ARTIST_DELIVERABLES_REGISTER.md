@@ -1,4 +1,4 @@
-# Artist Deliverables Register
+# ARTIST DELIVERABLES REGISTER
 
 ## Doel
 

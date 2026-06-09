@@ -1,4 +1,4 @@
-# Music Copyright
+# MUSIC COPYRIGHT
 
 ## Overzicht
 

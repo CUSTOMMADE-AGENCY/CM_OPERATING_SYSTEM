@@ -1,4 +1,4 @@
-# Buma/Stemra
+# BUMA/STEMRA
 
 ## Overzicht
 

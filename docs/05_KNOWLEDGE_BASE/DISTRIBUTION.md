@@ -1,4 +1,4 @@
-# Distribution
+# DISTRIBUTION
 
 ## Overzicht
 

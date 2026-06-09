@@ -1,4 +1,4 @@
-# Neighbouring Rights
+# NEIGHBOURING RIGHTS
 
 ## Overzicht
 

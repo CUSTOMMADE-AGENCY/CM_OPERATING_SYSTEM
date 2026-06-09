@@ -1,4 +1,4 @@
-# 00 Artist Management Map
+# 00 ARTIST MANAGEMENT MAP
 
 ## Doel
 

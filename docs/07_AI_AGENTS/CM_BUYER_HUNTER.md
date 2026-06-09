@@ -1,4 +1,4 @@
-# CM Buyer Hunter
+# CM BUYER HUNTER
 
 ## Doel
 

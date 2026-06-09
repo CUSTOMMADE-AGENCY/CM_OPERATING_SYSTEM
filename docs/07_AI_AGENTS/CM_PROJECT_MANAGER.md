@@ -1,4 +1,4 @@
-# CM Project Manager
+# CM PROJECT MANAGER
 
 ## Doel
 

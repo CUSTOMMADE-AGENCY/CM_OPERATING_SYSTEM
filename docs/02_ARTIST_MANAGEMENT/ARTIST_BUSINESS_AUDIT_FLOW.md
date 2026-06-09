@@ -1,4 +1,4 @@
-# Artist Business Audit Flow
+# ARTIST BUSINESS AUDIT FLOW
 
 ## Doel
 

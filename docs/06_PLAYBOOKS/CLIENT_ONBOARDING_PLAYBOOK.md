@@ -1,4 +1,4 @@
-# Client Onboarding Playbook
+# CLIENT ONBOARDING PLAYBOOK
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# Music Valuation
+# MUSIC VALUATION
 
 ## Overzicht
 

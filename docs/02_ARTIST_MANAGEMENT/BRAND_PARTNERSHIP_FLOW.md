@@ -1,4 +1,4 @@
-# Brand Partnership Flow
+# BRAND PARTNERSHIP FLOW
 
 Canonical workflow: `08_BRAND_PARTNERSHIP_FLOW.md`.
 

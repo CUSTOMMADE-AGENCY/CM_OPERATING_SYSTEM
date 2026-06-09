@@ -1,4 +1,4 @@
-# CM Deal Hunter
+# CM DEAL HUNTER
 
 ## Doel
 

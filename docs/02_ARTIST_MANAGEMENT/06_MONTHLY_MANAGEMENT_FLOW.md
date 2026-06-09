@@ -1,4 +1,4 @@
-# 06 Monthly Management Flow
+# 06 MONTHLY MANAGEMENT FLOW
 
 ## Doel
 

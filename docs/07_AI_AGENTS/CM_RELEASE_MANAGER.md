@@ -1,4 +1,4 @@
-# CM Release Manager
+# CM RELEASE MANAGER
 
 ## Doel
 

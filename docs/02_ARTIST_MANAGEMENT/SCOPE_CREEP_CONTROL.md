@@ -1,4 +1,4 @@
-# Scope Creep Control
+# SCOPE CREEP CONTROL
 
 ## Doel
 

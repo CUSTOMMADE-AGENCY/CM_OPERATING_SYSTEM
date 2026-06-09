@@ -1,4 +1,4 @@
-# CM Sync Hunter
+# CM SYNC HUNTER
 
 ## Doel
 

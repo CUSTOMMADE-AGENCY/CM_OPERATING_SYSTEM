@@ -1,4 +1,4 @@
-# Master Rights
+# MASTER RIGHTS
 
 ## Overzicht
 

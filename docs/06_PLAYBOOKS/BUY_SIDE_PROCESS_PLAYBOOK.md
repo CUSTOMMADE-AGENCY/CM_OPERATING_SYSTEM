@@ -1,4 +1,4 @@
-# Buy-Side Process Playbook
+# BUY-SIDE PROCESS PLAYBOOK
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# Artist Onboarding Template
+# ARTIST ONBOARDING TEMPLATE
 
 ## ClickUp list setup
 

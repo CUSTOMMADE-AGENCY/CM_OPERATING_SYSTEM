@@ -1,4 +1,4 @@
-# 07 Deal Negotiation Flow
+# 07 DEAL NEGOTIATION FLOW
 
 ## Doel
 

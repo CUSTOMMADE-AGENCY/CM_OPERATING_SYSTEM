@@ -1,4 +1,4 @@
-# CM Rights Auditor
+# CM RIGHTS AUDITOR
 
 ## Doel
 

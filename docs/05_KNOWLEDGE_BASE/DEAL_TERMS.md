@@ -1,4 +1,4 @@
-# Deal Terms
+# DEAL TERMS
 
 ## Overzicht
 

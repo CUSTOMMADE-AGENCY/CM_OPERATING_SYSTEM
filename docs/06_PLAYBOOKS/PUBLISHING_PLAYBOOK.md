@@ -1,4 +1,4 @@
-# Publishing Playbook
+# PUBLISHING PLAYBOOK
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# Release Strategy Template
+# RELEASE STRATEGY TEMPLATE
 
 ## Release overview
 

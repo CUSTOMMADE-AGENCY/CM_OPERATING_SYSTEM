@@ -1,4 +1,4 @@
-# Catalog Valuation Playbook
+# CATALOG VALUATION PLAYBOOK
 
 ## Doel
 

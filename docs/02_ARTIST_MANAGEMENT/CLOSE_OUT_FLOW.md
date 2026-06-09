@@ -1,4 +1,4 @@
-# Close-Out Flow
+# CLOSE-OUT FLOW
 
 ## Doel
 

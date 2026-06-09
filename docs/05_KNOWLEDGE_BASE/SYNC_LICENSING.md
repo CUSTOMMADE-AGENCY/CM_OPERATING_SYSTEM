@@ -1,4 +1,4 @@
-# Sync Licensing
+# SYNC LICENSING
 
 ## Overzicht
 

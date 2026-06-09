@@ -1,4 +1,4 @@
-# Artist Communication SOP
+# ARTIST COMMUNICATION SOP
 
 ## Doel
 

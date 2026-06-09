@@ -1,4 +1,4 @@
-# Due Diligence Checklist
+# DUE DILIGENCE CHECKLIST
 
 ## Doel
 

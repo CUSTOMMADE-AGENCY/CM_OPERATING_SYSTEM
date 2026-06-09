@@ -1,4 +1,4 @@
-# Artist Positioning Playbook
+# ARTIST POSITIONING PLAYBOOK
 
 ## Doel
 

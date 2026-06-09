@@ -1,4 +1,4 @@
-# Sync Playbook
+# SYNC PLAYBOOK
 
 ## Doel
 

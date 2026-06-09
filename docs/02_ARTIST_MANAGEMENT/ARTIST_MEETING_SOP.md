@@ -1,4 +1,4 @@
-# Artist Meeting SOP
+# ARTIST MEETING SOP
 
 ## Doel
 

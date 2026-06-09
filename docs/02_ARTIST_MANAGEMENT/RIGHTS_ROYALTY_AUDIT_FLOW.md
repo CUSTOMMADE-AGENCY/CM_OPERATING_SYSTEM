@@ -1,4 +1,4 @@
-# Rights Royalty Audit Flow
+# RIGHTS ROYALTY AUDIT FLOW
 
 ## Doel
 

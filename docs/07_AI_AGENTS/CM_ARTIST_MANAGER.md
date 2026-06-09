@@ -1,4 +1,4 @@
-# CM Artist Manager
+# CM ARTIST MANAGER
 
 ## Doel
 

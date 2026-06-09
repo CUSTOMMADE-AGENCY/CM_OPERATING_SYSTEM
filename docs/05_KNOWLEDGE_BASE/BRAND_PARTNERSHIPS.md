@@ -1,4 +1,4 @@
-# Brand Partnerships
+# BRAND PARTNERSHIPS
 
 ## Overzicht
 

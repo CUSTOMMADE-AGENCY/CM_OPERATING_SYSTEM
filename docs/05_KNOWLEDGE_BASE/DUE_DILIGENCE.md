@@ -1,4 +1,4 @@
-# Due Diligence
+# DUE DILIGENCE
 
 ## Overzicht
 

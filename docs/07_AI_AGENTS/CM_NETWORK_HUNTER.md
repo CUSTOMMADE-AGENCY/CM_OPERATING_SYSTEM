@@ -1,4 +1,4 @@
-# CM Network Hunter
+# CM NETWORK HUNTER
 
 ## Doel
 

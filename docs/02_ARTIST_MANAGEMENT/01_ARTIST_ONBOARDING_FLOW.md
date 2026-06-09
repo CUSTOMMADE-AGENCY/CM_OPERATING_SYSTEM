@@ -1,4 +1,4 @@
-# 01 Artist Onboarding Flow
+# 01 ARTIST ONBOARDING FLOW
 
 ## Doel
 

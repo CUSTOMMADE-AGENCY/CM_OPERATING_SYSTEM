@@ -1,4 +1,4 @@
-# Catalog Acquisition Playbook
+# CATALOG ACQUISITION PLAYBOOK
 
 ## Doel
 

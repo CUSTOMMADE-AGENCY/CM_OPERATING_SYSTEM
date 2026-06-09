@@ -1,4 +1,4 @@
-# Brand Partnership Playbook
+# BRAND PARTNERSHIP PLAYBOOK
 
 ## Doel
 

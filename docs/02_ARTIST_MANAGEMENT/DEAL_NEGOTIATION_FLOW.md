@@ -1,4 +1,4 @@
-# Deal Negotiation Flow
+# DEAL NEGOTIATION FLOW
 
 Canonical workflow: `07_DEAL_NEGOTIATION_FLOW.md`.
 

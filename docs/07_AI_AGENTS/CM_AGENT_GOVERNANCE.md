@@ -1,4 +1,4 @@
-# CM Agent Governance
+# CM AGENT GOVERNANCE
 
 ## Doel
 

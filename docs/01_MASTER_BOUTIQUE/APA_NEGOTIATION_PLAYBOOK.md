@@ -1,4 +1,4 @@
-# APA Negotiation Playbook
+# APA NEGOTIATION PLAYBOOK
 
 ## Doel
 

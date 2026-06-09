@@ -1,4 +1,4 @@
-# 09 Artist Offboarding Flow
+# 09 ARTIST OFFBOARDING FLOW
 
 ## Doel
 

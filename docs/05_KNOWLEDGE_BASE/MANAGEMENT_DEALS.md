@@ -1,4 +1,4 @@
-# Management Deals
+# MANAGEMENT DEALS
 
 ## Overzicht
 

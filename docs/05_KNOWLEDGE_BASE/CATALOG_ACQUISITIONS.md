@@ -1,4 +1,4 @@
-# Catalog Acquisitions
+# CATALOG ACQUISITIONS
 
 ## Overzicht
 

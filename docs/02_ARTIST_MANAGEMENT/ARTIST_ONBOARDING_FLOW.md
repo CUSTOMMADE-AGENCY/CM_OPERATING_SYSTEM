@@ -1,4 +1,4 @@
-# Artist Onboarding Flow
+# ARTIST ONBOARDING FLOW
 
 Canonical workflow: `01_ARTIST_ONBOARDING_FLOW.md`.
 

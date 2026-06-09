@@ -1,4 +1,4 @@
-# 05 Release Strategie Flow
+# 05 RELEASE STRATEGIE FLOW
 
 ## Doel
 

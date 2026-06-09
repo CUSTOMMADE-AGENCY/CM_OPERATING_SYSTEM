@@ -1,4 +1,4 @@
-# Artist Client Workflow
+# ARTIST CLIENT WORKFLOW
 
 ## Doel
 

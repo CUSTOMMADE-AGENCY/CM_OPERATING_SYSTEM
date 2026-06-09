@@ -1,4 +1,4 @@
-# Rights Recovery Playbook
+# RIGHTS RECOVERY PLAYBOOK
 
 ## Doel
 

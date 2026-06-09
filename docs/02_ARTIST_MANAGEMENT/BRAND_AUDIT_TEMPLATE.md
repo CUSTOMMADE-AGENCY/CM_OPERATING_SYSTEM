@@ -1,4 +1,4 @@
-# Brand Audit Template
+# BRAND AUDIT TEMPLATE
 
 ## Artist
 

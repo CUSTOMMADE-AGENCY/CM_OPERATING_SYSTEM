@@ -1,4 +1,4 @@
-# Artist Intake Flow
+# ARTIST INTAKE FLOW
 
 ## Doel
 

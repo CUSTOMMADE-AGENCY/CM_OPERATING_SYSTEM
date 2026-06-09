@@ -1,4 +1,4 @@
-# Release Checklist
+# RELEASE CHECKLIST
 
 ## Doel
 

@@ -1,4 +1,4 @@
-# LOI Guide
+# LOI GUIDE
 
 ## Overzicht
 

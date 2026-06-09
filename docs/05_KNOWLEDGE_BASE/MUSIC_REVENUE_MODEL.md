@@ -1,4 +1,4 @@
-# Music Revenue Model
+# MUSIC REVENUE MODEL
 
 ## Overzicht
 

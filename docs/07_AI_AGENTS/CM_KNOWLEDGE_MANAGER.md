@@ -1,4 +1,4 @@
-# CM Knowledge Manager
+# CM KNOWLEDGE MANAGER
 
 ## Doel
 

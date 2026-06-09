@@ -1,4 +1,4 @@
-# Split Sheets
+# SPLIT SHEETS
 
 ## Overzicht
 

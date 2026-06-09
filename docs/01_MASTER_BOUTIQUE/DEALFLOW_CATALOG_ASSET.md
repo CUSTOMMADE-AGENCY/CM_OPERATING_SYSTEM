@@ -1,4 +1,4 @@
-# Catalog Asset Dealflow
+# CATALOG ASSET DEALFLOW
 
 ## Doel
 

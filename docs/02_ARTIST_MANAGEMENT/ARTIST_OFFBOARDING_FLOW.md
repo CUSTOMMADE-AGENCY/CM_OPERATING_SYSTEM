@@ -1,4 +1,4 @@
-# Artist Offboarding Flow
+# ARTIST OFFBOARDING FLOW
 
 Canonical workflow: `09_ARTIST_OFFBOARDING_FLOW.md`.
 

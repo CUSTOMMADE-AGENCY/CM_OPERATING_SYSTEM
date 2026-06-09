@@ -1,4 +1,4 @@
-# Sell-Side Process Playbook
+# SELL-SIDE PROCESS PLAYBOOK
 
 ## Doel
 

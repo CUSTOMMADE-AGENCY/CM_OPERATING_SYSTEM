@@ -1,4 +1,4 @@
-# Deal Negotiation Playbook
+# DEAL NEGOTIATION PLAYBOOK
 
 ## Doel
 

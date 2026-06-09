@@ -1,4 +1,4 @@
-# Onboarding Checklist
+# ONBOARDING CHECKLIST
 
 ## Doel
 

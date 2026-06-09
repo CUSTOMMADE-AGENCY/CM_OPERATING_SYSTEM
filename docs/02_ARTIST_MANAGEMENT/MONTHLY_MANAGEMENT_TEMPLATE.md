@@ -1,4 +1,4 @@
-# Monthly Management Template
+# MONTHLY MANAGEMENT TEMPLATE
 
 ## ClickUp list setup
 

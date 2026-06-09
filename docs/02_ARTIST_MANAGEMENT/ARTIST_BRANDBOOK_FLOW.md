@@ -1,4 +1,4 @@
-# Artist Brandbook Flow
+# ARTIST BRANDBOOK FLOW
 
 ## Doel
 

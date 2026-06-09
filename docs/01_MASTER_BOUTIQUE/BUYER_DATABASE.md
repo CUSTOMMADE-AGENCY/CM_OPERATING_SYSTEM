@@ -1,4 +1,4 @@
-# Buyer Database
+# BUYER DATABASE
 
 ## Purpose
 

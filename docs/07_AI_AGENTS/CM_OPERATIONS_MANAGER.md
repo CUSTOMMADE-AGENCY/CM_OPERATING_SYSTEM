@@ -1,4 +1,4 @@
-# CM Operations Manager
+# CM OPERATIONS MANAGER
 
 ## Doel
 
