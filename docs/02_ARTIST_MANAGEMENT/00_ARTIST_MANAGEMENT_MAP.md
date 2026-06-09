@@ -52,16 +52,16 @@ Deze map is het canonical entrypoint voor de Artist Management-lane. Gebruik dit
 
 | Template | Bestand | Gebruik |
 |---|---|---|
-| Brand Audit Template | `BRAND_AUDIT_TEMPLATE.md` | Findings, evidence, risk levels en recommendations structureren. |
-| Roadmap Template | `ROADMAP_TEMPLATE.md` | Workstreams, outcomes, milestones, KPI's en dependencies plannen. |
-| Release Strategy Template | `RELEASE_STRATEGY_TEMPLATE.md` | Release objectives, audience, campaign plan, budget en launch approvals vastleggen. |
+| Brand Audit Template | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md` | Findings, evidence, risk levels en recommendations structureren. |
+| Roadmap Template | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ROADMAP_TEMPLATE.md` | Workstreams, outcomes, milestones, KPI's en dependencies plannen. |
+| Release Strategy Template | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md` | Release objectives, audience, campaign plan, budget en launch approvals vastleggen. |
 
 ## ClickUp templates
 
 | ClickUp-template | Bestand | Gebruik |
 |---|---|---|
-| Artist Onboarding Template | `ARTIST_ONBOARDING_TEMPLATE.md` | ClickUp task/list-structuur voor onboarding operationaliseren. |
-| Monthly Management Template | `MONTHLY_MANAGEMENT_TEMPLATE.md` | ClickUp task/list-structuur voor maandelijkse managementcyclus operationaliseren. |
+| Artist Onboarding Template | `../03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ONBOARDING_TEMPLATE.md` | ClickUp task/list-structuur voor onboarding operationaliseren. |
+| Monthly Management Template | `../03_SHARED_SERVICES/TEMPLATES/CLICKUP/MONTHLY_MANAGEMENT_TEMPLATE.md` | ClickUp task/list-structuur voor maandelijkse managementcyclus operationaliseren. |
 
 ## Lifecycle volgorde
 

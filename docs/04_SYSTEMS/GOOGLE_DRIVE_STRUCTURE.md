@@ -51,12 +51,12 @@ OS_CUSTOMMADE
 │   ├── 05_MARKETING
 │   └── 06_ARCHIVE
 │
-├── 03_EXECUTIVE
+├── 03_SHARED_SERVICES
 │   ├── 01_GOVERNANCE
-│   ├── 02_TEMPLATES
+│   ├── 02_RESOURCES
 │   ├── 03_OPERATION
 │   ├── 04_REPORTS
-│   └── 05_SOPS&FLOWS
+│   └── 05_SOPS_FLOWS
 │
 ├── 04_BUSINESS
 │   ├── 01_FINANCE
@@ -102,13 +102,13 @@ Deze standaard wordt toegepast op:
 - `LATIFAH`
 - `NAMIKOO`
 
-## Executive versus client-specifieke instructies
+## Shared Services versus client-specifieke instructies
 
-`OS_CUSTOMMADE/03_EXECUTIVE` is voor company-wide instructions, governance, templates, reports en SOPs/flows.
+`OS_CUSTOMMADE/03_SHARED_SERVICES` is voor company-wide instructions, gedeelde resources, reports en SOPs/flows.
 
 Client-specifieke instructies staan in de relevante artist- of clientfolder. Bijvoorbeeld:
 
-- General email protocol: `OS_CUSTOMMADE/03_EXECUTIVE/05_SOPS&FLOWS`
+- General email protocol: `OS_CUSTOMMADE/03_SHARED_SERVICES/05_SOPS_FLOWS`
 - Goudtje-specific email instructions: `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/03_STRATEGY` of `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/01_ADMIN`, afhankelijk van gebruik
 
 ## Script

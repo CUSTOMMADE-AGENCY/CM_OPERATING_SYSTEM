@@ -41,10 +41,10 @@ Belangrijkste bevindingen:
 | Overlapgebied | Documenten | Impact | Advies |
 |---|---|---|---|
 | Navigatie en lifecycle | `00_ARTIST_MANAGEMENT_MAP.md`, `02_ARTIST_MANAGEMENT_MAP.md`, `README.md`, `ARTIST_CLIENT_WORKFLOW.md` | Vier plekken leggen uit waar de lifecycle begint en hoe documenten samenhangen. | Maak één canonical map en archiveer of verkort de rest tot verwijzing. |
-| Intake versus onboarding | `ARTIST_INTAKE_FLOW.md`, `01_ARTIST_ONBOARDING_FLOW.md`, `ONBOARDING_CHECKLIST.md`, `ARTIST_ONBOARDING_TEMPLATE.md` | Intake staat los, maar hoort operationeel vóór of binnen onboarding. | MERGE intake-criteria in onboarding; live intakevragen naar ClickUp. |
-| Brand audit versus brandbook | `02_BRAND_AUDIT_FLOW.md`, `ARTIST_BRAND_AUDIT_FLOW.md`, `BRAND_AUDIT_TEMPLATE.md`, `03_ARTIST_BRANDBOOK_FLOW.md`, `ARTIST_BRANDBOOK_FLOW.md` | Audit findings en brandbook sections lopen deels door elkaar. | Scheid diagnostic output van brand-rule production; behoud template als outputformat. |
+| Intake versus onboarding | `ARTIST_INTAKE_FLOW.md`, `01_ARTIST_ONBOARDING_FLOW.md`, `ONBOARDING_CHECKLIST.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md` | Intake staat los, maar hoort operationeel vóór of binnen onboarding. | MERGE intake-criteria in onboarding; live intakevragen naar ClickUp. |
+| Brand audit versus brandbook | `02_BRAND_AUDIT_FLOW.md`, `ARTIST_BRAND_AUDIT_FLOW.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md`, `03_ARTIST_BRANDBOOK_FLOW.md`, `ARTIST_BRANDBOOK_FLOW.md` | Audit findings en brandbook sections lopen deels door elkaar. | Scheid diagnostic output van brand-rule production; behoud template als outputformat. |
 | Deals versus rights | `07_DEAL_NEGOTIATION_FLOW.md`, `DEALS_RIGHTS_FLOW.md`, `RIGHTS_ROYALTY_AUDIT_FLOW.md`, `ARTIST_BUSINESS_AUDIT_FLOW.md` | Deal review, rights checks en business audit zijn verwant maar niet hetzelfde. | Splits opportunity negotiation, rights/royalty cleanup en business audit duidelijk. |
-| Monthly management versus registers | `06_MONTHLY_MANAGEMENT_FLOW.md`, `MONTHLY_MANAGEMENT_FLOW.md`, `MONTHLY_MANAGEMENT_TEMPLATE.md`, `ARTIST_DELIVERABLES_REGISTER.md`, `ARTIST_APPROVAL_MATRIX.md` | Monthly execution gebruikt dezelfde registers en approvals. | GitHub bewaart definities; live registers en recurring tasks horen in ClickUp. |
+| Monthly management versus registers | `06_MONTHLY_MANAGEMENT_FLOW.md`, `MONTHLY_MANAGEMENT_FLOW.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md`, `ARTIST_DELIVERABLES_REGISTER.md`, `ARTIST_APPROVAL_MATRIX.md` | Monthly execution gebruikt dezelfde registers en approvals. | GitHub bewaart definities; live registers en recurring tasks horen in ClickUp. |
 | Scope creep versus upsell | `SCOPE_CREEP_CONTROL.md`, `UPSELL_NEXT_PHASE_FLOW.md`, `ARTIST_MANAGEMENT_SOP.md` | Scope change en commerciële next phase worden beide bij extra werk gebruikt. | Houd scope control als governance-SOP en upsell als commerciële follow-up workflow. |
 | Boilerplate governance | Korte legacy-flows en SOP's | Identieke sections over kwaliteitschecks, opslag/toolgrenzen en repository-hygiëne worden herhaald. | Centraliseer boilerplate in `README.md` of mapdocument; archiveer korte legacy-documenten. |
 
@@ -92,7 +92,7 @@ Belangrijkste bevindingen:
 | Nederlandse en Engelse termen wisselen | `Doel`, `Reikwijdte`, `Owner`, `Scope`, `Deliverables`, `System of record`, `Pipeline-fases` | Kies bewust hybride operating language of standaardiseer per documentsectie. |
 | Release Strategie versus Release Strategy | `05_RELEASE_STRATEGY_FLOW.md` heeft titel `Release Strategie Flow`; template heet `Release Strategy Template` | Kies één term: bij voorkeur filename Engels en titel Nederlands/Engels consistent. |
 | Brand Audit, Artist Brand Audit en Brandbook | `BRAND_AUDIT_FLOW.md`, `ARTIST_BRAND_AUDIT_FLOW.md`, `ARTIST_BRANDBOOK_FLOW.md` | Gebruik `Artist` alleen wanneer het onderscheidend is; anders verwijderen voor consistentie. |
-| ClickUp template versus GitHub template | `ARTIST_ONBOARDING_TEMPLATE.md`, `MONTHLY_MANAGEMENT_TEMPLATE.md`, `BRAND_AUDIT_TEMPLATE.md` | Label duidelijk als `ClickUp task template` of `deliverable template`. |
+| ClickUp template versus GitHub template | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md` | Label duidelijk als `ClickUp task template` of `deliverable template`. |
 | Matrix versus live register | `ARTIST_APPROVAL_MATRIX.md`, `ARTIST_DELIVERABLES_REGISTER.md` | GitHub-documenten zijn definities; live instances horen in ClickUp. |
 | Canonical en stable link | Ongenummerde shims noemen canonical genummerde workflows, terwijl maps naar ongenummerde namen linken | Kies of maps naar canonical genummerde bestanden linken of stable-link shims als officiële publieke links blijven. |
 
@@ -102,10 +102,10 @@ Belangrijkste bevindingen:
 |---|---|---|
 | Twee mapbestanden met verschillende nummers | `00_ARTIST_MANAGEMENT_MAP.md`, `02_ARTIST_MANAGEMENT_MAP.md` | Houd één canonical map; archiveer of merge het tweede mapbestand. |
 | Genummerde en ongenummerde workflowvarianten | `01_ARTIST_ONBOARDING_FLOW.md` versus `ARTIST_ONBOARDING_FLOW.md` | Kies genummerd voor lifecycle-volgorde of ongenummerd voor stable links; documenteer de keuze. |
-| Prefix `ARTIST_` niet consequent | `ARTIST_BRAND_AUDIT_FLOW.md` versus `BRAND_AUDIT_FLOW.md`; `ARTIST_ONBOARDING_TEMPLATE.md` versus `ROADMAP_TEMPLATE.md` | Hanteer één prefixstrategie per documenttype. |
+| Prefix `ARTIST_` niet consequent | `ARTIST_BRAND_AUDIT_FLOW.md` versus `BRAND_AUDIT_FLOW.md`; `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md` versus `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ROADMAP_TEMPLATE.md` | Hanteer één prefixstrategie per documenttype. |
 | Singular/plural en domeinmix | `DEALS_RIGHTS_FLOW.md` combineert deals en rights; `DEAL_NEGOTIATION_FLOW.md` is singular/specifiek | Splits gecombineerde domeinen of benoem expliciet als umbrella. |
 | Close-out versus offboarding | `CLOSE_OUT_FLOW.md` naast `ARTIST_OFFBOARDING_FLOW.md` | Gebruik Offboarding als lifecycle-term; close-out als subfase. |
-| Template-namen missen typeonderscheid | `BRAND_AUDIT_TEMPLATE.md`, `MONTHLY_MANAGEMENT_TEMPLATE.md`, `ARTIST_ONBOARDING_TEMPLATE.md` | Voeg in titel/omschrijving toe of het een deliverable-template of ClickUp-template is. |
+| Template-namen missen typeonderscheid | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md`, `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md` | Voeg in titel/omschrijving toe of het een deliverable-template of ClickUp-template is. |
 
 ## Documentcategorisatie
 
@@ -124,7 +124,7 @@ Belangrijkste bevindingen:
 | `09_ARTIST_OFFBOARDING_FLOW.md` | KEEP | Complete genummerde canonical offboarding workflow; kan close-out-inhoud absorberen. |
 | `ARTIST_APPROVAL_MATRIX.md` | KEEP | Nodig als reusable approval-control definitie; live artist-specifieke approval records horen wel in ClickUp. |
 | `ARTIST_BRANDBOOK_FLOW.md` | MERGE | Legacy brandbook workflow met mogelijk nuttige section-details; merge unieke inhoud naar `03_ARTIST_BRANDBOOK_FLOW.md` en archiveer daarna. |
-| `ARTIST_BRAND_AUDIT_FLOW.md` | ARCHIVE | Korte legacy-audit overlapt met `02_BRAND_AUDIT_FLOW.md` en `BRAND_AUDIT_TEMPLATE.md`. |
+| `ARTIST_BRAND_AUDIT_FLOW.md` | ARCHIVE | Korte legacy-audit overlapt met `02_BRAND_AUDIT_FLOW.md` en `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md`. |
 | `ARTIST_BUSINESS_AUDIT_FLOW.md` | MERGE | Inhoud is relevant, maar te kort en niet geïntegreerd in de genummerde lifecycle; merge naar een toekomstige canonical business-audit workflow of map. |
 | `ARTIST_CLIENT_WORKFLOW.md` | ARCHIVE | Lifecycle-overzicht wordt beter afgedekt door `00_ARTIST_MANAGEMENT_MAP.md`, `02_ARTIST_MANAGEMENT_MAP.md` en de genummerde workflows. |
 | `ARTIST_COMMUNICATION_SOP.md` | KEEP | Noodzakelijke SOP voor communicatiekanalen, response expectations en written confirmation. |
@@ -134,23 +134,23 @@ Belangrijkste bevindingen:
 | `ARTIST_MEETING_SOP.md` | KEEP | Noodzakelijke SOP voor agenda, notes, decisions en follow-up. |
 | `ARTIST_OFFBOARDING_FLOW.md` | ARCHIVE | Stable-link shim naar `09_ARTIST_OFFBOARDING_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
 | `ARTIST_ONBOARDING_FLOW.md` | ARCHIVE | Stable-link shim naar `01_ARTIST_ONBOARDING_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
-| `ARTIST_ONBOARDING_TEMPLATE.md` | MOVE_TO_CLICKUP | Beschrijft ClickUp list setup, custom fields, statuses, task groups en automations; hoort als ClickUp-template te worden beheerd. |
+| `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md` | MOVE_TO_CLICKUP | Beschrijft ClickUp list setup, custom fields, statuses, task groups en automations; hoort als ClickUp-template te worden beheerd. |
 | `ARTIST_ROADMAP_FLOW.md` | ARCHIVE | Stable-link shim naar `04_ARTIST_ROADMAP_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
 | `BRAND_AUDIT_FLOW.md` | ARCHIVE | Stable-link shim naar `02_BRAND_AUDIT_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
-| `BRAND_AUDIT_TEMPLATE.md` | KEEP | Reusable deliverable-template voor audit findings, evidence, decision log en next actions. |
+| `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md` | KEEP | Reusable deliverable-template voor audit findings, evidence, decision log en next actions. |
 | `BRAND_PARTNERSHIP_FLOW.md` | ARCHIVE | Stable-link shim naar `08_BRAND_PARTNERSHIP_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
 | `CLOSE_OUT_FLOW.md` | MERGE | Close-out hoort als subfase/checklist in `09_ARTIST_OFFBOARDING_FLOW.md`; archiveer daarna. |
 | `DEALS_RIGHTS_FLOW.md` | MERGE | Combineert deal opportunity en rights check; split/merge naar `07_DEAL_NEGOTIATION_FLOW.md` en `RIGHTS_ROYALTY_AUDIT_FLOW.md`. |
 | `DEAL_NEGOTIATION_FLOW.md` | ARCHIVE | Stable-link shim naar `07_DEAL_NEGOTIATION_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
 | `MONTHLY_MANAGEMENT_FLOW.md` | MERGE | Legacy monthly workflow overlapt met `06_MONTHLY_MANAGEMENT_FLOW.md`; merge eventuele cadence-details en archiveer daarna. |
-| `MONTHLY_MANAGEMENT_TEMPLATE.md` | MOVE_TO_CLICKUP | Beschrijft ClickUp list setup, custom fields, recurring task sections en automations; hoort primair in ClickUp. |
+| `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md` | MOVE_TO_CLICKUP | Beschrijft ClickUp list setup, custom fields, recurring task sections en automations; hoort primair in ClickUp. |
 | `ONBOARDING_CHECKLIST.md` | MOVE_TO_CLICKUP | Checklist is execution-control voor onboarding tasks, completion status en missing inputs; beter als ClickUp checklist/template. |
 | `README.md` | KEEP | Nuttige korte oriëntatie op doel, entrypoint, lifecycle, execution layer en repository-hygiëne. |
 | `RELEASE_CHECKLIST.md` | MOVE_TO_CLICKUP | Release readiness checks vragen owners, deadlines, status en bewijs; hoort als ClickUp checklist bij release execution. |
 | `RELEASE_STRATEGY_FLOW.md` | ARCHIVE | Korte legacy-flow overlapt met `05_RELEASE_STRATEGY_FLOW.md`. |
-| `RELEASE_STRATEGY_TEMPLATE.md` | KEEP | Reusable deliverable-template voor release overview, strategy, campaign plan, asset readiness, budget, approvals en risks. |
+| `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md` | KEEP | Reusable deliverable-template voor release overview, strategy, campaign plan, asset readiness, budget, approvals en risks. |
 | `RIGHTS_ROYALTY_AUDIT_FLOW.md` | MERGE | Relevante specialistische workflow, maar nog kort; maak deze canonical of merge in business/rights auditlaag. |
-| `ROADMAP_TEMPLATE.md` | KEEP | Reusable deliverable-template voor roadmap context, outcomes, workstreams, risks en monthly review notes. |
+| `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ROADMAP_TEMPLATE.md` | KEEP | Reusable deliverable-template voor roadmap context, outcomes, workstreams, risks en monthly review notes. |
 | `SCOPE_CREEP_CONTROL.md` | KEEP | Belangrijke governance-control voor out-of-scope verzoeken, fee/timing impact en written approval. |
 | `UPSELL_NEXT_PHASE_FLOW.md` | KEEP | Relevante supporting workflow na audit, brandbook, release strategy of managementwerk. |
 
@@ -166,17 +166,17 @@ Als er opgeschoond wordt, behoud minimaal:
 - `ARTIST_MEETING_SOP.md`
 - `ARTIST_APPROVAL_MATRIX.md`
 - `SCOPE_CREEP_CONTROL.md`
-- `BRAND_AUDIT_TEMPLATE.md`
-- `RELEASE_STRATEGY_TEMPLATE.md`
-- `ROADMAP_TEMPLATE.md`
+- `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md`
+- `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md`
+- `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ROADMAP_TEMPLATE.md`
 - `UPSELL_NEXT_PHASE_FLOW.md`
 
 ## Aanbevolen ClickUp-verplaatsingen
 
 Verplaats of operationaliseer primair in ClickUp:
 
-- `ARTIST_ONBOARDING_TEMPLATE.md`
-- `MONTHLY_MANAGEMENT_TEMPLATE.md`
+- `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ARTIST_ONBOARDING_TEMPLATE.md`
+- `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md`
 - `ONBOARDING_CHECKLIST.md`
 - `RELEASE_CHECKLIST.md`
 - `ARTIST_DELIVERABLES_REGISTER.md`
