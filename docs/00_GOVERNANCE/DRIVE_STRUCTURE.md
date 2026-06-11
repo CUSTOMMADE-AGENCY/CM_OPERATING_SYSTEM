@@ -9,7 +9,7 @@ GitHub en Google Drive hebben daarom bewust geen identieke structuur:
 - GitHub bewaart Governance, SOPs, Workflows, Playbooks en as-built systeemdocumentatie.
 - Google Drive bewaart live operationele bestanden, signed documents, deliverables en werkbestanden.
 
-Deze pagina documenteert de productie-werkelijkheid van Google Drive. De GitHub-repositoryarchitectuur blijft ongewijzigd en wordt niet één-op-één gespiegeld naar Drive.
+Deze pagina documenteert de productie-werkelijkheid van Google Drive op basis van de live productiecontrole van 2026-06-11. De GitHub-repositoryarchitectuur blijft ongewijzigd en wordt niet één-op-één gespiegeld naar Drive.
 
 ## Goedgekeurde Drive-root
 
@@ -19,7 +19,7 @@ Alle CM Drive-mappen vallen onder één rootfolder:
 
 ## Productie Drive-structuur
 
-De actuele productie-rootstructuur is:
+De actuele productie-rootstructuur is vastgesteld als de live Google Drive-werkelijkheid. Alleen onderstaande rootfolders zijn goedgekeurd als productie-root onder `OS_CUSTOMMADE`:
 
 ```text
 OS_CUSTOMMADE
@@ -36,7 +36,7 @@ OS_CUSTOMMADE
 
 ## Artist Management structuur
 
-Elke artistfolder binnen `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT` gebruikt exact dezelfde interne productiestructuur:
+Elke artistfolder binnen `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT` gebruikt exact dezelfde interne productiestructuur. Dit is de live productie-artiststructuur en vervangt eerdere varianten met `07_CONTENT` of een losse ongenummerde `SOCIALMEDIA`-map:
 
 ```text
 ARTIST_NAME
@@ -62,6 +62,42 @@ Deze regel geldt voor alle huidige en toekomstige artistfolders binnen `OS_CUSTO
 - `KALIBWOY`
 - `LATIFAH`
 - `NAMIKOO`
+
+
+## Productievalidatie
+
+De live productiecontrole bevestigt deze rootfolders onder `OS_CUSTOMMADE`:
+
+| Volgorde | Live productiefolder | Status in documentatie |
+| --- | --- | --- |
+| 00 | `00_INBOX` | Goedgekeurd en gedocumenteerd als tijdelijke intake. |
+| 01 | `01_ARTIST_MANAGEMENT` | Goedgekeurd en gedocumenteerd als artist operations-root. |
+| 02 | `02_MASTER_BOUTIQUE` | Goedgekeurd en gedocumenteerd als Master Boutique-root. |
+| 03 | `03_EXECUTIVE` | Goedgekeurd en gedocumenteerd als Drive-root; bewust anders dan GitHub `docs/03_SHARED_SERVICES/`. |
+| 04 | `04_BUSINESS` | Goedgekeurd en gedocumenteerd als bedrijfsvoering-root. |
+| 05 | `05_MARKETING` | Goedgekeurd en gedocumenteerd als CM-brede marketing-root. |
+| 06 | `06_PROJECTS` | Goedgekeurd en gedocumenteerd als tijdelijke/cross-functionele projectroot. |
+| 07 | `07_ARCHIVE` | Goedgekeurd en gedocumenteerd als operationeel archief. |
+
+De live productiecontrole bevestigt deze vaste subfolders voor elke artistfolder:
+
+| Volgorde | Live artistfolder | Status in documentatie |
+| --- | --- | --- |
+| 01 | `01_ADMIN` | Goedgekeurd en gedocumenteerd. |
+| 02 | `02_CONTRACT` | Goedgekeurd en gedocumenteerd. |
+| 03 | `03_STRATEGY` | Goedgekeurd en gedocumenteerd. |
+| 04 | `04_RELEASES` | Goedgekeurd en gedocumenteerd. |
+| 05 | `05_BOOKING` | Goedgekeurd en gedocumenteerd. |
+| 06 | `06_FINANCE` | Goedgekeurd en gedocumenteerd. |
+| 07 | `07_SOCIALMEDIA` | Goedgekeurd en gedocumenteerd; vervangt de eerder gedocumenteerde `07_CONTENT`-variant. |
+| 08 | `08_PRESS_EPK` | Goedgekeurd en gedocumenteerd. |
+| 09 | `09_ARCHIVE` | Goedgekeurd en gedocumenteerd. |
+
+Niet aangetroffen of niet langer goedgekeurd als Drive-productiestructuur:
+
+- `OS_CUSTOMMADE/03_SHARED_SERVICES` als Drive-rootfolder.
+- `ARTIST_NAME/07_CONTENT` als artistfolder.
+- `ARTIST_NAME/SOCIALMEDIA` als ongenummerde extra artistfolder.
 
 ## Rootfolder-doel
 
