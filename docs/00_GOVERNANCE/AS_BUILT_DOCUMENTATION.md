@@ -42,6 +42,48 @@ docs/
 
 Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie- of linktargets meer. Operationele templates worden niet op meerdere locaties beheerd; GitHub bewaart de templatebron, terwijl ingevulde clientversies in Google Drive, ClickUp of Gmail blijven.
 
+
+## Google Drive productie-as-built
+
+De actuele productie-root van Google Drive is `OS_CUSTOMMADE`. De live rootstructuur is:
+
+```text
+OS_CUSTOMMADE
+├── 00_INBOX
+├── 01_ARTIST_MANAGEMENT
+├── 02_MASTER_BOUTIQUE
+├── 03_EXECUTIVE
+├── 04_BUSINESS
+├── 05_MARKETING
+├── 06_PROJECTS
+└── 07_ARCHIVE
+```
+
+Elke artistfolder onder `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT` gebruikt in productie deze vaste interne structuur:
+
+```text
+ARTIST_NAME
+├── 01_ADMIN
+├── 02_CONTRACT
+├── 03_STRATEGY
+├── 04_RELEASES
+├── 05_BOOKING
+├── 06_FINANCE
+├── 07_SOCIALMEDIA
+├── 08_PRESS_EPK
+└── 09_ARCHIVE
+```
+
+Belangrijke as-built correcties ten opzichte van eerdere documentatie:
+
+- Google Drive gebruikt `03_EXECUTIVE` als productie-rootfolder, niet `03_SHARED_SERVICES`.
+- `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
+- Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`.
+- Artistfolders hebben geen extra ongenummerde `SOCIALMEDIA`-map naast de genummerde mappen.
+- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
+
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels, rootfolder-doelen en het overzicht van verschillen tussen eerder gedocumenteerde en live productie-Drive-structuur.
+
 ## Reviewritme
 
 Review elk kwartaal en na iedere grote rebuild van het operating system.
