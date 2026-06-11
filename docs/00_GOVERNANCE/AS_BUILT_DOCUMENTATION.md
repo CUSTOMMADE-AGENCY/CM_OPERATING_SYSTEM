@@ -45,7 +45,7 @@ Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie-
 
 ## Google Drive productie-as-built
 
-De actuele productie-root van Google Drive is `OS_CUSTOMMADE`. De live rootstructuur is:
+De actuele productie-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built is gevalideerd tegen de live productiecontrole van 2026-06-11. De live rootstructuur is:
 
 ```text
 OS_CUSTOMMADE
@@ -74,13 +74,18 @@ ARTIST_NAME
 └── 09_ARCHIVE
 ```
 
+### Drive-documentatie versus live productie
+
+De as-built status is: de documentatie moet de live Drive-productiestructuur volgen, terwijl de GitHub-repositoryarchitectuur ongewijzigd blijft. De live Drive-rootfolders zijn `00_INBOX`, `01_ARTIST_MANAGEMENT`, `02_MASTER_BOUTIQUE`, `03_EXECUTIVE`, `04_BUSINESS`, `05_MARKETING`, `06_PROJECTS` en `07_ARCHIVE`. De live artistfolders zijn `01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `06_FINANCE`, `07_SOCIALMEDIA`, `08_PRESS_EPK` en `09_ARCHIVE`.
+
 Belangrijke as-built correcties ten opzichte van eerdere documentatie:
 
 - Google Drive gebruikt `03_EXECUTIVE` als productie-rootfolder, niet `03_SHARED_SERVICES`.
 - `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
 - Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`.
 - Artistfolders hebben geen extra ongenummerde `SOCIALMEDIA`-map naast de genummerde mappen.
-- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
+- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht. `docs/03_SHARED_SERVICES/` blijft dus bestaan als documentatiedomein, maar wordt niet als Drive-root gespiegeld.
+- Tweede niveaus onder `02_MASTER_BOUTIQUE`, `03_EXECUTIVE`, `04_BUSINESS`, `05_MARKETING`, `06_PROJECTS` en `07_ARCHIVE` zijn niet als vaste governance-structuur vastgesteld in deze as-built; live Drive-ownership bepaalt daar de verdere inrichting zolang de rootnamen intact blijven.
 
 Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels, rootfolder-doelen en het overzicht van verschillen tussen eerder gedocumenteerde en live productie-Drive-structuur.
 
