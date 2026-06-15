@@ -38,6 +38,74 @@ Voor elk nieuw CM-project, clientdossier, dealdossier, catalog-sale dossier, art
 9. Duplicate template-locaties zijn niet toegestaan. Operationele templates worden uitsluitend beheerd onder `docs/03_SHARED_SERVICES/TEMPLATES/`.
 10. Drive mag werkbare kopieën bevatten, maar GitHub blijft de schone source of truth voor template-governance, SOPs, Playbooks en systeemdocumentatie.
 
+## Lean Nederlandse Drive-structuur voor CM-cases
+
+Nieuwe operationele Google Drive-projectmappen binnen Custommade Agency starten lean, Nederlandstalig en overzichtelijk. Een AI-agent, automation of externe tool mag niet standaard tien Engelse dataroom-mappen aanmaken wanneer de case nog in intake-, document request-, rights verification- of vroege verkoopfase zit.
+
+### Standaardstructuur voor CM PROSPECT / Master Boutique cases
+
+Voor catalog sale, master resale, rights brokerage, buyer prospecting en CM PROSPECT-cases is de standaard Drive-structuur:
+
+```text
+00_START_HIER
+01_RECHTEN_REGISTER
+02_CONTRACTEN_BEWIJS
+03_WAARDERING_VERKOOPPAKKET
+04_OUTREACH_CLICKUP
+99_ARCHIEF
+```
+
+### Betekenis per map
+
+| Map | Functie |
+|---|---|
+| `00_START_HIER` | README, status, instructies, document request, governance-rapporten, template usage en gap logs. |
+| `01_RECHTEN_REGISTER` | Tracklist, ISRC's, master ownership, publishing splits, royalty statements index, catalog data, streamingdata en rights register. |
+| `02_CONTRACTEN_BEWIJS` | Chain of title, producer agreements, feature agreements, distributor agreements, verkoopakkoorden, approvals, claims en juridisch bewijs. |
+| `03_WAARDERING_VERKOOPPAKKET` | Valuation, Deal Memo, Buyer Package, Data Room samenvatting, final export en buyer-facing verkoopmateriaal. |
+| `04_OUTREACH_CLICKUP` | Buyer lead list, outreach-notities, ClickUp-referenties en opvolging. Uitvoering blijft in ClickUp; Drive bevat alleen referentie en opslag. |
+| `99_ARCHIEF` | Superseded bestanden, oude ad-hoc sheets, exports en bestanden die niet meer leidend zijn. |
+
+### Volledigheid binnen lean structuur
+
+Lean betekent minder mappen, niet minder inhoud. Alle due-diligence onderdelen blijven verplicht, maar worden gebundeld in logische hoofdmappen.
+
+Voor master resale / catalog sale moeten minimaal vindbaar zijn:
+
+- tracklist;
+- ISRC's;
+- master ownership;
+- publishing ownership;
+- split sheets;
+- chain of title;
+- producer agreements;
+- feature agreements;
+- distributor agreements;
+- recoupment-status;
+- royalty statements;
+- streamingdata;
+- valuation;
+- Deal Memo;
+- Buyer Package;
+- approvals van rights holders;
+- claims/conflicten/openstaande afspraken;
+- TEMPLATE_USAGE_REPORT;
+- TEMPLATE_GAP_LOG.
+
+### Wanneer uitbreiden naar full Data Room
+
+Een volledige buyer-facing Data Room mag pas worden uitgesplitst wanneer er concrete buyer interest, LOI-fase, APA-fase, closingvoorbereiding of externe due diligence is.
+
+Tot dat moment blijft de case lean. De Data Room-inhoud zit dan functioneel verdeeld over:
+
+- `01_RECHTEN_REGISTER` voor rechten- en catalogusdata;
+- `02_CONTRACTEN_BEWIJS` voor juridisch bewijs;
+- `03_WAARDERING_VERKOOPPAKKET` voor waardering, buyer package en final export.
+
+### Taalregel voor Drive-mappen
+
+Operationele Drive-mappen worden in professioneel Nederlands benoemd. Industry-termen zoals Rights Register, Deal Memo, Buyer Package, Data Room, Due Diligence, Master Rights, Publishing Rights, Neighbouring Rights, LOI en APA mogen in bestandsnamen, sheets, tabs en buyer-facing documenten blijven staan wanneer dat professioneel of marktconform is.
+
 ## Templategebruik per business lane
 
 ### 01 Master Boutique
@@ -80,11 +148,12 @@ Voor elke AI-agent output geldt:
 3. Geen eigen kolomstructuren maken als een template al bestaat.
 4. Bij ontbrekende velden een `TEMPLATE_GAP_LOG.md` aanmaken.
 5. Aan het einde altijd een `TEMPLATE_USAGE_REPORT.md` opleveren.
-6. Drive = opslag.
-7. ClickUp = uitvoering.
-8. Moneybird = financiële waarheid.
-9. GitHub = governance, SOPs, Playbooks, template source of truth en systeemdocumentatie.
-10. FIERCE en Custommade Agency blijven strikt gescheiden. Gebruik nooit FIERCE-governance, FIERCE-templates of FIERCE-mappen binnen Custommade Agency.
+6. Gebruik de lean Nederlandse Drive-structuur, tenzij expliciet sprake is van buyer-facing full Data Room fase.
+7. Drive = opslag.
+8. ClickUp = uitvoering.
+9. Moneybird = financiële waarheid.
+10. GitHub = governance, SOPs, Playbooks, template source of truth en systeemdocumentatie.
+11. FIERCE en Custommade Agency blijven strikt gescheiden. Gebruik nooit FIERCE-governance, FIERCE-templates of FIERCE-mappen binnen Custommade Agency.
 
 ## Taalgovernance
 
@@ -102,4 +171,5 @@ Een projectmap of AI-output is pas governance-proof wanneer:
 4. afwijkingen zijn vastgelegd;
 5. ontbrekende templatebehoeften zijn teruggekoppeld naar GitHub;
 6. de output overdraagbaar is naar ClickUp voor uitvoering;
-7. er geen vermenging is met FIERCE of andere entiteiten.
+7. de lean Nederlandse Drive-structuur wordt gebruikt zolang de case niet buyer-facing full Data Room is;
+8. er geen vermenging is met FIERCE of andere entiteiten.
