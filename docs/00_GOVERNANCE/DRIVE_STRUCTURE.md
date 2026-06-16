@@ -82,7 +82,7 @@ De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-struct
 
 ## Client folder rule
 
-`OS_CUSTOMMADE/03_CLIENTS` bevat uitsluitend merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties. Gebruik deze root niet voor artiestendossiers.
+`OS_CUSTOMMADE/03_CLIENTS` bevat uitsluitend merken, bedrijven, sponsors, opdrachtgevers en media partners. Gebruik deze root niet voor artiestendossiers.
 
 Elke commerciële-relatiefolder gebruikt waar relevant dezelfde genummerde productiestructuur als passend is voor het dossier.
 
@@ -99,7 +99,7 @@ Artist- en client-specifieke instructies staan in de relevante Drive-folder. Bij
 
 ## Script
 
-Gebruik `scripts/google-drive/create-cm-drive-structure.gs` om de rootfolder `OS_CUSTOMMADE`, de goedgekeurde rootfolders, bekende artistfolders onder `02_ARTIST_MANAGEMENT` en standaard dealfolders aan te maken.
+Gebruik `scripts/google-drive/create-cm-drive-structure.gs` om de rootfolder `OS_CUSTOMMADE`, de goedgekeurde rootfolders en bekende management-artistfolders onder `02_ARTIST_MANAGEMENT` aan te maken. Gebruik `createCmDealStructure('DEAL_OR_ASSET_NAME')` pas wanneer een concrete dealcase onder `04_DEALS` moet worden geïnitialiseerd met de lean dealstructuur.
 
 Het script maakt alleen ontbrekende folders aan. Het verwijdert, hernoemt of verplaatst geen bestaande content en voorkomt duplicate folders door bestaande foldernamen eerst te hergebruiken.
 
