@@ -289,7 +289,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Asset intake`, `Rights review`, `Financial review`, `Valuation`, `Buyer targeting`, `LOI phase`, `Due Diligence`, `APA phase` |
 | Required subtasks | Asset intake afronden; repertoirelijst verzamelen; rights review uitvoeren; financial review en revenue reconciliation uitvoeren; valuation low/base/high cases maken; deal thesis opstellen; Buyer target list maken; Data Room-plan bouwen; teaser/process letter voorbereiden; LOI comparison voorbereiden; Diligence issue list openen; APA issue list openen; closing binder voorbereiden |
 | Approval owner | CM deal lead voor proceskwaliteit; Seller of buyer principal voor commerciële besluiten; counsel voor legal transfer, consents en APA; finance/royalty analyst voor revenue evidence |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/00_Intake`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_Valuation`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_Data_Room` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Seller Intake`; `CM - Master Boutique - Buyer Outreach Intro`; `CM - Master Boutique - NDA Follow Up`; `CM - Master Boutique - LOI Request` |
 | Completion criteria | Asset perimeter memo, rights review memo, financial review workbook, valuation memo, Buyer target list, Data Room-plan en go/no-go decision staan in Drive; elke fase heeft owner, deadline en next action in ClickUp; unresolved rights/data issues zijn gelogd; confidential outreach start pas na approved thesis en disclosure-plan |
 
@@ -306,7 +306,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Buyer shortlist`, `Teaser sent`, `NDA sent`, `NDA signed`, `Process letter sent`, `Offer received`, `No response`, `Declined` |
 | Required subtasks | Buyer universe definiëren; Buyer shortlist goedkeuren; teaser en outreach copy controleren; outreach batch aanmaken; NDA uitsturen; follow-up cadans plannen; Buyer responses loggen; Buyer qualification taak openen; process letter delen na approval; biedingen centraal vastleggen; offer comparison memo bijwerken |
 | Approval owner | CM deal lead voor outreach control; Seller of decision owner voor Buyer shortlist en disclosure approval; counsel voor NDA/procesvoorwaarden |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_Buyer_Outreach` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Buyer Outreach Intro`; `CM - Master Boutique - NDA Follow Up`; `CM - Master Boutique - Buyer Qualification Request`; `CM - Master Boutique - LOI Request` |
 | Completion criteria | Buyer shortlist, outreach tracker, NDA status, response log en offer comparison staan in Drive of ClickUp; geen confidential information is gedeeld zonder NDA/approval; iedere Buyer heeft status, owner, next action en laatste contactdatum; Seller heeft material buyer interactions en biedingen reviewed |
 
@@ -323,7 +323,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Qualified`, `Conditional`, `Disqualified`, `Needs more info` |
 | Required subtasks | Buyer profile aanmaken; strategic fit beoordelen; financial capacity beoordelen; rights/repertoire appetite beoordelen; execution reliability beoordelen; confidentiality discipline beoordelen; approval en funding route bevestigen; red flags loggen; qualification decision vastleggen; Data Room access level aanbevelen |
 | Approval owner | CM deal lead voor qualification decision; Seller of decision owner voor doorgaan met Buyer; counsel bij confidentiality, sanctions, legal of funding concerns |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_Buyer_Outreach/Buyer_Qualification` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Buyer Qualification Request`; `CM - Master Boutique - NDA Follow Up`; `CM - Master Boutique - Data Room Access Granted` |
 | Completion criteria | Elke Buyer heeft score/decision, rationale, red flags, approved next action en Data Room access recommendation; disqualified Buyers krijgen geen toegang tot confidential materials; conditional Buyers hebben concrete ontbrekende inputs met deadline |
 
@@ -340,7 +340,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Access requested`, `NDA verified`, `Level approved`, `Access granted`, `Access changed`, `Access revoked`, `Access audit` |
 | Required subtasks | NDA en Buyer qualification controleren; access level bepalen; folder permissions voorbereiden; access approval vastleggen; Data Room access verlenen; toegang en datum loggen; Q&A-log koppelen; sensitive document requests reviewen; access audit uitvoeren; access intrekken bij reject, closing of procespauze |
 | Approval owner | CM deal lead voor access control; Seller of decision owner voor Level 2/3 access; counsel voor zeer gevoelige juridische, fiscale of closing-documenten |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_Data_Room` met subfolders `Level_1`, `Level_2`, `Level_3`, `Q&A_Log` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS` en `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`; full Data Room-subfolders alleen na expliciete buyer-facing approval |
 | Gmail templates used | `CM - Master Boutique - Data Room Access Granted`; `CM - Master Boutique - Data Room Access Revoked`; `CM - Master Boutique - NDA Follow Up` |
 | Completion criteria | Access log bevat Buyer, NDA status, access level, approved by, granted date, revoked date en restrictions; alle Level 2/3 requests hebben approval evidence; Q&A en sensitive document requests zijn centraal gelogd; access is ingetrokken wanneer Buyer niet meer actief is |
 
@@ -357,7 +357,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `LOI requested`, `LOI received`, `LOI review`, `Counter comments`, `Client decision`, `Accepted`, `Rejected`, `Moved to APA` |
 | Required subtasks | LOI request format versturen; received LOI uploaden; price, Assets, structure, exclusivity, diligence Scope, closing conditions, holdback, earnout, approvals, costs en binding language reviewen; LOI comparison maken; red flags en trade-offs markeren; client recommendation opstellen; counsel review coördineren; accepted/rejected decision vastleggen; Due Diligence en APA tasks openen |
 | Approval owner | Seller/buyer principal of decision owner voor accept/reject; CM deal lead voor commercial recommendation; counsel voor legal/binding language en exclusivity |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/04_LOI` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - LOI Request`; `CM - Master Boutique - LOI Review Summary`; `CM - Master Boutique - APA Issue Update` |
 | Completion criteria | Alle LOI's staan in Drive; LOI comparison bevat prijs, structuur, voorwaarden, exclusiviteit, diligence burden en closing certainty; client decision is schriftelijk vastgelegd; accepted LOI heeft follow-up taken voor Due Diligence, APA, Data Room access en closing timeline |
 
@@ -374,7 +374,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `APA drafting`, `Issue log open`, `Counsel review`, `Business position needed`, `Signing readiness`, `Signed`, `Moved to Closing` |
 | Required subtasks | APA business-point checklist maken; issue log openen; deal economics en purchase price mechanics reviewen; Asset schedules reviewen; Due Diligence-issues toewijzen; disclosure schedule inputs verzamelen; approved negotiation positions vastleggen; counsel comments coördineren; consents, notices en closing deliverables volgen; signing readiness controleren; post-closing obligations tracker maken |
 | Approval owner | Deal lead voor issue log en client alignment; client/decision owner voor materiële businessposities; counsel voor drafting en legal advice |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/05_APA_Negotiation` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS` |
 | Gmail templates used | `CM - Master Boutique - APA Issue Update`; `CM - Master Boutique - Closing Checklist`; `CM - Master Boutique - LOI Review Summary` |
 | Completion criteria | APA business-point checklist, issue log, approved negotiation positions, closing checklist en post-closing obligations tracker staan in Drive/ClickUp; geen material issue mist owner, status en next action; signing readiness is bevestigd op APA, schedules, approvals, funds flow, signatures en blockers |
 
@@ -391,7 +391,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Closing checklist open`, `Funds flow pending`, `Signatures pending`, `Consents / notices pending`, `Closed`, `Post-closing handoff` |
 | Required subtasks | Closing checklist finaliseren; final APA en schedules controleren; payment/funds flow instructions bevestigen; signatures en approvals volgen; assignments voorbereiden; consents en notices volgen; access transfers voorbereiden; closing binder samenstellen; closing confirmation versturen; post-closing obligations, royalty redirection en reporting follow-up aanmaken; lessons learned vastleggen |
 | Approval owner | Client/decision owner voor final close; counsel voor legal closing deliverables; CM deal lead voor checklist, handoff en evidence; finance/tax advisor voor payment mechanics waar relevant |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/06_Closing` en `OS_CUSTOMMADE/04_DEALS/[Deal Name]/07_Post_Closing` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS` en `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Closing Checklist`; `CM - Master Boutique - Closing Confirmation`; `CM - Master Boutique - APA Issue Update` |
 | Completion criteria | Signed documents, closing checklist, funds flow evidence, assignments, notices, access transfer proof en closing binder staan in Drive; post-closing obligations hebben owner en due date in ClickUp; deal status is `Closed`; client heeft closing confirmation ontvangen; geen unresolved closing blockers blijven zonder escalation |
 
@@ -408,6 +408,6 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Trigger check`, `Calculation`, `Client approval needed`, `Invoice requested`, `Invoice sent`, `Paid`, `Disputed`, `Waived` |
 | Required subtasks | Engagement letter/mandaat en Success Fee terms reviewen; fee trigger bepalen; final transaction economics bevestigen; fee calculation maken; supporting evidence verzamelen; internal approval vragen; client approval of notice vastleggen; invoice request naar finance sturen; invoice status volgen; payment confirmation opslaan; dispute/escalation log openen indien nodig; revenue recognition note archiveren |
 | Approval owner | CM leadership of deal lead voor fee calculation en enforcement; finance/admin voor invoice; client/decision owner wanneer contractueel approval/notice nodig is; counsel bij dispute of interpretation issue |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/08_Success_Fee` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Success Fee Invoice Request`; `CM - Master Boutique - Closing Confirmation`; `CM - Master Boutique - APA Issue Update` |
 | Completion criteria | Success Fee calculation, trigger evidence, approval/notice, invoice request, invoice copy en payment confirmation staan in Drive; ClickUp bevat fee amount, due date, invoice status en owner; disputed of waived fees hebben written rationale en CM leadership approval; deal financial close-out is gemarkeerd als completed |
