@@ -19,9 +19,9 @@ GitHub bewaart de operating rules, Workflows, SOP's en templates. Client-specifi
 | Duplicaat of legacy document | Primaire bron | Advies | Reden |
 |---|---|---|---|
 | `ARTIST_BRAND_AUDIT_FLOW.md` | `02_BRAND_AUDIT_FLOW.md` | ARCHIVE na controle | De korte Brand Audit-samenvatting behandelt dezelfde auditgebieden en output als de genummerde Brand Audit Workflow. |
-| `03_ARTIST_BRANDBOOK_FLOW.md` | `03_ARTIST_BRANDBOOK_FLOW.md` | MERGE, daarna ARCHIVE | Beide documenten beschrijven Brandbook-doel, inputs, proces, approval en outputs. De genummerde Workflow is de canonical versie; behoud nuttige Brandbook-section details uit het legacy document alleen als ze ontbreken. |
-| `05_RELEASE_STRATEGY_FLOW.md` | `05_RELEASE_STRATEGY_FLOW.md` | ARCHIVE na controle | De korte release-flow is een samenvatting van de genummerde Release Strategie Workflow. |
-| `06_MONTHLY_MANAGEMENT_FLOW.md` | `06_MONTHLY_MANAGEMENT_FLOW.md` | MERGE, daarna ARCHIVE | Beide documenten beschrijven dezelfde monthly cycle. De genummerde versie is completer; behoud eventuele bruikbare checklist-taal uit het legacy document. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_ARTIST_BRANDBOOK_FLOW.md` | `03_ARTIST_BRANDBOOK_FLOW.md` | MERGED en ARCHIVED | Beide documenten beschrijven Brandbook-doel, inputs, proces, approval en outputs. De genummerde Workflow is de canonical versie; behoud nuttige Brandbook-section details uit het legacy document alleen als ze ontbreken. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_RELEASE_STRATEGY_FLOW.md` | `05_RELEASE_STRATEGY_FLOW.md` | ARCHIVED na controle | De korte release-flow is een samenvatting van de genummerde Release Strategie Workflow. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_MONTHLY_MANAGEMENT_FLOW.md` | `06_MONTHLY_MANAGEMENT_FLOW.md` | MERGED en ARCHIVED | Beide documenten beschrijven dezelfde monthly cycle. De genummerde versie is completer; behoud eventuele bruikbare checklist-taal uit het legacy document. |
 | `CLOSE_OUT_FLOW.md` | `09_ARTIST_OFFBOARDING_FLOW.md` | ARCHIVE na controle | Close-out is inhoudelijk onderdeel van Offboarding. |
 
 ### Overlap groter dan 50%
@@ -63,9 +63,9 @@ GitHub bewaart de operating rules, Workflows, SOP's en templates. Client-specifi
 | `ARTIST_INTAKE_FLOW.md` | MERGE + MOVE TO CLICKUP | Verwerk in Onboarding; maak intake-task template voor live uitvoering. |
 | `ARTIST_CLIENT_WORKFLOW.md` | ARCHIVE | Vervangen door dit mapdocument. |
 | `ARTIST_BRAND_AUDIT_FLOW.md` | ARCHIVE | Vervangen door `02_BRAND_AUDIT_FLOW.md`. |
-| `03_ARTIST_BRANDBOOK_FLOW.md` | MERGE + ARCHIVE | Haal unieke Brandbook-section details over naar `03_ARTIST_BRANDBOOK_FLOW.md` indien gewenst. |
-| `05_RELEASE_STRATEGY_FLOW.md` | ARCHIVE | Vervangen door `05_RELEASE_STRATEGY_FLOW.md`. |
-| `06_MONTHLY_MANAGEMENT_FLOW.md` | MERGE + ARCHIVE | Haal unieke checklist-taal over naar `06_MONTHLY_MANAGEMENT_FLOW.md` indien gewenst. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_ARTIST_BRANDBOOK_FLOW.md` | ARCHIVED | Unieke Brandbook-section details zijn beoordeeld tegen `03_ARTIST_BRANDBOOK_FLOW.md`. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_RELEASE_STRATEGY_FLOW.md` | ARCHIVED | Vervangen door `05_RELEASE_STRATEGY_FLOW.md`. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_MONTHLY_MANAGEMENT_FLOW.md` | ARCHIVED | Unieke checklist-taal is beoordeeld tegen `06_MONTHLY_MANAGEMENT_FLOW.md`. |
 | `CLOSE_OUT_FLOW.md` | ARCHIVE | Vervangen door `09_ARTIST_OFFBOARDING_FLOW.md`. |
 | `DEALS_RIGHTS_FLOW.md` | MERGE + ARCHIVE | Splits inhoud tussen Deal Negotiation en Rights Royalty Audit. |
 
