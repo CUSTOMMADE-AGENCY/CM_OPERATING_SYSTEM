@@ -1,24 +1,30 @@
 /**
- * Exports the OS_CUSTOMMADE Google Drive folder inventory to Google Sheets.
+ * OS_CUSTOMMADE Drive inventory export for Sprint 2A.
  *
- * Sprint 2 purpose:
- * - Produce one spreadsheet row per folder under OS_CUSTOMMADE.
- * - Support migration decisions without moving, renaming, deleting or sharing files.
- * - Classify each folder against the approved governance roots.
+ * Governance basis:
+ * - docs/00_GOVERNANCE/DECISION_LOG.md
+ * - docs/00_GOVERNANCE/GOVERNANCE_RULES.md
+ * - docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md
+ * - docs/00_GOVERNANCE/IMPLEMENTATION_ROADMAP.md
+ * - docs/00_GOVERNANCE/SPRINT2_DRIVE_MIGRATION_PLAN.md
+ * - docs/00_GOVERNANCE/SPRINT2A_DRIVE_INVENTORY_REQUIREMENTS.md
  *
- * Usage:
- * 1. Open script.google.com in the Google account that can read OS_CUSTOMMADE.
- * 2. Paste this file into a Google Apps Script project.
- * 3. Set OS_CUSTOMMADE_FOLDER_ID when you know the folder ID, or leave it empty
- *    to find the first folder named OS_CUSTOMMADE that the account can access.
- * 4. Optionally set OUTPUT_SPREADSHEET_ID to append/update an existing Sheet.
- * 5. Run exportDriveInventory().
+ * Purpose:
+ * - Export one row per folder below a configured OS_CUSTOMMADE root folder.
+ * - Support Sprint 2 migration review in Google Sheets.
+ * - Inventory only: this script does not move, rename, delete, create, share or archive Drive content.
+ *
+ * Setup:
+ * 1. Paste this file into Google Apps Script.
+ * 2. Set ROOT_FOLDER_ID to the OS_CUSTOMMADE Drive folder ID.
+ * 3. Optionally set OUTPUT_SPREADSHEET_ID to reuse an existing Sheet.
+ * 4. Run exportDriveInventory().
  */
-const OS_CUSTOMMADE_FOLDER_ID = '';
+const ROOT_FOLDER_ID = '';
 const OUTPUT_SPREADSHEET_ID = '';
-const OS_CUSTOMMADE_ROOT_NAME = 'OS_CUSTOMMADE';
+const INVENTORY_ROOT_NAME = 'OS_CUSTOMMADE';
 const INVENTORY_SHEET_NAME = 'Drive Inventory';
-const SUMMARY_SHEET_NAME = 'Sprint 2 Summary';
+const SUMMARY_SHEET_NAME = 'Sprint 2A Summary';
 const EXPORT_TIMEZONE = Session.getScriptTimeZone() || 'Etc/UTC';
 
 const MIGRATION_ACTIONS = [
@@ -43,7 +49,7 @@ const GOVERNANCE_ROOTS = {
   '99_ARCHIVE': 'OS_CUSTOMMADE/99_ARCHIVE',
 };
 
-const ARTIST_NAMES = [
+const KNOWN_ARTIST_NAMES = [
   'CALSEY',
   'DANI DEAUX',
   'DODO',
@@ -60,14 +66,13 @@ const INVENTORY_HEADERS = [
   'Folder naam',
   'Volledig pad',
   'Parent folder',
+  'Root folder',
+  'Governance root',
   'Eigenaar',
   'Aantal bestanden',
   'Aantal submappen',
   'Laatst gewijzigd',
-  'Huidige root',
-  'Governance root',
   'Migratieactie',
-  'Review status',
   'Opmerking',
   'Folder URL',
   'Parent folder ID',
@@ -75,14 +80,14 @@ const INVENTORY_HEADERS = [
 ];
 
 function exportDriveInventory() {
-  const rootFolder = getOsCustommadeRootFolder_();
+  const rootFolder = getRootFolder_();
   const spreadsheet = getOrCreateOutputSpreadsheet_();
   const inventorySheet = resetSheet_(spreadsheet, INVENTORY_SHEET_NAME);
   const summarySheet = resetSheet_(spreadsheet, SUMMARY_SHEET_NAME);
   const exportTimestamp = Utilities.formatDate(new Date(), EXPORT_TIMEZONE, "yyyy-MM-dd'T'HH:mm:ssXXX");
-
   const rows = [];
-  collectFolderRows_(rootFolder, OS_CUSTOMMADE_ROOT_NAME, rows, exportTimestamp);
+
+  collectFolderRows_(rootFolder, rootFolder.getName() || INVENTORY_ROOT_NAME, rows, exportTimestamp);
   writeInventory_(inventorySheet, rows);
   writeSummary_(summarySheet, rootFolder, rows, exportTimestamp);
 
@@ -93,24 +98,23 @@ function exportDriveInventory() {
 
 function collectFolderRows_(folder, fullPath, rows, exportTimestamp) {
   const parentInfo = getPrimaryParentInfo_(folder);
-  const currentRoot = getCurrentRootFromPath_(fullPath);
+  const rootFolder = getRootFolderFromPath_(fullPath);
   const governanceRoot = getGovernanceRootFromPath_(fullPath);
   const counts = countDirectChildren_(folder);
-  const migrationDecision = determineMigrationAction_(folder.getName(), fullPath, currentRoot, governanceRoot);
+  const migrationDecision = determineMigrationAction_(folder.getName(), fullPath, rootFolder, governanceRoot);
 
   rows.push([
     folder.getId(),
     folder.getName(),
     fullPath,
     parentInfo.name,
+    rootFolder,
+    governanceRoot,
     getOwnerEmail_(folder),
     counts.files,
     counts.folders,
     formatDate_(folder.getLastUpdated()),
-    currentRoot,
-    governanceRoot,
     migrationDecision.action,
-    migrationDecision.status,
     migrationDecision.note,
     folder.getUrl(),
     parentInfo.id,
@@ -124,80 +128,73 @@ function collectFolderRows_(folder, fullPath, rows, exportTimestamp) {
   }
 }
 
-function determineMigrationAction_(folderName, fullPath, currentRoot, governanceRoot) {
-  if (fullPath === OS_CUSTOMMADE_ROOT_NAME) {
+function determineMigrationAction_(folderName, fullPath, rootFolder, governanceRoot) {
+  if (fullPath === folderName) {
     return {
       action: 'behouden',
-      status: 'GOEDGEKEURD VOOR REVIEW',
-      note: 'OS_CUSTOMMADE root is de inventarisbasis en wordt niet gemigreerd.',
+      note: 'Inventaris-root; alleen inventariseren, niet migreren.',
     };
   }
 
   if (!governanceRoot) {
     return {
       action: 'handmatige review',
-      status: 'HOLD',
-      note: 'Map valt niet onder een vastgelegde governance root.',
+      note: 'Map valt niet onder een vastgelegde OS_CUSTOMMADE governance root; classificatie en ownerbesluit verplicht.',
     };
   }
 
-  if (currentRoot === folderName) {
-    return {
-      action: 'behouden',
-      status: 'GOEDGEKEURD VOOR REVIEW',
-      note: 'Root of governance top-level map staat al op de doelstructuur.',
-    };
-  }
-
-  if (isArtistFolder_(folderName) && governanceRoot !== GOVERNANCE_ROOTS['02_ARTIST_MANAGEMENT']) {
+  if (isKnownArtistFolder_(folderName) && governanceRoot !== GOVERNANCE_ROOTS['02_ARTIST_MANAGEMENT']) {
     return {
       action: 'verplaatsen',
-      status: 'OWNER REVIEW',
-      note: 'Artiestmap lijkt buiten 02_ARTIST_MANAGEMENT te staan.',
+      note: 'Bekende artiestenmap lijkt buiten 02_ARTIST_MANAGEMENT te staan; artist/client-conflict controleren.',
     };
   }
 
-  if (hasArchiveSignal_(folderName, fullPath) && governanceRoot !== GOVERNANCE_ROOTS['99_ARCHIVE']) {
+  if (hasFierceSignal_(folderName, fullPath)) {
     return {
-      action: 'archiveren',
-      status: 'OWNER REVIEW',
-      note: 'Naam of pad bevat archive/archief/old/obsolete-signaal.',
+      action: 'handmatige review',
+      note: 'Mogelijk FIERCE-content; CM en FIERCE blijven strikt gescheiden. Niet migreren zonder uitsluitbesluit.',
     };
   }
 
   if (hasDuplicateSignal_(folderName)) {
     return {
       action: 'samenvoegen',
-      status: 'OWNER REVIEW',
-      note: 'Naam bevat duplicaat/kopie-signaal; canonical map bevestigen.',
+      note: 'Naam bevat duplicaat-, kopie- of backup-signaal; canonical map en samenvoegplan verplicht.',
+    };
+  }
+
+  if (hasArchiveSignal_(folderName, fullPath) && governanceRoot !== GOVERNANCE_ROOTS['99_ARCHIVE']) {
+    return {
+      action: 'archiveren',
+      note: 'Naam of pad bevat archive/archief/old/obsolete-signaal; owner moet bevestigen dat geen actieve links of verplicht bewijs bestaan.',
+    };
+  }
+
+  if (rootFolder === Object.keys(GOVERNANCE_ROOTS).find(function(key) { return GOVERNANCE_ROOTS[key] === governanceRoot; })) {
+    return {
+      action: 'behouden',
+      note: 'Map staat onder een goedgekeurde governance root; owner-, link- en risicoreview blijven verplicht vóór Sprint 2 migratie.',
     };
   }
 
   return {
     action: 'behouden',
-    status: 'TE REVIEWEN',
-    note: 'Geen automatische conflictindicator gevonden; owner/link-review blijft verplicht vóór migratie.',
+    note: 'Geen automatische conflictindicator gevonden; gebruik de analysis workflow voor definitieve actie.',
   };
 }
 
-function getOsCustommadeRootFolder_() {
-  if (OS_CUSTOMMADE_FOLDER_ID) {
-    return DriveApp.getFolderById(OS_CUSTOMMADE_FOLDER_ID);
+function getRootFolder_() {
+  if (!ROOT_FOLDER_ID) {
+    throw new Error('Set ROOT_FOLDER_ID to the OS_CUSTOMMADE Drive folder ID before running exportDriveInventory().');
   }
-
-  const matches = DriveApp.getFoldersByName(OS_CUSTOMMADE_ROOT_NAME);
-  if (!matches.hasNext()) {
-    throw new Error('No accessible folder named ' + OS_CUSTOMMADE_ROOT_NAME + ' found. Set OS_CUSTOMMADE_FOLDER_ID.');
-  }
-
-  return matches.next();
+  return DriveApp.getFolderById(ROOT_FOLDER_ID);
 }
 
 function getOrCreateOutputSpreadsheet_() {
   if (OUTPUT_SPREADSHEET_ID) {
     return SpreadsheetApp.openById(OUTPUT_SPREADSHEET_ID);
   }
-
   const timestamp = Utilities.formatDate(new Date(), EXPORT_TIMEZONE, 'yyyyMMdd-HHmmss');
   return SpreadsheetApp.create('OS_CUSTOMMADE Drive Inventory - ' + timestamp);
 }
@@ -211,11 +208,9 @@ function resetSheet_(spreadsheet, sheetName) {
 
 function writeInventory_(sheet, rows) {
   sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setValues([INVENTORY_HEADERS]);
-
   if (rows.length > 0) {
     sheet.getRange(2, 1, rows.length, INVENTORY_HEADERS.length).setValues(rows);
   }
-
   sheet.setFrozenRows(1);
   sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setFontWeight('bold');
   sheet.autoResizeColumns(1, INVENTORY_HEADERS.length);
@@ -226,7 +221,7 @@ function writeSummary_(sheet, rootFolder, rows, exportTimestamp) {
   const actionCounts = countByColumn_(rows, 10);
   const summaryRows = [
     ['Veld', 'Waarde'],
-    ['Root folder', OS_CUSTOMMADE_ROOT_NAME],
+    ['Root folder naam', rootFolder.getName()],
     ['Root folder ID', rootFolder.getId()],
     ['Root folder URL', rootFolder.getUrl()],
     ['Export timestamp', exportTimestamp],
@@ -236,9 +231,8 @@ function writeSummary_(sheet, rootFolder, rows, exportTimestamp) {
     ['samenvoegen', actionCounts['samenvoegen'] || 0],
     ['archiveren', actionCounts['archiveren'] || 0],
     ['handmatige review', actionCounts['handmatige review'] || 0],
-    ['Sprint 2 instructie', 'Gebruik deze export als reviewbasis; voer geen migratie uit zonder owner-, link- en risico-review.'],
+    ['Governance instructie', 'Alleen inventarisatie. Geen Drive-wijzigingen. Definitieve migratieactie pas na owner-, link-, FIERCE-, legal/finance- en risicoreview.'],
   ];
-
   sheet.getRange(1, 1, summaryRows.length, 2).setValues(summaryRows);
   sheet.getRange(1, 1, 1, 2).setFontWeight('bold');
   sheet.autoResizeColumns(1, 2);
@@ -248,7 +242,6 @@ function applyMigrationActionValidation_(sheet, rowCount) {
   if (rowCount < 1) {
     return;
   }
-
   const validation = SpreadsheetApp.newDataValidation()
     .requireValueInList(MIGRATION_ACTIONS, true)
     .setAllowInvalid(false)
@@ -261,17 +254,14 @@ function countDirectChildren_(folder) {
   let folders = 0;
   const fileIterator = folder.getFiles();
   const folderIterator = folder.getFolders();
-
   while (fileIterator.hasNext()) {
     fileIterator.next();
     files += 1;
   }
-
   while (folderIterator.hasNext()) {
     folderIterator.next();
     folders += 1;
   }
-
   return { files: files, folders: folders };
 }
 
@@ -280,7 +270,6 @@ function getPrimaryParentInfo_(folder) {
   if (!parents.hasNext()) {
     return { id: '', name: '' };
   }
-
   const parent = parents.next();
   return { id: parent.getId(), name: parent.getName() };
 }
@@ -294,14 +283,14 @@ function getOwnerEmail_(folder) {
   }
 }
 
-function getCurrentRootFromPath_(fullPath) {
+function getRootFolderFromPath_(fullPath) {
   const parts = fullPath.split('/');
   return parts.length > 1 ? parts[1] : parts[0];
 }
 
 function getGovernanceRootFromPath_(fullPath) {
-  const currentRoot = getCurrentRootFromPath_(fullPath);
-  return GOVERNANCE_ROOTS[currentRoot] || '';
+  const rootFolder = getRootFolderFromPath_(fullPath);
+  return GOVERNANCE_ROOTS[rootFolder] || '';
 }
 
 function formatDate_(dateValue) {
@@ -316,16 +305,21 @@ function countByColumn_(rows, columnIndex) {
   }, {});
 }
 
-function isArtistFolder_(folderName) {
-  return ARTIST_NAMES.indexOf(folderName.toUpperCase()) !== -1;
+function isKnownArtistFolder_(folderName) {
+  return KNOWN_ARTIST_NAMES.indexOf(folderName.toUpperCase()) !== -1;
 }
 
 function hasArchiveSignal_(folderName, fullPath) {
-  return /(^|[\s_\-/])(archive|archief|old|obsolete|vervallen)([\s_\-/]|$)/i.test(folderName)
-    || /(^|[\s_\-/])(archive|archief|old|obsolete|vervallen)([\s_\-/]|$)/i.test(fullPath);
+  const archivePattern = /(^|[\s_\-/])(archive|archief|old|obsolete|vervallen)([\s_\-/]|$)/i;
+  return archivePattern.test(folderName) || archivePattern.test(fullPath);
 }
 
 function hasDuplicateSignal_(folderName) {
   return /(copy|kopie|duplicate|duplicaat|backup|back-up|oud)$/i.test(folderName)
     || /\((copy|kopie|duplicate|duplicaat)\)/i.test(folderName);
+}
+
+function hasFierceSignal_(folderName, fullPath) {
+  return /(^|[\s_\-/])fierce([\s_\-/]|$)/i.test(folderName)
+    || /(^|[\s_\-/])fierce([\s_\-/]|$)/i.test(fullPath);
 }
