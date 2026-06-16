@@ -12,9 +12,9 @@ Dit document is leidende governance voor Week 1 van het CM Operating System. All
 
 De Google Drive briefing-roots zijn leidend voor operationele client-, case- en projectdossiers. GitHub blijft de schone source of truth voor governance, SOPs, Playbooks, templates en systeemdocumentatie, maar Drive is de operationele working environment voor live dossiers, documenten, deliverables en rapportages.
 
-### 2. Artists worden behandeld als clients
+### 2. Artistdossiers blijven onder Artist Management
 
-Artists worden in het CM Operating System behandeld als clients. Artist-gerelateerde operationele dossiers horen daarom thuis onder `03_CLIENTS` in de operationele Drive-structuur en niet als aparte losstaande artist-silo.
+`02_ARTIST_MANAGEMENT` blijft de primaire operationele Drive-locatie voor alle artiestendossiers. Artists worden niet gemigreerd naar `03_CLIENTS`. `03_CLIENTS` bevat uitsluitend merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties.
 
 ### 3. ClickUp gebruikt één CM Space met folders
 
@@ -37,7 +37,7 @@ Custommade Agency en FIERCE blijven strikt gescheiden in governance, documenten,
 Week 1 is pas klaar wanneer de volgende onderdelen aantoonbaar zijn verwerkt:
 
 1. Drive-governance is verwerkt en sluit aan op de leidende briefing-roots.
-2. Artist-dossiers zijn als client-dossiers gemapt naar `03_CLIENTS`.
+2. Artist-dossiers zijn gemapt naar `02_ARTIST_MANAGEMENT`; `03_CLIENTS` is beperkt tot merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties.
 3. ClickUp-mapping gebruikt één CM Space met folders.
 4. Moneybird is vastgelegd als financiële waarheid.
 5. Pure shims zijn geïnventariseerd en blijven behouden zolang ze actief gelinkt zijn.

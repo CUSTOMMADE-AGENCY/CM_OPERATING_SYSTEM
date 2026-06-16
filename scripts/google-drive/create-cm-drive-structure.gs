@@ -49,8 +49,8 @@ const DEAL_SUBFOLDERS = [
 const CM_DRIVE_STRUCTURE = {
   '00_ADMIN': [],
   '01_MASTER_BOUTIQUE': [],
-  '02_ARTIST_MANAGEMENT': [],
-  '03_CLIENTS': ARTISTS,
+  '02_ARTIST_MANAGEMENT': ARTISTS,
+  '03_CLIENTS': [],
   '04_DEALS': [],
   '05_OPERATIONS': [],
   '06_FINANCE': [],
@@ -74,7 +74,7 @@ function createCmDriveStructure() {
     secondLevelFolders.forEach(function(secondLevelFolderName) {
       const secondLevelFolder = getOrCreateFolder(rootFolder, secondLevelFolderName);
 
-      if (rootFolderName === '03_CLIENTS') {
+      if (rootFolderName === '02_ARTIST_MANAGEMENT') {
         ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
           getOrCreateFolder(secondLevelFolder, artistSubfolderName);
         });

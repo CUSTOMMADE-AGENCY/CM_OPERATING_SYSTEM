@@ -15,22 +15,23 @@ Deze validatie vergelijkt de volgende governance- en systeembronnen:
 
 ## Leidende governance
 
-`docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` is leidend. Bij conflict volgt Week 1 governance de locked decisions, de goedgekeurde Drive-rootlaag, één centrale ClickUp Space, Moneybird als financiële waarheid en de gescheiden governance voor Custommade Agency versus FIERCE.
+`docs/00_GOVERNANCE/DECISION_LOG.md` en `docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` zijn leidend voor de gecorrigeerde locked decision van 2026-06-16: `02_ARTIST_MANAGEMENT` blijft de primaire locatie voor alle artiestendossiers. `03_CLIENTS` bevat uitsluitend merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties.
 
 ## Validatiematrix
 
 | # | Controle | Uitkomst | Bevinding |
 |---|---|---|---|
 | 1 | Rootstructuur exact gelijk | PASS | `DRIVE_STRUCTURE.md`, `AS_BUILT_DOCUMENTATION.md` en `create-cm-drive-structure.gs` gebruiken dezelfde operationele Drive-rootlaag onder `OS_CUSTOMMADE`: `00_ADMIN`, `01_MASTER_BOUTIQUE`, `02_ARTIST_MANAGEMENT`, `03_CLIENTS`, `04_DEALS`, `05_OPERATIONS`, `06_FINANCE`, `07_LEGAL`, `08_MARKETING`, `09_CONTENT`, `99_ARCHIVE`. |
-| 2 | `03_CLIENTS` is operationele client-locatie | PASS | Locked decisions, Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat artists/clients operationeel onder `OS_CUSTOMMADE/03_CLIENTS` vallen. |
-| 3 | `04_DEALS` is operationele deal-locatie | PASS | Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat Master Boutique en andere deals onder `OS_CUSTOMMADE/04_DEALS` vallen. |
-| 4 | Standaard deals gebruiken de lean CM dealstructuur | PASS | Governance, mappings en script gebruiken dezelfde standaard: `00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`. |
-| 5 | Data Room, LOI, APA, Closing en Success Fee pas vanaf due diligence | PASS | Governance en ClickUp-mapping leggen vast dat deze mappen, substructuren en specialistische taken pas worden aangemaakt wanneer een deal de due diligence fase bereikt. De termen blijven toegestaan als professionele workflow- of transactietermen. |
-| 6 | Geen oude roots actief: `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING`, `07_ARCHIVE` | PASS | De gecontroleerde productie-rootstructuur en het Apps Script maken deze oude roots niet aan. `Pipeline` komt alleen terug als ClickUp execution-folder/statuscontext, niet als Drive-root. |
-| 7 | Eén ClickUp Space | PASS | `DECISION_LOG.md`, locked decisions, `CLICKUP_MAPPING.md` en `CLICKUP_STRUCTURE.md` bevestigen exact één centrale ClickUp Space: `CM`. |
-| 8 | Moneybird = financiële waarheid | PASS | `DECISION_LOG.md`, locked decisions, governance rules, Drive-governance en ClickUp-structuur bevestigen Moneybird als financiële waarheid/source of truth. |
-| 9 | PDF governance aanwezig | PASS | Locked decisions en governance rules vereisen operationele rapporten als `.md` plus `.pdf`, waarbij PDF de primaire leesversie is en `.md` het bronbestand blijft. |
-| 10 | Geen conflicten tussen governance-documenten | PASS | Het eerdere conflict tussen de drie-map dealstandaard en de uitgebreidere CM PROSPECT / Master Boutique-structuur is opgelost in het voordeel van de door de gebruiker bevestigde lean CM dealstructuur. |
+| 2 | `02_ARTIST_MANAGEMENT` is primaire artist-locatie | PASS | Locked decisions, Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat alle artiestendossiers operationeel onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` vallen. |
+| 3 | `03_CLIENTS` is commerciële-relatie-locatie | PASS | Governance en ClickUp-structuur beperken `03_CLIENTS` tot merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties; artists worden niet naar `03_CLIENTS` gemigreerd. |
+| 4 | `04_DEALS` is operationele deal-locatie | PASS | Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat Master Boutique en andere deals onder `OS_CUSTOMMADE/04_DEALS` vallen. |
+| 5 | Standaard deals gebruiken de lean CM dealstructuur | PASS | Governance, mappings en script gebruiken dezelfde standaard: `00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`. |
+| 6 | Data Room, LOI, APA, Closing en Success Fee pas vanaf due diligence | PASS | Governance en ClickUp-mapping leggen vast dat deze mappen, substructuren en specialistische taken pas worden aangemaakt wanneer een deal de due diligence fase bereikt. |
+| 7 | Geen oude roots actief: `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING`, `07_ARCHIVE` | PASS | De gecontroleerde productie-rootstructuur en het Apps Script maken deze oude roots niet aan. `Pipeline` komt alleen terug als ClickUp execution-folder/statuscontext, niet als Drive-root. |
+| 8 | Eén ClickUp Space | PASS | `DECISION_LOG.md`, locked decisions, `CLICKUP_MAPPING.md` en `CLICKUP_STRUCTURE.md` bevestigen exact één centrale ClickUp Space: `CM`. |
+| 9 | Moneybird = financiële waarheid | PASS | `DECISION_LOG.md`, locked decisions, governance rules, Drive-governance en ClickUp-structuur bevestigen Moneybird als financiële waarheid/source of truth. |
+| 10 | PDF governance aanwezig | PASS | Locked decisions en governance rules vereisen operationele rapporten als `.md` plus `.pdf`, waarbij PDF de primaire leesversie is en `.md` het bronbestand blijft. |
+| 11 | Geen conflicten tussen governance-documenten | PASS | Het artist/client-conflict is opgelost: de eerdere `03_CLIENTS`-migratie is superseded en de gecorrigeerde locked decision wijst artiestendossiers toe aan `02_ARTIST_MANAGEMENT`. |
 
 ## Detailbevindingen
 
@@ -55,13 +56,19 @@ OS_CUSTOMMADE
 
 Conclusie: rootstructuur exact gelijk in de bronnen die de productie-Drive-root expliciet definiëren.
 
-### 2. Client- en artistlocatie
+### 2. Artistlocatie
 
-`03_CLIENTS` is de operationele locatie voor clients en artists. Dit is vastgelegd als locked decision, opgenomen in de Drive-governance, overgenomen in de as-built-documentatie en geïmplementeerd in het Apps Script.
+`02_ARTIST_MANAGEMENT` is de primaire operationele locatie voor artiestendossiers. Artistfolders en de artist-subfolderstructuur worden door het Apps Script onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` aangemaakt.
 
 Conclusie: consistent.
 
-### 3. Deallocatie
+### 3. Clientlocatie
+
+`03_CLIENTS` is uitsluitend bedoeld voor merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties. Artists worden niet gemigreerd naar `03_CLIENTS`.
+
+Conclusie: consistent.
+
+### 4. Deallocatie
 
 `04_DEALS` is de operationele locatie voor Master Boutique en andere dealdossiers. De actuele standaard in Drive-governance, as-built-documentatie, ClickUp-mapping en script is:
 
@@ -77,31 +84,31 @@ DEAL_OR_ASSET_NAME
 
 Conclusie: consistent in governance, mappings en scriptimplementatie.
 
-### 4. Due diligence gating
+### 5. Due diligence gating
 
 Voor standaard deals worden Data Room-, LOI-, APA-, Closing- en Success Fee-mappen niet vooraf aangemaakt. Deze onderdelen ontstaan pas wanneer een deal de due diligence fase bereikt. Vóór die fase worden voorbereiding, rechteninformatie, bewijs, waardering, buyer package, outreach-referenties en archiefmateriaal binnen de lean CM dealstructuur beheerd.
 
 Conclusie: consistent.
 
-### 5. Oude roots en oude dealstructuur
+### 6. Oude roots en oude dealstructuur
 
 De oude roots `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING` en `07_ARCHIVE` zijn niet aanwezig in de goedgekeurde Drive-rootlaag en worden niet aangemaakt door het Apps Script. De oude Engelse dealstructuur is niet actief als standaard Drive-template.
 
 Conclusie: geen oude Drive-roots of oude standaard dealtemplate actief.
 
-### 6. ClickUp
+### 7. ClickUp
 
-ClickUp gebruikt één centrale Space: `CM`. Business lanes bestaan als folders binnen die Space. ClickUp blijft execution-system voor outreach, statuses, owners en deadlines; Drive bevat de gekoppelde bewijs-, output- en referentiemappen.
+ClickUp gebruikt één centrale Space: `CM`. Business lanes bestaan als folders binnen die Space. Artist Management-taken linken naar `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`; commerciële clienttaken linken naar `OS_CUSTOMMADE/03_CLIENTS`; dealtaken linken naar `OS_CUSTOMMADE/04_DEALS`.
 
 Conclusie: consistent.
 
-### 7. Moneybird
+### 8. Moneybird
 
 Moneybird is in de onderzochte governancebronnen consequent vastgelegd als financiële waarheid voor facturatie, omzet, kosten, debiteuren, crediteuren en financiële rapportage.
 
 Conclusie: consistent.
 
-### 8. PDF governance
+### 9. PDF governance
 
 PDF-governance is aanwezig. Operationele rapporten moeten als `.md` en `.pdf` bestaan; PDF is de primaire leesversie en Markdown blijft bronbestand.
 
@@ -109,6 +116,6 @@ Conclusie: aanwezig en consistent.
 
 ## Eindconclusie
 
-Het laatste governance-conflict is opgelost. De standaard dealstructuur, Drive-documentatie, as-built-documentatie, ClickUp-mapping en het Google Drive Apps Script zijn uitgelijnd op de leidende locked decisions en de lean CM dealstructuur.
+Het artist/client-governanceconflict is gecorrigeerd. `02_ARTIST_MANAGEMENT` blijft de primaire locatie voor artiestendossiers, terwijl `03_CLIENTS` uitsluitend commerciële relaties bevat. De Drive-documentatie, as-built-documentatie, ClickUp-mapping, ClickUp-structuur en het Google Drive Apps Script zijn opnieuw uitgelijnd op deze gecorrigeerde locked decision.
 
 GOVERNANCE CONSISTENT

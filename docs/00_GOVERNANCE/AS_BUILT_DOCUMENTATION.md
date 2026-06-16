@@ -45,7 +45,7 @@ Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie-
 
 ## Google Drive productie-as-built
 
-De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artists worden als clients behandeld, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
+De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artistdossiers blijven onder `02_ARTIST_MANAGEMENT`, `03_CLIENTS` is beperkt tot commerciële relaties, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
 
 ```text
 OS_CUSTOMMADE
@@ -62,10 +62,10 @@ OS_CUSTOMMADE
 └── 99_ARCHIVE
 ```
 
-Elke artist- of clientfolder onder `OS_CUSTOMMADE/03_CLIENTS` gebruikt waar relevant deze vaste interne structuur:
+Elke artistfolder onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` gebruikt waar relevant deze vaste interne structuur:
 
 ```text
-CLIENT_OR_ARTIST_NAME
+ARTIST_NAME
 ├── 01_ADMIN
 ├── 02_CONTRACT
 ├── 03_STRATEGY
@@ -93,12 +93,12 @@ DEAL_OR_ASSET_NAME
 
 Belangrijke as-built correcties ten opzichte van eerdere documentatie:
 
-- Artistdossiers staan onder `03_CLIENTS`; artists worden behandeld als clients.
+- Artistdossiers staan onder `02_ARTIST_MANAGEMENT`; artists worden niet gemigreerd naar `03_CLIENTS`.
 - Master Boutique/dealdossiers staan onder `04_DEALS` en gebruiken de lean Nederlandse dealstructuur.
 - Oude operationele roots worden niet meer aangemaakt of als productie-root gebruikt.
 - De oude Engelse dealstructuur is geen standaard Drive-structuur meer.
 - `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
-- Artist/clientfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
+- Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
 - De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
 
 Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels en rootfolder-doelen.
