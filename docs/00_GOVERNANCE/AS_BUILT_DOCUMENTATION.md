@@ -77,13 +77,16 @@ CLIENT_OR_ARTIST_NAME
 └── 09_ARCHIVE
 ```
 
-Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang geen expliciete buyer-facing full Data Room-fase is goedgekeurd:
+Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang de deal de due diligence fase niet heeft bereikt:
 
 ```text
 DEAL_OR_ASSET_NAME
+├── 00_START_HIER
 ├── 01_RECHTEN_REGISTER
 ├── 02_CONTRACTEN_BEWIJS
-└── 03_WAARDERING_VERKOOPPAKKET
+├── 03_WAARDERING_VERKOOPPAKKET
+├── 04_OUTREACH_CLICKUP
+└── 99_ARCHIEF
 ```
 
 ### Drive-documentatie versus eerdere productie

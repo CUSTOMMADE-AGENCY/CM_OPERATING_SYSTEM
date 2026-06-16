@@ -13,6 +13,10 @@ Deze validatie vergelijkt de volgende governance- en systeembronnen:
 - `docs/04_SYSTEMS/CLICKUP_STRUCTURE.md`
 - `scripts/google-drive/create-cm-drive-structure.gs`
 
+## Leidende governance
+
+`docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` is leidend. Bij conflict volgt Week 1 governance de locked decisions, de goedgekeurde Drive-rootlaag, één centrale ClickUp Space, Moneybird als financiële waarheid en de gescheiden governance voor Custommade Agency versus FIERCE.
+
 ## Validatiematrix
 
 | # | Controle | Uitkomst | Bevinding |
@@ -20,12 +24,13 @@ Deze validatie vergelijkt de volgende governance- en systeembronnen:
 | 1 | Rootstructuur exact gelijk | PASS | `DRIVE_STRUCTURE.md`, `AS_BUILT_DOCUMENTATION.md` en `create-cm-drive-structure.gs` gebruiken dezelfde operationele Drive-rootlaag onder `OS_CUSTOMMADE`: `00_ADMIN`, `01_MASTER_BOUTIQUE`, `02_ARTIST_MANAGEMENT`, `03_CLIENTS`, `04_DEALS`, `05_OPERATIONS`, `06_FINANCE`, `07_LEGAL`, `08_MARKETING`, `09_CONTENT`, `99_ARCHIVE`. |
 | 2 | `03_CLIENTS` is operationele client-locatie | PASS | Locked decisions, Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat artists/clients operationeel onder `OS_CUSTOMMADE/03_CLIENTS` vallen. |
 | 3 | `04_DEALS` is operationele deal-locatie | PASS | Drive-governance, as-built-documentatie, ClickUp-mapping en script bevestigen dat Master Boutique en andere deals onder `OS_CUSTOMMADE/04_DEALS` vallen. |
-| 4 | Geen oude roots actief: `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING`, `07_ARCHIVE` | PASS | De gecontroleerde productie-rootstructuur en het Apps Script maken deze oude roots niet aan. `Pipeline` komt alleen terug als ClickUp execution-folder/statuscontext, niet als Drive-root. |
-| 5 | Geen oude dealstructuur actief als standaard deal-template: `Data_Room`, `Buyer_Outreach`, `LOI`, `APA`, `Closing` | PASS MET OPMERKING | De Drive-standaard is de lean Nederlandse dealstructuur met `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`. De termen Data Room, LOI, APA en Closing blijven wel toegestaan als workflow-, template-, fase- of buyer-facing termen. Ze zijn niet actief als standaard Drive-subfolders in `DRIVE_STRUCTURE.md`, `AS_BUILT_DOCUMENTATION.md` of het Apps Script. |
-| 6 | Eén ClickUp Space | PASS | `DECISION_LOG.md`, locked decisions, `CLICKUP_MAPPING.md` en `CLICKUP_STRUCTURE.md` bevestigen exact één centrale ClickUp Space: `CM`. |
-| 7 | Moneybird = financiële waarheid | PASS | `DECISION_LOG.md`, locked decisions, governance rules, Drive-governance en ClickUp-structuur bevestigen Moneybird als financiële waarheid/source of truth. |
-| 8 | PDF governance aanwezig | PASS | Locked decisions en governance rules vereisen operationele rapporten als `.md` plus `.pdf`, waarbij PDF de primaire leesversie is en `.md` het bronbestand blijft. |
-| 9 | Geen conflicten tussen governance-documenten | FAIL | Er is één inhoudelijk governance-conflict: `DRIVE_STRUCTURE.md`, `AS_BUILT_DOCUMENTATION.md` en het Apps Script definiëren voor dealdossiers exact drie standaardmappen, terwijl `GOVERNANCE_RULES.md` nog een uitgebreidere standaardstructuur voor CM PROSPECT / Master Boutique cases noemt met `00_START_HIER`, `04_OUTREACH_CLICKUP` en `99_ARCHIEF`. Door de governance-prioriteit is dit oplosbaar in het voordeel van de locked decisions en Drive/as-built/script-laag, maar als documentair conflict is het nog aanwezig. |
+| 4 | Standaard deals gebruiken de lean CM dealstructuur | PASS | Governance, mappings en script gebruiken dezelfde standaard: `00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`. |
+| 5 | Data Room, LOI, APA, Closing en Success Fee pas vanaf due diligence | PASS | Governance en ClickUp-mapping leggen vast dat deze mappen, substructuren en specialistische taken pas worden aangemaakt wanneer een deal de due diligence fase bereikt. De termen blijven toegestaan als professionele workflow- of transactietermen. |
+| 6 | Geen oude roots actief: `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING`, `07_ARCHIVE` | PASS | De gecontroleerde productie-rootstructuur en het Apps Script maken deze oude roots niet aan. `Pipeline` komt alleen terug als ClickUp execution-folder/statuscontext, niet als Drive-root. |
+| 7 | Eén ClickUp Space | PASS | `DECISION_LOG.md`, locked decisions, `CLICKUP_MAPPING.md` en `CLICKUP_STRUCTURE.md` bevestigen exact één centrale ClickUp Space: `CM`. |
+| 8 | Moneybird = financiële waarheid | PASS | `DECISION_LOG.md`, locked decisions, governance rules, Drive-governance en ClickUp-structuur bevestigen Moneybird als financiële waarheid/source of truth. |
+| 9 | PDF governance aanwezig | PASS | Locked decisions en governance rules vereisen operationele rapporten als `.md` plus `.pdf`, waarbij PDF de primaire leesversie is en `.md` het bronbestand blijft. |
+| 10 | Geen conflicten tussen governance-documenten | PASS | Het eerdere conflict tussen de drie-map dealstandaard en de uitgebreidere CM PROSPECT / Master Boutique-structuur is opgelost in het voordeel van de door de gebruiker bevestigde lean CM dealstructuur. |
 
 ## Detailbevindingen
 
@@ -58,32 +63,35 @@ Conclusie: consistent.
 
 ### 3. Deallocatie
 
-`04_DEALS` is de operationele locatie voor Master Boutique en andere dealdossiers. De actuele standaard in Drive-governance, as-built-documentatie en script is:
+`04_DEALS` is de operationele locatie voor Master Boutique en andere dealdossiers. De actuele standaard in Drive-governance, as-built-documentatie, ClickUp-mapping en script is:
 
 ```text
 DEAL_OR_ASSET_NAME
+├── 00_START_HIER
 ├── 01_RECHTEN_REGISTER
 ├── 02_CONTRACTEN_BEWIJS
-└── 03_WAARDERING_VERKOOPPAKKET
+├── 03_WAARDERING_VERKOOPPAKKET
+├── 04_OUTREACH_CLICKUP
+└── 99_ARCHIEF
 ```
 
-Conclusie: consistent in de Drive-governance, as-built-documentatie en scriptimplementatie.
+Conclusie: consistent in governance, mappings en scriptimplementatie.
 
-### 4. Oude roots
+### 4. Due diligence gating
 
-De oude roots `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING` en `07_ARCHIVE` zijn niet aanwezig in de goedgekeurde Drive-rootlaag en worden niet aangemaakt door het Apps Script.
+Voor standaard deals worden Data Room-, LOI-, APA-, Closing- en Success Fee-mappen niet vooraf aangemaakt. Deze onderdelen ontstaan pas wanneer een deal de due diligence fase bereikt. Vóór die fase worden voorbereiding, rechteninformatie, bewijs, waardering, buyer package, outreach-referenties en archiefmateriaal binnen de lean CM dealstructuur beheerd.
 
-Conclusie: geen oude Drive-roots actief.
+Conclusie: consistent.
 
-### 5. Oude dealstructuur
+### 5. Oude roots en oude dealstructuur
 
-De oude Engelse dealstructuur is niet actief als standaard Drive-template. `Data Room`, `LOI`, `APA` en `Closing` komen nog voor als toegestane professionele termen, ClickUp-workflows, statuswaarden, Gmail-templates of buyer-facing transactieconcepten. Dit is toegestaan zolang ze niet als standaard Drive-subfolders worden aangemaakt.
+De oude roots `01_BRIEFINGS`, `02_PIPELINE`, `05_BUSINESS`, `06_MARKETING` en `07_ARCHIVE` zijn niet aanwezig in de goedgekeurde Drive-rootlaag en worden niet aangemaakt door het Apps Script. De oude Engelse dealstructuur is niet actief als standaard Drive-template.
 
-Conclusie: geen oude dealstructuur actief als standaard Drive-template.
+Conclusie: geen oude Drive-roots of oude standaard dealtemplate actief.
 
 ### 6. ClickUp
 
-ClickUp gebruikt één centrale Space: `CM`. Business lanes bestaan als folders binnen die Space.
+ClickUp gebruikt één centrale Space: `CM`. Business lanes bestaan als folders binnen die Space. ClickUp blijft execution-system voor outreach, statuses, owners en deadlines; Drive bevat de gekoppelde bewijs-, output- en referentiemappen.
 
 Conclusie: consistent.
 
@@ -99,13 +107,8 @@ PDF-governance is aanwezig. Operationele rapporten moeten als `.md` en `.pdf` be
 
 Conclusie: aanwezig en consistent.
 
-### 9. Conflictregistratie
+## Eindconclusie
 
-Het enige resterende conflict zit in de standaard dealfolderdefinitie:
+Het laatste governance-conflict is opgelost. De standaard dealstructuur, Drive-documentatie, as-built-documentatie, ClickUp-mapping en het Google Drive Apps Script zijn uitgelijnd op de leidende locked decisions en de lean CM dealstructuur.
 
-- Actuele locked/as-built/script-lijn: drie standaardmappen onder dealdossiers.
-- `GOVERNANCE_RULES.md`: noemt nog een uitgebreidere standaardstructuur met `00_START_HIER`, `04_OUTREACH_CLICKUP` en `99_ARCHIEF`.
-
-Aanbevolen correctie: harmoniseer `GOVERNANCE_RULES.md` met de actuele locked/as-built/script-lijn door de CM PROSPECT / Master Boutique standaardstructuur te vervangen door de drie-map dealstandaard en eventuele start-, outreach- en archieffuncties als inhoud of optionele niet-standaard werkbestanden binnen de drie-map structuur te beschrijven.
-
-GOVERNANCE NIET CONSISTENT
+GOVERNANCE CONSISTENT

@@ -140,9 +140,9 @@ Voor master resale / catalog sale moeten minimaal vindbaar zijn:
 
 ### Wanneer uitbreiden naar full Data Room
 
-Een volledige buyer-facing Data Room mag pas worden uitgesplitst wanneer er concrete buyer interest, LOI-fase, APA-fase, closingvoorbereiding of externe due diligence is.
+Data Room-, LOI-, APA-, Closing- en Success Fee-mappen of substructuren worden pas aangemaakt wanneer een deal de due diligence fase bereikt. Concrete buyer interest of vroege outreach is daarvoor niet genoeg; tot due diligence blijft de standaard lean dealstructuur leidend.
 
-Tot dat moment blijft de case lean. De Data Room-inhoud zit dan functioneel verdeeld over:
+Tot dat moment blijft de case lean. De diligence-voorbereidende inhoud zit dan functioneel verdeeld over:
 
 - `01_RECHTEN_REGISTER` voor rechten- en catalogusdata;
 - `02_CONTRACTEN_BEWIJS` voor juridisch bewijs;
@@ -194,7 +194,7 @@ Voor elke AI-agent output geldt:
 3. Geen eigen kolomstructuren maken als een template al bestaat.
 4. Bij ontbrekende velden een `TEMPLATE_GAP_LOG.md` aanmaken.
 5. Aan het einde altijd een `TEMPLATE_USAGE_REPORT.md` opleveren.
-6. Gebruik de lean Nederlandse Drive-structuur, tenzij expliciet sprake is van buyer-facing full Data Room fase.
+6. Gebruik de lean Nederlandse Drive-structuur; Data Room-, LOI-, APA-, Closing- en Success Fee-mappen ontstaan pas wanneer de deal de due diligence fase bereikt.
 7. Drive = opslag.
 8. ClickUp = uitvoering.
 9. Moneybird = financiële waarheid.
@@ -217,5 +217,5 @@ Een projectmap of AI-output is pas governance-proof wanneer:
 4. afwijkingen zijn vastgelegd;
 5. ontbrekende templatebehoeften zijn teruggekoppeld naar GitHub;
 6. de output overdraagbaar is naar ClickUp voor uitvoering;
-7. de lean Nederlandse Drive-structuur wordt gebruikt zolang de case niet buyer-facing full Data Room is;
+7. de lean Nederlandse Drive-structuur wordt gebruikt zolang de deal de due diligence fase niet heeft bereikt;
 8. er geen vermenging is met FIERCE of andere entiteiten.

@@ -48,12 +48,15 @@ Master Boutique- en dealdossiers staan onder `OS_CUSTOMMADE/04_DEALS` en gebruik
 
 ```text
 DEAL_OR_ASSET_NAME
+├── 00_START_HIER
 ├── 01_RECHTEN_REGISTER
 ├── 02_CONTRACTEN_BEWIJS
-└── 03_WAARDERING_VERKOOPPAKKET
+├── 03_WAARDERING_VERKOOPPAKKET
+├── 04_OUTREACH_CLICKUP
+└── 99_ARCHIEF
 ```
 
-Full Data Room-substructuren worden pas uitgesplitst bij expliciete buyer-facing fase-approval.
+Data Room-, LOI-, APA-, Closing- en Success Fee-substructuren worden pas aangemaakt wanneer een deal de due diligence fase bereikt.
 
 ## Script-alignment
 
