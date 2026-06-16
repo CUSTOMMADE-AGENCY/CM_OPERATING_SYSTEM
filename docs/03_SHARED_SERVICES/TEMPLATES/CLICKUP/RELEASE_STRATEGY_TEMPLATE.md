@@ -36,7 +36,7 @@ Gebruik deze template voor iedere single, EP, album, deluxe, remix of campaign a
 ## Required custom fields
 | Field | Type | Required value |
 |---|---|---|
-| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_FLOW.md` |
+| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` |
 | Drive Folder | URL | Artist release folder |
 | Gmail Template Set | Dropdown | Release Strategy Approval; Meeting Agenda; Meeting Recap; Approval Request |
 | Approval Owner | Person | Release manager / artist manager + artist |
@@ -77,7 +77,7 @@ Gebruik deze template voor iedere single, EP, album, deluxe, remix of campaign a
 Release manager of artist manager voor planning en launch readiness. Artist voor messaging, budget, public commitments en go/no-go. Counsel of rights specialist bij rights blockers.
 
 ## Linked GitHub workflow
-`docs/02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md`.
+`docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md`.
 
 ## Linked Drive folder
 `02_ARTIST_MANAGEMENT/[Artist Name]/05_Releases/[Release Name]`.

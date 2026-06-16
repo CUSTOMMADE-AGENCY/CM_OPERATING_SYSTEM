@@ -94,6 +94,17 @@ Verwerk feedback, leg decisions vast, finalize version, verkrijg schriftelijke a
 
 Escaleren bij disagreement over positioning, reputation risk, rights issue in visuals, third-party approval conflict, partner misuse, overdue artist approval, Scope creep of urgente release dependency.
 
+## Maintenance en distributie
+
+De approved Brandbook-versie wordt gedeeld met relevante users, terwijl source files en eerdere drafts in Google Drive worden bewaard volgens file-hygiene afspraken. Plan een review bij rebrand, nieuwe releasefase, major partnership, managementwissel of minimaal jaarlijks voor actieve clients.
+
+## System of record
+
+- GitHub: Workflow en Governance.
+- Google Drive: Brandbook, source materials, approved exports en archive.
+- ClickUp: tasks, reviews, approvals, deadlines en evidence.
+- Gmail: formele approvals en externe distributie.
+
 ## Outputs
 
 - Approved Artist Brandbook.

@@ -33,7 +33,7 @@ Gebruik deze template iedere maand voor actieve Artist Management-clients en ext
 ## Required custom fields
 | Field | Type | Required value |
 |---|---|---|
-| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_FLOW.md` |
+| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md` |
 | Drive Folder | URL | Monthly Management month folder |
 | Gmail Template Set | Dropdown | Meeting Agenda; Meeting Recap; Monthly Summary; Approval Request |
 | Approval Owner | Person | Artist manager + decision owner |
@@ -72,7 +72,7 @@ Gebruik deze template iedere maand voor actieve Artist Management-clients en ext
 Artist manager voor monthly cycle en ClickUp integrity. Artist of aangewezen decision owner voor priorities, budgetten, public commitments en strategic decisions.
 
 ## Linked GitHub workflow
-`docs/02_ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md`.
+`docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md`.
 
 ## Linked Drive folder
 `02_ARTIST_MANAGEMENT/[Artist Name]/06_Monthly_Management/[YYYY-MM]`.

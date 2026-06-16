@@ -35,7 +35,7 @@ Gebruik deze template na Brand Audit, bij nieuwe artist positioning, vóór rele
 ## Required custom fields
 | Field | Type | Required value |
 |---|---|---|
-| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/ARTIST_BRANDBOOK_FLOW.md` |
+| GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md` |
 | Drive Folder | URL | Artist `03_Brandbook` folder |
 | Gmail Template Set | Dropdown | Input Request; Brandbook Review; Approval Request |
 | Approval Owner | Person | CM strategy lead + artist |
@@ -76,7 +76,7 @@ Gebruik deze template na Brand Audit, bij nieuwe artist positioning, vóór rele
 CM strategy lead voor Brandbook-kwaliteit en consistentie. Artist voor final approval, usage restrictions en public-facing language.
 
 ## Linked GitHub workflow
-`docs/02_ARTIST_MANAGEMENT/ARTIST_BRANDBOOK_FLOW.md`.
+`docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md`.
 
 ## Linked Drive folder
 `02_ARTIST_MANAGEMENT/[Artist Name]/03_Brandbook`.

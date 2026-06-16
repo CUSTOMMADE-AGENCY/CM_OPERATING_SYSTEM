@@ -2,11 +2,11 @@
 
 ## Doel
 
-Dit document vertaalt elke CM GitHub Workflow naar de exacte ClickUp execution structure. Gebruik dit document om ClickUp Spaces, Lists, taaktemplates, statussen, subtaken, approvals, Google Drive-mappen en Gmail templates te bouwen zonder interpretatie.
+Dit document vertaalt elke CM GitHub Workflow naar de exacte ClickUp execution structure. Gebruik dit document om ClickUp Space, folders, Lists, taaktemplates, statussen, subtaken, approvals, Google Drive-mappen en Gmail templates te bouwen zonder interpretatie.
 
 ## Core rule
 
-GitHub documenteert het proces. ClickUp voert het proces uit. Google Drive bewaart client files en deliverables. Gmail verzorgt communicatie.
+GitHub documenteert het proces. ClickUp voert het proces uit. Google Drive bewaart client files en deliverables. Gmail verzorgt communicatie. ClickUp gebruikt één centrale `CM` Space; business lanes worden ingericht als folders binnen die Space.
 
 ## Terminologie en naamgeving
 
@@ -102,7 +102,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/ARTIST_ONBOARDING_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/01_ARTIST_ONBOARDING_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Onboarding` |
 | Task template name | `CM - Artist Management - Artist Onboarding Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ONBOARDING_TEMPLATE.md` |
@@ -119,7 +120,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/BRAND_AUDIT_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/02_BRAND_AUDIT_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brand Audit` |
 | Task template name | `CM - Artist Management - Brand Audit Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/BRAND_AUDIT_TEMPLATE.md` |
@@ -134,9 +136,10 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/02_ARTIST_MANAGEMENT/ARTIST_BRANDBOOK_FLOW.md` |
+| GitHub source document | `docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brandbook` |
 | Task template name | `CM - Artist Management - Artist Brandbook Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_BRANDBOOK_TEMPLATE.md` |
@@ -153,7 +156,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/04_ARTIST_ROADMAP_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Roadmap` |
 | Task template name | `CM - Artist Management - Artist Roadmap Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ROADMAP_TEMPLATE.md` |
@@ -168,9 +172,10 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` |
+| GitHub source document | `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Release Strategy - [Release Name]` |
 | Task template name | `CM - Artist Management - Release Strategy Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/RELEASE_STRATEGY_TEMPLATE.md` |
@@ -185,9 +190,10 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/02_ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_FLOW.md` |
+| GitHub source document | `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Monthly Management - [YYYY-MM]` |
 | Task template name | `CM - Artist Management - Monthly Management Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/MONTHLY_MANAGEMENT_TEMPLATE.md` |
@@ -204,7 +210,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/DEAL_NEGOTIATION_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/07_DEAL_NEGOTIATION_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Deal Negotiation - [Counterparty / Deal]` |
 | Task template name | `CM - Artist Management - Deal Negotiation Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` |
@@ -221,7 +228,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/BRAND_PARTNERSHIP_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/08_BRAND_PARTNERSHIP_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brand Partnership - [Brand]` |
 | Task template name | `CM - Artist Management - Brand Partnership Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/BRAND_PARTNERSHIP_TEMPLATE.md` |
@@ -238,7 +246,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/02_ARTIST_MANAGEMENT/ARTIST_OFFBOARDING_FLOW.md` stable link; inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/09_ARTIST_OFFBOARDING_FLOW.md` |
 | Business lane | Artist Management |
-| ClickUp Space | `Artist Management Clients` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Offboarding` |
 | Task template name | `CM - Artist Management - Artist Offboarding Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_OFFBOARDING_TEMPLATE.md` |
@@ -259,7 +268,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; dealflow bron `docs/01_MASTER_BOUTIQUE/DEALFLOW_CATALOG_ASSET.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Catalog Acquisition` |
 | Task template name | `CM - Master Boutique - Catalog Acquisition Flow` |
 | Required statuses | Master Boutique statusset + `Asset intake`, `Rights review`, `Financial review`, `Valuation`, `Buyer targeting`, `LOI phase`, `Due Diligence`, `APA phase` |
@@ -275,7 +285,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/01_MASTER_BOUTIQUE/BUYER_OUTREACH_WORKFLOW.md`; aanvullend Playbook `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Buyer Outreach` |
 | Task template name | `CM - Master Boutique - Buyer Outreach Flow` |
 | Required statuses | Master Boutique statusset + `Buyer shortlist`, `Teaser sent`, `NDA sent`, `NDA signed`, `Process letter sent`, `Offer received`, `No response`, `Declined` |
@@ -291,7 +302,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/01_MASTER_BOUTIQUE/BUYER_QUALIFICATION_MODEL.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Buyer Qualification` |
 | Task template name | `CM - Master Boutique - Buyer Qualification Model` |
 | Required statuses | Master Boutique statusset + `Qualified`, `Conditional`, `Disqualified`, `Needs more info` |
@@ -307,7 +319,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/01_MASTER_BOUTIQUE/DATA_ROOM_ACCESS_MODEL.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Data Room Access` |
 | Task template name | `CM - Master Boutique - Data Room Access Model` |
 | Required statuses | Master Boutique statusset + `Access requested`, `NDA verified`, `Level approved`, `Access granted`, `Access changed`, `Access revoked`, `Access audit` |
@@ -323,7 +336,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/05_KNOWLEDGE_BASE/LOI_GUIDE.md`; procesbron `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - LOI Workflow` |
 | Task template name | `CM - Master Boutique - LOI Workflow` |
 | Required statuses | Master Boutique statusset + `LOI requested`, `LOI received`, `LOI review`, `Counter comments`, `Client decision`, `Accepted`, `Rejected`, `Moved to APA` |
@@ -339,7 +353,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; kennisbron `docs/05_KNOWLEDGE_BASE/APA_GUIDE.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - APA Negotiation` |
 | Task template name | `CM - Master Boutique - APA Negotiation Playbook` |
 | Required statuses | Master Boutique statusset + `APA drafting`, `Issue log open`, `Counsel review`, `Business position needed`, `Signing readiness`, `Signed`, `Moved to Closing` |
@@ -355,7 +370,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; APA-bron `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; sell-side bron `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Closing` |
 | Task template name | `CM - Master Boutique - Closing Workflow` |
 | Required statuses | Master Boutique statusset + `Closing checklist open`, `Funds flow pending`, `Signatures pending`, `Consents / notices pending`, `Closed`, `Post-closing handoff` |
@@ -371,7 +387,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 |---|---|
 | GitHub source document | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md`; commerciële bron `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; governance bron `docs/00_GOVERNANCE/CM_OPERATING_MODEL.md` |
 | Business lane | Master Boutique |
-| ClickUp Space | `Master Boutique Pipeline` |
+| ClickUp Space | `CM` |
+| ClickUp Folder | `Master Boutique` |
 | ClickUp List | `MB - [Deal / Asset Name] - Success Fee` |
 | Task template name | `CM - Master Boutique - Success Fee Workflow` |
 | Required statuses | Master Boutique statusset + `Trigger check`, `Calculation`, `Client approval needed`, `Invoice requested`, `Invoice sent`, `Paid`, `Disputed`, `Waived` |
