@@ -45,7 +45,7 @@ Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie-
 
 ## Google Drive productie-as-built
 
-De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artistdossiers blijven onder `02_ARTIST_MANAGEMENT`, `03_CLIENTS` is beperkt tot commerciële relaties, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
+De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artistdossiers blijven onder `02_ARTIST_MANAGEMENT`, `03_CLIENTS` is beperkt tot merken, bedrijven, sponsors, opdrachtgevers en media partners, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
 
 ```text
 OS_CUSTOMMADE

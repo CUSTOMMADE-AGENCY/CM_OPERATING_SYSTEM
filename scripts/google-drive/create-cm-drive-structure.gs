@@ -6,6 +6,8 @@
  * 2. Paste this file or bind it to the target Drive location.
  * 3. Set PARENT_FOLDER_ID to a folder ID, or leave blank to use My Drive root.
  * 4. Run createCmDriveStructure().
+ * 5. Optional: run createCmDealStructure('DEAL_OR_ASSET_NAME') when a new
+ *    deal case must be initialized under OS_CUSTOMMADE/04_DEALS.
  *
  * This script creates missing folders only; it does not delete, rename or move
  * existing content. GitHub remains the source of truth for the structure rules.
@@ -86,6 +88,24 @@ function createCmDriveStructure() {
         });
       }
     });
+  });
+}
+
+function createCmDealStructure(dealFolderName) {
+  if (!dealFolderName) {
+    throw new Error('Provide a deal or asset folder name.');
+  }
+
+  const parent = PARENT_FOLDER_ID
+    ? DriveApp.getFolderById(PARENT_FOLDER_ID)
+    : DriveApp.getRootFolder();
+
+  const root = getOrCreateFolder(parent, CM_DRIVE_ROOT);
+  const dealsRoot = getOrCreateFolder(root, '04_DEALS');
+  const dealFolder = getOrCreateFolder(dealsRoot, dealFolderName);
+
+  DEAL_SUBFOLDERS.forEach(function(dealSubfolderName) {
+    getOrCreateFolder(dealFolder, dealSubfolderName);
   });
 }
 
