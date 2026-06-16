@@ -2,82 +2,106 @@
 
 ## Doel
 
-Gebruik dit template om per bestaande Google Drive-map vast te leggen wat de huidige situatie is, wie eigenaar is, waar de map naartoe moet, welke actie nodig is, welk risico geldt en wat de status is. Vul dit template in vóór daadwerkelijke Drive-migratie.
+Gebruik dit template voor de Sprint 2A Drive-inventarisatie. Vul dit document of een spreadsheetvariant per bestaande Drive-map in voordat een map wordt verplaatst, samengevoegd, behouden, uitgesloten of gearchiveerd.
+
+Een map zonder volledig ingevulde inventarisregel mag niet worden gemigreerd.
 
 ## Invulinstructie
 
-- Eén regel per huidige map.
-- Gebruik exacte mapnamen en doelpaden.
-- Zet onduidelijke, gemengde, eigenaarloze of risicovolle mappen op `HOLD`.
-- Plaats geen vertrouwelijke clientinhoud, contractinhoud of financiële exports in GitHub.
-- Gebruik Drive IDs en metadata alleen als inventarisverwijzing; Drive blijft opslag, GitHub blijft governance.
+- Gebruik één regel per huidige map.
+- Gebruik het volledige huidige pad, niet alleen de mapnaam.
+- Gebruik `HOLD` wanneer owner, risico, linkstatus, classificatie of nieuwe locatie nog niet duidelijk is.
+- Vul geen vertrouwelijke clientinformatie, contractinhoud of financiële details in GitHub in; verwijs alleen naar Drive item ID, mapnaam, owner en status.
+- FIERCE-content wordt niet naar CM gemigreerd en moet als `UITSLUITEN` of `HOLD - FIERCE REVIEW` worden gemarkeerd.
 
 ## Statuswaarden
 
-Gebruik één van deze statussen:
+Gebruik één van deze statuswaarden:
 
-- `OPEN`
-- `IN_REVIEW`
-- `HOLD`
-- `AKKOORD`
-- `GEMIGREERD`
-- `UITGESLOTEN`
-- `GEARCHIVEERD`
+| Status | Betekenis |
+|---|---|
+| `TE INVENTARISEREN` | Map is gevonden maar nog niet volledig beoordeeld. |
+| `OWNER REVIEW` | Owner of beslisser moet inhoudelijk akkoord geven. |
+| `LINK REVIEW` | Actieve links, shortcuts of automation-afhankelijkheden moeten worden gecontroleerd. |
+| `LEGAL/FINANCE REVIEW` | Legal, finance, contract-, rights- of Moneybird-status moet worden beoordeeld. |
+| `HOLD` | Migratie is geblokkeerd tot open punten zijn opgelost. |
+| `GOEDGEKEURD VOOR MIGRATIE` | Map is compleet beoordeeld en mag in een migratiebatch. |
+| `UITSLUITEN` | Map valt buiten CM-migratie, bijvoorbeeld FIERCE of niet-relevant. |
+| `GEMIGREERD` | Map is daadwerkelijk verplaatst of verwerkt. |
+| `GEVALIDEERD` | Post-migratie controle is afgerond. |
 
 ## Actiewaarden
 
-Gebruik één van deze acties:
+Gebruik één van deze actiewaarden:
 
-- `BEHOUDEN`
-- `VERPLAATSEN`
-- `SAMENVOEGEN`
-- `ARCHIVEREN`
-- `UITSLUITEN`
-- `HOLD`
+| Actie | Betekenis |
+|---|---|
+| `BEHOUDEN` | Map staat al goed en blijft staan. |
+| `VERPLAATSEN` | Map gaat naar een nieuwe locatie binnen `OS_CUSTOMMADE`. |
+| `SAMENVOEGEN` | Map wordt samengevoegd met een canonical map. |
+| `ARCHIVEREN` | Map gaat naar `99_ARCHIVE` met broncontext. |
+| `UITSLUITEN` | Map valt buiten CM-migratie. |
+| `HOLD` | Nog geen migratieactie toegestaan. |
 
 ## Risicowaarden
 
-Gebruik één van deze risiconiveaus:
+Gebruik één van deze risicowaarden:
 
-- `LAAG`
-- `MIDDEL`
-- `HOOG`
+| Risico | Betekenis |
+|---|---|
+| `LAAG` | Weinig afhankelijkheden; owner, actie en doelpad zijn duidelijk. |
+| `MIDDEL` | Beperkte afhankelijkheden of duplicaatrisico. |
+| `HOOG` | Legal, finance, rights, owner-, link- of governance-risico. |
+| `KRITIEK` | FIERCE-risico, vertrouwelijke toegangsfout, actieve automation-afhankelijkheid of onduidelijke juridische/financiële status. |
 
 ## Inventaristabel
 
-| # | Huidige map | Eigenaar | Nieuwe locatie | Actie | Risico | Status |
-|---:|---|---|---|---|---|---|
-| 1 | `[huidige mapnaam + huidig pad]` | `[naam owner]` | `OS_CUSTOMMADE/[root]/[doelmap]` | `[BEHOUDEN / VERPLAATSEN / SAMENVOEGEN / ARCHIVEREN / UITSLUITEN / HOLD]` | `[LAAG / MIDDEL / HOOG] — [korte reden]` | `[OPEN / IN_REVIEW / HOLD / AKKOORD / GEMIGREERD / UITGESLOTEN / GEARCHIVEERD]` |
-| 2 |  |  |  |  |  |  |
-| 3 |  |  |  |  |  |  |
-| 4 |  |  |  |  |  |  |
-| 5 |  |  |  |  |  |  |
+| Huidige map | Eigenaar | Nieuwe locatie | Actie | Risico | Status |
+|---|---|---|---|---|---|
+| `[Volledig huidig Drive-pad]` | `[Drive owner + inhoudelijke owner]` | `[OS_CUSTOMMADE/... of N.v.t.]` | `[BEHOUDEN / VERPLAATSEN / SAMENVOEGEN / ARCHIVEREN / UITSLUITEN / HOLD]` | `[LAAG / MIDDEL / HOOG / KRITIEK + korte reden]` | `[TE INVENTARISEREN / OWNER REVIEW / LINK REVIEW / LEGAL/FINANCE REVIEW / HOLD / GOEDGEKEURD VOOR MIGRATIE / UITSLUITEN / GEMIGREERD / GEVALIDEERD]` |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
-## Uitgebreide velden voor review
+## Uitgebreide velden per map
 
-Gebruik onderstaande velden wanneer een map complex, risicovol, gedeeld, juridisch, financieel, gemengd of mogelijk duplicatief is.
+Gebruik deze velden wanneer de basistabel onvoldoende context geeft.
 
-| Veld | Invullen |
+| Veld | Waarde |
 |---|---|
-| Drive ID |  |
+| Drive item ID |  |
+| Parent folder ID |  |
+| URL |  |
 | Huidige root |  |
-| Classificatie | `[artist / client / deal / operations / legal / finance / marketing / content / admin / archive / shim / FIERCE / onbekend / gemengd]` |
-| Beslisser |  |
-| Laatste activiteit | `[actief / slapend / onbekend / archiveerbaar]` |
-| Linkafhankelijkheden | `[ClickUp / Gmail / Drive shortcut / Google Doc / GitHub / AI-agent / automation / extern / geen bekend]` |
-| Duplicaatcheck | `[geen duplicaat / mogelijk duplicaat / confirmed duplicaat]` |
-| Toegangscontrole nodig | `[ja / nee]` |
-| Vertrouwelijkheid | `[normaal / intern / vertrouwelijk / legal / finance / client-sensitive]` |
-| Moneybird-check nodig | `[ja / nee / n.v.t.]` |
-| Legal-review nodig | `[ja / nee / n.v.t.]` |
-| FIERCE-check | `[geen FIERCE / mogelijk FIERCE / FIERCE uitgesloten]` |
+| Maptype | `[artist / client / deal / operations / finance / legal / marketing / content / admin / archive / shim / FIERCE / onbekend]` |
+| Canonical naam |  |
+| Business lane |  |
+| Drive owner |  |
+| Inhoudelijke owner |  |
+| Migratiebeslisser |  |
+| Backup owner |  |
+| Laatst gewijzigd |  |
+| Gewijzigd door |  |
+| Gedeeld met |  |
+| Vertrouwelijkheidsindicatie |  |
+| Moneybird-status |  |
+| Legal-status |  |
+| Linkstatus ClickUp |  |
+| Linkstatus Gmail |  |
+| Linkstatus Docs/Sheets/Slides |  |
+| Shortcut/shim-status |  |
+| Automation-afhankelijkheid |  |
+| AI-agent instructie-afhankelijkheid |  |
+| Duplicaat/canonical besluit |  |
+| FIERCE-check |  |
 | HOLD-reden |  |
-| Migratie-opmerking |  |
+| Open punten |  |
+| Reviewdatum |  |
+| Go/no-go besluit |  |
+| Post-migratie validatie |  |
 
 ## Voorbeeldregel
 
-| # | Huidige map | Eigenaar | Nieuwe locatie | Actie | Risico | Status |
-|---:|---|---|---|---|---|---|
-| 1 | `Legacy Drive/Artist/CALSEY` | `Artist Management owner` | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/CALSEY` | `VERPLAATSEN` | `HOOG — actieve links en mogelijke contractbestanden eerst controleren` | `IN_REVIEW` |
-
-GEREED VOOR INVENTARISATIE
+| Huidige map | Eigenaar | Nieuwe locatie | Actie | Risico | Status |
+|---|---|---|---|---|---|
+| `Legacy Drive/Artist Clients/CALSEY` | `Drive owner: [account] / inhoudelijk: [owner]` | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/CALSEY` | `VERPLAATSEN` | `HOOG - artist stond mogelijk als client geclassificeerd en links moeten worden gecontroleerd` | `OWNER REVIEW` |
