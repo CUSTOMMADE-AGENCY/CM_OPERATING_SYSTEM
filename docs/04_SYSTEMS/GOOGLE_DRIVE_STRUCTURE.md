@@ -59,20 +59,26 @@ CLIENT_OR_ARTIST_NAME
 
 ## Deal folder rule
 
-Master Boutique en andere dealdossiers staan onder `OS_CUSTOMMADE/04_DEALS`. Gebruik uitsluitend de lean Nederlandse dealstructuur zolang geen expliciete buyer-facing full Data Room-fase is goedgekeurd:
+Master Boutique en andere dealdossiers staan onder `OS_CUSTOMMADE/04_DEALS`. Gebruik uitsluitend de lean Nederlandse dealstructuur zolang de deal de due diligence fase niet heeft bereikt:
 
 ```text
 DEAL_OR_ASSET_NAME
+├── 00_START_HIER
 ├── 01_RECHTEN_REGISTER
 ├── 02_CONTRACTEN_BEWIJS
-└── 03_WAARDERING_VERKOOPPAKKET
+├── 03_WAARDERING_VERKOOPPAKKET
+├── 04_OUTREACH_CLICKUP
+└── 99_ARCHIEF
 ```
 
+- `00_START_HIER` bevat README, status, instructies, document requests en governance-notities.
 - `01_RECHTEN_REGISTER` bevat rechten- en catalogusdata.
 - `02_CONTRACTEN_BEWIJS` bevat contracten, bewijsstukken en juridische onderbouwing.
 - `03_WAARDERING_VERKOOPPAKKET` bevat waardering, Deal Memo, Buyer Package en final export.
+- `04_OUTREACH_CLICKUP` bevat Buyer lead references, outreach-notities en ClickUp-verwijzingen; ClickUp blijft execution-system.
+- `99_ARCHIEF` bevat superseded exports, oude ad-hoc sheets en niet-leidende bestanden.
 
-De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-structuur.
+De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-structuur. Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wanneer een deal de due diligence fase bereikt.
 
 ## Shared Services versus client-specifieke instructies
 

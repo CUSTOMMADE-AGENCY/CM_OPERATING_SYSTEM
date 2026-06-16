@@ -287,11 +287,11 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp List | `MB - [Deal / Asset Name] - Catalog Acquisition` |
 | Task template name | `CM - Master Boutique - Catalog Acquisition Flow` |
 | Required statuses | Master Boutique statusset + `Asset intake`, `Rights review`, `Financial review`, `Valuation`, `Buyer targeting`, `LOI phase`, `Due Diligence`, `APA phase` |
-| Required subtasks | Asset intake afronden; repertoirelijst verzamelen; rights review uitvoeren; financial review en revenue reconciliation uitvoeren; valuation low/base/high cases maken; deal thesis opstellen; Buyer target list maken; Data Room-plan bouwen; teaser/process letter voorbereiden; LOI comparison voorbereiden; Diligence issue list openen; APA issue list openen; closing binder voorbereiden |
+| Required subtasks | Asset intake afronden; repertoirelijst verzamelen; rights review uitvoeren; financial review en revenue reconciliation uitvoeren; valuation low/base/high cases maken; deal thesis opstellen; Buyer target list maken; diligence-readiness notitie voorbereiden; teaser/process letter voorbereiden; outreach-referenties vastleggen; pas vanaf due diligence fase Data Room-, LOI-, APA-, Closing- en Success Fee-taken openen |
 | Approval owner | CM deal lead voor proceskwaliteit; Seller of buyer principal voor commerciële besluiten; counsel voor legal transfer, consents en APA; finance/royalty analyst voor revenue evidence |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/00_START_HIER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/04_OUTREACH_CLICKUP`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/99_ARCHIEF` |
 | Gmail templates used | `CM - Master Boutique - Seller Intake`; `CM - Master Boutique - Buyer Outreach Intro`; `CM - Master Boutique - NDA Follow Up`; `CM - Master Boutique - LOI Request` |
-| Completion criteria | Asset perimeter memo, rights review memo, financial review workbook, valuation memo, Buyer target list, Data Room-plan en go/no-go decision staan in Drive; elke fase heeft owner, deadline en next action in ClickUp; unresolved rights/data issues zijn gelogd; confidential outreach start pas na approved thesis en disclosure-plan |
+| Completion criteria | Asset perimeter memo, rights review memo, financial review workbook, valuation memo, Buyer target list, outreach-referenties en go/no-go decision staan in Drive; elke fase heeft owner, deadline en next action in ClickUp; unresolved rights/data issues zijn gelogd; confidential outreach start pas na approved thesis en disclosure-plan |
 
 ## Buyer Outreach Flow
 
@@ -329,6 +329,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 ## Data Room Access Model
 
+Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase bereikt.
+
 | Veld | Mapping |
 |---|---|
 | GitHub source document | `docs/01_MASTER_BOUTIQUE/DATA_ROOM_ACCESS_MODEL.md` |
@@ -340,11 +342,13 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Master Boutique statusset + `Access requested`, `NDA verified`, `Level approved`, `Access granted`, `Access changed`, `Access revoked`, `Access audit` |
 | Required subtasks | NDA en Buyer qualification controleren; access level bepalen; folder permissions voorbereiden; access approval vastleggen; Data Room access verlenen; toegang en datum loggen; Q&A-log koppelen; sensitive document requests reviewen; access audit uitvoeren; access intrekken bij reject, closing of procespauze |
 | Approval owner | CM deal lead voor access control; Seller of decision owner voor Level 2/3 access; counsel voor zeer gevoelige juridische, fiscale of closing-documenten |
-| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS` en `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`; full Data Room-subfolders alleen na expliciete buyer-facing approval |
+| Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[Deal Name]/02_CONTRACTEN_BEWIJS` en `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`; Data Room-, LOI-, APA-, Closing- en Success Fee-subfolders alleen vanaf due diligence fase |
 | Gmail templates used | `CM - Master Boutique - Data Room Access Granted`; `CM - Master Boutique - Data Room Access Revoked`; `CM - Master Boutique - NDA Follow Up` |
 | Completion criteria | Access log bevat Buyer, NDA status, access level, approved by, granted date, revoked date en restrictions; alle Level 2/3 requests hebben approval evidence; Q&A en sensitive document requests zijn centraal gelogd; access is ingetrokken wanneer Buyer niet meer actief is |
 
 ## LOI Workflow
+
+Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase bereikt.
 
 | Veld | Mapping |
 |---|---|
@@ -355,13 +359,15 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp List | `MB - [Deal / Asset Name] - LOI Workflow` |
 | Task template name | `CM - Master Boutique - LOI Workflow` |
 | Required statuses | Master Boutique statusset + `LOI requested`, `LOI received`, `LOI review`, `Counter comments`, `Client decision`, `Accepted`, `Rejected`, `Moved to APA` |
-| Required subtasks | LOI request format versturen; received LOI uploaden; price, Assets, structure, exclusivity, diligence Scope, closing conditions, holdback, earnout, approvals, costs en binding language reviewen; LOI comparison maken; red flags en trade-offs markeren; client recommendation opstellen; counsel review coördineren; accepted/rejected decision vastleggen; Due Diligence en APA tasks openen |
+| Required subtasks | LOI request format versturen; received LOI uploaden; price, Assets, structure, exclusivity, diligence Scope, closing conditions, holdback, earnout, approvals, costs en binding language reviewen; LOI comparison maken; red flags en trade-offs markeren; client recommendation opstellen; counsel review coördineren; accepted/rejected decision vastleggen; Due Diligence-taken openen; APA-, Closing- en Success Fee-taken pas wanneer de due diligence fase dat vereist |
 | Approval owner | Seller/buyer principal of decision owner voor accept/reject; CM deal lead voor commercial recommendation; counsel voor legal/binding language en exclusivity |
 | Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - LOI Request`; `CM - Master Boutique - LOI Review Summary`; `CM - Master Boutique - APA Issue Update` |
-| Completion criteria | Alle LOI's staan in Drive; LOI comparison bevat prijs, structuur, voorwaarden, exclusiviteit, diligence burden en closing certainty; client decision is schriftelijk vastgelegd; accepted LOI heeft follow-up taken voor Due Diligence, APA, Data Room access en closing timeline |
+| Completion criteria | Alle LOI's staan in Drive; LOI comparison bevat prijs, structuur, voorwaarden, exclusiviteit, diligence burden en closing certainty; client decision is schriftelijk vastgelegd; accepted LOI heeft follow-up taken voor Due Diligence; Data Room access, APA, closing timeline en Success Fee follow-up ontstaan pas binnen de due diligence fase |
 
 ## APA Negotiation Playbook
+
+Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase bereikt.
 
 | Veld | Mapping |
 |---|---|
@@ -380,6 +386,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 ## Closing Workflow
 
+Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase bereikt.
+
 | Veld | Mapping |
 |---|---|
 | GitHub source document | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; APA-bron `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; sell-side bron `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` |
@@ -396,6 +404,8 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Completion criteria | Signed documents, closing checklist, funds flow evidence, assignments, notices, access transfer proof en closing binder staan in Drive; post-closing obligations hebben owner en due date in ClickUp; deal status is `Closed`; client heeft closing confirmation ontvangen; geen unresolved closing blockers blijven zonder escalation |
 
 ## Success Fee Workflow
+
+Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase bereikt.
 
 | Veld | Mapping |
 |---|---|
