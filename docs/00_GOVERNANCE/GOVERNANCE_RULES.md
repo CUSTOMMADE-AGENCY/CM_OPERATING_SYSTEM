@@ -1,5 +1,51 @@
 # Governance-regels
 
+## Leidende beslissingen
+
+De leidende governance voor CM_OS staat in:
+
+- `docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md`
+- `docs/00_GOVERNANCE/DECISION_LOG.md`
+
+Bij conflict geldt de Governance Prioriteit:
+
+1. `DECISION_LOG.md`
+2. `CM_OS_LOCKED_DECISIONS_*`
+3. `GOVERNANCE_RULES.md`
+4. `AUDIT_REPORTS`
+5. `README`
+6. AI-aanbevelingen
+
+Geen AI-agent mag governance wijzigen zonder eerst `DECISION_LOG.md` te controleren.
+
+## Systeemrollen
+
+- GitHub = governance/source of truth
+- Google Drive = opslag
+- ClickUp = uitvoering
+- Moneybird = financiële waarheid
+- Gmail = communicatie
+- ChatGPT/Claude/Codex = analyse en verbetering
+
+## PDF Governance
+
+Alle operationele rapporten moeten bestaan als:
+
+- `Bestandsnaam.md`
+- `Bestandsnaam.pdf`
+
+PDF is de primaire leesversie voor Sophia. Het `.md`-bestand blijft het bronbestand.
+
+PDF Governance is verplicht voor:
+
+- README
+- TEMPLATE_USAGE_REPORT
+- TEMPLATE_GAP_LOG
+- RESTRUCTURE_REPORT
+- FINAL_CLEANUP_REPORT
+- AUDIT_REPORT
+- GOVERNANCE_REPORT
+
 ## Doel
 
 Deze regels beschermen het operating system van Custommade Agency Int. B.V. tegen ongecontroleerde bestandsdumping. GitHub is de gestructureerde source of truth voor hoe de business draait.

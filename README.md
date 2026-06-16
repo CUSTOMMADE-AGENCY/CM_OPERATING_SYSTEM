@@ -4,6 +4,22 @@ Deze repository is de GitHub source of truth voor de operating Workflows, Govern
 
 Start met [`docs/00_GOVERNANCE/CM_OPERATING_MODEL.md`](docs/00_GOVERNANCE/CM_OPERATING_MODEL.md) als primair document om het volledige CM operating system te begrijpen. De niet-onderhandelbare repositoryregels staan in [`docs/00_GOVERNANCE/GOVERNANCE_RULES.md`](docs/00_GOVERNANCE/GOVERNANCE_RULES.md).
 
+
+## Governance Prioriteit
+
+Bij conflicten geldt deze Governance Prioriteit:
+
+1. `DECISION_LOG.md`
+2. `CM_OS_LOCKED_DECISIONS_*`
+3. `GOVERNANCE_RULES.md`
+4. `AUDIT_REPORTS`
+5. `README`
+6. AI-aanbevelingen
+
+## Locked decisions
+
+De Week 1 governance wordt geleid door [`docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md`](docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md). Week 1 is pas klaar wanneer Drive-governance, ClickUp-mapping, het Moneybird-principe en shim-resolutie zijn verwerkt.
+
 ## Business lanes
 
 ### 01 Master Boutique

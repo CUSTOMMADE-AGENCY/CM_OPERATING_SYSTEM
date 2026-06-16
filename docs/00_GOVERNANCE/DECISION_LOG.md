@@ -12,6 +12,11 @@ Gebruik dit niet voor losse taken, maar voor besluiten die later teruggevonden m
 
 ## Log
 
-| Datum | Besluit | Waarom | Alternatieven | Impact | Owner | Review |
-|---|---|---|---|---|---|---|
-| YYYY-MM-DD | Wat is besloten? | Waarom nu? | Welke opties zijn bekeken? | Wat verandert er? | Naam/rol | YYYY-MM-DD |
+| Datum | Status | Besluit |
+|---|---|---|
+| 2026-06-15 | LOCKED | Drive briefing-roots zijn leidend |
+| 2026-06-15 | LOCKED | Artists worden behandeld als clients en verhuizen naar 03_CLIENTS |
+| 2026-06-15 | LOCKED | Eén ClickUp Space met folders |
+| 2026-06-15 | LOCKED | Moneybird is financiële waarheid |
+| 2026-06-15 | LOCKED | Pure shims blijven behouden zolang actief gelinkt |
+| 2026-06-15 | LOCKED | CM en FIERCE blijven strikt gescheiden |
