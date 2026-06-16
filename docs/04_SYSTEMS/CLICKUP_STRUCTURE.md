@@ -24,9 +24,9 @@ CM
 
 ## Folderdoel
 
-- `Artist Management` — artist/client execution workflows, monthly management, release strategy, brandbook, partnerships en offboarding.
+- `Artist Management` — artist execution workflows, monthly management, release strategy, brandbook, partnerships en offboarding; gekoppelde Drive-dossiers staan onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`.
 - `Master Boutique / Deals` — catalogus-, buyer-, data-room-, LOI-, APA-, closing- en success-fee execution.
-- `Clients` — client-overstijgende onboarding, deliverables, approvals en live client registers wanneer dit niet in een lane-folder past.
+- `Clients` — merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties; geen artiestendossiers.
 - `Pipeline` — pre-client/pre-deal qualification, Fit Checks, opportunity stages en parked/rejected leads.
 - `Shared Operations` — gedeelde operationele taken, templates, meetings, communications en file-management execution.
 - `Governance & Systems` — repository, automation, AI-agent, Drive, ClickUp en systems tasks.
@@ -37,7 +37,7 @@ CM
 - Taken bevatten context, source links, status en required evidence.
 - Pipeline-stages moeten beslismomenten en blockers zichtbaar maken.
 - Elke taak bevat een GitHub source link waar een workflow of SOP bestaat.
-- Elke client-, artist- of dealtaak bevat een Google Drive folder link naar de juiste `OS_CUSTOMMADE`-map.
+- Elke client-, artist- of dealtaak bevat een Google Drive folder link naar de juiste `OS_CUSTOMMADE`-map: artists onder `02_ARTIST_MANAGEMENT`, commerciële relaties onder `03_CLIENTS`, deals onder `04_DEALS`.
 - Nieuwe business lanes worden eerst als folder of list in `CM` ingericht; een nieuwe Space vereist expliciete governancewijziging.
 
 ## Opslag- en toolgrenzen

@@ -38,14 +38,14 @@ OS_CUSTOMMADE
 
 Oude rootstructuren worden niet meer aangemaakt of als operationele root gebruikt.
 
-## Client folder rule
+## Artist folder rule
 
-Alle artist- en clientfolders staan onder `OS_CUSTOMMADE/03_CLIENTS`. Artists worden behandeld als clients; er wordt geen aparte operationele artist-silo gebruikt.
+Alle artiestendossiers staan onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. Artists worden niet gemigreerd naar `03_CLIENTS`.
 
-Elke client- of artistfolder gebruikt waar relevant deze vaste productiestructuur:
+Elke artistfolder gebruikt waar relevant deze vaste productiestructuur:
 
 ```text
-CLIENT_OR_ARTIST_NAME
+ARTIST_NAME
 ├── 01_ADMIN
 ├── 02_CONTRACT
 ├── 03_STRATEGY
@@ -80,20 +80,26 @@ DEAL_OR_ASSET_NAME
 
 De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-structuur. Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wanneer een deal de due diligence fase bereikt.
 
+## Client folder rule
+
+`OS_CUSTOMMADE/03_CLIENTS` bevat uitsluitend merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties. Gebruik deze root niet voor artiestendossiers.
+
+Elke commerciële-relatiefolder gebruikt waar relevant dezelfde genummerde productiestructuur als passend is voor het dossier.
+
 ## Shared Services versus client-specifieke instructies
 
 `docs/03_SHARED_SERVICES/` is een GitHub-documentatiedomein, geen Google Drive-rootfolder.
 
-Client-specifieke instructies staan in de relevante clientfolder. Bijvoorbeeld:
+Artist- en client-specifieke instructies staan in de relevante Drive-folder. Bijvoorbeeld:
 
 - General email protocol source: `docs/03_SHARED_SERVICES/`
-- Goudtje-specific email instructions: `OS_CUSTOMMADE/03_CLIENTS/GOUDTJE_GET_PAID/03_STRATEGY` of `OS_CUSTOMMADE/03_CLIENTS/GOUDTJE_GET_PAID/01_ADMIN`, afhankelijk van gebruik
+- Goudtje-specific email instructions: `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/03_STRATEGY` of `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/01_ADMIN`, afhankelijk van gebruik
 - New client intake/briefing material: `OS_CUSTOMMADE/03_CLIENTS/[Client Name]/01_ADMIN`
 - Lean deal package: `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`
 
 ## Script
 
-Gebruik `scripts/google-drive/create-cm-drive-structure.gs` om de rootfolder `OS_CUSTOMMADE`, de goedgekeurde rootfolders, bekende artist/clientfolders en standaard client- en dealsubfolders aan te maken.
+Gebruik `scripts/google-drive/create-cm-drive-structure.gs` om de rootfolder `OS_CUSTOMMADE`, de goedgekeurde rootfolders, bekende artistfolders onder `02_ARTIST_MANAGEMENT` en standaard dealfolders aan te maken.
 
 Het script maakt alleen ontbrekende folders aan. Het verwijdert, hernoemt of verplaatst geen bestaande content en voorkomt duplicate folders door bestaande foldernamen eerst te hergebruiken.
 

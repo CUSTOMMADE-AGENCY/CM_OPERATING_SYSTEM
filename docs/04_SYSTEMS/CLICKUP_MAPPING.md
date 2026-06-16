@@ -122,11 +122,11 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Task template name | `CM - Artist Management - Artist Onboarding Flow` |
 | ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ONBOARDING_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Workspace setup`, `Ready for Monthly Management` |
-| Required subtasks | Engagement basis bevestigen; Google Drive-clientmap aanmaken; artistinformatie en Assets verzamelen; intakegesprek plannen; rollen en approvals vastleggen; eerste artist roadmap bouwen; execution backlog aanmaken; Onboarding summary versturen; Monthly Management Flow-startpunt aanmaken |
+| Required subtasks | Engagement basis bevestigen; Google Drive-artistmap aanmaken; artistinformatie en Assets verzamelen; intakegesprek plannen; rollen en approvals vastleggen; eerste artist roadmap bouwen; execution backlog aanmaken; Onboarding summary versturen; Monthly Management Flow-startpunt aanmaken |
 | Approval owner | Artist manager voor operationele inrichting; artist of aangewezen decision owner voor Scope, budget, public commitments en eerste artist roadmap |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/01_ADMIN` en `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/03_STRATEGY` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/01_ADMIN` en `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/03_STRATEGY` |
 | Gmail templates used | `CM - Artist Management - Onboarding Welcome`; `CM - Artist Management - Input Request`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Approval Request` |
-| Completion criteria | Approved Onboarding summary staat in Drive; Google Drive-clientmap en ClickUp execution backlog zijn ingericht; team roster, approval matrix, open inputs list, decision log en risk log zijn ingevuld; eerste artist roadmap is approved of als blocker gelogd; eerste Monthly Management taak is aangemaakt |
+| Completion criteria | Approved Onboarding summary staat in Drive; Google Drive-artistmap en ClickUp execution backlog zijn ingericht; team roster, approval matrix, open inputs list, decision log en risk log zijn ingevuld; eerste artist roadmap is approved of als blocker gelogd; eerste Monthly Management taak is aangemaakt |
 
 ## Brand Audit Flow
 
@@ -142,7 +142,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Findings opgesteld`, `Action list klaar` |
 | Required subtasks | Audit brief bevestigen; materialen verzamelen; positioning en story reviewen; visuele identiteit reviewen; content en platform presence reviewen; commercial en partner fit reviewen; gaps en risico's identificeren; verbeteracties prioriteren; Brand Audit-memo finaliseren |
 | Approval owner | CM strategy lead voor auditkwaliteit; artist voor public-facing recommendations en prioriteiten |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/03_STRATEGY` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/03_STRATEGY` |
 | Gmail templates used | `CM - Artist Management - Input Request`; `CM - Artist Management - Meeting Agenda`; `CM - Artist Management - Brand Audit Delivery`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Brand Audit-memo, gaps/risk overview, prioritized action list en Asset refresh recommendations staan in Drive; high-priority actions hebben owner, due date en next action in ClickUp; artist heeft public-facing recommendations reviewed; input voor Brandbook, Release Strategy of artist roadmap is overgedragen |
 
@@ -160,7 +160,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Discovery`, `Draft strategic direction`, `Draft visual direction`, `Distributed` |
 | Required subtasks | Brandbook brief bevestigen; source materials organiseren; artist/stakeholder discovery uitvoeren; artist positioning draften; artist story draften; tone of voice definiëren; visual identity guidance maken; content pillars maken; collaboration and partner use rules vastleggen; interne review uitvoeren; artist review verwerken; final approval vastleggen; approved Brandbook distribueren en reviewmoment plannen |
 | Approval owner | CM strategy lead voor Brandbook-Workflow; artist voor final approval en usage restrictions |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/03_STRATEGY` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/03_STRATEGY` |
 | Gmail templates used | `CM - Artist Management - Input Request`; `CM - Artist Management - Brandbook Review`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Approved Brandbook, messaging toolkit, visual direction guide, content pillars, do/don't list en usage notes staan in Drive; artist approval, version, intended users en restrictions zijn schriftelijk vastgelegd; distribution list is bijgewerkt; maintenance/review task is aangemaakt |
 
@@ -178,7 +178,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Roadmap horizon bevestigd`, `Workstreams gedefinieerd`, `Backlog`, `Active priority` |
 | Required subtasks | Roadmap horizon bevestigen; workstreams definiëren; outcomes prioriteren; owners en deadlines vastleggen; roadmap aan ClickUp koppelen; risks en assumptions reviewen; approvals bevestigen; monthly cadence koppelen; roadmap-versies archiveren |
 | Approval owner | Artist manager voor roadmapstructuur; artist of aangewezen decision owner voor priorities, budget, Scope changes en strategic decisions |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/03_STRATEGY` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/03_STRATEGY` |
 | Gmail templates used | `CM - Artist Management - Roadmap Approval`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Approved artist roadmap staat in Drive; alle active priorities hebben owner, due date, dependency en next action in ClickUp; backlog is gescheiden van active priority; risks, Scope changes en budgetvragen zijn approved, geparkeerd of geëscaleerd; monthly review task is gekoppeld |
 
@@ -196,7 +196,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Release intake`, `Campaign planning`, `Launch readiness`, `Post-release review` |
 | Required subtasks | Release Scope en objective bevestigen; release inputs verzamelen; audience, positioning en messaging bepalen; timeline en milestones bouwen; channel owners vastleggen; budget en approvals checken; release checklist uitvoeren; launch readiness review plannen; go/no-go bevestigen; post-release results en learnings reviewen |
 | Approval owner | Release manager of artist manager voor planning; artist voor messaging, budget, release commitments en go/no-go |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/04_RELEASES/[Release Name]` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/04_RELEASES/[Release Name]` |
 | Gmail templates used | `CM - Artist Management - Release Strategy Approval`; `CM - Artist Management - Meeting Agenda`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Release Strategy, timeline, release checklist, approved messaging, owner matrix en post-release review staan in Drive; go/no-go en launch approvals zijn schriftelijk bevestigd; campaign tasks zijn in ClickUp afgerond of overgedragen; learnings zijn toegevoegd aan artist roadmap |
 
@@ -214,7 +214,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Preparation`, `Monthly review`, `Follow-up`, `Escalated` |
 | Required subtasks | Vorige maand reviewen; completed work en missed deadlines bevestigen; actieve workstreams reviewen; artist goals en constraints reviewen; rights, royalties en deals reviewen; budget en commercial items reviewen; prioriteiten voor volgende maand bevestigen; ClickUp owners, dates, dependencies en statuses bijwerken; monthly summary versturen; evidence en approvals archiveren |
 | Approval owner | Artist manager voor monthly cycle; artist of aangewezen decision owner voor prioriteiten, budgetten, public commitments en strategic decisions |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/03_STRATEGY/[YYYY-MM]` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/03_STRATEGY/[YYYY-MM]` |
 | Gmail templates used | `CM - Artist Management - Meeting Agenda`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Monthly Summary`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Monthly management summary, decision log, risk/escalation log en updated artist roadmap staan in Drive; elke priority heeft owner, due date en next action; decisions zijn schriftelijk bevestigd; overdue en blocked items hebben escalatiepad; Scope changes zijn approved voordat execution start |
 
@@ -232,7 +232,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Opportunity registered`, `Fit Check`, `Counsel review`, `Negotiation`, `Obligations active`, `Declined` |
 | Required subtasks | Opportunity registreren; Fit Check uitvoeren; deal inputs verzamelen; red flags identificeren; negotiation position bepalen; legal en specialist review coördineren; negotiation tracker bijwerken; material terms documenteren; final approval bevestigen; final documents archiveren; obligations tracker activeren |
 | Approval owner | Artist voor deal authority en final approval; counsel voor juridische review wanneer rights transfer, legal risk of signature speelt; artist manager voor coordination |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/02_CONTRACT/[Deal Name]` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/02_CONTRACT/[Deal Name]` |
 | Gmail templates used | `CM - Artist Management - Deal Terms Approval`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Approval Request` |
 | Completion criteria | Approved deal memo of negotiation close-out staat in Drive; material terms, red flags en final approval zijn schriftelijk vastgelegd; obligations en deadlines staan in ClickUp; artist roadmap is bijgewerkt; finance, legal, rights, release, marketing of partnership follow-up is toegewezen |
 
@@ -250,7 +250,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Lead registered`, `Partnership Fit Check`, `Negotiation`, `Execution`, `Proof of performance`, `Declined / parked` |
 | Required subtasks | Lead in Pipeline registreren; partnership Fit Check uitvoeren; restrictions en conflicts checken; partnership concept definiëren; commercial terms bepalen; negotiation en legal review coördineren; artist approval verkrijgen; execution checklist aanmaken; deliverables volgen; reporting/proof of performance package opleveren; partnership evalueren |
 | Approval owner | Artist voor brand fit, deliverables, usage, exclusivity en final approval; artist manager of brand partnership lead voor commercial coordination; counsel bij legal/signature risk |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/05_BOOKING_PARTNERSHIPS/[Brand]` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/05_BOOKING_PARTNERSHIPS/[Brand]` |
 | Gmail templates used | `CM - Artist Management - Brand Partnership Approval`; `CM - Artist Management - Approval Request`; `CM - Artist Management - Meeting Recap` |
 | Completion criteria | Approved partnership deal of declined opportunity record staat in Drive; Pipeline en artist roadmap zijn bijgewerkt; usage rights, exclusivity, deliverables, payment en reporting follow-up zijn schriftelijk bevestigd; execution tasks zijn afgerond; proof of performance en learnings zijn opgeslagen |
 
@@ -268,9 +268,9 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Offboarding trigger`, `Close-out`, `Handover`, `Access review`, `Archived`, `Escalated` |
 | Required subtasks | Offboarding trigger bevestigen; agreement en obligations reviewen; close-out task list maken; deliverables afsluiten; open workstreams reviewen; handover package voorbereiden; access en confidentiality reviewen; final summary versturen; Success Fee triggers en open invoices checken; internal lessons learned vastleggen; workspace archiveren |
 | Approval owner | Artist manager voor close-out execution; CM leadership bij conflict, legal exposure, Success Fee of unresolved obligations; artist of decision owner voor handover acceptance |
-| Linked Drive folder | `OS_CUSTOMMADE/03_CLIENTS/[Artist Name]/09_ARCHIVE/Offboarding` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/09_ARCHIVE/Offboarding` |
 | Gmail templates used | `CM - Artist Management - Offboarding Summary`; `CM - Artist Management - Meeting Recap`; `CM - Artist Management - Approval Request` |
-| Completion criteria | Final close-out summary, handover package, updated deliverables register, open obligations list en access review record staan in Drive; alle deliverables zijn completed, transferred, blocked of out-of-Scope gemarkeerd; access is reviewed per einddatum; unresolved issues hebben escalation record; client/Pipeline status is bijgewerkt |
+| Completion criteria | Final close-out summary, handover package, updated deliverables register, open obligations list en access review record staan in Drive; alle deliverables zijn completed, transferred, blocked of out-of-Scope gemarkeerd; access is reviewed per einddatum; unresolved issues hebben escalation record; artist/Pipeline status is bijgewerkt |
 
 ---
 
