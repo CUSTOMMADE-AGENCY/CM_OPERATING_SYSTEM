@@ -19,10 +19,10 @@ Deze map is het canonical entrypoint voor de Artist Management-lane. Gebruik dit
 |---|---|---|
 | Artist Onboarding Flow | `ARTIST_ONBOARDING_FLOW.md` | Nieuwe artist, nieuwe Scope of overgang naar actieve management-execution. |
 | Brand Audit Flow | `BRAND_AUDIT_FLOW.md` | Positioning, visuals, story, content en public-facing brand beoordelen. |
-| Artist Brandbook Flow | `ARTIST_BRANDBOOK_FLOW.md` | Brand rules, narrative, tone of voice en visual direction vastleggen. |
+| Artist Brandbook Flow | `03_ARTIST_BRANDBOOK_FLOW.md` | Brand rules, narrative, tone of voice en visual direction vastleggen. |
 | Artist Roadmap Flow | `ARTIST_ROADMAP_FLOW.md` | Prioriteiten, workstreams, KPI's en kwartaalplanning bepalen. |
-| Release Strategy Flow | `RELEASE_STRATEGY_FLOW.md` | Release planning, launch readiness, campaign milestones en approvals sturen. |
-| Monthly Management Flow | `MONTHLY_MANAGEMENT_FLOW.md` | Maandelijkse cadence, review, next actions en risk management uitvoeren. |
+| Release Strategy Flow | `05_RELEASE_STRATEGY_FLOW.md` | Release planning, launch readiness, campaign milestones en approvals sturen. |
+| Monthly Management Flow | `06_MONTHLY_MANAGEMENT_FLOW.md` | Maandelijkse cadence, review, next actions en risk management uitvoeren. |
 | Deal Negotiation Flow | `DEAL_NEGOTIATION_FLOW.md` | Deal opportunities beoordelen, terms structureren en approvals bewaken. |
 | Brand Partnership Flow | `BRAND_PARTNERSHIP_FLOW.md` | Brand leads kwalificeren, offers maken en partnership execution sturen. |
 | Artist Offboarding Flow | `ARTIST_OFFBOARDING_FLOW.md` | Retainer, project of Scope gecontroleerd afsluiten en overdragen. |

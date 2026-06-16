@@ -94,6 +94,17 @@ Escaleren waar nodig en archiveer summary, approvals, evidence en updated roadma
 
 Escaleren bij missed critical deadline, blocked approval, legal risk, financial commitment, rights ambiguity, royalty dispute, reputation risk, Scope conflict, repeated non-response, artist dissatisfaction of vendor underperformance.
 
+## Monthly cycle
+
+De vaste cyclus bestaat uit preparation, review en follow-up: bereid de agenda en decisions needed voor, bespreek voortgang en blockers in de monthly review, werk daarna ClickUp, Google Drive en de written summary bij. De Workflow draait maandelijks voor actieve retainers en vaker wanneer release-, deal- of crisiswerk dat vereist.
+
+## System of record
+
+- GitHub: Workflow en Governance.
+- Google Drive: client deliverables, summaries, source files en approvals.
+- ClickUp: tasks, status, owners, due dates, dependencies en evidence.
+- Gmail: formele correspondence en approvals.
+
 ## Outputs
 
 - Confirmed next-month priorities.
