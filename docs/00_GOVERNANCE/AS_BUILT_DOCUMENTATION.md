@@ -45,28 +45,21 @@ Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie-
 
 ## Google Drive productie-as-built
 
-De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt de locked Week 1 Build Pack v2-besluiten: Drive briefing-roots zijn leidend, artists worden als clients behandeld en ClickUp/Drive execution gebruikt geen aparte artist- of Master Boutique-silo als operationele root.
+De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artists worden als clients behandeld, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
 
 ```text
 OS_CUSTOMMADE
-├── 00_INBOX
-├── 01_BRIEFINGS
-├── 02_PIPELINE
+├── 00_ADMIN
+├── 01_MASTER_BOUTIQUE
+├── 02_ARTIST_MANAGEMENT
 ├── 03_CLIENTS
 ├── 04_DEALS
-├── 05_BUSINESS
-├── 06_MARKETING
-└── 07_ARCHIVE
-```
-
-De briefing-root is de startlaag voor nieuwe dossiers:
-
-```text
-01_BRIEFINGS
-├── 01_CLIENT_BRIEFINGS
-├── 02_DEAL_BRIEFINGS
-├── 03_PROJECT_BRIEFINGS
-└── 04_INTERNAL_BRIEFINGS
+├── 05_OPERATIONS
+├── 06_FINANCE
+├── 07_LEGAL
+├── 08_MARKETING
+├── 09_CONTENT
+└── 99_ARCHIVE
 ```
 
 Elke artist- of clientfolder onder `OS_CUSTOMMADE/03_CLIENTS` gebruikt waar relevant deze vaste interne structuur:
@@ -84,33 +77,28 @@ CLIENT_OR_ARTIST_NAME
 └── 09_ARCHIVE
 ```
 
-Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS`:
+Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang geen expliciete buyer-facing full Data Room-fase is goedgekeurd:
 
 ```text
 DEAL_OR_ASSET_NAME
-├── 00_Intake
-├── 01_Valuation
-├── 02_Data_Room
-├── 03_Buyer_Outreach
-├── 04_LOI
-├── 05_APA_Negotiation
-├── 06_Closing
-├── 07_Post_Closing
-└── 08_Success_Fee
+├── 01_RECHTEN_REGISTER
+├── 02_CONTRACTEN_BEWIJS
+└── 03_WAARDERING_VERKOOPPAKKET
 ```
 
 ### Drive-documentatie versus eerdere productie
 
 Belangrijke as-built correcties ten opzichte van eerdere documentatie:
 
-- Artistdossiers staan onder `03_CLIENTS`, niet onder een aparte `01_ARTIST_MANAGEMENT`-root.
-- Master Boutique/dealdossiers staan onder `04_DEALS`, niet onder een aparte `02_MASTER_BOUTIQUE`-root.
-- Nieuwe operationele intake loopt via `01_BRIEFINGS` met client-, deal-, project- en interne briefing-subroots.
+- Artistdossiers staan onder `03_CLIENTS`; artists worden behandeld als clients.
+- Master Boutique/dealdossiers staan onder `04_DEALS` en gebruiken de lean Nederlandse dealstructuur.
+- Oude operationele roots worden niet meer aangemaakt of als productie-root gebruikt.
+- De oude Engelse dealstructuur is geen standaard Drive-structuur meer.
 - `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
 - Artist/clientfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
 - De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
 
-Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels, rootfolder-doelen en het overzicht van verouderde Drive-roots.
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels en rootfolder-doelen.
 
 ## Reviewritme
 

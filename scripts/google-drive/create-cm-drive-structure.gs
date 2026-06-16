@@ -38,15 +38,9 @@ const ARTIST_SUBFOLDERS = [
 ];
 
 const DEAL_SUBFOLDERS = [
-  '00_Intake',
-  '01_Valuation',
-  '02_Data_Room',
-  '03_Buyer_Outreach',
-  '04_LOI',
-  '05_APA_Negotiation',
-  '06_Closing',
-  '07_Post_Closing',
-  '08_Success_Fee',
+  '01_RECHTEN_REGISTER',
+  '02_CONTRACTEN_BEWIJS',
+  '03_WAARDERING_VERKOOPPAKKET',
 ];
 
 const CM_DRIVE_STRUCTURE = {
@@ -80,6 +74,12 @@ function createCmDriveStructure() {
       if (rootFolderName === '03_CLIENTS') {
         ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
           getOrCreateFolder(secondLevelFolder, artistSubfolderName);
+        });
+      }
+
+      if (rootFolderName === '04_DEALS') {
+        DEAL_SUBFOLDERS.forEach(function(dealSubfolderName) {
+          getOrCreateFolder(secondLevelFolder, dealSubfolderName);
         });
       }
     });

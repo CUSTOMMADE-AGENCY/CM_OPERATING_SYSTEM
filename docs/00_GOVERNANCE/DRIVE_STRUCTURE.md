@@ -2,58 +2,47 @@
 
 ## Doel
 
-Google Drive is de operationele working environment voor briefing-roots, clientbestanden, getekende documenten, deliverables, finance, legal, content en archieven. Drive ondersteunt uitvoering, maar is niet de documentatie-source of truth.
+Documenteer de goedgekeurde Google Drive operating structure voor CM. Google Drive is de operationele working environment voor client files, deal files, signed documents, deliverables, finance, legal, content en archives.
 
-GitHub en Google Drive hebben daarom bewust geen identieke structuur:
+GitHub en Google Drive hebben bewust verschillende structuren:
 
-- GitHub bewaart Governance, SOPs, Workflows, Playbooks en as-built systeemdocumentatie.
-- Google Drive bewaart live briefings, operationele bestanden, signed documents, deliverables en werkbestanden.
+- GitHub is de source of truth voor Governance, SOPs, Workflows, Playbooks en systeemdocumentatie.
+- Google Drive is de operationele working environment voor live dossiers, bestanden en deliverables.
 
-Deze pagina volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md`: Drive briefing-roots zijn leidend, artists worden als clients behandeld en operationele artistdossiers staan onder `03_CLIENTS`.
+Deze pagina volgt de locked decision uit `docs/00_GOVERNANCE/CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md`. Bij conflict is de locked decision leidend.
 
-## Goedgekeurde Drive-root
+## Rootfolder
 
-Alle CM Drive-mappen vallen onder één rootfolder:
+Alle operationele CM Drive-mappen worden aangemaakt onder:
 
 `OS_CUSTOMMADE`
 
-## Productie Drive-structuur
+## Goedgekeurde Drive-structuur
 
-Alleen onderstaande rootfolders zijn goedgekeurd als productie-root onder `OS_CUSTOMMADE`:
+Gebruik uitsluitend onderstaande rootfolders onder `OS_CUSTOMMADE`:
 
 ```text
 OS_CUSTOMMADE
-│
-├── 00_INBOX
-├── 01_BRIEFINGS
-├── 02_PIPELINE
+├── 00_ADMIN
+├── 01_MASTER_BOUTIQUE
+├── 02_ARTIST_MANAGEMENT
 ├── 03_CLIENTS
 ├── 04_DEALS
-├── 05_BUSINESS
-├── 06_MARKETING
-└── 07_ARCHIVE
+├── 05_OPERATIONS
+├── 06_FINANCE
+├── 07_LEGAL
+├── 08_MARKETING
+├── 09_CONTENT
+└── 99_ARCHIVE
 ```
 
-## Nieuwe briefing-roots
+Oude rootstructuren worden niet meer aangemaakt of als operationele root gebruikt.
 
-Briefings zijn de verplichte startlaag voor nieuwe operationele dossiers. Een briefing wordt eerst in `01_BRIEFINGS` vastgelegd en pas daarna omgezet naar een client-, deal- of intern uitvoeringsdossier.
+## Client folder rule
 
-```text
-01_BRIEFINGS
-├── 01_CLIENT_BRIEFINGS
-├── 02_DEAL_BRIEFINGS
-├── 03_PROJECT_BRIEFINGS
-└── 04_INTERNAL_BRIEFINGS
-```
+Alle artist- en clientfolders staan onder `OS_CUSTOMMADE/03_CLIENTS`. Artists worden behandeld als clients; er wordt geen aparte operationele artist-silo gebruikt.
 
-- `01_CLIENT_BRIEFINGS` — intake, onboarding, management-, artist-, brand-, release- en clientbriefings.
-- `02_DEAL_BRIEFINGS` — Master Boutique, catalogus-, buyer-, LOI-, APA- en partnershipbriefings.
-- `03_PROJECT_BRIEFINGS` — tijdelijke of cross-functionele projectbriefings.
-- `04_INTERNAL_BRIEFINGS` — interne CM-briefings voor business, marketing, governance of tooling.
-
-## Clientstructuur onder `03_CLIENTS`
-
-Artists zijn clients. Elke artist- of clientfolder binnen `OS_CUSTOMMADE/03_CLIENTS` gebruikt waar relevant deze vaste interne productiestructuur:
+Elke client- of artistfolder gebruikt waar relevant deze vaste productiestructuur:
 
 ```text
 CLIENT_OR_ARTIST_NAME
@@ -68,77 +57,50 @@ CLIENT_OR_ARTIST_NAME
 └── 09_ARCHIVE
 ```
 
-Deze regel geldt voor alle huidige en toekomstige artist- en clientfolders, waaronder bestaande artistdossiers die voorheen onder `01_ARTIST_MANAGEMENT` stonden.
+## Deal folder rule
 
-## Dealstructuur onder `04_DEALS`
-
-Master Boutique en andere dealdossiers staan als cases onder `OS_CUSTOMMADE/04_DEALS`:
+Master Boutique en andere dealdossiers staan onder `OS_CUSTOMMADE/04_DEALS`. Gebruik uitsluitend de lean Nederlandse dealstructuur zolang geen expliciete buyer-facing full Data Room-fase is goedgekeurd:
 
 ```text
 DEAL_OR_ASSET_NAME
-├── 00_Intake
-├── 01_Valuation
-├── 02_Data_Room
-├── 03_Buyer_Outreach
-├── 04_LOI
-├── 05_APA_Negotiation
-├── 06_Closing
-├── 07_Post_Closing
-└── 08_Success_Fee
+├── 01_RECHTEN_REGISTER
+├── 02_CONTRACTEN_BEWIJS
+└── 03_WAARDERING_VERKOOPPAKKET
 ```
 
-## Productievalidatie
+- `01_RECHTEN_REGISTER` bevat rechten- en catalogusdata.
+- `02_CONTRACTEN_BEWIJS` bevat contracten, bewijsstukken en juridische onderbouwing.
+- `03_WAARDERING_VERKOOPPAKKET` bevat waardering, Deal Memo, Buyer Package en final export.
 
-| Volgorde | Goedgekeurde productiefolder | Status in documentatie |
-| --- | --- | --- |
-| 00 | `00_INBOX` | Tijdelijke intake voor nog te triageren uploads. |
-| 01 | `01_BRIEFINGS` | Nieuwe leidende briefing-root voor client-, deal-, project- en interne briefings. |
-| 02 | `02_PIPELINE` | Pre-client/pre-deal pipeline en qualification voordat een dossier wordt geopend. |
-| 03 | `03_CLIENTS` | Goedgekeurde client-root; artistdossiers vallen hieronder. |
-| 04 | `04_DEALS` | Goedgekeurde deal/case-root voor Master Boutique en andere deals. |
-| 05 | `05_BUSINESS` | Bedrijfsvoering, finance, legal, HR en interne administratie. |
-| 06 | `06_MARKETING` | CM-brede marketing, merk, content, social media en netwerkbestanden. |
-| 07 | `07_ARCHIVE` | Operationeel archief. |
+De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-structuur.
 
-Niet langer goedgekeurd als operationele productie-root:
+## Shared Services versus client-specifieke instructies
 
-- `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT` als aparte artist-silo.
-- `OS_CUSTOMMADE/02_MASTER_BOUTIQUE` als aparte Master Boutique-root.
-- `OS_CUSTOMMADE/03_SHARED_SERVICES` als Drive-rootfolder.
-- `OS_CUSTOMMADE/03_EXECUTIVE` en `OS_CUSTOMMADE/04_BUSINESS` als oude rootnummering.
-- `CLIENT_OR_ARTIST_NAME/07_CONTENT` of een ongenummerde `SOCIALMEDIA`-map.
+`docs/03_SHARED_SERVICES/` is een GitHub-documentatiedomein, geen Google Drive-rootfolder.
 
-## Rootfolder-doel
+Client-specifieke instructies staan in de relevante clientfolder. Bijvoorbeeld:
 
-- `00_INBOX` — tijdelijke intake voor nog te verwerken documenten, uploads en losse input.
-- `01_BRIEFINGS` — leidende startlaag voor client-, deal-, project- en interne briefings.
-- `02_PIPELINE` — pre-client/pre-deal opportunities, Fit Checks en qualification voordat een live dossier wordt geopend.
-- `03_CLIENTS` — live client- en artistdossiers, inclusief artistmanagement, releases, contracts, finance, social media, press/EPK en archief.
-- `04_DEALS` — live deal-, Master Boutique-, catalogus-, buyer-, data-room-, LOI-, APA-, closing- en success-fee dossiers.
-- `05_BUSINESS` — bedrijfsvoering, finance, legal, HR, interne administratie en commerciële bedrijfsbestanden.
-- `06_MARKETING` — CM-brede marketing, merk, content, social media en netwerkbestanden.
-- `07_ARCHIVE` — afgesloten, historisch of niet-actief materiaal dat operationeel bewaard moet blijven.
+- General email protocol source: `docs/03_SHARED_SERVICES/`
+- Goudtje-specific email instructions: `OS_CUSTOMMADE/03_CLIENTS/GOUDTJE_GET_PAID/03_STRATEGY` of `OS_CUSTOMMADE/03_CLIENTS/GOUDTJE_GET_PAID/01_ADMIN`, afhankelijk van gebruik
+- New client intake/briefing material: `OS_CUSTOMMADE/03_CLIENTS/[Client Name]/01_ADMIN`
+- Lean deal package: `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`
 
-## GitHub versus Drive
+## Script
 
-`03_SHARED_SERVICES` bestaat als GitHub-documentatiedomein en blijft onderdeel van de repositoryarchitectuur. Het is geen productie-rootfolder in Google Drive.
+Gebruik `scripts/google-drive/create-cm-drive-structure.gs` om de rootfolder `OS_CUSTOMMADE`, de goedgekeurde rootfolders, bekende artist/clientfolders en standaard client- en dealsubfolders aan te maken.
 
-Voorbeelden:
+Het script maakt alleen ontbrekende folders aan. Het verwijdert, hernoemt of verplaatst geen bestaande content en voorkomt duplicate folders door bestaande foldernamen eerst te hergebruiken.
 
-- Repositorybron voor gedeelde SOPs: `docs/03_SHARED_SERVICES/`
-- Artist-specifieke releaseplanning: `OS_CUSTOMMADE/03_CLIENTS/<ARTIST_NAME>/04_RELEASES`
-- Artist-specifieke social media assets of planning: `OS_CUSTOMMADE/03_CLIENTS/<ARTIST_NAME>/07_SOCIALMEDIA`
-- Master Boutique data room: `OS_CUSTOMMADE/04_DEALS/<DEAL_NAME>/02_Data_Room`
-- Nieuwe clientbriefing: `OS_CUSTOMMADE/01_BRIEFINGS/01_CLIENT_BRIEFINGS/<CLIENT_NAME>`
+## Opslag- en toolgrenzen
 
-## Regels
+- GitHub bewaart Workflows, Governance, SOPs, Playbooks en systeemdocumentatie.
+- Google Drive bewaart live dossiers, clientmappen, dealmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+- Moneybird blijft financiële waarheid.
 
-- Maak geen parallelle mappenstructuren buiten `OS_CUSTOMMADE`.
-- Gebruik alleen de productie-rootfolders zoals hierboven beschreven.
-- Behandel artists als clients en plaats artistdossiers onder `03_CLIENTS`.
-- Plaats deal- en Master Boutique-dossiers onder `04_DEALS`.
-- Start nieuwe dossiers via de briefing-roots onder `01_BRIEFINGS`.
-- Gebruik exacte foldernamen en hoofdletters zoals governance.
-- Maak geen ongenummerde artistfolder `SOCIALMEDIA`; gebruik `07_SOCIALMEDIA`.
-- Hernoem de GitHub-map `docs/03_SHARED_SERVICES/` niet naar aanleiding van de Drive-structuur.
-- Gebruik duidelijke eigenaar- en access-afspraken per briefing-, client-, deal- of projectmap.
+## Repository-hygiëne
+
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.
