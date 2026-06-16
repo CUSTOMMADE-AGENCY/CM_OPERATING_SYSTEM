@@ -45,49 +45,72 @@ Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie-
 
 ## Google Drive productie-as-built
 
-De actuele productie-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built is gevalideerd tegen de live productiecontrole van 2026-06-11. De live rootstructuur is:
+De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt de locked Week 1 Build Pack v2-besluiten: Drive briefing-roots zijn leidend, artists worden als clients behandeld en ClickUp/Drive execution gebruikt geen aparte artist- of Master Boutique-silo als operationele root.
 
 ```text
 OS_CUSTOMMADE
 ├── 00_INBOX
-├── 01_ARTIST_MANAGEMENT
-├── 02_MASTER_BOUTIQUE
-├── 03_EXECUTIVE
-├── 04_BUSINESS
-├── 05_MARKETING
-├── 06_PROJECTS
+├── 01_BRIEFINGS
+├── 02_PIPELINE
+├── 03_CLIENTS
+├── 04_DEALS
+├── 05_BUSINESS
+├── 06_MARKETING
 └── 07_ARCHIVE
 ```
 
-Elke artistfolder onder `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT` gebruikt in productie deze vaste interne structuur:
+De briefing-root is de startlaag voor nieuwe dossiers:
 
 ```text
-ARTIST_NAME
+01_BRIEFINGS
+├── 01_CLIENT_BRIEFINGS
+├── 02_DEAL_BRIEFINGS
+├── 03_PROJECT_BRIEFINGS
+└── 04_INTERNAL_BRIEFINGS
+```
+
+Elke artist- of clientfolder onder `OS_CUSTOMMADE/03_CLIENTS` gebruikt waar relevant deze vaste interne structuur:
+
+```text
+CLIENT_OR_ARTIST_NAME
 ├── 01_ADMIN
 ├── 02_CONTRACT
 ├── 03_STRATEGY
 ├── 04_RELEASES
-├── 05_BOOKING
+├── 05_BOOKING_PARTNERSHIPS
 ├── 06_FINANCE
 ├── 07_SOCIALMEDIA
 ├── 08_PRESS_EPK
 └── 09_ARCHIVE
 ```
 
-### Drive-documentatie versus live productie
+Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS`:
 
-De as-built status is: de documentatie moet de live Drive-productiestructuur volgen, terwijl de GitHub-repositoryarchitectuur ongewijzigd blijft. De live Drive-rootfolders zijn `00_INBOX`, `01_ARTIST_MANAGEMENT`, `02_MASTER_BOUTIQUE`, `03_EXECUTIVE`, `04_BUSINESS`, `05_MARKETING`, `06_PROJECTS` en `07_ARCHIVE`. De live artistfolders zijn `01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `06_FINANCE`, `07_SOCIALMEDIA`, `08_PRESS_EPK` en `09_ARCHIVE`.
+```text
+DEAL_OR_ASSET_NAME
+├── 00_Intake
+├── 01_Valuation
+├── 02_Data_Room
+├── 03_Buyer_Outreach
+├── 04_LOI
+├── 05_APA_Negotiation
+├── 06_Closing
+├── 07_Post_Closing
+└── 08_Success_Fee
+```
+
+### Drive-documentatie versus eerdere productie
 
 Belangrijke as-built correcties ten opzichte van eerdere documentatie:
 
-- Google Drive gebruikt `03_EXECUTIVE` als productie-rootfolder, niet `03_SHARED_SERVICES`.
+- Artistdossiers staan onder `03_CLIENTS`, niet onder een aparte `01_ARTIST_MANAGEMENT`-root.
+- Master Boutique/dealdossiers staan onder `04_DEALS`, niet onder een aparte `02_MASTER_BOUTIQUE`-root.
+- Nieuwe operationele intake loopt via `01_BRIEFINGS` met client-, deal-, project- en interne briefing-subroots.
 - `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
-- Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`.
-- Artistfolders hebben geen extra ongenummerde `SOCIALMEDIA`-map naast de genummerde mappen.
-- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht. `docs/03_SHARED_SERVICES/` blijft dus bestaan als documentatiedomein, maar wordt niet als Drive-root gespiegeld.
-- Tweede niveaus onder `02_MASTER_BOUTIQUE`, `03_EXECUTIVE`, `04_BUSINESS`, `05_MARKETING`, `06_PROJECTS` en `07_ARCHIVE` zijn niet als vaste governance-structuur vastgesteld in deze as-built; live Drive-ownership bepaalt daar de verdere inrichting zolang de rootnamen intact blijven.
+- Artist/clientfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
+- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
 
-Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels, rootfolder-doelen en het overzicht van verschillen tussen eerder gedocumenteerde en live productie-Drive-structuur.
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels, rootfolder-doelen en het overzicht van verouderde Drive-roots.
 
 ## Reviewritme
 

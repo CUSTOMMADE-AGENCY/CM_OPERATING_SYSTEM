@@ -2,27 +2,51 @@
 
 ## Doel
 
-Definieer hoe execution, Pipeline en taken worden georganiseerd.
+Definieer hoe execution, Pipeline en taken worden georganiseerd binnen één centrale CM Space.
 
-## Aanbevolen spaces
+## Centrale Space
 
-- Master Boutique Pipeline.
-- Artist Management Clients.
-- Shared Operations.
-- Internal Governance.
+ClickUp gebruikt exact één centrale Space:
+
+`CM`
+
+Er worden geen aparte Spaces aangemaakt voor Master Boutique, Artist Management, Shared Operations of Internal Governance. Die onderdelen bestaan als folders binnen dezelfde `CM` Space.
+
+```text
+CM
+├── Artist Management
+├── Master Boutique / Deals
+├── Clients
+├── Pipeline
+├── Shared Operations
+└── Governance & Systems
+```
+
+## Folderdoel
+
+- `Artist Management` — artist/client execution workflows, monthly management, release strategy, brandbook, partnerships en offboarding.
+- `Master Boutique / Deals` — catalogus-, buyer-, data-room-, LOI-, APA-, closing- en success-fee execution.
+- `Clients` — client-overstijgende onboarding, deliverables, approvals en live client registers wanneer dit niet in een lane-folder past.
+- `Pipeline` — pre-client/pre-deal qualification, Fit Checks, opportunity stages en parked/rejected leads.
+- `Shared Operations` — gedeelde operationele taken, templates, meetings, communications en file-management execution.
+- `Governance & Systems` — repository, automation, AI-agent, Drive, ClickUp en systems tasks.
 
 ## Regels
 
 - Elke actieve Workflow heeft een owner en deadline.
 - Taken bevatten context, source links, status en required evidence.
 - Pipeline-stages moeten beslismomenten en blockers zichtbaar maken.
+- Elke taak bevat een GitHub source link waar een workflow of SOP bestaat.
+- Elke client-, artist- of dealtaak bevat een Google Drive folder link naar de juiste `OS_CUSTOMMADE`-map.
+- Nieuwe business lanes worden eerst als folder of list in `CM` ingericht; een nieuwe Space vereist expliciete governancewijziging.
 
 ## Opslag- en toolgrenzen
 
-- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
-- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- GitHub bewaart Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live briefings, clientmappen, dealmappen, getekende documenten, deliverables en werkbestanden.
 - ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
 - Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
+- Moneybird blijft financiële waarheid voor facturatie, omzet, kosten, debiteuren, crediteuren en financiële rapportage.
 
 ## Repository-hygiëne
 

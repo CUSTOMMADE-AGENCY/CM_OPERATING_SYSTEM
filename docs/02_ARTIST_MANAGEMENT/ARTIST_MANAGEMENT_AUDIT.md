@@ -27,10 +27,10 @@ Belangrijkste bevindingen:
 | `00_ARTIST_MANAGEMENT_MAP.md`, `02_ARTIST_MANAGEMENT_MAP.md`, `README.md` | `00_ARTIST_MANAGEMENT_MAP.md` | MERGE | Alle drie functioneren als navigatie/entrypoint. `02_ARTIST_MANAGEMENT_MAP.md` bevat ook een eerdere audit en ClickUp-template-overzicht; die informatie hoort in deze audit of in het canonical mapdocument, niet in een tweede mapbestand. |
 | `01_ARTIST_ONBOARDING_FLOW.md` en `ARTIST_ONBOARDING_FLOW.md` | `01_ARTIST_ONBOARDING_FLOW.md` | KEEP genummerd, ARCHIVE shim tenzij stable links nodig zijn | Het ongenummerde bestand is alleen een verwijzing naar de genummerde bron. |
 | `02_BRAND_AUDIT_FLOW.md`, `BRAND_AUDIT_FLOW.md`, `ARTIST_BRAND_AUDIT_FLOW.md` | `02_BRAND_AUDIT_FLOW.md` | KEEP genummerd, ARCHIVE/MERGE legacy | Er zijn drie brand-audit varianten: canonical workflow, stable-link shim en korte legacy-audit. |
-| `03_ARTIST_BRANDBOOK_FLOW.md` en `03_ARTIST_BRANDBOOK_FLOW.md` | `03_ARTIST_BRANDBOOK_FLOW.md` | MERGE legacy details, daarna ARCHIVE legacy | Het legacy-bestand bevat nuttige brandbook-section details, maar de genummerde workflow is de lifecycle-bron. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_ARTIST_BRANDBOOK_FLOW.md` en `03_ARTIST_BRANDBOOK_FLOW.md` | `03_ARTIST_BRANDBOOK_FLOW.md` | Legacy details merged; legacy archived | Het legacy-bestand bevat nuttige brandbook-section details, maar de genummerde workflow is de lifecycle-bron. |
 | `04_ARTIST_ROADMAP_FLOW.md` en `ARTIST_ROADMAP_FLOW.md` | `04_ARTIST_ROADMAP_FLOW.md` | KEEP genummerd, ARCHIVE shim tenzij stable links nodig zijn | Het ongenummerde bestand is alleen een verwijzing naar de genummerde bron. |
-| `05_RELEASE_STRATEGY_FLOW.md` en `05_RELEASE_STRATEGY_FLOW.md` | `05_RELEASE_STRATEGY_FLOW.md` | KEEP genummerd, ARCHIVE korte legacy-flow | De korte release-flow overlapt met de complete genummerde release workflow. |
-| `06_MONTHLY_MANAGEMENT_FLOW.md` en `06_MONTHLY_MANAGEMENT_FLOW.md` | `06_MONTHLY_MANAGEMENT_FLOW.md` | MERGE eventuele cadence-details, daarna ARCHIVE legacy | Beide beschrijven dezelfde monthly management cycle. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_RELEASE_STRATEGY_FLOW.md` en `05_RELEASE_STRATEGY_FLOW.md` | `05_RELEASE_STRATEGY_FLOW.md` | KEEP genummerd; legacy archived | De korte release-flow overlapt met de complete genummerde release workflow. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_MONTHLY_MANAGEMENT_FLOW.md` en `06_MONTHLY_MANAGEMENT_FLOW.md` | `06_MONTHLY_MANAGEMENT_FLOW.md` | Cadence-details beoordeeld; legacy archived | Beide beschrijven dezelfde monthly management cycle. |
 | `07_DEAL_NEGOTIATION_FLOW.md` en `DEAL_NEGOTIATION_FLOW.md` | `07_DEAL_NEGOTIATION_FLOW.md` | KEEP genummerd, ARCHIVE shim tenzij stable links nodig zijn | Het ongenummerde bestand is alleen een verwijzing naar de genummerde bron. |
 | `08_BRAND_PARTNERSHIP_FLOW.md` en `BRAND_PARTNERSHIP_FLOW.md` | `08_BRAND_PARTNERSHIP_FLOW.md` | KEEP genummerd, ARCHIVE shim tenzij stable links nodig zijn | Het ongenummerde bestand is alleen een verwijzing naar de genummerde bron. |
 | `09_ARTIST_OFFBOARDING_FLOW.md` en `ARTIST_OFFBOARDING_FLOW.md` | `09_ARTIST_OFFBOARDING_FLOW.md` | KEEP genummerd, ARCHIVE shim tenzij stable links nodig zijn | Het ongenummerde bestand is alleen een verwijzing naar de genummerde bron. |
@@ -123,7 +123,7 @@ Belangrijkste bevindingen:
 | `08_BRAND_PARTNERSHIP_FLOW.md` | KEEP | Complete genummerde canonical brand partnership workflow. |
 | `09_ARTIST_OFFBOARDING_FLOW.md` | KEEP | Complete genummerde canonical offboarding workflow; kan close-out-inhoud absorberen. |
 | `ARTIST_APPROVAL_MATRIX.md` | KEEP | Nodig als reusable approval-control definitie; live artist-specifieke approval records horen wel in ClickUp. |
-| `03_ARTIST_BRANDBOOK_FLOW.md` | MERGE | Legacy brandbook workflow met mogelijk nuttige section-details; merge unieke inhoud naar `03_ARTIST_BRANDBOOK_FLOW.md` en archiveer daarna. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_ARTIST_BRANDBOOK_FLOW.md` | ARCHIVED | Legacy brandbook workflow verwijst naar canonical `03_ARTIST_BRANDBOOK_FLOW.md`; niet naar zichzelf. |
 | `ARTIST_BRAND_AUDIT_FLOW.md` | ARCHIVE | Korte legacy-audit overlapt met `02_BRAND_AUDIT_FLOW.md` en `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/BRAND_AUDIT_TEMPLATE.md`. |
 | `ARTIST_BUSINESS_AUDIT_FLOW.md` | MERGE | Inhoud is relevant, maar te kort en niet geïntegreerd in de genummerde lifecycle; merge naar een toekomstige canonical business-audit workflow of map. |
 | `ARTIST_CLIENT_WORKFLOW.md` | ARCHIVE | Lifecycle-overzicht wordt beter afgedekt door `00_ARTIST_MANAGEMENT_MAP.md`, `02_ARTIST_MANAGEMENT_MAP.md` en de genummerde workflows. |
@@ -142,12 +142,12 @@ Belangrijkste bevindingen:
 | `CLOSE_OUT_FLOW.md` | MERGE | Close-out hoort als subfase/checklist in `09_ARTIST_OFFBOARDING_FLOW.md`; archiveer daarna. |
 | `DEALS_RIGHTS_FLOW.md` | MERGE | Combineert deal opportunity en rights check; split/merge naar `07_DEAL_NEGOTIATION_FLOW.md` en `RIGHTS_ROYALTY_AUDIT_FLOW.md`. |
 | `DEAL_NEGOTIATION_FLOW.md` | ARCHIVE | Stable-link shim naar `07_DEAL_NEGOTIATION_FLOW.md`; archiveer tenzij externe ClickUp/Drive-links deze naam vereisen. |
-| `06_MONTHLY_MANAGEMENT_FLOW.md` | MERGE | Legacy monthly workflow overlapt met `06_MONTHLY_MANAGEMENT_FLOW.md`; merge eventuele cadence-details en archiveer daarna. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_MONTHLY_MANAGEMENT_FLOW.md` | ARCHIVED | Legacy monthly workflow verwijst naar canonical `06_MONTHLY_MANAGEMENT_FLOW.md`; niet naar zichzelf. |
 | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/MONTHLY_MANAGEMENT_TEMPLATE.md` | MOVE_TO_CLICKUP | Beschrijft ClickUp list setup, custom fields, recurring task sections en automations; hoort primair in ClickUp. |
 | `ONBOARDING_CHECKLIST.md` | MOVE_TO_CLICKUP | Checklist is execution-control voor onboarding tasks, completion status en missing inputs; beter als ClickUp checklist/template. |
 | `README.md` | KEEP | Nuttige korte oriëntatie op doel, entrypoint, lifecycle, execution layer en repository-hygiëne. |
 | `RELEASE_CHECKLIST.md` | MOVE_TO_CLICKUP | Release readiness checks vragen owners, deadlines, status en bewijs; hoort als ClickUp checklist bij release execution. |
-| `05_RELEASE_STRATEGY_FLOW.md` | ARCHIVE | Korte legacy-flow overlapt met `05_RELEASE_STRATEGY_FLOW.md`. |
+| `ARCHIVE/2026-06-16_LANE_02/LEGACY_RELEASE_STRATEGY_FLOW.md` | ARCHIVED | Korte legacy-flow verwijst naar canonical `05_RELEASE_STRATEGY_FLOW.md`; niet naar zichzelf. |
 | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md` | KEEP | Reusable deliverable-template voor release overview, strategy, campaign plan, asset readiness, budget, approvals en risks. |
 | `RIGHTS_ROYALTY_AUDIT_FLOW.md` | MERGE | Relevante specialistische workflow, maar nog kort; maak deze canonical of merge in business/rights auditlaag. |
 | `../03_SHARED_SERVICES/TEMPLATES/ARTIST_MANAGEMENT/ROADMAP_TEMPLATE.md` | KEEP | Reusable deliverable-template voor roadmap context, outcomes, workstreams, risks en monthly review notes. |

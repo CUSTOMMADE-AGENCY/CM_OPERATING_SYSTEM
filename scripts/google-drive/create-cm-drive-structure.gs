@@ -30,45 +30,50 @@ const ARTIST_SUBFOLDERS = [
   '02_CONTRACT',
   '03_STRATEGY',
   '04_RELEASES',
-  '05_BOOKING',
+  '05_BOOKING_PARTNERSHIPS',
   '06_FINANCE',
-  '07_CONTENT',
+  '07_SOCIALMEDIA',
   '08_PRESS_EPK',
   '09_ARCHIVE',
-  'SOCIALMEDIA',
+];
+
+const BRIEFING_SUBFOLDERS = [
+  '01_CLIENT_BRIEFINGS',
+  '02_DEAL_BRIEFINGS',
+  '03_PROJECT_BRIEFINGS',
+  '04_INTERNAL_BRIEFINGS',
+];
+
+const DEAL_SUBFOLDERS = [
+  '00_Intake',
+  '01_Valuation',
+  '02_Data_Room',
+  '03_Buyer_Outreach',
+  '04_LOI',
+  '05_APA_Negotiation',
+  '06_Closing',
+  '07_Post_Closing',
+  '08_Success_Fee',
 ];
 
 const CM_DRIVE_STRUCTURE = {
   '00_INBOX': [],
-  '01_ARTIST_MANAGEMENT': ARTISTS,
-  '02_MASTER_BOUTIQUE': [
-    '01_CLIENTS',
-    '02_OPERATIONS',
-    '03_FINANCE',
-    '04_LEGAL',
-    '05_MARKETING',
-    '06_ARCHIVE',
-  ],
-  '03_SHARED_SERVICES': [
-    '01_GOVERNANCE',
-    '02_RESOURCES',
-    '03_OPERATION',
-    '04_REPORTS',
-    '05_SOPS_FLOWS',
-  ],
-  '04_BUSINESS': [
+  '01_BRIEFINGS': BRIEFING_SUBFOLDERS,
+  '02_PIPELINE': [],
+  '03_CLIENTS': ARTISTS,
+  '04_DEALS': [],
+  '05_BUSINESS': [
     '01_FINANCE',
     '02_LEGAL',
     '03_HR',
     '04_CURSUS_MASTERCLASSES',
   ],
-  '05_MARKETING': [
+  '06_MARKETING': [
     '01_BRAND',
     '02_CONTENT',
     '03_SOCIALMEDIA',
     '04_NETWORK',
   ],
-  '06_PROJECTS': [],
   '07_ARCHIVE': [],
 };
 
@@ -86,7 +91,7 @@ function createCmDriveStructure() {
     secondLevelFolders.forEach(function(secondLevelFolderName) {
       const secondLevelFolder = getOrCreateFolder(rootFolder, secondLevelFolderName);
 
-      if (rootFolderName === '01_ARTIST_MANAGEMENT') {
+      if (rootFolderName === '03_CLIENTS') {
         ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
           getOrCreateFolder(secondLevelFolder, artistSubfolderName);
         });

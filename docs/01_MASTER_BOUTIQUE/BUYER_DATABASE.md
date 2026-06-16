@@ -6,7 +6,7 @@ Document the CM Master Boutique Buyer database structure, governance, ownership 
 
 The live Buyer database is stored in Google Drive as `CM_MASTER_ACQUISITION_OS`.
 
-Drive location: `OS_CUSTOMMADE/02_MASTER_BOUTIQUE/02_OPERATIONS`.
+Drive location: `OS_CUSTOMMADE/04_DEALS/BUYER_DATABASE`.
 
 ## What the Buyer database is
 
@@ -43,7 +43,7 @@ Ownership responsibilities include:
 |---|---|
 | GitHub | Documents the database structure, governance, workflow rules and related operating models. |
 | Google Sheets | Stores the live Buyer database in `CM_MASTER_ACQUISITION_OS`. |
-| Google Drive | Stores the live database file and supporting operational materials in `OS_CUSTOMMADE/02_MASTER_BOUTIQUE/02_OPERATIONS`. |
+| Google Drive | Stores the live database file and supporting operational materials in `OS_CUSTOMMADE/04_DEALS/BUYER_DATABASE`. |
 | ClickUp | Stores active outreach tasks, deal stages, owners, deadlines, next actions and execution proof. |
 | Gmail | Stores Buyer communication, introductions, outreach emails, follow-ups and approved templates. |
 
