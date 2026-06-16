@@ -37,13 +37,6 @@ const ARTIST_SUBFOLDERS = [
   '09_ARCHIVE',
 ];
 
-const BRIEFING_SUBFOLDERS = [
-  '01_CLIENT_BRIEFINGS',
-  '02_DEAL_BRIEFINGS',
-  '03_PROJECT_BRIEFINGS',
-  '04_INTERNAL_BRIEFINGS',
-];
-
 const DEAL_SUBFOLDERS = [
   '00_Intake',
   '01_Valuation',
@@ -57,24 +50,17 @@ const DEAL_SUBFOLDERS = [
 ];
 
 const CM_DRIVE_STRUCTURE = {
-  '00_INBOX': [],
-  '01_BRIEFINGS': BRIEFING_SUBFOLDERS,
-  '02_PIPELINE': [],
+  '00_ADMIN': [],
+  '01_MASTER_BOUTIQUE': [],
+  '02_ARTIST_MANAGEMENT': [],
   '03_CLIENTS': ARTISTS,
   '04_DEALS': [],
-  '05_BUSINESS': [
-    '01_FINANCE',
-    '02_LEGAL',
-    '03_HR',
-    '04_CURSUS_MASTERCLASSES',
-  ],
-  '06_MARKETING': [
-    '01_BRAND',
-    '02_CONTENT',
-    '03_SOCIALMEDIA',
-    '04_NETWORK',
-  ],
-  '07_ARCHIVE': [],
+  '05_OPERATIONS': [],
+  '06_FINANCE': [],
+  '07_LEGAL': [],
+  '08_MARKETING': [],
+  '09_CONTENT': [],
+  '99_ARCHIVE': [],
 };
 
 function createCmDriveStructure() {
