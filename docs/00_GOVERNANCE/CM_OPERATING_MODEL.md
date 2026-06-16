@@ -99,17 +99,12 @@ Upsell
 
 ## Systems
 
-GitHub
-= Governance / SOPs / Playbooks / documentatie
-
-Google Drive
-= bestanden / deliverables / getekende documenten
-
-ClickUp
-= execution / tasks / Pipeline
-
-Gmail
-= communicatie
+- GitHub = governance/source of truth
+- Google Drive = opslag
+- ClickUp = uitvoering
+- Moneybird = financiële waarheid
+- Gmail = communicatie
+- ChatGPT/Claude/Codex = analyse en verbetering
 
 ## Governance
 
