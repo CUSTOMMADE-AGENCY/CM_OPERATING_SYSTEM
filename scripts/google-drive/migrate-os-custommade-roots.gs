@@ -23,8 +23,14 @@ const ALLOW_ARCHIVE_ACTIONS = false;
 const MIGRATION_LOG_SPREADSHEET_ID = '';
 const MIGRATION_LOG_SHEET_NAME = 'Sprint 2C Migration Log';
 const MIGRATION_SUMMARY_SHEET_NAME = 'Sprint 2C Summary';
+const MIGRATION_CONFLICTS_SHEET_NAME = 'Sprint 2C Conflicten';
+const MIGRATION_MANUAL_REVIEW_SHEET_NAME = 'Sprint 2C Handmatige Review';
+const MIGRATION_GO_NO_GO_SHEET_NAME = 'Sprint 2C Go-No-Go';
 const MIGRATION_TIMEZONE = Session.getScriptTimeZone() || 'Etc/UTC';
 const GOVERNANCE_IN_GITHUB_IS_LEADING = true;
+const GOVERNANCE_CONFLICT_REPORT_PATH = 'docs/00_GOVERNANCE/SPRINT2B_GOVERNANCE_CONFLICT_REPORT.md';
+const MIGRATION_MATRIX_PATH = 'docs/00_GOVERNANCE/SPRINT2B_DRIVE_MIGRATION_MATRIX.md';
+const INVENTORY_TEMPLATE_PATH = 'docs/00_GOVERNANCE/DRIVE_INVENTORY_TEMPLATE.md';
 
 const TARGET_ROOTS = [
   '00_ADMIN',
@@ -139,6 +145,9 @@ function runSprint2CDriveMigration() {
   const spreadsheet = getOrCreateMigrationSpreadsheet_();
   const logSheet = resetSheet_(spreadsheet, MIGRATION_LOG_SHEET_NAME);
   const summarySheet = resetSheet_(spreadsheet, MIGRATION_SUMMARY_SHEET_NAME);
+  const conflictsSheet = resetSheet_(spreadsheet, MIGRATION_CONFLICTS_SHEET_NAME);
+  const manualReviewSheet = resetSheet_(spreadsheet, MIGRATION_MANUAL_REVIEW_SHEET_NAME);
+  const goNoGoSheet = resetSheet_(spreadsheet, MIGRATION_GO_NO_GO_SHEET_NAME);
   const rows = [];
 
   initializeLogSheet_(logSheet);
@@ -151,7 +160,11 @@ function runSprint2CDriveMigration() {
   reviewUnexpectedRoots_(root, rows, rootName);
 
   appendRows_(logSheet, rows);
-  writeSummary_(summarySheet, rows, startedAt, spreadsheet.getUrl());
+  const readiness = evaluateReadiness_(rows);
+  writeSummary_(summarySheet, rows, startedAt, spreadsheet.getUrl(), readiness);
+  writeConflicts_(conflictsSheet, rows);
+  writeManualReview_(manualReviewSheet, rows);
+  writeGoNoGo_(goNoGoSheet, readiness, rows, startedAt, spreadsheet.getUrl());
 
   logInfo_('Sprint 2C Drive migration log: ' + spreadsheet.getUrl());
   logInfo_('GEREED VOOR DRY RUN');
@@ -401,7 +414,7 @@ function addLogRow_(rows, row) {
   logInfo_('[DRY_RUN] ' + row.status + ' | ' + row.action + ' | ' + row.oldLocation + ' -> ' + row.newLocation);
 }
 
-function writeSummary_(sheet, rows, startedAt, logUrl) {
+function writeSummary_(sheet, rows, startedAt, logUrl, readiness) {
   const counts = rows.reduce(function(accumulator, row) {
     const status = row[6];
     accumulator[status] = (accumulator[status] || 0) + 1;
@@ -416,10 +429,13 @@ function writeSummary_(sheet, rows, startedAt, logUrl) {
     ['Archive actions allowed', ALLOW_ARCHIVE_ACTIONS ? 'true' : 'false'],
     ['Root folder ID', ROOT_FOLDER_ID],
     ['Governance in GitHub leading', GOVERNANCE_IN_GITHUB_IS_LEADING ? 'true' : 'false'],
-    ['Migration matrix', 'docs/00_GOVERNANCE/SPRINT2B_DRIVE_MIGRATION_MATRIX.md'],
+    ['Migration matrix', MIGRATION_MATRIX_PATH],
+    ['Governance conflict report', GOVERNANCE_CONFLICT_REPORT_PATH + ' (indien aanwezig; conflicten worden ook in deze spreadsheet gelogd)'],
+    ['Drive inventory template', INVENTORY_TEMPLATE_PATH],
     ['Sprint phase', 'Sprint 2C Drive Migration Script DRY RUN'],
     ['Migration log URL', logUrl],
     ['Safety note', 'Geen bestanden verwijderen, geen bestanden archiveren, alleen simuleren.'],
+    ['Go/No-Go conclusie', readiness.conclusion],
     ['Final message', 'GEREED VOOR DRY RUN'],
     ['', ''],
     ['Status', 'Aantal'],
@@ -432,6 +448,91 @@ function writeSummary_(sheet, rows, startedAt, logUrl) {
   sheet.getRange(1, 1, summaryRows.length, 2).setValues(summaryRows);
   sheet.getRange(1, 1, 1, 2).setFontWeight('bold');
   sheet.autoResizeColumns(1, 2);
+}
+
+
+function writeConflicts_(sheet, rows) {
+  const conflictRows = rows.filter(function(row) {
+    return isConflictRow_(row);
+  });
+  writeDerivedRows_(sheet, 'Geen conflicten gevonden binnen dry-run heuristiek.', conflictRows);
+}
+
+function writeManualReview_(sheet, rows) {
+  const manualRows = rows.filter(function(row) {
+    return row[9] === 'ja';
+  });
+  writeDerivedRows_(sheet, 'Geen handmatige reviewregels gevonden.', manualRows);
+}
+
+function writeDerivedRows_(sheet, emptyMessage, rows) {
+  sheet.getRange(1, 1, 1, LOG_HEADERS.length).setValues([LOG_HEADERS]);
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, LOG_HEADERS.length).setFontWeight('bold');
+  if (rows.length) {
+    sheet.getRange(2, 1, rows.length, LOG_HEADERS.length).setValues(rows);
+  } else {
+    sheet.getRange(2, 1).setValue(emptyMessage);
+  }
+  sheet.autoResizeColumns(1, LOG_HEADERS.length);
+}
+
+function writeGoNoGo_(sheet, readiness, rows, startedAt, logUrl) {
+  const goNoGoRows = [
+    ['Controlepunt', 'Vereist', 'Dry-run resultaat', 'Conclusie'],
+    ['DRY_RUN staat aan', 'Ja', DRY_RUN ? 'Ja' : 'Nee', DRY_RUN ? 'PASS' : 'NO-GO'],
+    ['Drive-mutaties zijn uitgeschakeld', 'Ja', EXECUTION_ENABLED === false && ALLOW_ARCHIVE_ACTIONS === false ? 'Ja' : 'Nee', EXECUTION_ENABLED === false && ALLOW_ARCHIVE_ACTIONS === false ? 'PASS' : 'NO-GO'],
+    ['Geen logregel staat Drive-mutatie toe', 'Ja', readiness.mutatingRows === 0 ? 'Ja' : 'Nee', readiness.mutatingRows === 0 ? 'PASS' : 'NO-GO'],
+    ['Root is gekoppeld aan doelroot binnen OS_CUSTOMMADE of HOLD/UITSLUITEN', 'Ja', readiness.invalidTargetRows === 0 ? 'Ja' : 'Nee (' + readiness.invalidTargetRows + ')', readiness.invalidTargetRows === 0 ? 'PASS' : 'NO-GO'],
+    ['Alle items hebben actie/status', 'Ja', readiness.rowsMissingActionOrStatus === 0 ? 'Ja' : 'Nee (' + readiness.rowsMissingActionOrStatus + ')', readiness.rowsMissingActionOrStatus === 0 ? 'PASS' : 'NO-GO'],
+    ['Alle HOLD-items zijn uitgesloten van live migratie', 'Ja', readiness.holdMutationRows === 0 ? 'Ja' : 'Nee (' + readiness.holdMutationRows + ')', readiness.holdMutationRows === 0 ? 'PASS' : 'NO-GO'],
+    ['Owner/link/legal/finance/FIERCE checks zijn zichtbaar als reviewdependency', 'Ja', readiness.reviewRows + ' reviewregels', readiness.reviewRows > 0 ? 'PASS VOOR DRY RUN' : 'REVIEW'],
+    ['Conflictenlijst is aangemaakt', 'Ja', readiness.conflictRows + ' conflict-/blockerregels', 'PASS VOOR DRY RUN'],
+    ['Handmatige review lijst is aangemaakt', 'Ja', readiness.manualReviewRows + ' reviewregels', 'PASS VOOR DRY RUN'],
+    ['Go/No-Go conclusie', 'Verplicht', readiness.conclusion, readiness.goForLiveMigration ? 'GO' : 'NO-GO VOOR LIVE; GO VOOR DRY RUN'],
+    ['Migration log URL', 'Ingevuld', logUrl, 'INFO'],
+    ['Gestart', 'Timestamp', startedAt, 'INFO'],
+    ['Afgerond', 'Timestamp', formatTimestamp_(new Date()), 'INFO'],
+    ['Eindregel', 'Exact', 'GEREED VOOR DRY RUN', 'PASS'],
+  ];
+  sheet.getRange(1, 1, goNoGoRows.length, 4).setValues(goNoGoRows);
+  sheet.getRange(1, 1, 1, 4).setFontWeight('bold');
+  sheet.autoResizeColumns(1, 4);
+}
+
+function evaluateReadiness_(rows) {
+  const manualReviewRows = rows.filter(function(row) { return row[9] === 'ja'; }).length;
+  const conflictRows = rows.filter(isConflictRow_).length;
+  const mutatingRows = rows.filter(function(row) { return row[12] === 'ja'; }).length;
+  const holdMutationRows = rows.filter(function(row) { return String(row[6]).indexOf('HOLD') !== -1 && row[12] === 'ja'; }).length;
+  const rowsMissingActionOrStatus = rows.filter(function(row) { return !row[5] || !row[6]; }).length;
+  const invalidTargetRows = rows.filter(function(row) {
+    const target = String(row[3] || '');
+    return target && target !== 'HOLD / EXCLUDED' && target !== 'HOLD / REVIEW' && target.indexOf('OS_CUSTOMMADE') === -1 && target.indexOf('GitHub') === -1 && target.indexOf('GEEN DOELPAD') !== 0 && target.indexOf('HOLD') !== 0 && target.indexOf('Artist-') !== 0;
+  }).length;
+  const reviewRows = rows.filter(function(row) {
+    return row[9] === 'ja' || String(row[8]).match(/owner|link|legal|finance|FIERCE|permission|review/i);
+  }).length;
+  const goForLiveMigration = mutatingRows === 0 && holdMutationRows === 0 && rowsMissingActionOrStatus === 0 && invalidTargetRows === 0 && manualReviewRows === 0 && conflictRows === 0;
+  return {
+    manualReviewRows: manualReviewRows,
+    conflictRows: conflictRows,
+    mutatingRows: mutatingRows,
+    holdMutationRows: holdMutationRows,
+    rowsMissingActionOrStatus: rowsMissingActionOrStatus,
+    invalidTargetRows: invalidTargetRows,
+    reviewRows: reviewRows,
+    goForLiveMigration: goForLiveMigration,
+    conclusion: goForLiveMigration ? 'GO voor live migratie na dry-run validatie' : 'NO-GO voor live migratie; GO voor DRY RUN logging en review',
+  };
+}
+
+function isConflictRow_(row) {
+  const status = String(row[6] || '');
+  const risk = String(row[7] || '');
+  const dependencies = String(row[8] || '');
+  const note = String(row[13] || '');
+  return risk === 'Kritiek' || status.indexOf('FIERCE') !== -1 || status.indexOf('UNEXPECTED') !== -1 || status.indexOf('HOLD') !== -1 || /conflict|FIERCE|onbekend|ontbreekt|blocked|geblokkeerd|uitsluiten/i.test(dependencies + ' ' + note);
 }
 
 function safeFolderName_(folder, fallback) {
