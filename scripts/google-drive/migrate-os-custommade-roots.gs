@@ -1,7 +1,7 @@
 /**
- * Sprint 2B OS_CUSTOMMADE root migration DRY RUN simulator.
+ * Sprint 2C OS_CUSTOMMADE Drive migration DRY RUN simulator.
  *
- * Built from docs/00_GOVERNANCE/SPRINT2B_DRIVE_MIGRATION_MATRIX.md.
+ * Built from the approved Sprint 2B migration matrix; governance files remain unchanged during Sprint 2C dry run.
  *
  * ROOT_FOLDER_ID is the current OS_CUSTOMMADE Drive-root:
  * 0B2aV9TqyUPDzd0F1WEd1RkVxNFk
@@ -21,8 +21,8 @@ const DRY_RUN = true;
 const EXECUTION_ENABLED = false;
 const ALLOW_ARCHIVE_ACTIONS = false;
 const MIGRATION_LOG_SPREADSHEET_ID = '';
-const MIGRATION_LOG_SHEET_NAME = 'Sprint 2B Migration Log';
-const MIGRATION_SUMMARY_SHEET_NAME = 'Sprint 2B Summary';
+const MIGRATION_LOG_SHEET_NAME = 'Sprint 2C Migration Log';
+const MIGRATION_SUMMARY_SHEET_NAME = 'Sprint 2C Summary';
 const MIGRATION_TIMEZONE = Session.getScriptTimeZone() || 'Etc/UTC';
 const GOVERNANCE_IN_GITHUB_IS_LEADING = true;
 
@@ -131,7 +131,7 @@ const CLASSIFICATION_RULES = {
   ARCHIVE: ['archive', 'archief', 'old', 'oud', 'legacy', 'closed', 'afgerond', 'superseded'],
 };
 
-function runSprint2BDriveMigration() {
+function runSprint2CDriveMigration() {
   assertDryRunSafety_();
   const startedAt = formatTimestamp_(new Date());
   const root = DriveApp.getFolderById(ROOT_FOLDER_ID);
@@ -142,7 +142,7 @@ function runSprint2BDriveMigration() {
   const rows = [];
 
   initializeLogSheet_(logSheet);
-  logInfo_('Sprint 2B Drive migration DRY RUN started. No Drive mutations will be performed.');
+  logInfo_('Sprint 2C Drive migration DRY RUN started. No Drive mutations will be performed.');
 
   addTargetRootReadinessRows_(root, rows, rootName);
   MATRIX_ROOT_DECISIONS.forEach(function(decision) {
@@ -153,9 +153,18 @@ function runSprint2BDriveMigration() {
   appendRows_(logSheet, rows);
   writeSummary_(summarySheet, rows, startedAt, spreadsheet.getUrl());
 
-  logInfo_('Sprint 2B Drive migration log: ' + spreadsheet.getUrl());
+  logInfo_('Sprint 2C Drive migration log: ' + spreadsheet.getUrl());
   logInfo_('GEREED VOOR DRY RUN');
   return 'GEREED VOOR DRY RUN — migratielog: ' + spreadsheet.getUrl();
+}
+
+/**
+ * Backwards-compatible entrypoint for older execution-guide references.
+ * Sprint 2C is the active dry-run phase; this wrapper performs the same
+ * locked dry-run and intentionally does not mutate Drive or governance files.
+ */
+function runSprint2BDriveMigration() {
+  return runSprint2CDriveMigration();
 }
 
 function assertDryRunSafety_() {
@@ -358,7 +367,7 @@ function getOrCreateMigrationSpreadsheet_() {
   if (MIGRATION_LOG_SPREADSHEET_ID) {
     return SpreadsheetApp.openById(MIGRATION_LOG_SPREADSHEET_ID);
   }
-  return SpreadsheetApp.create('CM_OS Sprint 2B Drive Migration DRY RUN Log ' + formatTimestamp_(new Date()));
+  return SpreadsheetApp.create('CM_OS Sprint 2C Drive Migration DRY RUN Log ' + formatTimestamp_(new Date()));
 }
 
 function resetSheet_(spreadsheet, sheetName) {
@@ -408,6 +417,7 @@ function writeSummary_(sheet, rows, startedAt, logUrl) {
     ['Root folder ID', ROOT_FOLDER_ID],
     ['Governance in GitHub leading', GOVERNANCE_IN_GITHUB_IS_LEADING ? 'true' : 'false'],
     ['Migration matrix', 'docs/00_GOVERNANCE/SPRINT2B_DRIVE_MIGRATION_MATRIX.md'],
+    ['Sprint phase', 'Sprint 2C Drive Migration Script DRY RUN'],
     ['Migration log URL', logUrl],
     ['Safety note', 'Geen bestanden verwijderen, geen bestanden archiveren, alleen simuleren.'],
     ['Final message', 'GEREED VOOR DRY RUN'],
