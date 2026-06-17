@@ -128,6 +128,7 @@ const CLASSIFICATION_RULES = {
   FINANCE: ['finance', 'financ', 'factuur', 'facturen', 'invoice', 'invoices', 'boekhouding', 'accounting', 'tax', 'btw', 'belasting', 'budget', 'cashflow', 'royalty', 'royalties', 'payments', 'betaling', 'betalingen', 'bank', 'payroll', 'salaris'],
   LEGAL: ['legal', 'juridisch', 'contract', 'contracts', 'agreement', 'agreements', 'overeenkomst', 'rechten', 'rights', 'ip', 'nda', 'apa', 'loi', 'license', 'licence', 'licensing', 'compliance', 'privacy', 'terms'],
   OPERATIONS: ['operations', 'operationeel', 'ops', 'admin', 'hr', 'people', 'team', 'process', 'processen', 'sop', 'system', 'systems', 'tooling', 'planning', 'templates'],
+  TRAINING: ['cursus', 'cursussen', 'masterclass', 'masterclasses', 'training', 'trainingen', 'opleiding', 'opleidingen', 'education', 'knowledge'],
   ADMIN: ['executive', 'directie', 'board', 'management', 'strategy', 'strategie', 'company', 'leadership'],
   MARKETING: ['marketing', 'brand', 'branding', 'merk', 'network', 'netwerk', 'pr', 'press', 'promo', 'campaign', 'campagne', 'positioning', 'partnership', 'website'],
   CONTENT: ['content', 'asset', 'assets', 'social', 'socialmedia', 'social media', 'instagram', 'tiktok', 'youtube', 'video', 'photo', 'photos', 'beeld', 'copy', 'creative', 'design'],
@@ -226,7 +227,9 @@ function simulateChildDecisions_(sourceRoot, rows, rootName, decision) {
     const childName = safeFolderName_(child, 'UNKNOWN');
     const classification = classifyChild_(decision.source, childName);
     const oldPath = rootName + '/' + decision.source + '/' + childName;
-    const newPath = classification.targetPath ? rootName + '/' + classification.targetPath + '/' + childName : 'HOLD / EXCLUDED';
+    const newPath = classification.targetPath
+      ? rootName + '/' + classification.targetPath + (classification.targetPathIsFinal ? '' : '/' + childName)
+      : 'HOLD / EXCLUDED';
 
     addLogRow_(rows, {
       order: classification.order || decision.order,
@@ -310,6 +313,8 @@ function classifyExecutiveChild_(childName) {
 }
 
 function classifyBusinessChild_(childName) {
+  // Training/education labels win before deal keywords: masterclass is not master rights, and cursus is not a deal.
+  if (matchesAny_(childName, CLASSIFICATION_RULES.TRAINING)) return trainingDecision_();
   if (matchesAny_(childName, CLASSIFICATION_RULES.FINANCE)) return targetDecision_('06_FINANCE', 'business finance simuleren', true, 'Hoog', 'Moneybird-status, privacy en toegang controleren.');
   if (matchesAny_(childName, CLASSIFICATION_RULES.LEGAL)) return targetDecision_('07_LEGAL', 'business legal simuleren', true, 'Hoog', 'Legal reviewer en dossiercontext.');
   if (matchesAny_(childName, CLASSIFICATION_RULES.CLIENTS)) return targetDecision_('03_CLIENTS', 'client/brand/sponsor dossier simuleren', true, 'Hoog', 'Commerciële relatie bevestigen; artistconflict uitsluiten; owner en permissions.');
@@ -334,8 +339,20 @@ function classifyProjectChild_(childName) {
   return holdDecision_('HOLD_OWNER_REVIEW', 'project op HOLD zetten voor classificatie', 'Hoog', 'Projectclassificatie, open verplichtingen en actieve links.', 'Niet archiveren; geen blind doelpad.');
 }
 
-function targetDecision_(targetPath, action, manualReview, risk, dependencies) {
-  return { targetPath: targetPath, action: action, status: 'DRY_RUN_SIMULATED', manualReview: manualReview, risk: risk, dependencies: dependencies, note: 'Simulatie-only; geen Drive-mutatie.' };
+function targetDecision_(targetPath, action, manualReview, risk, dependencies, options) {
+  options = options || {};
+  return { targetPath: targetPath, action: action, status: 'DRY_RUN_SIMULATED', manualReview: manualReview, risk: risk, dependencies: dependencies, note: options.note || 'Simulatie-only; geen Drive-mutatie.', targetPathIsFinal: options.targetPathIsFinal === true };
+}
+
+function trainingDecision_() {
+  return targetDecision_(
+    '05_OPERATIONS/TRAINING',
+    'business training/education naar operations training simuleren',
+    true,
+    'Middel',
+    'Cursus/masterclass/training/opleiding/education/knowledge is operations-training; masterclass is geen master rights en cursus is geen deal.',
+    { targetPathIsFinal: true, note: 'Simulatie-only; geen Drive-mutatie. Expliciete uitzondering: masterclass ≠ master rights; cursus ≠ deal.' }
+  );
 }
 
 function holdDecision_(status, action, risk, dependencies, note) {

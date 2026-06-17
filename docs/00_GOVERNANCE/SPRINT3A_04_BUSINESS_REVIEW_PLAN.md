@@ -67,6 +67,7 @@ Omdat deze repo geen live Drive-inventaris of folder export van `OS_CUSTOMMADE/0
 | `Pipeline` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]` voor dossierbestanden; ClickUp voor execution | HOLD / opsplitsen | Hoog | Ja | 5 | Pipeline-uitvoering hoort in ClickUp; Drive mag alleen bewijs, referentie, exports en dossierbestanden bevatten. Geen pipeline-bulkverplaatsing zonder item-level mapping. |
 | `Prospects` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]` of `OS_CUSTOMMADE/03_CLIENTS/[CLIENT_NAME]` | HOLD tot classificatie | Hoog | Ja | 4-5 | Prospect kan lead, client, buyer, sponsor of deal zijn; bestemming niet eenduidig zonder ownerbesluit en context. |
 | `Operations` | `OS_CUSTOMMADE/05_OPERATIONS/[PROCESS_OR_TOPIC]` | samenvoegen na content-scan | Middel | Ja | 7 | Alleen interne operationele processen; controleer op clientmateriaal, legal/finance, rights, persoonlijke data en actieve projectcontext. |
+| `04_CURSUS_MASTERCLASSES`, `04_CURSUS_MASTERCLASSES/MASTERCLASS`, `04_CURSUS_MASTERCLASSES/• CURSUS` en vergelijkbare `Cursus`, `Masterclass`, `Training`, `Opleiding`, `Education` of `Knowledge`-patronen | `OS_CUSTOMMADE/05_OPERATIONS/TRAINING` | samenvoegen onder training na content-scan | Middel | Ja | 7 | Training/education heeft voorrang op dealclassificatie: `masterclass` is geen master rights-context en `cursus` is geen deal. Geen Drive-mutatie uitvoeren zonder herexport en owner-review. |
 | `Processes` | `OS_CUSTOMMADE/05_OPERATIONS/[PROCESS_OR_TOPIC]` | samenvoegen na content-scan | Middel | Ja | 7 | Procesdocumentatie mag niet overlappen met GitHub-governance/source-of-truth; SOP/playbook-bronstatus controleren. |
 | `Tools` | `OS_CUSTOMMADE/05_OPERATIONS/[TOOL_OR_SYSTEM]` | samenvoegen / behouden na tool-owner review | Middel | Ja | 7 | Controleer of het operationele opslag betreft en geen governance, credentials, automation secrets, finance of legal data bevat. |
 | `Finance` | `OS_CUSTOMMADE/06_FINANCE/[YEAR_OR_TOPIC]` of dossier-specifieke finance-verwijsmap | HOLD / verplaatsen alleen na finance-owner review | Hoog | Ja | 6 | Moneybird is leidend; Drive mag alleen verwijzingen, exports of ondersteunende bewijsstukken bevatten. Privacy, toegang en audit trail controleren. |
@@ -84,11 +85,11 @@ Gebruik alleen voor duidelijke merken, bedrijven, opdrachtgevers, sponsors, medi
 
 ### `04_DEALS`
 
-Gebruik alleen voor duidelijke dealflow, catalog sale, licensing, sync, sponsorship, endorsement, rights brokerage, master resale of vergelijkbare transactiecontext. Vroege pipeline-uitvoering blijft in ClickUp; Drive bevat dossier- en bewijsstukken. Dealitems met contracten, rights of chain-of-title vereisen owner-review en moeten aansluiten op de lean Nederlandse dealstructuur.
+Gebruik alleen voor duidelijke dealflow, catalog sale, licensing, sync, sponsorship, endorsement, rights brokerage, master resale of vergelijkbare transactiecontext. Vroege pipeline-uitvoering blijft in ClickUp; Drive bevat dossier- en bewijsstukken. Dealitems met contracten, rights of chain-of-title vereisen owner-review en moeten aansluiten op de lean Nederlandse dealstructuur. `Masterclass` mag hierbij niet als master rights worden gelezen en `cursus` mag niet als deal worden gelezen.
 
 ### `05_OPERATIONS`
 
-Gebruik alleen voor interne processen, tools en operationele werkwijzen die geen client-, deal-, finance-, legal-, rights- of confidential owner-context bevatten. Als het document eigenlijk governance, SOP of template-source-of-truth is, moet eerst GitHub-bronstatus worden bepaald.
+Gebruik alleen voor interne processen, tools en operationele werkwijzen die geen client-, deal-, finance-, legal-, rights- of confidential owner-context bevatten. Cursus-, masterclass-, training-, opleiding-, education- en knowledge-mappen worden altijd als `OS_CUSTOMMADE/05_OPERATIONS/TRAINING` voorgesteld voordat master/deal/catalog/publishing-signalen worden beoordeeld. Als het document eigenlijk governance, SOP of template-source-of-truth is, moet eerst GitHub-bronstatus worden bepaald.
 
 ### `06_FINANCE`
 
