@@ -18,7 +18,8 @@
  * 1. Paste this file into Google Apps Script.
  * 2. Set ROOT_FOLDER_ID to the OS_CUSTOMMADE Drive folder ID.
  * 3. Optionally set OUTPUT_SPREADSHEET_ID to reuse an existing Sheet.
- * 4. Run exportDriveInventory().
+ * 4. Run testDriveInventoryExport() first.
+ * 5. Run exportDriveInventory() after validating the test output.
  */
 const ROOT_FOLDER_ID = '';
 const OUTPUT_SPREADSHEET_ID = '';
@@ -26,6 +27,8 @@ const INVENTORY_ROOT_NAME = 'OS_CUSTOMMADE';
 const INVENTORY_SHEET_NAME = 'Drive Inventory';
 const SUMMARY_SHEET_NAME = 'Sprint 2A Summary';
 const EXPORT_TIMEZONE = Session.getScriptTimeZone() || 'Etc/UTC';
+const MAX_DEPTH = 2;
+const WRITE_BATCH_SIZE = 25;
 
 const MIGRATION_ACTIONS = [
   'behouden',
@@ -80,15 +83,33 @@ const INVENTORY_HEADERS = [
 ];
 
 function exportDriveInventory() {
-  const rootFolder = getRootFolder_();
+  return runDriveInventoryExport_(MAX_DEPTH);
+}
+
+function testDriveInventoryExport() {
+  return runDriveInventoryExport_(1);
+}
+
+function runDriveInventoryExport_(maxDepth) {
   const spreadsheet = getOrCreateOutputSpreadsheet_();
   const inventorySheet = resetSheet_(spreadsheet, INVENTORY_SHEET_NAME);
   const summarySheet = resetSheet_(spreadsheet, SUMMARY_SHEET_NAME);
   const exportTimestamp = Utilities.formatDate(new Date(), EXPORT_TIMEZONE, "yyyy-MM-dd'T'HH:mm:ssXXX");
   const rows = [];
 
-  collectFolderRows_(rootFolder, rootFolder.getName() || INVENTORY_ROOT_NAME, rows, exportTimestamp);
-  writeInventory_(inventorySheet, rows);
+  initializeInventorySheet_(inventorySheet, exportTimestamp);
+
+  let rootFolder;
+  try {
+    rootFolder = getRootFolder_();
+  } catch (error) {
+    appendErrorRow_(inventorySheet, ROOT_FOLDER_ID, INVENTORY_ROOT_NAME, error.message);
+    throw error;
+  }
+
+  const rootPath = safeFolderName_(rootFolder, INVENTORY_ROOT_NAME);
+  collectFolderRows_(rootFolder, rootPath, rows, exportTimestamp, inventorySheet, maxDepth);
+  applyMigrationActionValidation_(inventorySheet, rows.length + 1);
   writeSummary_(summarySheet, rootFolder, rows, exportTimestamp);
 
   Logger.log('Drive inventory export complete: ' + spreadsheet.getUrl());
@@ -96,16 +117,63 @@ function exportDriveInventory() {
   return spreadsheet.getUrl();
 }
 
-function collectFolderRows_(folder, fullPath, rows, exportTimestamp) {
-  const parentInfo = getPrimaryParentInfo_(folder);
+function initializeInventorySheet_(sheet, exportTimestamp) {
+  sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setValues([INVENTORY_HEADERS]);
+  sheet.getRange(2, 1, 1, 3).setValues([['STATUS', 'Script gestart', exportTimestamp]]);
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setFontWeight('bold');
+}
+
+function collectFolderRows_(rootFolder, rootPath, rows, exportTimestamp, sheet, maxDepth) {
+  const queue = [{ folder: rootFolder, fullPath: rootPath, depth: 0 }];
+  let pendingRows = [];
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    let folderName = '';
+    let folderId = '';
+
+    try {
+      folderName = safeFolderName_(current.folder, 'ERROR_METADATA');
+      folderId = safeFolderId_(current.folder, 'ERROR_METADATA');
+      Logger.log(current.fullPath);
+
+      const row = buildFolderRow_(current.folder, current.fullPath, exportTimestamp);
+      rows.push(row);
+      pendingRows.push(row);
+
+      if (pendingRows.length >= WRITE_BATCH_SIZE) {
+        appendRows_(sheet, pendingRows);
+        pendingRows = [];
+      }
+
+      if (maxDepth === null || maxDepth === undefined || current.depth < maxDepth) {
+        enqueueChildFolders_(current.folder, current.fullPath, current.depth, queue, sheet);
+      }
+    } catch (error) {
+      appendErrorRow_(sheet, folderId, folderName || current.fullPath, error.message);
+    }
+  }
+
+  if (pendingRows.length > 0) {
+    appendRows_(sheet, pendingRows);
+  }
+}
+
+function buildFolderRow_(folder, fullPath, exportTimestamp) {
+  const folderName = safeFolderName_(folder, 'ERROR_METADATA');
+  const folderId = safeFolderId_(folder, 'ERROR_METADATA');
+  const parentInfo = safePrimaryParentInfo_(folder);
   const rootFolder = getRootFolderFromPath_(fullPath);
   const governanceRoot = getGovernanceRootFromPath_(fullPath);
-  const counts = countDirectChildren_(folder);
-  const migrationDecision = determineMigrationAction_(folder.getName(), fullPath, rootFolder, governanceRoot);
+  const counts = safeCountDirectChildren_(folder);
+  const lastUpdated = safeLastUpdated_(folder);
+  const folderUrl = safeFolderUrl_(folder);
+  const migrationDecision = determineMigrationAction_(folderName, fullPath, rootFolder, governanceRoot);
 
-  rows.push([
-    folder.getId(),
-    folder.getName(),
+  return [
+    folderId,
+    folderName,
     fullPath,
     parentInfo.name,
     rootFolder,
@@ -113,19 +181,67 @@ function collectFolderRows_(folder, fullPath, rows, exportTimestamp) {
     getOwnerEmail_(folder),
     counts.files,
     counts.folders,
-    formatDate_(folder.getLastUpdated()),
+    lastUpdated,
     migrationDecision.action,
     migrationDecision.note,
-    folder.getUrl(),
+    folderUrl,
     parentInfo.id,
     exportTimestamp,
-  ]);
+  ];
+}
 
-  const childFolders = folder.getFolders();
-  while (childFolders.hasNext()) {
-    const childFolder = childFolders.next();
-    collectFolderRows_(childFolder, fullPath + '/' + childFolder.getName(), rows, exportTimestamp);
+function enqueueChildFolders_(folder, fullPath, depth, queue, sheet) {
+  let childFolders;
+  try {
+    childFolders = folder.getFolders();
+  } catch (error) {
+    appendErrorRow_(sheet, safeFolderId_(folder, 'ERROR_METADATA'), safeFolderName_(folder, fullPath), error.message);
+    return;
   }
+
+  while (true) {
+    let hasNext = false;
+    try {
+      hasNext = childFolders.hasNext();
+    } catch (error) {
+      appendErrorRow_(sheet, safeFolderId_(folder, 'ERROR_METADATA'), safeFolderName_(folder, fullPath), error.message);
+      return;
+    }
+
+    if (!hasNext) {
+      return;
+    }
+
+    try {
+      const childFolder = childFolders.next();
+      const childName = safeFolderName_(childFolder, 'ERROR_METADATA');
+      queue.push({
+        folder: childFolder,
+        fullPath: fullPath + '/' + childName,
+        depth: depth + 1,
+      });
+    } catch (error) {
+      appendErrorRow_(sheet, safeFolderId_(folder, 'ERROR_METADATA'), safeFolderName_(folder, fullPath), error.message);
+    }
+  }
+}
+
+function appendRows_(sheet, rows) {
+  if (rows.length < 1) {
+    return;
+  }
+  sheet.getRange(sheet.getLastRow() + 1, 1, rows.length, INVENTORY_HEADERS.length).setValues(rows);
+  SpreadsheetApp.flush();
+}
+
+function appendErrorRow_(sheet, folderId, folderName, errorMessage) {
+  const row = new Array(INVENTORY_HEADERS.length).fill('');
+  row[0] = 'ERROR';
+  row[1] = folderId || '';
+  row[2] = folderName || '';
+  row[3] = errorMessage || '';
+  sheet.getRange(sheet.getLastRow() + 1, 1, 1, INVENTORY_HEADERS.length).setValues([row]);
+  SpreadsheetApp.flush();
 }
 
 function determineMigrationAction_(folderName, fullPath, rootFolder, governanceRoot) {
@@ -206,24 +322,13 @@ function resetSheet_(spreadsheet, sheetName) {
   return sheet;
 }
 
-function writeInventory_(sheet, rows) {
-  sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setValues([INVENTORY_HEADERS]);
-  if (rows.length > 0) {
-    sheet.getRange(2, 1, rows.length, INVENTORY_HEADERS.length).setValues(rows);
-  }
-  sheet.setFrozenRows(1);
-  sheet.getRange(1, 1, 1, INVENTORY_HEADERS.length).setFontWeight('bold');
-  sheet.autoResizeColumns(1, INVENTORY_HEADERS.length);
-  applyMigrationActionValidation_(sheet, rows.length);
-}
-
 function writeSummary_(sheet, rootFolder, rows, exportTimestamp) {
   const actionCounts = countByColumn_(rows, 10);
   const summaryRows = [
     ['Veld', 'Waarde'],
-    ['Root folder naam', rootFolder.getName()],
-    ['Root folder ID', rootFolder.getId()],
-    ['Root folder URL', rootFolder.getUrl()],
+    ['Root folder naam', safeFolderName_(rootFolder, 'ERROR_METADATA')],
+    ['Root folder ID', safeFolderId_(rootFolder, 'ERROR_METADATA')],
+    ['Root folder URL', safeFolderUrl_(rootFolder)],
     ['Export timestamp', exportTimestamp],
     ['Aantal folders', rows.length],
     ['behouden', actionCounts['behouden'] || 0],
@@ -239,39 +344,55 @@ function writeSummary_(sheet, rootFolder, rows, exportTimestamp) {
 }
 
 function applyMigrationActionValidation_(sheet, rowCount) {
-  if (rowCount < 1) {
+  if (rowCount < 2) {
     return;
   }
   const validation = SpreadsheetApp.newDataValidation()
     .requireValueInList(MIGRATION_ACTIONS, true)
     .setAllowInvalid(false)
     .build();
-  sheet.getRange(2, 11, rowCount, 1).setDataValidation(validation);
+  sheet.getRange(3, 11, rowCount - 1, 1).setDataValidation(validation);
+  sheet.autoResizeColumns(1, INVENTORY_HEADERS.length);
 }
 
-function countDirectChildren_(folder) {
+function safeCountDirectChildren_(folder) {
   let files = 0;
   let folders = 0;
-  const fileIterator = folder.getFiles();
-  const folderIterator = folder.getFolders();
-  while (fileIterator.hasNext()) {
-    fileIterator.next();
-    files += 1;
+
+  try {
+    const fileIterator = folder.getFiles();
+    while (fileIterator.hasNext()) {
+      fileIterator.next();
+      files += 1;
+    }
+  } catch (error) {
+    files = 'ERROR_METADATA';
   }
-  while (folderIterator.hasNext()) {
-    folderIterator.next();
-    folders += 1;
+
+  try {
+    const folderIterator = folder.getFolders();
+    while (folderIterator.hasNext()) {
+      folderIterator.next();
+      folders += 1;
+    }
+  } catch (error) {
+    folders = 'ERROR_METADATA';
   }
+
   return { files: files, folders: folders };
 }
 
-function getPrimaryParentInfo_(folder) {
-  const parents = folder.getParents();
-  if (!parents.hasNext()) {
-    return { id: '', name: '' };
+function safePrimaryParentInfo_(folder) {
+  try {
+    const parents = folder.getParents();
+    if (!parents.hasNext()) {
+      return { id: '', name: '' };
+    }
+    const parent = parents.next();
+    return { id: safeFolderId_(parent, 'ERROR_METADATA'), name: safeFolderName_(parent, 'ERROR_METADATA') };
+  } catch (error) {
+    return { id: 'ERROR_METADATA', name: 'ERROR_METADATA' };
   }
-  const parent = parents.next();
-  return { id: parent.getId(), name: parent.getName() };
 }
 
 function getOwnerEmail_(folder) {
@@ -279,7 +400,39 @@ function getOwnerEmail_(folder) {
     const owner = folder.getOwner();
     return owner ? owner.getEmail() : '';
   } catch (error) {
-    return 'Niet beschikbaar: ' + error.message;
+    return 'OWNER_UNKNOWN';
+  }
+}
+
+function safeFolderId_(folder, fallback) {
+  try {
+    return folder.getId();
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function safeFolderName_(folder, fallback) {
+  try {
+    return folder.getName();
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function safeFolderUrl_(folder) {
+  try {
+    return folder.getUrl();
+  } catch (error) {
+    return 'ERROR_METADATA';
+  }
+}
+
+function safeLastUpdated_(folder) {
+  try {
+    return formatDate_(folder.getLastUpdated());
+  } catch (error) {
+    return 'ERROR_METADATA';
   }
 }
 
