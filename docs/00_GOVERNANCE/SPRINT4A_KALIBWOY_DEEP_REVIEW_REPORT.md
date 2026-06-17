@@ -6,6 +6,8 @@
 
 **Scope:** `01_ARTIST_MANAGEMENT/KALIBWOY`
 
+**Post-merge governance correction:** na merge van PR #77 is de booking/rider target-route gecorrigeerd naar de canonieke CM Drive-root `05_BOOKING_PARTNERSHIPS`. Deze correctie wijzigt alleen de review-only target-route voor de KALIBWOY rider mapping; er wordt geen live migratie toegevoegd, geen Drive-map aangemaakt, niets verplaatst en niets verwijderd.
+
 ## Doel
 
 Dit remediation report legt de actuele risk-folder scan van `KALIBWOY` vast en vertaalt de aangetroffen legacy- en nieuwe structuren naar een review-only migratiemapping.
@@ -35,39 +37,39 @@ De risk-folder scan bevestigt dat gevoelige inhoudstypen niet generiek mogen wor
 
 ## Risk-folder classificatie
 
-| Risk-folder / item | Classificatie | Vereiste review vóór migratie | Remediation-notitie |
-|---|---|---|---|
-| `KALIBWOY/Royalties/2016` | `HOLD_FINANCE_RIGHTS_REVIEW` | Finance/rights check | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
-| `KALIBWOY/Royalties/2017` | `HOLD_FINANCE_RIGHTS_REVIEW` | Finance/rights check | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
-| `KALIBWOY/Royalties/2018` | `HOLD_FINANCE_RIGHTS_REVIEW` | Finance/rights check | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
-| `KALIBWOY/Royalties/SpinninRecords20192...` | `HOLD_FINANCE_RIGHTS_REVIEW` | Finance/rights check | Statement- of DSP-achtig materiaal vereist bron-, periode-, partij- en rechtencontrole vóór mapping. |
-| `KALIBWOY/Contracten/MASTER LICENTIE OVEREENKOMST King Kong` | `HOLD_LEGAL_RIGHTS_REVIEW` | Legal/rights check | Masterlicentie vereist controle op partijen, rechten, looptijd, territorium, exploitatie en verplichtingen. |
-| `KALIBWOY/Contracten/ARTIESTEN-KALIBWOY.pdf/docx` | `HOLD_LEGAL_RIGHTS_REVIEW` | Legal/rights check | Artist- of managementovereenkomst vereist contractclassificatie en rechtencheck vóór mapping. |
-| `KALIBWOY/Algemeen/logo files` | `HOLD_ASSET_REVIEW` | Brand/content owner check | Logo-assets vereisen bestemmingcheck tussen press/EPK en social/content vóór eventuele normalisatie. |
-| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER` | `HOLD_BOOKING_RIDER_REVIEW` | Booking/production owner check | Rider mag pas na inhoudelijke booking- en production-review worden voorbereid. |
-| `KALIBWOY/• PROJECTEN/Podium Zwart 2023` | `HOLD_EVENT_REVIEW` | Event/project owner check | Eventmap vereist controle op verplichtingen, deliverables, rechten en eventuele financiële afwikkeling. |
-| `KALIBWOY/• PROJECTEN/Kalibwoy Album 2023 BDMNR` | `HOLD_RELEASE_MASTERS_REVIEW` | Release/masters review | Release-item vereist controle op masters, metadata, rechten, distributie en releaseverplichtingen. |
-| `KALIBWOY/• PROJECTEN/Film` | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review | Film-item vereist sync/licensing beoordeling en archive-besluit vóór verdere route. |
-| `KALIBWOY/• PROJECTEN/Mocro maffia` | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review | Sync/film-gerelateerd item vereist licensing-, rights- en archive-review vóór verdere route. |
-| `KALIBWOY/• PROJECTEN/Projecten` | `HOLD_LEGACY_PROJECT_REVIEW` | Legacy project owner check | Generieke legacy-projectmap vereist inhoudelijke uitsplitsing vóór mapping of sluiting. |
+| Risk-folder / item                                           | Classificatie                 | Vereiste review vóór migratie  | Remediation-notitie                                                                                                       |
+| ------------------------------------------------------------ | ----------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| `KALIBWOY/Royalties/2016`                                    | `HOLD_FINANCE_RIGHTS_REVIEW`  | Finance/rights check           | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
+| `KALIBWOY/Royalties/2017`                                    | `HOLD_FINANCE_RIGHTS_REVIEW`  | Finance/rights check           | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
+| `KALIBWOY/Royalties/2018`                                    | `HOLD_FINANCE_RIGHTS_REVIEW`  | Finance/rights check           | Royaltymateriaal mag pas na inhoudelijke finance- en rights-review naar de finance/royalties-structuur worden voorbereid. |
+| `KALIBWOY/Royalties/SpinninRecords20192...`                  | `HOLD_FINANCE_RIGHTS_REVIEW`  | Finance/rights check           | Statement- of DSP-achtig materiaal vereist bron-, periode-, partij- en rechtencontrole vóór mapping.                      |
+| `KALIBWOY/Contracten/MASTER LICENTIE OVEREENKOMST King Kong` | `HOLD_LEGAL_RIGHTS_REVIEW`    | Legal/rights check             | Masterlicentie vereist controle op partijen, rechten, looptijd, territorium, exploitatie en verplichtingen.               |
+| `KALIBWOY/Contracten/ARTIESTEN-KALIBWOY.pdf/docx`            | `HOLD_LEGAL_RIGHTS_REVIEW`    | Legal/rights check             | Artist- of managementovereenkomst vereist contractclassificatie en rechtencheck vóór mapping.                             |
+| `KALIBWOY/Algemeen/logo files`                               | `HOLD_ASSET_REVIEW`           | Brand/content owner check      | Logo-assets vereisen bestemmingcheck tussen press/EPK en social/content vóór eventuele normalisatie.                      |
+| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER`           | `HOLD_BOOKING_RIDER_REVIEW`   | Booking/production owner check | Rider mag pas na inhoudelijke booking- en production-review worden voorbereid.                                            |
+| `KALIBWOY/• PROJECTEN/Podium Zwart 2023`                     | `HOLD_EVENT_REVIEW`           | Event/project owner check      | Eventmap vereist controle op verplichtingen, deliverables, rechten en eventuele financiële afwikkeling.                   |
+| `KALIBWOY/• PROJECTEN/Kalibwoy Album 2023 BDMNR`             | `HOLD_RELEASE_MASTERS_REVIEW` | Release/masters review         | Release-item vereist controle op masters, metadata, rechten, distributie en releaseverplichtingen.                        |
+| `KALIBWOY/• PROJECTEN/Film`                                  | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review          | Film-item vereist sync/licensing beoordeling en archive-besluit vóór verdere route.                                       |
+| `KALIBWOY/• PROJECTEN/Mocro maffia`                          | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review          | Sync/film-gerelateerd item vereist licensing-, rights- en archive-review vóór verdere route.                              |
+| `KALIBWOY/• PROJECTEN/Projecten`                             | `HOLD_LEGACY_PROJECT_REVIEW`  | Legacy project owner check     | Generieke legacy-projectmap vereist inhoudelijke uitsplitsing vóór mapping of sluiting.                                   |
 
 ## Voorgestelde review-only mapping
 
-| Actueel item | Voorgestelde bestemming / status | Check vereist | Migratiestatus |
-|---|---|---|---|
-| `KALIBWOY/Royalties/2016` | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties` | Finance/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Royalties/2017` | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties` | Finance/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Royalties/2018` | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties` | Finance/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Royalties/SpinninRecords20192...` | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties/Statements_or_DSP` | Finance/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Contracten/MASTER LICENTIE OVEREENKOMST King Kong` | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Master Rights` | Legal/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Contracten/ARTIESTEN-KALIBWOY.pdf/docx` | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Management_or_Artist_Agreement` | Legal/rights check | `HOLD_REVIEW` |
-| `KALIBWOY/Algemeen/logo files` | `02_ARTIST_MANAGEMENT/KALIBWOY/08_PRESS_EPK` or `02_ARTIST_MANAGEMENT/KALIBWOY/07_SOCIALMEDIA` | Brand/content owner check | `HOLD_REVIEW` |
-| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER` | `02_ARTIST_MANAGEMENT/KALIBWOY/05_BOOKING/Riders` | Booking/production owner check | `HOLD_REVIEW` |
-| `KALIBWOY/• PROJECTEN/Podium Zwart 2023` | `HOLD_EVENT_REVIEW` | Event/project owner check | `HOLD_REVIEW` |
-| `KALIBWOY/• PROJECTEN/Kalibwoy Album 2023 BDMNR` | `02_ARTIST_MANAGEMENT/KALIBWOY/04_RELEASES` | Release/masters review | `HOLD_REVIEW` |
-| `KALIBWOY/• PROJECTEN/Film` | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review | `HOLD_REVIEW` |
-| `KALIBWOY/• PROJECTEN/Mocro maffia` | `HOLD_SYNC_OR_ARCHIVE_REVIEW` | Sync/licensing review | `HOLD_REVIEW` |
-| `KALIBWOY/• PROJECTEN/Projecten` | `HOLD_LEGACY_PROJECT_REVIEW` | Legacy project owner check | `HOLD_REVIEW` |
+| Actueel item                                                 | Voorgestelde bestemming / status                                                               | Check vereist                  | Migratiestatus |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------ | -------------- |
+| `KALIBWOY/Royalties/2016`                                    | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties`                                           | Finance/rights check           | `HOLD_REVIEW`  |
+| `KALIBWOY/Royalties/2017`                                    | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties`                                           | Finance/rights check           | `HOLD_REVIEW`  |
+| `KALIBWOY/Royalties/2018`                                    | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties`                                           | Finance/rights check           | `HOLD_REVIEW`  |
+| `KALIBWOY/Royalties/SpinninRecords20192...`                  | `02_ARTIST_MANAGEMENT/KALIBWOY/06_FINANCE/Royalties/Statements_or_DSP`                         | Finance/rights check           | `HOLD_REVIEW`  |
+| `KALIBWOY/Contracten/MASTER LICENTIE OVEREENKOMST King Kong` | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Master Rights`                                      | Legal/rights check             | `HOLD_REVIEW`  |
+| `KALIBWOY/Contracten/ARTIESTEN-KALIBWOY.pdf/docx`            | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Management_or_Artist_Agreement`                     | Legal/rights check             | `HOLD_REVIEW`  |
+| `KALIBWOY/Algemeen/logo files`                               | `02_ARTIST_MANAGEMENT/KALIBWOY/08_PRESS_EPK` or `02_ARTIST_MANAGEMENT/KALIBWOY/07_SOCIALMEDIA` | Brand/content owner check      | `HOLD_REVIEW`  |
+| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER`           | `02_ARTIST_MANAGEMENT/KALIBWOY/05_BOOKING_PARTNERSHIPS/RIDERS`                                 | Booking/production owner check | `HOLD_REVIEW`  |
+| `KALIBWOY/• PROJECTEN/Podium Zwart 2023`                     | `HOLD_EVENT_REVIEW`                                                                            | Event/project owner check      | `HOLD_REVIEW`  |
+| `KALIBWOY/• PROJECTEN/Kalibwoy Album 2023 BDMNR`             | `02_ARTIST_MANAGEMENT/KALIBWOY/04_RELEASES`                                                    | Release/masters review         | `HOLD_REVIEW`  |
+| `KALIBWOY/• PROJECTEN/Film`                                  | `HOLD_SYNC_OR_ARCHIVE_REVIEW`                                                                  | Sync/licensing review          | `HOLD_REVIEW`  |
+| `KALIBWOY/• PROJECTEN/Mocro maffia`                          | `HOLD_SYNC_OR_ARCHIVE_REVIEW`                                                                  | Sync/licensing review          | `HOLD_REVIEW`  |
+| `KALIBWOY/• PROJECTEN/Projecten`                             | `HOLD_LEGACY_PROJECT_REVIEW`                                                                   | Legacy project owner check     | `HOLD_REVIEW`  |
 
 ## Review-gates vóór live migratie
 
