@@ -1,26 +1,31 @@
 /**
- * Sprint 2B OS_CUSTOMMADE root migration to locked CM_OS Drive structure.
+ * Sprint 2B — OS_CUSTOMMADE root migration dry-run simulator.
  *
- * ROOT_FOLDER_ID is the current OS_CUSTOMMADE Drive-root:
- * 0B2aV9TqyUPDzd0F1WEd1RkVxNFk
+ * Source matrix:
+ * docs/00_GOVERNANCE/SPRINT2B_DRIVE_MIGRATION_MATRIX.md
  *
- * IMPORTANT:
- * - DRY_RUN defaults to true. In dry-run mode this script only logs the
- *   intended actions and writes a migration log Sheet.
- * - Set DRY_RUN to false only after reviewing the migration log.
- * - The script never deletes content and never creates anything in FIERCE.
- * - Governance remains GitHub-led by default; legacy Drive governance is moved
- *   to 99_ARCHIVE/GOVERNANCE_LEGACY when execution is enabled.
+ * Purpose:
+ * - Simulate migration of the current OS_CUSTOMMADE roots to the definitive
+ *   root structure.
+ * - Write a Migration Log Sheet, conflict list and manual review list.
+ *
+ * Safety guarantees:
+ * - DRY_RUN is hard-coded to true.
+ * - This script never deletes files or folders.
+ * - This script never moves, renames or creates Drive folders/files.
+ * - The only write action is creating/updating the migration log spreadsheet.
  */
 const ROOT_FOLDER_ID = '0B2aV9TqyUPDzd0F1WEd1RkVxNFk';
 const DRY_RUN = true;
 const MIGRATION_LOG_SPREADSHEET_ID = '';
-const MIGRATION_LOG_SHEET_NAME = 'Sprint 2B Migration Log';
-const MIGRATION_SUMMARY_SHEET_NAME = 'Sprint 2B Summary';
+const MIGRATION_SPREADSHEET_NAME = 'CM_OS Sprint 2B OS_CUSTOMMADE Migration Dry Run';
+const MIGRATION_LOG_SHEET_NAME = 'Migration Log';
+const CONFLICTS_SHEET_NAME = 'Conflictenlijst';
+const MANUAL_REVIEW_SHEET_NAME = 'Handmatige review lijst';
+const SUMMARY_SHEET_NAME = 'Samenvatting';
 const MIGRATION_TIMEZONE = Session.getScriptTimeZone() || 'Etc/UTC';
-const GOVERNANCE_IN_GITHUB_IS_LEADING = true;
 
-const TARGET_ROOTS = [
+const DEFINITIVE_ROOTS = [
   '00_ADMIN',
   '01_MASTER_BOUTIQUE',
   '02_ARTIST_MANAGEMENT',
@@ -34,346 +39,353 @@ const TARGET_ROOTS = [
   '99_ARCHIVE',
 ];
 
-const KNOWN_CURRENT_ROOTS = [
-  '00_GOVERNANCE',
-  '00_INBOX',
-  '01_ARTIST_MANAGEMENT',
-  '02_MASTER_BOUTIQUE',
-  '03_EXECUTIVE',
-  '04_BUSINESS',
-  '05_MARKETING',
-  '06_PROJECTS',
-  '07_ ARCHIVE',
+const CURRENT_ROOT_DECISIONS = [
+  {
+    sourceRoot: '00_GOVERNANCE',
+    defaultTarget: '00_ADMIN/GOVERNANCE_REFERENCE',
+    action: 'hernoemen / opsplitsen / samenvoegen / deels archiveren',
+    risk: 'Middel',
+    order: 1,
+    dependency: 'Controle op dubbele SOPs, verouderde beleidsdocumenten en links vanuit AI-agent instructies.',
+    reviewReason: 'Governance blijft GitHub-led; Drive-kopieën alleen als niet-vertrouwelijke referentie of auditwaardig archief.',
+  },
+  {
+    sourceRoot: '00_INBOX',
+    defaultTarget: 'HOLD',
+    action: 'opsplitsen / archiveren',
+    risk: 'Kritiek',
+    order: 2,
+    dependency: 'Owner, classificatie, FIERCE-scan, vertrouwelijkheidscheck en linkcontrole ontbreken mogelijk.',
+    reviewReason: 'Inbox-items krijgen pas na owner-review een definitief artist-, client-, deal- of archiefpad.',
+  },
+  {
+    sourceRoot: '01_ARTIST_MANAGEMENT',
+    defaultTarget: '02_ARTIST_MANAGEMENT',
+    action: 'hernoemen / samenvoegen / deels archiveren',
+    risk: 'Hoog',
+    order: 3,
+    dependency: 'Canonical artistnaam, aliascontrole, duplicaatcontrole, ClickUp/Gmail/shortcut-links.',
+    reviewReason: 'Artistnamen en contract-/finance-/rights-content vereisen owner- en permissions-review.',
+  },
+  {
+    sourceRoot: '02_MASTER_BOUTIQUE',
+    defaultTarget: '01_MASTER_BOUTIQUE',
+    action: 'opsplitsen',
+    risk: 'Hoog',
+    order: 5,
+    dependency: 'Dealstatus, chain of title, rechtenregister, buyer links en due diligence fase.',
+    reviewReason: 'Business-lane documentatie blijft in Master Boutique; operationele dealdossiers moeten naar 04_DEALS.',
+  },
+  {
+    sourceRoot: '03_EXECUTIVE',
+    defaultTarget: '00_ADMIN',
+    action: 'hernoemen / opsplitsen / samenvoegen',
+    risk: 'Hoog',
+    order: 6,
+    dependency: 'Vertrouwelijkheid, Moneybird-status, legal owner, dossiercontext en audit trail.',
+    reviewReason: 'Executive content wordt verdeeld over admin, legal, finance of dossierpaden.',
+  },
+  {
+    sourceRoot: '04_BUSINESS',
+    defaultTarget: 'HOLD',
+    action: 'opsplitsen / samenvoegen / archiveren',
+    risk: 'Hoog',
+    order: 4,
+    dependency: 'Artist/client/deal classificatie, ClickUp, owners en permissions.',
+    reviewReason: 'Brede business-root vereist item-level classificatie naar clients, deals, operations, finance, legal of admin.',
+  },
+  {
+    sourceRoot: '05_MARKETING',
+    defaultTarget: '08_MARKETING',
+    action: 'hernoemen / opsplitsen / archiveren',
+    risk: 'Middel',
+    order: 7,
+    dependency: 'Assetrechten, campagnecontext en actieve publicatie-links.',
+    reviewReason: 'Bepaal per item of materiaal generiek CM-marketing, artist-specifiek of client-specifiek is.',
+  },
+  {
+    sourceRoot: '06_PROJECTS',
+    defaultTarget: 'HOLD',
+    action: 'opsplitsen / samenvoegen / archiveren',
+    risk: 'Hoog',
+    order: 3,
+    dependency: 'Projectclassificatie, open verplichtingen, rechten, facturatie en actieve links.',
+    reviewReason: 'Projecten moeten worden geclassificeerd als artist, client, deal, operations, content of archive.',
+  },
+  {
+    sourceRoot: '07_ARCHIVE',
+    defaultTarget: '99_ARCHIVE',
+    action: 'hernoemen / samenvoegen / shims tijdelijk behouden',
+    risk: 'Middel',
+    order: 8,
+    dependency: 'Broncontext, actieve dossiers, shortcuts/shims en linkcontrole.',
+    reviewReason: 'Archive-content mag niet blind worden gearchiveerd als het actieve artist-, client- of dealdossiers bevat.',
+    aliases: ['07_ ARCHIVE'],
+  },
 ];
 
 const LOG_HEADERS = [
   'Timestamp',
+  'Migratievolgorde',
   'Oude locatie',
   'Nieuwe locatie',
   'Actie',
+  'Risico',
   'Status',
-  'Foutmelding',
+  'Afhankelijkheden',
   'Handmatige review ja/nee',
   'Folder ID',
+  'Folder URL',
   'DRY_RUN',
 ];
 
-const CLASSIFICATION_RULES = {
-  FINANCE: [
-    'finance', 'financ', 'factuur', 'facturen', 'invoice', 'invoices', 'boekhouding',
-    'accounting', 'tax', 'btw', 'belasting', 'budget', 'cashflow', 'royalty', 'royalties',
-    'payments', 'betaling', 'betalingen', 'bank', 'payroll', 'salaris',
-  ],
-  LEGAL: [
-    'legal', 'juridisch', 'contract', 'contracts', 'agreement', 'agreements', 'overeenkomst',
-    'rechten', 'rights', 'ip', 'nda', 'apa', 'loi', 'license', 'licence', 'licensing',
-    'compliance', 'privacy', 'terms',
-  ],
-  OPERATIONS: [
-    'operations', 'operationeel', 'ops', 'admin', 'hr', 'people', 'team', 'process',
-    'processen', 'sop', 'system', 'systems', 'tooling', 'planning', 'templates',
-  ],
-  ADMIN: ['executive', 'directie', 'board', 'management', 'strategy', 'strategie', 'inbox'],
-  MARKETING: [
-    'marketing', 'brand', 'branding', 'merk', 'network', 'netwerk', 'pr', 'press', 'promo',
-    'campaign', 'campagne', 'positioning', 'partnership',
-  ],
-  CONTENT: [
-    'content', 'asset', 'assets', 'social', 'socialmedia', 'social media', 'instagram',
-    'tiktok', 'youtube', 'video', 'photo', 'photos', 'beeld', 'copy', 'creative', 'design',
-  ],
-  DEALS: [
-    'deal', 'deals', 'transaction', 'transactions', 'transactie', 'transacties', 'buyer',
-    'seller', 'catalog', 'catalogus', 'acquisition', 'sale', 'verkoop', 'koop', 'due diligence',
-  ],
-  ARCHIVE: ['archive', 'archief', 'old', 'oud', 'legacy', 'closed', 'afgerond'],
-};
+const REVIEW_HEADERS = [
+  'Timestamp',
+  'Oude locatie',
+  'Voorgesteld doel / HOLD',
+  'Risico',
+  'Review reden',
+  'Afhankelijkheden',
+  'Folder ID',
+  'Folder URL',
+];
 
-function runSprint2BDriveMigration() {
-  const startedAt = formatTimestamp_(new Date());
+const CONFLICT_HEADERS = [
+  'Timestamp',
+  'Type conflict',
+  'Oude locatie',
+  'Voorgesteld doel',
+  'Risico',
+  'Toelichting',
+  'Folder ID',
+  'Folder URL',
+];
+
+function runOsCustommadeMigrationDryRun() {
+  assertDryRunOnly_();
+
+  const startedAt = new Date();
   const root = DriveApp.getFolderById(ROOT_FOLDER_ID);
   const rootName = safeFolderName_(root, 'OS_CUSTOMMADE');
   const spreadsheet = getOrCreateMigrationSpreadsheet_();
-  const logSheet = resetSheet_(spreadsheet, MIGRATION_LOG_SHEET_NAME);
-  const summarySheet = resetSheet_(spreadsheet, MIGRATION_SUMMARY_SHEET_NAME);
-  const rows = [];
-  const targetFolders = {};
+  const logRows = [];
+  const conflictRows = [];
+  const reviewRows = [];
+  const rootSnapshot = getDirectChildFoldersByName_(root);
 
-  initializeLogSheet_(logSheet);
-  logInfo_('Sprint 2B Drive migration started. DRY_RUN=' + DRY_RUN);
+  resetSheetWithHeaders_(spreadsheet, MIGRATION_LOG_SHEET_NAME, LOG_HEADERS);
+  resetSheetWithHeaders_(spreadsheet, CONFLICTS_SHEET_NAME, CONFLICT_HEADERS);
+  resetSheetWithHeaders_(spreadsheet, MANUAL_REVIEW_SHEET_NAME, REVIEW_HEADERS);
+  resetSheetWithHeaders_(spreadsheet, SUMMARY_SHEET_NAME, ['Key', 'Value']);
 
-  TARGET_ROOTS.forEach(function(targetRootName) {
-    if (targetRootName !== '01_MASTER_BOUTIQUE' && targetRootName !== '02_ARTIST_MANAGEMENT') {
-      targetFolders[targetRootName] = getOrCreateChildFolder_(root, targetRootName, rows, rootName, targetRootName);
+  DEFINITIVE_ROOTS.forEach(function(rootFolderName) {
+    const existing = rootSnapshot[rootFolderName] || [];
+    if (existing.length) {
+      addLogRow_(logRows, 0, rootName + '/' + rootFolderName, rootName + '/' + rootFolderName, 'doelroot controleren', 'Laag', 'DRY_RUN_EXISTS', 'Definitieve root bestaat al.', 'nee', existing[0]);
+      addDuplicateNameConflicts_(conflictRows, rootName, rootFolderName, existing, 'Dubbele definitieve rootnaam binnen OS_CUSTOMMADE.');
+    } else {
+      addLogRow_(logRows, 0, rootName + '/' + rootFolderName, rootName + '/' + rootFolderName, 'ontbrekende doelroot signaleren', 'Middel', 'DRY_RUN_TARGET_MISSING', 'Doelroot moet vóór live migratie bestaan of expliciet worden aangemaakt.', 'ja', null);
+      addReviewRow_(reviewRows, rootName + '/' + rootFolderName, rootName + '/' + rootFolderName, 'Middel', 'Definitieve doelroot ontbreekt in huidige Drive-root.', 'Aanmaken alleen na go/no-go; dit script maakt geen Drive-folders.', null);
     }
   });
 
-  migrateDirectChild_(root, rows, rootName, '00_INBOX', targetFolders['00_ADMIN'], 'INBOX', 'verplaatsen/hernoemen', false);
-  migrateGovernance_(root, rows, rootName, targetFolders);
-  swapArtistAndMasterRoots_(root, rows, rootName);
-  targetFolders['01_MASTER_BOUTIQUE'] = getOrCreateChildFolder_(root, '01_MASTER_BOUTIQUE', rows, rootName, '01_MASTER_BOUTIQUE');
-  targetFolders['02_ARTIST_MANAGEMENT'] = getOrCreateChildFolder_(root, '02_ARTIST_MANAGEMENT', rows, rootName, '02_ARTIST_MANAGEMENT');
-  splitRootChildren_(root, rows, rootName, '04_BUSINESS', targetFolders, classifyBusinessFolder_);
-  splitRootChildren_(root, rows, rootName, '05_MARKETING', targetFolders, classifyMarketingFolder_);
-  splitRootChildren_(root, rows, rootName, '06_PROJECTS', targetFolders, classifyProjectFolder_);
-  migrateDirectChild_(root, rows, rootName, '07_ ARCHIVE', targetFolders['99_ARCHIVE'], 'LEGACY_ARCHIVE', 'verplaatsen/hernoemen', false);
-  reviewUnexpectedRoots_(root, rows, rootName);
+  CURRENT_ROOT_DECISIONS.sort(function(a, b) { return a.order - b.order; }).forEach(function(decision) {
+    simulateRootDecision_(rootName, rootSnapshot, decision, logRows, conflictRows, reviewRows);
+  });
 
-  appendRows_(logSheet, rows);
-  writeSummary_(summarySheet, rows, startedAt, spreadsheet.getUrl());
+  addUnexpectedRootReviews_(rootName, rootSnapshot, logRows, conflictRows, reviewRows);
 
-  logInfo_('Sprint 2B Drive migration log: ' + spreadsheet.getUrl());
-  logInfo_('GEREED VOOR DRY RUN');
+  appendRows_(spreadsheet.getSheetByName(MIGRATION_LOG_SHEET_NAME), logRows, LOG_HEADERS.length);
+  appendRows_(spreadsheet.getSheetByName(CONFLICTS_SHEET_NAME), conflictRows, CONFLICT_HEADERS.length);
+  appendRows_(spreadsheet.getSheetByName(MANUAL_REVIEW_SHEET_NAME), reviewRows, REVIEW_HEADERS.length);
+  writeSummary_(spreadsheet.getSheetByName(SUMMARY_SHEET_NAME), startedAt, spreadsheet.getUrl(), logRows, conflictRows, reviewRows);
+
+  Logger.log('Migration Log Sheet: ' + spreadsheet.getUrl());
+  Logger.log('Conflictenlijst: ' + CONFLICTS_SHEET_NAME);
+  Logger.log('Handmatige review lijst: ' + MANUAL_REVIEW_SHEET_NAME);
+  Logger.log('GEREED VOOR DRY RUN');
   return spreadsheet.getUrl();
 }
 
+function runSprint2BDriveMigration() {
+  return runOsCustommadeMigrationDryRun();
+}
 
-function swapArtistAndMasterRoots_(root, rows, rootName) {
-  const artistRoot = findChildFolder_(root, '01_ARTIST_MANAGEMENT');
-  const masterRoot = findChildFolder_(root, '02_MASTER_BOUTIQUE');
-  const finalArtist = findChildFolder_(root, '02_ARTIST_MANAGEMENT');
-  const finalMaster = findChildFolder_(root, '01_MASTER_BOUTIQUE');
-  const tempArtistName = '__MIGRATION_TEMP_01_ARTIST_MANAGEMENT__';
+function simulateRootDecision_(rootName, rootSnapshot, decision, logRows, conflictRows, reviewRows) {
+  const candidates = getSourceCandidates_(rootSnapshot, decision);
+  const targetPath = decision.defaultTarget === 'HOLD' ? 'HOLD' : rootName + '/' + decision.defaultTarget;
 
-  if (finalArtist && finalMaster) {
-    addLogRow_(rows, rootName + '/01_ARTIST_MANAGEMENT', rootName + '/02_ARTIST_MANAGEMENT', 'artist root controleren', 'EXISTS', '', 'nee', safeFolderId_(finalArtist, ''), false);
-    addLogRow_(rows, rootName + '/02_MASTER_BOUTIQUE', rootName + '/01_MASTER_BOUTIQUE', 'master boutique root controleren', 'EXISTS', '', 'nee', safeFolderId_(finalMaster, ''), false);
+  if (!candidates.length) {
+    addLogRow_(logRows, decision.order, rootName + '/' + decision.sourceRoot, targetPath, decision.action, decision.risk, 'DRY_RUN_SOURCE_NOT_FOUND', decision.dependency, 'ja', null);
+    addReviewRow_(reviewRows, rootName + '/' + decision.sourceRoot, targetPath, decision.risk, 'Bronroot niet gevonden; controleer inventory, spelling en eventuele gedeelde Drive-locaties.', decision.dependency, null);
     return;
   }
 
-  if (artistRoot && masterRoot) {
-    if (!DRY_RUN) {
-      artistRoot.setName(tempArtistName);
-      masterRoot.setName('01_MASTER_BOUTIQUE');
-      artistRoot.setName('02_ARTIST_MANAGEMENT');
+  addDuplicateNameConflicts_(conflictRows, rootName, decision.sourceRoot, candidates, 'Dubbele bronrootnaam of alias gevonden; live migratie vereist handmatige keuze van canonical bron.');
+
+  candidates.forEach(function(folder) {
+    const oldPath = rootName + '/' + safeFolderName_(folder, decision.sourceRoot);
+    const hasChildFolders = folder.getFolders().hasNext();
+    const status = decision.defaultTarget === 'HOLD' ? 'DRY_RUN_HOLD_REVIEW' : 'DRY_RUN_PLANNED';
+
+    addLogRow_(logRows, decision.order, oldPath, targetPath, decision.action, decision.risk, status, decision.dependency, 'ja', folder);
+    addReviewRow_(reviewRows, oldPath, targetPath, decision.risk, decision.reviewReason, decision.dependency, folder);
+
+    if (hasChildFolders && ['Hoog', 'Kritiek'].indexOf(decision.risk) !== -1) {
+      addConflictRow_(conflictRows, 'ITEM_LEVEL_CLASSIFICATION_REQUIRED', oldPath, targetPath, decision.risk, 'Bronroot bevat submappen en mag niet bulk worden verplaatst; classificeer per item volgens migratiematrix.', folder);
     }
-    addLogRow_(rows, rootName + '/01_ARTIST_MANAGEMENT', rootName + '/02_ARTIST_MANAGEMENT', 'artist management root swap-hernoemen', DRY_RUN ? 'DRY_RUN_PLANNED' : 'DONE', '', 'nee', safeFolderId_(artistRoot, ''), true);
-    addLogRow_(rows, rootName + '/02_MASTER_BOUTIQUE', rootName + '/01_MASTER_BOUTIQUE', 'master boutique root swap-hernoemen', DRY_RUN ? 'DRY_RUN_PLANNED' : 'DONE', '', 'nee', safeFolderId_(masterRoot, ''), true);
-    return;
-  }
-
-  migrateDirectChild_(root, rows, rootName, '01_ARTIST_MANAGEMENT', root, '02_ARTIST_MANAGEMENT', 'hernoemen/verplaatsen', false);
-  migrateDirectChild_(root, rows, rootName, '02_MASTER_BOUTIQUE', root, '01_MASTER_BOUTIQUE', 'hernoemen/verplaatsen', false);
-}
-
-function migrateGovernance_(root, rows, rootName, targetFolders) {
-  if (GOVERNANCE_IN_GITHUB_IS_LEADING) {
-    migrateDirectChild_(root, rows, rootName, '00_GOVERNANCE', targetFolders['99_ARCHIVE'], 'GOVERNANCE_LEGACY', 'archiveren governance legacy', false);
-    return;
-  }
-
-  migrateDirectChild_(root, rows, rootName, '00_GOVERNANCE', targetFolders['00_ADMIN'], 'GOVERNANCE', 'verplaatsen/hernoemen', false);
-}
-
-function splitRootChildren_(root, rows, rootName, sourceRootName, targetFolders, classifier) {
-  const sourceRoot = findChildFolder_(root, sourceRootName);
-  if (!sourceRoot) {
-    addLogRow_(rows, rootName + '/' + sourceRootName, rootName + '/' + sourceRootName, 'splitsen', 'SKIPPED_NOT_FOUND', '', 'nee', '', false);
-    return;
-  }
-
-  const children = sourceRoot.getFolders();
-  let childCount = 0;
-  while (children.hasNext()) {
-    childCount += 1;
-    const child = children.next();
-    const decision = classifier(safeFolderName_(child, 'UNKNOWN'));
-    const targetFolder = targetFolders[decision.targetRoot];
-    const manualReview = decision.manualReview ? 'ja' : 'nee';
-    const oldPath = rootName + '/' + sourceRootName + '/' + safeFolderName_(child, 'UNKNOWN');
-    const newPath = rootName + '/' + decision.targetRoot + '/' + safeFolderName_(child, 'UNKNOWN');
-
-    moveFolder_(child, sourceRoot, targetFolder, safeFolderName_(child, 'UNKNOWN'), rows, oldPath, newPath, decision.action, manualReview);
-  }
-
-  if (childCount === 0) {
-    addLogRow_(rows, rootName + '/' + sourceRootName, rootName + '/99_ARCHIVE/' + sourceRootName + '_EMPTY_LEGACY', 'lege bronroot archiveren', 'PLANNED_EMPTY_ROOT_REVIEW', '', 'ja', safeFolderId_(sourceRoot, ''), false);
-  }
-}
-
-function classifyBusinessFolder_(folderName) {
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.FINANCE)) return { targetRoot: '06_FINANCE', action: 'business finance verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.LEGAL)) return { targetRoot: '07_LEGAL', action: 'business legal verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.OPERATIONS)) return { targetRoot: '05_OPERATIONS', action: 'business operations verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.ADMIN)) return { targetRoot: '00_ADMIN', action: 'business admin verplaatsen', manualReview: false };
-  return { targetRoot: '00_ADMIN', action: 'business onbekend naar handmatige review', manualReview: true };
-}
-
-function classifyMarketingFolder_(folderName) {
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.CONTENT)) return { targetRoot: '09_CONTENT', action: 'marketing content/assets verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.MARKETING)) return { targetRoot: '08_MARKETING', action: 'marketing/brand/network verplaatsen', manualReview: false };
-  return { targetRoot: '08_MARKETING', action: 'marketing onbekend naar handmatige review', manualReview: true };
-}
-
-function classifyProjectFolder_(folderName) {
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.DEALS)) return { targetRoot: '04_DEALS', action: 'project deal/transactie verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.OPERATIONS)) return { targetRoot: '05_OPERATIONS', action: 'actief operations-project verplaatsen', manualReview: false };
-  if (matchesAny_(folderName, CLASSIFICATION_RULES.ARCHIVE)) return { targetRoot: '99_ARCHIVE', action: 'oud project archiveren', manualReview: false };
-  return { targetRoot: '99_ARCHIVE', action: 'project onduidelijk archiveren voor review', manualReview: true };
-}
-
-function reviewUnexpectedRoots_(root, rows, rootName) {
-  const folders = root.getFolders();
-  while (folders.hasNext()) {
-    const folder = folders.next();
-    const folderName = safeFolderName_(folder, 'UNKNOWN');
-    if (TARGET_ROOTS.indexOf(folderName) === -1 && KNOWN_CURRENT_ROOTS.indexOf(folderName) === -1) {
-      addLogRow_(rows, rootName + '/' + folderName, rootName + '/' + folderName, 'onverwachte root handmatige review', 'REVIEW_ONLY', '', 'ja', safeFolderId_(folder, ''), false);
-    }
-  }
-}
-
-function migrateDirectChild_(root, rows, rootName, sourceName, targetParent, targetName, action, manualReview) {
-  const source = findChildFolder_(root, sourceName);
-  const targetPath = rootName + '/' + safeFolderName_(targetParent, 'UNKNOWN') + '/' + targetName;
-  if (!source) {
-    addLogRow_(rows, rootName + '/' + sourceName, targetPath, action, 'SKIPPED_NOT_FOUND', '', manualReview ? 'ja' : 'nee', '', false);
-    return null;
-  }
-
-  return moveFolder_(source, root, targetParent, targetName, rows, rootName + '/' + sourceName, targetPath, action, manualReview ? 'ja' : 'nee');
-}
-
-function moveFolder_(folder, oldParent, newParent, targetName, rows, oldPath, newPath, action, manualReview) {
-  try {
-    const existingTarget = findChildFolder_(newParent, targetName);
-    if (existingTarget && safeFolderId_(existingTarget, '') !== safeFolderId_(folder, '')) {
-      addLogRow_(rows, oldPath, newPath, action, 'SKIPPED_TARGET_EXISTS', 'Doelmap bestaat al; handmatige samenvoeging vereist.', manualReview === 'ja' ? 'ja' : 'ja', safeFolderId_(folder, ''), false);
-      return existingTarget;
-    }
-
-    if (!DRY_RUN) {
-      if (safeFolderName_(folder, '') !== targetName) {
-        folder.setName(targetName);
-      }
-      newParent.addFolder(folder);
-      oldParent.removeFolder(folder);
-    }
-
-    addLogRow_(rows, oldPath, newPath, action, DRY_RUN ? 'DRY_RUN_PLANNED' : 'DONE', '', manualReview, safeFolderId_(folder, ''), true);
-    return folder;
-  } catch (error) {
-    addLogRow_(rows, oldPath, newPath, action, 'ERROR', error.message, 'ja', safeFolderId_(folder, ''), false);
-    return null;
-  }
-}
-
-function getOrCreateChildFolder_(parent, folderName, rows, rootName, relativePath) {
-  const existing = findChildFolder_(parent, folderName);
-  const targetPath = rootName + '/' + relativePath;
-  if (existing) {
-    addLogRow_(rows, targetPath, targetPath, 'doelroot controleren', 'EXISTS', '', 'nee', safeFolderId_(existing, ''), false);
-    return existing;
-  }
-
-  if (DRY_RUN) {
-    addLogRow_(rows, targetPath, targetPath, 'ontbrekende doelroot aanmaken', 'DRY_RUN_PLANNED', '', 'nee', '', false);
-    return createVirtualFolder_(folderName, parent);
-  }
-
-  const created = parent.createFolder(folderName);
-  addLogRow_(rows, targetPath, targetPath, 'ontbrekende doelroot aanmaken', 'DONE', '', 'nee', safeFolderId_(created, ''), true);
-  return created;
-}
-
-function findChildFolder_(parent, folderName) {
-  const folders = parent.getFoldersByName(folderName);
-  return folders.hasNext() ? folders.next() : null;
-}
-
-function createVirtualFolder_(folderName, parent) {
-  return {
-    getName: function() { return folderName; },
-    getId: function() { return 'DRY_RUN_VIRTUAL_' + folderName; },
-    getFoldersByName: function() { return { hasNext: function() { return false; }, next: function() { return null; } }; },
-    addFolder: function() {},
-    removeFolder: function() {},
-    _parent: parent,
-  };
-}
-
-function matchesAny_(folderName, keywords) {
-  const normalized = normalize_(folderName);
-  return keywords.some(function(keyword) {
-    return normalized.indexOf(normalize_(keyword)) !== -1;
   });
 }
 
-function normalize_(value) {
-  return String(value || '').toLowerCase().replace(/[_\-]+/g, ' ').replace(/\s+/g, ' ').trim();
+function addUnexpectedRootReviews_(rootName, rootSnapshot, logRows, conflictRows, reviewRows) {
+  const knownNames = DEFINITIVE_ROOTS.concat(CURRENT_ROOT_DECISIONS.map(function(decision) { return decision.sourceRoot; }));
+  CURRENT_ROOT_DECISIONS.forEach(function(decision) {
+    (decision.aliases || []).forEach(function(alias) { knownNames.push(alias); });
+  });
+
+  Object.keys(rootSnapshot).sort().forEach(function(folderName) {
+    if (knownNames.indexOf(folderName) !== -1) return;
+
+    rootSnapshot[folderName].forEach(function(folder) {
+      const oldPath = rootName + '/' + folderName;
+      addLogRow_(logRows, 0, oldPath, 'HOLD', 'onverwachte root signaleren', 'Hoog', 'DRY_RUN_UNEXPECTED_ROOT', 'Niet opgenomen in Sprint 2B migratiematrix.', 'ja', folder);
+      addConflictRow_(conflictRows, 'UNEXPECTED_ROOT', oldPath, 'HOLD', 'Hoog', 'Root staat niet in de migratiematrix en vereist owner-besluit.', folder);
+      addReviewRow_(reviewRows, oldPath, 'HOLD', 'Hoog', 'Onverwachte root: niet live migreren zonder classificatie, FIERCE-check en owner-akkoord.', 'Owner, beslisser, linkcontrole en permissions review nodig.', folder);
+    });
+  });
+}
+
+function getSourceCandidates_(rootSnapshot, decision) {
+  let candidates = [];
+  [decision.sourceRoot].concat(decision.aliases || []).forEach(function(name) {
+    candidates = candidates.concat(rootSnapshot[name] || []);
+  });
+  return candidates;
+}
+
+function getDirectChildFoldersByName_(parent) {
+  const result = {};
+  const folders = parent.getFolders();
+  while (folders.hasNext()) {
+    const folder = folders.next();
+    const name = safeFolderName_(folder, 'UNKNOWN');
+    if (!result[name]) result[name] = [];
+    result[name].push(folder);
+  }
+  return result;
+}
+
+function addDuplicateNameConflicts_(conflictRows, rootName, folderName, folders, explanation) {
+  if (folders.length <= 1) return;
+  folders.forEach(function(folder) {
+    addConflictRow_(conflictRows, 'DUPLICATE_NAME', rootName + '/' + folderName, 'HANDMATIGE_SAMENVOEGING', 'Hoog', explanation, folder);
+  });
+}
+
+function addLogRow_(rows, order, oldLocation, newLocation, action, risk, status, dependency, manualReview, folder) {
+  rows.push([
+    formatTimestamp_(new Date()),
+    order,
+    oldLocation,
+    newLocation,
+    action,
+    risk,
+    status,
+    dependency || '',
+    manualReview,
+    safeFolderId_(folder, ''),
+    folder ? getFolderUrl_(folder) : '',
+    'true',
+  ]);
+}
+
+function addReviewRow_(rows, oldLocation, targetLocation, risk, reason, dependency, folder) {
+  rows.push([
+    formatTimestamp_(new Date()),
+    oldLocation,
+    targetLocation,
+    risk,
+    reason,
+    dependency || '',
+    safeFolderId_(folder, ''),
+    folder ? getFolderUrl_(folder) : '',
+  ]);
+}
+
+function addConflictRow_(rows, conflictType, oldLocation, targetLocation, risk, explanation, folder) {
+  rows.push([
+    formatTimestamp_(new Date()),
+    conflictType,
+    oldLocation,
+    targetLocation,
+    risk,
+    explanation,
+    safeFolderId_(folder, ''),
+    folder ? getFolderUrl_(folder) : '',
+  ]);
 }
 
 function getOrCreateMigrationSpreadsheet_() {
   if (MIGRATION_LOG_SPREADSHEET_ID) {
     return SpreadsheetApp.openById(MIGRATION_LOG_SPREADSHEET_ID);
   }
-  return SpreadsheetApp.create('CM_OS Sprint 2B Drive Migration Log ' + formatTimestamp_(new Date()));
+  return SpreadsheetApp.create(MIGRATION_SPREADSHEET_NAME + ' ' + formatTimestamp_(new Date()));
 }
 
-function resetSheet_(spreadsheet, sheetName) {
+function resetSheetWithHeaders_(spreadsheet, sheetName, headers) {
   const existing = spreadsheet.getSheetByName(sheetName);
-  if (existing) spreadsheet.deleteSheet(existing);
-  return spreadsheet.insertSheet(sheetName);
-}
-
-function initializeLogSheet_(sheet) {
-  sheet.getRange(1, 1, 1, LOG_HEADERS.length).setValues([LOG_HEADERS]);
+  const sheet = existing || spreadsheet.insertSheet(sheetName);
+  sheet.clear();
+  sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
   sheet.setFrozenRows(1);
-  sheet.getRange(1, 1, 1, LOG_HEADERS.length).setFontWeight('bold');
+  sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
+  return sheet;
 }
 
-function appendRows_(sheet, rows) {
+function appendRows_(sheet, rows, width) {
   if (!rows.length) return;
-  sheet.getRange(2, 1, rows.length, LOG_HEADERS.length).setValues(rows);
-  sheet.autoResizeColumns(1, LOG_HEADERS.length);
+  sheet.getRange(2, 1, rows.length, width).setValues(rows);
+  sheet.autoResizeColumns(1, width);
 }
 
-function addLogRow_(rows, oldLocation, newLocation, action, status, errorMessage, manualReview, folderId, mutatesDrive) {
-  rows.push([
-    formatTimestamp_(new Date()),
-    oldLocation,
-    newLocation,
-    action,
-    status,
-    errorMessage || '',
-    manualReview,
-    folderId || '',
-    DRY_RUN ? 'true' : 'false',
-  ]);
-  logInfo_((DRY_RUN && mutatesDrive ? '[DRY_RUN] ' : '') + status + ' | ' + action + ' | ' + oldLocation + ' -> ' + newLocation);
-}
-
-function writeSummary_(sheet, rows, startedAt, logUrl) {
-  const counts = rows.reduce(function(accumulator, row) {
-    const status = row[4];
+function writeSummary_(sheet, startedAt, logUrl, logRows, conflictRows, reviewRows) {
+  const statusCounts = logRows.reduce(function(accumulator, row) {
+    const status = row[6];
     accumulator[status] = (accumulator[status] || 0) + 1;
     return accumulator;
   }, {});
 
-  const summaryRows = [
-    ['Started at', startedAt],
+  const rows = [
+    ['Started at', formatTimestamp_(startedAt)],
     ['Completed at', formatTimestamp_(new Date())],
-    ['DRY_RUN', DRY_RUN ? 'true' : 'false'],
+    ['DRY_RUN', 'true'],
     ['Root folder ID', ROOT_FOLDER_ID],
-    ['Governance in GitHub leading', GOVERNANCE_IN_GITHUB_IS_LEADING ? 'true' : 'false'],
-    ['Migration log URL', logUrl],
+    ['Migration log spreadsheet', logUrl],
+    ['Migration log rows', logRows.length],
+    ['Conflictenlijst rows', conflictRows.length],
+    ['Handmatige review rows', reviewRows.length],
     ['Final message', 'GEREED VOOR DRY RUN'],
     ['', ''],
     ['Status', 'Aantal'],
   ];
 
-  Object.keys(counts).sort().forEach(function(status) {
-    summaryRows.push([status, counts[status]]);
+  Object.keys(statusCounts).sort().forEach(function(status) {
+    rows.push([status, statusCounts[status]]);
   });
 
-  sheet.getRange(1, 1, summaryRows.length, 2).setValues(summaryRows);
-  sheet.getRange(1, 1, 1, 2).setFontWeight('bold');
+  sheet.getRange(1, 1, rows.length, 2).setValues(rows);
   sheet.autoResizeColumns(1, 2);
+}
+
+function assertDryRunOnly_() {
+  if (DRY_RUN !== true) {
+    throw new Error('Deze migratie mag alleen als DRY_RUN=true draaien. Geen live verplaatsingen toegestaan.');
+  }
 }
 
 function safeFolderName_(folder, fallback) {
   try {
-    return folder.getName();
+    return folder ? folder.getName() : fallback;
   } catch (error) {
     return fallback;
   }
@@ -381,16 +393,16 @@ function safeFolderName_(folder, fallback) {
 
 function safeFolderId_(folder, fallback) {
   try {
-    return folder.getId();
+    return folder ? folder.getId() : fallback;
   } catch (error) {
     return fallback;
   }
 }
 
-function formatTimestamp_(date) {
-  return Utilities.formatDate(date, MIGRATION_TIMEZONE, "yyyy-MM-dd'T'HH:mm:ssXXX");
+function getFolderUrl_(folder) {
+  return 'https://drive.google.com/drive/folders/' + safeFolderId_(folder, '');
 }
 
-function logInfo_(message) {
-  Logger.log(message);
+function formatTimestamp_(date) {
+  return Utilities.formatDate(date, MIGRATION_TIMEZONE, "yyyy-MM-dd'T'HH:mm:ssXXX");
 }
