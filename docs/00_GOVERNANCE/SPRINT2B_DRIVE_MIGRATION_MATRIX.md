@@ -221,3 +221,16 @@ Migratie mag starten wanneer onderstaande controlepunten per root zijn afgevinkt
 De bestaande roots zijn geanalyseerd en vertaald naar de goedgekeurde `OS_CUSTOMMADE` doelstructuur. De migratie moet root voor root worden uitgevoerd volgens bovenstaande volgorde, waarbij `HOLD`-items buiten de live verplaatsing blijven totdat owner-, link-, legal-, finance- en FIERCE-controles zijn afgerond.
 
 GEREED VOOR MIGRATIE UITVOERING
+
+## Sprint 2G synchronisatie
+
+**Status:** GESYNCHRONISEERD VOOR SPRINT 2G GOVERNANCE LOCK.
+
+Sprint 2G wijzigt deze matrix niet inhoudelijk en introduceert geen nieuwe governance. De bestaande migratievolgorde, doelstructuur, hold-regels en locked decisions blijven ongewijzigd. De bijbehorende Sprint 2G configuratie beperkt zich tot veilige dry-run projectie en expliciete safe-root mapping voor:
+
+1. `01_ARTIST_MANAGEMENT` naar `02_ARTIST_MANAGEMENT`.
+2. `02_MASTER_BOUTIQUE` naar `01_MASTER_BOUTIQUE`.
+3. `03_EXECUTIVE` naar `00_ADMIN`.
+4. `05_MARKETING` naar `08_MARKETING` of `09_CONTENT` op basis van contentclassificatie.
+
+Alle overige roots blijven onder review, hold of latere migratiecontrole conform deze matrix.
