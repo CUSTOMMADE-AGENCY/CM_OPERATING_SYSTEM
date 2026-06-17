@@ -39,6 +39,20 @@ Het script maakt of vult een Google Sheet met:
 1. `Drive Inventory` — één regel per map vanaf de opgegeven root folder ID.
 2. `Sprint 2A Summary` — rootinformatie, exporttimestamp en aantallen per migratieactie.
 
+De export schrijft direct bij start een zichtbare statusregel naar `Drive Inventory`:
+
+```text
+STATUS | Script gestart | timestamp
+```
+
+Als een map niet kan worden gelezen, schrijft het script een foutregel in dezelfde sheet:
+
+```text
+ERROR | folderId | folderName | errorMessage
+```
+
+Daardoor is er altijd zichtbaar bewijs in de output-Sheet, ook als Drive-lezen gedeeltelijk faalt.
+
 ## Installatie
 
 1. Open [Google Apps Script](https://script.google.com/) met het Google-account dat leesrechten heeft op de `OS_CUSTOMMADE` Drive-root.
@@ -62,13 +76,19 @@ Het script gebruikt geen schrijfacties in Drive. De enige schrijfactie is het vu
 
 ## Uitvoeren
 
-1. Selecteer in Apps Script de functie `exportDriveInventory`.
-2. Klik op **Run**.
+Voer de export altijd in twee stappen uit:
+
+1. Selecteer in Apps Script eerst de functie `testDriveInventoryExport`.
+2. Klik op **Run**. Deze test exporteert alleen de root en de eerste laag folders.
 3. Autoriseer het script wanneer Google daarom vraagt.
-4. Wacht tot de run klaar is.
-5. Open **Executions** of **Logs** in Apps Script.
-6. Kopieer de gelogde spreadsheet-URL.
-7. Deel de output-Sheet alleen met reviewers die volgens governance toegang mogen hebben tot de inventaris.
+4. Controleer in de output-Sheet of de `STATUS | Script gestart | timestamp`-regel zichtbaar is en of eventuele `ERROR | folderId | folderName | errorMessage`-regels verklaarbaar zijn.
+5. Controleer **Executions** of **Logs** in Apps Script; elke verwerkte folder wordt als volledig pad gelogd.
+6. Selecteer daarna pas de functie `exportDriveInventory`.
+7. Klik opnieuw op **Run** voor de volledige inventarisatie binnen de ingestelde diepte.
+8. Kopieer de gelogde spreadsheet-URL.
+9. Deel de output-Sheet alleen met reviewers die volgens governance toegang mogen hebben tot de inventaris.
+
+> Let op: bovenaan het script staat `const MAX_DEPTH = 2` als veilige testoptie voor `exportDriveInventory`. Laat deze waarde staan voor een eerste beperkte run en verhoog of verwijder de dieptelimiet pas nadat de testexport goed is gecontroleerd.
 
 ## Exportbestand
 
@@ -130,6 +150,7 @@ De export herkent deze roots:
 ## Beperkingen
 
 - De export telt directe bestanden en directe submappen, niet het volledige subtree-totaal.
-- Ownerinformatie kan ontbreken wanneer het uitvoerende account onvoldoende rechten heeft.
-- Google Apps Script-runtime kan bij zeer grote Drives time-outs geven; exporteer dan per root of verhoog de operationele runstrategie.
+- Ownerinformatie kan ontbreken wanneer het uitvoerende account onvoldoende rechten heeft; het script vult dan `OWNER_UNKNOWN`.
+- Metadata kan ontbreken of niet leesbaar zijn voor specifieke folders; het script vult dan `ERROR_METADATA` waar mogelijk en schrijft een `ERROR`-regel wanneer een folder niet verwerkt kan worden.
+- Google Apps Script-runtime kan bij zeer grote Drives time-outs geven; het script verwerkt folders in batches en schrijft tussentijds naar de Sheet, maar exporteer indien nodig per root of verhoog de operationele runstrategie.
 - De export is een momentopname. Maak vlak vóór migratie opnieuw een export.
