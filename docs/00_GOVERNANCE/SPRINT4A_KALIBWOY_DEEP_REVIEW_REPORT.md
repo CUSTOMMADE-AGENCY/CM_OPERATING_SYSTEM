@@ -6,7 +6,7 @@
 
 **Scope:** `01_ARTIST_MANAGEMENT/KALIBWOY`
 
-**Post-merge governance correction:** na merge van PR #77 is de booking/rider target-route gecorrigeerd naar de canonieke CM Drive-root `05_BOOKING_PARTNERSHIPS`. Deze correctie wijzigt alleen de review-only target-route voor de KALIBWOY rider mapping; er wordt geen live migratie toegevoegd, geen Drive-map aangemaakt, niets verplaatst en niets verwijderd.
+**Post-merge governance correction:** na merge van PR #77 is de booking/rider target-route gecorrigeerd naar de canonieke CM Drive-root `05_BOOKING`. Deze correctie wijzigt alleen de review-only target-route voor de KALIBWOY rider mapping; er wordt geen live migratie toegevoegd, geen Drive-map aangemaakt, niets verplaatst en niets verwijderd.
 
 ## Doel
 
@@ -64,7 +64,7 @@ De risk-folder scan bevestigt dat gevoelige inhoudstypen niet generiek mogen wor
 | `KALIBWOY/Contracten/MASTER LICENTIE OVEREENKOMST King Kong` | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Master Rights`                                      | Legal/rights check             | `HOLD_REVIEW`  |
 | `KALIBWOY/Contracten/ARTIESTEN-KALIBWOY.pdf/docx`            | `02_ARTIST_MANAGEMENT/KALIBWOY/02_CONTRACT/Management_or_Artist_Agreement`                     | Legal/rights check             | `HOLD_REVIEW`  |
 | `KALIBWOY/Algemeen/logo files`                               | `02_ARTIST_MANAGEMENT/KALIBWOY/08_PRESS_EPK` or `02_ARTIST_MANAGEMENT/KALIBWOY/07_SOCIALMEDIA` | Brand/content owner check      | `HOLD_REVIEW`  |
-| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER`           | `02_ARTIST_MANAGEMENT/KALIBWOY/05_BOOKING_PARTNERSHIPS/RIDERS`                                 | Booking/production owner check | `HOLD_REVIEW`  |
+| `KALIBWOY/Algemeen/KALIBWOY VIDEO-FOTOSHOOT RIDER`           | `02_ARTIST_MANAGEMENT/KALIBWOY/05_BOOKING/RIDERS`                                 | Booking/production owner check | `HOLD_REVIEW`  |
 | `KALIBWOY/• PROJECTEN/Podium Zwart 2023`                     | `HOLD_EVENT_REVIEW`                                                                            | Event/project owner check      | `HOLD_REVIEW`  |
 | `KALIBWOY/• PROJECTEN/Kalibwoy Album 2023 BDMNR`             | `02_ARTIST_MANAGEMENT/KALIBWOY/04_RELEASES`                                                    | Release/masters review         | `HOLD_REVIEW`  |
 | `KALIBWOY/• PROJECTEN/Film`                                  | `HOLD_SYNC_OR_ARCHIVE_REVIEW`                                                                  | Sync/licensing review          | `HOLD_REVIEW`  |

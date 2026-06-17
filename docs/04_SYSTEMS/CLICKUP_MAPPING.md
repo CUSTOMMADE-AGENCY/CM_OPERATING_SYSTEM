@@ -250,7 +250,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | Required statuses | Artist Management statusset + `Lead registered`, `Partnership Fit Check`, `Negotiation`, `Execution`, `Proof of performance`, `Declined / parked` |
 | Required subtasks | Lead in Pipeline registreren; partnership Fit Check uitvoeren; restrictions en conflicts checken; partnership concept definiëren; commercial terms bepalen; negotiation en legal review coördineren; artist approval verkrijgen; execution checklist aanmaken; deliverables volgen; reporting/proof of performance package opleveren; partnership evalueren |
 | Approval owner | Artist voor brand fit, deliverables, usage, exclusivity en final approval; artist manager of brand partnership lead voor commercial coordination; counsel bij legal/signature risk |
-| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/05_BOOKING_PARTNERSHIPS/[Brand]` |
+| Linked Drive folder | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[Artist Name]/05_BOOKING/[Brand]` |
 | Gmail templates used | `CM - Artist Management - Brand Partnership Approval`; `CM - Artist Management - Approval Request`; `CM - Artist Management - Meeting Recap` |
 | Completion criteria | Approved partnership deal of declined opportunity record staat in Drive; Pipeline en artist roadmap zijn bijgewerkt; usage rights, exclusivity, deliverables, payment en reporting follow-up zijn schriftelijk bevestigd; execution tasks zijn afgerond; proof of performance en learnings zijn opgeslagen |
 

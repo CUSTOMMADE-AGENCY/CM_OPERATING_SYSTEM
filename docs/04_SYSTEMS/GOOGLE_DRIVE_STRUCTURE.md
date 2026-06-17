@@ -42,7 +42,7 @@ Oude rootstructuren worden niet meer aangemaakt of als operationele root gebruik
 
 Alle artiestendossiers staan onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. Artists worden niet gemigreerd naar `03_CLIENTS`.
 
-Elke artistfolder gebruikt waar relevant deze vaste productiestructuur:
+Elke artistfolder gebruikt waar relevant deze vaste productiestructuur. De officiële detailstandaard staat in `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md`.
 
 ```text
 ARTIST_NAME
@@ -50,7 +50,7 @@ ARTIST_NAME
 ├── 02_CONTRACT
 ├── 03_STRATEGY
 ├── 04_RELEASES
-├── 05_BOOKING_PARTNERSHIPS
+├── 05_BOOKING
 ├── 06_FINANCE
 ├── 07_SOCIALMEDIA
 ├── 08_PRESS_EPK
