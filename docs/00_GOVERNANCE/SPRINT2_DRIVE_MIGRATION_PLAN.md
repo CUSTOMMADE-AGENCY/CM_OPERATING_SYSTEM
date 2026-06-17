@@ -103,7 +103,7 @@ Elke actieve artistmap moet, waar relevant, worden gecontroleerd tegen:
 02_CONTRACT
 03_STRATEGY
 04_RELEASES
-05_BOOKING_PARTNERSHIPS
+05_BOOKING
 06_FINANCE
 07_SOCIALMEDIA
 08_PRESS_EPK
