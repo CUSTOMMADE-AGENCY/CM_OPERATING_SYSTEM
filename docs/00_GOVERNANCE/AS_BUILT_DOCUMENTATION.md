@@ -1,4 +1,4 @@
-# As-Built Documentatie
+# **AS-BUILT DOCUMENTATIE**
 
 ## Doel
 
@@ -110,3 +110,74 @@ Review elk kwartaal en na iedere grote rebuild van het operating system.
 ## Kwaliteitsstandaard
 
 As-built documentatie moet specifiek genoeg zijn om het systeem opnieuw op te bouwen, te auditen en veilig over te dragen aan een nieuwe owner.
+
+## **COMPLEETHEIDSCRITERIA VOOR AS-BUILT DOCUMENTATIE**
+
+Een As-Built document is pas compleet wanneer alle onderstaande onderdelen aanwezig en actueel zijn.
+
+## **SYSTEEMOVERZICHT**
+
+Per systeem moet minimaal worden vastgelegd:
+
+- Doel.
+- Eigenaar.
+- Beschrijving.
+
+## **MAPSTRUCTUUR**
+
+De volledige mappenboom moet worden opgenomen. Dit omvat:
+
+- Hoofdmappen.
+- Submappen.
+- Toekomstige verplichte mappen.
+
+## **OPSLAGREGELS**
+
+Per documenttype moet worden vastgelegd:
+
+- Opslaglocatie.
+- Eigenaar.
+- Template.
+
+## **TEMPLATE REGISTER**
+
+Per template moet worden vastgelegd:
+
+- Naam.
+- Map.
+- Eigenaar.
+- Doel.
+
+## **AGENT EIGENAARSCHAP**
+
+Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/05_AGENTS_AND_SCOPES/CM_AGENT_REGISTER.md`.
+
+| Map of domein | Verantwoordelijke agent |
+| --- | --- |
+| `docs/00_GOVERNANCE` | CM CONTROL AGENT |
+| `docs/01_MASTER_BOUTIQUE` | CM LEGAL AGENT |
+| `docs/02_ARTIST_MANAGEMENT` | CM OPS AGENT |
+| `docs/03_SHARED_SERVICES` | CM VAULT AGENT |
+| `docs/04_SYSTEMS` | CM FLOW AGENT |
+| `docs/05_KNOWLEDGE_BASE` | CM VAULT AGENT |
+| `docs/05_AGENTS_AND_SCOPES` | CM CONTROL AGENT |
+| `docs/06_PLAYBOOKS` | CM OPS AGENT |
+| `docs/07_AI_AGENTS` | CM VAULT AGENT |
+
+## **SYSTEMEN**
+
+| Systeem | Rol | Eigenaar | Input | Output | Integraties | Governance |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Drive | Bronopslag voor operationele documenten, assets en clientbestanden | CM VAULT AGENT | Documenten, templates, assets en dossiers | Geordende bronstructuur en archief | Gmail, ClickUp, Canva, DocuSign en Make | VAULT archiveert alleen en verwijdert nooit |
+| ClickUp | Taak-, project- en pipelinebesturing | CM OPS AGENT | Taken, statussen, deadlines en owners | Planning, dashboards en actielijsten | Make, Gmail en Google Drive | Eigenaarschap per taak verplicht |
+| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Automatiseringen, alerts en logs | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht |
+| Canva | Creatie van visuele content en brand assets | CM SOCIAL AGENT | Briefings, assets en formats | Designs, visuals en publicatie-assets | Drive en Website CMS | Publicatie vereist goedkeuring |
+| ChatGPT | AI-ondersteuning voor concepten, analyse en structurering | CM VAULT AGENT | Prompts, bronmateriaal en instructies | Conceptteksten, samenvattingen en analyses | Drive en ClickUp via handmatige overdracht of Make | Output is concept totdat mens reviewt |
+| Claude | AI-ondersteuning voor lange documenten, analyse en redactie | CM VAULT AGENT | Documenten, prompts en context | Redactievoorstellen en structurering | Drive en handmatige workflows | Output is concept totdat mens reviewt |
+| Gmail | Communicatiekanaal en templategebruik | CM OPS AGENT | E-mails, templates en contactcontext | Verzonden communicatie en opvolgtaken | ClickUp, Make en Google Drive | Externe toezeggingen vereisen juiste approval gate |
+| DocuSign | Ondertekening van contracten en juridische documenten | CM LEGAL AGENT | Contracten, ondertekenaars en dealdata | Getekende documenten en audit trail | Google Drive, Gmail en Make | Contractreview door LEGAL verplicht voor verzending |
+| Moneybird | Finance, facturatie en betaalstatuscontrole | CM OPS AGENT | Facturen, betaalstatussen en klantgegevens | Finance-overzichten en opvolgsignalen | Make, Gmail en ClickUp | OPS is eigenaar van finance totdat anders besloten wordt |
+
+## **AS-BUILT KWALITEITSCHECK**
+
+Een As-Built document moet herbouwbaar, auditbaar en overdraagbaar zijn. Ontbrekende systeemrollen, mappen, opslagregels, templates of agenteigenaren maken het document incompleet.
