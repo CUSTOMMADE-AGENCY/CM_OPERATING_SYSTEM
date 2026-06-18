@@ -22,6 +22,7 @@ De actuele GitHub source-of-truth gebruikt uitsluitend uppercase domeinmappen on
 - `docs/03_SHARED_SERVICES/` — gedeelde onboarding-, communicatie-, proposal-, meeting-, file-management- en templatebronnen.
 - `docs/03_SHARED_SERVICES/TEMPLATES/` — enige goedgekeurde repositorylocatie voor operationele template-documentatie, inclusief Shared Services, Artist Management, Client Deliverables, ClickUp, Gmail en e-mailtemplates.
 - `docs/04_SYSTEMS/` — ClickUp-, Google Drive-, Gmail-, AI-agent- en automatiseringsdocumentatie.
+- `docs/05_AGENTS_AND_SCOPES/` — agentregister, scope-afbakening en eigenaarschap per domein.
 - `docs/05_KNOWLEDGE_BASE/` — kennisbank voor muziekbusiness-onderwerpen en rechten.
 - `docs/06_PLAYBOOKS/` — operationele playbooks voor sales, deals, releases, partnerships en rechten.
 - `docs/07_AI_AGENTS/` — AI-agentrollen, governance en taakafbakening.
@@ -35,6 +36,7 @@ docs/
 ├── 02_ARTIST_MANAGEMENT
 ├── 03_SHARED_SERVICES
 ├── 04_SYSTEMS
+├── 05_AGENTS_AND_SCOPES
 ├── 05_KNOWLEDGE_BASE
 ├── 06_PLAYBOOKS
 └── 07_AI_AGENTS
@@ -110,3 +112,19 @@ Review elk kwartaal en na iedere grote rebuild van het operating system.
 ## Kwaliteitsstandaard
 
 As-built documentatie moet specifiek genoeg zijn om het systeem opnieuw op te bouwen, te auditen en veilig over te dragen aan een nieuwe owner.
+
+## Template- en agent-as-built
+
+De actuele template-governance gebruikt één operationeel template-register: `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`. De master-templates worden in Google Drive uitsluitend beheerd onder `OS_CUSTOMMADE/00_ADMIN/03_TEMPLATES`; ingevulde operationele versies worden opgeslagen in de outputlocatie die per template in het register is vastgelegd.
+
+`CM VAULT AGENT` is de enige agent die master-templates mag wijzigen. Andere agents mogen templates alleen gebruiken, kopiëren naar de aangewezen operationele map en case-specifiek invullen.
+
+`04_DEALS` en `07_LEGAL` blijven aparte Google Drive-rootmappen. Beide domeinen vallen inhoudelijk onder `CM LEGAL AGENT`: `04_DEALS` voor operationele dealdossiers en rechten-/dealbewijs, `07_LEGAL` voor generieke legal governance, contracttemplates, NDA's en juridische standaarddocumentatie.
+
+## Externe systemen en actuele status
+
+- `info@custommade.agency` is de leidende mailbox voor Custommade Agency-communicatie, intake, opvolging en e-mailarchivering.
+- Ondertekening loopt via Google Sheets, PDF en e-mail.
+- Moneybird is alleen de financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. Drive, ClickUp en spreadsheets mogen financiële verwijzingen of bewijsstukken bevatten, maar vervangen Moneybird niet voor deze documenttypen.
+- Make heeft op dit moment 0 scenario's en is nog in te richten.
+- Canva heeft op dit moment nog geen Brand Kit en is nog te bouwen.

@@ -23,7 +23,7 @@ Geen AI-agent mag governance wijzigen zonder eerst `DECISION_LOG.md` te controle
 - GitHub = governance/source of truth
 - Google Drive = opslag
 - ClickUp = uitvoering
-- Moneybird = financiële waarheid
+- Moneybird = financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten
 - Gmail = communicatie
 - ChatGPT/Claude/Codex = analyse en verbetering
 
@@ -197,7 +197,7 @@ Voor elke AI-agent output geldt:
 6. Gebruik de lean Nederlandse Drive-structuur; Data Room-, LOI-, APA-, Closing- en Success Fee-mappen ontstaan pas wanneer de deal de due diligence fase bereikt.
 7. Drive = opslag.
 8. ClickUp = uitvoering.
-9. Moneybird = financiële waarheid.
+9. Moneybird = financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten.
 10. GitHub = governance, SOPs, Playbooks, template source of truth en systeemdocumentatie.
 11. FIERCE en Custommade Agency blijven strikt gescheiden. Gebruik nooit FIERCE-governance, FIERCE-templates of FIERCE-mappen binnen Custommade Agency.
 
@@ -219,3 +219,30 @@ Een projectmap of AI-output is pas governance-proof wanneer:
 6. de output overdraagbaar is naar ClickUp voor uitvoering;
 7. de lean Nederlandse Drive-structuur wordt gebruikt zolang de deal de due diligence fase niet heeft bereikt;
 8. er geen vermenging is met FIERCE of andere entiteiten.
+
+## Template-register en master-template-regel
+
+Het leidende template-register staat in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`.
+
+1. Elke template heeft exact één master-versie.
+2. De master-versie staat altijd in `OS_CUSTOMMADE/00_ADMIN/03_TEMPLATES`.
+3. Operationele kopieën worden uitsluitend opgeslagen in de outputlocatie die in het template-register staat.
+4. Alleen `CM VAULT AGENT` mag master-templates wijzigen.
+5. Andere agents mogen templates alleen kopiëren, toepassen en case-specifiek invullen.
+6. Template-gaps worden teruggekoppeld via GitHub en niet opgelost door parallelle formats in Drive, ClickUp, Gmail of losse spreadsheets.
+
+## Agent-, legal- en dealgovernance
+
+`DEALS` valt onder `CM LEGAL AGENT`. `04_DEALS` en `07_LEGAL` blijven aparte mappen, maar beide vallen onder de inhoudelijke verantwoordelijkheid van `CM LEGAL AGENT`.
+
+- `04_DEALS` bevat operationele dealdossiers, rechtenregisters, deal memo's, onderhandelingen en dealbewijs.
+- `07_LEGAL` bevat generieke legal governance, contracttemplates, NDA's, juridische standaarddocumentatie en legal referentiemateriaal.
+- Deal-specifieke juridische bewijsstukken blijven bij het relevante dealdossier wanneer dat nodig is voor context en audit trail.
+
+## Systeemstatus en integratieregels
+
+- `info@custommade.agency` is de leidende mailbox.
+- Ondertekening loopt via Google Sheets, PDF en e-mail.
+- Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten.
+- Make heeft nu 0 scenario's en is nog in te richten.
+- Canva heeft nog geen Brand Kit en is nog te bouwen.
