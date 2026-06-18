@@ -150,7 +150,7 @@ Per template moet worden vastgelegd:
 
 ## **AGENT EIGENAARSCHAP**
 
-Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/05_AGENTS_AND_SCOPES/CM_AGENT_REGISTER.md`.
+Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`.
 
 | Map of domein | Verantwoordelijke agent |
 | --- | --- |
@@ -160,7 +160,6 @@ Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/05_AGENT
 | `docs/03_SHARED_SERVICES` | CM VAULT AGENT |
 | `docs/04_SYSTEMS` | CM FLOW AGENT |
 | `docs/05_KNOWLEDGE_BASE` | CM VAULT AGENT |
-| `docs/05_AGENTS_AND_SCOPES` | CM CONTROL AGENT |
 | `docs/06_PLAYBOOKS` | CM OPS AGENT |
 | `docs/07_AI_AGENTS` | CM VAULT AGENT |
 
