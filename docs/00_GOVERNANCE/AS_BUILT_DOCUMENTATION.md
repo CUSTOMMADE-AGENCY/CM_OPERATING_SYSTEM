@@ -150,7 +150,7 @@ Per template moet worden vastgelegd:
 
 ## **AGENT EIGENAARSCHAP**
 
-Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`.
+Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. DEALS valt onder CM LEGAL AGENT; `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT.
 
 | Map of domein | Verantwoordelijke agent |
 | --- | --- |
@@ -167,15 +167,14 @@ Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AG
 
 | Systeem | Rol | Eigenaar | Input | Output | Integraties | Governance |
 | --- | --- | --- | --- | --- | --- | --- |
-| Google Drive | Bronopslag voor operationele documenten, assets en clientbestanden | CM VAULT AGENT | Documenten, templates, assets en dossiers | Geordende bronstructuur en archief | Gmail, ClickUp, Canva, DocuSign en Make | VAULT archiveert alleen en verwijdert nooit |
+| Google Drive | Bronopslag voor operationele documenten, assets en clientbestanden | CM VAULT AGENT | Documenten, templates, assets en dossiers | Geordende bronstructuur en archief | Gmail, ClickUp, Canva, Google Sheets/PDF/e-mail en Make | VAULT archiveert alleen en verwijdert nooit |
 | ClickUp | Taak-, project- en pipelinebesturing | CM OPS AGENT | Taken, statussen, deadlines en owners | Planning, dashboards en actielijsten | Make, Gmail en Google Drive | Eigenaarschap per taak verplicht |
-| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Automatiseringen, alerts en logs | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht |
-| Canva | Creatie van visuele content en brand assets | CM SOCIAL AGENT | Briefings, assets en formats | Designs, visuals en publicatie-assets | Drive en Website CMS | Publicatie vereist goedkeuring |
+| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Nog geen actieve scenario-output; Make heeft nu 0 scenario’s en is nog in te richten | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht vóór livegang |
+| Canva | Creatie van visuele content en brand assets | CM SOCIAL AGENT | Briefings, assets en formats | Designs, visuals en publicatie-assets; Brand Kit is nog te bouwen | Drive en Website CMS | Publicatie vereist goedkeuring |
 | ChatGPT | AI-ondersteuning voor concepten, analyse en structurering | CM VAULT AGENT | Prompts, bronmateriaal en instructies | Conceptteksten, samenvattingen en analyses | Drive en ClickUp via handmatige overdracht of Make | Output is concept totdat mens reviewt |
 | Claude | AI-ondersteuning voor lange documenten, analyse en redactie | CM VAULT AGENT | Documenten, prompts en context | Redactievoorstellen en structurering | Drive en handmatige workflows | Output is concept totdat mens reviewt |
-| Gmail | Communicatiekanaal en templategebruik | CM OPS AGENT | E-mails, templates en contactcontext | Verzonden communicatie en opvolgtaken | ClickUp, Make en Google Drive | Externe toezeggingen vereisen juiste approval gate |
-| DocuSign | Ondertekening van contracten en juridische documenten | CM LEGAL AGENT | Contracten, ondertekenaars en dealdata | Getekende documenten en audit trail | Google Drive, Gmail en Make | Contractreview door LEGAL verplicht voor verzending |
-| Moneybird | Finance, facturatie en betaalstatuscontrole | CM OPS AGENT | Facturen, betaalstatussen en klantgegevens | Finance-overzichten en opvolgsignalen | Make, Gmail en ClickUp | OPS is eigenaar van finance totdat anders besloten wordt |
+| Gmail | Communicatiekanaal en templategebruik; `info@custommade.agency` is de leidende mailbox | CM OPS AGENT | E-mails, templates en contactcontext | Verzonden communicatie en opvolgtaken | ClickUp, Make en Google Drive | Externe toezeggingen vereisen juiste approval gate |
+| Moneybird | Financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten | CM OPS AGENT | Facturen, bonnen, kwitanties, financiële documenten en betaalstatussen | Finance-overzichten en opvolgsignalen | Make, Gmail en ClickUp | OPS is eigenaar van finance totdat anders besloten wordt; Moneybird vervangt geen operationele dossieropslag |
 
 ## **AS-BUILT KWALITEITSCHECK**
 
