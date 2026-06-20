@@ -28,7 +28,9 @@ Dit overzicht beschrijft de actieve agentstructuur volgens **CM Agent Architectu
 
 ## Agentdocumentatie
 
-De actieve agentbestanden staan in `docs/07_AI_AGENTS/AGENTS/`:
+De actieve agentbestanden staan in `docs/07_AI_AGENTS/AGENTS/`. De actieve Sophia-approved agentplaybooks staan in `docs/07_AI_AGENTS/PLAYBOOKS/` en worden geïndexeerd in `docs/07_AI_AGENTS/00_PLAYBOOK_INDEX.md`.
+
+De actieve agentbestanden zijn:
 
 - `CM_CONTROL_AGENT.md`
 - `CM_OPS_AGENT.md`

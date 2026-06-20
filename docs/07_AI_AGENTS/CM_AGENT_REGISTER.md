@@ -31,7 +31,7 @@ CM CONTROL AGENT heeft beslissingsbevoegdheid over prioriteit, routing, agent-ei
 
 ## **ACTIEVE AGENTDOCUMENTATIE**
 
-De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md` en `MIGRATION_NOTES.md`. Legacy agentbestanden staan in `99_LEGACY_AGENTS/` en mogen alleen als historische context worden gebruikt.
+De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md`, `MIGRATION_NOTES.md`, `00_PLAYBOOK_INDEX.md` en de Sophia-approved playbooks in `PLAYBOOKS/`. Legacy agentbestanden staan in `99_LEGACY_AGENTS/` en mogen alleen als historische context worden gebruikt.
 
 ## **ROUTINGREGELS**
 

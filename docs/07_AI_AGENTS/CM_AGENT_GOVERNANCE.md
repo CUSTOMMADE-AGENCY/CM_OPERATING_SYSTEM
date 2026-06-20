@@ -59,7 +59,7 @@ Elke agentoutput moet voldoen aan deze standaard:
 
 - Het doel, de brondata en de gebruikte aannames zijn duidelijk.
 - Feiten, risico’s, interpretaties en aanbevelingen zijn gescheiden.
-- Output verwijst naar relevante CM-Workflows, Playbooks, templates of deliverables.
+- Output verwijst naar relevante CM-Workflows, playbooks in `docs/07_AI_AGENTS/PLAYBOOKS/`, templates of deliverables.
 - Onzekerheden, ontbrekende data en afhankelijkheden zijn expliciet gemarkeerd.
 - Een menselijke reviewer kan snel zien welke beslissing of vervolgstap gevraagd wordt.
 - De output is bruikbaar voor uitvoering, audit en overdracht aan teamleden, freelancers, toekomstige medewerkers en AI operators.
