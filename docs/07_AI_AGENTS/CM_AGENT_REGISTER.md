@@ -1,4 +1,4 @@
-# **CM AGENT REGISTER V1.3**
+# **CM AGENT REGISTER V1.4**
 
 ## **DOEL**
 
@@ -17,7 +17,8 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 | Agent | Kernvraag | Primair eigenaarschap | Uitgesloten |
 | --- | --- | --- | --- |
 | CM CONTROL AGENT | Moeten we dit doen? | Governance, prioriteiten, routing, kwaliteitscontrole en besluitvorming | Operationele uitvoering |
-| CM OPS AGENT | Hoe voeren we dit uit? | Projectmanagement, artist management, planning, deliverables, finance, facturatie opvolging, Moneybird controle, Gmail-templates via `info@custommade.agency` en subsidietrajecten | Sales-eigenaarschap en juridische dealreview |
+| CM OPS AGENT | Hoe voeren we dit uit? | Projectmanagement, artist management, planning, deliverables, Gmail-templates via `info@custommade.agency` en subsidietrajecten | Sales-eigenaarschap, juridische dealreview en finance-operatie |
+| CM MONEY AGENT | Klopt dit financieel? | `06_FINANCE`, Moneybird, BTW, Open Posten, Cashflow, facturatie-opvolging, betaalstatussen en financiële blokkades | Juridische dealreview, commerciële pricing-commitments zonder goedkeuring en operationele delivery buiten finance |
 | CM PROSPECT AGENT | Hoe krijgen we nieuwe business? | Leads, outreach, partnerships, sales, proposals, pipeline management, renewals en upsells | Operationele delivery |
 | CM SOCIAL AGENT | Hoe communiceren we dit? | Content, socials, thought leadership, case studies, personal branding en website content | Publicatie zonder goedkeuring |
 | CM LEGAL AGENT | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
@@ -35,6 +36,7 @@ De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md` 
 | Nieuwe strategische keuze | CM CONTROL AGENT | Sophia |
 | Nieuwe klant, artist of projectuitvoering | CM OPS AGENT | CM CONTROL AGENT bij scope- of risicowijziging |
 | Nieuwe lead, partnership of proposal | CM PROSPECT AGENT | CM CONTROL AGENT bij commerciële toezeggingen |
+| Finance, Moneybird, BTW, Open Posten of Cashflow | CM MONEY AGENT | CM CONTROL AGENT bij financiële risico’s of blokkades; Sophia bij commitments |
 | Nieuwe publicatie of case study | CM SOCIAL AGENT | Verplichte goedkeuring voor publicatie |
 | Contract, deal of rechtenvraag | CM LEGAL AGENT | Sophia bij hoog risico |
 | Template, SOP of bronstructuur | CM VAULT AGENT | CM CONTROL AGENT bij governance-impact |
@@ -42,7 +44,7 @@ De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md` 
 
 ## **FINANCE-EIGENAARSCHAP**
 
-CM OPS AGENT is eigenaar van finance totdat anders besloten wordt. Dit omvat facturatie opvolging, Moneybird controle, operationele betaalstatussen en signalering van financiële blokkades. Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten.
+Vanaf V1.4 is CM MONEY AGENT eigenaar van finance. Dit omvat `06_FINANCE`, Moneybird controle, BTW, Open Posten, Cashflow, facturatie-opvolging, operationele betaalstatussen en signalering van financiële blokkades. Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. CM OPS AGENT levert operationele context aan CM MONEY AGENT, maar is niet langer eigenaar van finance.
 
 ## **DEALS-EIGENAARSCHAP**
 
@@ -74,5 +76,8 @@ Alle dealtypes vallen onder CM LEGAL AGENT. Er wordt geen aparte DEALS agent aan
 | Make | 0 scenario’s; nog in te richten. | CM FLOW AGENT |
 | Canva Brand Kit | Nog te bouwen. | CM SOCIAL AGENT |
 | Gmail | `info@custommade.agency` is de leidende mailbox. | CM OPS AGENT |
-| Moneybird | Alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. | CM OPS AGENT |
+| BTW | BTW-controle, signalering en voorbereide opvolging. | CM MONEY AGENT |
+| Open Posten | Debiteuren-/crediteurenopvolging en betaalstatussignalering. | CM MONEY AGENT |
+| Cashflow | Cashflowmonitoring, forecast-input en blokkadesignalering. | CM MONEY AGENT |
+| Moneybird | Alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. | CM MONEY AGENT |
 | Ondertekening | Via Google Sheets/PDF/e-mail. | CM LEGAL AGENT |

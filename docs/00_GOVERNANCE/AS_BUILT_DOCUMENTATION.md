@@ -150,7 +150,7 @@ Per template moet worden vastgelegd:
 
 ## **AGENT EIGENAARSCHAP**
 
-Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. DEALS valt onder CM LEGAL AGENT; `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT.
+Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. DEALS valt onder CM LEGAL AGENT; `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT. Vanaf CM Agent Register V1.4 valt finance onder CM MONEY AGENT.
 
 | Map of domein | Verantwoordelijke agent |
 | --- | --- |
@@ -162,6 +162,11 @@ Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AG
 | `docs/05_KNOWLEDGE_BASE` | CM VAULT AGENT |
 | `docs/06_PLAYBOOKS` | CM OPS AGENT |
 | `docs/07_AI_AGENTS` | CM VAULT AGENT |
+| `OS_CUSTOMMADE/06_FINANCE` | CM MONEY AGENT |
+| Moneybird | CM MONEY AGENT |
+| BTW | CM MONEY AGENT |
+| Open Posten | CM MONEY AGENT |
+| Cashflow | CM MONEY AGENT |
 
 ## **SYSTEMEN**
 
@@ -174,7 +179,7 @@ Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AG
 | ChatGPT | AI-ondersteuning voor concepten, analyse en structurering | CM VAULT AGENT | Prompts, bronmateriaal en instructies | Conceptteksten, samenvattingen en analyses | Drive en ClickUp via handmatige overdracht of Make | Output is concept totdat mens reviewt |
 | Claude | AI-ondersteuning voor lange documenten, analyse en redactie | CM VAULT AGENT | Documenten, prompts en context | Redactievoorstellen en structurering | Drive en handmatige workflows | Output is concept totdat mens reviewt |
 | Gmail | Communicatiekanaal en templategebruik; `info@custommade.agency` is de leidende mailbox | CM OPS AGENT | E-mails, templates en contactcontext | Verzonden communicatie en opvolgtaken | ClickUp, Make en Google Drive | Externe toezeggingen vereisen juiste approval gate |
-| Moneybird | Financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten | CM OPS AGENT | Facturen, bonnen, kwitanties, financiële documenten en betaalstatussen | Finance-overzichten en opvolgsignalen | Make, Gmail en ClickUp | OPS is eigenaar van finance totdat anders besloten wordt; Moneybird vervangt geen operationele dossieropslag |
+| Moneybird | Financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten | CM MONEY AGENT | Facturen, bonnen, kwitanties, financiële documenten, BTW-statussen, Open Posten en betaalstatussen | Finance-overzichten, Cashflow-input en opvolgsignalen | Make, Gmail en ClickUp | CM MONEY AGENT is eigenaar van finance vanaf Agent Register V1.4; Moneybird vervangt geen operationele dossieropslag |
 
 ## **AS-BUILT KWALITEITSCHECK**
 
