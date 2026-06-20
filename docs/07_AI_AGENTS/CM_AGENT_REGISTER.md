@@ -14,16 +14,20 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 
 ## **AGENTREGISTER**
 
-| Agent | Kernvraag | Primair eigenaarschap | Uitgesloten |
-| --- | --- | --- | --- |
-| CM CONTROL AGENT | Moeten we dit doen? | Governance, prioriteiten, routing, kwaliteitscontrole en besluitvorming | Operationele uitvoering |
-| CM OPS AGENT | Hoe voeren we dit uit? | Projectmanagement, artist management, planning, deliverables, Gmail-templates via `info@custommade.agency` en subsidietrajecten | Sales-eigenaarschap, juridische dealreview en finance-operatie |
-| CM MONEY AGENT | Klopt dit financieel? | `06_FINANCE`, Moneybird, BTW, Open Posten, Cashflow, facturatie-opvolging, betaalstatussen en financiële blokkades | Juridische dealreview, commerciële pricing-commitments zonder goedkeuring en operationele delivery buiten finance |
-| CM PROSPECT AGENT | Hoe krijgen we nieuwe business? | Leads, outreach, partnerships, sales, proposals, pipeline management, renewals en upsells | Operationele delivery |
-| CM SOCIAL AGENT | Hoe communiceren we dit? | Content, socials, thought leadership, case studies, personal branding en website content | Publicatie zonder goedkeuring |
-| CM LEGAL AGENT | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
-| CM VAULT AGENT | Waar staat de waarheid? | Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance, brand assets, contract templates, proposal templates en case studies | Verwijderen van bronnen |
-| CM FLOW AGENT | Hoe automatiseren we dit? | Make, API’s, Webhooks, ClickUp automations, integraties, systeemgezondheid, monitoring en automatiseringen; Make heeft nu 0 scenario’s en is nog in te richten | Inhoudelijk eigenaarschap |
+| Agent | Laag | Kernvraag | Primair eigenaarschap | Uitgesloten |
+| --- | --- | --- | --- | --- |
+| CM CONTROL AGENT | Sturing | Moeten we dit doen? | Governance, prioriteiten, routing, kwaliteitscontrole en besluitvorming | Operationele uitvoering |
+| CM OPS AGENT | Executie | Hoe voeren we dit uit? | Projectmanagement, artist management, planning, deliverables, Gmail-templates via `info@custommade.agency` en subsidietrajecten | Sales-eigenaarschap, juridische dealreview en finance-operatie |
+| CM MONEY AGENT | Executie | Klopt dit financieel? | `06_FINANCE`, Moneybird, BTW, Open Posten, Cashflow, facturatie-opvolging, betaalstatussen, financiële blokkades, Royalty facturen, Commission tracking en Revenue share controles | Juridische dealreview, commerciële pricing-commitments zonder goedkeuring en operationele delivery buiten finance |
+| CM PROSPECT AGENT | Executie | Hoe krijgen we nieuwe business? | Leads, outreach, partnerships, sales, proposals, pipeline management, renewals, upsells, Sponsorships, Brand Partnerships, Product Placement, Sampling, Event Activaties en Endorsements | Operationele delivery |
+| CM SOCIAL AGENT | Executie | Hoe communiceren we dit? | Content, socials, thought leadership, case studies, personal branding, website content, SEO strategie, Website SEO, zoekwoordonderzoek en organische zichtbaarheid | Publicatie zonder goedkeuring |
+| CM LEGAL AGENT | Bescherming | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
+| CM VAULT AGENT | Infrastructuur | Waar staat de waarheid? | Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance, brand assets, contract templates, proposal templates en case studies | Verwijderen van bronnen |
+| CM FLOW AGENT | Infrastructuur | Hoe automatiseren we dit? | Make, API’s, Webhooks, ClickUp automations, GitHub workflows, Repository automatisering, Document synchronisatie, integraties, systeemgezondheid, monitoring en automatiseringen; Make heeft nu 0 scenario’s en is nog in te richten | Inhoudelijk eigenaarschap |
+
+## **BESLISSINGSBEVOEGDHEID**
+
+CM CONTROL AGENT heeft beslissingsbevoegdheid over prioriteit, routing, agent-eigenaarschap, kwaliteitsnormen en escalatiepaden binnen de CM-agentlaag. CM CONTROL AGENT mag werk stoppen, herrouteren of ter review aanbieden wanneer scope, risico, kwaliteit of eigenaarschap onduidelijk is. Strategische keuzes, externe commitments, juridische high-risk beslissingen en financiële commitments blijven altijd onder menselijke eindgoedkeuring van Sophia of de aangewezen owner.
 
 ## **ACTIEVE AGENTDOCUMENTATIE**
 
@@ -35,16 +39,16 @@ De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md` 
 | --- | --- | --- |
 | Nieuwe strategische keuze | CM CONTROL AGENT | Sophia |
 | Nieuwe klant, artist of projectuitvoering | CM OPS AGENT | CM CONTROL AGENT bij scope- of risicowijziging |
-| Nieuwe lead, partnership of proposal | CM PROSPECT AGENT | CM CONTROL AGENT bij commerciële toezeggingen |
+| Nieuwe lead, sponsorship, brand partnership, product placement, sampling, event activatie, endorsement of proposal | CM PROSPECT AGENT | CM CONTROL AGENT bij commerciële toezeggingen |
 | Finance, Moneybird, BTW, Open Posten of Cashflow | CM MONEY AGENT | CM CONTROL AGENT bij financiële risico’s of blokkades; Sophia bij commitments |
-| Nieuwe publicatie of case study | CM SOCIAL AGENT | Verplichte goedkeuring voor publicatie |
+| Nieuwe publicatie, case study, SEO strategie, Website SEO, zoekwoordonderzoek of organische-zichtbaarheidstaak | CM SOCIAL AGENT | Verplichte goedkeuring voor publicatie |
 | Contract, deal of rechtenvraag | CM LEGAL AGENT | Sophia bij hoog risico |
 | Template, SOP of bronstructuur | CM VAULT AGENT | CM CONTROL AGENT bij governance-impact |
-| Nieuwe automatisering of integratie | CM FLOW AGENT | CM CONTROL AGENT bij systeemrisico |
+| Nieuwe automatisering, integratie, GitHub workflow, repository automatisering of document synchronisatie | CM FLOW AGENT | CM CONTROL AGENT bij systeemrisico |
 
 ## **FINANCE-EIGENAARSCHAP**
 
-Vanaf V1.4 is CM MONEY AGENT eigenaar van finance. Dit omvat `06_FINANCE`, Moneybird controle, BTW, Open Posten, Cashflow, facturatie-opvolging, operationele betaalstatussen en signalering van financiële blokkades. Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. CM OPS AGENT levert operationele context aan CM MONEY AGENT, maar is niet langer eigenaar van finance.
+Vanaf V1.4 is CM MONEY AGENT eigenaar van finance. Dit omvat `06_FINANCE`, Moneybird controle, BTW, Open Posten, Cashflow, facturatie-opvolging, operationele betaalstatussen, Royalty facturen, Commission tracking, Revenue share controles en signalering van financiële blokkades. Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. CM OPS AGENT levert operationele context aan CM MONEY AGENT, maar is niet langer eigenaar van finance.
 
 ## **DEALS-EIGENAARSCHAP**
 
