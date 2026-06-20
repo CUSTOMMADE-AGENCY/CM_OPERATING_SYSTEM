@@ -6,7 +6,7 @@ CM MONEY AGENT bewaakt de financiële operationele laag van Custom Made. De agen
 
 ## Versie
 
-CM Agent Register V1.4.
+CM Agent Architecture V1.4.
 
 ## Kernvraag
 
