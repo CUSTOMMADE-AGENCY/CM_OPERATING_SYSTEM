@@ -9,7 +9,7 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 - Elke taak heeft één primaire agenteigenaar.
 - CM CONTROL AGENT beslist over prioriteit, routing en kwaliteit, maar voert geen operationeel werk uit.
 - Operationeel eigenaarschap ligt bij de agent die verantwoordelijk is voor de inhoudelijke uitvoer.
-- Oude agentnamen blijven gedocumenteerd en worden via migratie gekoppeld aan de nieuwe architectuur.
+- Oude agentnamen blijven uitsluitend gedocumenteerd in `MIGRATION_NOTES.md` en `99_LEGACY_AGENTS/`; ze zijn niet leidend.
 - Bij twijfel geldt: niet uitvoeren, maar escaleren naar CM CONTROL AGENT of Sophia.
 
 ## **AGENTREGISTER**
@@ -23,6 +23,10 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 | CM LEGAL AGENT | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
 | CM VAULT AGENT | Waar staat de waarheid? | Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance, brand assets, contract templates, proposal templates en case studies | Verwijderen van bronnen |
 | CM FLOW AGENT | Hoe automatiseren we dit? | Make, API’s, Webhooks, ClickUp automations, integraties, systeemgezondheid, monitoring en automatiseringen; Make heeft nu 0 scenario’s en is nog in te richten | Inhoudelijk eigenaarschap |
+
+## **ACTIEVE AGENTDOCUMENTATIE**
+
+De actieve agentdocumentatie bestaat uit dit register, `CM_AGENT_GOVERNANCE.md` en `MIGRATION_NOTES.md`. Legacy agentbestanden staan in `99_LEGACY_AGENTS/` en mogen alleen als historische context worden gebruikt.
 
 ## **ROUTINGREGELS**
 
