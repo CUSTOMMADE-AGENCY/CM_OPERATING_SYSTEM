@@ -2,7 +2,7 @@
 
 ## Doel
 
-Dit document definieert de governance voor de definitieve CM Agent Register V1.3 agentstructuur. De agentlaag functioneert als een schaalbare operationele laag bovenop CM-governance, Workflows, Playbooks en deliverables. Agents versnellen analyse, voorbereiding, documentatie en kwaliteitscontrole, maar nemen geen eindbeslissingen.
+Dit document definieert de governance voor de definitieve CM Agent Register V1.4 agentstructuur. De agentlaag functioneert als een schaalbare operationele laag bovenop CM-governance, Workflows, Playbooks en deliverables. Agents versnellen analyse, voorbereiding, documentatie en kwaliteitscontrole, maar nemen geen eindbeslissingen.
 
 ## Leidende bron
 
@@ -11,19 +11,21 @@ Dit document definieert de governance voor de definitieve CM Agent Register V1.3
 ## Definitieve agenthiërarchie
 
 1. **CM CONTROL AGENT** bewaakt prioriteit, routing, kwaliteit en besluitvorming.
-2. **CM OPS AGENT** voert operationele delivery, projectmanagement, artist management, planning en finance-opvolging uit.
-3. **CM PROSPECT AGENT** beheert leads, outreach, partnerships, sales, proposals, pipeline management, renewals en upsells.
-4. **CM SOCIAL AGENT** beheert content, socials, thought leadership, case studies, personal branding en website content.
-5. **CM LEGAL AGENT** beheert contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL`. DEALS valt hieronder; er bestaat geen aparte CM DEALS AGENT.
-6. **CM VAULT AGENT** beheert Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance en bronstructuren.
-7. **CM FLOW AGENT** beheert Make, API’s, Webhooks, ClickUp automations, integraties, systeemgezondheid, monitoring en automatiseringen.
-8. **Menselijke owners** blijven eindverantwoordelijk voor beslissingen, externe communicatie, commitments en goedkeuringen.
+2. **CM OPS AGENT** voert operationele delivery, projectmanagement, artist management en planning uit; finance is vanaf V1.4 overgedragen aan CM MONEY AGENT.
+3. **CM MONEY AGENT** beheert `06_FINANCE`, Moneybird, BTW, Open Posten, Cashflow, facturatie-opvolging en financiële blokkades.
+4. **CM PROSPECT AGENT** beheert leads, outreach, partnerships, sales, proposals, pipeline management, renewals en upsells.
+5. **CM SOCIAL AGENT** beheert content, socials, thought leadership, case studies, personal branding en website content.
+6. **CM LEGAL AGENT** beheert contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL`. DEALS valt hieronder; er bestaat geen aparte CM DEALS AGENT.
+7. **CM VAULT AGENT** beheert Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance en bronstructuren.
+8. **CM FLOW AGENT** beheert Make, API’s, Webhooks, ClickUp automations, integraties, systeemgezondheid, monitoring en automatiseringen.
+9. **Menselijke owners** blijven eindverantwoordelijk voor beslissingen, externe communicatie, commitments en goedkeuringen.
 
 ## Escalatiepaden
 
 - Agenten escaleren naar **CM CONTROL AGENT** wanneer prioriteit, routing, eigenaarschap of kwaliteit onduidelijk is.
 - **CM VAULT AGENT** escaleert documentatieconflicten, governancegaps en verouderde standaarden naar **CM CONTROL AGENT**.
 - **CM OPS AGENT** escaleert structurele Workflowproblemen, compliance-afwijkingen en proceswijzigingen naar **CM CONTROL AGENT** of leadership.
+- **CM MONEY AGENT** escaleert finance-blokkades, BTW-risico’s, Open Posten, Cashflow-risico’s en onduidelijke Moneybird-statussen naar **CM CONTROL AGENT** of een menselijke owner.
 - **CM LEGAL AGENT** reviewt juridische, contractuele, rechten-, deal- en compliancevragen; hoog risico gaat door naar Sophia.
 - Juridische, financiële, contractuele, privacy- en reputatierisico’s worden altijd direct aan een mens voorgelegd.
 

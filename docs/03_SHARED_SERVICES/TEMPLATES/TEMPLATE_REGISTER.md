@@ -13,7 +13,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | Operationele kopieën | Ingevulde versies worden opgeslagen in Google Drive, ClickUp, Gmail of PDF/e-mail, afhankelijk van het proces. |
 | Ondertekening | Ondertekening loopt via Google Sheets/PDF/e-mail. Er wordt geen extern ondertekenplatform opgenomen in de huidige template mapping. |
 | Mailbox | `info@custommade.agency` is de leidende mailbox voor centrale externe communicatie en templatebeheer in Gmail. |
-| Moneybird | Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten. |
+| Moneybird | Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten; eigenaar is CM MONEY AGENT. |
 | Make | Make heeft nu 0 scenario's en staat in deze mapping als `nog in te richten`. |
 | Canva | Canva heeft nog geen Brand Kit en staat in deze mapping als `nog te bouwen`. |
 | Deals | DEALS valt onder CM LEGAL AGENT. `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT. |
@@ -23,7 +23,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | Templatebron | Toepassing | Primaire eigenaar | Operationele output | Systeem of kanaal | Status |
 | --- | --- | --- | --- | --- | --- |
 | `CLIENT_PROFILE_TEMPLATE.md` | Clientcontext, Scope, rollen, doelen en contactgegevens vastleggen. | CM OPS AGENT | Kopie in `01_ADMIN` van het relevante client- of artistdossier. | Google Drive en ClickUp-link | Goedgekeurd |
-| `CLIENT_ONBOARDING_TEMPLATE.md` | Onboardingcheck voor contract, betaling, Drive, ClickUp, kick-off en assets. | CM OPS AGENT | Onboardingdocument en bijbehorende ClickUp-taken. | Google Drive en ClickUp | Goedgekeurd |
+| `CLIENT_ONBOARDING_TEMPLATE.md` | Onboardingcheck voor contract, betaling, finance-check, Drive, ClickUp, kick-off en assets. | CM OPS AGENT met finance-check door CM MONEY AGENT | Onboardingdocument, bijbehorende ClickUp-taken en finance-output naar `06_FINANCE` wanneer betaling, BTW, Open Posten of Cashflow geraakt wordt. | Google Drive en ClickUp | Goedgekeurd |
 | `EMAIL_INSTRUCTIONS_TEMPLATE.md` | Tone of Voice, CTA's, attachments, escalatie en communicatieregels vastleggen. | CM OPS AGENT | Communicatie-instructie voor team, freelancers, interns en AI-agents. | Gmail via `info@custommade.agency` en ClickUp | Goedgekeurd |
 | `DO_NOTS_TEMPLATE.md` | Verboden acties, approvals, deal restrictions en escalatiecontacts vastleggen. | CM CONTROL AGENT | Risicoregister of instructie in het relevante dossier. | Google Drive en ClickUp | Goedgekeurd |
 | `EMAIL_TEMPLATES.md` | Reusable e-mailflows en standaardantwoorden beheren. | CM OPS AGENT | Gmail-template of conceptmail. | Gmail via `info@custommade.agency` | Goedgekeurd |
@@ -44,7 +44,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | Make scenario templates | Automatiseringsscenario's. | CM FLOW AGENT | Geen actieve scenario-output. | Make | Nog in te richten: Make heeft nu 0 scenario's. |
 | Canva Brand Kit templates | Brand assets, visuele formats en huisstijlbouw. | CM SOCIAL AGENT | Nog geen Brand Kit-output. | Canva | Nog te bouwen: Canva heeft nog geen Brand Kit. |
 | Ondertekening templates | Ondertekenbare documenten en approvals. | CM LEGAL AGENT | Google Sheet, PDF en e-mailthread met akkoord of ondertekening. | Google Sheets/PDF/e-mail | Goedgekeurd via Google Sheets/PDF/e-mail. |
-| Moneybird finance templates | Facturen, bonnen, kwitanties en financiële documenten. | CM OPS AGENT | Financieel document of Moneybird-referentie. | Moneybird | Goedgekeurd binnen finance-scope. |
+| Moneybird finance templates | Facturen, bonnen, kwitanties, BTW-signalen, Open Posten en Cashflow-input. | CM MONEY AGENT | Financieel document, Moneybird-referentie of finance-signaal. | Moneybird en `06_FINANCE` | Goedgekeurd binnen finance-scope. |
 
 ## MAP- EN AGENTREGELS
 
@@ -54,6 +54,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | `07_LEGAL` | Generieke legal governance, contracttemplates, juridische bewijsstukken en legal reviewdossiers. | CM LEGAL AGENT |
 | `03_SHARED_SERVICES/TEMPLATES` | Templatebron en template governance. | CM VAULT AGENT |
 | Gmail | Centrale mailbox en templates worden beheerd vanuit `info@custommade.agency`. | CM OPS AGENT |
+| `06_FINANCE` | Finance-output, Moneybird-referenties, BTW, Open Posten en Cashflow-signalen vallen onder CM MONEY AGENT. | CM MONEY AGENT |
 | Make | Automatiseringen staan nog niet live; scenario's zijn nog in te richten. | CM FLOW AGENT |
 | Canva | Brand Kit ontbreekt nog; visuele templatebasis is nog te bouwen. | CM SOCIAL AGENT |
 
