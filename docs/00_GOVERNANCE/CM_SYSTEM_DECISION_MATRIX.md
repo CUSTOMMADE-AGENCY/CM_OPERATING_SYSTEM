@@ -73,8 +73,8 @@ Binnen CM_OS geldt per systeem één primaire rol:
 |Escalaties              |ClickUp                  |Gmail                   |CM CONTROL            |ClickUp + Gmail                           |Status in ClickUp, correspondentie in Gmail                      |
 |Automatiseringen        |Make                     |GitHub                  |CM FLOW               |GitHub (documentatie) + Make (uitvoering) |Scenario’s in Make, documentatie in GitHub                       |
 |Make scenario’s         |Make                     |GitHub                  |CM FLOW               |GitHub                                    |Scenario-documentatie altijd in GitHub                           |
-|ClickUp automations     |ClickUp                  |GitHub                  |CM FLOW               |GitHub                                    |Automationlogica gedocumenteerd in GitHub                        |
-|GitHub workflows        |GitHub                   |—                       |CM VAULT + CM FLOW    |GitHub                                    |GitHub is enige bron voor eigen workflows                        |
+|ClickUp automations     |ClickUp                  |GitHub                  |CM FLOW AGENT         |GitHub                                    |Automationlogica gedocumenteerd in GitHub                        |
+|GitHub workflows        |GitHub                   |—                       |CM FLOW AGENT + CM VAULT AGENT + CM CONTROL AGENT|GitHub                                    |GitHub is enige bron voor eigen workflows                        |
 
 -----
 
@@ -177,6 +177,7 @@ OS_CUSTOMMADE/00_ADMIN/05_APPROVALS/APPROVAL_REGISTER/CM_APPROVAL_REGISTER
 |Contracten / Rechten |CM LEGAL             |Alle juridische documenten, rechtenregister, deals                                      |
 |Leads / Partnerships |CM PROSPECT          |Pipeline, outreach, sponsorships, brand deals                                           |
 |Approvals            |CM CONTROL           |Approval Register, Level 4 bewaking, escalaties                                         |
+|GitHub workflows / repository automation|CM FLOW AGENT + CM VAULT AGENT + CM CONTROL AGENT|Workflowlogica en repository automation onder gedeeld eigenaarschap|
 
 -----
 
