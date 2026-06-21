@@ -4,6 +4,12 @@
 
 Deze matrix wijst per domein exact één eigenaar-agent aan. Ondersteunende agents leveren input, voeren deelchecks uit of bereiden werk voor, maar nemen nooit het eigenaarschap over. Bij conflict, overlap of ontbrekende scope beslist **CM CONTROL AGENT**.
 
+
+## Governance-referenties
+
+- Autonomy-grenzen per agent staan in `AI_AUTONOMY_LEVELS.md`.
+- Escalatieroutes, escalatielevels en verplichte escalatie-output staan in `ESCALATION_PROTOCOLS.md`.
+
 ## Kernregels
 
 - Eén domein heeft exact één eigenaar-agent.
@@ -13,7 +19,7 @@ Deze matrix wijst per domein exact één eigenaar-agent aan. Ondersteunende agen
 - Moneybird is de financiële waarheid voor omzet, facturen, inkomend geld, bank, BTW, open posten, cashflow en financiële rapportage.
 - Drive is opslag voor documenten, bijlagen, assets, contractkopieën, archiefbestanden en werkmateriaal.
 - ClickUp is uitvoering voor taken, planning, projectstatussen, deadlines, opvolging en operationele routing.
-- Approval gates zijn verplicht vóór externe toezeggingen, publicatie, ondertekening, financiële verplichtingen of systeemwijzigingen.
+- Approval gates zijn verplicht vóór externe toezeggingen, publicatie, ondertekening, financiële verplichtingen of systeemwijzigingen; zie `AI_AUTONOMY_LEVELS.md`.
 
 ## Uitvoeringsafspraken
 
@@ -22,7 +28,7 @@ Deze matrix wijst per domein exact één eigenaar-agent aan. Ondersteunende agen
 3. **Support:** tag alleen ondersteunende agents wanneer hun input nodig is voor uitvoering of controle.
 4. **Approval:** haal de approval gate op vóór de actie live gaat, extern wordt gedeeld of financieel/juridisch bindend wordt.
 5. **Registratie:** leg het eindresultaat vast in de Source Of Truth en koppel uitvoerende taken in ClickUp waar nodig.
-6. **Escalatie:** bij twijfel over eigenaar, prioriteit of risico escaleert de uitvoerende agent naar **CM CONTROL AGENT**.
+6. **Escalatie:** bij twijfel over eigenaar, prioriteit of risico escaleert de uitvoerende agent naar **CM CONTROL AGENT** volgens `ESCALATION_PROTOCOLS.md`.
 
 ## Responsibility matrix
 

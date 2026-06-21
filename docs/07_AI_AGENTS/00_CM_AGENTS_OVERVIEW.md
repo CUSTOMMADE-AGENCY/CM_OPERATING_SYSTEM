@@ -6,6 +6,11 @@
 
 ---
 
+## GOVERNANCE-REFERENTIES
+
+- Autonomy levels en Sophia approval gates staan in `AI_AUTONOMY_LEVELS.md`.
+- Escalatielevels, escalatieroutes en verplichte escalatie-output staan in `ESCALATION_PROTOCOLS.md`.
+
 ## AGENTS — OVERZICHT
 
 | Agent | Kernvraag | Laag | Eigenaar van | Belangrijkste output |
@@ -38,7 +43,7 @@ De onderstaande acties vereisen **expliciete goedkeuring van Sophia** vóór uit
 - Verwijderen van templates
 - Verwijderen van kennisbankcontent
 
-Bij twijfel: escaleren naar **CM CONTROL AGENT**. CM CONTROL bewaakt de gate, maar kan deze niet zelfstandig opheffen.
+Bij twijfel: escaleren naar **CM CONTROL AGENT** volgens `ESCALATION_PROTOCOLS.md`. CM CONTROL bewaakt de gate, maar kan deze niet zelfstandig opheffen. Autonomy-grenzen staan in `AI_AUTONOMY_LEVELS.md`.
 
 ---
 

@@ -4,18 +4,24 @@
 
 Dit document legt vast wanneer een dossier, taak, document of beslissing binnen CM_OS van de ene agent naar de andere agent gaat. Een handoff is verplicht zodra de volgende actie buiten het eigenaarschap, de bevoegdheid of de governance-scope van de huidige agent valt.
 
+
+## Governance-referenties
+
+- Gebruik `AI_AUTONOMY_LEVELS.md` om te bepalen of een agent mag signaleren, voorbereiden of intern uitvoeren.
+- Gebruik `ESCALATION_PROTOCOLS.md` wanneer een handoff verandert in een escalatie of wanneer eigenaar, risico, deadline of approval gate onduidelijk is.
+
 ## CM_OS governance regels voor handoffs
 
 - Eén dossier, taak, document of beslissing heeft op elk moment exact één eigenaar-agent.
 - De verzendende agent blijft eigenaar totdat de ontvangende agent de handoff accepteert.
 - De ontvangende agent accepteert alleen handoffs met de vereiste output, documenten, context, risico’s en gevraagde approval gate.
-- Agents bereiden voor, analyseren, structureren en adviseren; mensen keuren externe communicatie, commerciële commitments, juridische standpunten, financiële commitments en publicaties goed.
+- Agents bereiden voor, analyseren, structureren en adviseren binnen de grenzen van `AI_AUTONOMY_LEVELS.md`; mensen keuren externe communicatie, commerciële commitments, juridische standpunten, financiële commitments en publicaties goed.
 - GitHub is Source Of Truth voor governance, agentmatrices, playbooks en CM_OS-documentatie.
 - ClickUp is Source Of Truth voor uitvoering, planning, status en delivery.
 - Drive bewaart operationele bijlagen, bronbestanden, contractversies en clientdocumentatie.
 - Moneybird is Source Of Truth voor facturen, betalingen, BTW, Open Posten, cashflow en financiële documenten.
 - Gmail bewaart correspondentiecontext.
-- Bij twijfel over routing, prioriteit, kwaliteit, eigenaarschap of conflict beslist **CM CONTROL AGENT**.
+- Bij twijfel over routing, prioriteit, kwaliteit, eigenaarschap of conflict beslist **CM CONTROL AGENT** volgens `ESCALATION_PROTOCOLS.md`.
 - Juridische, financiële, contractuele, privacy- en reputatierisico’s worden altijd gemarkeerd en waar nodig aan een menselijke owner of Sophia voorgelegd.
 
 # 1. AGENT HANDOFF MATRIX
