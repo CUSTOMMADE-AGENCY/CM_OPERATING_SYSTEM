@@ -9,6 +9,7 @@
 ## GOVERNANCE-REFERENTIES
 
 - Autonomy levels en Sophia approval gates staan in `AI_AUTONOMY_LEVELS.md`.
+- De taakgerichte autonomy-toepassing staat in `AI_TASK_AUTONOMY_MATRIX.md`.
 - Escalatielevels, escalatieroutes en verplichte escalatie-output staan in `ESCALATION_PROTOCOLS.md`.
 
 ## AGENTS — OVERZICHT
@@ -43,7 +44,7 @@ De onderstaande acties vereisen **expliciete goedkeuring van Sophia** vóór uit
 - Verwijderen van templates
 - Verwijderen van kennisbankcontent
 
-Bij twijfel: escaleren naar **CM CONTROL AGENT** volgens `ESCALATION_PROTOCOLS.md`. CM CONTROL bewaakt de gate, maar kan deze niet zelfstandig opheffen. Autonomy-grenzen staan in `AI_AUTONOMY_LEVELS.md`.
+Bij twijfel: escaleren naar **CM CONTROL AGENT** volgens `ESCALATION_PROTOCOLS.md`. CM CONTROL bewaakt de gate, maar kan deze niet zelfstandig opheffen. Autonomy-grenzen staan in `AI_AUTONOMY_LEVELS.md`; taaktoepassing staat in `AI_TASK_AUTONOMY_MATRIX.md`.
 
 ---
 
