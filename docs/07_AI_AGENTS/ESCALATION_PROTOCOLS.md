@@ -1,125 +1,169 @@
-# Escalation Protocols
+# ESCALATION_PROTOCOLS.md
 
-## Doel
+> Versie: v2.0 · Status: Operationeel · Datum: 2026-06-21
+> Repo: `CustomMadeNL/CM_OPERATING_SYSTEM`
+> Eigenaar: CM CONTROL AGENT · Goedkeuring: Sophia
 
-Dit document beschrijft wanneer en hoe CM_OS-agents escaleren naar Sophia, CM CONTROL AGENT en gespecialiseerde owner-agents. Escalatie is verplicht zodra risico, eigenaarschap, bevoegdheid, deadline of impact buiten de normale taakruimte valt.
+-----
 
-## Required output bij iedere escalatie
+## TWIJFELREGEL
 
-Iedere escalatie bevat minimaal:
+> **Kan een agent niet bepalen welk escalatieniveau van toepassing is → altijd KRITIEK.**
 
-| Veld | Vereiste inhoud |
-| --- | --- |
-| Context | Dossier, betrokken partijen, bron, huidige status en relevante voorgeschiedenis. |
-| Risico | Juridisch, financieel, operationeel, reputatie-, governance-, data- of deliveryrisico. |
-| Aanbevolen actie | Concrete volgende stap, inclusief opties als er meerdere routes zijn. |
-| Deadline | Beslis- of actiedatum, inclusief reden voor urgentie. |
-| Eigenaar | Agent of persoon die verantwoordelijk is voor opvolging. |
+-----
 
----
+## ESCALATIEROUTE
 
-## Escalatielevels
-
-| Level | Definitie | Reactie |
-| --- | --- | --- |
-| Normaal | Er is onduidelijkheid, afhankelijkheid of beperkte impact, maar geen directe schade of harde deadline. | Escaleer in de reguliere workflow met volledige context en aanbevolen actie. |
-| Urgent | Er is een naderende deadline, mogelijke externe impact, financiële/juridische exposure of blokkade op uitvoering. | Escaleer direct naar de eigenaar-agent en CM CONTROL AGENT; markeer deadline expliciet. |
-| Kritiek | Er is direct risico op schade, verkeerde publicatie, contractuele fout, betalingsfout, dataverlies, governancebreuk of reputatieschade. | Stop uitvoering, escaleer direct naar Sophia en CM CONTROL AGENT, en voer geen verdere actie uit zonder approval. |
-
----
-
-## Escalatie naar Sophia
-
-Escalatie naar Sophia is verplicht bij:
-
-- externe communicatie met commerciële, juridische, reputatie- of strategische impact;
-- publicatie of verzending van content;
-- contract, NDA, term sheet, offerte, prijsafspraak of partnershipcommitment;
-- betaling, betalingsregeling, factuurwijziging met impact, creditnota of financiële verplichting;
-- governancewijziging, agentwijziging, matrixwijziging, bronstructuurwijziging of playbookwijziging;
-- verwijdering of definitieve vervanging van documenten, templates, kennisbankcontent of archiefitems;
-- conflicten tussen agents die niet door CM CONTROL AGENT kunnen worden opgelost;
-- kritieke escalaties.
-
-## Escalatie naar CM CONTROL AGENT
-
-Escalatie naar CM CONTROL AGENT is verplicht bij:
-
-- twijfel over eigenaar, prioriteit, routing of approval gate;
-- conflicten tussen agents of domeinen;
-- scopewijzigingen, resourceconflicten, deliveryrisico's of kwaliteitsissues;
-- governance-impact of afwijking van bestaande matrices/playbooks;
-- urgente of kritieke escalaties die coördinatie vragen;
-- situaties waarin een agent het eigen autonomy level dreigt te overschrijden.
-
-## Escalatie naar CM LEGAL AGENT
-
-Escalatie naar CM LEGAL AGENT is verplicht bij:
-
-- contracten, NDA's, term sheets, rechten, licensing, sync, publishing of catalogusvragen;
-- claims, endorsements, privacydata, beeld-/muziekrechten of reputatierisico in content;
-- disputen, incasso, aansprakelijkheid, non-compliance of juridische interpretatie;
-- commerciële afspraken met juridische voorwaarden of afwijkende terms.
-
-## Escalatie naar CM MONEY AGENT
-
-Escalatie naar CM MONEY AGENT is verplicht bij:
-
-- facturen, betalingen, open posten, bank, BTW, cashflow, revenue tracking of forecasting;
-- nieuwe financiële verplichtingen, afwijkende betaalafspraken, kortingen, credits of write-offs;
-- financiële afwijkingen tussen contract, voorstel, Moneybird of projectstatus;
-- financiële signalen met commerciële of juridische impact.
-
-## Escalatie naar CM VAULT AGENT
-
-Escalatie naar CM VAULT AGENT is verplicht bij:
-
-- bronstatus, archivering, templates, SOP's, prompts, playbooks of knowledge base;
-- onduidelijkheid over Source Of Truth of documentversie;
-- dossiercompleetheid, bewijswaarde, audit trail of archiefstructuur;
-- voorgenomen bronvervanging, verplaatsing of verwijdering.
-
-## Escalatie naar CM FLOW AGENT
-
-Escalatie naar CM FLOW AGENT is verplicht bij:
-
-- Make-scenario's, API's, webhooks, ClickUp automations, GitHub workflows of integraties;
-- dataflow-, status-, routing-, notificatie- of systeemimpact;
-- automatiseringsfouten, ontbrekende logging, rollbackbehoefte of monitoringrisico;
-- handmatige processen die structureel automatiseringskandidaat zijn.
-
----
-
-## Escalatie triggers per agent
-
-| Agent | Escaleren bij | Escalatie naar |
-| --- | --- | --- |
-| CM CONTROL AGENT | Strategische onzekerheid, governance-impact, kritieke risico's, onoplosbare agentconflicten of Sophia approval gate. | Sophia |
-| CM OPS AGENT | Scopewijziging, deliveryblokkade, client-impact, resourceconflict, projectrisico of externe commitment. | CM CONTROL AGENT; Sophia bij externe of bindende impact |
-| CM PROSPECT AGENT | Prijsindicatie, proposal, commerciële toezegging, outreach, partnershipterms of dealstructuur. | CM LEGAL AGENT, CM MONEY AGENT, CM CONTROL AGENT; Sophia bij commitment |
-| CM SOCIAL AGENT | Publicatie, nieuwsbrief, media outreach, claims, reputatierisico, rechtenvraag of privacygevoelige content. | CM LEGAL AGENT, CM CONTROL AGENT; Sophia vóór publicatie/verzending |
-| CM MONEY AGENT | Betaling, factuurwijziging, credit, betalingsregeling, cashflowrisico, BTW-risico, open-postenconflict of finance/legal mismatch. | CM LEGAL AGENT, CM CONTROL AGENT; Sophia bij financiële impact |
-| CM LEGAL AGENT | Ondertekening, contractwijziging, juridisch standpunt, dispuut, rechtenconflict, compliance-risico of dealblokkade. | CM CONTROL AGENT; Sophia bij juridische of bindende impact |
-| CM VAULT AGENT | Source Of Truth-conflict, governancewijziging, archiefconflict, bronvervanging, templatewijziging of verwijderingsverzoek. | CM CONTROL AGENT; Sophia bij governance of verwijdering |
-| CM FLOW AGENT | Automatisering met data-, status-, routing-, repository-, finance-, legal- of externe systeemimpact. | CM CONTROL AGENT; CM VAULT AGENT bij bronstructuur; Sophia bij impact |
-
----
-
-## Escalatieformat
-
-Gebruik dit format bij iedere escalatie:
+Agents escaleren niet rechtstreeks naar Sophia tenzij anders aangegeven.
 
 ```text
-ESCALATIELEVEL: Normaal / Urgent / Kritiek
-NAAR: Sophia / CM CONTROL AGENT / CM LEGAL AGENT / CM MONEY AGENT / CM VAULT AGENT / CM FLOW AGENT
-CONTEXT: ...
-RISICO: ...
-AANBEVOLEN ACTIE: ...
-DEADLINE: ...
-EIGENAAR: ...
-BRONNEN / BIJLAGEN: ...
+Agent → CM CONTROL → Sophia
 ```
 
-## Stopregel
+**Uitzondering — directe escalatie naar Sophia toegestaan bij:**
 
-Bij kritieke escalatie stopt de uitvoerende agent alle acties die het risico kunnen vergroten. Hervatten mag pas na expliciete beslissing van Sophia of, wanneer er geen Sophia gate is, CM CONTROL AGENT.
+- KRITIEK niveau
+- Juridisch risico (ook via CM LEGAL → Sophia)
+- Reputatierisico
+- Security incident
+- Governance conflict
+
+CM CONTROL logt alle escalaties, ook de directe.
+
+-----
+
+## ESCALATIE FORMAT
+
+Iedere escalatie bevat deze vier velden. Geen escalatie zonder volledig format.
+
+```text
+ESCALATIE — [NORMAAL / URGENT / KRITIEK]
+Agent: [naam agent]
+Datum/tijd: [timestamp]
+
+WAT: [beschrijving van het probleem in één zin]
+IMPACT: [wat gebeurt er als dit niet wordt opgelost, en wanneer]
+VOORSTEL: [wat stelt de agent voor als oplossing]
+NODIG VAN SOPHIA: [specifieke beslissing of actie die vereist is]
+```
+
+-----
+
+## NORMAAL
+
+**Reactie gewenst:** binnen 5 werkdagen
+
+**Voorbeelden:**
+
+- Ontbrekende documenten
+- Verouderde templates
+- Kleine workflow issues
+
+**Route:** Agent → CM CONTROL → Sophia (via Weekly Control Report)
+
+**Tijdsdruk-protocol:**
+
+| Stap | Actie | Eigenaar |
+| ---- | ----- | -------- |
+| 1 | Escalatie ingediend bij CM CONTROL | Uitvoerende agent |
+| 2 | CM CONTROL neemt op in Weekly Control Report | CM CONTROL |
+| 3 | Na 5 werkdagen geen respons → herinnering | CM CONTROL |
+| 4 | Na 10 werkdagen geen respons → opschalen naar URGENT | CM CONTROL |
+
+-----
+
+## URGENT
+
+**Reactie gewenst:** binnen 24 uur
+
+**Voorbeelden:**
+
+- Deadline risico
+- Cashflow risico
+- Belangrijke klantvraag
+- Publicatie blokkade
+
+**Route:** Agent → CM CONTROL → Sophia (direct, niet via weekly report)
+
+**Tijdsdruk-protocol:**
+
+| Stap | Actie | Eigenaar |
+| ---- | ----- | -------- |
+| 1 | Escalatie ingediend bij CM CONTROL met format | Uitvoerende agent |
+| 2 | CM CONTROL valideert en stuurt door naar Sophia binnen 2 uur | CM CONTROL |
+| 3 | Na 24 uur geen respons → opschalen naar KRITIEK | CM CONTROL |
+| 4 | CM CONTROL documenteert impact van uitblijvende respons | CM CONTROL |
+
+-----
+
+## KRITIEK
+
+**Reactie gewenst:** direct — binnen 2 uur
+
+**Voorbeelden:**
+
+- Juridisch risico
+- Reputatierisico
+- Groot financieel risico
+- Governance conflict
+- Contractconflict
+- Security incident
+
+**Route:** Agent → Sophia direct + gelijktijdig CM CONTROL informeren
+
+**Tijdsdruk-protocol:**
+
+| Stap | Actie | Eigenaar |
+| ---- | ----- | -------- |
+| 1 | Escalatie direct naar Sophia + CC CM CONTROL | Uitvoerende agent |
+| 2 | CM CONTROL blokkeert afhankelijke taken direct | CM CONTROL |
+| 3 | Na 2 uur geen respons → tweede directe melding Sophia | CM CONTROL |
+| 4 | Na 4 uur geen respons → alle betrokken workflows gepauzeerd | CM CONTROL |
+| 5 | Incident volledig gedocumenteerd ongeacht uitkomst | CM CONTROL |
+
+> Bij KRITIEK geldt: niets beweegt totdat Sophia heeft gereageerd. CM CONTROL pauzeert actief, niet passief.
+
+-----
+
+## ESCALATIE OVERZICHT
+
+| | Normaal | Urgent | Kritiek |
+| ---------------------------- | ------------------------------ | ----------------------- | ------------------------------- |
+| Reactietijd | 5 werkdagen | 24 uur | 2 uur |
+| Route | Via CM CONTROL → Weekly Report | Via CM CONTROL → direct | Direct naar Sophia + CM CONTROL |
+| Escalatie format verplicht | ✅ | ✅ | ✅ |
+| Afhankelijke taken blokkeren | ❌ | ❌ | ✅ |
+| Opschalen bij geen respons | Naar URGENT (10 werkdagen) | Naar KRITIEK (24 uur) | Workflows pauzeren (4 uur) |
+
+-----
+
+## ESCALATIERECHTEN PER AGENT
+
+| Agent | Mag escaleren naar | Direct naar Sophia |
+| ----- | ------------------ | ------------------ |
+| CM OPS | NORMAAL, URGENT | Nee |
+| CM PROSPECT | NORMAAL, URGENT | Nee |
+| CM LEGAL | NORMAAL, URGENT, KRITIEK | Ja — bij juridisch risico |
+| CM SOCIAL | NORMAAL, URGENT | Nee |
+| CM MONEY | NORMAAL, URGENT, KRITIEK | Ja — bij groot financieel risico |
+| CM VAULT | NORMAAL, URGENT, KRITIEK | Ja — bij governance conflict |
+| CM FLOW | NORMAAL, URGENT | Nee |
+| CM CONTROL | Alle niveaus | Ja — altijd |
+
+-----
+
+## LOGGING & RAPPORTAGE
+
+CM CONTROL logt iedere escalatie in ClickUp met:
+
+- Niveau (NORMAAL / URGENT / KRITIEK)
+- Indiende agent
+- Timestamp indiening
+- Timestamp eerste respons Sophia
+- Uitkomst (opgelost / opgeschaald / geblokkeerd)
+
+**Standaard rapportages:**
+
+- Weekly Control Report: alle NORMAAL en URGENT escalaties van de week
+- Direct aan Sophia: alle KRITIEK escalaties (real-time)
+- Monthly Control Report: escalatietrends, gemiddelde responstijden, herhalende issues
