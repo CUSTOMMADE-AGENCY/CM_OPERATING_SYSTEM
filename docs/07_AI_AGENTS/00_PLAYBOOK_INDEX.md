@@ -54,5 +54,8 @@ Deze index is het centrale register voor alle Sophia-approved playbooks van de a
 - `docs/07_AI_AGENTS/00_CM_AGENTS_OVERVIEW.md`
 - `docs/07_AI_AGENTS/AGENT_HANDOFF_MATRIX.md`
 - `docs/07_AI_AGENTS/AGENT_RESPONSIBILITY_MATRIX.md`
+- `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- `docs/07_AI_AGENTS/AI_TASK_AUTONOMY_MATRIX.md`
+- `docs/07_AI_AGENTS/ESCALATION_PROTOCOLS.md`
 - `docs/07_AI_AGENTS/CM_AGENT_GOVERNANCE.md`
 - `docs/07_AI_AGENTS/OWNERSHIP_RULES.md`

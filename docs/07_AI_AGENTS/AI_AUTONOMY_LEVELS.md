@@ -16,7 +16,7 @@ Geen enkele agent mag zonder expliciete Sophia approval:
 - governance, agent-definities, matrices, playbooks, SOP's, prompts, workflows of bronstructuren wijzigen;
 - documenten, templates, kennisbankcontent, archiefitems of bronbestanden verwijderen.
 
-Bij twijfel geldt: niet uitvoeren, maar escaleren volgens `ESCALATION_PROTOCOLS.md`.
+Bij twijfel geldt: niet uitvoeren, maar escaleren volgens `ESCALATION_PROTOCOLS.md`. Gebruik `AI_TASK_AUTONOMY_MATRIX.md` voor de taakgerichte toepassing van deze levels.
 
 ---
 
