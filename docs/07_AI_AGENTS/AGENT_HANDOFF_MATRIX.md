@@ -1,5 +1,12 @@
 # Agent Handoff Matrix
 
+
+> Versie: v1.4 · Status: **GOVERNANCE LOCKED** · Datum: 2026-06-21
+> Eigenaar: **CM CONTROL AGENT** · Beheer: **CM VAULT AGENT**
+> Gebruik: routering van dossiers, taken, documenten en beslissingen tussen agents.
+
+---
+
 ## Doel
 
 Dit document legt vast wanneer een dossier, taak, document of beslissing binnen CM_OS van de ene agent naar de andere agent gaat. Een handoff is verplicht zodra de volgende actie buiten het eigenaarschap, de bevoegdheid of de governance-scope van de huidige agent valt.

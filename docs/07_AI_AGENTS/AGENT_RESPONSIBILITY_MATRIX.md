@@ -1,5 +1,12 @@
 # Agent Responsibility Matrix
 
+
+> Versie: v1.4 · Status: **GOVERNANCE LOCKED** · Datum: 2026-06-21
+> Eigenaar: **CM CONTROL AGENT** · Beheer: **CM VAULT AGENT**
+> Gebruik: bepalen van exact één eigenaar-agent per domein vóór uitvoering of handoff.
+
+---
+
 ## Doel
 
 Deze matrix wijst per domein exact één eigenaar-agent aan. Ondersteunende agents leveren input, voeren deelchecks uit of bereiden werk voor, maar nemen nooit het eigenaarschap over. Bij conflict, overlap of ontbrekende scope beslist **CM CONTROL AGENT**.
