@@ -24,7 +24,7 @@ CM VAULT V1 controleert wekelijks alle artiestmappen in Google Drive en zorgt da
 | Bestanden hernoemen | NEE |
 | Bestanden verplaatsen | NEE |
 | Inhoud wijzigen | NEE |
-| Buiten `01_ARTIST_MANAGEMENT` werken | NEE |
+| Buiten `02_ARTIST_MANAGEMENT` werken | NEE |
 
 ---
 
@@ -32,7 +32,7 @@ CM VAULT V1 controleert wekelijks alle artiestmappen in Google Drive en zorgt da
 
 ```
 OS _CUSTOMMADE (ID: 0B2aV9TqyUPDzd0F1WEd1RkVxNFk)
-└── 01_ARTIST_MANAGEMENT
+└── 02_ARTIST_MANAGEMENT
     ├── CALSEY
     │   ├── 01_ADMIN
     │   ├── 02_CONTRACT
@@ -57,11 +57,11 @@ OS _CUSTOMMADE (ID: 0B2aV9TqyUPDzd0F1WEd1RkVxNFk)
 - **Dag:** Maandag (dag 1)
 - **Tijd:** 09:00:00 (Europe/Amsterdam)
 
-### Module 2 — Zoek 01_ARTIST_MANAGEMENT
+### Module 2 — Zoek 02_ARTIST_MANAGEMENT
 - **App:** Google Drive
 - **Module:** searchForFilesFolders v4
-- **Query:** `name = '01_ARTIST_MANAGEMENT' and '0B2aV9TqyUPDzd0F1WEd1RkVxNFk' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false`
-- **Output:** 1 bundle met folder-ID van `01_ARTIST_MANAGEMENT`
+- **Query:** `name = '02_ARTIST_MANAGEMENT' and '0B2aV9TqyUPDzd0F1WEd1RkVxNFk' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false`
+- **Output:** 1 bundle met folder-ID van `02_ARTIST_MANAGEMENT`
 - **Foutafhandeling:** Als niet gevonden → scenario stopt (Drive niet bereikbaar)
 
 ### Module 3 — Lijst alle artiestmappen
@@ -151,7 +151,7 @@ STATUS: COMPLETE
 
 ## Foutafhandeling
 
-- Als Drive niet bereikbaar is (module 2 vindt `01_ARTIST_MANAGEMENT` niet): scenario stopt automatisch
+- Als Drive niet bereikbaar is (module 2 vindt `02_ARTIST_MANAGEMENT` niet): scenario stopt automatisch
 - `maxErrors: 3` — scenario stopt na 3 fouten
 - `sequential: true` — artiesten worden één voor één verwerkt (geen parallelle conflicten)
 - `dataloss: false` — geen dataverlies bij crash

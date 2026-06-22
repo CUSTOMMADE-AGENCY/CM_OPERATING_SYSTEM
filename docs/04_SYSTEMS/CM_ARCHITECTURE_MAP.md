@@ -41,8 +41,8 @@ Een standaard workflow begint bij een goedgekeurde werkwijze in GitHub, krijgt b
 
 1. **Contract?**
    - Google Drive.
-   - Artist client: `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT`.
-   - Master Boutique: `OS_CUSTOMMADE/02_MASTER_BOUTIQUE/04_LEGAL`.
+   - Artist client: `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT`.
+   - Deal/Master Boutique: `OS_CUSTOMMADE/04_DEALS/[DEAL]/02_CONTRACTEN_BEWIJS`.
    - Nooit GitHub.
    - Maak een follow-up task in ClickUp als er actie nodig is.
 
@@ -71,10 +71,10 @@ Een standaard workflow begint bij een goedgekeurde werkwijze in GitHub, krijgt b
 
 | Situatie | Waar hoort het? | Waarom |
 |---|---|---|
-| Getekend managementcontract | Google Drive: artist `02_CONTRACT` | Dit is een definitief contract en clientdossier, geen governance. |
-| Factuur | Google Drive: finance/clientmap | Dit is financiële bronadministratie of een clientbestand. |
-| Release artwork | Google Drive: artist client folder | Dit is een contentbestand/deliverable. |
-| Brand Audit final | Google Drive: Master Boutique folder | Dit is een finale deliverable voor een client. |
+| Getekend managementcontract | Google Drive: `02_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT` | Dit is een definitief contract en clientdossier, geen governance. |
+| Factuur | Google Drive: `06_FINANCE` | Dit is financiële bronadministratie of een clientbestand. |
+| Release artwork | Google Drive: `02_ARTIST_MANAGEMENT/[ARTIST]/04_RELEASES` | Dit is een contentbestand/deliverable. |
+| Brand Audit final | Google Drive: `03_CLIENTS/[CLIENT]` of `02_ARTIST_MANAGEMENT/[ARTIST]/03_STRATEGY` | Dit is een finale deliverable voor een client. |
 | Follow-up met buyer | ClickUp | Dit is een actie met owner, status en deadline. |
 | Nieuwe SOP | GitHub | Dit beschrijft hoe CM werkt. |
 | Meeting action | ClickUp | Dit is uitvoerbaar werk dat opgevolgd moet worden. |

@@ -1,11 +1,9 @@
 /**
  * OS_CUSTOMMADE target structure creator for the CM_OS safe-roots migration.
  *
- * ── SPRINT 2G CHANGELOG (17 jun 2026) ──────────────────────────────────────
- * - 2G-1: '00_INBOX' toegevoegd als permanente top-level doel-root.
- *         'INBOX' verwijderd uit de children van '00_ADMIN' (geen dubbele inbox).
- *         Let op: het reeds bestaande, lege '00_ADMIN/INBOX' wordt NIET verwijderd
- *         door dit script (geen deletes); markeer voor handmatige opschoning.
+ * ── CHANGELOG ──────────────────────────────────────────────────────────────
+ * - AS-BUILT align (22 jun 2026): '00_INBOX' verwijderd als top-level root;
+ *         goedgekeurde structuur gebruikt uitsluitend de 11 AS-BUILT roots.
  * - 2G safety: bij DriveApp/getOrCreate errors eindigt het script met NO-GO en
  *         logt/returnt nooit ten onrechte GEREED VOOR TARGET STRUCTURE DRY CHECK.
  * ───────────────────────────────────────────────────────────────────────────
@@ -38,10 +36,6 @@ const OS_CUSTOMMADE_TARGET_STRUCTURE = {
     'GOVERNANCE_REFERENCE',
     'HR',
     'CURSUS_MASTERCLASSES'
-  ],
-  '00_INBOX': [
-    '_SCHOONMAAK_TE_SORTEREN',
-    'TO-SORT'
   ],
   '01_MASTER_BOUTIQUE': [
     '00_START_HIER',
