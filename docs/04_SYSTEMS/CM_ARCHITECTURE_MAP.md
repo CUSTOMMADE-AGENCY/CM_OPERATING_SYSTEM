@@ -1,70 +1,47 @@
-# CM Architecture Map
+# CM ARCHITECTURE MAP
 
-## Purpose
+## DOEL
 
-This document explains how the core CM operating platforms relate to one another and how they support governance, execution, automation, and AI-assisted orchestration.
+Dit document geeft één helder overzicht van hoe het CM Operating System samenwerkt over GitHub, Google Drive, ClickUp, Gmail, Make en ChatGPT / AI Agents. Het doel is om per systeem scherp te houden waar informatie thuishoort, hoe werk door het systeem beweegt en welke tool leidend is per type activiteit.
 
-The CM operating system is built around five connected layers:
+## KERNREGEL
 
-1. **GitHub** — governance, SOPs, playbooks, and workflows.
-2. **Google Drive** — operational files, client dossiers, templates, and contracts.
-3. **ClickUp** — tasks, execution, and deadlines.
-4. **Make** — automation layer.
-5. **AI Agents** — decision support and orchestration.
+- GitHub = HOE
+- Drive = WAT
+- ClickUp = DOEN
+- Gmail = COMMUNICEREN
+- Make = AUTOMATISEREN
+- ChatGPT / AI Agents = DENKEN + VOORBEREIDEN
 
-## Architecture Overview
+## SYSTEEMROLLEN
 
-GitHub defines the operating rules. Google Drive stores the active working assets. ClickUp turns the rules and assets into executable work. Make connects the platforms through automation. AI Agents support decisions, coordination, and orchestration across the system.
-
-## Visual Mapping Table
-
-| Platform | Primary Role | What It Contains | How It Connects | System Function |
+| SYSTEEM | ROL | BEWAART | BEWAART NIET | VOORBEELDEN |
 |---|---|---|---|---|
-| **GitHub** | Governance layer | SOPs, playbooks, workflows, system documentation, operating standards | Provides the source of truth for how work should be done; informs ClickUp processes, Make automations, and AI Agent behavior | **Governance + SOPs + Playbooks + Workflows** |
-| **Google Drive** | Operational file layer | Client dossiers, working documents, templates, contracts, deliverables, reference files | Stores the documents and files needed to execute work defined in GitHub and tracked in ClickUp | **Operational files + client dossiers + templates + contracts** |
-| **ClickUp** | Execution layer | Tasks, owners, statuses, deadlines, checklists, project timelines | Converts workflows into assigned work; references GitHub standards and links to Drive assets | **Tasks + execution + deadlines** |
-| **Make** | Automation layer | Scenarios, triggers, actions, routing logic, platform integrations | Moves information between GitHub, Drive, ClickUp, and other systems; reduces manual handoffs | **Automation layer** |
-| **AI Agents** | Intelligence and orchestration layer | Decision support, analysis, recommendations, summaries, coordination prompts, operating guidance | Read from governance and operational context, support task planning, and help orchestrate execution across platforms | **Decision support and orchestration** |
+| GitHub | Governance- en documentatielaag: beschrijft hoe CM werkt. | Governance, Workflows, SOPs, Playbooks, templates en as-built systeemdocumentatie. | Live clientbestanden, getekende contracten, financiële bronadministratie of losse werkexports. | SOPs, workflowbeschrijvingen, governancebesluiten, systeemmappings, template-standaarden. |
+| Google Drive | Operationele bestandslaag: bewaart wat wordt gemaakt, ontvangen of opgeleverd. | Live clientmappen, getekende documenten, deliverables, finance, legal, content en archieven. | Procesgovernance als primaire waarheid, taakstatussen of automatiseringslogica. | Clientdossiers, contracten, briefings, buyer packages, rapportages, contentbestanden. |
+| ClickUp | Uitvoeringslaag: organiseert wat gedaan moet worden. | Taken, owners, deadlines, Pipeline, status, checklists, blockers en taakgeschiedenis. | Definitieve documenten, contracten, governance als primaire bron of e-mailarchief. | Onboardingtaken, dealstappen, managementacties, deadlines, approvals, follow-ups. |
+| Gmail | Communicatielaag: voert en bewaart correspondentie. | Communicatie, communicatietemplates, verzonden en ontvangen correspondentie. | Taakmanagement, dossierstructuur, governance of definitieve deliverable-opslag. | Clientmails, partnerupdates, outreach, approvals per e-mail, template-antwoorden. |
+| Make | Automatiseringslaag: verbindt systemen en voert afgesproken handoffs uit. | Scenarios, triggers, routing, acties, syncs, foutafhandeling en automatiseringslogica. | Bronbestanden, governancebesluiten of menselijke besluitvorming. | ClickUp-taak maakt Drive-map, reminder bij deadline, Gmail- of Slack-notificatie, status-sync. |
+| ChatGPT / AI Agents | Denk- en voorbereidingslaag: ondersteunt analyse, voorbereiding en gecontroleerde uitvoering. | Samenvattingen, analyses, concepten, checklists, beslissingsvoorbereiding en uitvoeringsvoorstellen. | Ongecontroleerde besluiten, vertrouwelijke data buiten goedgekeurde systemen of bindende commitments namens CM. | SOP-review, intake-samenvatting, conceptmail, dealanalyse, checklistvoorstel, documentcontrole. |
 
-## Relationship Model
+## DATAFLOW
 
-```text
-GitHub
-  ↓ defines standards for
-ClickUp
-  ↓ executes work using
-Google Drive
-  ↑ stores operational assets used by
-Make
-  ↔ automates movement and updates across platforms
-AI Agents
-  ↔ support decisions, coordination, and orchestration across all layers
-```
+1. Governance wordt vastgelegd in GitHub: hier staat hoe processen, workflows, SOPs, playbooks, templates en systeemafspraken werken.
+2. Werkbestanden en deliverables worden opgeslagen in Google Drive: hier staat wat daadwerkelijk wordt gemaakt, ontvangen, ondertekend, gedeeld of gearchiveerd.
+3. Uitvoering wordt gepland en gevolgd in ClickUp: hier staan taken, owners, deadlines, Pipeline-stappen, bewijs van voortgang en taakgeschiedenis.
+4. Communicatie loopt via Gmail: hier worden client-, partner- en interne berichten verstuurd, ontvangen en teruggevonden.
+5. Make automatiseert overdrachten tussen systemen: bijvoorbeeld het aanmaken van mappen, taken, reminders, notificaties en statusupdates.
+6. ChatGPT / AI Agents ondersteunen denken en voorbereiding: zij analyseren context, maken concepten, signaleren ontbrekende informatie en bereiden gecontroleerde acties voor, maar vervangen geen governance of menselijke approval.
 
-## Operating Principles
+## WERKING IN DE PRAKTIJK
 
-- **GitHub is the governance source of truth.** If a process, SOP, playbook, or workflow needs to be standardized, it belongs in GitHub.
-- **Google Drive is the operational asset repository.** If a file is client-facing, contract-related, template-based, or part of daily delivery, it belongs in Drive.
-- **ClickUp is the execution system.** If work needs an owner, status, deadline, or checklist, it belongs in ClickUp.
-- **Make is the connective automation layer.** If information needs to move between tools without manual effort, it should be automated through Make where appropriate.
-- **AI Agents are decision-support and orchestration partners.** Agents help interpret context, summarize information, recommend next actions, and coordinate workflows, but they do not replace the governance source of truth.
+Een standaard workflow begint bij een goedgekeurde werkwijze in GitHub, krijgt bijbehorende bestanden in Google Drive, wordt als uitvoerbare taak of Pipeline-stap beheerd in ClickUp, wordt gecommuniceerd via Gmail en kan via Make deels automatisch worden gerouteerd. ChatGPT / AI Agents helpen bij analyse, voorbereiding, samenvatting en kwaliteitscontrole, zolang de output wordt gecontroleerd voordat deze operationeel of extern wordt gebruikt.
 
-## Practical Example
+## BESLISREGEL BIJ TWIJFEL
 
-A client onboarding process may work like this:
-
-1. **GitHub** stores the onboarding SOP and checklist structure.
-2. **Google Drive** stores the client dossier, contract, intake form, and working templates.
-3. **ClickUp** tracks the onboarding tasks, owners, due dates, and completion status.
-4. **Make** creates folders, routes notifications, updates task statuses, or syncs key information between tools.
-5. **AI Agents** summarize the client context, identify missing information, suggest next steps, and help coordinate execution.
-
-## Summary
-
-The CM architecture separates responsibilities clearly:
-
-- **GitHub governs the work.**
-- **Google Drive stores the work assets.**
-- **ClickUp manages the work execution.**
-- **Make automates the work movement.**
-- **AI Agents support the work decisions and orchestration.**
+- Gaat het over de afgesproken werkwijze? Zet het in GitHub.
+- Gaat het over een bestand, contract, deliverable of dossier? Zet het in Google Drive.
+- Gaat het over actie, planning, status of verantwoordelijkheid? Zet het in ClickUp.
+- Gaat het over correspondentie? Gebruik Gmail.
+- Gaat het over herhaalbare overdracht tussen systemen? Automatiseer via Make.
+- Gaat het over analyse, voorbereiding of conceptvorming? Gebruik ChatGPT / AI Agents met menselijke controle.
