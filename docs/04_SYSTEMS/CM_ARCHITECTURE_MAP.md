@@ -37,6 +37,51 @@ Dit document geeft één helder overzicht van hoe het CM Operating System samenw
 
 Een standaard workflow begint bij een goedgekeurde werkwijze in GitHub, krijgt bijbehorende bestanden in Google Drive, wordt als uitvoerbare taak of Pipeline-stap beheerd in ClickUp, wordt gecommuniceerd via Gmail en kan via Make deels automatisch worden gerouteerd. ChatGPT / AI Agents helpen bij analyse, voorbereiding, samenvatting en kwaliteitscontrole, zolang de output wordt gecontroleerd voordat deze operationeel of extern wordt gebruikt.
 
+## PRAKTISCHE BESLISBOOM
+
+1. **Contract?**
+   - Google Drive.
+   - Artist client: `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT`.
+   - Master Boutique: `OS_CUSTOMMADE/02_MASTER_BOUTIQUE/04_LEGAL`.
+   - Nooit GitHub.
+   - Maak een follow-up task in ClickUp als er actie nodig is.
+
+2. **Task of follow-up?**
+   - ClickUp.
+   - Nooit Drive als task list.
+   - Nooit Gmail als task tracker.
+
+3. **Client file of deliverable?**
+   - Google Drive.
+   - Artist client folder of Master Boutique folder.
+   - Nooit GitHub.
+
+4. **SOP, Workflow, Playbook of governance?**
+   - GitHub.
+
+5. **Email of extern gesprek?**
+   - Gmail.
+   - Belangrijke uitkomst wordt een ClickUp task of Drive document als dat nodig is.
+
+6. **Automation idea?**
+   - Eerst GitHub Automation Backlog.
+   - Pas bouwen in Make na approval.
+
+## SNELLE VOORBEELDEN
+
+| Situatie | Waar hoort het? | Waarom |
+|---|---|---|
+| Getekend managementcontract | Google Drive: artist `02_CONTRACT` | Dit is een definitief contract en clientdossier, geen governance. |
+| Factuur | Google Drive: finance/clientmap | Dit is financiële bronadministratie of een clientbestand. |
+| Release artwork | Google Drive: artist client folder | Dit is een contentbestand/deliverable. |
+| Brand Audit final | Google Drive: Master Boutique folder | Dit is een finale deliverable voor een client. |
+| Follow-up met buyer | ClickUp | Dit is een actie met owner, status en deadline. |
+| Nieuwe SOP | GitHub | Dit beschrijft hoe CM werkt. |
+| Meeting action | ClickUp | Dit is uitvoerbaar werk dat opgevolgd moet worden. |
+| Email met akkoord | Gmail; indien nodig Drive of ClickUp | Gmail bewaart de correspondentie; akkoord kan actie of documentatie nodig maken. |
+| Royalty statement | Google Drive: finance/clientmap | Dit is een client- of financieel brondocument. |
+| Data Room document | Google Drive: juiste client- of Master Boutique-folder | Dit is een extern deelbaar dossierdocument. |
+
 ## BESLISREGEL BIJ TWIJFEL
 
 - Gaat het over de afgesproken werkwijze? Zet het in GitHub.
