@@ -1,11 +1,9 @@
 /**
  * OS_CUSTOMMADE target structure creator for the CM_OS safe-roots migration.
  *
- * ── SPRINT 2G CHANGELOG (17 jun 2026) ──────────────────────────────────────
- * - 2G-1: '00_INBOX' toegevoegd als permanente top-level doel-root.
- *         'INBOX' verwijderd uit de children van '00_ADMIN' (geen dubbele inbox).
- *         Let op: het reeds bestaande, lege '00_ADMIN/INBOX' wordt NIET verwijderd
- *         door dit script (geen deletes); markeer voor handmatige opschoning.
+ * ── CHANGELOG ──────────────────────────────────────────────────────────────
+ * - AS-BUILT align (22 jun 2026): '00_INBOX' verwijderd als top-level root;
+ *         goedgekeurde structuur gebruikt uitsluitend de 11 AS-BUILT roots.
  * - 2G safety: bij DriveApp/getOrCreate errors eindigt het script met NO-GO en
  *         logt/returnt nooit ten onrechte GEREED VOOR TARGET STRUCTURE DRY CHECK.
  * ───────────────────────────────────────────────────────────────────────────
@@ -39,41 +37,10 @@ const OS_CUSTOMMADE_TARGET_STRUCTURE = {
     'HR',
     'CURSUS_MASTERCLASSES'
   ],
-  '00_INBOX': [
-    '_SCHOONMAAK_TE_SORTEREN',
-    'TO-SORT'
-  ],
-  '01_MASTER_BOUTIQUE': [
-    '00_START_HIER',
-    '01_RECHTEN_REGISTER',
-    '02_CONTRACTEN_BEWIJS',
-    '03_WAARDERING_VERKOOPPAKKET',
-    '04_OUTREACH_CLICKUP',
-    '99_ARCHIEF'
-  ],
-  '02_ARTIST_MANAGEMENT': [
-    '01_ADMIN',
-    '02_CONTRACT',
-    '03_STRATEGY',
-    '04_RELEASES',
-    '05_BOOKING',
-    '06_FINANCE',
-    '07_SOCIALMEDIA',
-    '08_PRESS_EPK',
-    '09_ARCHIVE'
-  ],
-  '03_CLIENTS': [
-    '00_START_HIER',
-    '99_ARCHIEF'
-  ],
-  '04_DEALS': [
-    '00_START_HIER',
-    '01_RECHTEN_REGISTER',
-    '02_CONTRACTEN_BEWIJS',
-    '03_WAARDERING_VERKOOPPAKKET',
-    '04_OUTREACH_CLICKUP',
-    '99_ARCHIEF'
-  ],
+  '01_MASTER_BOUTIQUE': [],
+  '02_ARTIST_MANAGEMENT': [],
+  '03_CLIENTS': [],
+  '04_DEALS': [],
   '05_OPERATIONS': [
     '00_START_HIER',
     'HR',

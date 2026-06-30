@@ -31,43 +31,70 @@ Gebruik exact deze hoofdstructuur onder `OS_CUSTOMMADE`:
 
 ```text
 OS_CUSTOMMADE
-├── 00_INBOX
-├── 01_ARTIST_MANAGEMENT
-├── 02_MASTER_BOUTIQUE
-├── 03_EXECUTIVE
-├── 04_BUSINESS
-├── 05_MARKETING
-├── 06_PROJECTS
-└── 07_ARCHIVE
+├── 00_ADMIN
+├── 01_MASTER_BOUTIQUE
+├── 02_ARTIST_MANAGEMENT
+├── 03_CLIENTS
+├── 04_DEALS
+├── 05_OPERATIONS
+├── 06_FINANCE
+├── 07_LEGAL
+├── 08_MARKETING
+├── 09_CONTENT
+└── 99_ARCHIVE
 ```
 
 ## 4. MAP → AGENT EIGENAARSCHAP
 
 | Map | Eigenaar-agent | Ondersteunende agents | Doel | Toegestane documenttypes | Verboden documenttypes | Gekoppelde workflow | Archiefregel |
 |---|---|---|---|---|---|---|---|
-| `00_INBOX` | CM VAULT AGENT | CM CONTROL AGENT | Tijdelijke verzamelplek voor documenten zonder duidelijke opslaglocatie. | Ongeclassificeerde documenten, binnenkomende bewijsstukken, tijdelijke uploads. | Definitieve contracten zonder classificatie, facturen als financiële waarheid, documenten ouder dan 7 dagen. | Inbox triage en classificatie. | Maximaal 7 dagen; daarna verplaatsen naar juiste map of escaleren. |
-| `01_ARTIST_MANAGEMENT` | CM OPS AGENT | CM SOCIAL AGENT, CM LEGAL AGENT, CM MONEY AGENT, CM VAULT AGENT | Artist dossiers, contracten, strategie, releases, booking, finance-kopieën, social media, press/EPK en archivering. | Client Profile, Artist Roadmap, Release Strategy, Brand Audit, Business Audit, Monthly Report, Meeting Recap, press kit, EPK, bookinginformatie. | Master Boutique data rooms, algemene bedrijfsadministratie zonder artist-koppeling, Moneybird-bronadministratie. | Artist onboarding, management, release, reporting en offboarding. | Afgeronde artistfasen naar artist `09_ARCHIVE`; legacy materiaal naar `07_ARCHIVE` indien nodig. |
-| `02_MASTER_BOUTIQUE` | CM PROSPECT AGENT + CM LEGAL AGENT | CM MONEY AGENT, CM VAULT AGENT, CM CONTROL AGENT | Master Boutique pipeline, rechten, sellers, buyers, data rooms, waarderingen en dealdossiers. | Deal Memo, Rights Register, NDA, LOI, valuation package, seller/buyer profiel, contractconcepten. | Artist-management roadmaps, social posts, algemene financiële administratie zonder dealkoppeling. | Prospecting, deal intake, rights check, valuation, due diligence, closing. | Afgeronde of gepauzeerde dossiers naar `02_MASTER_BOUTIQUE/09_ARCHIVE` of centrale `07_ARCHIVE`. |
-| `03_EXECUTIVE` | CM CONTROL AGENT | CM VAULT AGENT, CM MONEY AGENT, CM LEGAL AGENT | Besluiten, governance, approvals, managementinformatie en systeemdocumentatie. | Governance documenten, approval logs, besluitnotities, executive reports, systeemdocumentatie. | Live taakstatussen, financiële waarheid buiten Moneybird, ongeclassificeerde inbox-items langer dan 7 dagen. | Governance, approval registratie, executive review en document lifecycle. | Verouderde executive versies naar `03_EXECUTIVE/09_ARCHIVE` of centrale `07_ARCHIVE`; niets verwijderen zonder Sophia approval. |
-| `04_BUSINESS` | CM MONEY AGENT + CM LEGAL AGENT | CM CONTROL AGENT, CM VAULT AGENT | Bedrijfsadministratie, contracten, vendors, finance-kopieën, legal, accountant en bedrijfsvoering. | Company info, vendor documenten, contracten, bankdocumenten, Moneybird exports/kopieën, BTW, accountantdocumenten, year-end stukken. | Artist-specifieke werkdocumenten zonder business-koppeling, taakstatussen, social content. | Business administration, finance intake, reconciliation, legal review, accountant handoff, year-end. | Financiële en juridische bewijsstukken nooit verwijderen; jaargebonden stukken naar `04_BUSINESS/09_ARCHIVE/[JAAR]` of `07_ARCHIVE/[JAAR]`. |
-| `05_MARKETING` | CM SOCIAL AGENT | CM OPS AGENT, CM VAULT AGENT, CM CONTROL AGENT | Brand, content, social, website, partnerships, pers en cases voor marketing. | Partnership Brief, Sponsor Brief, campaign assets, website content, marketing planning, social posts, blogs, nieuwsbrieven, persberichten, media pitches. | Contracten als juridische waarheid, facturen als financiële waarheid, governance source documents. | Marketing planning, partnership development, content productie, publicatie, media outreach en campaign delivery. | Afgeronde campagnes en verlopen content naar `05_MARKETING/09_ARCHIVE` of centrale `07_ARCHIVE`; publicatiebewijs bewaren. |
-| `06_PROJECTS` | CM OPS AGENT | CM FLOW AGENT, CM SOCIAL AGENT, CM LEGAL AGENT, CM MONEY AGENT, CM VAULT AGENT | Projectdossiers voor tijdelijke initiatieven, deliveries, campagnes, automations en operationele projecten. | Project brief, scope, planning, projectcontracten, deliverable-kopieën, project reports, automation specs, SOP/project playbooks. | Permanente artist-dossiers, financiële bronadministratie, juridische waarheid zonder business- of projectcontext. | Project intake, planning, delivery, reporting, close-out en automation lifecycle. | Afgeronde projecten naar `06_PROJECTS/09_ARCHIVE` of centrale `07_ARCHIVE`; bewijsstukken bewaren. |
-| `07_ARCHIVE` | CM VAULT AGENT | CM CONTROL AGENT, alle eigenaar-agents op verzoek | Centrale opslag voor jaararchief, legacy materiaal en afgesloten dossiers. | Afgeronde dossiers, legacy materiaal, superseded exports, historische bewijsstukken. | Actieve werkdocumenten zonder link naar live map, ongeautoriseerd verwijderde documenten. | Archivering, retention, legacy cleanup. | Structureren per jaar of `LEGACY`; niets verwijderen zonder Sophia approval. |
+| `00_ADMIN` | CM CONTROL AGENT | CM VAULT AGENT | Interne bedrijfsadministratie, templates, governance-referentie, HR en opleidingen. | Governance-referenties, templates, HR-documenten, opleidingsdocumenten. | Getekende contracten zonder classification, facturen als financiële waarheid. | Admin beheer, templatebeheer. | Verouderd materiaal naar `99_ARCHIVE`. |
+| `01_MASTER_BOUTIQUE` | CM PROSPECT AGENT | CM LEGAL AGENT, CM MONEY AGENT, CM VAULT AGENT | Master Boutique pipeline, rechten, sellers, buyers, waarderingen en dealdossiers. | Deal Memo, Rights Register, NDA, LOI, valuation package, seller/buyer profiel, contractconcepten. | Artist-management roadmaps, algemene financiële administratie zonder dealkoppeling. | Master Boutique prospecting, deal intake, rights check, valuation, due diligence, closing. | Afgeronde of gepauzeerde dossiers naar `99_ARCHIVE`. |
+| `02_ARTIST_MANAGEMENT` | CM OPS AGENT | CM SOCIAL AGENT, CM LEGAL AGENT, CM MONEY AGENT, CM VAULT AGENT | Artist dossiers, contracten, strategie, releases, booking, finance-kopieën, social media, press/EPK en archivering. | Client Profile, Artist Roadmap, Release Strategy, Brand Audit, Business Audit, Monthly Report, Meeting Recap, press kit, EPK, bookinginformatie. | Master Boutique data rooms, algemene bedrijfsadministratie zonder artist-koppeling, Moneybird-bronadministratie. | Artist onboarding, management, release, reporting en offboarding. | Afgeronde artistfasen naar artist `09_ARCHIVE`. |
+| `03_CLIENTS` | CM OPS AGENT | CM LEGAL AGENT, CM MONEY AGENT, CM VAULT AGENT | Dossiers voor merken, bedrijven, sponsors, opdrachtgevers en media partners. | Client Profile, briefings, proposals, deliverables, contractkopieën, rapportages. | Artiestendossiers, Master Boutique data rooms, financiële bronadministratie. | Client onboarding, delivery, rapportage, offboarding. | Afgeronde of inactieve clientdossiers naar `99_ARCHIVE`. |
+| `04_DEALS` | CM PROSPECT AGENT + CM LEGAL AGENT | CM MONEY AGENT, CM VAULT AGENT, CM CONTROL AGENT | Dealcases voor Master Boutique en andere transacties. Lean dealstructuur per dossier. | Deal Memo, Rights Register, NDA, LOI, valuation package, contractconcepten, buyer packages. | Permanente artist-dossiers, financiële bronadministratie, sociale content. | Deal intake, valuation, due diligence, negotiation, closing. | Afgeronde deals naar `99_ARCHIVE`. |
+| `05_OPERATIONS` | CM OPS AGENT | CM CONTROL AGENT, CM VAULT AGENT | Operationele processen, HR, tools, training en procesreferenties. | Procesreferenties, HR-documenten, tool-instructies, trainingsdocumenten. | Governance source of truth (hoort in GitHub), financiële bronadministratie, clientdossiers. | Operationeel beheer, onboarding intern. | Verouderd operationeel materiaal naar `99_ARCHIVE`. |
+| `06_FINANCE` | CM MONEY AGENT | CM LEGAL AGENT, CM CONTROL AGENT, CM VAULT AGENT | Bedrijfsfinanciën, Moneybird-exports, belastingdienst, bankdocumenten, statements en jaaradministratie. | Moneybird exports/kopieën, bankdocumenten, BTW, accountantdocumenten, year-end stukken, statements. | Artist-specifieke werkdocumenten zonder financiële koppeling, taakstatussen, social content. | Finance intake, reconciliation, accountant handoff, year-end. | Jaargebonden stukken naar `99_ARCHIVE/[JAAR]`; financiële bewijsstukken nooit verwijderen. |
+| `07_LEGAL` | CM LEGAL AGENT | CM MONEY AGENT, CM CONTROL AGENT, CM VAULT AGENT | Bedrijfsrechtelijke documenten, contracten, NDA's, partner- en leverancierscontracten, rights. | Contracten, NDA, partnerdocumenten, freelancecontracten, artiestcontracten, rights-documenten, approvals. | Artist-roadmaps, social posts, taakstatussen. | Legal review, contract lifecycle, rights management. | Juridische bewijsstukken nooit verwijderen; verouderd naar `99_ARCHIVE`. |
+| `08_MARKETING` | CM SOCIAL AGENT | CM OPS AGENT, CM VAULT AGENT, CM CONTROL AGENT | Brand, campagnes, partnerships, netwerk en marketingplanning voor CM als bedrijf. | Brand assets, campagnedocumenten, partnership briefs, marketingplanning, netwerk-docs. | Contracten als juridische waarheid, facturen als financiële waarheid, artistdossiers. | Marketingplanning, partnership development, campagne delivery. | Afgeronde campagnes naar `99_ARCHIVE`. |
+| `09_CONTENT` | CM SOCIAL AGENT | CM OPS AGENT, CM VAULT AGENT | Content assets, social media, formats, content calendar en publicaties voor CM. | Content assets, social posts, formats, content calendar, nieuwsbrieven, persberichten. | Contracten, facturen, governance source documents. | Content productie, publicatie, media outreach. | Afgeronde content naar `99_ARCHIVE`; publicatiebewijs bewaren. |
+| `99_ARCHIVE` | CM VAULT AGENT | CM CONTROL AGENT, alle eigenaar-agents op verzoek | Centrale opslag voor afgerond, legacy en historisch materiaal. | Afgeronde dossiers, legacy materiaal, superseded exports, historische bewijsstukken. | Actieve werkdocumenten, ongeautoriseerd verwijderde documenten. | Archivering, retention, legacy cleanup. | Structureren per jaar of `LEGACY`; niets verwijderen zonder Sophia approval. |
 
 ## 5. SUBMAP STRUCTURE
 
-### 00_INBOX
+### 00_ADMIN
 
-- Tijdelijke verzamelplek voor ongeclassificeerde documenten.
-- CM VAULT AGENT verwerkt deze map.
-- Documenten mogen hier niet langer dan 7 dagen blijven staan.
+Interne administratie, templates en governance-referentie voor CM als bedrijf.
 
-### 01_ARTIST_MANAGEMENT
+```text
+00_ADMIN
+├── 03_TEMPLATES
+├── GOVERNANCE_REFERENCE
+├── HR
+└── CURSUS_MASTERCLASSES
+```
+
+### 01_MASTER_BOUTIQUE
+
+Gebruik de lean dealstructuur per Master Boutique case:
+
+```text
+01_MASTER_BOUTIQUE
+└── [CASE_NAAM]
+    ├── 00_START_HIER
+    ├── 01_RECHTEN_REGISTER
+    ├── 02_CONTRACTEN_BEWIJS
+    ├── 03_WAARDERING_VERKOOPPAKKET
+    ├── 04_OUTREACH_CLICKUP
+    └── 99_ARCHIEF
+```
+
+### 02_ARTIST_MANAGEMENT
 
 Gebruik onderstaande subfolders per artist dossier:
 
 ```text
-01_ARTIST_MANAGEMENT
+02_ARTIST_MANAGEMENT
 └── [ARTIST]
     ├── 01_ADMIN
     ├── 02_CONTRACT
@@ -80,72 +107,140 @@ Gebruik onderstaande subfolders per artist dossier:
     └── 09_ARCHIVE
 ```
 
-### 02_MASTER_BOUTIQUE
+### 03_CLIENTS
+
+Gebruik per clientdossier een passende genummerde productiestructuur afhankelijk van het type relatie.
 
 ```text
-02_MASTER_BOUTIQUE
+03_CLIENTS
+└── [CLIENT_NAAM]
+    ├── 00_START_HIER
+    └── 99_ARCHIEF
 ```
 
-### 03_EXECUTIVE
+### 04_DEALS
+
+Gebruik de lean dealstructuur per dealcase:
 
 ```text
-03_EXECUTIVE
+04_DEALS
+└── [DEAL_NAAM]
+    ├── 00_START_HIER
+    ├── 01_RECHTEN_REGISTER
+    ├── 02_CONTRACTEN_BEWIJS
+    ├── 03_WAARDERING_VERKOOPPAKKET
+    ├── 04_OUTREACH_CLICKUP
+    └── 99_ARCHIEF
 ```
 
-### 04_BUSINESS
+Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wanneer een deal de due diligence fase bereikt.
+
+### 05_OPERATIONS
 
 ```text
-04_BUSINESS
+05_OPERATIONS
+├── 00_START_HIER
+├── HR
+├── TRAINING
+├── TOOLS
+├── PROCESSES
+├── TEMPLATES_REFERENCE
+└── 99_ARCHIEF
 ```
 
-### 05_MARKETING
+### 06_FINANCE
 
 ```text
-05_MARKETING
+06_FINANCE
+├── 00_START_HIER
+├── MONEYBIRD_REFERENCE
+├── BELASTINGDIENST
+├── BANK
+├── STATEMENTS
+├── ADMIN_EXPORTS
+└── 99_ARCHIEF
 ```
 
-### 06_PROJECTS
+### 07_LEGAL
 
 ```text
-06_PROJECTS
+07_LEGAL
+├── 00_START_HIER
+├── CONTRACTEN
+├── NDA
+├── PARTNERS
+├── FREELANCERS
+├── ARTIESTEN
+├── KLANTEN
+├── LEVERANCIERS
+├── RIGHTS
+├── APPROVALS
+└── 99_ARCHIEF
 ```
 
-### 07_ARCHIVE
+### 08_MARKETING
 
 ```text
-07_ARCHIVE
-├── 2024
-├── 2025
-├── 2026
-└── LEGACY
+08_MARKETING
+├── 00_START_HIER
+├── BRAND
+├── NETWORK
+├── CAMPAIGNS
+├── PARTNERSHIPS
+└── 99_ARCHIEF
+```
+
+### 09_CONTENT
+
+```text
+09_CONTENT
+├── 00_START_HIER
+├── ASSETS
+├── SOCIALMEDIA
+├── FORMATS
+├── CONTENT_CALENDAR
+└── 99_ARCHIEF
+```
+
+### 99_ARCHIVE
+
+```text
+99_ARCHIVE
+├── 00_START_HIER
+├── LEGACY_ROOTS
+├── REVIEW_HOLD
+└── 99_ARCHIEF
 ```
 
 ## 6. DOCUMENTTYPE → OPSLAGLOCATIE
 
 | Documenttype | Opslaglocatie | Eigenaar-agent | Workflow | Approval nodig |
 |---|---|---|---|---|
-| Ongeclassificeerd document | `OS_CUSTOMMADE/00_INBOX` | CM VAULT AGENT | Inbox triage | Nee, tenzij document een besluit, contract of financiële toezegging bevat |
-| Artist admin | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/01_ADMIN` | CM OPS AGENT | Artist onboarding / dossierbeheer | Nee, tenzij extern gedeeld |
-| Artist contract | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT` | CM LEGAL AGENT | Contract lifecycle / legal review | Ja, Level 4 bij ondertekening of verplichting |
-| Artist strategy | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/03_STRATEGY` | CM OPS AGENT | Artist strategy workflow | Ja bij artist approval of externe planning |
-| Release document | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/04_RELEASES` | CM OPS AGENT | Release strategy / release kickoff | Ja bij externe planning of publicatie |
-| Booking document | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/05_BOOKING` | CM OPS AGENT | Booking workflow | Ja bij financiële, juridische of externe commitment |
-| Artist finance-kopie | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` | CM MONEY AGENT | Finance intake / reporting | Ja bij financiële toezegging of correctie |
-| Social media document | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/07_SOCIALMEDIA` of `OS_CUSTOMMADE/05_MARKETING/07_SOCIALMEDIA` | CM SOCIAL AGENT | Content productie / social publishing | Ja bij publicatie namens CM of artist |
-| Press/EPK document | `OS_CUSTOMMADE/01_ARTIST_MANAGEMENT/[ARTIST]/08_PRESS_EPK` of `OS_CUSTOMMADE/05_MARKETING/08_PRESS_EPK` | CM SOCIAL AGENT | Press / EPK workflow | Ja bij externe verzending of publicatie |
-| Master Boutique document | `OS_CUSTOMMADE/02_MASTER_BOUTIQUE` | CM PROSPECT AGENT | Deal intake / valuation / negotiation | Ja bij externe distributie, dealbesluit of share |
-| Executive document | `OS_CUSTOMMADE/03_EXECUTIVE` | CM CONTROL AGENT | Governance / executive review | Ja bij governancewijziging of Sophia-besluit |
-| Business document | `OS_CUSTOMMADE/04_BUSINESS` | CM MONEY AGENT + CM LEGAL AGENT | Business administration / finance / legal | Ja bij financiële toezegging, contract of externe indiening |
-| Marketing document | `OS_CUSTOMMADE/05_MARKETING` | CM SOCIAL AGENT | Marketing planning / campaign delivery | Ja bij externe verzending of publicatie |
-| Project document | `OS_CUSTOMMADE/06_PROJECTS` | CM OPS AGENT | Project intake / delivery / close-out | Ja bij scope, prijs, contractafspraak of externe delivery |
-| Archive document | `OS_CUSTOMMADE/07_ARCHIVE` | CM VAULT AGENT | Archivering / retention | Ja bij documentverwijdering; archiveren zelf volgens retention-regels |
+| Artist admin | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/01_ADMIN` | CM OPS AGENT | Artist onboarding / dossierbeheer | Nee, tenzij extern gedeeld |
+| Artist contract | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT` | CM LEGAL AGENT | Contract lifecycle / legal review | Ja, Level 4 bij ondertekening of verplichting |
+| Artist strategy | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/03_STRATEGY` | CM OPS AGENT | Artist strategy workflow | Ja bij artist approval of externe planning |
+| Release document | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/04_RELEASES` | CM OPS AGENT | Release strategy / release kickoff | Ja bij externe planning of publicatie |
+| Booking document | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/05_BOOKING` | CM OPS AGENT | Booking workflow | Ja bij financiële, juridische of externe commitment |
+| Artist finance-kopie | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` | CM MONEY AGENT | Finance intake / reporting | Ja bij financiële toezegging of correctie |
+| Social media document (artist) | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/07_SOCIALMEDIA` | CM SOCIAL AGENT | Content productie / social publishing | Ja bij publicatie namens CM of artist |
+| Press/EPK document (artist) | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/08_PRESS_EPK` | CM SOCIAL AGENT | Press / EPK workflow | Ja bij externe verzending of publicatie |
+| Master Boutique document | `OS_CUSTOMMADE/01_MASTER_BOUTIQUE/[CASE]` | CM PROSPECT AGENT | Deal intake / valuation / negotiation | Ja bij externe distributie, dealbesluit of share |
+| Deal document | `OS_CUSTOMMADE/04_DEALS/[DEAL]` | CM PROSPECT AGENT + CM LEGAL AGENT | Deal intake / due diligence / closing | Ja bij externe distributie, dealbesluit of share |
+| Client document | `OS_CUSTOMMADE/03_CLIENTS/[CLIENT]` | CM OPS AGENT | Client onboarding / delivery / rapportage | Ja bij externe verzending of contractafspraak |
+| Financieel document | `OS_CUSTOMMADE/06_FINANCE` | CM MONEY AGENT | Finance intake / reconciliation / year-end | Ja bij financiële toezegging, correctie of indiening |
+| Juridisch document | `OS_CUSTOMMADE/07_LEGAL` | CM LEGAL AGENT | Legal review / contract lifecycle | Ja bij externe indiening of verplichting |
+| Marketing document | `OS_CUSTOMMADE/08_MARKETING` | CM SOCIAL AGENT | Marketingplanning / campagne delivery | Ja bij externe verzending of publicatie |
+| Content document | `OS_CUSTOMMADE/09_CONTENT` | CM SOCIAL AGENT | Content productie / publicatie | Ja bij publicatie namens CM of artist |
+| Operationeel document | `OS_CUSTOMMADE/05_OPERATIONS` | CM OPS AGENT | Operationeel beheer / intern onboarding | Nee, tenzij extern gedeeld of formeel besluit |
+| Admin document | `OS_CUSTOMMADE/00_ADMIN` | CM CONTROL AGENT | Admin beheer / templatebeheer | Nee, tenzij governance-wijziging |
+| Archive document | `OS_CUSTOMMADE/99_ARCHIVE` | CM VAULT AGENT | Archivering / retention | Ja bij documentverwijdering; archiveren zelf volgens retention-regels |
 
 ## 7. APPROVAL REGISTER
 
 Approval Register staat in de live Drive-structuur onder:
 
 ```text
-OS_CUSTOMMADE/03_EXECUTIVE/01_ADMIN/APPROVAL_REGISTER/CM_APPROVAL_REGISTER
+OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER
 ```
 
 Gebruikt voor:
@@ -175,24 +270,11 @@ Regels:
 - Geen enkel document wordt verwijderd zonder Sophia approval.
 - Contracten, facturen, bonnen, kwitanties, juridische dossiers en bewijsstukken worden nooit verwijderd.
 - Afgeronde artistfasen gaan naar de relevante artist `09_ARCHIVE`-map.
-- Afgeronde projecten gaan naar `06_PROJECTS/09_ARCHIVE` of centrale `07_ARCHIVE`.
-- Legacy materiaal gaat naar `07_ARCHIVE/LEGACY`.
-- Jaargebonden archief gaat naar `07_ARCHIVE/[JAAR]`.
+- Afgeronde deals gaan naar `04_DEALS/[DEAL]/99_ARCHIEF` of centrale `99_ARCHIVE`.
+- Legacy materiaal gaat naar `99_ARCHIVE/LEGACY_ROOTS`.
+- Jaargebonden archief gaat naar `99_ARCHIVE/[JAAR]`.
 
-## 9. 00_INBOX REGELS
-
-- Alles zonder duidelijke plek komt tijdelijk in `00_INBOX`.
-- CM VAULT AGENT verwerkt `00_INBOX` wekelijks.
-- Elk document krijgt:
-  - documenttype
-  - eigenaar-agent
-  - opslaglocatie
-  - workflow
-  - approval status indien nodig
-- Documenten blijven maximaal 7 dagen in `00_INBOX`.
-- Bij twijfel escaleert CM VAULT AGENT naar CM CONTROL AGENT of Sophia.
-
-## 10. CONFLICTREGELS
+## 9. CONFLICTREGELS
 
 - GitHub wint bij governance.
 - Moneybird wint bij financiële waarheid.
@@ -202,7 +284,7 @@ Regels:
 - Drive wint bij opslag.
 - Bij conflict escaleert CM CONTROL AGENT.
 
-## 11. VERWIJZINGEN
+## 10. VERWIJZINGEN
 
 - `docs/00_GOVERNANCE/CM_SYSTEM_DECISION_MATRIX.md`
 - `docs/07_AI_AGENTS/AGENT_RESPONSIBILITY_MATRIX.md`
