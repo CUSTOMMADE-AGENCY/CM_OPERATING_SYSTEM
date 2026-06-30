@@ -28,7 +28,7 @@ De agent zorgt dat documenten, templates, SOP’s, prompts, playbooks, governanc
 - Naming conventions
 - Documentvalidatie
 - Duplicate checks
-- 00_INBOX verwerking
+- Ongeclassificeerd document verwerking
 
 ## TOP 10 TAKEN
 
@@ -39,7 +39,7 @@ De agent zorgt dat documenten, templates, SOP’s, prompts, playbooks, governanc
 5. Playbook structureren
 6. Dubbele documenten signaleren
 7. Verkeerd geplaatste documenten signaleren
-8. 00_INBOX verwerken
+8. Ongeclassificeerde documenten verwerken (voorstel → CM FLOW plaatst naar `99_ARCHIVE/REVIEW_HOLD`)
 9. Archiefvoorstellen maken
 10. AS_BUILT bijwerken
 
@@ -61,7 +61,7 @@ De agent zorgt dat documenten, templates, SOP’s, prompts, playbooks, governanc
 - Nieuwe playbooks
 - Nieuwe governance-updates
 - Nieuwe client- of dealmappen
-- Bestanden in 00_INBOX
+- Bestanden in `99_ARCHIVE/REVIEW_HOLD`
 - Bestanden zonder duidelijke eigenaar
 - Verouderde of dubbele documenten
 - Verzoeken vanuit andere agents
@@ -95,7 +95,7 @@ De agent zorgt dat documenten, templates, SOP’s, prompts, playbooks, governanc
 - Templates met outputlocatie: 100%
 - Documenten zonder eigenaar: 0
 - Dubbele master-templates: 0
-- 00_INBOX achterstand: 0 open langer dan 7 dagen
+- Ongeclassificeerde documenten in `99_ARCHIVE/REVIEW_HOLD`: 0 langer dan 7 dagen
 - Governance-conflicten: binnen 48 uur gesignaleerd
 - Verwijderde documenten zonder goedkeuring: 0
 
@@ -113,7 +113,7 @@ De agent zorgt dat documenten, templates, SOP’s, prompts, playbooks, governanc
 
 ## HANDOFFS
 
-- **Inbound:** documenten, templates, prompts, playbooks, governance-updates en 00_INBOX.
+- **Inbound:** documenten, templates, prompts, playbooks, governance-updates en ongeclassificeerde bestanden via `99_ARCHIVE/REVIEW_HOLD`.
 - **Outbound → CONTROL:** governance conflict, onduidelijke eigenaar, structuurwijziging.
 - **Outbound → LEGAL:** contracten, NDA’s, IP-rechten, publishing, licensing, sync, deal documents.
 - **Outbound → MONEY:** facturen, bonnen, kwitanties, open posten, Moneybird-documenten.
