@@ -11,6 +11,8 @@
 - Autonomy levels en Sophia approval gates staan in `AI_AUTONOMY_LEVELS.md`.
 - De taakgerichte autonomy-toepassing staat in `AI_TASK_AUTONOMY_MATRIX.md`.
 - Escalatielevels, escalatieroutes en verplichte escalatie-output staan in `ESCALATION_PROTOCOLS.md`.
+- Agentcertificering, productiepoorten en agentpaspoorten staan in `AGENT_CERTIFICATION_STANDARD.md`.
+- De volledige agentlevenscyclus van idee tot uitfasering staat in `AGENT_LIFECYCLE.md`.
 
 ## AGENTS — OVERZICHT
 
