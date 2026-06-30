@@ -1,14 +1,18 @@
 # CM VAULT V1 — Make Scenario
 
 **Make Scenario ID:** 6289645
-**Status:** Aangemaakt — INACTIEF (handmatige activatie vereist)
+**Status:** INACTIEF / TEST REQUIRED
 **Schedule:** Elke maandag om 09:00 (Amsterdam)
+
+---
+
+Dit scenario is nog niet ACTIVE. Eerst Run once, testlog, rapportcontrole en CM CONTROL approval.
 
 ---
 
 ## Doel
 
-CM VAULT V1 controleert wekelijks alle artiestmappen in Google Drive en zorgt dat elke artiest exact de 9 verplichte submappen heeft. Ontbrekende mappen worden automatisch aangemaakt. Na elke run ontvangt `info@custommade.agency` een volledig rapport.
+CM VAULT V1 controleert wekelijks alle artiestmappen onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` in Google Drive en zorgt dat elke artiest exact de 9 verplichte submappen heeft. Ontbrekende mappen worden automatisch aangemaakt. Na elke run ontvangt `info@custommade.agency` een volledig rapport.
 
 ---
 
@@ -31,7 +35,7 @@ CM VAULT V1 controleert wekelijks alle artiestmappen in Google Drive en zorgt da
 ## Drive-structuur
 
 ```
-OS _CUSTOMMADE (ID: 0B2aV9TqyUPDzd0F1WEd1RkVxNFk)
+OS_CUSTOMMADE (ID: 0B2aV9TqyUPDzd0F1WEd1RkVxNFk)
 └── 02_ARTIST_MANAGEMENT
     ├── CALSEY
     │   ├── 01_ADMIN
@@ -174,7 +178,7 @@ Het scenario staat INACTIEF. Om te activeren:
 1. Open Make → Team: My Team
 2. Zoek scenario "CM VAULT V1" (ID: 6289645)
 3. Test eerst handmatig met "Run once"
-4. Activeer daarna het wekelijkse schema
+4. Activeer daarna het wekelijkse schema pas na vastgelegd testlog, rapportcontrole en CM CONTROL approval
 
 ---
 
