@@ -150,7 +150,7 @@ Per template moet worden vastgelegd:
 
 ## **AGENT EIGENAARSCHAP**
 
-Per map moet de verantwoordelijke agent worden vastgelegd volgens `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. DEALS valt onder CM LEGAL AGENT; `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT. Vanaf CM Agent Register V1.4 valt finance onder CM MONEY AGENT.
+Per Drive-map moet exact één verantwoordelijke Owner Agent worden vastgelegd volgens `docs/04_SYSTEMS/DRIVE_MAPPING.md` en `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. Support Agents mogen input, review of uitvoering leveren, maar zijn geen mede-eigenaar. `01_MASTER_BOUTIQUE`, `04_DEALS` en `07_LEGAL` vallen als Drive-owner onder CM LEGAL AGENT. Vanaf CM Agent Register V1.4 valt finance onder CM MONEY AGENT.
 
 | Map of domein | Verantwoordelijke agent |
 | --- | --- |
