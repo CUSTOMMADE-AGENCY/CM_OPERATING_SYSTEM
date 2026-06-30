@@ -18,10 +18,10 @@ Buiten scope:
 
 | Rol | Verantwoordelijkheid |
 |---|---|
-| Process owner | Bepaalt of het proces geschikt is voor automatisering. |
-| Automation owner | Bouwt, test en onderhoudt het Make-scenario. |
-| System owner | Beheert rechten, toolinstellingen en datatoegang. |
-| Reviewer | Controleert of trigger, output, fallback en risico's kloppen. |
+| CM OPS AGENT | Bepaalt of het operationele proces geschikt is voor automatisering. |
+| CM FLOW AGENT | Bouwt, test, monitort en onderhoudt het Make-scenario. |
+| CM FLOW AGENT | Beheert scenario-inrichting, toolkoppelingen en datatoegang binnen de goedgekeurde scope. |
+| CM CONTROL AGENT | Controleert of trigger, output, fallback, governance en risico's kloppen. |
 
 ## **SCENARIO STATUSSEN**
 
@@ -39,10 +39,10 @@ Buiten scope:
 
 | Scenario | Probleem | Trigger | Input | Actie | Output | Owner | Status | Fallback |
 |---|---|---|---|---|---|---|---|---|
-| Client setup folder creation | Handmatige mapaanmaak geeft kans op inconsistentie. | ClickUp-task krijgt goedgekeurde setupstatus. | Client setup-task met goedgekeurde velden. | Maak Drive-folderstructuur aan volgens standaard. | Drive-link wordt teruggeschreven naar ClickUp. | Automation owner | IDEA | Handmatige mapaanmaak via folderstandard. |
-| Approval follow-up reminder | Open approvals blijven te lang liggen. | Approval-deadline nadert of verloopt. | ClickUp-approvaltask met owner en deadline. | Stuur reminder of maak opvolgtaak. | Vastgelegde follow-up in ClickUp. | Process owner | IDEA | Handmatige weekly review. |
-| Template request intake | Template-aanvragen komen via losse kanalen binnen. | Formulier of ClickUp-verzoek wordt ingediend. | Template type, doel, owner en deadline. | Maak intake-task met juiste checklist. | Nieuwe template-task in juiste lijst. | Automation owner | IDEA | Handmatige taakaanmaak. |
-| Documentation review cadence | Documenten worden niet consistent herzien. | Reviewdatum bereikt. | Documentregister met reviewdatum en owner. | Maak reviewtask voor eigenaar. | Reviewbewijs in ClickUp. | Process owner | IDEA | Maandelijkse governance-check. |
+| Client setup folder creation | Handmatige mapaanmaak geeft kans op inconsistentie. | ClickUp-task krijgt goedgekeurde setupstatus. | Client setup-task met goedgekeurde velden. | Maak Drive-folderstructuur aan volgens standaard. | Drive-link wordt teruggeschreven naar ClickUp. | CM FLOW AGENT | IDEA | Handmatige mapaanmaak via folderstandard. |
+| Approval follow-up reminder | Open approvals blijven te lang liggen. | Approval-deadline nadert of verloopt. | ClickUp-approvaltask met owner en deadline. | Stuur reminder of maak opvolgtaak. | Vastgelegde follow-up in ClickUp. | CM OPS AGENT | IDEA | Handmatige weekly review. |
+| Template request intake | Template-aanvragen komen via losse kanalen binnen. | Formulier of ClickUp-verzoek wordt ingediend. | Template type, doel, owner en deadline. | Maak intake-task met juiste checklist. | Nieuwe template-task in juiste lijst. | CM FLOW AGENT | IDEA | Handmatige taakaanmaak. |
+| Documentation review cadence | Documenten worden niet consistent herzien. | Reviewdatum bereikt. | Documentregister met reviewdatum en owner. | Maak reviewtask voor eigenaar. | Reviewbewijs in ClickUp. | CM CONTROL AGENT | IDEA | Maandelijkse governance-check. |
 | CM VAULT V1 | Handmatige controle van artistfolderstructuur kost tijd en geeft fouten. | Weekly schedule maandag 09:00. | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` | Controleer 9 verplichte subfolders per artist en maak ontbrekende mappen aan. | Mailrapport naar `info@custommade.agency`. | CM FLOW AGENT | INACTIEF / TEST REQUIRED | Handmatige foldercheck volgens `DRIVE_STRUCTURE.md`. |
 
 ## **SCENARIO DESIGN CHECKLIST**
@@ -84,15 +84,15 @@ Gebruik deze checklist voordat een Make-scenario naar TEST of BUILD gaat.
 
 | Check | Frequentie | Owner | Bewijs |
 |---|---|---|---|
-| Run history controleren | Wekelijks bij ACTIVE-scenario's | Automation owner | ClickUp-checktask of reviewnotitie. |
-| Failure log beoordelen | Na elke foutmelding | Automation owner | Foutopvolging met oorzaak en oplossing. |
-| Rechten controleren | Per kwartaal | System owner | Access review-notitie. |
-| Output steekproef | Maandelijks | Process owner | Voorbeeldtask of outputlink. |
-| Fallback testen | Per kwartaal voor kritieke scenario's | Process owner | Testnotitie met datum en resultaat. |
+| Run history controleren | Wekelijks bij ACTIVE-scenario's | CM FLOW AGENT | ClickUp-checktask of reviewnotitie. |
+| Failure log beoordelen | Na elke foutmelding | CM FLOW AGENT | Foutopvolging met oorzaak en oplossing. |
+| Rechten controleren | Per kwartaal | CM CONTROL AGENT | Access review-notitie. |
+| Output steekproef | Maandelijks | CM OPS AGENT | Voorbeeldtask of outputlink. |
+| Fallback testen | Per kwartaal voor kritieke scenario's | CM OPS AGENT | Testnotitie met datum en resultaat. |
 
 ## **ESCALATIECRITERIA**
 
-Escaleren naar de process owner wanneer:
+Escaleren naar CM OPS AGENT wanneer:
 
 - Een scenario meer dan één keer per week faalt.
 - Output ontbreekt in ClickUp, Drive of Gmail.
@@ -100,7 +100,7 @@ Escaleren naar de process owner wanneer:
 - Een trigger te breed blijkt en verkeerde taken of bestanden raakt.
 - Een scenario een beslissing vereist die niet in de approvalmatrix staat.
 
-Escaleren naar de system owner wanneer:
+Escaleren naar CM FLOW AGENT wanneer:
 
 - API-rechten, tokens of toolkoppelingen verlopen zijn.
 - Een scenario toegang vraagt tot meer data dan noodzakelijk.
@@ -110,7 +110,7 @@ Escaleren naar de system owner wanneer:
 
 | Datum | Scenario | Wijziging | Reden | Owner | Reviewstatus |
 |---|---|---|---|---|---|
-| YYYY-MM-DD | Naam scenario | Wat is aangepast? | Waarom is dit nodig? | Naam/rol | Open / Approved / Rejected |
+| YYYY-MM-DD | Naam scenario | Wat is aangepast? | Waarom is dit nodig? | CM FLOW AGENT / CM OPS AGENT / CM CONTROL AGENT | Open / Approved / Rejected |
 
 ## **REVIEWRITME**
 
