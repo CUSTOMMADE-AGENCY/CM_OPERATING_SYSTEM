@@ -106,9 +106,16 @@ Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels en rootfol
 
 ## Make productie-as-built
 
-Make is gedocumenteerd als automatiseringslaag, maar er zijn geen live Make-scenario's actief. Het enige bestaande gedocumenteerde scenario is **CM VAULT V1**. Status: **INACTIEF / TEST REQUIRED**. CM VAULT V1 mag niet live totdat testlog, fallback, monitoring en approval zijn vastgelegd.
+Make is gedocumenteerd als automatiseringslaag, maar er zijn geen live Make-scenario's actief. Het enige bestaande gedocumenteerde scenario is **CM VAULT V1**. Status: **INACTIEF / TEST REQUIRED**. CM VAULT V1 mag niet live totdat testlog, fallback, monitoring en CM CONTROL approval zijn vastgelegd.
 
 CM VAULT V1 is bedoeld voor een wekelijkse folderstructuurcheck onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. De fallback blijft een handmatige foldercheck volgens `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`.
+
+
+## Scripts productie-as-built
+
+Voor de goedgekeurde Drive build is `scripts/google-drive/create-cm-drive-structure.gs` het PRIMARY script. Dit script is de leidende Apps Script-bron voor het aanmaken of valideren van de goedgekeurde `OS_CUSTOMMADE` rootlaag, bekende artistfolders en gecontroleerde lean dealcase-structuren.
+
+`scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` is uitsluitend **SAFE ROOT REPAIR only**. Dit bestand mag alleen worden gebruikt voor veilige root-reparatie binnen de bestaande AS-BUILT en is niet het primaire buildscript.
 
 ## Open PR review
 
@@ -187,7 +194,7 @@ Per Drive-map moet exact één verantwoordelijke Owner Agent worden vastgelegd v
 | --- | --- | --- | --- | --- | --- | --- |
 | Google Drive | Bronopslag voor operationele documenten, assets en clientbestanden | CM VAULT AGENT | Documenten, templates, assets en dossiers | Geordende bronstructuur en archief | Gmail, ClickUp, Canva, Google Sheets/PDF/e-mail en Make | VAULT archiveert alleen en verwijdert nooit |
 | ClickUp | Taak-, project- en pipelinebesturing | CM OPS AGENT | Taken, statussen, deadlines en owners | Planning, dashboards en actielijsten | Make, Gmail en Google Drive | Eigenaarschap per taak verplicht |
-| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Nog geen actieve scenario-output; Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en approval zijn vastgelegd | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht vóór livegang |
+| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Nog geen actieve scenario-output; Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht vóór livegang |
 | Canva | Creatie van visuele content en brand assets | CM SOCIAL AGENT | Briefings, assets en formats | Designs, visuals en publicatie-assets; Brand Kit is nog te bouwen | Drive en Website CMS | Publicatie vereist goedkeuring |
 | ChatGPT | AI-ondersteuning voor concepten, analyse en structurering | CM VAULT AGENT | Prompts, bronmateriaal en instructies | Conceptteksten, samenvattingen en analyses | Drive en ClickUp via handmatige overdracht of Make | Output is concept totdat mens reviewt |
 | Claude | AI-ondersteuning voor lange documenten, analyse en redactie | CM VAULT AGENT | Documenten, prompts en context | Redactievoorstellen en structurering | Drive en handmatige workflows | Output is concept totdat mens reviewt |

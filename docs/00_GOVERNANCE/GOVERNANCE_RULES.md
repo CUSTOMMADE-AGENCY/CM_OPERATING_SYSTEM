@@ -27,7 +27,7 @@ Geen AI-agent mag governance wijzigen zonder eerst `DECISION_LOG.md` te controle
 - Gmail = communicatie; `info@custommade.agency` is de leidende mailbox
 - ChatGPT/Claude/Codex = analyse en verbetering
 - Ondertekening = Google Sheets/PDF/e-mail
-- Make = automatiseringslaag. Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en approval zijn vastgelegd.
+- Make = automatiseringslaag. Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd.
 - Canva = visuele tooling, maar de Brand Kit is nog te bouwen
 
 ## PDF Governance
@@ -205,12 +205,19 @@ Voor elke AI-agent output geldt:
 11. FIERCE en Custommade Agency blijven strikt gescheiden. Gebruik nooit FIERCE-governance, FIERCE-templates of FIERCE-mappen binnen Custommade Agency.
 
 
+
+## Apps Script-governance
+
+- `scripts/google-drive/create-cm-drive-structure.gs` is het PRIMARY script voor de approved Drive build van `OS_CUSTOMMADE`.
+- `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` is uitsluitend SAFE ROOT REPAIR only en mag geen alternatieve Drive-rootstructuur introduceren.
+- Scripts mogen geen Drive-content verwijderen, verplaatsen of hernoemen zonder Sophia approval.
+
 ## Tool- en ondertekeningsgovernance
 
 - `info@custommade.agency` is de leidende mailbox voor centrale externe communicatie, Gmail-templates en opvolging.
 - Ondertekening loopt via Google Sheets/PDF/e-mail. Er wordt geen extern ondertekenplatform opgenomen in de huidige CM-governance.
 - Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten; Drive, ClickUp en Gmail mogen uitsluitend verwijzingen of bewijs bevatten.
-- Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en approval zijn vastgelegd.
+- Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd.
 - Canva heeft nog geen Brand Kit. Brand Kit, brand assets en visuele templatebibliotheek blijven `nog te bouwen` totdat CM SOCIAL AGENT en CM CONTROL AGENT dit goedkeuren.
 - DEALS valt onder CM LEGAL AGENT. `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT.
 

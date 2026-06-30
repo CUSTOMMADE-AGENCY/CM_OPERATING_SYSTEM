@@ -51,6 +51,7 @@ Strikt eigenaarschapsmodel:
 - Elke Drive-map heeft exact één Owner Agent.
 - Support Agents leveren input, review of uitvoering binnen hun eigen expertise, maar zijn geen mede-eigenaar.
 - Bij conflict, onduidelijke routing of ontbrekende owner beslist CM CONTROL AGENT over escalatie; de tabel hieronder blijft leidend voor Drive-eigenaarschap.
+- `05_OPERATIONS` mag CM CONTROL AGENT als governance-mapowner hebben; documenttype `Operationeel document` blijft eigendom van CM OPS AGENT.
 
 | Drive-map | Owner Agent | Support Agents |
 |------------|-------------|----------------|
@@ -61,7 +62,7 @@ Strikt eigenaarschapsmodel:
 | 04_DEALS | CM LEGAL AGENT | CM PROSPECT AGENT, CM MONEY AGENT, CM VAULT AGENT |
 | 05_OPERATIONS | CM CONTROL AGENT | CM FLOW AGENT, CM OPS AGENT, CM VAULT AGENT |
 | 06_FINANCE | CM MONEY AGENT | CM CONTROL AGENT |
-| 07_LEGAL | CM LEGAL AGENT | CM CONTROL AGENT |
+| 07_LEGAL | CM LEGAL AGENT | CM CONTROL AGENT, CM VAULT AGENT |
 | 08_MARKETING | CM SOCIAL AGENT | CM OPS AGENT |
 | 09_CONTENT | CM SOCIAL AGENT | CM VAULT AGENT |
 | 99_ARCHIVE | CM VAULT AGENT | CM CONTROL AGENT |
@@ -237,7 +238,7 @@ Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wan
 | Juridisch document | `OS_CUSTOMMADE/07_LEGAL` | CM LEGAL AGENT | Legal review / contract lifecycle | Ja bij externe indiening of verplichting |
 | Marketing document | `OS_CUSTOMMADE/08_MARKETING` | CM SOCIAL AGENT | Marketingplanning / campagne delivery | Ja bij externe verzending of publicatie |
 | Content document | `OS_CUSTOMMADE/09_CONTENT` | CM SOCIAL AGENT | Content productie / publicatie | Ja bij publicatie namens CM of artist |
-| Operationeel document | `OS_CUSTOMMADE/05_OPERATIONS` | CM CONTROL AGENT | Operationeel beheer / intern onboarding | Nee, tenzij extern gedeeld of formeel besluit |
+| Operationeel document | `OS_CUSTOMMADE/05_OPERATIONS` | CM OPS AGENT | Operationeel beheer / intern onboarding | Nee, tenzij extern gedeeld of formeel besluit |
 | Admin document | `OS_CUSTOMMADE/00_ADMIN` | CM CONTROL AGENT | Admin beheer / templatebeheer | Nee, tenzij governance-wijziging |
 | Archive document | `OS_CUSTOMMADE/99_ARCHIVE` | CM VAULT AGENT | Archivering / retention | Ja bij documentverwijdering; archiveren zelf volgens retention-regels |
 

@@ -43,7 +43,7 @@ Buiten scope:
 | Approval follow-up reminder | Open approvals blijven te lang liggen. | Approval-deadline nadert of verloopt. | ClickUp-approvaltask met owner en deadline. | Stuur reminder of maak opvolgtaak. | Vastgelegde follow-up in ClickUp. | Process owner | IDEA | Handmatige weekly review. |
 | Template request intake | Template-aanvragen komen via losse kanalen binnen. | Formulier of ClickUp-verzoek wordt ingediend. | Template type, doel, owner en deadline. | Maak intake-task met juiste checklist. | Nieuwe template-task in juiste lijst. | Automation owner | IDEA | Handmatige taakaanmaak. |
 | Documentation review cadence | Documenten worden niet consistent herzien. | Reviewdatum bereikt. | Documentregister met reviewdatum en owner. | Maak reviewtask voor eigenaar. | Reviewbewijs in ClickUp. | Process owner | IDEA | Maandelijkse governance-check. |
-| CM VAULT V1 | Artist folderstructuur kan afwijken van de goedgekeurde AS-BUILT. | Wekelijkse geplande controle. | Folderstructuur onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. | Controleer per artist of de vaste subfolders aanwezig zijn; geen live-mutaties zonder approval. | Testlog of reviewnotitie met ontbrekende folders en vervolgactie. | CM FLOW AGENT | INACTIEF / TEST REQUIRED | Handmatige foldercheck volgens `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`. |
+| CM VAULT V1 | Handmatige controle van artistfolderstructuur kost tijd en geeft fouten. | Weekly schedule maandag 09:00. | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` | Controleer 9 verplichte subfolders per artist en maak ontbrekende mappen aan. | Mailrapport naar `info@custommade.agency`. | CM FLOW AGENT | INACTIEF / TEST REQUIRED | Handmatige foldercheck volgens `DRIVE_STRUCTURE.md`. |
 
 ## **SCENARIO DESIGN CHECKLIST**
 
