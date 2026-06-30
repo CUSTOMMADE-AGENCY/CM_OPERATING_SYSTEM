@@ -1,5 +1,6 @@
 /**
  * OS_CUSTOMMADE target structure creator for the CM_OS safe-roots migration.
+ * Governance status: SAFE ROOT REPAIR only; not the primary approved Drive build script.
  *
  * ── CHANGELOG ──────────────────────────────────────────────────────────────
  * - AS-BUILT align (22 jun 2026): '00_INBOX' verwijderd als top-level root;

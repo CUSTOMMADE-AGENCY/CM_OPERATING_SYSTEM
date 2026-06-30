@@ -22,6 +22,7 @@ Start altijd bij het probleem, niet bij de tool.
 
 ## Backlog
 
-| Automation | Probleem | Trigger | Tool/stack | Impact | Prioriteit | Owner | Status |
-|---|---|---|---|---|---|---|---|
-| Naam | Welk terugkerend werk kost tijd of geeft fouten? | Wanneer start dit? | Tool of handmatige stap | Tijdwinst, foutreductie of betere kwaliteit | High / Medium / Low | Naam/rol | IDEA / REVIEW / TEST / BUILD / ACTIVE / ARCHIVED |
+| Automation | Probleem | Trigger | Tool/stack | Impact | Prioriteit | Owner | Review | Status |
+|---|---|---|---|---|---|---|---|---|
+| Naam | Welk terugkerend werk kost tijd of geeft fouten? | Wanneer start dit? | Tool of handmatige stap | Tijdwinst, foutreductie of betere kwaliteit | High / Medium / Low | Naam/rol | Naam/rol | IDEA / REVIEW / TEST / BUILD / ACTIVE / ARCHIVED |
+| CM VAULT V1 | Artist folderstructuur kan inconsistent worden zonder periodieke controle. | Wekelijkse check onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. | Make + Google Drive, met handmatige fallback | Vroegtijdige detectie van ontbrekende artist-subfolders zonder Make live te zetten. | Medium | CM FLOW AGENT | CM CONTROL AGENT | TEST |
