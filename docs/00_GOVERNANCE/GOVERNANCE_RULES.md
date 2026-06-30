@@ -27,7 +27,7 @@ Geen AI-agent mag governance wijzigen zonder eerst `DECISION_LOG.md` te controle
 - Gmail = communicatie; `info@custommade.agency` is de leidende mailbox
 - ChatGPT/Claude/Codex = analyse en verbetering
 - Ondertekening = Google Sheets/PDF/e-mail
-- Make = automatiseringslaag, maar heeft nu 0 scenario’s en is nog in te richten
+- Make = automatiseringslaag. Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en approval zijn vastgelegd.
 - Canva = visuele tooling, maar de Brand Kit is nog te bouwen
 
 ## PDF Governance
@@ -210,7 +210,7 @@ Voor elke AI-agent output geldt:
 - `info@custommade.agency` is de leidende mailbox voor centrale externe communicatie, Gmail-templates en opvolging.
 - Ondertekening loopt via Google Sheets/PDF/e-mail. Er wordt geen extern ondertekenplatform opgenomen in de huidige CM-governance.
 - Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten; Drive, ClickUp en Gmail mogen uitsluitend verwijzingen of bewijs bevatten.
-- Make heeft nu 0 scenario’s. Elke Make-automation blijft `nog in te richten` totdat scenario, eigenaar, testlog, monitoring en failure handling zijn vastgelegd.
+- Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en approval zijn vastgelegd.
 - Canva heeft nog geen Brand Kit. Brand Kit, brand assets en visuele templatebibliotheek blijven `nog te bouwen` totdat CM SOCIAL AGENT en CM CONTROL AGENT dit goedkeuren.
 - DEALS valt onder CM LEGAL AGENT. `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT.
 
