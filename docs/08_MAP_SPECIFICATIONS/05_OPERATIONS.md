@@ -97,6 +97,7 @@
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
 | File Management SOP | `docs/03_SHARED_SERVICES/FILE_MANAGEMENT.md` | Bestandsbeheer in operationele context |
+| Operations SOP | `docs/03_SHARED_SERVICES/OPERATIONS_SOP.md` | Proceswijzigingenbeheer, governance-bewaking en operationele rapportage |
 
 ---
 

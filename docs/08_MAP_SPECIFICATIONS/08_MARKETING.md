@@ -87,7 +87,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Marketingproces SOP | TBD | Marketing- en campagnebeheer |
+| Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | Marketing- en campagnebeheer, brand guidelines, externe verzending |
 
 ---
 

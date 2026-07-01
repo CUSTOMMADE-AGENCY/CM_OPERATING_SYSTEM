@@ -95,7 +95,7 @@ Gebruik exact deze submapstructuur:
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Admin beheer / templatebeheer | TBD | Intern administratief beheer |
+| Admin SOP | `docs/03_SHARED_SERVICES/ADMIN_SOP.md` | Intern administratief beheer, intake-triage, governance-referenties en templatebeheer |
 
 ---
 

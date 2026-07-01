@@ -106,7 +106,7 @@
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Legal review SOP | TBD | Juridische review van contracten en documenten |
+| Legal Review SOP | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` | Juridische review van contracten en documenten, Approval Register-beheer |
 
 ---
 

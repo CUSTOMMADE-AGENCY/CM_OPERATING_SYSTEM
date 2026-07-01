@@ -86,7 +86,7 @@ Geen vaste templates toegewezen aan `99_ARCHIVE`.
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Archivering SOP | TBD | Archiveringsprocedure voor afgeronde dossiers |
+| Archive SOP | `docs/03_SHARED_SERVICES/ARCHIVE_SOP.md` | Archiveringsprocedure voor inactieve dossiers, legacy-materiaal en migratielog-beheer |
 
 ---
 

@@ -92,7 +92,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Finance intake SOP | TBD | Finance-intake en -verwerking |
+| Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | Finance-intake en -verwerking: Moneybird-exports, bankafschriften, BTW-aangifte-voorbereiding |
 
 ---
 
