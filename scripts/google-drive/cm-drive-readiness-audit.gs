@@ -77,6 +77,35 @@ const ARTIST_LEGACY_SOCIALMEDIA_FOLDERS = [
   'SOCIALMEDIA'
 ];
 
+const CLIENT_OPERATIONAL_SUBFOLDERS = [
+  '01_ADMIN',
+  '02_CONTRACT',
+  '03_BRIEF_SCOPE',
+  '04_DELIVERABLES',
+  '05_COMMUNICATION',
+  '06_FINANCE',
+  '09_ARCHIVE'
+];
+
+const CLIENT_FORBIDDEN_STATUS_LAYERS = [
+  '01_ACTIVE',
+  '02_PROSPECTS',
+  '03_ON_HOLD',
+  '04_OFFBOARDED'
+];
+
+const KNOWN_ARTIST_NAMES = [
+  'CALSEY',
+  'DANI DEAUX',
+  'DODO',
+  'GINIIO',
+  'GOUDTJE_GET_PAID',
+  'JAIRZINHO',
+  'KALIBWOY',
+  'LATIFAH',
+  'NAMIKOO'
+];
+
 const DEAL_REQUIRED_SUBFOLDERS = [
   '00_START_HIER',
   '01_RECHTEN_REGISTER',
@@ -299,12 +328,38 @@ function auditClients_(audit, root) {
 
   pass_(audit, section, '03_CLIENTS bestaat', 'OS_CUSTOMMADE/03_CLIENTS', clientsRoot.getUrl());
 
-  const suspiciousArtistWords = ['artist', 'artiest', 'release', 'ep', 'album'];
-  listChildFolders_(clientsRoot).forEach(function(folder) {
-    const lower = folder.getName().toLowerCase();
-    suspiciousArtistWords.forEach(function(word) {
-      if (lower.indexOf(word) >= 0) {
-        addFinding_(audit, section, 'MEDIUM', 'Mogelijke artist/client verwarring', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', folder.getName()]), 'Controleer of dit geen artistdossier is.');
+  const clientFolders = listChildFolders_(clientsRoot);
+  const clientNames = clientFolders.map(function(folder) { return folder.getName(); });
+
+  findDuplicateNames_(clientNames).forEach(function(name) {
+    addFinding_(audit, section, 'HIGH', 'Dubbele client/partnerfoldernaam', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', name]), 'Owner review vereist. Niet automatisch mergen.');
+  });
+
+  clientFolders.forEach(function(folder) {
+    const folderName = folder.getName();
+    const normalizedName = folderName.toUpperCase();
+
+    if (CLIENT_OPERATIONAL_SUBFOLDERS.indexOf(folderName) >= 0) {
+      addFinding_(audit, section, 'CRITICAL', 'Client layer missing: directe operationele submap onder 03_CLIENTS', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', folderName]), '03_CLIENTS is client-first. Gebruik OS_CUSTOMMADE/03_CLIENTS/[CLIENT_OR_PARTNER_NAME]/' + folderName + '.');
+      return;
+    }
+
+    if (CLIENT_FORBIDDEN_STATUS_LAYERS.indexOf(folderName) >= 0) {
+      addFinding_(audit, section, 'HIGH', 'STRUCTURE_ERROR: statuslaag gevonden onder 03_CLIENTS', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', folderName]), 'Geen statuslagen in Drive. Status en Pipeline staan in ClickUp.');
+      return;
+    }
+
+    if (KNOWN_ARTIST_NAMES.indexOf(normalizedName) >= 0) {
+      addFinding_(audit, section, 'CRITICAL', 'Bekende artist onder 03_CLIENTS', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', folderName]), 'Artists horen onder OS_CUSTOMMADE/02_ARTIST_MANAGEMENT, niet onder 03_CLIENTS.');
+      return;
+    }
+
+    CLIENT_OPERATIONAL_SUBFOLDERS.forEach(function(required) {
+      const subfolders = listChildFolders_(folder).map(function(child) { return child.getName(); });
+      if (subfolders.indexOf(required) >= 0) {
+        pass_(audit, section, 'Client subfolder aanwezig', folderName + '/' + required, '');
+      } else {
+        addFinding_(audit, section, 'HIGH', 'Client subfolder ontbreekt', pathJoin_(['OS_CUSTOMMADE', '03_CLIENTS', folderName, required]), 'Toevoegen aan repair-plan; niet automatisch aanmaken.');
       }
     });
   });

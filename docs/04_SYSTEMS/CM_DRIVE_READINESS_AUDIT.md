@@ -156,15 +156,36 @@ Controleer `OS_CUSTOMMADE/03_CLIENTS`.
 - media;
 - sponsors;
 - opdrachtgevers;
+- zakelijke clients;
 - partners.
 
-□ `03_CLIENTS` bevat geen artiesten.
+□ `03_CLIENTS` is client-first: directe submappen moeten client- of partnernamen zijn.
+
+□ `03_CLIENTS` mag geen directe operationele submappen bevatten zoals `01_ADMIN`, `02_CONTRACT`, `03_BRIEF_SCOPE`, `04_DELIVERABLES`, `05_COMMUNICATION`, `06_FINANCE` of `09_ARCHIVE`.
+
+□ Directe operationele submappen onder `03_CLIENTS` worden geclassificeerd als **CRITICAL**.
+
+□ Statuslagen onder `03_CLIENTS`, zoals `01_ACTIVE`, `02_PROSPECTS`, `03_ON_HOLD` of `04_OFFBOARDED`, worden geclassificeerd als **STRUCTURE_ERROR** en minimaal **HIGH** risico.
+
+□ `03_CLIENTS` bevat geen artiesten. Artists onder `03_CLIENTS` worden geclassificeerd als **CRITICAL**.
+
+□ Controleer dat de 7 verplichte submappen uitsluitend binnen `[CLIENT_OR_PARTNER_NAME]` staan:
+
+```text
+01_ADMIN
+02_CONTRACT
+03_BRIEF_SCOPE
+04_DELIVERABLES
+05_COMMUNICATION
+06_FINANCE
+09_ARCHIVE
+```
 
 □ Clientdossiers bevatten geen dealcases die onder `04_DEALS` thuishoren.
 
 □ Clientdossiers bevatten geen financiële bronadministratie die onder `06_FINANCE` of Moneybird thuishoort.
 
-□ Clientdossiers bevatten waar passend een start-/intakemap en archiefmap.
+□ Status, Pipeline en uitvoering staan in ClickUp, niet in Drive.
 
 ### LEGAL
 
