@@ -98,7 +98,7 @@ Gebruik de lean dealstructuur per Master Boutique case:
 
 ### 02_ARTIST_MANAGEMENT
 
-Gebruik onderstaande subfolders per artist dossier:
+Gebruik onderstaande subfolders per artist dossier. Artist Management is altijd artist-first: operationele submappen staan nooit direct onder `02_ARTIST_MANAGEMENT`, maar altijd onder `[ARTIST]`.
 
 ```text
 02_ARTIST_MANAGEMENT
@@ -223,14 +223,15 @@ Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wan
 
 | Documenttype | Opslaglocatie | Eigenaar-agent | Workflow | Approval nodig |
 |---|---|---|---|---|
-| Artist admin | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/01_ADMIN` | CM OPS AGENT | Artist onboarding / dossierbeheer | Nee, tenzij extern gedeeld |
-| Artist contract | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT` | CM LEGAL AGENT | Contract lifecycle / legal review | Ja, Level 4 bij ondertekening of verplichting |
-| Artist strategy | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/03_STRATEGY` | CM OPS AGENT | Artist strategy workflow | Ja bij artist approval of externe planning |
-| Release document | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/04_RELEASES` | CM OPS AGENT | Release strategy / release kickoff | Ja bij externe planning of publicatie |
-| Booking document | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/05_BOOKING` | CM OPS AGENT | Booking workflow | Ja bij financiële, juridische of externe commitment |
-| Artist finance-kopie | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` | CM MONEY AGENT | Finance intake / reporting | Ja bij financiële toezegging of correctie |
-| Social media document (artist) | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/07_SOCIALMEDIA` | CM SOCIAL AGENT | Content productie / social publishing | Ja bij publicatie namens CM of artist |
-| Press/EPK document (artist) | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/08_PRESS_EPK` | CM SOCIAL AGENT | Press / EPK workflow | Ja bij externe verzending of publicatie |
+| Artist admin files | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/01_ADMIN` | CM OPS AGENT | Artist onboarding / dossierbeheer | Nee, tenzij extern gedeeld |
+| Artist contracts | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/02_CONTRACT` | CM LEGAL AGENT | Contract lifecycle / legal review | Ja, Level 4 bij ondertekening of verplichting |
+| Artist strategy, Brand Audit, Brandbook, Business Audit, roadmap | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/03_STRATEGY` | CM OPS AGENT | Artist strategy workflow | Ja bij artist approval of externe planning |
+| Release files, metadata, artwork, release assets | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/04_RELEASES` | CM OPS AGENT | Release strategy / release kickoff | Ja bij externe planning of publicatie |
+| Booking/live | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/05_BOOKING` | CM OPS AGENT | Booking workflow | Ja bij financiële, juridische of externe commitment |
+| Artist finance references | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/06_FINANCE` | CM MONEY AGENT | Finance intake / reporting | Ja bij financiële toezegging of correctie |
+| Social content | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/07_SOCIALMEDIA` | CM SOCIAL AGENT | Content productie / social publishing | Ja bij publicatie namens CM of artist |
+| Press/EPK | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/08_PRESS_EPK` | CM SOCIAL AGENT | Press / EPK workflow | Ja bij externe verzending of publicatie |
+| Superseded/historical active-client files | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/09_ARCHIVE` | CM VAULT AGENT | Artist dossierbeheer / versiehygiëne | Nee, tenzij archivering een formeel besluit vraagt |
 | Master Boutique document | `OS_CUSTOMMADE/01_MASTER_BOUTIQUE/[CASE]` | CM LEGAL AGENT | Deal intake / valuation / negotiation | Ja bij externe distributie, dealbesluit of share |
 | Deal document | `OS_CUSTOMMADE/04_DEALS/[DEAL]` | CM LEGAL AGENT | Deal intake / due diligence / closing | Ja bij externe distributie, dealbesluit of share |
 | Client document | `OS_CUSTOMMADE/03_CLIENTS/[CLIENT]` | CM OPS AGENT | Client onboarding / delivery / rapportage | Ja bij externe verzending of contractafspraak |

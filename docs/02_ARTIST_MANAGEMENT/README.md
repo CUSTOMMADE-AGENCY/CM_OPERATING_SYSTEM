@@ -34,6 +34,11 @@ Elke Workflow bevat Doel, Reikwijdte, Eigenaar, Inputs, Workflow stappen, Beslis
 
 Artistspecifieke bestanden en deliverables staan in Google Drive. Uitvoeringstaken staan in ClickUp. Deze repository bewaart alleen de operationele regels.
 
+- De Drive-map `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` bevat uitsluitend actieve artistfolders.
+- Elke artistfolder volgt `ARTIST_FOLDER_STANDARD.md`.
+- Statuslagen horen niet in Drive; status en Pipeline staan in ClickUp.
+- Inactieve artists gaan naar `OS_CUSTOMMADE/99_ARCHIVE/ARTIST_MANAGEMENT/[ARTIST_NAME]`.
+
 ## Kwaliteitschecks
 
 - Geen vertrouwelijke data zonder juiste approval of NDA.

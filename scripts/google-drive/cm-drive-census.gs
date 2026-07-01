@@ -43,6 +43,23 @@ const APPROVED_ROOTS = [
   '99_ARCHIVE'
 ];
 
+const ARTIST_OPERATIONAL_SUBFOLDERS = [
+  '01_ADMIN',
+  '02_CONTRACT',
+  '03_STRATEGY',
+  '04_RELEASES',
+  '05_BOOKING',
+  '06_FINANCE',
+  '07_SOCIALMEDIA',
+  '08_PRESS_EPK',
+  '09_ARCHIVE'
+];
+
+const ARTIST_LEGACY_SOCIALMEDIA_FOLDERS = [
+  '07_CONTENT',
+  'SOCIALMEDIA'
+];
+
 const LEGACY_ROOT_HINTS = [
   '00_INBOX',
   '01_ARTIST_MANAGEMENT',
@@ -165,15 +182,33 @@ function scanFolder_(folder, name, parentPath, depth, state) {
 
 function classifyFolder_(name, path, depth, fileCount, subfolderCount) {
   if (depth === 0) return 'ROOT';
+  if (isDirectArtistManagementChild_(path, depth)) {
+    if (ARTIST_OPERATIONAL_SUBFOLDERS.indexOf(name) >= 0) return 'STRUCTURE_ERROR_ARTIST_LAYER_MISSING';
+    return 'ACTIVE_ARTIST_FOLDER';
+  }
+  if (isArtistManagementGrandchild_(path, depth) && ARTIST_LEGACY_SOCIALMEDIA_FOLDERS.indexOf(name) >= 0) {
+    return 'LEGACY_SOCIALMEDIA_STRUCTURE';
+  }
   if (depth === 1 && APPROVED_ROOTS.indexOf(name) >= 0) return 'APPROVED_ROOT';
   if (depth === 1 && LEGACY_ROOT_HINTS.indexOf(name) >= 0) return 'LEGACY_ROOT';
   if (fileCount > 0 || subfolderCount > 0) return 'DATA_OR_STRUCTURE';
   return 'EMPTY';
 }
 
+function isDirectArtistManagementChild_(path, depth) {
+  return depth === 2 && /^(OS _CUSTOMMADE|OS_CUSTOMMADE)\/02_ARTIST_MANAGEMENT\/[^/]+$/.test(path);
+}
+
+function isArtistManagementGrandchild_(path, depth) {
+  return depth === 3 && /^(OS _CUSTOMMADE|OS_CUSTOMMADE)\/02_ARTIST_MANAGEMENT\/[^/]+\/[^/]+$/.test(path);
+}
+
 function adviseFolder_(name, path, depth, fileCount, subfolderCount, category) {
   if (category === 'ROOT') return 'KEEP';
   if (category === 'APPROVED_ROOT') return 'KEEP';
+  if (category === 'ACTIVE_ARTIST_FOLDER') return 'KEEP';
+  if (category === 'STRUCTURE_ERROR_ARTIST_LAYER_MISSING') return 'REVIEW_ARTIST_LAYER_MISSING';
+  if (category === 'LEGACY_SOCIALMEDIA_STRUCTURE') return 'REVIEW_MIGRATE_TO_07_SOCIALMEDIA';
   if (category === 'LEGACY_ROOT') return fileCount > 0 || subfolderCount > 0 ? 'REVIEW' : 'ARCHIVE';
   if (category === 'EMPTY') return 'REVIEW';
   if (/template/i.test(name)) return 'REVIEW';
