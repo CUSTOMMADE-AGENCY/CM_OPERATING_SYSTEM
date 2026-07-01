@@ -1,4 +1,15 @@
 # ClickUp Task Template — Release Strategy
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -80,8 +91,7 @@ Release manager of artist manager voor planning en launch readiness. Artist voor
 `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/05_Releases/[Release Name]`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Release Strategy Approval`
 - `CM - Artist Management - Meeting Agenda`

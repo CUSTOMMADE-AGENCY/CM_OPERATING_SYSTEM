@@ -1,4 +1,15 @@
 # Gmail Templates
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM SOCIAL AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Doel
 

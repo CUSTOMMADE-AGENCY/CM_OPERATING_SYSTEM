@@ -10,7 +10,7 @@ Deze map bevat specificaties voor e-mailinstructies en Gmail-templategebruik.
 
 ## Owner agent
 
-Communication Agent
+CM SOCIAL AGENT
 
 ## Gebruiksregels
 

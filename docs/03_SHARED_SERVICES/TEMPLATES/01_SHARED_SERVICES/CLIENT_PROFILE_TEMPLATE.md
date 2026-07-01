@@ -1,4 +1,7 @@
 # CLIENT_PROFILE_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij onboarding, herstart van samenwerking of overdracht tussen agents.
 
 ## Owner Agent
 
-Client Success Agent
+CM OPS AGENT
 
 ## Support Agents
 
-Shared Services Agent; Artist Management Agent
+CM VAULT AGENT; CM OPS AGENT
 
 ## System of Record
 
@@ -65,7 +68,7 @@ Client onboarding workflow
 
 ## Approval
 
-Ja, door Sophia of CM CONTROL. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+Ja, door Sophia of CM CONTROL AGENT. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
 
 ## Kwaliteitscheck
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

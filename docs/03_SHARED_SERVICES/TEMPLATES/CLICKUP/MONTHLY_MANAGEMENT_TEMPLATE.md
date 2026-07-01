@@ -1,4 +1,15 @@
 # ClickUp Task Template — Monthly Management
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -75,8 +86,7 @@ Artist manager voor monthly cycle en ClickUp integrity. Artist of aangewezen dec
 `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/06_Monthly_Management/[YYYY-MM]`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Meeting Agenda`
 - `CM - Artist Management - Meeting Recap`

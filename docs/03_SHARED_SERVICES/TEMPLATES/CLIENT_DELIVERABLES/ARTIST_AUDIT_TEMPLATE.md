@@ -1,4 +1,15 @@
 # ARTIST AUDIT TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM OPS AGENT
+
+## Support Agents
+
+CM SOCIAL AGENT; CM VAULT AGENT
 
 ## Documentinformatie
 

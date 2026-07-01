@@ -1,4 +1,15 @@
 # TEMPLATE_USAGE_REPORT_SPEC
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM VAULT AGENT
+
+## Support Agents
+
+CM CONTROL AGENT
 
 ## Doel
 
@@ -28,7 +39,7 @@ ClickUp = uitvoering en taakreferenties.
 | Nieuwe bestanden | Nieuwe outputs buiten templatekopieën | Ja | Alleen als governance dit toestaat |
 | Reden nieuw bestand | Waarom bestaande template niet volstond | Ja indien nieuw bestand | Koppelen aan gap-log |
 | Afwijkingen/gaps | Vastgestelde ontbrekende velden of mismatch | Ja | Gebruik TEMPLATE_GAP_LOG |
-| Approvalstatus | Of approval nodig en verkregen is | Ja | Sophia / CM CONTROL indien van toepassing |
+| Approvalstatus | Of approval nodig en verkregen is | Ja | Sophia / CM CONTROL AGENT indien van toepassing |
 
 ## Structuur
 

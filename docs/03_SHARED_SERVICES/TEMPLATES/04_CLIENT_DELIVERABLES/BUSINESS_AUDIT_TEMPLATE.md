@@ -1,4 +1,7 @@
 # BUSINESS_AUDIT_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij retainerstart, kwartaalreview of strategische herpositionering.
 
 ## Owner Agent
 
-Business Strategy Agent
+CM MONEY AGENT
 
 ## Support Agents
 
-Artist Management Agent; Finance Reference Agent
+CM OPS AGENT; CM MONEY AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

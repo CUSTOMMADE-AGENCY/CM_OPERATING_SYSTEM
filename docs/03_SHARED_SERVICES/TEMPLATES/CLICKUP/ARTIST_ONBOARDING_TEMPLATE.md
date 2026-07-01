@@ -1,4 +1,15 @@
 # ClickUp Task Template — Artist Onboarding
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -35,7 +46,7 @@ Gebruik deze template zodra engagement, Scope of pilot is bevestigd en vóór Br
 | Field | Type | Required value |
 |---|---|---|
 | GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/ARTIST_ONBOARDING_FLOW.md` |
-| Drive Folder | URL | Artist `00_Onboarding` folder |
+| Drive Folder | URL | TBD – Sophia / VAULT beslissing |
 | Gmail Template Set | Dropdown | Onboarding Welcome; Input Request; Meeting Recap; Approval Request |
 | Approval Owner | Person | Artist manager + artist decision owner |
 | Artist Name | Text | Official artist name |
@@ -76,8 +87,7 @@ Artist manager voor operationele inrichting. Artist of aangewezen decision owner
 `docs/02_ARTIST_MANAGEMENT/ARTIST_ONBOARDING_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/01_ARTIST_ONBOARDING_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/00_Onboarding` en `02_ARTIST_MANAGEMENT/[Artist Name]/01_Active_Management`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Onboarding Welcome`
 - `CM - Artist Management - Input Request`

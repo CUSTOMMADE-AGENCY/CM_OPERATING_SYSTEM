@@ -12,7 +12,7 @@ Deze map bevat templates en registers voor deals, partnerships en muziekrechten 
 
 ## Owner agent
 
-Master Boutique Agent
+CM PROSPECT AGENT
 
 ## Gebruiksregels
 

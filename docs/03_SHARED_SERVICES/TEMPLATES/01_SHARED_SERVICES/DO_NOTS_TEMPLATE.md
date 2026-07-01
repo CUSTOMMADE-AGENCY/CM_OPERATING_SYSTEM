@@ -1,4 +1,7 @@
 # DO_NOTS_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij onboarding, agent-instructies en workflow-controles.
 
 ## Owner Agent
 
-Governance Agent
+CM CONTROL AGENT
 
 ## Support Agents
 
-Shared Services Agent; CM CONTROL
+CM VAULT AGENT; CM CONTROL AGENT
 
 ## System of Record
 
@@ -45,7 +48,7 @@ Governance compliance workflow
 | --- | --- | --- | --- | --- |
 | Verbod | Wat niet mag | Ja | Governance | Kort formuleren |
 | Reden | Waarom dit risico geeft | Ja | Governance |  |
-| Escalatie | Wie beslist | Ja | CM CONTROL |  |
+| Escalatie | Wie beslist | Ja | CM CONTROL AGENT |  |
 | Alternatief | Toegestane werkwijze | Nee | Workflow |  |
 
 ## Output
@@ -59,7 +62,7 @@ Governance compliance workflow
 | Sectie | Doel | Verplicht |
 | --- | --- | --- |
 | Do nots | Concrete verboden acties | Ja |
-| Escalatie | Wanneer Sophia/CM CONTROL nodig is | Ja |
+| Escalatie | Wanneer Sophia/CM CONTROL AGENT nodig is | Ja |
 | Toegestane route | Correcte vervolgstap | Ja |
 
 ## Approval
@@ -98,4 +101,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

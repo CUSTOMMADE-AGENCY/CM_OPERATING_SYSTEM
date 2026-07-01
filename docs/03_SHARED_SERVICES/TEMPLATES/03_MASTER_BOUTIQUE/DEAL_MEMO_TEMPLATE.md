@@ -1,4 +1,7 @@
 # DEAL_MEMO_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij dealkwalificatie, buyer-facing voorbereiding of interne approval.
 
 ## Owner Agent
 
-Master Boutique Agent
+CM PROSPECT AGENT
 
 ## Support Agents
 
-Rights Agent; Deal Agent; CM CONTROL
+CM LEGAL AGENT; CM PROSPECT AGENT; CM CONTROL AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
