@@ -60,35 +60,6 @@ const ARTIST_LEGACY_SOCIALMEDIA_FOLDERS = [
   'SOCIALMEDIA'
 ];
 
-const CLIENT_OPERATIONAL_SUBFOLDERS = [
-  '01_ADMIN',
-  '02_CONTRACT',
-  '03_BRIEF_SCOPE',
-  '04_DELIVERABLES',
-  '05_COMMUNICATION',
-  '06_FINANCE',
-  '09_ARCHIVE'
-];
-
-const CLIENT_FORBIDDEN_STATUS_LAYERS = [
-  '01_ACTIVE',
-  '02_PROSPECTS',
-  '03_ON_HOLD',
-  '04_OFFBOARDED'
-];
-
-const KNOWN_ARTIST_NAMES = [
-  'CALSEY',
-  'DANI DEAUX',
-  'DODO',
-  'GINIIO',
-  'GOUDTJE_GET_PAID',
-  'JAIRZINHO',
-  'KALIBWOY',
-  'LATIFAH',
-  'NAMIKOO'
-];
-
 const LEGACY_ROOT_HINTS = [
   '00_INBOX',
   '01_ARTIST_MANAGEMENT',
@@ -215,11 +186,6 @@ function classifyFolder_(name, path, depth, fileCount, subfolderCount) {
     if (ARTIST_OPERATIONAL_SUBFOLDERS.indexOf(name) >= 0) return 'STRUCTURE_ERROR_ARTIST_LAYER_MISSING';
     return 'ACTIVE_ARTIST_FOLDER';
   }
-  if (isDirectClientsChild_(path, depth)) {
-    if (CLIENT_OPERATIONAL_SUBFOLDERS.indexOf(name) >= 0 || CLIENT_FORBIDDEN_STATUS_LAYERS.indexOf(name) >= 0) return 'STRUCTURE_ERROR_CLIENT_LAYER_MISSING';
-    if (KNOWN_ARTIST_NAMES.indexOf(name.toUpperCase()) >= 0) return 'ARTIST_MISPLACED_IN_CLIENTS';
-    return 'CLIENT_OR_PARTNER_FOLDER';
-  }
   if (isArtistManagementGrandchild_(path, depth) && ARTIST_LEGACY_SOCIALMEDIA_FOLDERS.indexOf(name) >= 0) {
     return 'LEGACY_SOCIALMEDIA_STRUCTURE';
   }
@@ -237,18 +203,11 @@ function isArtistManagementGrandchild_(path, depth) {
   return depth === 3 && /^(OS _CUSTOMMADE|OS_CUSTOMMADE)\/02_ARTIST_MANAGEMENT\/[^/]+\/[^/]+$/.test(path);
 }
 
-function isDirectClientsChild_(path, depth) {
-  return depth === 2 && /^(OS _CUSTOMMADE|OS_CUSTOMMADE)\/03_CLIENTS\/[^/]+$/.test(path);
-}
-
 function adviseFolder_(name, path, depth, fileCount, subfolderCount, category) {
   if (category === 'ROOT') return 'KEEP';
   if (category === 'APPROVED_ROOT') return 'KEEP';
   if (category === 'ACTIVE_ARTIST_FOLDER') return 'KEEP';
-  if (category === 'CLIENT_OR_PARTNER_FOLDER') return 'KEEP';
   if (category === 'STRUCTURE_ERROR_ARTIST_LAYER_MISSING') return 'REVIEW_ARTIST_LAYER_MISSING';
-  if (category === 'STRUCTURE_ERROR_CLIENT_LAYER_MISSING') return 'REVIEW_CLIENT_LAYER_MISSING';
-  if (category === 'ARTIST_MISPLACED_IN_CLIENTS') return 'REVIEW_MOVE_TO_ARTIST_MANAGEMENT';
   if (category === 'LEGACY_SOCIALMEDIA_STRUCTURE') return 'REVIEW_MIGRATE_TO_07_SOCIALMEDIA';
   if (category === 'LEGACY_ROOT') return fileCount > 0 || subfolderCount > 0 ? 'REVIEW' : 'ARCHIVE';
   if (category === 'EMPTY') return 'REVIEW';
