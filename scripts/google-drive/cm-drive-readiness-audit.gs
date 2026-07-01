@@ -20,6 +20,7 @@
 const READ_ONLY_MODE = true;
 const AUDIT_VERSION = 'CM DRIVE READINESS AUDIT SCRIPT V1';
 const AUDIT_ROOT_NAME = 'OS_CUSTOMMADE';
+const AUDIT_ROOT_ID = '0B2aV9TqyUPDzd0F1WEd1RkVxNFk';
 const MAX_FOLDER_SCAN = 1500;
 const MAX_FILE_SCAN = 3000;
 const ENABLE_SHARING_AUDIT = true;
@@ -84,21 +85,13 @@ function runCmDriveReadinessAudit() {
   const audit = createAuditState_(startedAt);
 
   try {
-    const rootFolders = findFoldersByName_(AUDIT_ROOT_NAME);
-
-    if (rootFolders.length === 0) {
-      addFinding_(audit, 'ROOT', 'CRITICAL', 'OS_CUSTOMMADE ontbreekt', AUDIT_ROOT_NAME, 'Maak geen automatische actie. Escaleer naar CM CONTROL AGENT.');
-      finalizeAudit_(audit);
-      return;
-    }
-
-    if (rootFolders.length > 1) {
-      addFinding_(audit, 'ROOT', 'CRITICAL', 'Meerdere OS_CUSTOMMADE roots gevonden', AUDIT_ROOT_NAME, 'Owner review vereist. Geen cleanup zonder hold-lijst en approval.');
-    }
-
-    const root = rootFolders[0];
+    const root = DriveApp.getFolderById(AUDIT_ROOT_ID);
     audit.rootId = root.getId();
     audit.rootUrl = root.getUrl();
+
+    if (root.getName() !== AUDIT_ROOT_NAME) {
+      addFinding_(audit, 'ROOT', 'LOW', 'Rootfoldernaam wijkt af van verwachte naam', root.getName(), 'Controleer of de vaste folder-ID nog naar de officiële productie-root verwijst. Audit gaat read-only verder.');
+    }
 
     auditRoot_(audit, root);
     auditArtistManagement_(audit, root);
@@ -303,7 +296,7 @@ function auditLegal_(audit, root) {
 
   pass_(audit, section, '07_LEGAL bestaat', 'OS_CUSTOMMADE/07_LEGAL', legalRoot.getUrl());
 
-  const approvalFolder = getFolderByPath_(APPROVAL_REGISTER_PATH);
+  const approvalFolder = getFolderByPathFromRoot_(root, APPROVAL_REGISTER_PATH.slice(1));
   if (approvalFolder) {
     pass_(audit, section, 'Approval Register bestaat', APPROVAL_REGISTER_PATH.join('/'), approvalFolder.getUrl());
   } else {
@@ -605,15 +598,6 @@ function addFinding_(audit, sectionKey, risk, title, path, action) {
   });
 }
 
-function findFoldersByName_(name) {
-  const iterator = DriveApp.getFoldersByName(name);
-  const folders = [];
-  while (iterator.hasNext()) {
-    folders.push(iterator.next());
-  }
-  return folders;
-}
-
 function getSingleChildFolder_(parent, name) {
   const folders = listChildFolders_(parent).filter(function(folder) {
     return folder.getName() === name;
@@ -621,13 +605,12 @@ function getSingleChildFolder_(parent, name) {
   return folders.length ? folders[0] : null;
 }
 
-function getFolderByPath_(pathParts) {
-  if (!pathParts || pathParts.length === 0) return null;
-  const roots = findFoldersByName_(pathParts[0]);
-  if (roots.length === 0) return null;
 
-  let current = roots[0];
-  for (let i = 1; i < pathParts.length; i += 1) {
+function getFolderByPathFromRoot_(root, pathParts) {
+  if (!root || !pathParts || pathParts.length === 0) return root || null;
+
+  let current = root;
+  for (let i = 0; i < pathParts.length; i += 1) {
     current = getSingleChildFolder_(current, pathParts[i]);
     if (!current) return null;
   }
