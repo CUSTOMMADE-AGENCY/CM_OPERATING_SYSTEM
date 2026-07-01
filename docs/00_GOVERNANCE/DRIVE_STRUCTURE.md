@@ -82,20 +82,9 @@ De oude Engelse dealstructuur is niet meer toegestaan als standaard Drive-struct
 
 ## Client folder rule
 
-`OS_CUSTOMMADE/03_CLIENTS` is client-first en bevat uitsluitend merken, bedrijven, sponsors, opdrachtgevers, media partners, zakelijke clients en partners. Gebruik deze root niet voor artiestendossiers of artist-managementdossiers.
+`OS_CUSTOMMADE/03_CLIENTS` bevat uitsluitend merken, bedrijven, sponsors, opdrachtgevers en media partners. Gebruik deze root niet voor artiestendossiers.
 
-De Client Drive-structuur is altijd client-first: niet `OS_CUSTOMMADE/03_CLIENTS/01_ADMIN`, wel `OS_CUSTOMMADE/03_CLIENTS/[CLIENT_OR_PARTNER_NAME]/01_ADMIN`. `OS_CUSTOMMADE/03_CLIENTS` bevat geen statuslagen; ClickUp beheert status en Pipeline. De officiële detailstandaard staat in `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md`.
-
-```text
-[CLIENT_OR_PARTNER_NAME]
-├── 01_ADMIN
-├── 02_CONTRACT
-├── 03_BRIEF_SCOPE
-├── 04_DELIVERABLES
-├── 05_COMMUNICATION
-├── 06_FINANCE
-└── 09_ARCHIVE
-```
+Elke commerciële-relatiefolder gebruikt waar relevant dezelfde genummerde productiestructuur als passend is voor het dossier.
 
 ## Shared Services versus client-specifieke instructies
 
