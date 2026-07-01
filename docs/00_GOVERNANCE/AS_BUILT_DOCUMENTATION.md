@@ -78,20 +78,6 @@ OS_CUSTOMMADE/02_ARTIST_MANAGEMENT
     └── 09_ARCHIVE
 ```
 
-`OS_CUSTOMMADE/03_CLIENTS` is client-first en bevat uitsluitend merken, bedrijven, sponsors, opdrachtgevers, media partners, zakelijke clients en partners. Artists en artist-managementdossiers horen hier niet. Directe submappen onder `03_CLIENTS` zijn altijd client- of partnernamen; de operationele submappen staan daaronder:
-
-```text
-OS_CUSTOMMADE/03_CLIENTS
-└── [CLIENT_OR_PARTNER_NAME]
-    ├── 01_ADMIN
-    ├── 02_CONTRACT
-    ├── 03_BRIEF_SCOPE
-    ├── 04_DELIVERABLES
-    ├── 05_COMMUNICATION
-    ├── 06_FINANCE
-    └── 09_ARCHIVE
-```
-
 Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang de deal de due diligence fase niet heeft bereikt:
 
 ```text
