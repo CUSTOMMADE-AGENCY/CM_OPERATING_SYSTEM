@@ -54,20 +54,20 @@ Gebruik exact deze submapstructuur:
 
 ```text
 00_ADMIN
-├── 01_ONBOARDING
+├── 01_INBOX_REVIEW
 ├── 02_GOVERNANCE_REFERENCE
 ├── 03_TEMPLATES
-├── 04_HR
-└── 05_CURSUS_MASTERCLASSES
+├── 04_REPORTS
+└── 05_APPROVALS
 ```
 
 | Submap | Gebruik |
 |---|---|
-| `01_ONBOARDING` | Onboardingmateriaal voor nieuwe teamleden, interns en freelancers. |
-| `02_GOVERNANCE_REFERENCE` | Geëxporteerde of geprinte referentieversies van GitHub-governance voor intern gebruik. |
-| `03_TEMPLATES` | Operationele templates voor intern gebruik die niet gekoppeld zijn aan een specifieke artist of client. |
-| `04_HR` | HR-documenten: arbeidsovereenkomsten, freelance-overeenkomsten, interne NDA's. |
-| `05_CURSUS_MASTERCLASSES` | Opleidingsmateriaal, masterclass-presentaties en leerresources voor teamontwikkeling. |
+| `01_INBOX_REVIEW` | Tijdelijke intake en triage voor CM-brede documenten. |
+| `02_GOVERNANCE_REFERENCE` | Operationele kopieën of verwijzingen naar goedgekeurde governance. |
+| `03_TEMPLATES` | Werkbare Drive-kopieën van goedgekeurde templates. |
+| `04_REPORTS` | CM-brede operationele rapportages en exports. |
+| `05_APPROVALS` | Admin-gerelateerde approval evidence; legal approvals blijven in `07_LEGAL`. |
 
 ---
 

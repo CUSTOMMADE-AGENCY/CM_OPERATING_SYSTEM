@@ -82,7 +82,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Finance Intake Workflow (artist) | `docs/02_ARTIST_MANAGEMENT/07_FINANCE_INTAKE_WORKFLOW.md` | Finance-intake voor artist; output naar `02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` |
+| Finance Intake Flow (artist) | TBD | Finance-intake voor artist; output naar `02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` |
 | Finance reconciliation | TBD | Periodieke finance-reconciliatie |
 | Year-end finance | TBD | Jaarafsluiting en jaarrapportage |
 
@@ -124,8 +124,8 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM MONEY AGENT; bij
 
 | Actie | Approvalniveau | Approver |
 |---|---|---|
-| Toevoegen van finance-referentie of export | Level 3 | CM MONEY AGENT |
-| Bijwerken van cashflow-prognose | Level 3 | CM MONEY AGENT |
+| Toevoegen van finance-referentie of export | Level 2 | CM MONEY AGENT |
+| Bijwerken van cashflow-prognose | Level 2 | CM MONEY AGENT |
 | Financiële toezegging of correctie | Level 4 | Sophia |
 | Indiening bij Belastingdienst | Level 4 | Sophia |
 | Externe communicatie over financiën | Level 4 | Sophia |

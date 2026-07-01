@@ -55,18 +55,24 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 ```text
 03_CLIENTS
 └── [CLIENT_NAAM]
-    ├── 00_START_HIER
-    └── 99_ARCHIEF
+    ├── 01_ADMIN
+    ├── 02_CONTRACT
+    ├── 03_BRIEF_SCOPE
+    ├── 04_DELIVERABLES
+    ├── 05_COMMUNICATION
+    ├── 06_FINANCE
+    └── 09_ARCHIVE
 ```
-
-De substructuur per client is afhankelijk van de aard van de samenwerking. Minimaal aanwezig:
 
 | Submap | Gebruik |
 |---|---|
-| `00_START_HIER` | Client profiel, onboardingdocument, instructies en contractreferentie. Startpunt voor elk clientdossier. |
-| `99_ARCHIEF` | Afgeronde, superseded of niet-actieve clientdocumenten. |
-
-Aanvullende submappen worden aangemaakt wanneer de inhoud dat vereist, conform de CM-naamconventie.
+| `01_ADMIN` | Clientprofiel, onboardingdocument, instructies en interne notities. |
+| `02_CONTRACT` | Getekende contracten, addenda en NDA's met de client. |
+| `03_BRIEF_SCOPE` | Briefings, scopes en projectdefinities. |
+| `04_DELIVERABLES` | Opgeleverde bestanden en documenten voor de client. |
+| `05_COMMUNICATION` | Formele correspondentie, verslagen en bewijsstukken. |
+| `06_FINANCE` | Financiële referenties, budgetten en fee-afspraken voor dit clientdossier. |
+| `09_ARCHIVE` | Afgeronde, superseded of niet-actieve clientdocumenten. |
 
 ---
 

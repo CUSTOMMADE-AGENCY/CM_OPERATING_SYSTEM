@@ -122,8 +122,8 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM SOCIAL AGENT; bi
 
 | Actie | Approvalniveau | Approver |
 |---|---|---|
-| Aanmaken campagnedossier of brand-document | Level 3 | CM SOCIAL AGENT |
-| Bijwerken brand guidelines of netwerkoverzicht | Level 3 | CM SOCIAL AGENT |
+| Aanmaken campagnedossier of brand-document | Level 2 | CM SOCIAL AGENT |
+| Bijwerken brand guidelines of netwerkoverzicht | Level 2 | CM SOCIAL AGENT |
 | Externe verzending van marketingmateriaal | Level 4 | Sophia |
 | Publicatie namens CM | Level 4 | Sophia |
 | Aangaan van partnerovereenkomst | Level 4 | Sophia |

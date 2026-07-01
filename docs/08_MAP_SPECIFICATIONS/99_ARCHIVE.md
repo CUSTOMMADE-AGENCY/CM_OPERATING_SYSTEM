@@ -49,27 +49,22 @@
 
 ```text
 99_ARCHIVE
-├── 00_START_HIER
+├── ARTIST_MANAGEMENT
+├── CLIENTS
+├── DEALS
+├── REVIEW_HOLD_OLD_STRUCTURE
 ├── LEGACY_ROOTS
-├── REVIEW_HOLD
-└── 99_ARCHIEF
-```
-
-Aanvullend worden jaargebonden archiefmappen aangemaakt wanneer relevant:
-
-```text
-99_ARCHIVE
-└── [JAAR]
-    └── [inhoud van dat jaar]
+└── MIGRATION_LOGS
 ```
 
 | Submap | Gebruik |
 |---|---|
-| `00_START_HIER` | Archief-instructies, overzicht en archiveerregels voor `99_ARCHIVE`. |
+| `ARTIST_MANAGEMENT` | Gearchiveerde artistdossiers en -documenten. |
+| `CLIENTS` | Gearchiveerde clientdossiers en -documenten. |
+| `DEALS` | Gearchiveerde dealdossiers en -documenten. |
+| `REVIEW_HOLD_OLD_STRUCTURE` | Documenten in tijdelijke hold voor review vóór definitieve archivering of verwijdering. |
 | `LEGACY_ROOTS` | Legacy-materiaal van vorige structuren, rootnamen of niet-actieve projecten. |
-| `REVIEW_HOLD` | Documenten in tijdelijke hold voor review vóór definitieve archivering of verwijdering. |
-| `99_ARCHIEF` | Afgeronde, gearchiveerde documenten die geen actieve categorie meer hebben. |
-| `[JAAR]` | Jaargebonden archief van documenten en dossiers (aangemaakt per jaar wanneer van toepassing). |
+| `MIGRATION_LOGS` | Logs en verslagen van Drive-migraties en structuurwijzigingen. |
 
 ---
 
