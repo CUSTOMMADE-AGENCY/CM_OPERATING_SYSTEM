@@ -18,7 +18,7 @@
 
 ## **2. DOEL**
 
-`04_DEALS` bevat operationele dealdossiers: rechtenbewijs, waardering, buyer-facing dealmateriaal en alle aanverwante deal-governance voor dealcases buiten het Master Boutique-label. Elke dealcase krijgt een eigen submap met de lean dealstructuur. `04_DEALS` bevat geen Master Boutique-cases (→ `01_MASTER_BOUTIQUE`), geen artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`) en geen algemene clientdossiers (→ `03_CLIENTS`).
+`04_DEALS` bevat alle concrete operationele dealdossiers onder `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`: rechtenbewijs, waardering, buyer-facing dealmateriaal en alle aanverwante deal-governance voor concrete dealcases en assets. Elke dealcase of asset krijgt een eigen submap met de lean dealstructuur. `01_MASTER_BOUTIQUE` bevat uitsluitend context, playbooks, methodieken, marktmodellen, rights modellen, acquisitie frameworks, buyer frameworks, valuation methodieken, due diligence methodieken en algemene kennis; concrete Master Boutique-dealcases staan ook uitsluitend in `04_DEALS`. `04_DEALS` bevat geen artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`) en geen algemene clientdossiers (→ `03_CLIENTS`).
 
 ---
 
@@ -37,7 +37,7 @@
 
 ## **4. VERBODEN DOCUMENTEN**
 
-- Master Boutique-cases (→ `01_MASTER_BOUTIQUE`)
+- Algemene Master Boutique-kennis en methodieken zonder concrete dealcase (→ `01_MASTER_BOUTIQUE`)
 - Artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`)
 - Clientdossiers zonder dealkoppeling (→ `03_CLIENTS`)
 - Facturen en bonnen als primaire financiële documenten (→ `06_FINANCE` of Moneybird)
@@ -52,14 +52,15 @@
 Gebruik de lean dealstructuur per dealcase. Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wanneer een deal de due diligence-fase bereikt.
 
 ```text
-04_DEALS
-└── [DEAL_NAAM]
-    ├── 00_START_HIER
-    ├── 01_RECHTEN_REGISTER
-    ├── 02_CONTRACTEN_BEWIJS
-    ├── 03_WAARDERING_VERKOOPPAKKET
-    ├── 04_OUTREACH_CLICKUP
-    └── 99_ARCHIEF
+OS_CUSTOMMADE
+└── 04_DEALS
+    └── [DEAL_OR_ASSET_NAME]
+        ├── 00_START_HIER
+        ├── 01_RECHTEN_REGISTER
+        ├── 02_CONTRACTEN_BEWIJS
+        ├── 03_WAARDERING_VERKOOPPAKKET
+        ├── 04_OUTREACH_CLICKUP
+        └── 99_ARCHIEF
 ```
 
 | Submap | Gebruik |
@@ -77,8 +78,8 @@ Gebruik de lean dealstructuur per dealcase. Data Room-, LOI-, APA-, Closing- en 
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Rights Audit Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/RIGHTS_AUDIT_TEMPLATE.md` | `04_DEALS/[DEAL]/01_RECHTEN_REGISTER` |
-| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | `04_DEALS/[DEAL]/04_OUTREACH_CLICKUP` |
+| Rights Audit Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/RIGHTS_AUDIT_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/01_RECHTEN_REGISTER` |
+| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/04_OUTREACH_CLICKUP` |
 
 ---
 
@@ -150,7 +151,7 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM LEGAL AGENT; bij
 
 ## **13. ARCHIVEREGELS**
 
-- Afgeronde deals gaan naar `04_DEALS/[DEAL]/99_ARCHIEF` of centrale `99_ARCHIVE`.
+- Afgeronde deals gaan naar `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/99_ARCHIEF` of centrale `99_ARCHIVE`.
 - Geen enkel document wordt verwijderd zonder Sophia-approval.
 - CM VAULT AGENT voert archivering uit na instructie van CM LEGAL AGENT.
 - Contracten, rechtenregisters en bewijsstukken worden nooit verwijderd.
@@ -189,7 +190,7 @@ Incorrect: `deal memo nieuw definitief.pdf`
 | Informatietype | Source of Truth |
 |---|---|
 | Deal-structuur en governance | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/06_PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
-| Rechtenregisters en contracten | Drive (`04_DEALS/[DEAL]/01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`) |
+| Rechtenregisters en contracten | Drive (`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/02_CONTRACTEN_BEWIJS`) |
 | Taakstatus en dealfases | ClickUp |
 | Buyer-correspondentie | Gmail |
 | Financiële verwerking | Moneybird |
@@ -254,7 +255,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 | Fout | Correctie |
 |---|---|
-| Master Boutique-case in `04_DEALS` opgeslagen | Verplaats naar `01_MASTER_BOUTIQUE` |
+| Algemene Master Boutique-methodiek in `04_DEALS` opgeslagen | Verplaats naar `01_MASTER_BOUTIQUE`; concrete dealcases blijven in `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`. |
 | Artistdossier in `04_DEALS` opgeslagen | Verplaats naar `02_ARTIST_MANAGEMENT/[ARTIST]` |
 | Buyer Package extern verzonden zonder Sophia-approval | Herstop; registreer in Approval Register; escaleer naar Sophia |
 | Data Room aangemaakt vóór due diligence-fase | Verwijder of archiveer; her-aanmaken pas bij due diligence |

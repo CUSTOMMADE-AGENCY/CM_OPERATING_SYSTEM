@@ -10,7 +10,7 @@
 | Drive-pad | `OS_CUSTOMMADE/01_MASTER_BOUTIQUE` |
 | Owner Agent | CM LEGAL AGENT |
 | Status | Actief |
-| Versie | 1.0 |
+| Versie | 1.1 |
 | Laatste review | 2026-07-01 |
 | Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/` |
 
@@ -18,7 +18,9 @@
 
 ## **2. DOEL**
 
-`01_MASTER_BOUTIQUE` bevat alle operationele dossiers voor Master Boutique-cases: catalogusaankopen, rechtenverkoop en aanverwante dealtrajecten onder het Master Boutique-label. Elke case krijgt een eigen submap met de lean dealstructuur. `01_MASTER_BOUTIQUE` bevat geen algemene deals die niet onder het Master Boutique-label vallen (→ `04_DEALS`) en geen artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`).
+`01_MASTER_BOUTIQUE` is de kennis- en methodiekenmap voor het Master Boutique-domein. De map bevat uitsluitend Master Boutique-context, playbooks, methodieken, marktmodellen, rights modellen, acquisitieframeworks, buyer frameworks, valuation methodieken, due diligence methodieken en algemene kennis.
+
+Concrete dealcases, casefolders, live dealdossiers, Assets en Buyers staan niet in `01_MASTER_BOUTIQUE`. Concrete dealcases staan uitsluitend onder `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`.
 
 ---
 
@@ -26,49 +28,55 @@
 
 | Documenttype | Omschrijving | Voorbeeldbestandsnamen |
 |---|---|---|
-| Rechtenregister | Catalogus- en rechteninventarisatie per case | `RECHTEN_REGISTER_[CASE].xlsx` |
-| Contracten en bewijsstukken | Overeenkomsten, bewijsstukken van rechtenoverdracht, juridische onderbouwing | `CONTRACT_[CASE]_SIGNED.pdf` |
-| Waardering en verkooppakket | Waardebepaling, Deal Memo, Buyer Package, finale exports | `DEAL_MEMO_[CASE]_V1.pdf` |
-| Outreach-referenties | Buyer lead-referenties, outreach-notities en ClickUp-verwijzingen | `OUTREACH_NOTES_[CASE].docx` |
-| README en instructies | Statusdocument, document requests, governance-notities per case | `README_[CASE].md` |
-| Data Room-documenten | Due diligence-materiaal (alleen na due diligence-fase) | `DATA_ROOM_INDEX_[CASE].pdf` |
+| Contextdocumenten | Master Boutique-positionering, scope, uitgangspunten en domeinkaders. | `MASTER_BOUTIQUE_CONTEXT.md` |
+| Playbooks | Herbruikbare proces- en beslislogica voor catalogus-, buyer- en rechtenprocessen. | `CATALOG_ACQUISITION_PLAYBOOK.md` |
+| Methodieken | Algemene werkwijzen voor waardering, due diligence, rights checks en dealvoorbereiding. | `VALUATION_METHODOLOGY.md` |
+| Marktmodellen | Algemene marktanalyses, benchmarkmodellen en categorisaties zonder live dealdata. | `MARKET_MODEL_CATALOGS.md` |
+| Frameworks | Acquisitie-, buyer-, rights- en governanceframeworks. | `BUYER_FRAMEWORK.md` |
+| Algemene kennis | Niet-clientspecifieke referenties, definities en researchnotities. | `RIGHTS_MODEL_REFERENCE.md` |
 
 ---
 
 ## **4. VERBODEN DOCUMENTEN**
 
-- Algemene deals buiten Master Boutique-scope (→ `04_DEALS`)
-- Artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`)
-- Facturen en bonnen (→ `06_FINANCE` of Moneybird)
-- Marketing- of contentmateriaal (→ `08_MARKETING` of `09_CONTENT`)
-- Clientdossiers zonder dealkoppeling (→ `03_CLIENTS`)
-- Lege casenamen of ad-hoc mappen buiten de lean dealstructuur
+- Concrete dealcases, casefolders of live dealdossiers (→ `04_DEALS`).
+- Assets, catalogusdossiers of deal-specifieke datarooms (→ `04_DEALS/[DEAL_OR_ASSET_NAME]`).
+- Buyer-lijsten, buyer-identificerende gegevens of outreachdossiers voor live deals (→ ClickUp/Gmail/`04_DEALS` volgens governance).
+- Artistmanagementdossiers (→ `02_ARTIST_MANAGEMENT`).
+- Facturen en bonnen (→ `06_FINANCE` of Moneybird).
+- Clientdossiers zonder dealkoppeling (→ `03_CLIENTS`).
+- Getekende contracten, rechtenbewijzen en live correspondentie (→ juiste operationele Drive-map of systeem van waarheid).
 
 ---
 
 ## **5. SUBMAPPEN**
 
-Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, Closing- en Success Fee-mappen worden pas aangemaakt wanneer een deal de due diligence-fase bereikt.
+`01_MASTER_BOUTIQUE` gebruikt alleen kennis- en methodiekcategorieën. Er worden geen casefolders, dealfolders of assetfolders onder deze map aangemaakt.
 
 ```text
 01_MASTER_BOUTIQUE
-└── [CASE_NAAM]
-    ├── 00_START_HIER
-    ├── 01_RECHTEN_REGISTER
-    ├── 02_CONTRACTEN_BEWIJS
-    ├── 03_WAARDERING_VERKOOPPAKKET
-    ├── 04_OUTREACH_CLICKUP
-    └── 99_ARCHIEF
+├── 01_CONTEXT
+├── 02_PLAYBOOKS
+├── 03_METHODOLOGIES
+├── 04_MARKET_MODELS
+├── 05_RIGHTS_MODELS
+├── 06_ACQUISITION_FRAMEWORKS
+├── 07_BUYER_FRAMEWORKS
+├── 08_VALUATION_METHODS
+└── 09_DUE_DILIGENCE_METHODS
 ```
 
 | Submap | Gebruik |
 |---|---|
-| `00_START_HIER` | README, status, instructies, document requests en governance-notities voor de case. |
-| `01_RECHTEN_REGISTER` | Rechten- en catalogusdata voor de case. |
-| `02_CONTRACTEN_BEWIJS` | Contracten, bewijsstukken en juridische onderbouwing. |
-| `03_WAARDERING_VERKOOPPAKKET` | Waardering, Deal Memo, Buyer Package en finale export. |
-| `04_OUTREACH_CLICKUP` | Buyer lead-referenties, outreach-notities en ClickUp-verwijzingen. |
-| `99_ARCHIEF` | Superseded exports, oude ad-hoc sheets en niet-leidende bestanden. |
+| `01_CONTEXT` | Master Boutique-context, scope en domeinkaders. |
+| `02_PLAYBOOKS` | Herbruikbare playbooks zonder live dealdata. |
+| `03_METHODOLOGIES` | Algemene methodieken voor uitvoering en review. |
+| `04_MARKET_MODELS` | Marktmodellen en benchmarkkaders. |
+| `05_RIGHTS_MODELS` | Algemene rechtenmodellen en rights taxonomie. |
+| `06_ACQUISITION_FRAMEWORKS` | Acquisitiekaders en intakecriteria. |
+| `07_BUYER_FRAMEWORKS` | Buyer segmentatie- en kwalificatiekaders zonder buyerdossiers. |
+| `08_VALUATION_METHODS` | Waarderingsmethodieken en rekenlogica zonder live cases. |
+| `09_DUE_DILIGENCE_METHODS` | Due diligence methodieken, checklists en proceskaders. |
 
 ---
 
@@ -76,7 +84,7 @@ Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, 
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | `01_MASTER_BOUTIQUE/[CASE]/04_OUTREACH_CLICKUP` |
+| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | Alleen als methodische referentie; operationele deal-output hoort onder `04_DEALS/[DEAL_OR_ASSET_NAME]`. |
 
 ---
 
@@ -84,8 +92,8 @@ Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, 
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Buyer Outreach Workflow | `docs/01_MASTER_BOUTIQUE/BUYER_OUTREACH_WORKFLOW.md` | Start van buyer outreach voor een case |
-| Dealflow catalogusdossier | `docs/01_MASTER_BOUTIQUE/DEALFLOW_CATALOG_ASSET.md` | Intake van nieuw Master Boutique-dossier |
+| Buyer Outreach Workflow | `docs/01_MASTER_BOUTIQUE/BUYER_OUTREACH_WORKFLOW.md` | Referentie voor algemene buyer outreach-methodiek. |
+| Dealflow catalogusdossier | `docs/01_MASTER_BOUTIQUE/DEALFLOW_CATALOG_ASSET.md` | Referentie voor intake-methodiek; concrete dossiers worden in `04_DEALS` geplaatst. |
 
 ---
 
@@ -93,7 +101,7 @@ Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, 
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Due Diligence Checklist | `docs/01_MASTER_BOUTIQUE/DUE_DILIGENCE_CHECKLIST.md` | Due diligence-fase van een Master Boutique-deal |
+| Due Diligence Checklist | `docs/01_MASTER_BOUTIQUE/DUE_DILIGENCE_CHECKLIST.md` | Algemene due diligence-methodiek; live due diligence-output hoort onder `04_DEALS/[DEAL_OR_ASSET_NAME]`. |
 
 ---
 
@@ -101,13 +109,13 @@ Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, 
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| APA Negotiation Playbook | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md` | APA-onderhandeling voor catalogusverkoop |
-| Catalog Valuation Playbook | `docs/01_MASTER_BOUTIQUE/CATALOG_VALUATION_PLAYBOOK.md` | Waardebepaling van muziekcatalogus |
-| Buyer Outreach Playbook | `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie |
-| Sell Side Process Playbook | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkooptraject aan verkoperskant |
-| Buy Side Process Playbook | `docs/06_PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankooptraject aan koperskant |
-| Deal Negotiation Playbook | `docs/06_PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling |
-| Catalog Acquisition Playbook | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop |
+| APA Negotiation Playbook | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md` | Algemene APA-onderhandelingsmethodiek. |
+| Catalog Valuation Playbook | `docs/01_MASTER_BOUTIQUE/CATALOG_VALUATION_PLAYBOOK.md` | Algemene waarderingsmethodiek. |
+| Buyer Outreach Playbook | `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie als generiek proces. |
+| Sell Side Process Playbook | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkoopproces als generiek proces. |
+| Buy Side Process Playbook | `docs/06_PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankoopproces als generiek proces. |
+| Deal Negotiation Playbook | `docs/06_PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling als generieke methodiek. |
+| Catalog Acquisition Playbook | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop als generiek proces. |
 
 ---
 
@@ -115,7 +123,7 @@ Gebruik de lean dealstructuur per Master Boutique-case. Data Room-, LOI-, APA-, 
 
 **CM LEGAL AGENT**
 
-CM LEGAL AGENT beheert alle Master Boutique-cases als primaire eigenaar. De agent bewaakt de juridische integriteit van rechtenregisters, contracten en deal packages, en coördineert het dealtraject van intake tot closing.
+CM LEGAL AGENT beheert de juridische en methodische integriteit van Master Boutique-kennis, rechtenmodellen, acquisitiekaders en due diligence-methodieken.
 
 ---
 
@@ -123,10 +131,10 @@ CM LEGAL AGENT beheert alle Master Boutique-cases als primaire eigenaar. De agen
 
 | Agent | Rol in deze map |
 |---|---|
-| CM OPS AGENT | Operationele ondersteuning bij casenaming, dossierstructuur en intake-coördinatie. |
-| CM MONEY AGENT | Finance-signalen bij waardering, succes fee en financiële dealstructuur. |
-| CM VAULT AGENT | Archivering van afgeronde cases en superseded exports. |
-| CM PROSPECT AGENT | Buyer outreach, buyer kwalificatie en buyer database-beheer. |
+| CM OPS AGENT | Operationele ondersteuning bij documentordening en methodiekbeheer. |
+| CM MONEY AGENT | Finance-signalen bij algemene valuation methodieken. |
+| CM VAULT AGENT | Archivering van superseded kennisdocumenten naar centrale archive governance. |
+| CM PROSPECT AGENT | Input op buyer frameworks en buyerkwalificatie-methodiek. |
 
 Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM LEGAL AGENT; bij escalatie: CM CONTROL AGENT.
 
@@ -136,22 +144,20 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM LEGAL AGENT; bij
 
 | Actie | Approvalniveau | Approver |
 |---|---|---|
-| Aanmaken nieuw casedossier | Level 2 | CM LEGAL AGENT |
-| Bijwerken rechtenregister | Level 2 | CM LEGAL AGENT |
-| Versturen van Buyer Package aan externe partij | Level 4 | Sophia |
-| Ondertekening of vastleggen juridische verplichting | Level 4 | Sophia |
-| Externe distributie van Deal Memo of verkooppakket | Level 4 | Sophia |
-| Sluiten of archiveren van een deal | Level 4 | Sophia |
+| Aanpassen algemene methodiek of framework | Level 2 | CM LEGAL AGENT |
+| Publiceren van nieuw playbook of model | Level 2 | CM LEGAL AGENT |
+| Toevoegen van deal-specifieke informatie | Niet toegestaan | Verplaats naar `04_DEALS` |
+| Externe distributie van interne methodiek | Level 4 | Sophia |
 | Verwijdering van document | Level 4 | Sophia |
 
 ---
 
 ## **13. ARCHIVEREGELS**
 
-- Afgeronde Master Boutique-cases gaan naar `01_MASTER_BOUTIQUE/[CASE]/99_ARCHIEF` of naar de centrale `99_ARCHIVE`.
+- Superseded kennisdocumenten worden volgens centrale archive governance afgehandeld.
+- `01_MASTER_BOUTIQUE` gebruikt geen per-case `99_ARCHIEF`.
+- Concrete afgeronde dealdossiers worden niet hier gearchiveerd maar volgens `04_DEALS` en `99_ARCHIVE` governance.
 - Geen enkel document wordt verwijderd zonder Sophia-approval.
-- CM VAULT AGENT voert archivering uit na instructie van CM LEGAL AGENT.
-- Contracten, rechtenregisters en bewijsstukken worden nooit verwijderd.
 
 ---
 
@@ -159,13 +165,12 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM LEGAL AGENT; bij
 
 Zie `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` voor de volledige standaard.
 
-- Casenamen in hoofdletters met underscores: `[CASE_NAAM]`
-- Bestandsnamen met casekoppeling: `RECHTEN_REGISTER_[CASE].xlsx`
-- Geen `final`, `new`, `copy`, `oud`, `v2` in bestandsnamen
-- Versienummering met `_V1`, `_V2` etc. bij dealpackages
+- Gebruik beschrijvende kennisnamen in hoofdletters met underscores.
+- Gebruik geen live case-, asset- of buyernamen in repository-bestandsnamen.
+- Versienummering met `_V1`, `_V2` etc. bij methodiekexports.
 
-Correct: `DEAL_MEMO_MASTERCASE_V2.pdf`
-Incorrect: `deal memo nieuw definitief.pdf`
+Correct: `CATALOG_VALUATION_METHOD_V2.md`
+Incorrect: `deal memo buyer final nieuw.pdf`
 
 ---
 
@@ -173,11 +178,11 @@ Incorrect: `deal memo nieuw definitief.pdf`
 
 | Systeem | Rol | Koppeling |
 |---|---|---|
-| Google Drive | Primaire opslag van alle Master Boutique-dossiers | Actief |
-| GitHub | Bron van Playbooks, SOPs en workflows voor Master Boutique | Actief |
-| ClickUp | Taakbeheer voor dealfases, buyer outreach en actiepunten | Actief (`04_OUTREACH_CLICKUP` bevat verwijzingen) |
-| Gmail | Correspondentie met buyers en externe partijen | Actief |
-| Moneybird | Financiële documenten bij succes fee of factuurverwerking | Actief (bron van financiële waarheid) |
+| Google Drive | Opslag van Master Boutique-kennis en methodieken | Actief |
+| GitHub | Bron van playbooks, SOPs en workflows voor Master Boutique | Actief |
+| ClickUp | Taakbeheer voor updates aan kennisdocumenten | Actief |
+| Gmail | Geen source of truth voor deze map | Alleen correspondentie |
+| Moneybird | Geen primaire rol voor deze map | Financiële waarheid blijft Moneybird |
 | Make | Geen actieve scenario's. | Nog in te richten |
 
 ---
@@ -186,9 +191,9 @@ Incorrect: `deal memo nieuw definitief.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Deal-structuur en governance | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/00_GOVERNANCE/`) |
-| Rechtenregisters en contracten | Drive (`01_MASTER_BOUTIQUE/[CASE]/01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`) |
-| Taakstatus en dealfases | ClickUp |
+| Master Boutique-kennis en methodieken | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/06_PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
+| Concrete dealstructuur en live dealdossiers | Drive (`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`) |
+| Taakstatus voor methodiekupdates | ClickUp |
 | Buyer-correspondentie | Gmail |
 | Financiële verwerking | Moneybird |
 | Goedgekeurde beslissingen | Approval Register (`07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`) |
@@ -198,21 +203,17 @@ Incorrect: `deal memo nieuw definitief.pdf`
 ## **17. AI-INSTRUCTIES**
 
 **Toegestaan zonder Sophia-approval (Level 1-3):**
-- Aanmaken van casedossier met lean dealstructuur
-- Bijwerken van rechtenregister en interne documenten
-- Interne notities en statusupdates in `00_START_HIER`
-- Voorbereiding van Buyer Package voor Sophia-review
+- Bijwerken van algemene methodieken, frameworks en kennisdocumenten.
+- Interne samenvattingen maken zonder live deal-, buyer- of clientdata.
+- Verwijzen naar `04_DEALS/[DEAL_OR_ASSET_NAME]` als opslaglocatie voor concrete dealcases.
 
 **Vereist Sophia-approval (Level 4):**
-- Externe verspreiding van Buyer Package, Deal Memo of verkooppakket
-- Ondertekening of aangaan van juridische verplichting
-- Afsluiten of archiveren van een deal
-- Verwijdering van bestanden
+- Externe verspreiding van interne methodiekdocumenten.
+- Verwijdering van bestanden.
 
-**Attentiepunten:**
-- Data Room-mappen alleen aanmaken na due diligence-fase
-- Buyer Database (`docs/01_MASTER_BOUTIQUE/BUYER_DATABASE.md`) is de bron voor buyer-gegevens
-- Geen buyer-identificerende informatie in bestandsnamen in de repository
+**Niet toegestaan:**
+- Aanmaken van dealcases, casefolders, Assets, Buyers of live dealdossiers onder `01_MASTER_BOUTIQUE`.
+- Opslaan van deal-specifieke Data Rooms, LOI's, APA's, Closing-documenten of Success Fee-documenten in deze map.
 
 ---
 
@@ -225,15 +226,15 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 ## **19. AFHANKELIJKHEDEN**
 
 **Input naar `01_MASTER_BOUTIQUE`:**
-- `docs/01_MASTER_BOUTIQUE/` (GitHub) → Playbooks, SOPs en workflows
-- `02_ARTIST_MANAGEMENT/[ARTIST]/02_CONTRACT` → rechtenbewijsstukken van artists
-- CM PROSPECT AGENT → buyer-kwalificatie en outreach-data
+- `docs/01_MASTER_BOUTIQUE/` (GitHub) → context, methodieken, SOPs en workflows
+- `docs/06_PLAYBOOKS/` → generieke playbooks
+- CM PROSPECT AGENT → buyerkwalificatie-methodiek
+- CM MONEY AGENT → valuation-methodiek
 
 **Output vanuit `01_MASTER_BOUTIQUE`:**
-- Buyer Package → externe buyers (na Sophia-approval)
-- Ondertekende contracten → `07_LEGAL/CONTRACTS` (na closing)
-- Financiële verwerking → Moneybird via CM MONEY AGENT
-- Afgeronde cases → `99_ARCHIVE`
+- Algemene methodieken → interne uitvoering
+- Frameworks → `04_DEALS` als referentiekader voor concrete dossiers
+- Superseded kennisdocumenten → centrale archive governance
 
 ---
 
@@ -241,9 +242,9 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 | KPI | Norm | Meting |
 |---|---|---|
-| Casedossier compleet bij intake | Alle 6 lean submappen aanwezig | CM LEGAL AGENT check bij aanmaken |
-| Geen externe distributie zonder approval | 0 niet-goedgekeurde externe verzendingen | Approval Register check |
-| Archivering binnen 30 dagen na deal-closing | 100% van afgeronde cases gearchiveerd | Kwartaalreview |
+| Geen concrete dealcases in `01_MASTER_BOUTIQUE` | 0 overtredingen | Kwartaalreview |
+| Methodieken actueel | Review per kwartaal of bij proceswijziging | CM LEGAL AGENT check |
+| Geen buyer-identificerende repository-inhoud | 0 overtredingen | Repository consistency check |
 
 ---
 
@@ -251,11 +252,11 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 | Fout | Correctie |
 |---|---|
-| Algemene deal opgeslagen in `01_MASTER_BOUTIQUE` | Verplaats naar `04_DEALS` |
-| Artistdossier opgeslagen in `01_MASTER_BOUTIQUE` | Verplaats naar `02_ARTIST_MANAGEMENT/[ARTIST]` |
-| Buyer Package extern verzonden zonder Sophia-approval | Herstop verzending; registreer in Approval Register; escaleer naar Sophia |
-| Data Room aangemaakt vóór due diligence-fase | Verwijder of archiveer; her-aanmaken pas bij due diligence |
-| Bestandsnamen met `final`, `new`, `copy` | Hernoem conform naamconventie |
+| Concrete deal opgeslagen in `01_MASTER_BOUTIQUE` | Verplaats naar `04_DEALS/[DEAL_OR_ASSET_NAME]`. |
+| Buyer Package of Deal Memo in `01_MASTER_BOUTIQUE` | Verplaats naar het juiste dealdossier onder `04_DEALS`. |
+| Data Room of closingdocument in `01_MASTER_BOUTIQUE` | Verplaats naar `04_DEALS` volgens due diligence-governance. |
+| Artistdossier opgeslagen in `01_MASTER_BOUTIQUE` | Verplaats naar `02_ARTIST_MANAGEMENT/[ARTIST]`. |
+| Methodiekdocument bevat live buyer- of dealdata | Verwijder gevoelige inhoud en verplaats operationele informatie naar het juiste systeem van waarheid. |
 
 ---
 
@@ -263,12 +264,11 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM LEGAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
-- [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Inhoud beperkt tot Master Boutique-context, playbooks, methodieken, modellen, frameworks en algemene kennis.
+- [ ] Geen concrete dealcases of live dealdossiers onder `01_MASTER_BOUTIQUE`.
+- [ ] Concrete dealstructuur verwijst naar `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`.
+- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`.
+- [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`.
 
 **Gerelateerde documentatie:**
 
@@ -276,7 +276,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Master Boutique Playbooks | `docs/01_MASTER_BOUTIQUE/` |
+| Master Boutique-documentatie | `docs/01_MASTER_BOUTIQUE/` |
+| Deal Map Specification | `docs/08_MAP_SPECIFICATIONS/04_DEALS.md` |
 | Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |

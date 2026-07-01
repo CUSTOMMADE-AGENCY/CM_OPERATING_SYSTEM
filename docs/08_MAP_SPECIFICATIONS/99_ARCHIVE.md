@@ -129,7 +129,7 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM VAULT AGENT; bij
 
 - Afgeronde artistfasen gaan naar `02_ARTIST_MANAGEMENT/[ARTIST]/09_ARCHIVE`.
 - Volledig afgeronde artistdossiers (einde samenwerking) gaan naar `99_ARCHIVE` na Sophia-approval.
-- Afgeronde deals gaan naar `04_DEALS/[DEAL]/99_ARCHIEF` of centrale `99_ARCHIVE`.
+- Afgeronde deals gaan naar `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/99_ARCHIEF` of centrale `99_ARCHIVE`.
 - Legacy-materiaal gaat naar `99_ARCHIVE/LEGACY_ROOTS`.
 - Jaargebonden archief gaat naar `99_ARCHIVE/[JAAR]`.
 - Contracten, facturen, bonnen, kwitanties, juridische dossiers en bewijsstukken worden **nooit** verwijderd.
@@ -201,7 +201,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Input naar `99_ARCHIVE`:**
 - Afgeronde artistdossiers vanuit `02_ARTIST_MANAGEMENT/[ARTIST]/09_ARCHIVE`
-- Afgeronde dealdossiers vanuit `04_DEALS/[DEAL]/99_ARCHIEF` of `01_MASTER_BOUTIQUE/[CASE]/99_ARCHIEF`
+- Afgeronde dealdossiers vanuit `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/99_ARCHIEF`; `01_MASTER_BOUTIQUE` bevat geen concrete dealcases of per-case archiefmap
 - Legacy-materiaal vanuit alle andere mappen
 - Instructies van map-owners via CM VAULT AGENT
 
