@@ -261,13 +261,15 @@ Gebruikt voor:
 - governancewijzigingen
 - documentverwijdering
 
-Eigenaar:
+Eigenaar en beheer:
 
 - CM CONTROL AGENT
 
-Beheer:
+Ondersteuning automatisering:
 
-- CM VAULT AGENT
+- CM FLOW AGENT
+
+CM VAULT AGENT ondersteunt uitsluitend repositorystructuur, source hygiene en documentatiebeheer; er wordt geen tweede approval-register of alternatief approvalbeheer ingericht.
 
 ## 8. ARCHIVERING
 
@@ -287,7 +289,7 @@ Regels:
 - Moneybird wint bij financiële waarheid.
 - Gmail wint bij correspondentie/bewijs.
 - ClickUp wint bij taakstatus.
-- Approval Register wint bij Sophia-besluiten.
+- Bij Sophia-besluiten en Level 4 approvals geldt één waarheid: `docs/00_GOVERNANCE/APPROVAL_LOG.md` is de governance-specificatie; `OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` is de enige operationele audit trail.
 - Drive wint bij opslag.
 - Bij conflict escaleert CM CONTROL AGENT.
 
