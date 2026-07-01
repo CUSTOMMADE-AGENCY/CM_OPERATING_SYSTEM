@@ -204,9 +204,17 @@ Incorrect: `btw aangifte nieuw definitief.pdf`
 
 ## **18. AUTOMATISERINGEN**
 
-Geen actieve automatiseringen. Make heeft nu 0 scenario's.
+| Scenario | Make ID | Trigger | Status |
+|---|---|---|---|
+| CM ▸ BTW Signalering (Kwartaal) | `6406883` | 1e van elke maand, 08:00 — actie alleen in kwartaalmaanden (jan, apr, jul, okt) | Actief |
 
-Geplande automatiseringen: TBD (Moneybird-export naar Drive, BTW-signaleringsworkflow).
+**CM ▸ BTW Signalering (Kwartaal):**
+- Stuurt herinnering naar `info@custommade.agency` en maakt ClickUp-taak aan in `OPERATIONS > AUTOMATIONS`
+- Filter: alleen actief in maand 1, 4, 7 of 10
+- Indiening bij Belastingdienst vereist Sophia-approval (Level 4)
+
+**Gepland (nog in te richten):**
+- Moneybird-export naar Drive (vereist Moneybird-verbinding in Make)
 
 ---
 
