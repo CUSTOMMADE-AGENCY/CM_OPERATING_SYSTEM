@@ -6,6 +6,10 @@ Documenteer de goedgekeurde Google Drive operating structure voor CM. Google Dri
 
 GitHub en Google Drive hebben bewust verschillende structuren: GitHub is de source of truth voor governance, SOPs, workflows, playbooks en systeemdocumentatie; Google Drive is de operationele working environment voor live dossiers.
 
+## Map Specifications
+
+Drive Structure beschrijft alleen de boomstructuur. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/08_MAP_SPECIFICATIONS/`.
+
 ## Rootfolder
 
 Alle operationele CM Drive-mappen worden aangemaakt onder:

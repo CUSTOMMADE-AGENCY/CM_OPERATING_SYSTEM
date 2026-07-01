@@ -4,6 +4,10 @@
 
 Leg vast hoe client-, partner-, merk-, sponsor-, opdrachtgever- en media partnerdossiers in Google Drive worden ingericht binnen de goedgekeurde `OS_CUSTOMMADE` Drive-structuur.
 
+## Map Specifications
+
+Deze Folder Standard beschrijft alleen de mapstructuur van een client- of partnerdossier. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/08_MAP_SPECIFICATIONS/`.
+
 ## Scope
 
 Deze standaard geldt voor:

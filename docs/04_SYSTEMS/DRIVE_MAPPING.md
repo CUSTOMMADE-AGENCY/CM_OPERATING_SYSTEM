@@ -6,6 +6,10 @@ Dit document legt vast hoe de live `OS_CUSTOMMADE` Drive-structuur gekoppeld is 
 
 Drive bewaart documenten, assets, templates, dossiers en bewijsstukken. Drive is geen taakmanagementsysteem en geen financiële waarheid.
 
+## Map Specifications
+
+Drive Mapping koppelt opslaglocaties aan systemen, agents en documenttypes. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/08_MAP_SPECIFICATIONS/`.
+
 ## Hoofdregel
 
 - Drive = opslag
