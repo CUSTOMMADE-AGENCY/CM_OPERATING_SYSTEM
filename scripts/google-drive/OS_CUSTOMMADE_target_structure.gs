@@ -3,7 +3,7 @@
  * Governance status: SAFE ROOT REPAIR only; not the primary approved Drive build script.
  *
  * ── CHANGELOG ──────────────────────────────────────────────────────────────
- * - AS-BUILT align (22 jun 2026): '00_INBOX' verwijderd als top-level root;
+ * - AS-BUILT align (22 jun 2026): verboden roots verwijderd;
  *         goedgekeurde structuur gebruikt uitsluitend de 11 AS-BUILT roots.
  * - 2G safety: bij DriveApp/getOrCreate errors eindigt het script met NO-GO en
  *         logt/returnt nooit ten onrechte GEREED VOOR TARGET STRUCTURE DRY CHECK.
