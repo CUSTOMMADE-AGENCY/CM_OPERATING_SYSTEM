@@ -1,4 +1,15 @@
 # TEMPLATE REGISTER
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM VAULT AGENT
+
+## Support Agents
+
+CM CONTROL AGENT
 
 ## DOEL
 
@@ -10,13 +21,13 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | --- | --- |
 | Taal | Alle interne template-instructies zijn in professioneel Nederlands. Agentnamen blijven Engels. |
 | Source of truth | GitHub bewaart de schone templatebron onder `docs/03_SHARED_SERVICES/TEMPLATES/`. |
-| Operationele kopieën | Ingevulde versies worden opgeslagen in Google Drive, ClickUp, Gmail of PDF/e-mail, afhankelijk van het proces. |
+| Operationele kopieën | Ingevulde versies worden opgeslagen in Google Drive, ClickUp, Gmail of Google Sheets/PDF/e-mail, afhankelijk van het proces. |
 | Ondertekening | Ondertekening loopt via Google Sheets/PDF/e-mail. Er wordt geen extern ondertekenplatform opgenomen in de huidige template mapping. |
 | Mailbox | `info@custommade.agency` is de leidende mailbox voor centrale externe communicatie en templatebeheer in Gmail. |
 | Moneybird | Moneybird is alleen financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten; eigenaar is CM MONEY AGENT. |
-| Make | Make heeft nu 0 scenario's en staat in deze mapping als `nog in te richten`. |
+| Make | Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd. |
 | Canva | Canva heeft nog geen Brand Kit en staat in deze mapping als `nog te bouwen`. |
-| Deals | DEALS valt onder CM LEGAL AGENT. `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT. |
+| Deals | Deal legal, contracts en approvals vallen onder CM LEGAL AGENT. Deal memo, partnership, pipeline en outreach vallen onder CM PROSPECT AGENT. |
 
 ## TEMPLATE MAPPING
 
@@ -40,10 +51,10 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | `CLIENT_DELIVERABLES/ARTIST_ROADMAP_TEMPLATE.md` | Client-facing roadmap opleveren. | CM OPS AGENT | PDF of documentdeliverable. | Google Drive en e-mail | Goedgekeurd |
 | `CLIENT_DELIVERABLES/MONTHLY_REPORT_TEMPLATE.md` | Maandrapportage voor clients opleveren. | CM OPS AGENT | PDF of documentdeliverable. | Google Drive en e-mail | Goedgekeurd |
 | `CLIENT_DELIVERABLES/MANAGEMENT_PROPOSAL_TEMPLATE.md` | Management proposal structureren. | CM PROSPECT AGENT | Proposal-PDF en e-mail. | Google Drive en e-mail | Goedgekeurd |
-| `CLICKUP/*` | ClickUp task templates en setup-instructies. | CM OPS AGENT | Taken, lists en reusable ClickUp-structuren. | ClickUp | Goedgekeurd |
-| Make scenario templates | Automatiseringsscenario's. | CM FLOW AGENT | Geen actieve scenario-output. | Make | Nog in te richten: Make heeft nu 0 scenario's. |
+| `CLICKUP/*` | ClickUp task templates en setup-instructies. | CM FLOW AGENT | Taken, lists en reusable ClickUp-structuren. | ClickUp | Goedgekeurd |
+| Make scenario templates | Automatiseringsscenario's. | CM FLOW AGENT | Geen actieve scenario-output. | Make | Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd. |
 | Canva Brand Kit templates | Brand assets, visuele formats en huisstijlbouw. | CM SOCIAL AGENT | Nog geen Brand Kit-output. | Canva | Nog te bouwen: Canva heeft nog geen Brand Kit. |
-| Ondertekening templates | Ondertekenbare documenten en approvals. | CM LEGAL AGENT | Google Sheet, PDF en e-mailthread met akkoord of ondertekening. | Google Sheets/PDF/e-mail | Goedgekeurd via Google Sheets/PDF/e-mail. |
+| Ondertekening templates | Ondertekenbare documenten en approvals. | CM LEGAL AGENT | PDF en e-mailthread met akkoord of ondertekening. | Google Sheets/PDF/e-mail | Goedgekeurd via Google Sheets/PDF/e-mail. |
 | Moneybird finance templates | Facturen, bonnen, kwitanties, BTW-signalen, Open Posten en Cashflow-input. | CM MONEY AGENT | Financieel document, Moneybird-referentie of finance-signaal. | Moneybird en `06_FINANCE` | Goedgekeurd binnen finance-scope. |
 
 ## MAP- EN AGENTREGELS
@@ -55,7 +66,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | `03_SHARED_SERVICES/TEMPLATES` | Templatebron en template governance. | CM VAULT AGENT |
 | Gmail | Centrale mailbox en templates worden beheerd vanuit `info@custommade.agency`. | CM OPS AGENT |
 | `06_FINANCE` | Finance-output, Moneybird-referenties, BTW, Open Posten en Cashflow-signalen vallen onder CM MONEY AGENT. | CM MONEY AGENT |
-| Make | Automatiseringen staan nog niet live; scenario's zijn nog in te richten. | CM FLOW AGENT |
+| Make | Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd. | CM FLOW AGENT |
 | Canva | Brand Kit ontbreekt nog; visuele templatebasis is nog te bouwen. | CM SOCIAL AGENT |
 
 ## REVIEWRITME

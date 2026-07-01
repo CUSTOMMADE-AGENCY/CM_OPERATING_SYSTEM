@@ -1,4 +1,15 @@
 # ClickUp Task Template — Artist Brandbook
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -36,7 +47,7 @@ Gebruik deze template na Brand Audit, bij nieuwe artist positioning, vóór rele
 | Field | Type | Required value |
 |---|---|---|
 | GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md` |
-| Drive Folder | URL | Artist `03_Brandbook` folder |
+| Drive Folder | URL | TBD – Sophia / VAULT beslissing |
 | Gmail Template Set | Dropdown | Input Request; Brandbook Review; Approval Request |
 | Approval Owner | Person | CM strategy lead + artist |
 | Brandbook Version | Text | `v1.0`, `v1.1`, etc. |
@@ -79,8 +90,7 @@ CM strategy lead voor Brandbook-kwaliteit en consistentie. Artist voor final app
 `docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/03_Brandbook`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Input Request`
 - `CM - Artist Management - Brandbook Review`

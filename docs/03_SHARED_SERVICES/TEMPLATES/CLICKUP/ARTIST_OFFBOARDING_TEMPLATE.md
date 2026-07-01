@@ -1,4 +1,15 @@
 # ClickUp Task Template — Artist Offboarding
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -77,8 +88,7 @@ Artist manager voor close-out execution. CM leadership bij conflict, legal expos
 `docs/02_ARTIST_MANAGEMENT/ARTIST_OFFBOARDING_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/09_ARTIST_OFFBOARDING_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/99_Archive_Offboarding`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Offboarding Summary`
 - `CM - Artist Management - Meeting Recap`

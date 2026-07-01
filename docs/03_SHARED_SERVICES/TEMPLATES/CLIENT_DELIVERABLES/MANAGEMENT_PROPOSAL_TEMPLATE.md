@@ -1,4 +1,15 @@
 # MANAGEMENT Proposal TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM PROSPECT AGENT
+
+## Support Agents
+
+CM LEGAL AGENT; CM CONTROL AGENT
 
 ## 1. DOCUMENTINFORMATIE
 

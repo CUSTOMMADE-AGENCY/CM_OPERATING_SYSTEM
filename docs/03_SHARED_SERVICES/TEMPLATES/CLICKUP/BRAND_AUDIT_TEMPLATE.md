@@ -1,4 +1,15 @@
 # ClickUp Task Template — Brand Audit
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -35,7 +46,7 @@ Gebruik deze template na Artist Onboarding, bij herpositionering, vóór Brandbo
 | Field | Type | Required value |
 |---|---|---|
 | GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/BRAND_AUDIT_FLOW.md` |
-| Drive Folder | URL | Artist `02_Brand_Audit` folder |
+| Drive Folder | URL | TBD – Sophia / VAULT beslissing |
 | Gmail Template Set | Dropdown | Input Request; Meeting Agenda; Brand Audit Delivery; Approval Request |
 | Approval Owner | Person | CM strategy lead + artist |
 | Audit Scope | Dropdown | Full / positioning / visual / content / commercial |
@@ -76,8 +87,7 @@ CM strategy lead voor auditkwaliteit. Artist voor public-facing recommendations,
 `docs/02_ARTIST_MANAGEMENT/BRAND_AUDIT_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/02_BRAND_AUDIT_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/02_Brand_Audit`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Input Request`
 - `CM - Artist Management - Meeting Agenda`

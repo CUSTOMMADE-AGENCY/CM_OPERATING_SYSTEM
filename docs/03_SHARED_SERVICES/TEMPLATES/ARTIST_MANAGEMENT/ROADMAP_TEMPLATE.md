@@ -1,4 +1,15 @@
 # Roadmap Template
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM OPS AGENT
+
+## Support Agents
+
+CM SOCIAL AGENT; CM VAULT AGENT
 
 ## Artist roadmap context
 

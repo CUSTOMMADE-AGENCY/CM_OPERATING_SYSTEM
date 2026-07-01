@@ -1,4 +1,15 @@
 # ClickUp Task Template — Artist Roadmap
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -37,7 +48,7 @@ Gebruik deze template na Onboarding, Brand Audit of Brandbook; bij kwartaal-/hal
 | Field | Type | Required value |
 |---|---|---|
 | GitHub Workflow | URL | `docs/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_FLOW.md` |
-| Drive Folder | URL | Artist `04_Roadmap` folder |
+| Drive Folder | URL | TBD – Sophia / VAULT beslissing |
 | Gmail Template Set | Dropdown | Roadmap Approval; Meeting Recap; Approval Request |
 | Approval Owner | Person | Artist manager + artist decision owner |
 | Roadmap Horizon | Dropdown | 30 dagen / 90 dagen / 6 maanden / 12 maanden |
@@ -79,8 +90,7 @@ Artist manager voor roadmapstructuur en execution integrity. Artist of aangeweze
 `docs/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/04_ARTIST_ROADMAP_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/04_Roadmap`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Roadmap Approval`
 - `CM - Artist Management - Meeting Recap`

@@ -1,4 +1,15 @@
 # ClickUp Task Template — Brand Partnership
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -79,8 +90,7 @@ Artist voor brand fit, deliverables, usage, exclusivity en final approval. Artis
 `docs/02_ARTIST_MANAGEMENT/BRAND_PARTNERSHIP_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/08_BRAND_PARTNERSHIP_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/08_Brand_Partnerships/[Brand]`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Brand Partnership Approval`
 - `CM - Artist Management - Approval Request`
