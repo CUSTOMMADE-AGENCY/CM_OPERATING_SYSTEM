@@ -78,7 +78,7 @@ Geen vaste templates toegewezen aan `99_ARCHIVE`.
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Archivering workflow | TBD | Einde van samenwerking, deal-closing of periodiek review |
+| Archive Flow | `docs/03_SHARED_SERVICES/ARCHIVE_FLOW.md` | Einde van samenwerking, deal-closing of periodiek review |
 
 ---
 

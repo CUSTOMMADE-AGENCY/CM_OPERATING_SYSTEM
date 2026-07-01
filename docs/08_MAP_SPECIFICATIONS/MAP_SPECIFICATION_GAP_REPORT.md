@@ -85,16 +85,30 @@ Opgelost op 2026-07-01: 7 SOPs aangemaakt in `docs/03_SHARED_SERVICES/` en Map S
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken mappen | `00_ADMIN`, `05_OPERATIONS`, `06_FINANCE`, `07_LEGAL`, `08_MARKETING`, `09_CONTENT`, `99_ARCHIVE` |
 | Eigenaar | CM FLOW AGENT (coördinatie), relevant Owner Agent per map |
 
 **Beschrijving:**
-Meerdere Map Specifications verwijzen naar workflows met status `TBD`. Er zijn geen gedocumenteerde workflows voor: intern onboarding, governance-export, proceswijziging, finance reconciliation, year-end finance, contract lifecycle, legal review, campagne delivery, CM-contentpublicatie en archivering.
+Meerdere Map Specifications verwezen naar workflows met status `TBD`. Er waren geen gedocumenteerde workflows voor: intern onboarding, governance-export, proceswijziging, finance reconciliation, year-end finance, contract lifecycle, legal review, marketing planning, campagne delivery, CM-contentpublicatie en archivering.
 
 **Actie:**
-Per ontbrekende workflow: eigenaar aanwijzen, trigger definiëren en workflow aanmaken. Prioriteer op basis van operationele frequentie.
+Opgelost op 2026-07-01: 11 Workflows aangemaakt in `docs/03_SHARED_SERVICES/` en Map Specifications bijgewerkt:
+
+| Workflow | Bestand | Eigenaar |
+|---|---|---|
+| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | CM CONTROL AGENT |
+| Governance Export Flow | `docs/03_SHARED_SERVICES/GOVERNANCE_EXPORT_FLOW.md` | CM CONTROL AGENT |
+| Process Change Flow | `docs/03_SHARED_SERVICES/PROCESS_CHANGE_FLOW.md` | CM CONTROL AGENT |
+| Finance Reconciliation Flow | `docs/03_SHARED_SERVICES/FINANCE_RECONCILIATION_FLOW.md` | CM MONEY AGENT |
+| Year End Finance Flow | `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md` | CM MONEY AGENT |
+| Contract Lifecycle Flow | `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md` | CM LEGAL AGENT |
+| Legal Review Flow | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_FLOW.md` | CM LEGAL AGENT |
+| Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | CM SOCIAL AGENT |
+| Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | CM SOCIAL AGENT |
+| Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | CM SOCIAL AGENT |
+| Archive Flow | `docs/03_SHARED_SERVICES/ARCHIVE_FLOW.md` | CM VAULT AGENT |
 
 ---
 
@@ -292,7 +306,7 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 | GAP-001 | DRIVE_MAPPING.md 00_ADMIN submapstructuur niet actueel | Opgelost | — | CM CONTROL AGENT |
 | GAP-002 | DRIVE_MAPPING.md 07_LEGAL submapstructuur uitgebreid | Opgelost | — | CM LEGAL AGENT |
 | GAP-003 | Ontbrekende SOPs voor meerdere mappen | Opgelost | — | CM CONTROL AGENT |
-| GAP-004 | Ontbrekende Workflows voor meerdere mappen | Open | Middel | CM FLOW AGENT |
+| GAP-004 | Ontbrekende Workflows voor meerdere mappen | Opgelost | — | CM FLOW AGENT |
 | GAP-005 | Make-automatiseringen niet ingericht | Open | Laag | CM FLOW AGENT |
 | GAP-006 | Canva Brand Kit niet beschikbaar | Open | Middel | CM SOCIAL AGENT |
 | GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Open | Middel | CM OPS AGENT |

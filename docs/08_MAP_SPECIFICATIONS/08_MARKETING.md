@@ -78,8 +78,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Marketingplanning | TBD | Kwartaalplanning of nieuwe campagne |
-| Campagne delivery | TBD | Start van een marketingcampagne |
+| Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | Kwartaalplanning of nieuwe campagne |
+| Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | Uitvoering en oplevering van een marketingcampagne |
 
 ---
 

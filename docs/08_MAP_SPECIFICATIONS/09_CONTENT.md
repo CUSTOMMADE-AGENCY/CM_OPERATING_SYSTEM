@@ -80,7 +80,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 |---|---|---|
 | Content productie workflow (artist) | `docs/02_ARTIST_MANAGEMENT/04_CONTENT_PRODUCTIE_WORKFLOW.md` | Contentproductie (artistspecifiek; als referentie voor CM-eigen content) |
 | Social publishing workflow (artist) | `docs/02_ARTIST_MANAGEMENT/05_SOCIAL_PUBLISHING_WORKFLOW.md` | Publicatie (artistspecifiek; als referentie) |
-| CM-eigen contentpublicatie | TBD | Publicatie namens CM op eigen kanalen |
+| Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | Publicatie namens CM op eigen kanalen |
 
 ---
 

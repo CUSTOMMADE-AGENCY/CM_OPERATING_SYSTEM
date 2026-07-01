@@ -87,8 +87,8 @@
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Intern onboarding | TBD | Nieuwe teamlid, intern of freelancer start |
-| Proceswijziging | TBD | Aanpassing van operationeel proces |
+| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
+| Process Change Flow | `docs/03_SHARED_SERVICES/PROCESS_CHANGE_FLOW.md` | Aanpassing van operationeel proces of governance-document |
 
 ---
 

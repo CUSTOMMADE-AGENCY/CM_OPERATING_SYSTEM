@@ -97,8 +97,8 @@
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Contract lifecycle | TBD | Opstellen, ondertekening en beheer van contracten |
-| Legal review workflow | TBD | Juridische beoordeling van documenten of overeenkomsten |
+| Contract Lifecycle Flow | `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md` | Opstellen, ondertekening en beheer van contracten |
+| Legal Review Flow | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_FLOW.md` | Juridische beoordeling van documenten of overeenkomsten |
 
 ---
 

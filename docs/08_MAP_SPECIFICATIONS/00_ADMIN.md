@@ -86,8 +86,8 @@ Gebruik exact deze submapstructuur:
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Intern onboarding | TBD | Nieuwe teamlid, intern of freelancer start |
-| Governance-referentie export | TBD | Na merge van governance-wijziging in GitHub |
+| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
+| Governance Export Flow | `docs/03_SHARED_SERVICES/GOVERNANCE_EXPORT_FLOW.md` | Na merge van governance-wijziging in GitHub |
 
 ---
 
