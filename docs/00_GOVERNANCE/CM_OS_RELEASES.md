@@ -53,6 +53,15 @@ Deze baseline bevriest de architectuur zodat toekomstige wijzigingen uitsluitend
 
 Bevat onder andere:
 
+- Drive Structure
+- Folder Standards
+- Map Specifications
+- Governance
+- Templates
+- Workflows
+- SOPs
+- Playbooks
+- Agent Passports
 - Drive Governance
 - GitHub Governance
 - Agent Governance
@@ -92,15 +101,16 @@ De volgende documenten vallen onder CM OS Baseline V1.0 en zijn bevroren als gov
 
 ## Governance Regel
 
-Vanaf Baseline V1.0 mogen wijzigingen aan de architectuur uitsluitend plaatsvinden via:
+Vanaf Baseline V1.0 is de architectuur production-ready en bevroren. Architectuurwijzigingen mogen uitsluitend plaatsvinden via:
 
+- formele Architecture Decision Record (ADR) in `docs/00_GOVERNANCE/ADR/`
 - `CM_SYSTEM_DECISION_MATRIX.md`
 - `DECISION_LOG.md`
 - Pull Request
 - CM CONTROL AGENT review
 - goedkeuring door repository owner
 
-Architectuurwijzigingen mogen nooit rechtstreeks op main plaatsvinden.
+Architectuurwijzigingen mogen nooit rechtstreeks op main plaatsvinden en mogen niet buiten de ADR + PR-route worden doorgevoerd.
 
 ---
 

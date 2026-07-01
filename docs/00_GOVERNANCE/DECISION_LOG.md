@@ -21,3 +21,4 @@ Gebruik dit niet voor losse taken, maar voor besluiten die later teruggevonden m
 | 2026-06-15 | LOCKED | Moneybird is financiële waarheid |
 | 2026-06-15 | LOCKED | Pure shims blijven behouden zolang actief gelinkt |
 | 2026-06-15 | LOCKED | CM en FIERCE blijven strikt gescheiden |
+| 2026-07-01 | LOCKED | CM OS V1.0 is production-ready baseline; architectuurwijzigingen verlopen vanaf nu uitsluitend via ADR en Pull Request. |

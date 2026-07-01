@@ -2,6 +2,27 @@
 
 Deze repository is de GitHub source of truth voor de operating Workflows, Governance, SOPs, Playbooks, templates en systeemdocumentatie van Custommade Agency Int. B.V.
 
+
+## PRODUCTIESTATUS
+
+**CM Operating System V1.0 — Production Baseline**
+
+Status: **Production Ready**
+
+De volgende architectuuronderdelen zijn vanaf deze release vastgesteld:
+
+- Drive Structure
+- Folder Standards
+- Map Specifications
+- Governance
+- Templates
+- Workflows
+- SOPs
+- Playbooks
+- Agent Passports
+
+Vanaf CM OS V1.0 worden architectuurwijzigingen uitsluitend doorgevoerd via een formele Architecture Decision Record (ADR) en Pull Request.
+
 ## STARTDOCUMENTEN
 
 Lees in deze volgorde:
