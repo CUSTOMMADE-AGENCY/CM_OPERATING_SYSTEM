@@ -30,7 +30,7 @@ De Google Drive-connector kan alleen **aanmaken en kopiëren** — niet verplaat
 
 |Level                 |Definitie                                             |Voorbeelden                                                                                                                                            |
 |----------------------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-|**Level 1 — Autonoom**|VAULT voert uit zonder check                          |Template archiveren · duplicaat signaleren · `00_INBOX` verwerken (voorstel) · rapportage genereren · naming correction voorstellen                    |
+|**Level 1 — Autonoom**|VAULT voert uit zonder check                          |Template archiveren · duplicaat signaleren · ongeclassificeerd document verwerken (voorstel naar `99_ARCHIVE/REVIEW_HOLD`) · rapportage genereren · naming correction voorstellen                    |
 |**Level 2 — Notify**  |VAULT voert uit, Sophia ontvangt melding achteraf     |Archiefvoorstel aanmaken · Source-of-Truth conflict rapporteren · Template Register updaten                                                            |
 |**Level 3 — Approve** |Niets gaat verder zonder expliciete goedkeuring Sophia|Governance wijzigen · master-templates aanpassen · contracten archiveren · financiële documenten archiveren · eigenaar onduidelijk · structuurwijziging|
 
@@ -94,7 +94,7 @@ CM VAULT AGENT is eigenaar van: Google Drive structuur · Templatebeheer · SOP-
 
 ## INPUTS
 
-Nieuwe documenten · templates · SOP’s · prompts · playbooks · governance-updates · client-/dealmappen · bestanden in `00_INBOX` · bestanden zonder duidelijke eigenaar · verouderde of dubbele documenten · verzoeken vanuit andere agents
+Nieuwe documenten · templates · SOP’s · prompts · playbooks · governance-updates · client-/dealmappen · bestanden in `99_ARCHIVE/REVIEW_HOLD` · bestanden zonder duidelijke eigenaar · verouderde of dubbele documenten · verzoeken vanuit andere agents
 
 ## OUTPUTS
 
@@ -111,7 +111,7 @@ Gevalideerde documenten · plaatsingsvoorstellen · Template Register updates ·
 1. Playbook structureren (Level 2)
 1. Dubbele documenten signaleren (Level 1)
 1. Verkeerd geplaatste documenten signaleren (Level 1)
-1. `00_INBOX` verwerken — voorstel (Level 1) → FLOW uitvoering
+1. Ongeclassificeerde documenten verwerken — voorstel naar `99_ARCHIVE/REVIEW_HOLD` (Level 1) → FLOW uitvoering
 1. Archiefvoorstellen maken (Level 2, Level 3 bij contracten/financieel)
 1. AS_BUILT bijwerken (Level 2)
 
@@ -144,9 +144,9 @@ Gevalideerde documenten · plaatsingsvoorstellen · Template Register updates ·
 
 -----
 
-## WORKFLOW 2 — 00_INBOX VERWERKING
+## WORKFLOW 2 — ONGECLASSIFICEERD DOCUMENT VERWERKING
 
-**Trigger:** bestand in `00_INBOX` · los document zonder locatie · upload vanuit Gmail/Drive/Sophia
+**Trigger:** los document zonder locatie · upload vanuit Gmail/Drive/Sophia · bestand in `99_ARCHIVE/REVIEW_HOLD`
 
 **Autonomie level:** Level 1 (voorstel maken) · Level 3 (bij twijfel over eigenaar of juridisch/financieel document)
 
@@ -265,7 +265,7 @@ CM VAULT AGENT mag nooit: documenten verwijderen · contractinhoud juridisch wij
 |Templates met autonomie level            |100%                      |
 |Documenten zonder eigenaar               |0                         |
 |Dubbele master-templates                 |0                         |
-|`00_INBOX` achterstand                   |0 open langer dan 7 dagen |
+|Ongeclassificeerde docs in `99_ARCHIVE/REVIEW_HOLD`|0 langer dan 7 dagen|
 |Governance-conflicten                    |Binnen 48 uur gesignaleerd|
 |Verkeerde opslaglocaties                 |Maandelijks dalend        |
 |Verwijderde documenten zonder goedkeuring|0                         |
@@ -283,13 +283,13 @@ Weekly Vault Report · Missing Templates Report · Duplicate Documents Report ·
 
 1. **Stap 0 — Definitielaag:** `DOCUMENT_STANDARDS.md` + `TEMPLATE_REGISTER.md` bouwen en vullen (inclusief autonomie levels); canonieke locaties vastleggen.
 1. **Workflow 1 — TEMPLATE CHECK** draaien tegen het gevulde register.
-1. **Workflow 2 — 00_INBOX** (VAULT-voorstel; FLOW-uitvoering zodra FLOW’s eerste scenario staat).
+1. **Workflow 2 — ONGECLASSIFICEERD DOCUMENT** (VAULT-voorstel naar `99_ARCHIVE/REVIEW_HOLD`; FLOW-uitvoering zodra FLOW’s eerste scenario staat).
 1. **Workflows 3–5** volgen.
 
 -----
 
 OPEN BESLISPUNTEN (vóór lock)
-	1.	Archief-naming — drift te resolven. Er bestaan nu drie vormen: 07_ ARCHIVE (systeemroot OS_CUSTOMMADE, met spatie, via ID-lookup afgehandeld), 99_ARCHIEF (per-project, JayKoppig-structuur), en 99_ARCHIVE (Engels, in dit playbook-concept — drift). Aanbeveling: Engelse 99_ARCHIVE schrappen; 99_ARCHIEF als canonieke vorm voor per-project/case-archief, 07_ ARCHIVE blijft de bestaande systeemroot-archiefmap. → Bevestiging Sophia nodig.
+	1.	Archief-naming — BESLOTEN (AS-BUILT post-PR-118): `99_ARCHIVE` is de canonieke centrale archiefroot onder `OS_CUSTOMMADE`. `99_ARCHIEF` is de canonieke vorm voor per-project/per-deal/per-artist archief. De verboden legacy-root `07_ARCHIVE` wordt gearchiveerd via `safe-cleanup-wrong-roots.gs`.
 	2.	VAULT_LOG locatie. Voorstel: Google Sheet in Drive, beschrijfbaar door CM FLOW (Make). Alternatief: ClickUp-lijst. → te bevestigen.
 	3.	AS_BUILT locatie. Voorstel: AS_BUILT.md in GitHub. → te bevestigen.
 	4.	Bestaan TEMPLATE_REGISTER.md / DOCUMENT_STANDARDS.md al in de repo? Bepaalt of Stap 0 “bouwen” of “aanvullen” is.

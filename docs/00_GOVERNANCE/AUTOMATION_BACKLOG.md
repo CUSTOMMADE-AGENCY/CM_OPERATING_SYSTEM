@@ -22,6 +22,6 @@ Start altijd bij het probleem, niet bij de tool.
 
 ## Backlog
 
-| Automation | Probleem | Trigger | Tool/stack | Impact | Prioriteit | Owner | Status |
-|---|---|---|---|---|---|---|---|
-| Naam | Welk terugkerend werk kost tijd of geeft fouten? | Wanneer start dit? | Tool of handmatige stap | Tijdwinst, foutreductie of betere kwaliteit | High / Medium / Low | Naam/rol | IDEA / REVIEW / TEST / BUILD / ACTIVE / ARCHIVED |
+| Automation | Probleem | Trigger | Tool/stack | Impact | Prioriteit | Owner | Review | Status |
+|---|---|---|---|---|---|---|---|---|
+| CM VAULT V1 | Artistmappen kunnen inconsistent raken. | Wekelijks maandag 09:00. | Make + Google Drive + Gmail | Foutreductie en mapconsistentie. | High | CM FLOW AGENT | CM CONTROL AGENT | TEST |

@@ -421,3 +421,463 @@ Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase be
 | Linked Drive folder | `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET` |
 | Gmail templates used | `CM - Master Boutique - Success Fee Invoice Request`; `CM - Master Boutique - Closing Confirmation`; `CM - Master Boutique - APA Issue Update` |
 | Completion criteria | Success Fee calculation, trigger evidence, approval/notice, invoice request, invoice copy en payment confirmation staan in Drive; ClickUp bevat fee amount, due date, invoice status en owner; disputed of waived fees hebben written rationale en CM leadership approval; deal financial close-out is gemarkeerd als completed |
+
+---
+
+# Compacte ClickUp-mapping voor CM_OS agents
+
+## Doel
+
+Dit hoofdstuk legt vast hoe de actieve CM_OS agents gekoppeld zijn aan de compacte ClickUp-structuur van CUSTOMMADE AGENCY. ClickUp is de uitvoeringslaag voor taken, planning, statussen, deadlines, approvals, opvolging en operationele routing. GitHub blijft de governance- en documentatiebron voor CM_OS. Google Drive bewaart documenten, assets, contractkopieën en werkmateriaal. Moneybird blijft de financiële waarheid voor facturen, bonnen, kwitanties, omzet, bank, BTW, open posten, cashflow en financiële rapportage.
+
+Deze mapping maakt geen nieuwe agents aan. Bestaande CM_OS agents worden alleen gekoppeld aan de compacte ClickUp-folders:
+
+```text
+CUSTOMMADE AGENCY
+├── PIPELINE
+├── CLIENTS
+├── OPERATIONS
+├── DEAL DESK
+└── MARKETING
+```
+
+## Leidende regels
+
+- Elke ClickUp-taak heeft exact één `Agent Owner`.
+- CM CONTROL AGENT bewaakt governance, prioriteit, routing, approvals, escalaties en kwaliteit, maar krijgt geen aparte hoofdmap.
+- CM MONEY AGENT krijgt geen aparte hoofdmap; Money-acties komen onder `OPERATIONS`.
+- Moneybird blijft de financiële waarheid; ClickUp bevat alleen uitvoerende finance-taken, follow-up, deadlines, blockers en links naar Moneybird.
+- Legal, contracten, rights reviews, deal reviews en onderhandelingsdossiers komen onder `DEAL DESK`.
+- Governance, approvals, escalaties, flow issues, systeemissues en operationele blokkades komen onder `OPERATIONS`.
+- Content, website, SEO, persberichten, media outreach, social en publicatieplanning komen onder `MARKETING`.
+- Partnerships, sponsorships, brand deals, product placement, sampling, event activaties, endorsements en nieuwe zakelijke klanten komen onder `PIPELINE`.
+- Client- en artistdelivery, onboarding, planning, roadmaps, releases en accountmanagement komen onder `CLIENTS`.
+- Externe communicatie, publicaties, financiële commitments, juridische commitments, systeemwijzigingen en strategische keuzes vereisen de relevante approval gate voordat uitvoering extern zichtbaar of bindend wordt.
+
+## Globale custom fields
+
+Deze custom fields gelden voor alle folders en lists binnen `CUSTOMMADE AGENCY`:
+
+| Custom field | Doel | Verwachte invulling |
+| --- | --- | --- |
+| Agent Owner | Primaire eigenaar-agent van de taak. | Eén actieve CM_OS agent, bijvoorbeeld `CM OPS AGENT`. |
+| Autonomy Level | Toegestane zelfstandigheid voor uitvoering. | Waarde volgens CM autonomy levels. |
+| Approval Required | Geeft aan of vooraf approval nodig is. | `Yes` / `No`. |
+| Approval Status | Huidige approvalfase. | `Not requested`, `Requested`, `Approved`, `Rejected`, `Changes requested`, `Escalated`. |
+| Sophia Approval | Markeert of Sophia expliciet moet goedkeuren of heeft goedgekeurd. | `Not required`, `Required`, `Requested`, `Approved`, `Rejected`. |
+| Client | Betrokken klant of zakelijke relatie. | Naam client of account. |
+| Artist | Betrokken artist. | Naam artist of projectnaam. |
+| Deal Type | Type commerciële of juridische deal. | Bijvoorbeeld `Sponsorship`, `Brand Deal`, `Publishing`, `Licensing`, `Sync`, `Management`, `New Business`. |
+| Deal Value | Financiële waarde of bandbreedte van de kans/deal. | Bedrag of range; financiële waarheid blijft Moneybird. |
+| Priority | Prioriteit voor planning en routing. | `Low`, `Normal`, `High`, `Urgent`. |
+| Due Date | Deadline voor de eerstvolgende concrete actie of oplevering. | Datum in ClickUp. |
+| Source Link | Link naar GitHub-, SOP-, playbook- of brondocument. | URL. |
+| Drive Link | Link naar relevante Google Drive-map of bestand. | URL. |
+| Gmail Link | Link naar relevante Gmail-thread of verzonden concept. | URL. |
+| Moneybird Link | Link naar relevante Moneybird-factuur, contact, bon, betaling of rapportage. | URL; verplicht bij finance-taken. |
+
+## Folder: PIPELINE
+
+### Doel
+
+`PIPELINE` is de commerciële voorkant van CUSTOMMADE AGENCY. Deze folder beheert nieuwe zakelijke kansen, partnerships, sponsorships, brand deals, product placement, sampling, event activaties, endorsements, renewals, upsells, proposals en leadopvolging voordat ze overgaan naar clientdelivery, legal review, finance follow-up of marketingactivatie.
+
+### Eigenaar-agent
+
+- CM PROSPECT AGENT
+
+### Ondersteunende agents
+
+- CM CONTROL AGENT voor prioriteit, routing en commerciële escalaties.
+- CM OPS AGENT voor haalbaarheid, capaciteit, planning en overdracht naar delivery.
+- CM LEGAL AGENT voor dealvoorwaarden, contractrisico's, NDA's en legal review.
+- CM MONEY AGENT voor waarde-inschatting, facturatie-impact, betaalcondities en financiële risico's.
+- CM SOCIAL AGENT voor pitchmateriaal, cases, zichtbaarheid en contentkansen.
+- CM VAULT AGENT voor proposal templates, case studies en bronmateriaal.
+
+### Lists
+
+- `Leads & Prospects`
+- `Partnerships`
+- `Sponsorships`
+- `Brand Deals`
+- `New Business Proposals`
+- `Renewals & Upsells`
+- `Commercial Follow-up`
+
+### Statussen
+
+- `Lead captured`
+- `Fit check`
+- `Research`
+- `Outreach ready`
+- `Contacted`
+- `Follow-up`
+- `Meeting planned`
+- `Proposal needed`
+- `Proposal sent`
+- `Negotiation`
+- `Approval needed`
+- `Won`
+- `Lost`
+- `Parked`
+- `Handoff to CLIENTS`
+- `Handoff to DEAL DESK`
+- `Blocked`
+
+### Custom fields
+
+Gebruik alle globale custom fields, met extra aandacht voor:
+
+- `Agent Owner`
+- `Client`
+- `Artist`
+- `Deal Type`
+- `Deal Value`
+- `Priority`
+- `Approval Required`
+- `Approval Status`
+- `Sophia Approval`
+- `Source Link`
+- `Drive Link`
+- `Gmail Link`
+
+### Approval gates
+
+- Sophia approval vóór commerciële toezeggingen, finale proposals, prijsafspraken, exclusiviteit, budgetcommitments of strategische partnershipbesluiten.
+- CM CONTROL AGENT approval bij prioriteitswijzigingen, onduidelijk eigenaarschap, reputatierisico of afwijking van standaardproces.
+- CM LEGAL AGENT review vóór NDA, contracttaal, rights language of bindende dealvoorwaarden.
+- CM MONEY AGENT check vóór dealwaarde, betalingsstructuur, facturatie-afspraak of financiële commitment extern wordt gedeeld.
+
+### Handoff triggers
+
+- Naar `CLIENTS`: kans is `Won`, delivery moet starten, onboarding is nodig of bestaande client/artist krijgt uitvoeringstaken.
+- Naar `DEAL DESK`: contract, NDA, legal review, rights review, publishing, licensing, sync of dealonderhandeling is nodig.
+- Naar `OPERATIONS`: facturatie, Moneybird-opvolging, planningblokkade, governancevraag, approval issue of systeemproces is nodig.
+- Naar `MARKETING`: case study, social proof, pitch deck, websitevermelding, persmoment of contentactivatie is nodig.
+
+## Folder: CLIENTS
+
+### Doel
+
+`CLIENTS` is de uitvoeringsfolder voor actieve klanten, artists en projecten. Deze folder beheert onboarding, artist management, client management, projectplanning, deliverables, releases, maandelijkse managementcycli, roadmaps, meeting follow-up en operationele uitvoering.
+
+### Eigenaar-agent
+
+- CM OPS AGENT
+
+### Ondersteunende agents
+
+- CM CONTROL AGENT voor prioriteit, scopewijzigingen en escalaties.
+- CM PROSPECT AGENT voor commerciële context, upsells en renewals.
+- CM LEGAL AGENT voor contracten, rechten, obligations en dealvoorwaarden.
+- CM MONEY AGENT voor facturatiecontext, open posten, revenue share, commission tracking en financiële blokkades.
+- CM SOCIAL AGENT voor content, releasecommunicatie, public-facing assets en marketingtaken.
+- CM VAULT AGENT voor templates, Drive-structuur, SOP's en documentbeheer.
+- CM FLOW AGENT voor ClickUp automatiseringen, document synchronisatie en integraties.
+
+### Lists
+
+- `Client Onboarding`
+- `Artist Onboarding`
+- `Active Client Management`
+- `Artist Roadmaps`
+- `Projects & Deliverables`
+- `Releases`
+- `Monthly Management`
+- `Client Meetings & Follow-up`
+- `Offboarding`
+
+### Statussen
+
+- `Intake`
+- `Inputs verzamelen`
+- `Planning`
+- `In uitvoering`
+- `Internal review`
+- `Client review`
+- `Artist approval needed`
+- `Sophia approval needed`
+- `Revisions`
+- `Approved`
+- `Ready for handoff`
+- `Completed`
+- `On hold`
+- `Blocked`
+- `Escalated`
+
+### Custom fields
+
+Gebruik alle globale custom fields, met extra aandacht voor:
+
+- `Agent Owner`
+- `Client`
+- `Artist`
+- `Autonomy Level`
+- `Approval Required`
+- `Approval Status`
+- `Sophia Approval`
+- `Priority`
+- `Due Date`
+- `Drive Link`
+- `Gmail Link`
+- `Source Link`
+- `Moneybird Link` bij facturatie- of finance-afhankelijke delivery.
+
+### Approval gates
+
+- Client of artist approval vóór public-facing deliverables, roadmapprioriteiten, releasecommitments, scopewijzigingen of budgetimpact.
+- Sophia approval bij externe commitments, strategische keuzes, reputatierisico, budgetcommitments of conflicten.
+- CM CONTROL AGENT approval bij scope-, planning-, prioriteits- of eigenaarschapswijziging.
+- CM LEGAL AGENT review bij contractuele obligations, rights claims, licensing, sync, publishing of juridische interpretatie.
+- CM MONEY AGENT check bij facturatieafhankelijkheden, open posten, revenue share, commission tracking of financiële blokkades.
+
+### Handoff triggers
+
+- Naar `PIPELINE`: renewal, upsell, partnership opportunity, sponsorship, brand deal of nieuwe zakelijke kans ontstaat.
+- Naar `DEAL DESK`: contractreview, rights issue, legal approval, dealonderhandeling of obligations tracker nodig is.
+- Naar `OPERATIONS`: facturatie, open posten, planningblokkade, governancevraag, systeemissue of approval-escalatie nodig is.
+- Naar `MARKETING`: content, website update, SEO, persbericht, media outreach, social planning of releasecommunicatie nodig is.
+
+## Folder: OPERATIONS
+
+### Doel
+
+`OPERATIONS` is de centrale map voor interne operatie, governance, approvals, escalaties, flow issues, systeemprocessen, finance-uitvoering en Moneybird-opvolging. Deze folder bewaakt dat werk door de juiste agent wordt uitgevoerd, dat blockers zichtbaar zijn en dat Money-acties in ClickUp worden opgevolgd zonder Moneybird als financiële waarheid te vervangen.
+
+### Eigenaar-agent
+
+- CM CONTROL AGENT
+
+### Ondersteunende agents
+
+- CM OPS AGENT voor planning, deliverycoördinatie, Gmail-templates en operationele uitvoering.
+- CM MONEY AGENT voor Moneybird, BTW, open posten, cashflow, facturatie-opvolging, betaalstatussen, revenue share en commission tracking.
+- CM FLOW AGENT voor ClickUp automations, Make, integraties, systeemgezondheid, webhooks en document synchronisatie.
+- CM VAULT AGENT voor SOP's, templates, kennisbank, Drive-structuur en archivering.
+- Betreffende eigenaar-agent voor inhoudelijke input bij escalaties.
+
+### Lists
+
+- `Governance & Approvals`
+- `Escalations`
+- `Flow Issues`
+- `ClickUp & Automation Issues`
+- `Moneybird Follow-up`
+- `Invoices & Open Items`
+- `Cashflow Signals`
+- `SOP & Template Updates`
+- `Internal Planning`
+
+### Statussen
+
+- `New`
+- `Triage`
+- `Owner assigned`
+- `Waiting for input`
+- `Approval requested`
+- `Sophia approval needed`
+- `In progress`
+- `Blocked`
+- `Escalated`
+- `Resolved`
+- `Documented`
+- `Closed`
+
+### Custom fields
+
+Gebruik alle globale custom fields, met extra aandacht voor:
+
+- `Agent Owner`
+- `Autonomy Level`
+- `Approval Required`
+- `Approval Status`
+- `Sophia Approval`
+- `Priority`
+- `Due Date`
+- `Source Link`
+- `Drive Link`
+- `Gmail Link`
+- `Moneybird Link` voor alle Moneybird-, factuur-, BTW-, open posten-, cashflow- en betaalstatusacties.
+
+### Approval gates
+
+- Sophia approval bij strategische keuzes, financiële commitments, externe commitments, escalaties met reputatie- of businessimpact en uitzonderingen op standaardproces.
+- CM CONTROL AGENT approval bij routingwijzigingen, governance-impact, prioriteitswijzigingen, ownership-conflict, systeemrisico of proceswijziging.
+- CM MONEY AGENT controle vóór finance-opvolging extern wordt gecommuniceerd of financiële conclusies worden gebruikt; Moneybird blijft leidend.
+- CM FLOW AGENT test en CM CONTROL AGENT akkoord vóór automatiseringen data wijzigen, statussen routeren of externe systemen koppelen.
+- CM VAULT AGENT bewaakt documentatie en archivering; VAULT verwijdert geen bronnen.
+
+### Handoff triggers
+
+- Naar `PIPELINE`: operationele of financiële signalen leiden tot renewal, upsell, partnership, sponsorship, brand deal of new business opportunity.
+- Naar `CLIENTS`: operationele beslissing, approval of blocker is opgelost en clientdelivery kan verder.
+- Naar `DEAL DESK`: legal issue, contractvraag, rights conflict, payment term met contractimpact of dealvoorwaarde moet worden beoordeeld.
+- Naar `MARKETING`: governance-approved content, public update, case study, reputatiecommunicatie of website-/SEO-taak moet worden uitgevoerd.
+
+## Folder: DEAL DESK
+
+### Doel
+
+`DEAL DESK` is de folder voor legal, deals, contracten, rights, deal reviews, NDA's, publishing, licensing, sync, management agreements, sponsorship-contracten, catalog acquisitions, brokerage en obligations. Deze folder centraliseert juridische en dealmatige besluitvorming zonder een nieuwe agent aan te maken.
+
+### Eigenaar-agent
+
+- CM LEGAL AGENT
+
+### Ondersteunende agents
+
+- CM PROSPECT AGENT voor commerciële context, pipelinefase, counterparties en proposalhistorie.
+- CM MONEY AGENT voor dealwaarde, betalingsvoorwaarden, facturatie-impact, revenue share, commission tracking en financiële risico's.
+- CM OPS AGENT voor delivery-impact, obligations, planning en client/artistcontext.
+- CM CONTROL AGENT voor risk escalation, prioriteit en governance.
+- CM VAULT AGENT voor contract templates, archief, Drive-structuur en bronbeheer.
+- CM SOCIAL AGENT bij publiciteit, reputatie, usage rights, media of brand-safety impact.
+
+### Lists
+
+- `Deal Intake`
+- `NDA & Confidentiality`
+- `Contract Review`
+- `Rights Review`
+- `Publishing & Licensing`
+- `Sync Deals`
+- `Sponsorship & Brand Deal Legal`
+- `Management Agreements`
+- `Catalog Acquisitions`
+- `Obligations Tracker`
+
+### Statussen
+
+- `Intake`
+- `Scope check`
+- `Documents requested`
+- `Under review`
+- `Red flags identified`
+- `Business position needed`
+- `Counsel review`
+- `Negotiation`
+- `Approval needed`
+- `Sophia approval needed`
+- `Ready to sign`
+- `Signed`
+- `Obligations active`
+- `Closed`
+- `Rejected / parked`
+- `Blocked`
+
+### Custom fields
+
+Gebruik alle globale custom fields, met extra aandacht voor:
+
+- `Agent Owner`
+- `Client`
+- `Artist`
+- `Deal Type`
+- `Deal Value`
+- `Approval Required`
+- `Approval Status`
+- `Sophia Approval`
+- `Priority`
+- `Due Date`
+- `Source Link`
+- `Drive Link`
+- `Gmail Link`
+- `Moneybird Link` wanneer betalingsvoorwaarden, facturatie, revenue share of commission tracking relevant zijn.
+
+### Approval gates
+
+- Sophia approval vóór ondertekening, rights transfer, exclusiviteit, afwijkende commerciële voorwaarden, high-risk legal positions, catalog acquisitions of materiële commitments.
+- CM LEGAL AGENT review vóór juridische interpretatie extern wordt gedeeld of contracttaal wordt geaccepteerd.
+- CM MONEY AGENT check bij dealwaarde, betaaltermijnen, revenue share, commission, success fee, cashflow-impact of facturatievoorwaarden.
+- CM CONTROL AGENT approval bij governance-impact, conflicts, escalaties of onduidelijke owner.
+- Client/artist approval waar deal authority, usage rights, deliverables, exclusivity, budget of public commitments de client/artist raken.
+
+### Handoff triggers
+
+- Naar `PIPELINE`: deal is commercieel nog niet rijp, extra outreach/onderhandeling of proposalwerk is nodig.
+- Naar `CLIENTS`: deal is signed of obligations zijn actief en moeten in delivery, roadmap, releaseplanning of clientmanagement landen.
+- Naar `OPERATIONS`: facturatie, Moneybird-link, open posten, governance-escalatie, approval logging of systeemproces nodig is.
+- Naar `MARKETING`: deal bevat publicatie, announcement, press, websitevermelding, media outreach, usage rights of contentdeliverables.
+
+## Folder: MARKETING
+
+### Doel
+
+`MARKETING` is de folder voor alle zichtbare communicatie en groeicontent van CUSTOMMADE AGENCY. Deze folder beheert content, social media, website, SEO, persberichten, media outreach, thought leadership, case studies, newsletters, campaign assets en public-facing communicatie.
+
+### Eigenaar-agent
+
+- CM SOCIAL AGENT
+
+### Ondersteunende agents
+
+- CM CONTROL AGENT voor reputatierisico, prioriteit, routing en publicatie-approval.
+- CM OPS AGENT voor client/artistcontext, planning en delivery-afstemming.
+- CM PROSPECT AGENT voor commerciële invalshoeken, lead magnets, partnershipcontext en sales enablement.
+- CM LEGAL AGENT voor claims, rights, usage, contractuele beperkingen en gevoelige externe communicatie.
+- CM MONEY AGENT bij financiële claims, bedragen, performanceclaims of revenue-gerelateerde content.
+- CM VAULT AGENT voor brand assets, templates, cases en archivering.
+- CM FLOW AGENT voor websiteprocessen, SEO tooling, publicatie-automations en integraties.
+
+### Lists
+
+- `Content Calendar`
+- `Social Media`
+- `Website Updates`
+- `SEO`
+- `Press Releases`
+- `Media Outreach`
+- `Case Studies`
+- `Newsletter`
+- `Campaign Assets`
+
+### Statussen
+
+- `Idea`
+- `Brief`
+- `Research`
+- `Draft`
+- `Internal review`
+- `Legal review needed`
+- `Client / artist approval needed`
+- `Sophia approval needed`
+- `Approved`
+- `Scheduled`
+- `Published`
+- `Reported`
+- `Archived`
+- `Blocked`
+
+### Custom fields
+
+Gebruik alle globale custom fields, met extra aandacht voor:
+
+- `Agent Owner`
+- `Client`
+- `Artist`
+- `Approval Required`
+- `Approval Status`
+- `Sophia Approval`
+- `Priority`
+- `Due Date`
+- `Source Link`
+- `Drive Link`
+- `Gmail Link`
+- `Deal Type` bij partnership-, sponsorship-, brand deal- of campaigncontent.
+- `Moneybird Link` alleen wanneer financiële claims of finance-evidence relevant zijn.
+
+### Approval gates
+
+- Menselijke approval vóór iedere publicatie, verzending, websitewijziging, persbenadering of extern zichtbare communicatie.
+- Sophia approval bij reputatierisico, strategische messaging, gevoelige clients/artists, persberichten, media outreach of claims met businessimpact.
+- CM LEGAL AGENT review bij rights, quotes, claims, contractuele beperkingen, NDA's, usage rights of juridische gevoeligheid.
+- CM CONTROL AGENT approval bij strategische contentwijzigingen, escalaties, crisiscommunicatie of publicatie buiten standaardcadans.
+- Client/artist approval vóór publicatie van client-/artist-specifieke content, cases, beelden, quotes of releasecommunicatie.
+
+### Handoff triggers
+
+- Naar `PIPELINE`: content genereert lead, partnershipkans, sponsorship, brand deal, media opportunity of new business follow-up.
+- Naar `CLIENTS`: content vraagt client/artist input, releaseplanning, deliverables, approval of operationele opvolging.
+- Naar `DEAL DESK`: legal review, rights clearance, usage restriction, quote approval, claim check of contractuele beperking nodig is.
+- Naar `OPERATIONS`: approval logging, governance-escalatie, publicatieproces, website/SEO automation, reporting issue of systeemblokkade nodig is.

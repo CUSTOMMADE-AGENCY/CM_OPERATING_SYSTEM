@@ -1,5 +1,6 @@
 /**
  * Creates the approved Custommade Agency Google Drive folder structure.
+ * Governance status: PRIMARY for approved Drive build.
  *
  * Usage:
  * 1. Open Google Apps Script in the target Google account.

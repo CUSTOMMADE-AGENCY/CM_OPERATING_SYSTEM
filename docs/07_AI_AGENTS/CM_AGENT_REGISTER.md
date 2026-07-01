@@ -21,7 +21,7 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 | CM MONEY AGENT | Executie | Klopt dit financieel? | `06_FINANCE`, Moneybird, BTW, Open Posten, Cashflow, facturatie-opvolging, betaalstatussen, financiële blokkades, Royalty facturen, Commission tracking en Revenue share controles | Juridische dealreview, commerciële pricing-commitments zonder goedkeuring en operationele delivery buiten finance |
 | CM PROSPECT AGENT | Executie | Hoe krijgen we nieuwe business? | Leads, outreach, partnerships, sales, proposals, pipeline management, renewals, upsells, Sponsorships, Brand Partnerships, Product Placement, Sampling, Event Activaties en Endorsements | Operationele delivery |
 | CM SOCIAL AGENT | Executie | Hoe communiceren we dit? | Content, socials, thought leadership, case studies, personal branding, website content, SEO strategie, Website SEO, zoekwoordonderzoek en organische zichtbaarheid | Publicatie zonder goedkeuring |
-| CM LEGAL AGENT | Bescherming | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
+| CM LEGAL AGENT | Bescherming | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, Drive-owner voor `01_MASTER_BOUTIQUE`, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
 | CM VAULT AGENT | Infrastructuur | Waar staat de waarheid? | Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance, brand assets, contract templates, proposal templates en case studies | Verwijderen van bronnen |
 | CM FLOW AGENT | Infrastructuur | Hoe automatiseren we dit? | Make, API’s, Webhooks, ClickUp automations, GitHub workflows, Repository automatisering, Document synchronisatie, integraties, systeemgezondheid, monitoring en automatiseringen; Make heeft nu 0 scenario’s en is nog in te richten | Inhoudelijk eigenaarschap |
 
@@ -52,7 +52,7 @@ Vanaf V1.4 is CM MONEY AGENT eigenaar van finance. Dit omvat `06_FINANCE`, Money
 
 ## **DEALS-EIGENAARSCHAP**
 
-Alle dealtypes vallen onder CM LEGAL AGENT. Er wordt geen aparte DEALS agent aangemaakt. `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar beide vallen onder CM LEGAL AGENT.
+Alle dealtypes vallen onder CM LEGAL AGENT. Er wordt geen aparte DEALS agent aangemaakt. `01_MASTER_BOUTIQUE`, `04_DEALS` en `07_LEGAL` blijven aparte Google Drive-mappen, maar vallen als Drive-owner onder CM LEGAL AGENT. CM PROSPECT AGENT ondersteunt commerciële prospecting en outreach waar de Drive-matrix dat aangeeft, maar is geen mede-eigenaar van deze Drive-mappen.
 
 | Dealtype | Eigenaar |
 | --- | --- |
