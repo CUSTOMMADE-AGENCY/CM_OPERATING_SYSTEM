@@ -1,0 +1,102 @@
+# MEETING_RECAP_TEMPLATE
+
+## Doel
+
+Kort verslag met besluiten, acties en opvolging.
+
+## Wanneer gebruiken
+
+Na interne of externe meetings waar opvolging nodig is.
+
+## Niet gebruiken voor
+
+- Ingevulde clientdata.
+- Vertrouwelijke informatie, getekende documenten of operationele exports.
+- Een alternatief format wanneer een bestaande CM-template past.
+
+## Owner Agent
+
+Client Success Agent
+
+## Support Agents
+
+Meeting Agent; Shared Services Agent
+
+## System of Record
+
+GitHub = template-governance en template-specificatie.
+Drive = werkbare kopie of operationele ingevulde versie.
+
+## Opslaglocatie
+
+GitHub specificatie:
+`docs/03_SHARED_SERVICES/TEMPLATES/01_SHARED_SERVICES/MEETING_RECAP_TEMPLATE.md`
+
+Drive werkbare kopie:
+TBD – Sophia / VAULT beslissing
+
+## Gekoppelde workflow
+
+Meeting process workflow
+
+## Inputvelden
+
+| Veld | Beschrijving | Verplicht | Bron | Opmerking |
+| --- | --- | --- | --- | --- |
+| Meetingdatum | Datum overleg | Ja | Agenda |  |
+| Aanwezigen | Rollen of namen indien toegestaan | Ja | Meeting |  |
+| Besluit | Vastgelegd besluit | Ja | Meeting |  |
+| Actie | Opvolgactie | Ja | ClickUp |  |
+
+## Output
+
+- Schone, kopieerbare documentspecificatie zonder clientdata.
+- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
+- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+
+## Structuur / Tabs
+
+| Sectie | Doel | Verplicht |
+| --- | --- | --- |
+| Context | Doel van overleg | Ja |
+| Besluiten | Wat is besloten | Ja |
+| Acties | Eigenaar en deadline | Ja |
+| Open punten | Nog te beslissen | Ja |
+
+## Approval
+
+Nee, tenzij extern gevoelig. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+
+## Kwaliteitscheck
+
+- Binnen 10 seconden scanbaar.
+- Alleen noodzakelijke velden.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
+- Duidelijke eigenaar, output en volgende stap.
+- Geen parallel format als deze template past.
+
+## Template Usage Report
+
+Agents moeten bij gebruik vastleggen:
+- welke template is geraadpleegd;
+- of de template is gekopieerd;
+- waar de operationele versie staat;
+- welke afwijkingen of gaps zijn gevonden.
+
+## Status
+
+ACTIVE
+
+Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+
+## Reviewritme
+
+- Laatste review: 2026-07-01
+- Volgende review: 2026-10-01
+- Ritme: elk kwartaal of eerder bij governancewijziging.
+
+## Wijzigingslog
+
+| Datum | Wijziging | Owner |
+| --- | --- | --- |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
