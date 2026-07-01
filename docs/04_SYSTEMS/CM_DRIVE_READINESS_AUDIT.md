@@ -92,7 +92,13 @@ OS_CUSTOMMADE
 
 Controleer `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`.
 
-□ Alle artiesten staan onder `02_ARTIST_MANAGEMENT`.
+□ Alle artiesten staan direct onder `02_ARTIST_MANAGEMENT` als `[ARTIST_NAME]`.
+
+□ Controleer dat `02_ARTIST_MANAGEMENT` geen directe operationele submappen bevat zoals `01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `06_FINANCE`, `07_SOCIALMEDIA`, `08_PRESS_EPK` of `09_ARCHIVE`.
+
+□ Controleer dat deze 9 submappen uitsluitend binnen `[ARTIST_NAME]` staan.
+
+□ Controleer dat geen statuslagen bestaan onder `02_ARTIST_MANAGEMENT`; ClickUp beheert status en Pipeline.
 
 □ Er staan geen artiestendossiers onder `03_CLIENTS`, oude roots of parallelle structuren.
 
@@ -110,7 +116,7 @@ Controleer `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`.
 09_ARCHIVE
 ```
 
-□ Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT` of een extra ongenummerde `SOCIALMEDIA`-map.
+□ Artistfolders gebruiken `07_SOCIALMEDIA`; `07_CONTENT` en losse `SOCIALMEDIA` worden gemarkeerd als legacy migration required.
 
 □ Artist-specifieke werkbestanden staan in het juiste artistdossier en niet in GitHub of rootniveau.
 

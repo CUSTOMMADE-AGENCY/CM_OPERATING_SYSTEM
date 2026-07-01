@@ -50,7 +50,7 @@ const FORBIDDEN_ROOTS = [
   '07_ARCHIVE'
 ];
 
-const ARTIST_REQUIRED_SUBFOLDERS = [
+const ARTIST_OPERATIONAL_SUBFOLDERS = [
   '01_ADMIN',
   '02_CONTRACT',
   '03_STRATEGY',
@@ -60,6 +60,21 @@ const ARTIST_REQUIRED_SUBFOLDERS = [
   '07_SOCIALMEDIA',
   '08_PRESS_EPK',
   '09_ARCHIVE'
+];
+
+const ARTIST_REQUIRED_SUBFOLDERS = ARTIST_OPERATIONAL_SUBFOLDERS.slice();
+
+const ARTIST_FORBIDDEN_STATUS_LAYERS = [
+  '01_ACTIVE',
+  '02_ONBOARDING',
+  '03_PROSPECTS',
+  '04_ON_HOLD',
+  '05_OFFBOARDED'
+];
+
+const ARTIST_LEGACY_SOCIALMEDIA_FOLDERS = [
+  '07_CONTENT',
+  'SOCIALMEDIA'
 ];
 
 const DEAL_REQUIRED_SUBFOLDERS = [
@@ -198,6 +213,17 @@ function auditArtistManagement_(audit, root) {
 
   artistFolders.forEach(function(artistFolder) {
     const artistName = artistFolder.getName();
+
+    if (ARTIST_OPERATIONAL_SUBFOLDERS.indexOf(artistName) >= 0) {
+      addFinding_(audit, section, 'CRITICAL', 'Artist layer missing', pathJoin_(['OS_CUSTOMMADE', '02_ARTIST_MANAGEMENT', artistName]), 'Operationele submappen mogen niet direct onder 02_ARTIST_MANAGEMENT staan. Gebruik OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/' + artistName + '.');
+      return;
+    }
+
+    if (ARTIST_FORBIDDEN_STATUS_LAYERS.indexOf(artistName) >= 0) {
+      addFinding_(audit, section, 'CRITICAL', 'Statuslaag gevonden onder Artist Management', pathJoin_(['OS_CUSTOMMADE', '02_ARTIST_MANAGEMENT', artistName]), 'Geen statuslagen in Drive. Status en Pipeline staan in ClickUp.');
+      return;
+    }
+
     const subfolders = listChildFolders_(artistFolder).map(function(folder) { return folder.getName(); });
 
     ARTIST_REQUIRED_SUBFOLDERS.forEach(function(required) {
@@ -208,13 +234,11 @@ function auditArtistManagement_(audit, root) {
       }
     });
 
-    if (subfolders.indexOf('07_CONTENT') >= 0) {
-      addFinding_(audit, section, 'MEDIUM', 'Artist gebruikt oude 07_CONTENT map', pathJoin_(['OS_CUSTOMMADE', '02_ARTIST_MANAGEMENT', artistName, '07_CONTENT']), 'Review en mapping naar 07_SOCIALMEDIA.');
-    }
-
-    if (subfolders.indexOf('SOCIALMEDIA') >= 0) {
-      addFinding_(audit, section, 'MEDIUM', 'Ongenummerde SOCIALMEDIA map gevonden', pathJoin_(['OS_CUSTOMMADE', '02_ARTIST_MANAGEMENT', artistName, 'SOCIALMEDIA']), 'Review en mapping naar 07_SOCIALMEDIA.');
-    }
+    ARTIST_LEGACY_SOCIALMEDIA_FOLDERS.forEach(function(legacyFolder) {
+      if (subfolders.indexOf(legacyFolder) >= 0) {
+        addFinding_(audit, section, 'MEDIUM', 'Legacy socialmedia structure: migration required', pathJoin_(['OS_CUSTOMMADE', '02_ARTIST_MANAGEMENT', artistName, legacyFolder]), 'Review en mapping naar 07_SOCIALMEDIA. Niet automatisch mergen.');
+      }
+    });
 
     const looseFiles = listChildFiles_(artistFolder, 25);
     looseFiles.forEach(function(file) {

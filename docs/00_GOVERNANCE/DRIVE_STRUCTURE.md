@@ -42,10 +42,10 @@ Oude rootstructuren worden niet meer aangemaakt of als operationele root gebruik
 
 Alle artiestendossiers staan onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. Artists worden niet gemigreerd naar `03_CLIENTS`.
 
-Elke artistfolder gebruikt waar relevant deze vaste productiestructuur. De officiële detailstandaard staat in `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md`.
+De Artist Management Drive-structuur is altijd artist-first: niet `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/01_ADMIN`, wel `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/01_ADMIN`. `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` bevat uitsluitend actieve artistfolders, zonder statuslagen. De officiële detailstandaard staat in `docs/02_ARTIST_MANAGEMENT/ARTIST_FOLDER_STANDARD.md`.
 
 ```text
-ARTIST_NAME
+[ARTIST_NAME]
 ├── 01_ADMIN
 ├── 02_CONTRACT
 ├── 03_STRATEGY

@@ -81,3 +81,5 @@ Deze map is het canonical entrypoint voor de Artist Management-lane. Gebruik dit
 - Gebruik de Artist Approval Matrix wanneer besluitbevoegdheid onduidelijk is.
 - Maak elke live action aan in ClickUp met owner, due date, status, source link en required evidence.
 - Bewaar artist-specifieke bestanden uitsluitend in de juiste Google Drive-clientmap.
+- Gebruik `ARTIST_FOLDER_STANDARD.md` als leidende Drive-standaard voor actieve artistdossiers.
+- Google Drive artistdossiers gebruiken altijd: `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/[01_ADMIN...09_ARCHIVE]`.

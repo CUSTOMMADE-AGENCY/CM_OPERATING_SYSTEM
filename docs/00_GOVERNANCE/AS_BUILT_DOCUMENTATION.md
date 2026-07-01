@@ -62,19 +62,20 @@ OS_CUSTOMMADE
 └── 99_ARCHIVE
 ```
 
-Elke artistfolder onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` gebruikt waar relevant deze vaste interne structuur:
+`OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` bevat alleen actieve artists en gebruikt geen statuslagen in Drive. Elke artistfolder staat direct onder de Artist Management-root en gebruikt deze vaste interne structuur:
 
 ```text
-ARTIST_NAME
-├── 01_ADMIN
-├── 02_CONTRACT
-├── 03_STRATEGY
-├── 04_RELEASES
-├── 05_BOOKING
-├── 06_FINANCE
-├── 07_SOCIALMEDIA
-├── 08_PRESS_EPK
-└── 09_ARCHIVE
+OS_CUSTOMMADE/02_ARTIST_MANAGEMENT
+└── [ARTIST_NAME]
+    ├── 01_ADMIN
+    ├── 02_CONTRACT
+    ├── 03_STRATEGY
+    ├── 04_RELEASES
+    ├── 05_BOOKING
+    ├── 06_FINANCE
+    ├── 07_SOCIALMEDIA
+    ├── 08_PRESS_EPK
+    └── 09_ARCHIVE
 ```
 
 Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang de deal de due diligence fase niet heeft bereikt:
@@ -94,11 +95,15 @@ DEAL_OR_ASSET_NAME
 Belangrijke as-built correcties ten opzichte van eerdere documentatie:
 
 - Artistdossiers staan onder `02_ARTIST_MANAGEMENT`; artists worden niet gemigreerd naar `03_CLIENTS`.
+- `02_ARTIST_MANAGEMENT` bevat alleen actieve artists.
+- Geen statuslagen in Drive; status en Pipeline staan in ClickUp.
+- Inactieve artists worden volledig verplaatst naar `99_ARCHIVE/ARTIST_MANAGEMENT/[ARTIST_NAME]`.
 - Master Boutique/dealdossiers staan onder `04_DEALS` en gebruiken de lean Nederlandse dealstructuur.
 - Oude operationele roots worden niet meer aangemaakt of als productie-root gebruikt.
 - De oude Engelse dealstructuur is geen standaard Drive-structuur meer.
 - `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
 - Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
+- `07_CONTENT` en losse `SOCIALMEDIA` zijn legacy en migreren naar `07_SOCIALMEDIA`.
 - De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
 
 Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels en rootfolder-doelen.
