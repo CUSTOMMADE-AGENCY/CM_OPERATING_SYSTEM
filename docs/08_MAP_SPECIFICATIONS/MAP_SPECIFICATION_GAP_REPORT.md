@@ -126,16 +126,16 @@ CM SOCIAL AGENT bouwt de Canva Brand Kit voor CM. Na oplevering: vermelden in de
 
 | Veld | Waarde |
 |---|---|
-| Status | Opgelost |
-| Prioriteit | — |
-| Betrokken bestand | `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` |
+| Status | Open |
+| Prioriteit | Middel |
+| Betrokken bestand | `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` (ontbreekt) |
 | Eigenaar | CM OPS AGENT |
 
 **Beschrijving:**
 `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` bestaat en documenteert de artistfolder-standaard. Een vergelijkbaar document voor de clientfolder-standaard (`03_CLIENTS`) ontbreekt. De `03_CLIENTS.md` Map Specification verwijst naar de Drive Mapping voor de submapstructuur, maar een aparte CLIENT_FOLDER_STANDARD.md is niet aangemaakt.
 
 **Actie:**
-Opgelost. `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` bestaat en documenteert de volledige 7-mappenstructuur (`01_ADMIN` t/m `09_ARCHIVE`), folderbetekenis, governance-regels, archive-regel en quality check. Bestand verwijst correct naar Map Specifications als leidend voor mapinhoud.
+CM OPS AGENT maakt `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` aan conform de schrijfstandaard in `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md`, of besluit dat de huidige DRIVE_MAPPING.md-sectie voldoende is.
 
 ---
 
@@ -285,7 +285,7 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 | GAP-004 | Ontbrekende Workflows voor meerdere mappen | Open | Middel | CM FLOW AGENT |
 | GAP-005 | Make-automatiseringen niet ingericht | Open | Laag | CM FLOW AGENT |
 | GAP-006 | Canva Brand Kit niet beschikbaar | Open | Middel | CM SOCIAL AGENT |
-| GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Opgelost | — | CM OPS AGENT |
+| GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Open | Middel | CM OPS AGENT |
 | GAP-008 | APPROVAL_LOG.md verwijst naar niet-bestaande map 06_CONTROL | Opgelost | — | CM CONTROL AGENT |
 | GAP-009 | MAP_SPECIFICATION_STANDARD.md ontbrak | Opgelost | — | CM CONTROL AGENT |
 | GAP-010 | docs/08_MAP_SPECIFICATIONS/ directory ontbrak | Opgelost | — | CM CONTROL AGENT |
