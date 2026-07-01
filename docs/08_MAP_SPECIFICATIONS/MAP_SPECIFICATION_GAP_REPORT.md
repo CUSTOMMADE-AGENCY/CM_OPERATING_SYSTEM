@@ -116,16 +116,24 @@ Opgelost op 2026-07-01: 11 Workflows aangemaakt in `docs/03_SHARED_SERVICES/` en
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Laag (afhankelijk van Make-prioritering) |
-| Betrokken mappen | Alle mappen |
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken mappen | `00_ADMIN`, `06_FINANCE` |
 | Eigenaar | CM FLOW AGENT |
 
 **Beschrijving:**
-Make heeft 0 actieve scenario's. Alle Map Specifications vermelden dit als `Nog in te richten`. Meerdere geplande automatiseringen zijn geïdentificeerd: governance-export bij GitHub-merge (`00_ADMIN`), Moneybird-export naar Drive (`06_FINANCE`), BTW-signalering (`06_FINANCE`).
+Make had 0 actieve scenario's. Alle Map Specifications vermeldden dit als `Nog in te richten`. Geplande automatiseringen: governance-export bij GitHub-merge (`00_ADMIN`), BTW-signalering (`06_FINANCE`), Moneybird-export naar Drive (`06_FINANCE`).
 
 **Actie:**
-CM FLOW AGENT richt Make-scenario's in zodra de prioritering daarvoor is vastgesteld. Registreer elk scenario in de Template Register en de relevante Map Specification.
+Opgelost op 2026-07-01: 2 Make-scenario's aangemaakt en geactiveerd; relevante Map Specifications bijgewerkt:
+
+| Scenario | Make ID | Map Specification |
+|---|---|---|
+| CM ▸ BTW Signalering (Kwartaal) | `6406883` | `06_FINANCE.md` sectie 18 |
+| CM ▸ Governance Export bij PR Merge | `6407378` | `00_ADMIN.md` sectie 18 |
+
+**Openstaand (niet-blokkerend):**
+- Moneybird-export naar Drive (`06_FINANCE`) — wacht op Moneybird-verbinding in Make; gedocumenteerd als gepland in `06_FINANCE.md` sectie 18.
 
 ---
 
@@ -307,7 +315,7 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 | GAP-002 | DRIVE_MAPPING.md 07_LEGAL submapstructuur uitgebreid | Opgelost | — | CM LEGAL AGENT |
 | GAP-003 | Ontbrekende SOPs voor meerdere mappen | Opgelost | — | CM CONTROL AGENT |
 | GAP-004 | Ontbrekende Workflows voor meerdere mappen | Opgelost | — | CM FLOW AGENT |
-| GAP-005 | Make-automatiseringen niet ingericht | Open | Laag | CM FLOW AGENT |
+| GAP-005 | Make-automatiseringen niet ingericht | Opgelost | — | CM FLOW AGENT |
 | GAP-006 | Canva Brand Kit niet beschikbaar | Open | Middel | CM SOCIAL AGENT |
 | GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Opgelost | — | CM OPS AGENT |
 | GAP-008 | APPROVAL_LOG.md verwijst naar niet-bestaande map 06_CONTROL | Opgelost | — | CM CONTROL AGENT |

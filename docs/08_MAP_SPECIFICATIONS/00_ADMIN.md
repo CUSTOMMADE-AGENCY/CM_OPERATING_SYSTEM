@@ -168,7 +168,7 @@ Incorrect: `onboarding nieuw definitief v2.pdf`
 | GitHub | Bron van governance en templates; exports landen in `00_ADMIN/02_GOVERNANCE_REFERENCE` | Actief |
 | ClickUp | Taakbeheer voor admin-acties en onboarding-tasks | Actief |
 | Gmail | Correspondentie rondom HR en onboarding | Actief |
-| Make | Geen actieve scenario's. Toekomstige automatisering van governance-exports mogelijk. | Nog in te richten |
+| Make | Governance Export bij PR Merge (ID `6407378`) | Actief |
 
 ---
 
@@ -206,9 +206,14 @@ Incorrect: `onboarding nieuw definitief v2.pdf`
 
 ## **18. AUTOMATISERINGEN**
 
-Geen actieve automatiseringen. Make heeft nu 0 scenario's.
+| Scenario | Make ID | Trigger | Status |
+|---|---|---|---|
+| CM ▸ Governance Export bij PR Merge | `6407378` | Polling elke 15 minuten — actie alleen bij gemerged PR naar `main` in `CM_OPERATING_SYSTEM` | Actief |
 
-Geplande automatiseringen: TBD (governance-export workflow bij GitHub-merge).
+**CM ▸ Governance Export bij PR Merge:**
+- Pollt GitHub elke 15 minuten op PR-updates in `CustomMadeNL/CM_OPERATING_SYSTEM`
+- Filter: alleen gemerged PRs naar `main` branch
+- Stuurt automatische e-mailmelding naar `info@custommade.agency` met PR-nummer, titel, URL en merge-informatie
 
 ---
 
