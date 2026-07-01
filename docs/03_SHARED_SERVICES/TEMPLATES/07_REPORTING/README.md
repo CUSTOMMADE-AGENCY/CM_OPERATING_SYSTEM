@@ -10,7 +10,7 @@ Deze map bevat templates voor periodieke rapportages, managementupdates en KPI-o
 
 ## Owner agent
 
-Reporting Agent
+CM OPS AGENT
 
 ## Gebruiksregels
 

@@ -1,4 +1,15 @@
 # ClickUp Task Template — Deal Negotiation
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM FLOW AGENT
+
+## Support Agents
+
+CM OPS AGENT; CM VAULT AGENT
 
 ## Core rule
 GitHub defines the process. ClickUp executes the process. Drive stores deliverables. Gmail handles communication.
@@ -80,8 +91,7 @@ Artist voor deal authority en final approval. Counsel voor juridische review wan
 `docs/02_ARTIST_MANAGEMENT/DEAL_NEGOTIATION_FLOW.md` en inhoudelijke bron `docs/02_ARTIST_MANAGEMENT/07_DEAL_NEGOTIATION_FLOW.md`.
 
 ## Linked Drive folder
-`02_ARTIST_MANAGEMENT/[Artist Name]/07_Deals/[Deal Name]`.
-
+TBD – Sophia / VAULT beslissing
 ## Linked Gmail templates
 - `CM - Artist Management - Deal Terms Approval`
 - `CM - Artist Management - Meeting Recap`

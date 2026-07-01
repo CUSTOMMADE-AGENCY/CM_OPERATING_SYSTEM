@@ -1,4 +1,7 @@
 # EMAIL_INSTRUCTIONS_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij het opstellen of aanpassen van Gmail-templates.
 
 ## Owner Agent
 
-Communication Agent
+CM SOCIAL AGENT
 
 ## Support Agents
 
-Shared Services Agent
+CM VAULT AGENT
 
 ## System of Record
 
@@ -98,4 +101,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

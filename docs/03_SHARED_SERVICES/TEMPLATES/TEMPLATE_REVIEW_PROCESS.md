@@ -1,4 +1,15 @@
 # TEMPLATE_REVIEW_PROCESS
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM VAULT AGENT
+
+## Support Agents
+
+CM CONTROL AGENT
 
 ## Doel
 
@@ -15,9 +26,9 @@ Proces voor het onderhouden, beoordelen en verbeteren van de CM Template Library
 
 | Moment | Trigger | Owner | Output |
 | --- | --- | --- | --- |
-| Kwartaalreview | Standaard reviewritme | Shared Services Agent | Statusupdate en changelog |
+| Kwartaalreview | Standaard reviewritme | CM VAULT AGENT | Statusupdate en changelog |
 | Gap review | Nieuwe TEMPLATE_GAP_LOG items | Template owner | Besluit per gap |
-| Governancewijziging | Nieuwe of gewijzigde CM-regel | Governance Agent | Template-aanpassing of statuswijziging |
+| Governancewijziging | Nieuwe of gewijzigde CM-regel | CM CONTROL AGENT | Template-aanpassing of statuswijziging |
 | Workflowwijziging | Proces of systeem wijzigt | Workflow owner | Geactualiseerde template-specificatie |
 
 ## Reviewstappen
@@ -38,8 +49,8 @@ Proces voor het onderhouden, beoordelen en verbeteren van de CM Template Library
 | Tekstuele verduidelijking zonder veldwijziging | Nee |
 | Nieuw verplicht veld | Ja, template owner |
 | Workflowwijziging | Ja, workflow owner |
-| Client-facing templatewijziging | Ja, Sophia of CM CONTROL |
-| Deprecation | Ja, CM CONTROL |
+| Client-facing templatewijziging | Ja, Sophia of CM CONTROL AGENT |
+| Deprecation | Ja, CM CONTROL AGENT |
 
 ## Kwaliteitscheck
 

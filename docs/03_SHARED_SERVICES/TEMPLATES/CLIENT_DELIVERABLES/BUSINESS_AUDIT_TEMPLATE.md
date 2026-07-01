@@ -1,4 +1,15 @@
 # Business Audit TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM MONEY AGENT
+
+## Support Agents
+
+CM OPS AGENT
 
 ## 1. DOCUMENTINFORMATIE
 

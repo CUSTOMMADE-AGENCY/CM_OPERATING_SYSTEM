@@ -1,4 +1,15 @@
 # TEMPLATE_GAP_LOG_SPEC
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM VAULT AGENT
+
+## Support Agents
+
+CM CONTROL AGENT
 
 ## Doel
 

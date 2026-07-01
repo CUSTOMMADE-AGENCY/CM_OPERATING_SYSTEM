@@ -11,7 +11,7 @@ Deze map bevat referentiespecificaties voor templates waarvan uitvoering, status
 
 ## Owner agent
 
-ClickUp Agent
+CM FLOW AGENT
 
 ## Gebruiksregels
 

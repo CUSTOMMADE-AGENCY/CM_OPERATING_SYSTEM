@@ -1,4 +1,7 @@
 # DEAL_PIPELINE_CLICKUP_REFERENCE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij Master Boutique pipeline, buyer outreach en dealopvolging.
 
 ## Owner Agent
 
-Deal Agent
+CM PROSPECT AGENT
 
 ## Support Agents
 
-ClickUp Agent; Master Boutique Agent
+CM FLOW AGENT; CM PROSPECT AGENT
 
 ## System of Record
 
@@ -50,7 +53,7 @@ Deal pipeline workflow
 
 ## Output
 
-- Schone, kopieerbare spreadsheetspecificatie zonder clientdata.
+- Schone, kopieerbare registerspecificatie zonder clientdata.
 - Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
 - Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
 
@@ -98,4 +101,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

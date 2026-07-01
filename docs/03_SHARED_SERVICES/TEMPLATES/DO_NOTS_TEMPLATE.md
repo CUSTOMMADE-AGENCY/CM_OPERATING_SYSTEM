@@ -1,4 +1,15 @@
 # DO NOTS TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM CONTROL AGENT
+
+## Support Agents
+
+CM VAULT AGENT
 
 ## OVERVIEW
 

@@ -1,4 +1,7 @@
 # MEETING_RECAP_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Na interne of externe meetings waar opvolging nodig is.
 
 ## Owner Agent
 
-Client Success Agent
+CM OPS AGENT
 
 ## Support Agents
 
-Meeting Agent; Shared Services Agent
+CM OPS AGENT; CM VAULT AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

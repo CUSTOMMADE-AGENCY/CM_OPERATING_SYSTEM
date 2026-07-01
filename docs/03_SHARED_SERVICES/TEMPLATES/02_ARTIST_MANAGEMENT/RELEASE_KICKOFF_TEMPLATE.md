@@ -1,4 +1,7 @@
 # RELEASE_KICKOFF_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Aan de start van releaseplanning of campagneproductie.
 
 ## Owner Agent
 
-Release Agent
+CM OPS AGENT
 
 ## Support Agents
 
-Artist Management Agent; Content Agent
+CM OPS AGENT; CM SOCIAL AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

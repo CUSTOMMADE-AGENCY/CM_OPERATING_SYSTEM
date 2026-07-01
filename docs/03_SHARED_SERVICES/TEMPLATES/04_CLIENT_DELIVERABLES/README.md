@@ -11,7 +11,7 @@ Deze map bevat templates voor client-facing audits en deliverables die vóór ve
 
 ## Owner agent
 
-Client Success Agent / Artist Management Agent
+CM OPS AGENT / CM OPS AGENT
 
 ## Gebruiksregels
 

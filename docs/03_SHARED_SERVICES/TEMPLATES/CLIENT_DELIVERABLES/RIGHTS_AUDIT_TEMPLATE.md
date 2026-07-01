@@ -1,4 +1,15 @@
 # RIGHTS AUDIT TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM LEGAL AGENT
+
+## Support Agents
+
+CM PROSPECT AGENT; CM CONTROL AGENT
 
 ## 1. DOCUMENTINFORMATIE
 

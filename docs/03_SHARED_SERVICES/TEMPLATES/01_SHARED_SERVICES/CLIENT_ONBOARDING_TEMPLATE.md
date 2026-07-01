@@ -1,4 +1,7 @@
 # CLIENT_ONBOARDING_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Wanneer een nieuwe client of artist operationeel wordt ingericht.
 
 ## Owner Agent
 
-Client Success Agent
+CM OPS AGENT
 
 ## Support Agents
 
-Shared Services Agent; VAULT Agent
+CM VAULT AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

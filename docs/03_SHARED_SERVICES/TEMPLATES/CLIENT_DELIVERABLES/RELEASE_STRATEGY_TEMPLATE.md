@@ -1,4 +1,15 @@
 # RELEASE STRATEGY TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+
+## Owner Agent
+
+CM OPS AGENT
+
+## Support Agents
+
+CM SOCIAL AGENT; CM VAULT AGENT
 
 ## 1. DOCUMENTINFORMATIE
 

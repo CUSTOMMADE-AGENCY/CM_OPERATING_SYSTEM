@@ -13,7 +13,7 @@ Deze map bevat generieke templates voor klantprofielen, onboarding, meetings en 
 
 ## Owner agent
 
-Client Success Agent / Shared Services Agent
+CM OPS AGENT / CM VAULT AGENT
 
 ## Gebruiksregels
 

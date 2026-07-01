@@ -1,4 +1,7 @@
 # PARTNERSHIP_BRIEF_TEMPLATE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij partnership intake, outreachvoorbereiding of voorstelvorming.
 
 ## Owner Agent
 
-Partnership Agent
+CM PROSPECT AGENT
 
 ## Support Agents
 
-Master Boutique Agent; Brand Agent
+CM PROSPECT AGENT; CM SOCIAL AGENT
 
 ## System of Record
 
@@ -99,4 +102,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |

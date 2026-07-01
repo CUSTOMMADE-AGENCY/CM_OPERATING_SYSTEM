@@ -12,7 +12,7 @@ Deze map bevat templates voor artist roadmaps, releasevoorbereiding en release-s
 
 ## Owner agent
 
-Artist Management Agent / Release Agent
+CM OPS AGENT / CM OPS AGENT
 
 ## Gebruiksregels
 

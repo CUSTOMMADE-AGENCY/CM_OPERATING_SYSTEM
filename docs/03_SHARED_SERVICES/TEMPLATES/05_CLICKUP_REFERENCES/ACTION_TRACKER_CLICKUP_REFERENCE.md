@@ -1,4 +1,7 @@
 # ACTION_TRACKER_CLICKUP_REFERENCE
+## Architectuurstandaard
+
+Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
@@ -16,11 +19,11 @@ Bij projecten waar Drive/GitHub documentatie naar ClickUp-acties moet verwijzen.
 
 ## Owner Agent
 
-ClickUp Agent
+CM FLOW AGENT
 
 ## Support Agents
 
-Shared Services Agent; Project Owner Agent
+CM VAULT AGENT; CM OPS AGENT
 
 ## System of Record
 
@@ -50,7 +53,7 @@ ClickUp action tracking workflow
 
 ## Output
 
-- Schone, kopieerbare spreadsheetspecificatie zonder clientdata.
+- Schone, kopieerbare registerspecificatie zonder clientdata.
 - Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
 - Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
 
@@ -98,4 +101,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | Shared Services Agent |
+| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
