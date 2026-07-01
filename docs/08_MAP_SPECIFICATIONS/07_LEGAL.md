@@ -142,8 +142,8 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM LEGAL AGENT; bij
 
 | Actie | Approvalniveau | Approver |
 |---|---|---|
-| Aanmaken contractdossier (intern) | Level 3 | CM LEGAL AGENT |
-| Bijwerken van legal reviewdossier | Level 3 | CM LEGAL AGENT |
+| Aanmaken contractdossier (intern) | Level 2 | CM LEGAL AGENT |
+| Bijwerken van legal reviewdossier | Level 2 | CM LEGAL AGENT |
 | Ondertekening of juridische verplichting | Level 4 | Sophia |
 | Externe indiening van juridisch document | Level 4 | Sophia |
 | Wijziging van het Approval Register | Level 4 | Sophia |

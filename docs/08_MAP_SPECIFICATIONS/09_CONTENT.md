@@ -120,8 +120,8 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM SOCIAL AGENT; bi
 
 | Actie | Approvalniveau | Approver |
 |---|---|---|
-| Aanmaken content-asset of contentdossier | Level 3 | CM SOCIAL AGENT |
-| Bijwerken van contentkalender | Level 3 | CM SOCIAL AGENT |
+| Aanmaken content-asset of contentdossier | Level 2 | CM SOCIAL AGENT |
+| Bijwerken van contentkalender | Level 2 | CM SOCIAL AGENT |
 | Publicatie namens CM | Level 4 | Sophia |
 | Externe verspreiding van contentmateriaal | Level 4 | Sophia |
 | Verwijdering van contentbestand | Level 4 | Sophia |

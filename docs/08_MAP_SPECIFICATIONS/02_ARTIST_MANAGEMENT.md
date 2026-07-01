@@ -102,15 +102,15 @@ De volledige artistfolder-standaard staat in `docs/00_GOVERNANCE/ARTIST_FOLDER_S
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Artist Onboarding Workflow | `docs/02_ARTIST_MANAGEMENT/01_ARTIST_ONBOARDING_WORKFLOW.md` | Nieuwe artist start samenwerking met CM |
-| Artist Strategy Workflow | `docs/02_ARTIST_MANAGEMENT/02_ARTIST_STRATEGY_WORKFLOW.md` | Start of update van artiststrategie |
-| Release Kickoff Workflow | `docs/02_ARTIST_MANAGEMENT/03_RELEASE_KICKOFF_WORKFLOW.md` | Nieuwe release in planning |
-| Content Productie Workflow | `docs/02_ARTIST_MANAGEMENT/04_CONTENT_PRODUCTIE_WORKFLOW.md` | Contentproductie voor artist |
-| Social Publishing Workflow | `docs/02_ARTIST_MANAGEMENT/05_SOCIAL_PUBLISHING_WORKFLOW.md` | Publicatie van content op social kanalen |
-| Booking Workflow | `docs/02_ARTIST_MANAGEMENT/06_BOOKING_WORKFLOW.md` | Booking-aanvraag voor show of optreden |
-| Finance Intake Workflow | `docs/02_ARTIST_MANAGEMENT/07_FINANCE_INTAKE_WORKFLOW.md` | Finance-intake voor artist |
-| Press EPK Workflow | `docs/02_ARTIST_MANAGEMENT/08_PRESS_EPK_WORKFLOW.md` | Aanvraag of update van press kit of EPK |
-| Offboarding Workflow | `docs/02_ARTIST_MANAGEMENT/09_ARTIST_OFFBOARDING_WORKFLOW.md` | Einde samenwerking met artist |
+| Artist Onboarding Flow | `docs/02_ARTIST_MANAGEMENT/01_ARTIST_ONBOARDING_FLOW.md` | Nieuwe artist start samenwerking met CM |
+| Brand Audit Flow | `docs/02_ARTIST_MANAGEMENT/02_BRAND_AUDIT_FLOW.md` | Brand audit voor positionering en risico's |
+| Artist Brandbook Flow | `docs/02_ARTIST_MANAGEMENT/03_ARTIST_BRANDBOOK_FLOW.md` | Aanmaken of update van artist brandbook |
+| Artist Roadmap Flow | `docs/02_ARTIST_MANAGEMENT/04_ARTIST_ROADMAP_FLOW.md` | Aanmaken of update van artist roadmap |
+| Release Strategy Flow | `docs/02_ARTIST_MANAGEMENT/05_RELEASE_STRATEGY_FLOW.md` | Nieuwe release in planning |
+| Monthly Management Flow | `docs/02_ARTIST_MANAGEMENT/06_MONTHLY_MANAGEMENT_FLOW.md` | Maandelijkse managementcyclus |
+| Deal Negotiation Flow | `docs/02_ARTIST_MANAGEMENT/07_DEAL_NEGOTIATION_FLOW.md` | Start van dealonderhandeling |
+| Brand Partnership Flow | `docs/02_ARTIST_MANAGEMENT/08_BRAND_PARTNERSHIP_FLOW.md` | Brand partnership voor artist |
+| Artist Offboarding Flow | `docs/02_ARTIST_MANAGEMENT/09_ARTIST_OFFBOARDING_FLOW.md` | Einde samenwerking met artist |
 
 ---
 
