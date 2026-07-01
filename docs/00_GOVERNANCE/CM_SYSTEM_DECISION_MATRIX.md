@@ -32,7 +32,7 @@ Binnen CM_OS heeft ieder systeem één primaire rol en iedere rij in de System o
 
 | Onderwerp | Leidend systeem | Ondersteunend systeem | Owner Agent | Support Agents | Bewijslocatie | Opmerking |
 |---|---|---|---|---|---|---|
-| Governance | GitHub | Drive | CM VAULT AGENT | CM CONTROL AGENT | GitHub repository | GitHub bevat de geldende governance-documentatie; CM CONTROL AGENT voert governance review uit waar nodig. |
+| Governance | GitHub | Drive | CM CONTROL AGENT | CM VAULT AGENT | GitHub repository | GitHub bevat de geldende governance-documentatie; CM CONTROL AGENT is eigenaar van governance. CM VAULT AGENT ondersteunt repositorystructuur, source hygiene en documentatiebeheer. |
 | Agent-definities | GitHub | Drive | CM VAULT AGENT | CM CONTROL AGENT | GitHub repository | Agent-definities worden in GitHub beheerd; Drive bevat hoogstens werkkopieën of exports. |
 | Playbooks | GitHub | Drive | CM VAULT AGENT | CM CONTROL AGENT | GitHub repository | Playbooks zijn systeemdocumentatie; governance review loopt via CM CONTROL AGENT waar nodig. |
 | SOP’s | GitHub | Drive | CM VAULT AGENT | CM CONTROL AGENT | GitHub repository | SOP-versiebeheer loopt via GitHub; Drive bevat operationele kopieën of werkdocumenten. |
@@ -71,7 +71,7 @@ Binnen CM_OS heeft ieder systeem één primaire rol en iedere rij in de System o
 | Nieuwsbrieven | Drive | Gmail, ClickUp | CM SOCIAL AGENT |  | Drive newsletter folder | Verzonden bewijs of campagnebewijs staat in Gmail of campagneomgeving. |
 | Persberichten | Drive | Gmail, ClickUp | CM SOCIAL AGENT |  | Drive press folder | Media outreachbewijs blijft in Gmail. |
 | Media outreach | Gmail | ClickUp, Drive | CM SOCIAL AGENT |  | Gmail thread | ClickUp bevat opvolging en status. |
-| Approvals | APPROVAL_LOG | Drive, ClickUp | CM CONTROL AGENT | CM FLOW AGENT | `docs/00_GOVERNANCE/APPROVAL_LOG.md` + `OS_CUSTOMMADE / 06_CONTROL / APPROVAL_LOG` | `APPROVAL_LOG.md` is de governance-specificatie; de Google Sheet in Drive is de operationele approval audit trail. Er wordt geen tweede approval-register gebruikt. |
+| Approvals | APPROVAL_LOG | Drive, ClickUp | CM CONTROL AGENT | CM FLOW AGENT | `docs/00_GOVERNANCE/APPROVAL_LOG.md` + `OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` | `APPROVAL_LOG.md` is de governance-specificatie; CM_APPROVAL_REGISTER in Drive is de enige operationele approval audit trail. Er wordt geen tweede approval-register gebruikt. |
 | Escalaties | ClickUp | GitHub, Gmail | CM CONTROL AGENT |  | ClickUp escalation task | Escalatieprotocollen staan in GitHub. |
 | Automatiseringen | Make | GitHub | CM FLOW AGENT | CM VAULT AGENT | Make scenario + GitHub docs | Make draait de automatisering; GitHub documenteert de governance. |
 | Make scenario’s | Make | GitHub | CM FLOW AGENT | CM VAULT AGENT | Make scenario + GitHub docs | Scenario-eigenaarschap ligt bij CM FLOW AGENT. |
@@ -90,7 +90,7 @@ Binnen CM_OS heeft ieder systeem één primaire rol en iedere rij in de System o
 - Bij twijfel over geld is Moneybird leidend.
 - Bij twijfel over communicatie is Gmail leidend.
 - Bij twijfel over automatisering zijn Make en GitHub-documentatie samen leidend: Make voor actieve uitvoering, GitHub voor governance en versiehistorie.
-- Bij twijfel over approvals geldt één waarheid: `docs/00_GOVERNANCE/APPROVAL_LOG.md` definieert de governance-specificatie en de Google Sheet op `OS_CUSTOMMADE / 06_CONTROL / APPROVAL_LOG` is de operationele approval audit trail.
+- Bij twijfel over approvals geldt één waarheid: `docs/00_GOVERNANCE/APPROVAL_LOG.md` definieert de governance-specificatie en `OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` is de enige operationele approval audit trail.
 - Een Support Agent mag adviseren, valideren of uitvoeren, maar overschrijft nooit de Owner Agent.
 
 -----
@@ -107,7 +107,7 @@ Binnen CM_OS heeft ieder systeem één primaire rol en iedere rij in de System o
 | Documenten en assets | Drive | Drive is de primaire opslaglocatie voor documenten, assets en bewijsstukken. |
 | Bewijs van communicatie | Gmail | Gmail is de originele verzend- en ontvangstbron. |
 | Taakstatus | ClickUp | ClickUp is de operationele uitvoeringsbron. |
-| Sophia-besluiten en Level 4 approvals | APPROVAL_LOG | De governance-specificatie staat in `docs/00_GOVERNANCE/APPROVAL_LOG.md`; de operationele audit trail staat in Drive op `OS_CUSTOMMADE / 06_CONTROL / APPROVAL_LOG`. |
+| Sophia-besluiten en Level 4 approvals | APPROVAL_LOG | De governance-specificatie staat in `docs/00_GOVERNANCE/APPROVAL_LOG.md`; de operationele audit trail staat in Drive op `OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`. |
 | Automatiseringsuitvoering | Make | Make is leidend voor actieve scenario-uitvoering. |
 | Automatiseringsgovernance | GitHub | GitHub is leidend voor documentatie, versiehistorie en governance van automatisering. |
 
@@ -120,7 +120,7 @@ Bij conflict tussen systemen escaleert CM CONTROL AGENT naar Sophia. Geen agent 
 Er is één waarheid voor approvals binnen CM_OS:
 
 - `docs/00_GOVERNANCE/APPROVAL_LOG.md` is de governance-specificatie voor approvalregels, structuur, statussen en rapportage.
-- `OS_CUSTOMMADE / 06_CONTROL / APPROVAL_LOG` is de operationele approval audit trail in Google Drive.
+- `OS_CUSTOMMADE/07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` is de enige operationele approval audit trail in Google Drive.
 
 De operationele audit trail wordt gebruikt voor:
 
@@ -141,11 +141,11 @@ Een Level 4 actie zonder bijbehorende rij in de operationele approval audit trai
 
 | Systeem / Domein | Owner Agent | Support Agents | Toelichting |
 |---|---|---|---|
-| GitHub governance | CM VAULT AGENT | CM CONTROL AGENT | CM VAULT AGENT beheert structuur en inhoud; CM CONTROL AGENT ondersteunt governance review. |
+| GitHub governance | CM CONTROL AGENT | CM VAULT AGENT | CM CONTROL AGENT is eigenaar van governance; CM VAULT AGENT ondersteunt repositorystructuur, source hygiene en documentatiebeheer. |
 | Drive opslag | CM VAULT AGENT |  | Structuur, naming, archivering en validatie. |
 | ClickUp uitvoering | CM OPS AGENT |  | Taken, planning en projectstatus. |
 | Moneybird | CM MONEY AGENT |  | Facturen, open posten, BTW en cashflow. |
-| Gmail correspondentie | CM CONTROL AGENT |  | CM CONTROL AGENT bewaakt escalatiestandaarden; inhoudelijke correspondentie blijft gekoppeld aan de betreffende domeinrij in de System of Record Matrix. |
+| Gmail correspondentie | Domein-owner volgens System of Record Matrix | CM CONTROL AGENT bij escalaties/approval | Correspondentie-eigenaarschap volgt het domein: CM OPS, CM PROSPECT, CM LEGAL, CM MONEY, CM SOCIAL of CM CONTROL, afhankelijk van de context. CM CONTROL AGENT ondersteunt alleen bij escalaties en approvals. |
 | Make automatisering | CM FLOW AGENT | CM VAULT AGENT | Scenario’s, integraties en automatiseringen; documentatie wordt in GitHub ondersteund door CM VAULT AGENT. |
 | Canva / Website CMS | CM SOCIAL AGENT |  | Design, visuals, social assets en website content. |
 | Contracten / Rechten | CM LEGAL AGENT |  | Juridische documenten, rechtenregister en deals. |
