@@ -1,32 +1,20 @@
-# **AS-BUILT DOCUMENTATIE**
+# AS-BUILT DOCUMENTATIE
 
 ## Doel
 
-As-built documentatie legt vast hoe het systeem vandaag daadwerkelijk is ingericht, niet hoe het oorspronkelijk was bedacht.
+As-built documentatie legt vast hoe het systeem vandaag daadwerkelijk is ingericht. Dit document beschrijft de actuele productie-baseline voor de CM Google Drive inrichting en de repositorycontext die deze baseline bestuurt.
 
-## Wat documenteren
+## Source of truth
 
-- Mapstructuren in Google Drive.
-- ClickUp spaces, folders, lists, statussen en custom fields.
-- Gmail-template-namen en bedoeld gebruik.
-- Automations, triggers, eigenaren en failure handling.
-- Integraties, scripts en handmatige workarounds.
+- Drive governance: `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`.
+- Drive mapping en owners: `docs/04_SYSTEMS/DRIVE_MAPPING.md`.
+- Drive readiness audit: `docs/04_SYSTEMS/CM_DRIVE_READINESS_AUDIT.md`.
+- Artist folder detailstandaard: `docs/02_ARTIST_MANAGEMENT/ARTIST_FOLDER_STANDARD.md`.
+- Client folder detailstandaard: `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md`.
 
 ## GitHub repositorystructuur
 
-De actuele GitHub source-of-truth gebruikt uitsluitend uppercase domeinmappen onder `docs/`:
-
-- `docs/00_GOVERNANCE/` — governance, operating model, documentstandaarden, beslislog, AI-tooling, automation backlog en repositoryregels.
-- `docs/01_MASTER_BOUTIQUE/` — Master Boutique workflows, buyer/data-room documentatie en transactieplaybooks.
-- `docs/02_ARTIST_MANAGEMENT/` — Artist Management lifecycle, SOPs, audits, approvals en execution flows.
-- `docs/03_SHARED_SERVICES/` — gedeelde onboarding-, communicatie-, proposal-, meeting-, file-management- en templatebronnen.
-- `docs/03_SHARED_SERVICES/TEMPLATES/` — enige goedgekeurde repositorylocatie voor operationele template-documentatie, inclusief Shared Services, Artist Management, Client Deliverables, ClickUp, Gmail en e-mailtemplates.
-- `docs/04_SYSTEMS/` — ClickUp-, Google Drive-, Gmail-, AI-agent- en automatiseringsdocumentatie.
-- `docs/05_KNOWLEDGE_BASE/` — kennisbank voor muziekbusiness-onderwerpen en rechten.
-- `docs/06_PLAYBOOKS/` — operationele playbooks voor sales, deals, releases, partnerships en rechten.
-- `docs/07_AI_AGENTS/` — AI-agentrollen, governance en taakafbakening.
-
-## Goedgekeurde docs-structuur
+De actuele GitHub source-of-truth gebruikt uppercase domeinmappen onder `docs/`:
 
 ```text
 docs/
@@ -40,172 +28,106 @@ docs/
 └── 07_AI_AGENTS
 ```
 
-Deprecated documentatiemappen buiten deze structuur zijn geen geldige navigatie- of linktargets meer. Operationele templates worden niet op meerdere locaties beheerd; GitHub bewaart de templatebron, terwijl ingevulde clientversies in Google Drive, ClickUp of Gmail blijven.
-
+GitHub en Drive zijn bewust niet identiek ingericht: GitHub documenteert governance en operating standards; Drive bewaart operationele dossiers en bestanden.
 
 ## Google Drive productie-as-built
 
-De actuele governance-root van Google Drive is `OS_CUSTOMMADE`. Deze as-built volgt `CM_OS_LOCKED_DECISIONS_WEEK1_BUILD_PACK_V2.md` als leidende locked decision: artistdossiers blijven onder `02_ARTIST_MANAGEMENT`, `03_CLIENTS` is beperkt tot merken, bedrijven, sponsors, opdrachtgevers en media partners, oude rootstructuren zijn verwijderd uit de productie-governance en Drive gebruikt uitsluitend de goedgekeurde rootlaag.
+De actuele Drive-root is `OS_CUSTOMMADE`. De volledige productieboom is:
 
 ```text
 OS_CUSTOMMADE
 ├── 00_ADMIN
+│   ├── 01_INBOX_REVIEW
+│   ├── 02_GOVERNANCE_REFERENCE
+│   ├── 03_TEMPLATES
+│   ├── 04_REPORTS
+│   └── 05_APPROVALS
 ├── 01_MASTER_BOUTIQUE
 ├── 02_ARTIST_MANAGEMENT
+│   └── [ARTIST_NAME]
+│       ├── 01_ADMIN
+│       ├── 02_CONTRACT
+│       ├── 03_STRATEGY
+│       ├── 04_RELEASES
+│       ├── 05_BOOKING
+│       ├── 06_FINANCE
+│       ├── 07_SOCIALMEDIA
+│       ├── 08_PRESS_EPK
+│       └── 09_ARCHIVE
 ├── 03_CLIENTS
+│   └── [CLIENT_OR_PARTNER_NAME]
+│       ├── 01_ADMIN
+│       ├── 02_CONTRACT
+│       ├── 03_BRIEF_SCOPE
+│       ├── 04_DELIVERABLES
+│       ├── 05_COMMUNICATION
+│       ├── 06_FINANCE
+│       └── 09_ARCHIVE
 ├── 04_DEALS
+│   └── [DEAL_OR_ASSET_NAME]
+│       ├── 00_START_HIER
+│       ├── 01_RECHTEN_REGISTER
+│       ├── 02_CONTRACTEN_BEWIJS
+│       ├── 03_WAARDERING_VERKOOPPAKKET
+│       ├── 04_OUTREACH_CLICKUP
+│       └── 99_ARCHIEF
 ├── 05_OPERATIONS
 ├── 06_FINANCE
 ├── 07_LEGAL
+│   ├── APPROVALS
+│   │   └── CM_APPROVAL_REGISTER
+│   ├── CONTRACTS
+│   ├── LEGAL_REVIEW
+│   └── EVIDENCE
 ├── 08_MARKETING
 ├── 09_CONTENT
 └── 99_ARCHIVE
+    ├── ARTIST_MANAGEMENT
+    ├── CLIENTS
+    ├── DEALS
+    ├── REVIEW_HOLD_OLD_STRUCTURE
+    ├── LEGACY_ROOTS
+    └── MIGRATION_LOGS
 ```
 
-`OS_CUSTOMMADE/02_ARTIST_MANAGEMENT` bevat alleen actieve artists en gebruikt geen statuslagen in Drive. Elke artistfolder staat direct onder de Artist Management-root en gebruikt deze vaste interne structuur:
+## Domeinbeschrijving
 
-```text
-OS_CUSTOMMADE/02_ARTIST_MANAGEMENT
-└── [ARTIST_NAME]
-    ├── 01_ADMIN
-    ├── 02_CONTRACT
-    ├── 03_STRATEGY
-    ├── 04_RELEASES
-    ├── 05_BOOKING
-    ├── 06_FINANCE
-    ├── 07_SOCIALMEDIA
-    ├── 08_PRESS_EPK
-    └── 09_ARCHIVE
-```
+| Drive-map | Doel | Primaire eigenaar |
+|---|---|---|
+| `00_ADMIN` | CM-brede inbox review, governance reference, templates, reports en approvals. | CM CONTROL AGENT |
+| `01_MASTER_BOUTIQUE` | Master Boutique context en verwijzingen; concrete dealcases staan onder `04_DEALS`. | CM LEGAL AGENT |
+| `02_ARTIST_MANAGEMENT` | Actieve artistdossiers met vaste artist-first structuur. | CM OPS AGENT |
+| `03_CLIENTS` | Clients, partners, merken, bedrijven, sponsors, opdrachtgevers en media partners. | CM OPS AGENT |
+| `04_DEALS` | Deal- en assetcases met lean Nederlandse dealstructuur. | CM LEGAL AGENT |
+| `05_OPERATIONS` | Operationele CM-documenten en interne procescontext. | CM CONTROL AGENT |
+| `06_FINANCE` | Financiële referenties; Moneybird blijft financiële waarheid. | CM MONEY AGENT |
+| `07_LEGAL` | Approvals, contracts, legal review en evidence. | CM LEGAL AGENT |
+| `08_MARKETING` | CM-brede marketingmaterialen en campagnecontext. | CM SOCIAL AGENT |
+| `09_CONTENT` | CM-brede contentassets en contentreferenties. | CM SOCIAL AGENT |
+| `99_ARCHIVE` | Afgerond, legacy, review-hold, migrated en superseded materiaal. | CM VAULT AGENT |
 
-Master Boutique en andere deals staan als cases onder `OS_CUSTOMMADE/04_DEALS` en gebruiken uitsluitend de lean Nederlandse dealstructuur zolang de deal de due diligence fase niet heeft bereikt:
+## Verplichte dossierstructuren
 
-```text
-DEAL_OR_ASSET_NAME
-├── 00_START_HIER
-├── 01_RECHTEN_REGISTER
-├── 02_CONTRACTEN_BEWIJS
-├── 03_WAARDERING_VERKOOPPAKKET
-├── 04_OUTREACH_CLICKUP
-└── 99_ARCHIEF
-```
+### Artist
 
-### Drive-documentatie versus eerdere productie
+`OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]` bevat exact `01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `06_FINANCE`, `07_SOCIALMEDIA`, `08_PRESS_EPK` en `09_ARCHIVE`.
 
-Belangrijke as-built correcties ten opzichte van eerdere documentatie:
+### Client of partner
 
-- Artistdossiers staan onder `02_ARTIST_MANAGEMENT`; artists worden niet gemigreerd naar `03_CLIENTS`.
-- `02_ARTIST_MANAGEMENT` bevat alleen actieve artists.
-- Geen statuslagen in Drive; status en Pipeline staan in ClickUp.
-- Inactieve artists worden volledig verplaatst naar `99_ARCHIVE/ARTIST_MANAGEMENT/[ARTIST_NAME]`.
-- Master Boutique/dealdossiers staan onder `04_DEALS` en gebruiken de lean Nederlandse dealstructuur.
-- Oude operationele roots worden niet meer aangemaakt of als productie-root gebruikt.
-- De oude Engelse dealstructuur is geen standaard Drive-structuur meer.
-- `03_SHARED_SERVICES` blijft uitsluitend een GitHub-documentatiedomein binnen `docs/` en is geen Drive-rootfolder.
-- Artistfolders gebruiken `07_SOCIALMEDIA`, niet `07_CONTENT`, en hebben geen extra ongenummerde `SOCIALMEDIA`-map.
-- `07_CONTENT` en losse `SOCIALMEDIA` zijn legacy en migreren naar `07_SOCIALMEDIA`.
-- De GitHub-repositoryarchitectuur blijft ongewijzigd; Drive en GitHub zijn bewust niet identiek ingericht.
+`OS_CUSTOMMADE/03_CLIENTS/[CLIENT_OR_PARTNER_NAME]` bevat exact `01_ADMIN`, `02_CONTRACT`, `03_BRIEF_SCOPE`, `04_DELIVERABLES`, `05_COMMUNICATION`, `06_FINANCE` en `09_ARCHIVE`.
 
-Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` voor de governance-regels en rootfolder-doelen.
+### Deal of asset
 
+`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]` bevat exact `00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP` en `99_ARCHIEF`.
 
-## Make productie-as-built
+## As-built correcties
 
-Make is gedocumenteerd als automatiseringslaag, maar er zijn geen live Make-scenario's actief. Het enige bestaande gedocumenteerde scenario is **CM VAULT V1**. Status: **INACTIEF / TEST REQUIRED**. CM VAULT V1 mag niet live totdat testlog, fallback, monitoring en CM CONTROL approval zijn vastgelegd.
-
-CM VAULT V1 is bedoeld voor een wekelijkse folderstructuurcheck onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT`. De fallback blijft een handmatige foldercheck volgens `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`.
-
-
-## Scripts productie-as-built
-
-Voor de goedgekeurde Drive build is `scripts/google-drive/create-cm-drive-structure.gs` het PRIMARY script. Dit script is de leidende Apps Script-bron voor het aanmaken of valideren van de goedgekeurde `OS_CUSTOMMADE` rootlaag, bekende artistfolders en gecontroleerde lean dealcase-structuren.
-
-`scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` is uitsluitend **SAFE ROOT REPAIR only**. Dit bestand mag alleen worden gebruikt voor veilige root-reparatie binnen de bestaande AS-BUILT en is niet het primaire buildscript.
-
-## Open PR review
-
-Open PRs moeten vóór merge worden getoetst aan deze AS-BUILT. Deze lokale checkout bevat geen Git remote en de GitHub CLI is niet beschikbaar in de uitvoeromgeving; daardoor kan dit document geen actuele open-PR lijst uit GitHub ophalen.
-
-Reviewadvies: sluit oude Drive migration PRs als **CLOSE AS SUPERSEDED** tenzij ze expliciet zijn gerebased op deze AS-BUILT, de goedgekeurde `OS_CUSTOMMADE` roots intact laten, geen verboden Drive-roots toevoegen, geen `docs/05_AUTOMATION` introduceren en Make niet activeren.
+- Artistdossiers staan onder `02_ARTIST_MANAGEMENT`, niet onder `03_CLIENTS`.
+- Client- en partnerdossiers gebruiken `03_CLIENTS/[CLIENT_OR_PARTNER_NAME]` met de zeven vaste submappen uit deze as-built.
+- De goedgekeurde legal structuur is `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `LEGAL_REVIEW` en `EVIDENCE`.
+- De goedgekeurde archive structuur is `ARTIST_MANAGEMENT`, `CLIENTS`, `DEALS`, `REVIEW_HOLD_OLD_STRUCTURE`, `LEGACY_ROOTS` en `MIGRATION_LOGS`.
+- Oude roots en oude foldernamen zijn geen actieve productie-baseline.
 
 ## Reviewritme
 
-Review elk kwartaal en na iedere grote rebuild van het operating system.
-
-## Kwaliteitsstandaard
-
-As-built documentatie moet specifiek genoeg zijn om het systeem opnieuw op te bouwen, te auditen en veilig over te dragen aan een nieuwe owner.
-
-## **COMPLEETHEIDSCRITERIA VOOR AS-BUILT DOCUMENTATIE**
-
-Een As-Built document is pas compleet wanneer alle onderstaande onderdelen aanwezig en actueel zijn.
-
-## **SYSTEEMOVERZICHT**
-
-Per systeem moet minimaal worden vastgelegd:
-
-- Doel.
-- Eigenaar.
-- Beschrijving.
-
-## **MAPSTRUCTUUR**
-
-De volledige mappenboom moet worden opgenomen. Dit omvat:
-
-- Hoofdmappen.
-- Submappen.
-- Toekomstige verplichte mappen.
-
-## **OPSLAGREGELS**
-
-Per documenttype moet worden vastgelegd:
-
-- Opslaglocatie.
-- Eigenaar.
-- Template.
-
-## **TEMPLATE REGISTER**
-
-Per template moet worden vastgelegd:
-
-- Naam.
-- Map.
-- Eigenaar.
-- Doel.
-
-## **AGENT EIGENAARSCHAP**
-
-Per Drive-map moet exact één verantwoordelijke Owner Agent worden vastgelegd volgens `docs/04_SYSTEMS/DRIVE_MAPPING.md` en `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. Support Agents mogen input, review of uitvoering leveren, maar zijn geen mede-eigenaar. `01_MASTER_BOUTIQUE`, `04_DEALS` en `07_LEGAL` vallen als Drive-owner onder CM LEGAL AGENT. Vanaf CM Agent Register V1.4 valt finance onder CM MONEY AGENT.
-
-| Map of domein | Verantwoordelijke agent |
-| --- | --- |
-| `docs/00_GOVERNANCE` | CM CONTROL AGENT |
-| `docs/01_MASTER_BOUTIQUE` | CM LEGAL AGENT |
-| `docs/02_ARTIST_MANAGEMENT` | CM OPS AGENT |
-| `docs/03_SHARED_SERVICES` | CM VAULT AGENT |
-| `docs/04_SYSTEMS` | CM FLOW AGENT |
-| `docs/05_KNOWLEDGE_BASE` | CM VAULT AGENT |
-| `docs/06_PLAYBOOKS` | CM OPS AGENT |
-| `docs/07_AI_AGENTS` | CM VAULT AGENT |
-| `OS_CUSTOMMADE/06_FINANCE` | CM MONEY AGENT |
-| Moneybird | CM MONEY AGENT |
-| BTW | CM MONEY AGENT |
-| Open Posten | CM MONEY AGENT |
-| Cashflow | CM MONEY AGENT |
-
-## **SYSTEMEN**
-
-| Systeem | Rol | Eigenaar | Input | Output | Integraties | Governance |
-| --- | --- | --- | --- | --- | --- | --- |
-| Google Drive | Bronopslag voor operationele documenten, assets en clientbestanden | CM VAULT AGENT | Documenten, templates, assets en dossiers | Geordende bronstructuur en archief | Gmail, ClickUp, Canva, Google Sheets/PDF/e-mail en Make | VAULT archiveert alleen en verwijdert nooit |
-| ClickUp | Taak-, project- en pipelinebesturing | CM OPS AGENT | Taken, statussen, deadlines en owners | Planning, dashboards en actielijsten | Make, Gmail en Google Drive | Eigenaarschap per taak verplicht |
-| Make | Automatiseringslaag tussen systemen | CM FLOW AGENT | Triggers, datarecords en scenario-eisen | Nog geen actieve scenario-output; Make heeft 1 gedocumenteerd scenario: CM VAULT V1. Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval zijn vastgelegd | ClickUp, Gmail, Google Drive, Moneybird en Webhooks | Test, monitoring en failure handling verplicht vóór livegang |
-| Canva | Creatie van visuele content en brand assets | CM SOCIAL AGENT | Briefings, assets en formats | Designs, visuals en publicatie-assets; Brand Kit is nog te bouwen | Drive en Website CMS | Publicatie vereist goedkeuring |
-| ChatGPT | AI-ondersteuning voor concepten, analyse en structurering | CM VAULT AGENT | Prompts, bronmateriaal en instructies | Conceptteksten, samenvattingen en analyses | Drive en ClickUp via handmatige overdracht of Make | Output is concept totdat mens reviewt |
-| Claude | AI-ondersteuning voor lange documenten, analyse en redactie | CM VAULT AGENT | Documenten, prompts en context | Redactievoorstellen en structurering | Drive en handmatige workflows | Output is concept totdat mens reviewt |
-| Gmail | Communicatiekanaal en templategebruik; `info@custommade.agency` is de leidende mailbox | CM OPS AGENT | E-mails, templates en contactcontext | Verzonden communicatie en opvolgtaken | ClickUp, Make en Google Drive | Externe toezeggingen vereisen juiste approval gate |
-| Moneybird | Financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten | CM MONEY AGENT | Facturen, bonnen, kwitanties, financiële documenten, BTW-statussen, Open Posten en betaalstatussen | Finance-overzichten, Cashflow-input en opvolgsignalen | Make, Gmail en ClickUp | CM MONEY AGENT is eigenaar van finance vanaf Agent Register V1.4; Moneybird vervangt geen operationele dossieropslag |
-
-## **AS-BUILT KWALITEITSCHECK**
-
-Een As-Built document moet herbouwbaar, auditbaar en overdraagbaar zijn. Ontbrekende systeemrollen, mappen, opslagregels, templates of agenteigenaren maken het document incompleet.
+Review deze as-built elk kwartaal en na iedere grote rebuild, migratie of governancewijziging.
