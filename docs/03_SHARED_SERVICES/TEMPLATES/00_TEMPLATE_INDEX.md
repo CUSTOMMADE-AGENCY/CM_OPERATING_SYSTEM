@@ -38,6 +38,7 @@ GitHub is leidend voor template-governance en template-specificaties. Drive beva
 ## Governancebronnen
 
 - `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` is leidend voor template-ontwerp.
+- `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_ARCHITECTUURSTANDAARD.md` is leidend voor template-opbouw, gebruik, AI-instructies en workflowkoppeling.
 - `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` is leidend voor templategebruik.
 - Duplicate template-locaties zijn niet toegestaan.
 - Agents mogen geen eigen formats maken als een bestaande template past.
