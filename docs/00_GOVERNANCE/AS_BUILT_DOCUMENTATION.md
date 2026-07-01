@@ -121,7 +121,7 @@ Voor de goedgekeurde Drive build is `scripts/google-drive/create-cm-drive-struct
 
 Open PRs moeten vóór merge worden getoetst aan deze AS-BUILT. Deze lokale checkout bevat geen Git remote en de GitHub CLI is niet beschikbaar in de uitvoeromgeving; daardoor kan dit document geen actuele open-PR lijst uit GitHub ophalen.
 
-Reviewadvies: sluit oude Drive migration PRs als **CLOSE AS SUPERSEDED** tenzij ze expliciet zijn gerebased op deze AS-BUILT, de goedgekeurde `OS_CUSTOMMADE` roots intact laten, geen `00_INBOX` toevoegen, geen `docs/05_AUTOMATION` introduceren en Make niet activeren.
+Reviewadvies: sluit oude Drive migration PRs als **CLOSE AS SUPERSEDED** tenzij ze expliciet zijn gerebased op deze AS-BUILT, de goedgekeurde `OS_CUSTOMMADE` roots intact laten, geen verboden Drive-roots toevoegen, geen `docs/05_AUTOMATION` introduceren en Make niet activeren.
 
 ## Reviewritme
 

@@ -289,7 +289,7 @@ Weekly Vault Report · Missing Templates Report · Duplicate Documents Report ·
 -----
 
 OPEN BESLISPUNTEN (vóór lock)
-	1.	Archief-naming — BESLOTEN (AS-BUILT post-PR-118): `99_ARCHIVE` is de canonieke centrale archiefroot onder `OS_CUSTOMMADE`. `99_ARCHIEF` is de canonieke vorm voor per-project/per-deal/per-artist archief. De verboden legacy-root `07_ARCHIVE` wordt gearchiveerd via `safe-cleanup-wrong-roots.gs`.
+	1.	Archief-naming — BESLOTEN (AS-BUILT post-PR-118): `99_ARCHIVE` is de canonieke centrale archiefroot onder `OS_CUSTOMMADE`. `99_ARCHIEF` is de canonieke vorm voor per-project/per-deal/per-artist archief. Verboden legacy-roots worden gearchiveerd via `safe-cleanup-wrong-roots.gs`.
 	2.	VAULT_LOG locatie. Voorstel: Google Sheet in Drive, beschrijfbaar door CM FLOW (Make). Alternatief: ClickUp-lijst. → te bevestigen.
 	3.	AS_BUILT locatie. Voorstel: AS_BUILT.md in GitHub. → te bevestigen.
 	4.	Bestaan TEMPLATE_REGISTER.md / DOCUMENT_STANDARDS.md al in de repo? Bepaalt of Stap 0 “bouwen” of “aanvullen” is.
