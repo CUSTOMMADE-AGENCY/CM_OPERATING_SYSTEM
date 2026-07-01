@@ -1,0 +1,29 @@
+# Operating system noise
+.DS_Store
+Thumbs.db
+
+# Local editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Temporary exports and drafts
+*.tmp
+*.bak
+*_final*
+*_FINAL*
+exports/
+tmp/
+
+# Confidential materials must not be committed
+signed-contracts/
+client-files/
+data-rooms/
+finance-private/
+legal-private/
