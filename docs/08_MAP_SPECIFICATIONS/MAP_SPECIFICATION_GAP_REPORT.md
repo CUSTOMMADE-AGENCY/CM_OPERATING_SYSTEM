@@ -58,8 +58,8 @@ Opgelost op 2026-07-01: `docs/04_SYSTEMS/DRIVE_MAPPING.md` bijgewerkt naar `APPR
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken mappen | `00_ADMIN`, `05_OPERATIONS`, `06_FINANCE`, `07_LEGAL`, `08_MARKETING`, `09_CONTENT`, `99_ARCHIVE` |
 | Eigenaar | CM CONTROL AGENT (coördinatie), relevant Owner Agent per map |
 
@@ -67,7 +67,17 @@ Opgelost op 2026-07-01: `docs/04_SYSTEMS/DRIVE_MAPPING.md` bijgewerkt naar `APPR
 Meerdere Map Specifications verwijzen naar SOPs met status `TBD`. Er zijn geen gedocumenteerde SOPs voor: intern onboarding beheer, operationeel beheer, finance intake, legal review, marketingproces, contentpublicatie en archivering. Bestaande SOPs zijn beschikbaar voor `02_ARTIST_MANAGEMENT` en `03_SHARED_SERVICES`.
 
 **Actie:**
-Per ontbrekende SOP: eigenaar aanwijzen, scope definiëren en SOP aanmaken conform `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md`. Prioriteer op basis van operationele urgentie.
+Opgelost op 2026-07-01: 7 SOPs aangemaakt in `docs/03_SHARED_SERVICES/` en Map Specifications bijgewerkt:
+
+| SOP | Bestand | Eigenaar |
+|---|---|---|
+| Admin SOP | `docs/03_SHARED_SERVICES/ADMIN_SOP.md` | CM CONTROL AGENT |
+| Operations SOP | `docs/03_SHARED_SERVICES/OPERATIONS_SOP.md` | CM CONTROL AGENT |
+| Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | CM MONEY AGENT |
+| Legal Review SOP | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` | CM LEGAL AGENT |
+| Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | CM SOCIAL AGENT |
+| Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | CM SOCIAL AGENT |
+| Archive SOP | `docs/03_SHARED_SERVICES/ARCHIVE_SOP.md` | CM VAULT AGENT |
 
 ---
 
@@ -281,7 +291,7 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 |---|---|---|---|---|
 | GAP-001 | DRIVE_MAPPING.md 00_ADMIN submapstructuur niet actueel | Opgelost | — | CM CONTROL AGENT |
 | GAP-002 | DRIVE_MAPPING.md 07_LEGAL submapstructuur uitgebreid | Opgelost | — | CM LEGAL AGENT |
-| GAP-003 | Ontbrekende SOPs voor meerdere mappen | Open | Middel | CM CONTROL AGENT |
+| GAP-003 | Ontbrekende SOPs voor meerdere mappen | Opgelost | — | CM CONTROL AGENT |
 | GAP-004 | Ontbrekende Workflows voor meerdere mappen | Open | Middel | CM FLOW AGENT |
 | GAP-005 | Make-automatiseringen niet ingericht | Open | Laag | CM FLOW AGENT |
 | GAP-006 | Canva Brand Kit niet beschikbaar | Open | Middel | CM SOCIAL AGENT |

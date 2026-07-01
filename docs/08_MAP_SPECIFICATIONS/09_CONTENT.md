@@ -88,7 +88,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Content publicatie SOP | TBD | Publicatieproces voor CM's eigen kanalen |
+| Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | Publicatieproces voor CM's eigen kanalen en contentkalenderbeheer |
 
 ---
 
