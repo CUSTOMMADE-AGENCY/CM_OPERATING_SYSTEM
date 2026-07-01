@@ -116,14 +116,31 @@ Gebruik onderstaande subfolders per artist dossier. Artist Management is altijd 
 
 ### 03_CLIENTS
 
-Gebruik per clientdossier een passende genummerde productiestructuur afhankelijk van het type relatie.
+Gebruik de lean client-first structuur per zakelijke client of partner. Operationele submappen staan nooit direct onder `03_CLIENTS`, maar altijd onder `[CLIENT_OR_PARTNER_NAME]`. Artists horen niet in `03_CLIENTS`.
 
 ```text
 03_CLIENTS
-└── [CLIENT_NAAM]
-    ├── 00_START_HIER
-    └── 99_ARCHIEF
+└── [CLIENT_OR_PARTNER_NAME]
+    ├── 01_ADMIN
+    ├── 02_CONTRACT
+    ├── 03_BRIEF_SCOPE
+    ├── 04_DELIVERABLES
+    ├── 05_COMMUNICATION
+    ├── 06_FINANCE
+    └── 09_ARCHIVE
 ```
+
+Mappingregels voor legacy client/business folders:
+
+| Documenttype of legacy-signaal | Nieuwe bestemming binnen clientfolder | Regel |
+| --- | --- | --- |
+| client admin, intake, contactgegevens, company info, stakeholder list, onboarding notes | `01_ADMIN` | Bewaar alleen live clientadministratie; geen statuslagen. |
+| contracts, NDA, service agreement, partnership agreement, legal confirmation, signed confirmation, approval | `02_CONTRACT` | Getekende contracten blijven in Drive en worden niet in GitHub opgeslagen. |
+| brief, scope, proposal, project outline, campaign requirements, Fit Check notes | `03_BRIEF_SCOPE` | Scope- en voorstelcontext staat bij het clientdossier; uitvoering/status staat in ClickUp. |
+| deliverables, assets, reports, decks, exports, opleveringen | `04_DELIVERABLES` | Definitieve clientoutput staat hier; concepten of superseded materiaal gaan naar `09_ARCHIVE`. |
+| communication, meeting notes, externe confirmations, call summaries | `05_COMMUNICATION` | Alleen belangrijke afspraken en samenvattingen; Gmail blijft correspondentiebron. |
+| budget, fee-afspraken, cost overviews, payment notes, finance references | `06_FINANCE` | Alleen financiële referenties; Moneybird blijft financiële waarheid. |
+| old, superseded, afgeronde fases binnen actief clientdossier | `09_ARCHIVE` | Niet gebruiken voor volledig inactieve clientdossiers; die gaan integraal naar `99_ARCHIVE/CLIENTS`. |
 
 ### 04_DEALS
 
