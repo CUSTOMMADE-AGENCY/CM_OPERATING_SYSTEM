@@ -65,10 +65,9 @@ toepassing is, wordt dat expliciet vermeld met reden.
 
 | Fase | Agent(s) | Status |
 |---|---|---|
-| 1 | CM FLOW AGENT (referentie-implementatie) | In deze PR |
-| 2 | CM CONTROL, CM VAULT | Gepland |
-| 3 | CM OPS, CM MONEY, CM LEGAL | Gepland |
-| 4 | CM SOCIAL, CM PROSPECT | Gepland |
+| 1 | CM FLOW AGENT (referentie-implementatie) | Omgezet |
+| 2 | CM CONTROL AGENT (sturingslaag) | Omgezet |
+| 3 | CM VAULT, CM OPS, CM LEGAL, CM MONEY, CM SOCIAL, CM PROSPECT | Gepland |
 
 ## Changelog
 
