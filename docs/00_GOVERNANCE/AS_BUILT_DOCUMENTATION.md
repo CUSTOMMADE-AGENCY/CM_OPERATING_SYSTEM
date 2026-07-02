@@ -128,6 +128,15 @@ OS_CUSTOMMADE
 - De goedgekeurde archive structuur is `ARTIST_MANAGEMENT`, `CLIENTS`, `DEALS`, `REVIEW_HOLD_OLD_STRUCTURE`, `LEGACY_ROOTS` en `MIGRATION_LOGS`.
 - Oude roots en oude foldernamen zijn geen actieve productie-baseline.
 
+## AI agent as-built
+
+- CM FLOW AGENT staat per 2026-07-02 op v2.0 als CTO & AI Systems Engineer van CM_OS.
+- Canonieke agentdefinitie: `docs/07_AI_AGENTS/AGENTS/CM_FLOW_AGENT.md`.
+- Canoniek playbook: `docs/07_AI_AGENTS/PLAYBOOKS/CM_FLOW_PLAYBOOK.md`.
+- FLOW is eigenaar van bouwen en systeemontwerp: GitHub-development, agent-development, automation-development, Apps Script, Make, API/MCP-integraties, connectors, logging, retry-mechanismen, monitoring en systeemgezondheid.
+- FLOW activeert geen nieuwe agents, governancewijzigingen of productie-automations zonder expliciete approval-gate via CM CONTROL/Sophia.
+- FLOW-output moet bestaan uit ontwerp, architectuur, implementatie, documentatie, testplan, deploymentplan, impactanalyse en changelog.
+
 ## Reviewritme
 
 Review deze as-built elk kwartaal en na iedere grote rebuild, migratie of governancewijziging.
