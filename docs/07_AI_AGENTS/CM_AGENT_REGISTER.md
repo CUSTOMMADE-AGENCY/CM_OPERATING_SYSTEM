@@ -23,7 +23,7 @@ Dit register is de officiële bron van waarheid voor alle CM-agents. Het registe
 | CM SOCIAL AGENT | Executie | Hoe communiceren we dit? | Content, socials, thought leadership, case studies, personal branding, website content, SEO strategie, Website SEO, zoekwoordonderzoek en organische zichtbaarheid | Publicatie zonder goedkeuring |
 | CM LEGAL AGENT | Bescherming | Is dit juridisch correct? | Contracten, publishing, licensing, sync, management agreements, compliance, deal reviews, Drive-owner voor `01_MASTER_BOUTIQUE`, `04_DEALS` en `07_LEGAL` | Finance-operatie en salesbeheer |
 | CM VAULT AGENT | Infrastructuur | Waar staat de waarheid? | Drive, templates, SOP’s, prompts, playbooks, Knowledge Base, governance, brand assets, contract templates, proposal templates en case studies | Verwijderen van bronnen |
-| CM FLOW AGENT | Infrastructuur | Hoe automatiseren we dit? | Make, API’s, Webhooks, ClickUp automations, GitHub workflows, Repository automatisering, Document synchronisatie, integraties, systeemgezondheid, monitoring en automatiseringen; Make heeft nu 0 scenario’s en is nog in te richten | Inhoudelijk eigenaarschap |
+| CM FLOW AGENT | Infrastructuur | Hoe bouwen en automatiseren we dit? | Builder van het OS: Agent Development (bouwen, niet activeren), GitHub Development, Automation Development (Make, Apps Script, API’s, webhooks, connectors), System Development; monitoring en systeemgezondheid | Inhoudelijk eigenaarschap; agents activeren zonder Sophia approval |
 
 ## **BESLISSINGSBEVOEGDHEID**
 
