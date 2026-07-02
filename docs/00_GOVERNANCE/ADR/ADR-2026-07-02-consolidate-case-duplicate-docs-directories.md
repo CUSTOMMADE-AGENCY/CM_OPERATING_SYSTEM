@@ -27,6 +27,8 @@ Dit veroorzaakt twee problemen:
 
 Analyse van de inhoud toont aan dat de UPPERCASE-tree de **CM OS V1.0 production baseline** is (Nederlands, volledig, referentiedoel van `README.md` en de startdocumenten). De lowercase-tree is een **oudere, Engelstalige, schrale variant** van vóór de repository-restructure (merge #162) die niet is opgeruimd. Alle gelijknamige bestanden in de lowercase-tree zijn een verouderde representatie van hun UPPERCASE-tegenhanger; een kleine set lowercase-bestanden heeft geen UPPERCASE-tegenhanger.
 
+**Aanvullend conflict (CI).** De governance-CI `.github/workflows/cm-governance.yml` (`required-files`-check) vereist hard de **lowercase** README-paden (`docs/00_governance/README.md` … `docs/04_systems/README.md`). De CI codeert daarmee de lowercase-tree als canoniek, terwijl `README.md` de UPPERCASE-tree als canoniek codeert — een directe inconsistentie tussen governance-CI en governance-documentatie. Het simpelweg verwijderen van de lowercase-directories zou deze CI-gate breken. De CI-check moet in dezelfde executie-PR worden omgezet naar de UPPERCASE-paden.
+
 ## Besluit
 
 1. **De UPPERCASE-tree is de enige canonieke `docs/`-structuur.** De vijf lowercase duplicaat-directories worden opgeheven.
@@ -56,7 +58,7 @@ De root-`README.md` concateneert twee README's: de bovenste (Engelstalig) verwij
 - **Architectuur:** één eenduidige `docs/`-tree; case-collision verdwenen; `GOVERNANCE_RULES.md` "geen duplicaten" hersteld.
 - **GitHub:** puur `docs/`-wijzigingen; geen wijziging aan agents, automations of code.
 - **Agent-impact:** geen — agent-passports (`docs/07_AI_AGENTS`) en playbooks blijven ongemoeid.
-- **Automation-impact:** geen — geen Make-scenario, webhook of Apps Script raakt deze paden.
+- **Automation-impact:** `.github/workflows/cm-governance.yml` moet mee — de `required-files`-lijst wordt omgezet van lowercase- naar UPPERCASE-README-paden. Geen Make-scenario, webhook of Apps Script raakt deze paden.
 - **Links/verwijzingen:** interne verwijzingen wijzen reeds naar UPPERCASE (startdocumenten in `README.md`); unieke verplaatste bestanden krijgen hun canonieke UPPERCASE-pad.
 - **Reversibel:** volledig via PR-revert; git-historie behoudt alle verwijderde tekst.
 
@@ -67,6 +69,7 @@ De root-`README.md` concateneert twee README's: de bovenste (Engelstalig) verwij
 3. Alle 12 unieke bronbestanden bestaan onder hun nieuwe UPPERCASE-pad (checksum-vergelijking pré/post move = identiek).
 4. Markdown-linkcheck: geen dode interne links naar `docs/*lowercase*`.
 5. Repo-clone op een case-insensitive volume checkt zonder collision-waarschuwing uit.
+6. CI `cm-governance.yml` blijft groen na omzetting van de `required-files`-paden naar UPPERCASE.
 
 ## Migratie
 
@@ -75,15 +78,17 @@ Uitvoering in de executie-PR (na acceptatie van deze ADR):
 1. `git mv` van de 12 unieke bestanden naar hun UPPERCASE-directory (content ongewijzigd).
 2. `git rm` van de ~37 superseded collision-bestanden.
 3. `git rm` van de nu lege lowercase-directories.
-4. Root-`README.md` ontdubbelen (stale Engelstalige helft verwijderen).
-5. `DECISION_LOG.md` + `CM_SYSTEM_DECISION_MATRIX.md` bijwerken; changelog-entry toevoegen.
-6. Reconciliatie-taak voor CM VAULT registreren voor de 12 verplaatste (Engelstalige) bestanden.
+4. **`.github/workflows/cm-governance.yml` bijwerken:** `required-files`-paden omzetten naar UPPERCASE (`docs/00_GOVERNANCE/README.md` … `docs/04_SYSTEMS/README.md`). Zonder deze stap breekt de CI-gate.
+5. Root-`README.md` ontdubbelen (stale Engelstalige helft verwijderen).
+6. `DECISION_LOG.md` + `CM_SYSTEM_DECISION_MATRIX.md` bijwerken; changelog-entry toevoegen.
+7. Reconciliatie-taak voor CM VAULT registreren voor de 12 verplaatste (Engelstalige) bestanden.
 
 ## Risico's
 
 - **Content-verlies bij verplaatste bestanden** → gemitigeerd: `git mv` behoudt inhoud 1-op-1; checksum-test in teststrategie.
 - **Verkeerde canoniek-keuze** → gemitigeerd: UPPERCASE is aantoonbaar de V1.0 baseline (omvang, taal, `README.md`-referenties).
 - **Taalinconsistentie** door 12 Engelstalige bestanden in Nederlandse tree → geaccepteerd voor deze PR, afgedekt met reconciliatie-flag + VAULT-taak (geen content-verlies weegt zwaarder).
+- **CI-gate breekt** als de lowercase-mappen verdwijnen maar `cm-governance.yml` niet wordt bijgewerkt → gemitigeerd: workflow-update is een verplichte migratiestap (4) en onderdeel van de teststrategie (6).
 
 ## Rollback
 
