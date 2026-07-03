@@ -2,7 +2,7 @@
 
 Geautomatiseerde governance-review door CM CONTROL AGENT op pull requests. Operationaliseert de sectie **CM CONTROL GitHub Activation** uit `docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md`.
 
-De Action laat een LLM (via de **OpenAI Responses API**) de PR toetsen aan de CM-governance en schrijft één verdict terug: **GO / REVIEW REQUIRED / NO GO**. Het is een **advies**: er wordt nooit gemerged, gepusht of een bestand gewijzigd.
+De Action laat een LLM (via de **OpenAI Responses API**) een PR of issue toetsen aan de CM-governance en schrijft één verdict terug: **GO / CONDITIONAL GO / REVIEW REQUIRED / NO GO**. Het is een **advies**: er wordt nooit gemerged, gepusht of een bestand gewijzigd.
 
 ## Onderdelen
 
@@ -25,18 +25,30 @@ Zonder stap 1 en 2 blijft de workflow slapend. Zo gaat er niets live vóór akko
 
 ## Werking
 
-1. Trigger: `pull_request` (opened/synchronize/reopened/labeled) of handmatig via `workflow_dispatch`.
+1. Trigger: `pull_request` (opened/synchronize/reopened/labeled/review_requested), `issues` (opened/labeled) of handmatig via `workflow_dispatch`.
 2. De governance-context wordt uit de **base-ref** geladen, zodat een PR de maatstaf waarop hij wordt beoordeeld niet zelf kan wijzigen.
-3. Het script haalt PR-metadata en -diff op, stuurt governance + diff naar de OpenAI Responses API en vraagt om een JSON-verdict.
-4. Het verdict wordt teruggeschreven als PR-comment (bijgewerkt bij nieuwe commits, niet gedupliceerd). Labels zijn optioneel (`writeBack.applyLabels`).
+3. Het script haalt PR-metadata en -diff (of issue-metadata) op, stuurt governance + inhoud naar de OpenAI Responses API en vraagt om een JSON-verdict.
+4. Het verdict wordt teruggeschreven als comment (bijgewerkt bij nieuwe commits, niet gedupliceerd). Optioneel via label, commit-status en een COMMENT-review.
 
 ## Verdict
 
 - **GO** — alle toepasselijke audits PASS; past binnen gelockte kaders.
+- **CONDITIONAL GO** — inhoudelijk akkoord met afgebakende, niet-blokkerende remediation (voorwaarden in de comment).
 - **REVIEW REQUIRED** — verplichte menselijke review vóór merge (bv. ADR ontbreekt, onduidelijke agentimpact, meerdere owners).
 - **NO GO** — conflict met een locked decision, governanceschending of ontbrekende approval-gate.
 
 Het finale besluit op governance/strategie/legal/finance blijft bij **Sophia**; documentatie-/Drive-bevindingen routeren naar **CM VAULT**.
+
+## Write-back-kanalen (niet-blokkerend by default)
+
+| Kanaal | Config | Default |
+|---|---|---|
+| Comment (PR of issue) | `writeBack.postComment` | aan |
+| Label (`cm-control:<verdict>`) | `writeBack.applyLabels` | uit |
+| Commit-status (`statusContext`) | `writeBack.commitStatus` | uit |
+| PR-review | `writeBack.postReview` | uit (event `COMMENT`) |
+
+`writeBack.allowBlockingReview` (default uit) laat GO→approve / NO_GO→request-changes toe. **Laat dit uit** om merge niet te gaten; met de default blijven alle kanalen advies.
 
 ## Beveiliging
 
