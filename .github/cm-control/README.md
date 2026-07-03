@@ -9,19 +9,28 @@ De Action laat een LLM (via de **OpenAI Responses API**) een PR of issue toetsen
 | Bestand | Rol |
 |---|---|
 | `.github/workflows/cm-control-review.yml` | Workflow: triggers, permissions, enable-gate, roept het script aan. |
-| `.github/cm-control/config.json` | Governance-context, model, diff-limieten, write-back-opties. |
+| `.github/cm-control/config.json` | Provider (github-models/openai), governance-context, model, diff-limieten, write-back-opties. |
 | `.github/cm-control/system-prompt.md` | Reviewer-instructie (audits, verdict-regels, injectie-weerbaarheid). |
 | `.github/cm-control/review.mjs` | Runner: diff ophalen → OpenAI → verdict → PR-comment. Zero dependencies (Node 20+). |
 
-## Dormant by default — activatie in 3 stappen
+## Provider — gratis by default
 
-Mergen van deze PR activeert **niets**. De job draait alleen als beide condities kloppen:
+De reviewer draait standaard op **GitHub Models** (gratis, rate-limited) via de ingebouwde `GITHUB_TOKEN` en de permission `models: read` — **geen betaalde sleutel nodig**. Alternatief kan `config.json` op provider `openai` (betaald, Responses API) worden gezet; dan is het secret `OPENAI_API_KEY` vereist.
 
-1. **Secret** — voeg `OPENAI_API_KEY` toe onder *Settings → Secrets and variables → Actions → Secrets*.
-2. **Enable-variabele** — zet repository-variabele `CM_CONTROL_REVIEW_ENABLED` op `true` onder *Settings → Secrets and variables → Actions → Variables*.
-3. *(optioneel)* `CM_CONTROL_MODEL` als variabele om het model te overrulen (default `gpt-4.1` uit `config.json`).
+| `config.provider` | Auth | Kosten | Model (default) |
+|---|---|---|---|
+| `github-models` (default) | ingebouwde `GITHUB_TOKEN` | gratis, rate-limited | `openai/gpt-4o` |
+| `openai` | secret `OPENAI_API_KEY` | pay-per-use | `gpt-4.1` |
 
-Zonder stap 1 en 2 blijft de workflow slapend. Zo gaat er niets live vóór akkoord.
+## Dormant by default — activatie
+
+Mergen van deze PR activeert **niets**. De job draait alleen bij:
+
+1. **Enable-variabele** — zet repository-variabele `CM_CONTROL_REVIEW_ENABLED` op `true` (*Settings → Secrets and variables → Actions → Variables*).
+2. *(alleen bij provider `openai`)* Secret `OPENAI_API_KEY` toevoegen.
+3. *(optioneel)* `CM_CONTROL_MODEL` als variabele om het model te overrulen.
+
+Met de default provider is stap 1 de **enige** activatiestap. Zo gaat er niets live vóór akkoord.
 
 ## Werking
 
@@ -52,7 +61,7 @@ Het finale besluit op governance/strategie/legal/finance blijft bij **Sophia**; 
 
 ## Beveiliging
 
-- `OPENAI_API_KEY` staat uitsluitend in **GitHub Secrets** en wordt nooit gelogd.
+- De default provider (GitHub Models) gebruikt de ingebouwde `GITHUB_TOKEN` — geen extern secret. Bij provider `openai` staat `OPENAI_API_KEY` uitsluitend in **GitHub Secrets** en wordt nooit gelogd.
 - Least-privilege permissions: `contents: read`, `pull-requests: write`, `issues: write`. Bewust **geen** `contents: write` en geen merge-rechten.
 - De PR-inhoud wordt als **untrusted data** behandeld; de reviewer-instructie negeert ingesloten pogingen tot prompt-injectie en leunt dan naar REVIEW REQUIRED / NO GO.
 - Er wordt geen PR-code uitgevoerd; alleen de base-ref (vertrouwd) wordt gecheckt en de diff als tekst gelezen.

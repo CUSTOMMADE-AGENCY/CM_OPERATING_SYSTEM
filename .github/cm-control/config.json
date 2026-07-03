@@ -1,9 +1,22 @@
 {
-  "version": "1.1",
-  "description": "Configuratie voor CM CONTROL GitHub Action v1 (conform CM_AGENT_ACTIVATION_STRATEGY v1.1). Bepaalt welke governance-context de reviewer laadt, welk model wordt gebruikt en via welke kanalen het verdict wordt teruggeschreven. Wijzig dit bestand via PR; het is geen live automation-schakelaar (dat is de variabele CM_CONTROL_REVIEW_ENABLED).",
+  "version": "1.2",
+  "description": "Configuratie voor CM CONTROL GitHub Action v1 (conform CM_AGENT_ACTIVATION_STRATEGY v1.1). Bepaalt provider, governance-context, model en write-back-kanalen. Wijzig via PR; dit is geen live automation-schakelaar (dat is de variabele CM_CONTROL_REVIEW_ENABLED).",
 
-  "model": "gpt-4.1",
-  "openaiBaseUrl": "https://api.openai.com/v1",
+  "provider": "github-models",
+  "providers": {
+    "github-models": {
+      "comment": "Gratis, rate-limited. Gebruikt de ingebouwde GITHUB_TOKEN (permission models: read). OpenAI-compatibele chat/completions API. Geen betaalde sleutel nodig.",
+      "baseUrl": "https://models.github.ai/inference",
+      "api": "chat",
+      "model": "openai/gpt-4o"
+    },
+    "openai": {
+      "comment": "Betaald, pay-per-use. Vereist secret OPENAI_API_KEY. OpenAI Responses API.",
+      "baseUrl": "https://api.openai.com/v1",
+      "api": "responses",
+      "model": "gpt-4.1"
+    }
+  },
   "maxOutputTokens": 1200,
 
   "governanceContext": {

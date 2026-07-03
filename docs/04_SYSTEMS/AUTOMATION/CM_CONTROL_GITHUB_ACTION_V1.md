@@ -1,6 +1,6 @@
 # CM CONTROL GITHUB ACTION v1
 
-> Versie: v1.1 · Status: **Concept — niet geactiveerd** · Datum: 2026-07-03
+> Versie: v1.2 · Status: **Concept — niet geactiveerd** · Datum: 2026-07-03
 > Eigenaar: CM CONTROL AGENT · Bouw: CM FLOW AGENT · Beheer: CM VAULT AGENT
 >
 > **As-built.** Operationaliseert de sectie "CM CONTROL GitHub Activation" uit
@@ -25,7 +25,10 @@ terugschrijft. Advies-only: geen merge, geen push, geen bestandswijziging.
 
 ## Techniekkeuze
 
-- **OpenAI Responses API** (`POST /v1/responses`) voor de review, zoals gevraagd.
+- **Provider-schakelaar** in `config.json`:
+  - `github-models` (**default**) — gratis, rate-limited, via de ingebouwde `GITHUB_TOKEN`
+    (permission `models: read`); OpenAI-compatibele chat/completions API; geen betaalde sleutel.
+  - `openai` — betaald, `POST /v1/responses` (Responses API), vereist secret `OPENAI_API_KEY`.
 - **Node 20+ met global `fetch`**, geen npm-dependencies — lean en onderhoudbaar.
 - Write-back via de **GitHub REST API** met de standaard `GITHUB_TOKEN`.
 
@@ -48,12 +51,11 @@ De audits volgen `CM_CONTROL_AUDIT_STANDARD.md`; de write-back-berichttypen volg
 
 ## Activatie (dormant by default)
 
-Mergen activeert niets. De job draait uitsluitend wanneer:
-
-1. Secret `OPENAI_API_KEY` is gezet (Actions → Secrets); en
-2. Variabele `CM_CONTROL_REVIEW_ENABLED` = `true` (Actions → Variables).
-
-Optioneel `CM_CONTROL_MODEL` als variabele om het model te overrulen.
+Mergen activeert niets. De job draait uitsluitend wanneer variabele
+`CM_CONTROL_REVIEW_ENABLED` = `true` (Actions → Variables). Met de default provider
+(GitHub Models) is dat de **enige** stap — geen secret nodig. Alleen bij provider
+`openai` is daarnaast het secret `OPENAI_API_KEY` vereist. Optioneel `CM_CONTROL_MODEL`
+als variabele om het model te overrulen.
 
 ## Beveiliging
 
@@ -90,3 +92,4 @@ required check ingesteld.
 |---|---|---|
 | 2026-07-03 | v1.0 | Eerste build van de CM CONTROL GitHub Action (workflow, OpenAI-runner, config, prompt, docs). Status Concept; niet geactiveerd. |
 | 2026-07-03 | v1.1 | Volledige conformiteit met CM_AGENT_ACTIVATION_STRATEGY v1.1: issue-triage + review_requested-trigger, verdict CONDITIONAL GO toegevoegd, en write-back-kanalen commit-status en COMMENT-review (niet-blokkerend by default). |
+| 2026-07-03 | v1.2 | Provider-schakelaar toegevoegd; **GitHub Models** als gratis default (ingebouwde GITHUB_TOKEN, permission `models: read`) naast de betaalde OpenAI-provider. Activatie vergt met de default geen secret meer. |

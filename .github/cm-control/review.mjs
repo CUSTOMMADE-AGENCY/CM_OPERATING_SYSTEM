@@ -176,15 +176,48 @@ function parseVerdictJson(text) {
   return obj;
 }
 
-async function callOpenAI(config, instructions, input) {
-  const model = process.env.CM_CONTROL_MODEL || config.model;
-  const res = await fetch(`${config.openaiBaseUrl}/responses`, {
+function resolveProvider(config) {
+  const key = config.provider || 'github-models';
+  const p = config.providers?.[key];
+  if (!p) throw new Error(`onbekende provider: ${key}`);
+  return { key, ...p, model: process.env.CM_CONTROL_MODEL || p.model };
+}
+
+// GitHub Models (gratis, GITHUB_TOKEN) → OpenAI-compatibele chat/completions.
+async function callChat(provider, config, instructions, input) {
+  const res = await fetch(`${provider.baseUrl}/chat/completions`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: provider.model,
+      messages: [
+        { role: 'system', content: instructions },
+        { role: 'user', content: input },
+      ],
+      max_tokens: config.maxOutputTokens,
+    }),
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    throw new Error(`${provider.key} chat ${res.status}: ${detail.slice(0, 400)}`);
+  }
+  const data = await res.json();
+  if (data.usage) log(`tokens: in=${data.usage.prompt_tokens} out=${data.usage.completion_tokens}`);
+  return data.choices?.[0]?.message?.content || '';
+}
+
+// OpenAI direct (betaald, OPENAI_API_KEY) → Responses API.
+async function callResponses(provider, config, instructions, input) {
+  const res = await fetch(`${provider.baseUrl}/responses`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ model, instructions, input, max_output_tokens: config.maxOutputTokens }),
+    body: JSON.stringify({ model: provider.model, instructions, input, max_output_tokens: config.maxOutputTokens }),
   });
   if (!res.ok) {
     const detail = await res.text().catch(() => '');
@@ -194,6 +227,12 @@ async function callOpenAI(config, instructions, input) {
   if (data.status && data.status !== 'completed') log(`OpenAI status: ${data.status}`);
   if (data.usage) log(`tokens: in=${data.usage.input_tokens} out=${data.usage.output_tokens}`);
   return extractText(data);
+}
+
+async function callModel(provider, config, instructions, input) {
+  return provider.api === 'responses'
+    ? callResponses(provider, config, instructions, input)
+    : callChat(provider, config, instructions, input);
 }
 
 // ---- verdict → write-back -------------------------------------------------
@@ -241,20 +280,23 @@ function verdictToReviewEvent(verdict, allowBlocking) {
 
 async function main() {
   const config = readJson(CONFIG_PATH);
-  const model = process.env.CM_CONTROL_MODEL || config.model;
+  const provider = resolveProvider(config);
+  const model = provider.model;
 
-  if (!process.env.OPENAI_API_KEY) {
-    log('OPENAI_API_KEY ontbreekt — review overgeslagen (dormant / fork PR).');
-    stepSummary('### CM CONTROL Review\nOvergeslagen: `OPENAI_API_KEY` niet gezet.');
+  if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN ontbreekt');
+  // Alleen de OpenAI-provider vereist een betaalde sleutel; GitHub Models draait
+  // op de ingebouwde GITHUB_TOKEN en heeft geen secret nodig.
+  if (provider.api === 'responses' && !process.env.OPENAI_API_KEY) {
+    log('provider=openai maar OPENAI_API_KEY ontbreekt — review overgeslagen (dormant / fork PR).');
+    stepSummary('### CM CONTROL Review\nOvergeslagen: provider `openai` maar `OPENAI_API_KEY` niet gezet.');
     return;
   }
-  if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN ontbreekt');
 
   const [owner, repo] = (process.env.GITHUB_REPOSITORY || '').split('/');
   const number = process.env.TARGET_NUMBER;
   const targetType = process.env.TARGET_TYPE === 'issue' ? 'issue' : 'pull_request';
   if (!owner || !repo || !number) throw new Error('owner/repo/TARGET_NUMBER ontbreekt');
-  log(`review ${owner}/${repo} ${targetType} #${number} met model ${model}`);
+  log(`review ${owner}/${repo} ${targetType} #${number} · provider ${provider.key} · model ${model}`);
 
   const instructions = readFileSync(PROMPT_PATH, 'utf8');
   const governance = buildGovernanceContext(config);
@@ -286,7 +328,7 @@ async function main() {
       `# OPDRACHT\nDoe een triage-review van dit issue tegen de governance-context en geef één verdict als JSON volgens het schema.`;
   }
 
-  const rawText = await callOpenAI(config, instructions, input);
+  const rawText = await callModel(provider, config, instructions, input);
   const verdict = parseVerdictJson(rawText);
   log(`verdict: ${verdict.verdict}`);
 
