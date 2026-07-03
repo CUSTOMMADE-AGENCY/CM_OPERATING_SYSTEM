@@ -6,9 +6,15 @@ name: CM CONTROL Review
 # CM CONTROL voert een governance-review uit op een PR of issue en schrijft het
 # verdict (GO / CONDITIONAL GO / REVIEW_REQUIRED / NO_GO) terug.
 #
+# PROVIDER:
+#   - Default provider = GitHub Models (gratis, rate-limited) via de ingebouwde
+#     GITHUB_TOKEN. Geen betaalde sleutel nodig. Zie .github/cm-control/config.json.
+#   - Provider 'openai' (betaald, Responses API) vereist het secret OPENAI_API_KEY.
+#
 # VEILIGHEID / DORMANT-BY-DEFAULT:
-#   - Draait alleen wanneer de repository-variabele CM_CONTROL_REVIEW_ENABLED == 'true'
-#     én het secret OPENAI_API_KEY is gezet. Zonder die twee doet mergen niets.
+#   - Draait alleen wanneer de repository-variabele CM_CONTROL_REVIEW_ENABLED == 'true'.
+#     Met de default provider is dat de enige activatiestap; mergen doet zonder die
+#     variabele niets.
 #   - Mergt niet, pusht niet en muteert geen bestanden. Alleen reviews (comment,
 #     optioneel label / commit-status / COMMENT-review). Niet-blokkerend by default.
 
@@ -24,11 +30,13 @@ on:
         required: true
 
 # Alleen wat nodig is om een review terug te schrijven. Bewust GEEN contents: write.
+# models: read geeft gratis toegang tot GitHub Models via de ingebouwde GITHUB_TOKEN.
 permissions:
   contents: read
   pull-requests: write
   issues: write
   statuses: write
+  models: read
 
 concurrency:
   group: cm-control-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.target_number }}
