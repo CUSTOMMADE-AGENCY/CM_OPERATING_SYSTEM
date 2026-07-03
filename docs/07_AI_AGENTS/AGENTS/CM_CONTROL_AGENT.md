@@ -120,6 +120,10 @@ operationele uitvoering.
 | Monthly Review | Maandstatus + KPI's | Monthly Control Report |
 | Kwaliteits-/governancecontrole | Agent-output en governance-signalen | Governance-acties en correcties |
 
+Repository Governance Reviews worden verplicht uitgevoerd volgens
+`docs/00_GOVERNANCE/CM_CONTROL_AUDIT_STANDARD.md`. Iedere repository review
+moet minimaal de verplichte auditonderdelen uit die standaard bevatten.
+
 ## 11 Templates
 
 - Daily Focus Report · Weekly Control Report · Monthly Control Report.

@@ -6,7 +6,7 @@ Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
 
 ## Doel
 
-Gestandaardiseerde audittemplate voor CM CONTROL repository-audits. De audit beoordeelt repository health, governance, besluiten, ADR's, releases, documentatie, architectuur, agent-inrichting, automatisering, CI, duplicaten, referenties, orphan files, risico's en board recommendations.
+Gestandaardiseerde audittemplate voor CM CONTROL repository-audits. De audit volgt verplicht `docs/00_GOVERNANCE/CM_CONTROL_AUDIT_STANDARD.md` en beoordeelt repository health, governance, besluiten, locked decisions, ADR's, releases, documentatie, architectuur, agent-inrichting en -certificering, responsibility matrix, source of truth, automatisering, CI, duplicaten, referenties, orphan files, missing owners, missing review dates, version drift, risico's en board recommendations.
 
 ## Wanneer gebruiken
 
@@ -64,6 +64,13 @@ Repository governance audit workflow
 - Board recommendation met go/no-go/conditional-go advies.
 - Actielijst voor follow-up in governance, ClickUp of repository issues.
 
+## Verplichte standaard
+
+Repository Governance Reviews worden verplicht uitgevoerd volgens:
+`docs/00_GOVERNANCE/CM_CONTROL_AUDIT_STANDARD.md`
+
+Iedere repository review moet minimaal de verplichte auditonderdelen uit die standaard bevatten. Onderdelen mogen niet worden overgeslagen; wanneer een onderdeel niet van toepassing lijkt, wordt dit expliciet gemotiveerd in de auditvastlegging.
+
 ## Structuur / Tabs
 
 | Sectie | Doel | Verplicht |
@@ -84,6 +91,36 @@ Repository governance audit workflow
 | 14 Orphan Files | Detectie van bestanden zonder owner, link of duidelijk doel | Ja |
 | 15 Risks | Samenvatting van risico's, severity en mitigatie | Ja |
 | 16 Board Recommendation | Besluitadvies, voorwaarden en escalaties voor boardreview | Ja |
+
+### Verplichte auditonderdelen uit CM Control Audit Standard
+
+| Auditonderdeel | Status | Evidence | Bevinding / N.v.t.-motivatie | Actie |
+| --- | --- | --- | --- | --- |
+| Decision Audit | TBD | TBD | TBD | TBD |
+| Locked Decisions Audit | TBD | TBD | TBD | TBD |
+| ADR Audit | TBD | TBD | TBD | TBD |
+| Release Audit | TBD | TBD | TBD | TBD |
+| Agent Audit | TBD | TBD | TBD | TBD |
+| Agent Certification Audit | TBD | TBD | TBD | TBD |
+| Responsibility Matrix Audit | TBD | TBD | TBD | TBD |
+| Architecture Audit | TBD | TBD | TBD | TBD |
+| Documentation Audit | TBD | TBD | TBD | TBD |
+| Source of Truth Audit | TBD | TBD | TBD | TBD |
+| Repository Health | TBD | TBD | TBD | TBD |
+| Automation Health | TBD | TBD | TBD | TBD |
+| CI Health | TBD | TBD | TBD | TBD |
+| Broken References | TBD | TBD | TBD | TBD |
+| Broken Links | TBD | TBD | TBD | TBD |
+| Orphan Files | TBD | TBD | TBD | TBD |
+| Duplicate Documents | TBD | TBD | TBD | TBD |
+| Duplicate SOP’s | TBD | TBD | TBD | TBD |
+| Duplicate Playbooks | TBD | TBD | TBD | TBD |
+| Duplicate Templates | TBD | TBD | TBD | TBD |
+| Missing Owners | TBD | TBD | TBD | TBD |
+| Missing Review Dates | TBD | TBD | TBD | TBD |
+| Version Drift | TBD | TBD | TBD | TBD |
+| Executive Risk Score | TBD | TBD | TBD | TBD |
+| Board Recommendation | TBD | TBD | TBD | TBD |
 
 ---
 
@@ -128,6 +165,15 @@ Repository governance audit workflow
 | Registers current | TBD | TBD | TBD | TBD |
 | Escalation process clear | TBD | TBD | TBD | TBD |
 
+## 03A Source of Truth, Owners & Review Dates
+
+| Check | Status | Evidence | Bevinding | Actie |
+| --- | --- | --- | --- | --- |
+| Source of truth per domein duidelijk | TBD | TBD | TBD | TBD |
+| Missing owners gecontroleerd | TBD | TBD | TBD | TBD |
+| Missing review dates gecontroleerd | TBD | TBD | TBD | TBD |
+| Version drift gecontroleerd | TBD | TBD | TBD | TBD |
+
 ## 04 Decision Audit
 
 | Decision source | Status | Evidence | Gap | Follow-up |
@@ -135,6 +181,8 @@ Repository governance audit workflow
 | Decision log | TBD | TBD | TBD | TBD |
 | Open decisions | TBD | TBD | TBD | TBD |
 | Approved decisions | TBD | TBD | TBD | TBD |
+| Locked decisions | TBD | TBD | TBD | TBD |
+| Unlock- of wijzigingsproces gevolgd | TBD | TBD | TBD | TBD |
 | Reversed decisions | TBD | TBD | TBD | TBD |
 
 ## 05 ADR Audit
@@ -176,6 +224,15 @@ Repository governance audit workflow
 | Deprecated components marked | TBD | TBD | TBD | TBD |
 | Architecture matches ADRs | TBD | TBD | TBD | TBD |
 
+## 08A Responsibility Matrix Audit
+
+| Matrix check | Status | Evidence | Gap | Follow-up |
+| --- | --- | --- | --- | --- |
+| Owners vastgelegd | TBD | TBD | TBD | TBD |
+| Escalation paths vastgelegd | TBD | TBD | TBD | TBD |
+| Beslissingsrechten actueel | TBD | TBD | TBD | TBD |
+| Matrix consistent met agentdefinities | TBD | TBD | TBD | TBD |
+
 ## 09 Agent Audit
 
 | Agent check | Status | Evidence | Gap | Follow-up |
@@ -185,6 +242,8 @@ Repository governance audit workflow
 | Instructions are current | TBD | TBD | TBD | TBD |
 | Escalation rules included | TBD | TBD | TBD | TBD |
 | Agent boundaries respected | TBD | TBD | TBD | TBD |
+| Agent certification present | TBD | TBD | TBD | TBD |
+| Agent versie, status en goedkeuring actueel | TBD | TBD | TBD | TBD |
 
 ## 10 Automation Audit
 
@@ -206,13 +265,13 @@ Repository governance audit workflow
 | CI ownership clear | TBD | TBD | TBD | TBD |
 | CI failure escalation clear | TBD | TBD | TBD | TBD |
 
-## 12 Duplicate Documents
+## 12 Duplicate Documents, SOP's, Playbooks & Templates
 
-| Duplicate candidate | Location A | Location B | Conflict risk | Recommended action |
-| --- | --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD | TBD |
+| Duplicate candidate | Type | Location A | Location B | Conflict risk | Recommended action |
+| --- | --- | --- | --- | --- | --- |
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-## 13 Broken References
+## 13 Broken References & Broken Links
 
 | Reference | Source file | Target | Failure type | Recommended action |
 | --- | --- | --- | --- | --- |
@@ -224,11 +283,19 @@ Repository governance audit workflow
 | --- | --- | --- | --- | --- |
 | TBD | TBD | TBD | TBD | TBD |
 
-## 15 Risks
+## 15 Risks & Executive Risk Score
 
 | Risk | Severity | Likelihood | Impact | Mitigation | Owner |
 | --- | --- | --- | --- | --- | --- |
 | TBD | TBD | TBD | TBD | TBD | TBD |
+
+| Executive Risk Score item | Score / invulling | Evidence |
+| --- | --- | --- |
+| Governance-impact | TBD | TBD |
+| Operationele impact | TBD | TBD |
+| Compliance-impact | TBD | TBD |
+| Herstelurgentie | TBD | TBD |
+| Totale Executive Risk Score | TBD | TBD |
 
 ### Risk scale
 
@@ -260,6 +327,7 @@ Board recommendation vereist review door CM CONTROL AGENT en, indien governance-
 ## Kwaliteitscheck
 
 - Alle 16 auditsecties zijn ingevuld of expliciet gemarkeerd als niet van toepassing.
+- Alle verplichte auditonderdelen uit `docs/00_GOVERNANCE/CM_CONTROL_AUDIT_STANDARD.md` zijn uitgevoerd of expliciet gemotiveerd als niet van toepassing.
 - Iedere kritieke bevinding bevat evidence, impact, owner en aanbevolen actie.
 - Board recommendation is concreet en besluitbaar.
 - Geen vertrouwelijke clientdata of secrets opgenomen.
@@ -291,3 +359,4 @@ Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
 | Datum | Wijziging | Owner |
 | --- | --- | --- |
 | 2026-07-03 | Eerste repository-audittemplate toegevoegd voor CM CONTROL audits. | CM CONTROL AGENT |
+| 2026-07-03 | Template expliciet gekoppeld aan CM Control Audit Standard en verplichte auditonderdelen toegevoegd. | CM CONTROL AGENT |
