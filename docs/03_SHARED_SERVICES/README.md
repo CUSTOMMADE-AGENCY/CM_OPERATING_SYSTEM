@@ -1,18 +1,22 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # Shared Services
 
-Shared Services contains reusable standards that support both Master Boutique and Artist Management without mixing lane-specific workflows.
+## Doel
 
-## Scope
+Shared Services bevat herbruikbare standaarden die zowel Master Boutique als Artist Management ondersteunen, zonder lane-specifieke workflows te vermengen.
 
-- Client onboarding standards.
-- Proposal workflows.
-- Email template registers.
-- File management rules.
-- Meeting and communication processes.
-- Client close-out standards.
+## Reikwijdte
 
-## Rule
+- Client onboarding-standaarden en client folder-standaarden.
+- Proposal-, meeting- en communicatieprocessen.
+- Finance-, legal-, archive- en process-change-flows.
+- Marketing- en content-publicatie-standaarden.
+- Client close-out-standaarden.
+- De centrale Template Library onder `TEMPLATES/`.
 
-If a process is shared by both revenue engines, it can live here. If a process is specific to transactions or artist services, keep it in the relevant lane.
+## Regel
+
+Als een proces door beide revenue engines wordt gedeeld, hoort het hier. Is een proces specifiek voor transacties of artist-services, houd het dan in de betreffende lane.
+
+## Template Library
+
+Controleer altijd eerst `docs/03_SHARED_SERVICES/TEMPLATES/00_TEMPLATE_INDEX.md` voordat je nieuwe documenten, trackers, registers of deliverables aanmaakt. GitHub is leidend voor template-governance en template-specificaties.

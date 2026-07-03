@@ -1,40 +1,36 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # Closing Workflow
 
-## Purpose
+## Doel
 
-Coordinate final closing steps after APA agreement.
+Coördineer de laatste closing-stappen nadat de APA is overeengekomen, zodat de transactie gecontroleerd, gedocumenteerd en volledig wordt afgerond.
 
-## Scope
+## Reikwijdte
 
-Applies to Master Boutique transaction work only. Confidential deal files, signed documents, financial statements, and data-room materials stay in Drive or the approved portal.
+Geldt uitsluitend voor Master Boutique transactiewerk. Vertrouwelijke dealbestanden, getekende documenten, financiële stukken en Data Room-materialen blijven in Google Drive of het goedgekeurde portaal.
 
-## Inputs
+## Stappen
 
-- Final APA
-- Closing checklist
-- Payment instructions
-- Deliverables list
+1. Bevestig dat getekende documenten in de juiste Google Drive legal-map staan.
+2. Verifieer de closing-deliverables en de betalingsmechaniek.
+3. Coördineer de vrijgave van toegang en de stappen voor Asset-overdracht.
+4. Leg de closing-bevestiging vast.
+5. Verplaats de deal naar Success Fee en daarna naar Archief.
 
-## Workflow
+## Kwaliteitschecks
 
-1. Confirm signed documents are stored in Drive legal folders.
-2. Verify closing deliverables and payment mechanics.
-3. Coordinate release of access and asset transfer steps.
-4. Record closing confirmation.
-5. Move deal to SUCCESS FEE and then ARCHIVE.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
 
-## Outputs
+## Opslag- en toolgrenzen
 
-- Updated ClickUp status and notes.
-- Required Drive materials stored in the correct deal folder.
-- Clear next action, owner, and deadline.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
 
-## Quality standard
+## Repository-hygiëne
 
-The process is complete only when the next stage has enough documented evidence to proceed without rework.
-
-## Version
-
-V1.0 starter operating standard.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

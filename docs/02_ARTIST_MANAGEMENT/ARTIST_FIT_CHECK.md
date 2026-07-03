@@ -1,40 +1,35 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # Artist Fit Check
 
-## Purpose
+## Doel
 
-Assess whether the artist is strategically and commercially suitable for CM services.
+Beoordeel of een artist strategisch en commercieel geschikt is voor CM-diensten, zodat geen strategie- of uitvoeringswerk start voordat de fit en het instapaanbod zijn vastgelegd.
 
-## Scope
+## Reikwijdte
 
-Applies to Artist Management client-service work only. Client-confidential materials, signed contracts, and final deliverables stay in the approved Google Drive client folder.
+Geldt uitsluitend voor Artist Management client-servicewerk. Client-vertrouwelijke materialen, getekende contracten en finale deliverables blijven in de goedgekeurde Google Drive-clientmap.
 
-## Inputs
+## Stappen
 
-- Intake answers
-- Music links
-- Audience indicators
-- Budget range
-- Decision timeline
+1. Scoor brand clarity, ambitie, professionaliteit, budget en timing.
+2. Markeer risico's en verwachtingen.
+3. Bepaal het aanbevolen instapdienst.
+4. Keur het proposal-pad goed of wijs beleefd af.
 
-## Workflow
+## Kwaliteitschecks
 
-1. Score brand clarity, ambition, professionalism, budget, and timing.
-2. Flag risks and expectations.
-3. Define recommended entry service.
-4. Approve proposal path or decline politely.
+- Geen strategie- of uitvoeringswerk start voordat de vereiste basis en approvals zijn gedocumenteerd.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- De juiste bestanden staan in de Google Drive-clientmap.
 
-## Outputs
+## Opslag- en toolgrenzen
 
-- Updated ClickUp status and task ownership.
-- Correct files stored in the client Drive folder.
-- Written client decision, approval, or next step.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, taken, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
 
-## Quality standard
+## Repository-hygiëne
 
-No strategy or execution work starts until the required foundation and approvals are documented.
-
-## Version
-
-V1.0 starter operating standard.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.
