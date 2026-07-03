@@ -39,7 +39,7 @@
   },
 
   "writeBack": {
-    "comment": "Alleen review-output. Nooit merge of contentwijziging. Alle kanalen zijn niet-blokkerend by default; zet allowBlockingReview alleen bewust aan.",
+    "comment": "Alleen review-output. Nooit merge of contentwijziging. Alle kanalen zijn niet-blokkerend by default; zet allowBlockingReview alleen bewust aan. failCheckOnError=false: model-/endpointfouten geven alleen een advies-comment, geen rode check (geparkeerd tot GitHub Models werkt).",
     "postComment": true,
     "postReview": false,
     "allowBlockingReview": false,
@@ -47,6 +47,6 @@
     "labelPrefix": "cm-control",
     "commitStatus": false,
     "statusContext": "cm-control/review",
-    "failCheckOnError": true
+    "failCheckOnError": false
   }
 }
