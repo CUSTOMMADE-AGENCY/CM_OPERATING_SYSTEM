@@ -18,6 +18,7 @@ Deze map definieert hoe het Custommade Agency operating system is gestructureerd
 - `DECISION_LOG.md` — chronologisch log voor governancebesluiten en structurele OS-keuzes.
 - `AI_TOOL_RADAR.md` — gecontroleerde radar voor AI-tools die binnen CM worden beoordeeld, getest of goedgekeurd.
 - `AUTOMATION_BACKLOG.md` — centrale backlog voor automatiseringskandidaten, prioriteiten en eigenaarschap.
+- `CM_CONTROL_AUDIT_STANDARD.md` — standaard voor aanvullende Control Audits op governance, repository, agents, architectuur en documentatie.
 
 ## Regel
 
