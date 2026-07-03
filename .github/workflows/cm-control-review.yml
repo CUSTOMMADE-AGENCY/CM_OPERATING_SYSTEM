@@ -1,0 +1,63 @@
+name: CM CONTROL Review
+
+# CM CONTROL GitHub Action v1 — operationaliseert de sectie "CM CONTROL GitHub
+# Activation" uit docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md.
+#
+# Deze workflow laat CM CONTROL een governance-review op een PR uitvoeren en het
+# verdict (GO / REVIEW_REQUIRED / NO_GO) als PR-comment terugschrijven.
+#
+# VEILIGHEID / DORMANT-BY-DEFAULT:
+#   - Draait alleen wanneer de repository-variabele CM_CONTROL_REVIEW_ENABLED == 'true'
+#     én het secret OPENAI_API_KEY is gezet. Zonder die twee doet mergen van deze
+#     workflow niets (geen activatie zonder akkoord).
+#   - Mergt niet, pusht niet en muteert geen bestanden. Alleen reviews (PR-comment,
+#     optioneel een label). Least-privilege permissions hieronder.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: PR-nummer om handmatig te reviewen
+        required: true
+
+# Alleen wat nodig is om een review terug te schrijven. Bewust GEEN contents: write.
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+# Nieuwe commits op dezelfde PR annuleren een lopende review.
+concurrency:
+  group: cm-control-review-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+  cancel-in-progress: true
+
+jobs:
+  cm-control-review:
+    name: CM CONTROL governance review
+    runs-on: ubuntu-latest
+    # Enable-gate: dormant tot de variabele bewust op 'true' staat.
+    if: vars.CM_CONTROL_REVIEW_ENABLED == 'true'
+    steps:
+      # Governance-context (regels, prompt, config, script) uit de BASE-ref laden,
+      # zodat een PR de maatstaf waarop hij beoordeeld wordt niet zelf kan wijzigen.
+      - name: Checkout governance context (base ref)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.ref }}
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run CM CONTROL review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # Optionele overrides; standaardwaarden staan in config.json.
+          CM_CONTROL_MODEL: ${{ vars.CM_CONTROL_MODEL }}
+          PR_NUMBER: ${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+        run: node .github/cm-control/review.mjs

@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "description": "Configuratie voor CM CONTROL GitHub Action v1. Bepaalt welke governance-context de reviewer laadt, welk model wordt gebruikt en hoe het verdict wordt teruggeschreven. Wijzig dit bestand via PR; het is geen live automation-schakelaar (dat is de variabele CM_CONTROL_REVIEW_ENABLED).",
+
+  "model": "gpt-4.1",
+  "openaiBaseUrl": "https://api.openai.com/v1",
+  "maxOutputTokens": 1200,
+
+  "governanceContext": {
+    "comment": "Bestanden die als maatstaf (system-of-truth) worden meegestuurd. Geladen uit de base-ref. Totaal begrensd door maxContextChars.",
+    "files": [
+      "GOVERNANCE_RULES.md",
+      "docs/00_GOVERNANCE/GOVERNANCE_RULES.md",
+      "docs/00_GOVERNANCE/CM_CONTROL_AUDIT_STANDARD.md",
+      "docs/00_GOVERNANCE/DECISION_LOG.md",
+      "docs/07_AI_AGENTS/AGENT_COMMUNICATION_PROTOCOL.md",
+      "docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md"
+    ],
+    "maxContextChars": 60000
+  },
+
+  "diff": {
+    "comment": "Begrenzing van de PR-diff die naar het model gaat, om tokens en kosten te beheersen.",
+    "maxDiffChars": 45000,
+    "maxFiles": 60
+  },
+
+  "writeBack": {
+    "comment": "Alleen review-output. Nooit merge of contentwijziging.",
+    "postComment": true,
+    "applyLabels": false,
+    "labelPrefix": "cm-control",
+    "failCheckOnError": true
+  }
+}
