@@ -492,8 +492,16 @@ async function run() {
   process.exit(hadError && cfg.stopOnError ? 1 : 0);
 }
 
-// Exporteer pure helpers voor tests; start de run alleen bij directe aanroep.
-module.exports = { parseEuroAmount, formatEuro, classifyRow };
+// Exporteer helpers + page-logica voor tests; start de run alleen bij directe aanroep.
+module.exports = {
+  parseEuroAmount,
+  formatEuro,
+  classifyRow,
+  readFeedRows,
+  findSafeButton,
+  hasRequiredFieldErrors,
+  processDetail,
+};
 
 if (require.main === module) {
   run();
