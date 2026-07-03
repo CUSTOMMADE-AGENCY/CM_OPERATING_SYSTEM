@@ -1,0 +1,19 @@
+{
+  "name": "moneybird-feed-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright browser-agent die maximaal 25 nieuwe inkomende documenten uit de Moneybird Feed verwerkt (INK/BON) en algemene documenten (ALG) overslaat voor review.",
+  "type": "commonjs",
+  "main": "moneybird-feed-agent.js",
+  "scripts": {
+    "start": "node moneybird-feed-agent.js",
+    "dry-run": "node moneybird-feed-agent.js --dry-run",
+    "postinstall": "playwright install chromium"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

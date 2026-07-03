@@ -27,3 +27,11 @@ client-files/
 data-rooms/
 finance-private/
 legal-private/
+
+# Node / Playwright agents
+node_modules/
+package-lock.json
+
+# Moneybird Feed Agent runtime artifacts (session + logs = gevoelig)
+scripts/moneybird-feed-agent/.moneybird-session/
+scripts/moneybird-feed-agent/logs/
