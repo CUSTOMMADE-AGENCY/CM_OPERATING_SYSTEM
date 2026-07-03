@@ -22,3 +22,4 @@ Gebruik dit niet voor losse taken, maar voor besluiten die later teruggevonden m
 | 2026-06-15 | LOCKED | Pure shims blijven behouden zolang actief gelinkt |
 | 2026-06-15 | LOCKED | CM en FIERCE blijven strikt gescheiden |
 | 2026-07-01 | LOCKED | CM OS V1.0 is production-ready baseline; architectuurwijzigingen verlopen vanaf nu uitsluitend via ADR en Pull Request. |
+| 2026-07-03 | LOCKED | UPPERCASE `docs/`-tree is de enige canonieke structuur; vijf lowercase duplicaat-directories opgeheven (case-collision + duplicatie verholpen). 12 unieke bestanden verplaatst met reconciliatie-flag, ~37 superseded verwijderd, `cm-governance.yml` en root-`README.md` bijgewerkt. Ref: ADR-2026-07-02. |

@@ -1,3 +1,5 @@
+<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
+
 # Shared Services
 
 Shared Services contains reusable standards that support both Master Boutique and Artist Management without mixing lane-specific workflows.

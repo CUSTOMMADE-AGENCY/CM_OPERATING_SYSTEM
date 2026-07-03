@@ -22,11 +22,11 @@ jobs:
           required_files=(
             "README.md"
             "GOVERNANCE_RULES.md"
-            "docs/00_governance/README.md"
-            "docs/01_master_boutique/README.md"
-            "docs/02_artist_management/README.md"
-            "docs/03_shared_services/README.md"
-            "docs/04_systems/README.md"
+            "docs/00_GOVERNANCE/README.md"
+            "docs/01_MASTER_BOUTIQUE/README.md"
+            "docs/02_ARTIST_MANAGEMENT/README.md"
+            "docs/03_SHARED_SERVICES/README.md"
+            "docs/04_SYSTEMS/README.md"
           )
 
           for file in "${required_files[@]}"; do
