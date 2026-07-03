@@ -1,40 +1,36 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # Success Fee Workflow
 
-## Purpose
+## Doel
 
-Ensure CM success-fee revenue is invoiced and tracked after a successful transaction.
+Zorg dat CM success-fee-omzet na een succesvolle transactie wordt gefactureerd en gevolgd, zodat geen verdiende fee onbetaald of onopgemerkt blijft.
 
-## Scope
+## Reikwijdte
 
-Applies to Master Boutique transaction work only. Confidential deal files, signed documents, financial statements, and data-room materials stay in Drive or the approved portal.
+Geldt uitsluitend voor Master Boutique transactiewerk. Vertrouwelijke dealbestanden, getekende documenten, financiële stukken en Data Room-materialen blijven in Google Drive of het goedgekeurde portaal.
 
-## Inputs
+## Stappen
 
-- Engagement agreement terms
-- Closing confirmation
-- Purchase price or fee basis
-- Invoice details
+1. Bevestig de fee-trigger.
+2. Bereken de success fee op de afgesproken basis.
+3. Factureer via het finance-proces.
+4. Volg de betaalstatus in ClickUp.
+5. Archiveer de deal na betaling of na overdracht aan finance.
 
-## Workflow
+## Kwaliteitschecks
 
-1. Confirm fee trigger.
-2. Calculate success fee against the agreed basis.
-3. Issue invoice from finance process.
-4. Track payment status in ClickUp.
-5. Archive deal after payment or finance handover.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
 
-## Outputs
+## Opslag- en toolgrenzen
 
-- Updated ClickUp status and notes.
-- Required Drive materials stored in the correct deal folder.
-- Clear next action, owner, and deadline.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
 
-## Quality standard
+## Repository-hygiëne
 
-The process is complete only when the next stage has enough documented evidence to proceed without rework.
-
-## Version
-
-V1.0 starter operating standard.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.

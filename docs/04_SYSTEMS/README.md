@@ -1,17 +1,18 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # Systems
 
-Systems documents how CM uses and maintains operational tools.
+## Doel
 
-## Scope
+Systems documenteert hoe CM operationele tools gebruikt en onderhoudt. Workflow-logica blijft in Governance, de lane-documenten of Shared Services; deze sectie beschrijft de tool-inrichting.
 
-- Google Drive structure.
-- ClickUp structure.
-- Gmail template register.
-- AI agents and automation standards.
-- As-built notes for implemented tool setups.
+## Reikwijdte
 
-## Rule
+- Google Drive-structuur en Drive-mapping.
+- ClickUp-structuur en ClickUp-mapping.
+- Gmail-templateregister en communicatie-inrichting.
+- AI Agents- en automation-standaarden.
+- Make-scenariomapping.
+- As-built-notities voor geïmplementeerde tool-setups.
 
-Systems documentation describes how tools are configured and maintained. Workflow logic remains in governance, lane documents, or shared services.
+## Regel
+
+Systeemdocumentatie beschrijft hoe tools zijn geconfigureerd en worden onderhouden. De architectuurkaart `CM_ARCHITECTURE_MAP.md` legt vast welk systeem waarvoor wordt gebruikt.

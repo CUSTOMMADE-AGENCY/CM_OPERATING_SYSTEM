@@ -1,40 +1,36 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
-
 # LOI Workflow
 
-## Purpose
+## Doel
 
-Manage the request, review, and acceptance of letters of intent.
+Beheer het aanvragen, beoordelen en accepteren van Letters of Intent, zodat een LOI consistent wordt gewogen voordat een deal naar Due Diligence gaat.
 
-## Scope
+## Reikwijdte
 
-Applies to Master Boutique transaction work only. Confidential deal files, signed documents, financial statements, and data-room materials stay in Drive or the approved portal.
+Geldt uitsluitend voor Master Boutique transactiewerk. Vertrouwelijke dealbestanden, getekende documenten, financiële stukken en Data Room-materialen blijven in Google Drive of het goedgekeurde portaal.
 
-## Inputs
+## Stappen
 
-- Qualified buyer
-- Indicative offer
-- Commercial assumptions
-- Seller approval path
+1. Vraag een LOI aan na geloofwaardige indicatieve interesse.
+2. Toets prijs, Assets, exclusiviteit, diligence-periode, aanbetaling en closing-voorwaarden.
+3. Vergelijk concurrerende LOI's op dezelfde criteria.
+4. Leg het Seller-besluit vast.
+5. Verplaats de geaccepteerde LOI naar Due Diligence.
 
-## Workflow
+## Kwaliteitschecks
 
-1. Request LOI after credible indicative interest.
-2. Check price, assets, exclusivity, diligence period, deposit, and closing conditions.
-3. Compare competing LOIs using the same criteria.
-4. Record seller decision.
-5. Move accepted LOI to due diligence.
+- Geen vertrouwelijke data zonder juiste approval of NDA.
+- Elke status, eigenaar en eerstvolgende actie is vastgelegd in ClickUp.
+- Deliverables en bronbestanden staan in de juiste Google Drive-map.
 
-## Outputs
+## Opslag- en toolgrenzen
 
-- Updated ClickUp status and notes.
-- Required Drive materials stored in the correct deal folder.
-- Clear next action, owner, and deadline.
+- GitHub bewaart deze Workflow, Governance, SOP en systeemdocumentatie.
+- Google Drive bewaart live clientmappen, getekende documenten, deliverables en werkbestanden.
+- ClickUp bewaart uitvoering, Pipeline-fases, eigenaren, deadlines en taakbewijs.
+- Gmail bewaart correspondentie en goedgekeurde communicatietemplates.
 
-## Quality standard
+## Repository-hygiëne
 
-The process is complete only when the next stage has enough documented evidence to proceed without rework.
-
-## Version
-
-V1.0 starter operating standard.
+- Commit geen getekende contracten, vertrouwelijke clientbestanden, exports, dubbele mappen of ad-hoc concepten.
+- Gebruik duidelijke versiegeschiedenis via commits en pull requests in plaats van `final_final`-bestandsnamen.
+- Bewaar clientspecifieke details in de juiste live workspace, niet in deze repository.
