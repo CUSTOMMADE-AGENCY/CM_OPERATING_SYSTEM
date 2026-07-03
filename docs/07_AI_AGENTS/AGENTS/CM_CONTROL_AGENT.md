@@ -107,6 +107,7 @@ operationele uitvoering.
 - `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` — autonomiegrenzen.
 - `docs/07_AI_AGENTS/AGENT_RESPONSIBILITY_MATRIX.md` en
   `docs/07_AI_AGENTS/AGENT_HANDOFF_MATRIX.md` — eigenaarschap en handoffs.
+- `docs/07_AI_AGENTS/AGENT_COMMUNICATION_PROTOCOL.md` — vaste berichtstructuur voor escalaties, reviews, approvals, handoffs, errors en audit-evidence; ondergeschikt aan de responsibility- en handoff-matrices.
 - `docs/00_GOVERNANCE/` — governanceregels en approval-register.
 
 ## 10 Workflows
@@ -186,6 +187,7 @@ CM VAULT AGENT.
 |---|---|---|---|
 | 2026-06-21 | v1.4 | Definitieve GOVERNANCE LOCKED baseline. | Week 1 agent build. |
 | 2026-07-02 | v1.5 | Herschreven naar de 18-sectiestandaard; sturingsritme, Go/No-Go, escalatie-inname en agent-digest uitgewerkt; autonomy/escalatie expliciet gekoppeld. | Uniform, compleet format en scherpere sturingsdefinitie. |
+| 2026-07-03 | v1.5 | Expliciete SOP-verwijzing naar `AGENT_COMMUNICATION_PROTOCOL.md` toegevoegd. | Protocol is governance-locked als operationele berichtstandaard zonder nieuwe verantwoordelijkheden of approval-gates. |
 
 ## 17 Roadmap
 

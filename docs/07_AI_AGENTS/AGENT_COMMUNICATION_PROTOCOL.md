@@ -1,8 +1,8 @@
 # **AGENT COMMUNICATION PROTOCOL**
 
-> Versie: v1.0 · Status: CONCEPT / REVIEW_REQUIRED · Datum: 2026-07-03  
-> Eigenaar: CM CONTROL AGENT · Beheer: CM VAULT AGENT  
-> Scope: alle CM_OS-agents en agentcommunicatie via ChatGPT, Claude, Codex, automations, GitHub, ClickUp, Make, Drive, Gmail en Moneybird  
+> Versie: v1.0 · Status: **GOVERNANCE LOCKED** · Datum: 2026-07-03
+> Eigenaar: CM CONTROL AGENT · Beheer: CM VAULT AGENT
+> Scope: alle CM_OS-agents en agentcommunicatie via ChatGPT, Claude, Codex, automations, GitHub, ClickUp, Make, Drive, Gmail en Moneybird
 > Governancepositie: operationele berichtstandaard ondergeschikt aan `CM_AGENT_ARCHITECTURE.md`, `AGENT_RESPONSIBILITY_MATRIX.md`, `AGENT_HANDOFF_MATRIX.md` en `GOVERNANCE_RULES.md`
 
 ---

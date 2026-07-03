@@ -114,6 +114,7 @@ inhoudelijke mutaties buiten het automatiseringsdomein.
 - `docs/04_SYSTEMS/MAKE_SCENARIO_MAP.md` — scenario-governance en checklists.
 - `docs/07_AI_AGENTS/AGENT_DEFINITION_STANDARD.md` — 18-sectiestandaard voor
   agentbouw.
+- `docs/07_AI_AGENTS/AGENT_COMMUNICATION_PROTOCOL.md` — vaste berichtstructuur voor bouwverzoeken, statusupdates, reviews, handoffs, errors, test-evidence en approval-requests; ondergeschikt aan de responsibility- en handoff-matrices.
 - `docs/00_GOVERNANCE/` — repository- en governanceregels voor GitHub-development.
 
 ## 10 Workflows
@@ -180,6 +181,7 @@ CM FLOW AGENT houdt bij: ontwerp, architectuur, implementatiebesluiten, testplan
 | 2026-06-21 | v1.4 | Definitieve GOVERNANCE LOCKED baseline. | Week 1 agent build. |
 | 2026-07-02 | v1.5 | Scope uitgebreid met Agent-, GitHub-, Automation- en System Development; build-vs-activate approval-gate toegevoegd; herschreven naar 18-sectiestandaard. | FLOW vastleggen als builder van het OS met behoud van governance-grenzen. |
 | 2026-07-02 | v2.0 | Rol aangescherpt naar CTO & AI Systems Engineer; systeemarchitectuur, GitHub source-of-truth, agent lifecycle, automation standards, Google Workspace-keuzeregel, testplan, deploymentplan en impactanalyse expliciet gemaakt. | CM FLOW V2 moet bouwen als software architect en geen losse prompt- of workaround-oplossingen leveren. |
+| 2026-07-03 | v2.0 | Expliciete SOP-verwijzing naar `AGENT_COMMUNICATION_PROTOCOL.md` toegevoegd. | Protocol is governance-locked als operationele berichtstandaard voor bouw-, review-, handoff- en errorcommunicatie. |
 
 ## 17 Roadmap
 

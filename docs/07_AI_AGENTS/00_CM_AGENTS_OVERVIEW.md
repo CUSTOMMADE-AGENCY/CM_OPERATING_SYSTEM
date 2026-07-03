@@ -13,6 +13,7 @@
 - Escalatielevels, escalatieroutes en verplichte escalatie-output staan in `ESCALATION_PROTOCOLS.md`.
 - Agentcertificering, productiepoorten en agentpaspoorten staan in `AGENT_CERTIFICATION_STANDARD.md`.
 - De volledige agentlevenscyclus van idee tot uitfasering staat in `AGENT_LIFECYCLE.md`.
+- De operationele berichtstandaard voor requests, reviews, handoffs, approvals, errors en evidence staat in `AGENT_COMMUNICATION_PROTOCOL.md`; dit protocol vervangt de handoff-matrix niet.
 
 ## AGENTS — OVERZICHT
 
