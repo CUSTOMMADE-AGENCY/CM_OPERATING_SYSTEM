@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "description": "Configuratie voor CM CONTROL GitHub Action v1. Bepaalt welke governance-context de reviewer laadt, welk model wordt gebruikt en hoe het verdict wordt teruggeschreven. Wijzig dit bestand via PR; het is geen live automation-schakelaar (dat is de variabele CM_CONTROL_REVIEW_ENABLED).",
+  "version": "1.1",
+  "description": "Configuratie voor CM CONTROL GitHub Action v1 (conform CM_AGENT_ACTIVATION_STRATEGY v1.1). Bepaalt welke governance-context de reviewer laadt, welk model wordt gebruikt en via welke kanalen het verdict wordt teruggeschreven. Wijzig dit bestand via PR; het is geen live automation-schakelaar (dat is de variabele CM_CONTROL_REVIEW_ENABLED).",
 
   "model": "gpt-4.1",
   "openaiBaseUrl": "https://api.openai.com/v1",
@@ -26,10 +26,14 @@
   },
 
   "writeBack": {
-    "comment": "Alleen review-output. Nooit merge of contentwijziging.",
+    "comment": "Alleen review-output. Nooit merge of contentwijziging. Alle kanalen zijn niet-blokkerend by default; zet allowBlockingReview alleen bewust aan.",
     "postComment": true,
+    "postReview": false,
+    "allowBlockingReview": false,
     "applyLabels": false,
     "labelPrefix": "cm-control",
+    "commitStatus": false,
+    "statusContext": "cm-control/review",
     "failCheckOnError": true
   }
 }

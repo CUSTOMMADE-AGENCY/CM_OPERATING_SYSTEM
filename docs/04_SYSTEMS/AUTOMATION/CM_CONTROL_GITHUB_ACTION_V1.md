@@ -1,6 +1,6 @@
 # CM CONTROL GITHUB ACTION v1
 
-> Versie: v1.0 · Status: **Concept — niet geactiveerd** · Datum: 2026-07-03
+> Versie: v1.1 · Status: **Concept — niet geactiveerd** · Datum: 2026-07-03
 > Eigenaar: CM CONTROL AGENT · Bouw: CM FLOW AGENT · Beheer: CM VAULT AGENT
 >
 > **As-built.** Operationaliseert de sectie "CM CONTROL GitHub Activation" uit
@@ -9,8 +9,8 @@
 
 ## Doel
 
-Een GitHub Action die CM CONTROL een governance-review op een pull request laat
-uitvoeren en één verdict — **GO / REVIEW REQUIRED / NO GO** — als PR-comment
+Een GitHub Action die CM CONTROL een governance-review op een pull request of issue
+laat uitvoeren en één verdict — **GO / CONDITIONAL GO / REVIEW REQUIRED / NO GO** —
 terugschrijft. Advies-only: geen merge, geen push, geen bestandswijziging.
 
 ## Locatie en onderdelen
@@ -34,9 +34,14 @@ terugschrijft. Advies-only: geen merge, geen push, geen bestandswijziging.
 De verdicts en routes komen één-op-één uit de activation strategy:
 
 - **GO** — alle toepasselijke audits PASS; past binnen gelockte kaders.
+- **CONDITIONAL GO** — inhoudelijk akkoord met afgebakende, niet-blokkerende remediation.
 - **REVIEW REQUIRED** — verplichte menselijke review vóór merge.
 - **NO GO** — conflict met locked decision, governanceschending of ontbrekende approval-gate.
 - **→ CM VAULT** bij documentatie-/Drive-bevindingen; **→ Sophia** bij governance/approval-gate.
+
+Write-back-kanalen (advies, niet-blokkerend by default): comment (PR/issue), en optioneel
+label, commit-status en een COMMENT-review. `allowBlockingReview` (default uit) laat
+GO→approve / NO_GO→request-changes toe; standaard blijft alles advies.
 
 De audits volgen `CM_CONTROL_AUDIT_STANDARD.md`; de write-back-berichttypen volgen
 `AGENT_COMMUNICATION_PROTOCOL.md`.
@@ -64,11 +69,13 @@ Fouten worden gelogd, in de job-summary gezet en als PR-comment gemeld met advie
 handmatige review. De check faalt zichtbaar maar blokkeert merge niet, tenzij bewust als
 required check ingesteld.
 
-## Reikwijdte v1 en vervolg
+## Reikwijdte (conform strategy v1.1)
 
-- **v1** dekt PR-events (opened/synchronize/reopened/labeled) en handmatige dispatch.
-- Mogelijke v2: issue-triage, GitHub-labels als statusmodel, en een geconsolideerde
-  digest richting Sophia — allemaal binnen dezelfde strategy, zonder nieuwe governance.
+- Events: `pull_request` (opened/synchronize/reopened/labeled/review_requested),
+  `issues` (opened/labeled) en handmatige `workflow_dispatch`.
+- Vier verdicts: GO / CONDITIONAL GO / REVIEW REQUIRED / NO GO.
+- Write-back: comment, label, commit-status en COMMENT-review (advies, niet-blokkerend by default).
+- Mogelijke v2: geconsolideerde digest richting Sophia — binnen dezelfde strategy, zonder nieuwe governance.
 
 ## Verwijzingen
 
@@ -82,3 +89,4 @@ required check ingesteld.
 | Datum | Versie | Wijziging |
 |---|---|---|
 | 2026-07-03 | v1.0 | Eerste build van de CM CONTROL GitHub Action (workflow, OpenAI-runner, config, prompt, docs). Status Concept; niet geactiveerd. |
+| 2026-07-03 | v1.1 | Volledige conformiteit met CM_AGENT_ACTIVATION_STRATEGY v1.1: issue-triage + review_requested-trigger, verdict CONDITIONAL GO toegevoegd, en write-back-kanalen commit-status en COMMENT-review (niet-blokkerend by default). |

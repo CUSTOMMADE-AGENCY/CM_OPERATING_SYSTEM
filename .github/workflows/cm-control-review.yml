@@ -1,25 +1,26 @@
 name: CM CONTROL Review
 
 # CM CONTROL GitHub Action v1 — operationaliseert de sectie "CM CONTROL GitHub
-# Activation" uit docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md.
+# Activation" uit docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md (v1.1).
 #
-# Deze workflow laat CM CONTROL een governance-review op een PR uitvoeren en het
-# verdict (GO / REVIEW_REQUIRED / NO_GO) als PR-comment terugschrijven.
+# CM CONTROL voert een governance-review uit op een PR of issue en schrijft het
+# verdict (GO / CONDITIONAL GO / REVIEW_REQUIRED / NO_GO) terug.
 #
 # VEILIGHEID / DORMANT-BY-DEFAULT:
 #   - Draait alleen wanneer de repository-variabele CM_CONTROL_REVIEW_ENABLED == 'true'
-#     én het secret OPENAI_API_KEY is gezet. Zonder die twee doet mergen van deze
-#     workflow niets (geen activatie zonder akkoord).
-#   - Mergt niet, pusht niet en muteert geen bestanden. Alleen reviews (PR-comment,
-#     optioneel een label). Least-privilege permissions hieronder.
+#     én het secret OPENAI_API_KEY is gezet. Zonder die twee doet mergen niets.
+#   - Mergt niet, pusht niet en muteert geen bestanden. Alleen reviews (comment,
+#     optioneel label / commit-status / COMMENT-review). Niet-blokkerend by default.
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, labeled]
+    types: [opened, synchronize, reopened, labeled, review_requested]
+  issues:
+    types: [opened, labeled]
   workflow_dispatch:
     inputs:
-      pr_number:
-        description: PR-nummer om handmatig te reviewen
+      target_number:
+        description: PR- of issue-nummer om handmatig te reviewen
         required: true
 
 # Alleen wat nodig is om een review terug te schrijven. Bewust GEEN contents: write.
@@ -27,10 +28,10 @@ permissions:
   contents: read
   pull-requests: write
   issues: write
+  statuses: write
 
-# Nieuwe commits op dezelfde PR annuleren een lopende review.
 concurrency:
-  group: cm-control-review-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+  group: cm-control-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.target_number }}
   cancel-in-progress: true
 
 jobs:
@@ -57,7 +58,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          # Optionele overrides; standaardwaarden staan in config.json.
           CM_CONTROL_MODEL: ${{ vars.CM_CONTROL_MODEL }}
-          PR_NUMBER: ${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+          # pull_request | issues | workflow_dispatch → normaliseren naar type + nummer.
+          TARGET_TYPE: ${{ github.event_name == 'issues' && 'issue' || 'pull_request' }}
+          TARGET_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.target_number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: node .github/cm-control/review.mjs
