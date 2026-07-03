@@ -98,6 +98,25 @@ CM CONTROL AGENT zorgt dat het juiste werk door de juiste agent op het juiste mo
 - Weekly Review
 - Monthly Review
 
+### Repository Governance Review
+
+Iedere repository review MOET minimaal bevatten:
+
+✓ Decision Audit
+✓ ADR Audit
+✓ Release Audit
+✓ Agent Audit
+✓ Documentation Audit
+✓ Repository Health
+✓ Architecture Health
+✓ Automation Health
+✓ CI Health
+✓ Broken References
+✓ Orphan Files
+✓ Duplicate Documents
+✓ Source of Truth Audit
+✓ Executive Risk Score
+
 #### Niet verantwoordelijk voor
 
 Operationele uitvoering · contracten wijzigen · financiële verplichtingen aangaan · content publiceren · deals sluiten · facturen wijzigen.
