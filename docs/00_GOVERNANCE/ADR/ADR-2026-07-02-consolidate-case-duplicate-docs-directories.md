@@ -2,11 +2,11 @@
 
 ## Status
 
-Proposed
+Accepted
 
 ## Datum
 
-2026-07-02
+2026-07-02 (voorgesteld) · 2026-07-03 (geaccepteerd en uitgevoerd)
 
 ## Context
 

@@ -1,4 +1,6 @@
-# Gmail Templates
+<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
+
+# Email Templates Register
 
 This register defines the reusable Gmail templates CM should maintain. Template bodies live in Gmail; GitHub records the approved template names, purpose, owner, and usage rules.
 

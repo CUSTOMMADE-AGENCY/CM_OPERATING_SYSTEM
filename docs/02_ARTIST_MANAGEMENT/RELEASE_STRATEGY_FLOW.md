@@ -1,8 +1,10 @@
-# Artist Roadmap Flow
+<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
+
+# Release Strategy Flow
 
 ## Purpose
 
-Translate brand and business findings into a practical phased plan.
+Plan releases only after brand and strategy foundations are approved.
 
 ## Scope
 
@@ -11,18 +13,18 @@ Applies to Artist Management client-service work only. Client-confidential mater
 ## Inputs
 
 - Approved brandbook
-- Business audit
-- Goals
+- Artist roadmap
+- Release assets
 - Budget
-- Release calendar
+- Timeline
 
 ## Workflow
 
-1. Define 90-day, 6-month, and 12-month priorities.
-2. Assign initiatives by phase.
-3. Identify dependencies and risks.
-4. Confirm budget and capacity.
-5. Publish roadmap deliverable.
+1. Define release objective.
+2. Confirm audience and positioning.
+3. Plan content, promo, partnerships, and deadlines.
+4. Assign responsibilities.
+5. Approve release plan before execution.
 
 ## Outputs
 
