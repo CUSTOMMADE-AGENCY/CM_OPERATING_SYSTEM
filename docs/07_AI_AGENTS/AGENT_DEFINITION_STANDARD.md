@@ -68,7 +68,7 @@ toepassing is, wordt dat expliciet vermeld met reden.
 | 1 | CM FLOW AGENT (referentie-implementatie) | Omgezet |
 | 2 | CM CONTROL AGENT (sturingslaag) | Omgezet |
 | 3 | CM VAULT (infrastructuur) | Omgezet |
-| 4 | CM OPS, CM MONEY, CM SOCIAL, CM PROSPECT (executie) | Gepland |
+| 4 | CM OPS, CM MONEY, CM SOCIAL, CM PROSPECT (executie) | Omgezet |
 | 5 | CM LEGAL (bescherming) | Omgezet |
 
 ## Changelog
