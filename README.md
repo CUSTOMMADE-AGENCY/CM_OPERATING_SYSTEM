@@ -1,80 +1,101 @@
 # Custommade Agency Operating System
 
-Deze repository is de GitHub source of truth voor de operating Workflows, Governance, SOPs, Playbooks, templates en systeemdocumentatie van Custommade Agency Int. B.V.
-
+Deze repository is de GitHub source of truth voor de Governance, Workflows, SOPs, Playbooks, Automations, Agents, Knowledge Base en systeemdocumentatie van Custommade Agency Int. B.V.
 
 ## PRODUCTIESTATUS
 
-**CM Operating System V1.0 — Production Baseline**
+**CM Operating System — Recovery & Alignment**
 
-Status: **Production Ready**
-
-De volgende architectuuronderdelen zijn vanaf deze release vastgesteld:
-
-- Drive Structure
-- Folder Standards
-- Map Specifications
-- Governance
-- Templates
-- Workflows
-- SOPs
-- Playbooks
-- Agent Passports
-
-Vanaf CM OS V1.0 worden architectuurwijzigingen uitsluitend doorgevoerd via een formele Architecture Decision Record (ADR) en Pull Request.
+De repository wordt opnieuw uitgelijnd op de actuele CM-bedrijfsstructuur. Templates blijven tijdens deze recovery ongewijzigd en worden pas in een aparte reviewfase beoordeeld.
 
 ## STARTDOCUMENTEN
 
 Lees in deze volgorde:
 
-1. docs/00_GOVERNANCE/CM_OPERATING_MODEL.md
-2. docs/00_GOVERNANCE/AS_BUILT_DOCUMENTATION.md
-3. docs/00_GOVERNANCE/GOVERNANCE_RULES.md
-4. docs/00_GOVERNANCE/DRIVE_STRUCTURE.md
-5. docs/04_SYSTEMS/CM_ARCHITECTURE_MAP.md
-
-## SOURCE OF TRUTH
-
-- AS_BUILT_DOCUMENTATION.md beschrijft hoe het systeem vandaag daadwerkelijk is ingericht.
-- DRIVE_STRUCTURE.md beschrijft de goedgekeurde Google Drive-structuur.
-- GOVERNANCE_RULES.md bevat de niet-onderhandelbare repositoryregels.
-- CM_ARCHITECTURE_MAP.md legt uit welk systeem waarvoor wordt gebruikt.
-
-## BUSINESS LANES
-
-### 01 Master Boutique
-Voor catalogus-, master-, publishing-, rechtenacquisitie-, Buyer-, Data Room-, LOI-, APA- en transactieWorkflows.
-
-### 02 Artist Management
-Voor artist-clients, management, Brandbook, Release Strategie, Business Audit, artist roadmaps, rights checks, projectmanagement en retainers.
-
-### 03 Shared Services
-Voor herbruikbare onboarding-, communicatie-, proposal-, meeting-, file-management- en templatebronnen.
+1. `docs/00_GOVERNANCE/CM_OPERATING_MODEL.md`
+2. `docs/00_GOVERNANCE/AS_BUILT_DOCUMENTATION.md`
+3. `docs/00_GOVERNANCE/GOVERNANCE_RULES.md`
+4. `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`
+5. `docs/05_OPERATIONS/README.md`
 
 ## SYSTEEMGRENZEN
 
 | Systeem | Rol |
 |---|---|
-| GitHub | Governance, Workflows, SOPs, Playbooks, templates en as-built systeemdocumentatie |
-| Google Drive | Live clientmappen, getekende documenten, deliverables, finance, legal, content en archieven |
+| GitHub | Governance, Workflows, SOPs, Playbooks, Automations, Agents, Knowledge Base en systeemdocumentatie |
+| Google Drive | Live clientmappen, getekende documenten, deliverables, finance, legal, marketing, content en archieven |
 | ClickUp | Uitvoering, Pipeline, taken, owners, deadlines en taakgeschiedenis |
 | Gmail | Communicatietemplates, correspondentie en bewijs |
 | Moneybird | Financiële waarheid |
 | Make | Automatiseringslaag tussen systemen |
-| ChatGPT / AI Agents | Analyse, voorbereiding, controle en concept-output |
+| ChatGPT / AI Agents | Analyse, voorbereiding, controle en concept-output binnen goedgekeurde scope |
+
+## GOEDGEKEURDE BEDRIJFSSTRUCTUUR
+
+De actuele CM-structuur is leidend:
+
+```text
+00_ADMIN
+01_MASTER_BOUTIQUE
+02_ARTIST_MANAGEMENT
+03_CLIENTS
+04_DEALS
+05_OPERATIONS
+06_FINANCE
+07_LEGAL
+08_MARKETING
+09_CONTENT
+99_ARCHIVE
+```
 
 ## GOEDGEKEURDE DOCS-STRUCTUUR
+
+GitHub documenteert dezelfde operationele domeinen, zonder live clientbestanden of archiefdump:
 
 ```text
 docs/
 ├── 00_GOVERNANCE
 ├── 01_MASTER_BOUTIQUE
 ├── 02_ARTIST_MANAGEMENT
-├── 03_SHARED_SERVICES
-├── 04_SYSTEMS
-├── 05_KNOWLEDGE_BASE
-├── 06_PLAYBOOKS
-└── 07_AI_AGENTS
+├── 03_CLIENTS
+├── 04_DEALS
+├── 05_OPERATIONS
+│   ├── WORKFLOWS
+│   ├── SOPS
+│   ├── PLAYBOOKS
+│   ├── AUTOMATIONS
+│   ├── AGENTS
+│   └── KNOWLEDGE_BASE
+├── 06_FINANCE
+├── 07_LEGAL
+├── 08_MARKETING
+└── 09_CONTENT
+```
+
+`99_ARCHIVE` wordt niet als actief GitHub-domein gebruikt. GitHub version control vervangt operationele archivering van systeemdocumentatie.
+
+## 05_OPERATIONS
+
+`docs/05_OPERATIONS/` bevat de bedrijfsbrede uitvoeringslaag:
+
+- `WORKFLOWS` — ketens van trigger tot afgeronde output.
+- `SOPS` — stap-voor-stap werkwijzen voor terugkerende taken.
+- `PLAYBOOKS` — beslisregels, scenario's en tactische aanpak.
+- `AUTOMATIONS` — technische automatiseringen, triggers, logging en failure handling.
+- `AGENTS` — agentrollen, scope, bevoegdheden, toolgrenzen en escalatieregels.
+- `KNOWLEDGE_BASE` — vakinhoud, referentiekennis en operating context.
+
+Agents staan niet onder `SOPS`. Agents gebruiken Workflows, voeren taken uit volgens SOPs, gebruiken Playbooks voor uitzonderingen, raadplegen de Knowledge Base en kunnen door Automations worden ondersteund.
+
+## TEMPLATES
+
+Tijdens de huidige recovery blijven bestaande templatebestanden en templatepaden ongewijzigd. Templateconsolidatie, hernoeming en inhoudelijke review worden pas uitgevoerd na afronding van de repositorystructuur en Governance-correcties.
+
+De voorgenomen naamcorrectie wordt apart beoordeeld:
+
+```text
+CM_EXECUTION_TEMPLATE
+→ CM_STARTHERE_ARTIST_TEMPLATE
 ```
 
 ## NIET-ONDERHANDELBARE REGELS
@@ -82,29 +103,20 @@ docs/
 - Geen getekende contracten in GitHub.
 - Geen vertrouwelijke clientbestanden in GitHub.
 - Geen live deliverables in GitHub.
-- Geen dubbele template-locaties.
-- Geen final_final naamgeving.
+- Geen dubbele procesdocumentatie.
+- Geen `final_final`-naamgeving.
 - Geen Drive-dumps in GitHub.
-- Wijzigingen in processen verlopen via commit en review.
-- Google Drive bewaart bestanden; GitHub bewaart hoe het systeem werkt.
+- Interne documentatie wordt in professioneel Nederlands geschreven.
+- Wijzigingen verlopen via branch, commit, review en Pull Request.
+- Google Drive bewaart operationele bestanden; GitHub bewaart hoe het systeem werkt.
 - ClickUp bewaart uitvoering; Gmail bewaart communicatie; Moneybird bewaart financiële waarheid.
-
-## GOOGLE DRIVE
-
-De productie-Drive staat onder:
-
-OS_CUSTOMMADE
-
-De actuele Drive-structuur staat in:
-docs/00_GOVERNANCE/DRIVE_STRUCTURE.md
-
-De daadwerkelijke inrichting staat in:
-docs/00_GOVERNANCE/AS_BUILT_DOCUMENTATION.md
 
 ## HOE DIT OS WORDT BIJGEWERKT
 
 1. Maak een branch.
-2. Werk de relevante Governance, Workflow, SOP, Playbook, template-documentatie of systeemdocumentatie bij.
-3. Controleer toolgrenzen.
-4. Commit met een beschrijvend bericht.
-5. Merge pas na review door de process owner.
+2. Controleer eerst `DECISION_LOG.md` en de actuele as-built.
+3. Werk alle geraakte Governance, Workflow, SOP, Playbook, Automation, Agent- en systeemdocumentatie samen bij.
+4. Controleer systeemgrenzen en links.
+5. Commit met een beschrijvend bericht.
+6. Open een Pull Request.
+7. Merge pas na review door Sophia als process owner.
