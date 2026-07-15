@@ -36,6 +36,7 @@ document en klikt alleen op **veilige knoppen**.
 | `config.json` | Alle instellingen (administratie, limieten, selectors, knoppen). |
 | `package.json` | Node-project en dependency (Playwright). |
 | `logs/` | Per run een JSON-logbestand met alle documentregels. |
+| `.env.example` | Voorbeeld van lokale Moneybird-omgevingsvariabelen; bevat geen echte secrets. |
 
 ## Installatie
 
@@ -53,6 +54,14 @@ npx playwright install chromium
 ```
 
 ## Gebruik
+
+Optioneel kun je lokale omgevingsvariabelen laden. Commit nooit echte tokens:
+
+```bash
+cp .env.example .env
+# Vul MONEYBIRD_ADMIN_ID en eventueel MONEYBIRD_API_TOKEN lokaal in.
+set -a; source .env; set +a
+```
 
 ```bash
 npm start              # verwerkt maximaal 25 documenten (dryRun=false)
@@ -74,8 +83,8 @@ de agent detecteert automatisch wanneer de feed geladen is en gaat verder.
 
 | Sleutel | Standaard | Betekenis |
 |---|---|---|
-| `administrationId` | `174361138789615495` | Moneybird administratie-ID. |
-| `feedUrl` | Feed-URL | De feedpagina die geopend wordt. |
+| `administrationId` | `174361138789615495` | Moneybird administratie-ID; lokaal te overschrijven met `MONEYBIRD_ADMIN_ID` of `MONEYBIRD_ADMINISTRATION_ID`. |
+| `feedUrl` | Feed-URL | De feedpagina die geopend wordt; wordt automatisch opnieuw opgebouwd bij een admin-ID uit de omgeving. |
 | `batchLimit` | `25` | Maximaal aantal te verwerken documenten. |
 | `dryRun` | `false` | `true` = niets aanklikken, alleen loggen. |
 | `headless` | `false` | Browser zichtbaar (nodig voor handmatige login). |
@@ -122,6 +131,6 @@ Mogelijke resultaten:
 
 ## Niet committen
 
-De map `.moneybird-session/` (jouw ingelogde sessie) en `logs/` bevatten
-gevoelige/persoonlijke gegevens en horen **niet** in Git. Ze staan in
-`.gitignore`.
+De map `.moneybird-session/` (jouw ingelogde sessie), `logs/` en lokale
+`.env`-bestanden bevatten gevoelige/persoonlijke gegevens en horen **niet** in
+Git. Ze staan in `.gitignore`. Commit alleen `.env.example` met placeholders.

@@ -36,6 +36,21 @@ function loadConfig() {
   }
   const cfg = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
+  // Environment overrides. Secrets blijven buiten config.json/Git; een eventuele
+  // MONEYBIRD_API_TOKEN wordt alleen gevalideerd als aanwezig en nooit gelogd.
+  const envAdministrationId = process.env.MONEYBIRD_ADMIN_ID || process.env.MONEYBIRD_ADMINISTRATION_ID;
+  if (envAdministrationId) {
+    if (!/^\d+$/.test(envAdministrationId)) {
+      throw new Error('MONEYBIRD_ADMIN_ID moet alleen uit cijfers bestaan.');
+    }
+    cfg.administrationId = envAdministrationId;
+    cfg.feedUrl = `https://moneybird.com/${envAdministrationId}/feed`;
+  }
+
+  if (process.env.MONEYBIRD_API_TOKEN !== undefined && process.env.MONEYBIRD_API_TOKEN.trim() === '') {
+    throw new Error('MONEYBIRD_API_TOKEN is gezet maar leeg.');
+  }
+
   // CLI overrides
   const argv = process.argv.slice(2);
   if (argv.includes('--dry-run')) cfg.dryRun = true;
