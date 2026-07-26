@@ -211,7 +211,7 @@ Opgelost op 2026-07-01: alle Level 3-rijen voor genoemde agents gewijzigd naar L
 |---|---|
 | Status | Opgelost |
 | Prioriteit | Opgelost |
-| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/02_ARTIST_MANAGEMENT.md` |
+| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/02_ARTIST_MANAGEMENT.md` |
 | Eigenaar | CM CONTROL AGENT |
 
 **Beschrijving:**
@@ -228,7 +228,7 @@ Opgelost op 2026-07-01: alle 9 dode links vervangen door de correct bestaande `*
 |---|---|
 | Status | Opgelost |
 | Prioriteit | Opgelost |
-| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/06_FINANCE.md` |
+| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/06_FINANCE.md` |
 | Eigenaar | CM CONTROL AGENT |
 
 **Beschrijving:**
@@ -245,7 +245,7 @@ Opgelost op 2026-07-01: link gewijzigd naar TBD conform de schrijfregel "als een
 |---|---|
 | Status | Opgelost |
 | Prioriteit | Opgelost |
-| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/03_CLIENTS.md` |
+| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/03_CLIENTS.md` |
 | Eigenaar | CM OPS AGENT |
 
 **Beschrijving:**
@@ -262,7 +262,7 @@ Opgelost op 2026-07-01: `03_CLIENTS.md` hoofdstuk 5 gesynchroniseerd met DRIVE_M
 |---|---|
 | Status | Opgelost |
 | Prioriteit | Opgelost |
-| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/99_ARCHIVE.md` |
+| Betrokken bestand | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/99_ARCHIVE.md` |
 | Eigenaar | CM VAULT AGENT |
 
 **Beschrijving:**

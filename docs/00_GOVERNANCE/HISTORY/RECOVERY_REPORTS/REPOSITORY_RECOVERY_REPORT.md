@@ -514,25 +514,25 @@ De tabel classificeert elk inhoudelijk getrackt bestand buiten de lege `.gitkeep
 | `docs/07_AI_AGENTS/PLAYBOOKS/CM_PROSPECT_PLAYBOOK.md` | **VERPLAATSEN** | Voorgesteld doel docs/05_OPERATIONS/PLAYBOOKS/CM_PROSPECT_PLAYBOOK.md; vergelijk rootvariant waar aanwezig. |
 | `docs/07_AI_AGENTS/PLAYBOOKS/CM_SOCIAL_PLAYBOOK.md` | **VERPLAATSEN** | Voorgesteld doel docs/05_OPERATIONS/PLAYBOOKS/CM_SOCIAL_PLAYBOOK.md; vergelijk rootvariant waar aanwezig. |
 | `docs/07_AI_AGENTS/PLAYBOOKS/CM_VAULT_PLAYBOOK.md` | **VERPLAATSEN** | Voorgesteld doel docs/05_OPERATIONS/PLAYBOOKS/CM_VAULT_PLAYBOOK.md; vergelijk rootvariant waar aanwezig. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/00_ADMIN.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/01_ADMIN.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/01_MASTER_BOUTIQUE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/02_ARTIST_MANAGEMENT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/02_CONTRACT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/03_CLIENTS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/03_STRATEGY.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/04_DEALS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/04_RELEASES.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/05_BOOKING.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/05_OPERATIONS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/06_FINANCE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/07_LEGAL.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/07_SOCIALMEDIA.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/08_MARKETING.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/08_PRESS_EPK.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/09_ARCHIVE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/09_CONTENT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
-| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/99_ARCHIVE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/00_ADMIN.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/01_ADMIN.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/01_MASTER_BOUTIQUE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/02_ARTIST_MANAGEMENT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/02_CONTRACT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/03_CLIENTS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/03_STRATEGY.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/04_DEALS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/04_RELEASES.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/05_BOOKING.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/05_OPERATIONS.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/06_FINANCE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/07_SOCIALMEDIA.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/08_MARKETING.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/08_PRESS_EPK.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/09_ARCHIVE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/09_CONTENT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
+| `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/99_ARCHIVE.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
 | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/MAP_SPECIFICATION_GAP_REPORT.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
 | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/README.md` | **REVIEW_NODIG** | Domein ontbreekt in leidende docs-boom; bepaal governance- of Operations-bestemming zonder Drive te wijzigen. |
 | `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` | **BEHOUDEN** | Technische implementatie blijft buiten docs; valideer documentreferenties na migratie. |
