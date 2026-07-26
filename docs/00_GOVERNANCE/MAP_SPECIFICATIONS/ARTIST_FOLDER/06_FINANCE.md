@@ -1,122 +1,224 @@
-# 06_FINANCE Map Specification
+# **MAP SPECIFICATION — 06_FINANCE (ARTIST)**
 
-## Doel
+---
 
-De financiële referentie- en werklaag van een artiestdossier beheren. Moneybird blijft de financiële waarheid; `06_FINANCE` bevat werkbestanden, referenties en overzichten per artiest.
+## **1. METADATA**
 
-## Functie binnen CM OS
+| Veld | Waarde |
+|---|---|
+| Drive-map | `06_FINANCE` |
+| Drive-pad | `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]/06_FINANCE` |
+| Owner Agent | CM MONEY AGENT |
+| Status | Actief |
+| Versie | 1.0 |
+| Laatste review | 2026-07-26 |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` |
 
-Deze map borgt de inhoudelijke waarheid voor dit specifieke operationele domein zonder de structurele regels van Folder Standards te dupliceren.
+---
 
-## Toepassing
+## **2. DOEL**
 
-Gebruik voor `06_FINANCE` binnen de goedgekeurde Drive-dossiers waar deze map voorkomt.
+`06_FINANCE` is de financiële referentie- en werklaag binnen het artistdossier. De map bevat budgetten, royalty- en uitbetalingsoverzichten, kostenoverzichten en financiële werkbestanden per artiest. Moneybird blijft de financiële waarheid; deze map bevat geen primaire bronadministratie. De map bevat geen contracten (→ `02_CONTRACT`) en geen CM-brede financiën (→ `06_FINANCE` op rootniveau).
 
-## Alleen gebruiken voor
+---
 
-- Fee-afspraken en budgetten per artiest
-- Uitbetalings- en royalty-overzichten
-- Kostenoverzichten en afrekeningen
-- Financiële referenties en exports uit Moneybird
-- Werkbestanden voor financiële analyse
+## **3. DOCUMENTTYPEN**
 
-## Niet gebruiken voor
+| Documenttype | Omschrijving | Voorbeeldbestandsnamen |
+|---|---|---|
+| Fee-afspraak of budget | Fee-afspraken en budgetten per artiest of project | `2026-03-01_[ARTIST]_FINANCE_BUDGET_v1.0.xlsx` |
+| Uitbetalings-/royaltyoverzicht | Overzichten van uitbetalingen en royalty's | `2026-03-01_[ARTIST]_FINANCE_ROYALTY_OVERVIEW_v1.0.pdf` |
+| Kostenoverzicht of afrekening | Kosten- en afrekeningsoverzichten | `2026-03-01_[ARTIST]_FINANCE_AFREKENING_v1.0.pdf` |
+| Moneybird-referentie | Exports, screenshots of referenties uit Moneybird | `2026-03-01_[ARTIST]_FINANCE_MONEYBIRD_REF_v1.0.pdf` |
+
+---
+
+## **4. VERBODEN DOCUMENTEN**
 
 - Primaire facturen, bonnen en kwitanties als bronadministratie (→ Moneybird)
-- Getekende contracten (→ `02_CONTRACT`)
-- Bookingoffers en riders (→ `05_BOOKING`)
-- CM-brede financiën (→ `06_FINANCE` op rootniveau)
+- Getekende contracten en managementafspraken (→ `02_CONTRACT`)
+- Bookingoffers, riders en performanceplanning (→ `05_BOOKING`)
+- CM-brede financiële documenten (→ `06_FINANCE` op rootniveau)
 
-## Verplichte documenttypes
+---
 
-- Fee-afspraken en budgetten
-- Uitbetalings- en royalty-overzichten
-- Kostenoverzichten en afrekeningen
-- Moneybird-referenties en exports
+## **5. SUBMAPPEN**
 
-## Verboden documenttypes
+`06_FINANCE` heeft geen verplichte vaste submappen; documenten worden direct in de map opgeslagen volgens de naamconventie. Maak alleen een extra submap aan wanneer het volume dat vereist, na owner-review.
 
-- Primaire facturen, bonnen en kwitanties als bronadministratie
-- Getekende contracten
-- Bookingoffers en riders
-- CM-brede financiële documenten
+---
 
-## Verplichte Templates
+## **6. TEMPLATES**
 
-- 06_FINANCE Register Template
-- Approval Evidence Template
-- Version Log Template
+Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `06_FINANCE`. Financiële brondocumenten worden in Moneybird beheerd.
 
-## Gekoppelde Workflows
+---
 
-- 06_FINANCE review workflow
-- Approval workflow
-- Archive workflow
+## **7. WORKFLOWS**
 
-## Gekoppelde SOP's
+| Workflow | Pad (GitHub) | Trigger |
+|---|---|---|
+| Finance Reconciliation Flow | `docs/06_FINANCE/FINANCE_RECONCILIATION_FLOW.md` | Periodieke reconciliatie van artistfinanciën |
 
-- SOP 06_finance document opslaan
-- SOP approval evidence controleren
-- SOP versie archiveren
+---
 
-## Gekoppelde Playbooks
+## **8. SOPs**
 
-- 06_FINANCE Playbook
-- Dossier Hygiene Playbook
+| SOP | Pad (GitHub) | Scope |
+|---|---|---|
+| Finance Intake SOP | `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` | Intake en verwerking van financiële documenten |
 
-## Owner Agent
+---
 
-CM MONEY AGENT
+## **9. PLAYBOOKS**
 
-## Support Agents
+| Playbook | Pad (GitHub) | Scope |
+|---|---|---|
+| TBD | TBD | Nog geen artist-finance playbook gedocumenteerd |
 
-- CM OPS AGENT
-- CM CONTROL AGENT
-- CM VAULT AGENT
+---
 
-## Approval Level
+## **10. OWNER AGENT**
 
-Level 2
+**CM MONEY AGENT**
 
-## Naamconventies
+CM MONEY AGENT beheert de financiële werklaag van het artistdossier: budgetten, royalty- en uitbetalingsoverzichten en de afstemming met Moneybird als financiële waarheid.
 
-`YYYY-MM-DD_[ENTITY]_FINANCE_[DOCUMENTTYPE]_vX.Y`
+---
 
-## Metadata
+## **11. SUPPORT AGENTS**
 
-- Entity name
-- Document type
-- Owner agent
-- Approval status
-- Version
-- Review date
-- Sensitivity
+| Agent | Rol in deze map |
+|---|---|
+| CM OPS AGENT | Operationele coördinatie binnen het artistdossier. |
+| CM CONTROL AGENT | Governance-controle en escalatie. |
+| CM VAULT AGENT | Archivering en documentbeheer. |
 
-## Archivering
+Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM MONEY AGENT; bij escalatie: CM CONTROL AGENT.
 
-Superseded documenten gaan naar `09_ARCHIVE` of blijven in deze archive-map wanneer dit de aangewezen archieflocatie is.
+---
 
-## Automatiseringen
+## **12. APPROVALNIVEAU**
 
-06_FINANCE document voltooid
-↓
-Metadata controleren
-↓
-Approval status bijwerken
-↓
-ClickUp taak updaten
-↓
-Superseded versie archiveren
+| Actie | Approvalniveau | Approver |
+|---|---|---|
+| Aanmaken of bijwerken van budget/overzicht | Level 2 | CM MONEY AGENT |
+| Financiële toezegging namens artiest | Level 4 | Sophia |
+| Externe verzending van financieel document | Level 4 | Sophia |
+| Verwijdering van document | Level 4 | Sophia |
 
-## AI Instructies
+---
 
-AI mag alleen documenten opslaan die expliciet binnen deze mapspecificatie passen. Moneybird blijft de financiële waarheid; sla hier geen primaire bronadministratie op. Bij twijfel niet automatisch classificeren en escaleren naar de Owner Agent.
+## **13. ARCHIVEREGELS**
 
-## Quality Checklist
+Superseded of niet-actieve financiële documenten gaan naar `09_ARCHIVE` binnen hetzelfde artistdossier. Financiële documenten worden nooit verwijderd zonder Sophia-approval. CM VAULT AGENT ondersteunt archivering na instructie van CM MONEY AGENT.
 
-- Documenttype past bij deze map
-- Verboden documenttypes ontbreken
-- Naamconventie klopt
-- Metadata is compleet
-- Approval level is gerespecteerd
-- Superseded versies zijn correct gearchiveerd
+---
+
+## **14. NAAMCONVENTIES**
+
+Zie `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` voor de volledige standaard.
+
+- Patroon: `YYYY-MM-DD_[ARTIST]_FINANCE_[DOCUMENTTYPE]_vX.Y`
+- Gebruik underscores, geen spaties
+- Geen `final`, `new`, `copy`, `oud`, `v2` in bestandsnamen
+
+Correct: `2026-03-01_[ARTIST]_FINANCE_BUDGET_v1.0.xlsx`
+Incorrect: `budget artist nieuw definitief.xlsx`
+
+---
+
+## **15. SYSTEMEN**
+
+| Systeem | Rol | Koppeling |
+|---|---|---|
+| Moneybird | Primaire financiële waarheid | Actief (financiële bron) |
+| Google Drive | Operationele werkplek voor finance-kopieën en werkbestanden | Actief |
+| GitHub | Bron van finance-workflows en SOPs (referentie) | Actief |
+| ClickUp | Taakbeheer voor finance-actiepunten | Actief |
+| Gmail | Financiële correspondentie | Actief |
+
+---
+
+## **16. SOURCE OF TRUTH**
+
+| Informatietype | Source of Truth |
+|---|---|
+| Facturen, bonnen, kwitanties, BTW | Moneybird |
+| Budgetten en werkbestanden | Drive (`06_FINANCE` binnen het artistdossier) |
+| Taakstatus finance | ClickUp |
+| Goedgekeurde beslissingen | Approval Register (`07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`) |
+
+---
+
+## **17. AI-INSTRUCTIES**
+
+**Toegestaan zonder Sophia-approval (Level 1-3):**
+- Aanmaken en bijwerken van budgetten, overzichten en referenties
+- Voorbereiden van financiële documenten voor review
+
+**Vereist Sophia-approval (Level 4):**
+- Financiële toezeggingen namens de artiest
+- Externe verzending van financiële documenten
+- Verwijdering van bestanden
+
+**Attentiepunten:**
+- Moneybird blijft de financiële waarheid; sla hier geen primaire bronadministratie op.
+- Sla alleen documenten op die binnen deze mapspecificatie passen; bij twijfel escaleren naar de Owner Agent.
+
+---
+
+## **18. AUTOMATISERINGEN**
+
+Geen actieve automatiseringen. Make heeft nu 0 scenario's.
+
+---
+
+## **19. AFHANKELIJKHEDEN**
+
+- Input: financiële brondata uit Moneybird en fee-/budgetafspraken uit `02_CONTRACT`.
+- Output: financiële overzichten en referenties voor management en rapportage.
+- Gekoppelde systemen: Moneybird (bron), ClickUp (uitvoering), `07_LEGAL/APPROVALS` (approvals).
+
+---
+
+## **20. KPIs**
+
+| KPI | Norm | Meting |
+|---|---|---|
+| Financiële documenten herleidbaar naar Moneybird | 100% | Steekproef per kwartaal |
+| Geen primaire bronadministratie in Drive | 0 afwijkingen | Review door CM MONEY AGENT |
+
+---
+
+## **21. VEELGEMAAKTE FOUTEN**
+
+| Fout | Correctie |
+|---|---|
+| Primaire factuur in `06_FINANCE` als bronadministratie | Registreer in Moneybird; bewaar hier alleen een referentie |
+| Contract opgeslagen in `06_FINANCE` | Verplaats naar `02_CONTRACT` |
+| CM-brede financiën in het artistdossier | Verplaats naar `06_FINANCE` op rootniveau |
+
+---
+
+## **22. GOVERNANCE CONTROLE + GERELATEERDE DOCUMENTATIE**
+
+**Controlelijst:**
+
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`
+- [ ] Owner Agent klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
+- [ ] Archiveerregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`
+
+**Gerelateerde documentatie:**
+
+| Document | Pad |
+|---|---|
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
+| Artist Folder Standard | `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
+| Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |
