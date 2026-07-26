@@ -4,7 +4,11 @@
 
 ### Status
 
-`TER REVIEW — EXPLICIETE GOEDKEURING VEREIST`
+`GOEDGEKEURD / GEMERGED`
+
+Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven.
+
+Procesincident: PR #194 is gemerged vóór de vereiste expliciete review. Voor toekomstige recovery-PR's geldt daarom: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
 
 ### Wijzigingen
 

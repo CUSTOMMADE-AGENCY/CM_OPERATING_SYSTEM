@@ -69,7 +69,9 @@ De detailstructuren binnen artist-, client- en dealdossiers worden afzonderlijk 
 
 ## Recoverystatus
 
-Status: `REPOSITORY RECOVERY — FASE 1 GOVERNANCE CONSOLIDATION TER REVIEW`
+Status: `REPOSITORY RECOVERY — FASE 1 GOVERNANCE CONSOLIDATION — GOEDGEKEURD / GEMERGED`
+
+Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Als procesincident is geregistreerd dat PR #194 vóór de vereiste expliciete review is gemerged. Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
 
 Build freeze:
 

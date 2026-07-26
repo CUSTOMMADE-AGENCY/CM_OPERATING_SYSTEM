@@ -8,7 +8,8 @@ De repository terugbrengen naar één consistente, uitvoerbare en vindbare Sourc
 
 - Status: `ACTIEF`
 - Build freeze: `ACTIEF`
-- Branch: `cm-recovery-operations-structure`
+- Fase 1-uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`
+- Fase 1-status: `GOEDGEKEURD / GEMERGED` via PR #194 naar `main`; de handmatige post-merge review heeft inhoudelijk akkoord gegeven
 - Owner: Sophia / CM CONTROL
 
 ## Governancevoorrang
@@ -65,7 +66,9 @@ Tijdens de recovery:
 - geen nieuwe Automations;
 - geen nieuwe operationele structuren buiten dit plan;
 - geen verwijderingen zonder expliciete goedkeuring;
-- geen merge naar `main` zonder review.
+- geen merge naar `main` zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
+
+Procesincident Fase 1: PR #194 is gemerged vóór de vereiste expliciete review. Dit is achteraf inhoudelijk akkoord bevonden in de handmatige post-merge review en verandert de aangescherpte mergeregel niet.
 
 ## Oplevercriteria
 
@@ -86,3 +89,4 @@ De recovery is klaar wanneer:
 - 2026-07-15: `docs/05_OPERATIONS/` en zes operationele categorieën aangemaakt.
 - 2026-07-15: AS_BUILT aangepast.
 - 2026-07-15: templates buiten scope geplaatst tot Sprint 6.
+- 2026-07-26: Fase 1 via branch `codex/voer-fase-1-governance-consolidatie-uit` en PR #194 gemerged naar `main`; handmatige post-merge review inhoudelijk akkoord, met het te vroege mergen als procesincident geregistreerd.
