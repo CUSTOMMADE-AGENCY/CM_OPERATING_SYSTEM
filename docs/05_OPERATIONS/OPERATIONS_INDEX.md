@@ -13,7 +13,7 @@ Centrale navigatiekaart voor organisatiebrede operationele documentatie binnen C
 | Playbooks | `docs/05_OPERATIONS/PLAYBOOKS/` | Beslisregels, scenario's en aanpakken |
 | Automations | `docs/05_OPERATIONS/AUTOMATIONS/` | Technische uitvoering, triggers, logging en fallback |
 | Agents | `docs/05_OPERATIONS/AGENTS/` | Rollen, scope, permissions, tools en escalation |
-| Knowledge Base | `docs/05_OPERATIONS/KNOWLEDGE_BASE/` | Referentiekennis en vakinhoud |
+| Knowledge Base | `docs/05_OPERATIONS/KNOWLEDGE_BASE/` | Referentiekennis, vakinhoud en geselecteerde systeemkennis |
 
 ## Relatie
 

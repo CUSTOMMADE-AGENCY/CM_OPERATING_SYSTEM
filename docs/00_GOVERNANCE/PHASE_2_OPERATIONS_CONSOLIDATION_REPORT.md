@@ -3,7 +3,8 @@
 **Status:** UITGEVOERD / IN REVIEW  
 **Branch:** `codex/phase-2-operations-consolidation`  
 **Datum:** 2026-07-26  
-**Basis:** actuele `main` op startcommit `264f3bd`
+**Oorspronkelijke uitvoeringsbasis:** `main` op startcommit `264f3bd`
+**Herbevestigingsbasis:** actuele `main` op startcommit `37c606a`
 
 ## 1. Uitgevoerde moves
 
@@ -101,3 +102,20 @@ Start Fase 3 pas na review en expliciete goedkeuring van deze PR. Behandel dan b
 | actief Agent Register | exact 1 |
 | actieve Playbook Index | exact 1 |
 | legacy headers | 13 van 13 |
+
+### Herbevestiging vanaf actuele `main`
+
+Op 2026-07-26 is de volledige eindtoestand opnieuw gecontroleerd vanaf
+`37c606a`. De canonieke structuur en alle eerder uitgevoerde moves waren daar al
+aanwezig. Daarom zijn bestanden niet opnieuw heen en weer verplaatst: dat zou
+onnodige rename-ruis veroorzaken en de audit trail verslechteren. De
+herbevestiging voegde uitsluitend het ontbrekende subregister voor
+`KNOWLEDGE_BASE/SYSTEMS/` toe en herhaalde de validaties.
+
+De herhaalde relatieve linkscan vond nul gebroken links in repository-eigen
+Markdown. Twee meldingen binnen genegeerde `node_modules`-vendordocumentatie
+vallen buiten de repositorydocumentatie en zijn niet gewijzigd. De tekstpadscan
+bevestigde opnieuw dat verwijzingen naar `docs/03_SHARED_SERVICES/TEMPLATES/` en
+de resterende externe-platformdocumenten onder `docs/04_SYSTEMS/` geldig zijn;
+oude bronpaden in het migratieplan en de rapportage zijn auditbewijs, geen
+actieve instructies.

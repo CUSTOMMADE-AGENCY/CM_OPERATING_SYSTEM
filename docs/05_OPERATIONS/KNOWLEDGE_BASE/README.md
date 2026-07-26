@@ -29,8 +29,7 @@ Deze categorie bevat vakinhoud, referentiekennis en systeemkennis.
 - `docs/05_OPERATIONS/KNOWLEDGE_BASE/SENA.md`
 - `docs/05_OPERATIONS/KNOWLEDGE_BASE/SPLIT_SHEETS.md`
 - `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYNC_LICENSING.md`
-- `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/CM_ARCHITECTURE_MAP.md`
-- `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/CM_VAULT_V1.md`
+- [`SYSTEMS/README.md`](SYSTEMS/README.md) — register en afbakening van de systeemkennis.
 
 ## Beheer
 
