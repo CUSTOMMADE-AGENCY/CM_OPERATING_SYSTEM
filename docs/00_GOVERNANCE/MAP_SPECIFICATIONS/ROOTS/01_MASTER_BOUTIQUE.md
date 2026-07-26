@@ -277,7 +277,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Master Boutique-documentatie | `docs/01_MASTER_BOUTIQUE/` |
-| Deal Map Specification | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/04_DEALS.md` |
+| Deal Map Specification | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/04_DEALS.md` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |

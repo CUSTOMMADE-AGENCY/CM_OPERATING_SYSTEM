@@ -1,0 +1,15 @@
+# Root Map Specifications
+
+Specificaties voor de hoofdmappen direct onder `OS_CUSTOMMADE`:
+
+- [`00_ADMIN`](00_ADMIN.md)
+- [`01_MASTER_BOUTIQUE`](01_MASTER_BOUTIQUE.md)
+- [`02_ARTIST_MANAGEMENT`](02_ARTIST_MANAGEMENT.md)
+- [`03_CLIENTS`](03_CLIENTS.md)
+- [`04_DEALS`](04_DEALS.md)
+- [`05_OPERATIONS`](05_OPERATIONS.md)
+- [`06_FINANCE`](06_FINANCE.md)
+- [`07_LEGAL`](07_LEGAL.md)
+- [`08_MARKETING`](08_MARKETING.md)
+- [`09_CONTENT`](09_CONTENT.md)
+- [`99_ARCHIVE`](99_ARCHIVE.md)
