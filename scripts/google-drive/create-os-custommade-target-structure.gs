@@ -43,97 +43,41 @@ const TARGET_STRUCTURE_HEADERS = [
   'error message'
 ];
 
+// Doelstructuur conform de leidende baseline docs/00_GOVERNANCE/DRIVE_STRUCTURE.md.
+// Roots die in de baseline root-only zijn (01_MASTER_BOUTIQUE, 05_OPERATIONS,
+// 06_FINANCE, 08_MARKETING, 09_CONTENT) krijgen bewust geen submappen.
+// Per-dossierstructuren onder 02_ARTIST_MANAGEMENT/03_CLIENTS/04_DEALS en de
+// derde niveau-map 07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER worden door het
+// PRIMARY-buildscript (create-cm-drive-structure.gs) aangemaakt, niet hier.
 const OS_CUSTOMMADE_TARGET_STRUCTURE = {
   '00_ADMIN': [
-    'INBOX',
+    '01_INBOX_REVIEW',
+    '02_GOVERNANCE_REFERENCE',
     '03_TEMPLATES',
-    'GOVERNANCE_REFERENCE',
-    'HR',
-    'CURSUS_MASTERCLASSES'
+    '04_REPORTS',
+    '05_APPROVALS'
   ],
-  '01_MASTER_BOUTIQUE': [
-    '00_START_HIER',
-    '01_RECHTEN_REGISTER',
-    '02_CONTRACTEN_BEWIJS',
-    '03_WAARDERING_VERKOOPPAKKET',
-    '04_OUTREACH_CLICKUP',
-    '99_ARCHIEF'
-  ],
-  '02_ARTIST_MANAGEMENT': [
-    '01_ADMIN',
-    '02_CONTRACT',
-    '03_STRATEGY',
-    '04_RELEASES',
-    '05_BOOKING',
-    '06_FINANCE',
-    '07_SOCIALMEDIA',
-    '08_PRESS_EPK',
-    '09_ARCHIVE'
-  ],
-  '03_CLIENTS': [
-    '00_START_HIER',
-    '99_ARCHIEF'
-  ],
-  '04_DEALS': [
-    '00_START_HIER',
-    '01_RECHTEN_REGISTER',
-    '02_CONTRACTEN_BEWIJS',
-    '03_WAARDERING_VERKOOPPAKKET',
-    '04_OUTREACH_CLICKUP',
-    '99_ARCHIEF'
-  ],
-  '05_OPERATIONS': [
-    '00_START_HIER',
-    'HR',
-    'TRAINING',
-    'TOOLS',
-    'PROCESSES',
-    'TEMPLATES_REFERENCE',
-    '99_ARCHIEF'
-  ],
-  '06_FINANCE': [
-    '00_START_HIER',
-    'MONEYBIRD_REFERENCE',
-    'BELASTINGDIENST',
-    'BANK',
-    'STATEMENTS',
-    'ADMIN_EXPORTS',
-    '99_ARCHIEF'
-  ],
+  '01_MASTER_BOUTIQUE': [],
+  '02_ARTIST_MANAGEMENT': [],
+  '03_CLIENTS': [],
+  '04_DEALS': [],
+  '05_OPERATIONS': [],
+  '06_FINANCE': [],
   '07_LEGAL': [
-    '00_START_HIER',
-    'CONTRACTEN',
-    'NDA',
-    'PARTNERS',
-    'FREELANCERS',
-    'ARTIESTEN',
-    'KLANTEN',
-    'LEVERANCIERS',
-    'RIGHTS',
     'APPROVALS',
-    '99_ARCHIEF'
+    'CONTRACTS',
+    'LEGAL_REVIEW',
+    'EVIDENCE'
   ],
-  '08_MARKETING': [
-    '00_START_HIER',
-    'BRAND',
-    'NETWORK',
-    'CAMPAIGNS',
-    'PARTNERSHIPS',
-    '99_ARCHIEF'
-  ],
-  '09_CONTENT': [
-    '00_START_HIER',
-    'ASSETS',
-    'SOCIALMEDIA',
-    'FORMATS',
-    'CONTENT_CALENDAR',
-    '99_ARCHIEF'
-  ],
+  '08_MARKETING': [],
+  '09_CONTENT': [],
   '99_ARCHIVE': [
-    '00_START_HIER',
+    'ARTIST_MANAGEMENT',
+    'CLIENTS',
+    'DEALS',
+    'REVIEW_HOLD_OLD_STRUCTURE',
     'LEGACY_ROOTS',
-    'REVIEW_HOLD',
-    '99_ARCHIEF'
+    'MIGRATION_LOGS'
   ]
 };
 

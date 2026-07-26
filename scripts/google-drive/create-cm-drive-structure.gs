@@ -1,18 +1,27 @@
 /**
- * Creates the CM Google Drive root structure and provides a client-folder helper.
+ * Creates the approved Custommade Agency Google Drive folder structure.
+ * Governance status: PRIMARY for approved Drive build.
+ *
+ * Bouwt exact de goedgekeurde structuur uit docs/00_GOVERNANCE/DRIVE_STRUCTURE.md
+ * (production baseline). Roots die in de baseline root-only zijn
+ * (01_MASTER_BOUTIQUE, 05_OPERATIONS, 06_FINANCE, 08_MARKETING, 09_CONTENT)
+ * krijgen bewust geen submappen.
  *
  * Usage:
- * 1. Set ROOT_FOLDER_ID if the structure should be created inside an existing Drive folder.
- * 2. Run createCmDriveStructure().
- * 3. Run createCmClientFolder('CLIENT_NAME') when a new client folder is approved.
+ * 1. Open Google Apps Script in the target Google account.
+ * 2. Set PARENT_FOLDER_ID to a folder ID, or leave blank to use My Drive root.
+ * 3. Run createCmDriveStructure().
+ * 4. Optional: run createCmClientFolder('CLIENT_OR_PARTNER_NAME') of
+ *    createCmDealStructure('DEAL_OR_ASSET_NAME') voor een nieuw dossier.
  *
  * Rules:
- * - Uses uppercase folder names.
+ * - Creates missing folders only; never deletes, renames or moves content.
  * - Reuses existing folders to avoid duplicates.
- * - Avoids deep unnecessary nesting.
+ * - Uppercase folder names.
+ * - GitHub remains the source of truth for the structure rules.
  */
-
-const ROOT_FOLDER_ID = '';
+const PARENT_FOLDER_ID = '';
+const CM_DRIVE_ROOT = 'OS_CUSTOMMADE';
 
 const CM_ROOT_FOLDERS = [
   '00_ADMIN',
@@ -28,85 +37,36 @@ const CM_ROOT_FOLDERS = [
   '99_ARCHIVE',
 ];
 
-const CM_CLIENT_FOLDERS = [
-  '01_ADMIN',
-  '02_BRAND',
-  '03_STRATEGY',
-  '04_DEALS_RIGHTS',
-  '05_RELEASES',
-  '06_CONTENT',
-  '07_FINANCE',
-  '08_DELIVERABLES',
-  '09_ARCHIVE',
-];
+// Vaste root-level submappen conform de baseline. Roots die hier niet staan zijn
+// bewust root-only (01_MASTER_BOUTIQUE, 05_OPERATIONS, 06_FINANCE, 08_MARKETING,
+// 09_CONTENT). 02_ARTIST_MANAGEMENT/03_CLIENTS/04_DEALS krijgen per-dossier
+// structuren via de losse helperfuncties.
+const ROOT_SUBFOLDERS = {
+  '00_ADMIN': [
+    '01_INBOX_REVIEW',
+    '02_GOVERNANCE_REFERENCE',
+    '03_TEMPLATES',
+    '04_REPORTS',
+    '05_APPROVALS',
+  ],
+  '07_LEGAL': [
+    'APPROVALS',
+    'CONTRACTS',
+    'LEGAL_REVIEW',
+    'EVIDENCE',
+  ],
+  '99_ARCHIVE': [
+    'ARTIST_MANAGEMENT',
+    'CLIENTS',
+    'DEALS',
+    'REVIEW_HOLD_OLD_STRUCTURE',
+    'LEGACY_ROOTS',
+    'MIGRATION_LOGS',
+  ],
+};
 
-function createCmDriveStructure() {
-  const root = getCmRootFolder_();
-
-  CM_ROOT_FOLDERS.forEach(function(folderName) {
-    getOrCreateFolder_(root, folderName);
-  });
-}
-
-function createCmClientFolder(clientName) {
-  if (!clientName || String(clientName).trim() === '') {
-    throw new Error('clientName is required.');
-  }
-
-  createCmDriveStructure();
-
-  const root = getCmRootFolder_();
-  const clientsFolder = getOrCreateFolder_(root, '03_CLIENTS');
-  const normalizedClientName = normalizeFolderName_(clientName);
-  const clientFolder = getOrCreateFolder_(clientsFolder, normalizedClientName);
-
-  CM_CLIENT_FOLDERS.forEach(function(folderName) {
-    getOrCreateFolder_(clientFolder, folderName);
-  });
-
-  return clientFolder.getUrl();
-}
-
-function getCmRootFolder_() {
-  if (ROOT_FOLDER_ID && ROOT_FOLDER_ID.trim() !== '') {
-    return DriveApp.getFolderById(ROOT_FOLDER_ID.trim());
-  }
-
-  return DriveApp.getRootFolder();
-}
-
-function getOrCreateFolder_(parentFolder, folderName) {
-  const folders = parentFolder.getFoldersByName(folderName);
-
-  if (folders.hasNext()) {
-    return folders.next();
-  }
-
-  return parentFolder.createFolder(folderName);
-}
-
-function normalizeFolderName_(name) {
-  return String(name)
-    .trim()
-    .replace(/\s+/g, '_')
-    .replace(/[^A-Za-z0-9_\-]/g, '')
-    .toUpperCase();
- * Creates the approved Custommade Agency Google Drive folder structure.
- * Governance status: PRIMARY for approved Drive build.
- *
- * Usage:
- * 1. Open Google Apps Script in the target Google account.
- * 2. Paste this file or bind it to the target Drive location.
- * 3. Set PARENT_FOLDER_ID to a folder ID, or leave blank to use My Drive root.
- * 4. Run createCmDriveStructure().
- * 5. Optional: run createCmDealStructure('DEAL_OR_ASSET_NAME') when a new
- *    deal case must be initialized under OS_CUSTOMMADE/04_DEALS.
- *
- * This script creates missing folders only; it does not delete, rename or move
- * existing content. GitHub remains the source of truth for the structure rules.
- */
-const PARENT_FOLDER_ID = '';
-const CM_DRIVE_ROOT = 'OS_CUSTOMMADE';
+// 07_LEGAL/APPROVALS bevat het centrale approval register als enige submap.
+const LEGAL_APPROVALS_CHILD = 'CM_APPROVAL_REGISTER';
 
 const ARTISTS = [
   'CALSEY',
@@ -132,6 +92,16 @@ const ARTIST_SUBFOLDERS = [
   '09_ARCHIVE',
 ];
 
+const CLIENT_SUBFOLDERS = [
+  '01_ADMIN',
+  '02_CONTRACT',
+  '03_BRIEF_SCOPE',
+  '04_DELIVERABLES',
+  '05_COMMUNICATION',
+  '06_FINANCE',
+  '09_ARCHIVE',
+];
+
 const DEAL_SUBFOLDERS = [
   '00_START_HIER',
   '01_RECHTEN_REGISTER',
@@ -141,68 +111,72 @@ const DEAL_SUBFOLDERS = [
   '99_ARCHIEF',
 ];
 
-const CM_DRIVE_STRUCTURE = {
-  '00_ADMIN': [],
-  '01_MASTER_BOUTIQUE': [],
-  '02_ARTIST_MANAGEMENT': ARTISTS,
-  '03_CLIENTS': [],
-  '04_DEALS': [],
-  '05_OPERATIONS': [],
-  '06_FINANCE': [],
-  '07_LEGAL': [],
-  '08_MARKETING': [],
-  '09_CONTENT': [],
-  '99_ARCHIVE': [],
-};
-
 function createCmDriveStructure() {
-  const parent = PARENT_FOLDER_ID
-    ? DriveApp.getFolderById(PARENT_FOLDER_ID)
-    : DriveApp.getRootFolder();
+  const root = getOrCreateFolder_(getCmParentFolder_(), CM_DRIVE_ROOT);
 
-  const root = getOrCreateFolder(parent, CM_DRIVE_ROOT);
+  CM_ROOT_FOLDERS.forEach(function(rootFolderName) {
+    const rootFolder = getOrCreateFolder_(root, rootFolderName);
 
-  Object.keys(CM_DRIVE_STRUCTURE).forEach(function(rootFolderName) {
-    const rootFolder = getOrCreateFolder(root, rootFolderName);
-    const secondLevelFolders = CM_DRIVE_STRUCTURE[rootFolderName];
+    (ROOT_SUBFOLDERS[rootFolderName] || []).forEach(function(subFolderName) {
+      const subFolder = getOrCreateFolder_(rootFolder, subFolderName);
 
-    secondLevelFolders.forEach(function(secondLevelFolderName) {
-      const secondLevelFolder = getOrCreateFolder(rootFolder, secondLevelFolderName);
-
-      if (rootFolderName === '02_ARTIST_MANAGEMENT') {
-        ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
-          getOrCreateFolder(secondLevelFolder, artistSubfolderName);
-        });
-      }
-
-      if (rootFolderName === '04_DEALS') {
-        DEAL_SUBFOLDERS.forEach(function(dealSubfolderName) {
-          getOrCreateFolder(secondLevelFolder, dealSubfolderName);
-        });
+      if (rootFolderName === '07_LEGAL' && subFolderName === 'APPROVALS') {
+        getOrCreateFolder_(subFolder, LEGAL_APPROVALS_CHILD);
       }
     });
+
+    if (rootFolderName === '02_ARTIST_MANAGEMENT') {
+      ARTISTS.forEach(function(artistName) {
+        const artistFolder = getOrCreateFolder_(rootFolder, artistName);
+        ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
+          getOrCreateFolder_(artistFolder, artistSubfolderName);
+        });
+      });
+    }
   });
+}
+
+function createCmClientFolder(clientName) {
+  if (!clientName || String(clientName).trim() === '') {
+    throw new Error('clientName is required.');
+  }
+
+  const root = getOrCreateFolder_(getCmParentFolder_(), CM_DRIVE_ROOT);
+  const clientsFolder = getOrCreateFolder_(root, '03_CLIENTS');
+  const clientFolder = getOrCreateFolder_(clientsFolder, normalizeFolderName_(clientName));
+
+  CLIENT_SUBFOLDERS.forEach(function(folderName) {
+    getOrCreateFolder_(clientFolder, folderName);
+  });
+
+  return clientFolder.getUrl();
 }
 
 function createCmDealStructure(dealFolderName) {
-  if (!dealFolderName) {
+  if (!dealFolderName || String(dealFolderName).trim() === '') {
     throw new Error('Provide a deal or asset folder name.');
   }
 
-  const parent = PARENT_FOLDER_ID
-    ? DriveApp.getFolderById(PARENT_FOLDER_ID)
-    : DriveApp.getRootFolder();
-
-  const root = getOrCreateFolder(parent, CM_DRIVE_ROOT);
-  const dealsRoot = getOrCreateFolder(root, '04_DEALS');
-  const dealFolder = getOrCreateFolder(dealsRoot, dealFolderName);
+  const root = getOrCreateFolder_(getCmParentFolder_(), CM_DRIVE_ROOT);
+  const dealsRoot = getOrCreateFolder_(root, '04_DEALS');
+  const dealFolder = getOrCreateFolder_(dealsRoot, normalizeFolderName_(dealFolderName));
 
   DEAL_SUBFOLDERS.forEach(function(dealSubfolderName) {
-    getOrCreateFolder(dealFolder, dealSubfolderName);
+    getOrCreateFolder_(dealFolder, dealSubfolderName);
   });
+
+  return dealFolder.getUrl();
 }
 
-function getOrCreateFolder(parentFolder, folderName) {
+function getCmParentFolder_() {
+  if (PARENT_FOLDER_ID && PARENT_FOLDER_ID.trim() !== '') {
+    return DriveApp.getFolderById(PARENT_FOLDER_ID.trim());
+  }
+
+  return DriveApp.getRootFolder();
+}
+
+function getOrCreateFolder_(parentFolder, folderName) {
   const existingFolders = parentFolder.getFoldersByName(folderName);
 
   if (existingFolders.hasNext()) {
@@ -213,4 +187,12 @@ function getOrCreateFolder(parentFolder, folderName) {
   const createdFolder = parentFolder.createFolder(folderName);
   Logger.log('Created: ' + folderName);
   return createdFolder;
+}
+
+function normalizeFolderName_(name) {
+  return String(name)
+    .trim()
+    .replace(/\s+/g, '_')
+    .replace(/[^A-Za-z0-9_\-]/g, '')
+    .toUpperCase();
 }
