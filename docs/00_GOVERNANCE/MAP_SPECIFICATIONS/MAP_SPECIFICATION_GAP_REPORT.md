@@ -358,16 +358,16 @@ Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing A — baseline uitbreid
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
-| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/README.md` (en ontbrekend `06_FINANCE.md`) |
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/README.md`, `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/06_FINANCE.md` |
 | Eigenaar | CM OPS AGENT |
 
 **Beschrijving:**
 De artistdossierstructuur in `DRIVE_MAPPING.md` bevat `06_FINANCE`, maar `ARTIST_FOLDER/README.md` lijst deze submap niet en er is geen `06_FINANCE.md` Map Specification. De overige acht submappen (`01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `07_SOCIALMEDIA`, `08_PRESS_EPK`, `09_ARCHIVE`) hebben wel een spec.
 
 **Actie:**
-CM OPS AGENT maakt `06_FINANCE.md` aan conform `MAP_SPECIFICATION_STANDARD.md` en neemt deze op in de navigatie, of documenteert waarom deze submap geen eigen spec heeft.
+Opgelost op 2026-07-26: `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/06_FINANCE.md` aangemaakt in het format van de bestaande artist-submapspecs (Owner Agent CM MONEY AGENT; Moneybird blijft financiële waarheid) en opgenomen in `ARTIST_FOLDER/README.md`. Alle negen artist-submappen hebben nu een spec.
 
 ---
 
@@ -488,7 +488,7 @@ Opgelost op 2026-07-26:
 | GAP-015 | 99_ARCHIVE.md submapstructuur niet actueel | Opgelost | — | CM VAULT AGENT |
 | GAP-016 | Google Drive-scripts verouderd/afwijkend + plaatsingsdefecten artist/deal | Opgelost | — | CM FLOW AGENT |
 | GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Opgelost | — | CM LEGAL AGENT |
-| GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Open | Middel | CM OPS AGENT |
+| GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Opgelost | — | CM OPS AGENT |
 | GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Opgelost | — | CM FLOW AGENT |
 | GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
 | GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Opgelost | — | CM CONTROL AGENT |

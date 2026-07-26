@@ -7,6 +7,7 @@ Specificaties voor de standaard submappen van een artistdossier:
 - [`03_STRATEGY`](03_STRATEGY.md)
 - [`04_RELEASES`](04_RELEASES.md)
 - [`05_BOOKING`](05_BOOKING.md)
+- [`06_FINANCE`](06_FINANCE.md)
 - [`07_SOCIALMEDIA`](07_SOCIALMEDIA.md)
 - [`08_PRESS_EPK`](08_PRESS_EPK.md)
 - [`09_ARCHIVE`](09_ARCHIVE.md)
