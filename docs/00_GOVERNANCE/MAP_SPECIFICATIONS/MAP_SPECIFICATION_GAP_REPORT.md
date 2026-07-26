@@ -158,16 +158,16 @@ CM SOCIAL AGENT bouwt de Canva Brand Kit voor CM. Na oplevering: vermelden in de
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
-| Betrokken bestand | `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` (ontbreekt) |
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken bestand | `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` |
 | Eigenaar | CM OPS AGENT |
 
 **Beschrijving:**
-`docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` bestaat en documenteert de artistfolder-standaard. Een vergelijkbaar document voor de clientfolder-standaard (`03_CLIENTS`) ontbreekt. De `03_CLIENTS.md` Map Specification verwijst naar de Drive Mapping voor de submapstructuur, maar een aparte CLIENT_FOLDER_STANDARD.md is niet aangemaakt.
+`docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` bestaat en documenteert de artistfolder-standaard. Een vergelijkbaar document voor de clientfolder-standaard (`03_CLIENTS`) ontbrak in de oorspronkelijke inventarisatie.
 
 **Actie:**
-CM OPS AGENT maakt `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` aan conform de schrijfstandaard in `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md`, of besluit dat de huidige DRIVE_MAPPING.md-sectie voldoende is.
+Opgelost: `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` bestaat en documenteert de clientfolder-standaard conform de baseline (`01_ADMIN`, `02_CONTRACT`, `03_BRIEF_SCOPE`, `04_DELIVERABLES`, `05_COMMUNICATION`, `06_FINANCE`, `09_ARCHIVE`), inclusief folderbetekenis, regels, archive-regel en quality check. Geverifieerd op 2026-07-26: het document is aanwezig en consistent met `DRIVE_STRUCTURE.md` en `03_CLIENTS.md`.
 
 ---
 
@@ -367,7 +367,9 @@ Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing A — baseline uitbreid
 De artistdossierstructuur in `DRIVE_MAPPING.md` bevat `06_FINANCE`, maar `ARTIST_FOLDER/README.md` lijst deze submap niet en er is geen `06_FINANCE.md` Map Specification. De overige acht submappen (`01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `07_SOCIALMEDIA`, `08_PRESS_EPK`, `09_ARCHIVE`) hebben wel een spec.
 
 **Actie:**
-Opgelost op 2026-07-26: `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/06_FINANCE.md` aangemaakt in het format van de bestaande artist-submapspecs (Owner Agent CM MONEY AGENT; Moneybird blijft financiële waarheid) en opgenomen in `ARTIST_FOLDER/README.md`. Alle negen artist-submappen hebben nu een spec.
+Opgelost op 2026-07-26: `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/06_FINANCE.md` aangemaakt (Owner Agent CM MONEY AGENT; Moneybird blijft financiële waarheid) en opgenomen in `ARTIST_FOLDER/README.md`. Alle negen artist-submappen hebben nu een spec.
+
+**Update 2026-07-26 (na review):** de spec is herschreven naar de volledige 22-hoofdstukkenstructuur conform `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` (metadata-tabel + hoofdstukken 1-22), en de niet-bestaande template-/workflow-verwijzingen zijn vervangen door bestaande links of `TBD`/"geen vaste templates" — zoals gevraagd in de Codex-review op PR #210.
 
 ---
 
@@ -394,9 +396,9 @@ Opgelost op 2026-07-26: het bestand is herschreven tot één geldig, samenhangen
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
-| Betrokken bestanden | `scripts/google-drive/create-os-custommade-target-structure.gs`, `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` |
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken bestanden | `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` (behouden), `scripts/google-drive/create-os-custommade-target-structure.gs` (verwijderd) |
 | Eigenaar | CM FLOW AGENT |
 
 **Beschrijving:**
@@ -405,7 +407,7 @@ Beide scripts declareren dezelfde constanten (`ROOT_FOLDER_ID`, `OS_CUSTOMMADE_T
 **Actie:**
 CM FLOW AGENT bepaalt welk script het canonieke target-structure script is, verwijdert of hernoemt het andere, en documenteert de governance-status.
 
-**Update 2026-07-26:** beide scripts zijn nu inhoudelijk uitgelijnd op de baseline (identieke, correcte `OS_CUSTOMMADE_TARGET_STRUCTURE`), dus welk script ook draait, het resultaat is gelijk. De resterende actie is uitsluitend het dedupliceren (canoniek kiezen / het andere verwijderen of hernoemen) om symboolcollisions in één Apps Script-project te voorkomen. Blijft `Open` als owner-beslissing.
+**Opgelost op 2026-07-26 (besluit repo-eigenaar):** `OS_CUSTOMMADE_target_structure.gs` is als canoniek safe-roots target-structure script behouden (het heeft NO-GO error-handling); de duplicaat `create-os-custommade-target-structure.gs` is verwijderd. Daarmee zijn de symboolcollisions weg. Het PRIMARY-buildscript blijft `create-cm-drive-structure.gs`.
 
 ---
 
@@ -477,7 +479,7 @@ Opgelost op 2026-07-26:
 | GAP-004 | Ontbrekende Workflows voor meerdere mappen | Opgelost | — | CM FLOW AGENT |
 | GAP-005 | Make-automatiseringen niet ingericht | Opgelost | — | CM FLOW AGENT |
 | GAP-006 | Canva Brand Kit niet beschikbaar | Open | Middel | CM SOCIAL AGENT |
-| GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Open | Middel | CM OPS AGENT |
+| GAP-007 | CLIENT_FOLDER_STANDARD.md ontbreekt | Opgelost | — | CM OPS AGENT |
 | GAP-008 | APPROVAL_LOG.md verwijst naar niet-bestaande map 06_CONTROL | Opgelost | — | CM CONTROL AGENT |
 | GAP-009 | MAP_SPECIFICATION_STANDARD.md ontbrak | Opgelost | — | CM CONTROL AGENT |
 | GAP-010 | docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ directory ontbrak | Opgelost | — | CM CONTROL AGENT |
@@ -490,7 +492,7 @@ Opgelost op 2026-07-26:
 | GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Opgelost | — | CM LEGAL AGENT |
 | GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Opgelost | — | CM OPS AGENT |
 | GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Opgelost | — | CM FLOW AGENT |
-| GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
+| GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Opgelost | — | CM FLOW AGENT |
 | GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Opgelost | — | CM CONTROL AGENT |
 | GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Opgelost | — | CM LEGAL AGENT |
 | GAP-023 | START_HIER-templates ontbraken + 03_CLIENTS verwees naar niet-bestaande 00_START_HIER | Opgelost | — | CM VAULT AGENT |
