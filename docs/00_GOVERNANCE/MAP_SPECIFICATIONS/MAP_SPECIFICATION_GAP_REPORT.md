@@ -432,6 +432,28 @@ CM LEGAL AGENT (owner van `01_MASTER_BOUTIQUE`) stelt de definitieve structuur v
 
 ---
 
+### **GAP-023: START_HIER-startdocumenten hadden geen template + 03_CLIENTS verwees naar niet-bestaande 00_START_HIER**
+
+| Veld | Waarde |
+|---|---|
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken bestanden | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/08_START_HIER/`, `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/03_CLIENTS.md` |
+| Eigenaar | CM VAULT AGENT (coördinatie), Owner Agent per map |
+
+**Beschrijving:**
+De `00_START_HIER`-startmappen in de Map Specifications hadden geen template; er bestond geen enkele START_HIER-template in de Template Library of de registers. Daarnaast stuurde `03_CLIENTS.md` vier templates (Client Profile, Client Onboarding, Email Instructions, Do Nots) naar `03_CLIENTS/[CLIENT]/00_START_HIER`, terwijl de clientdossierstructuur geen `00_START_HIER`-map bevat (clientstartcontent hoort in `01_ADMIN`).
+
+**Actie:**
+Opgelost op 2026-07-26:
+- 6 START_HIER-templates aangemaakt in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/08_START_HIER/` (voor `04_DEALS`, `05_OPERATIONS`, `06_FINANCE`, `07_LEGAL`, `08_MARKETING`, `09_CONTENT`) conform `TEMPLATE_ARCHITECTUURSTANDAARD.md` en afgestemd op de Map Specifications, inclusief README.
+- Geregistreerd in `00_TEMPLATE_INDEX.md`, `TEMPLATE_STATUS_REGISTER.md` en `TEMPLATE_REGISTER.md`.
+- `03_CLIENTS.md` gecorrigeerd: alle `00_START_HIER`-verwijzingen gewijzigd naar `01_ADMIN`.
+
+**Openstaand (niet-blokkerend):** de root-`00_START_HIER` voor `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` staat nog niet in de leidende Drive-baseline; afstemming loopt via GAP-021.
+
+---
+
 ## **STATUSOVERZICHT**
 
 | Gap ID | Beschrijving | Status | Prioriteit | Eigenaar |
@@ -458,6 +480,7 @@ CM LEGAL AGENT (owner van `01_MASTER_BOUTIQUE`) stelt de definitieve structuur v
 | GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
 | GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Open | Hoog | CM CONTROL AGENT |
 | GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Open | Hoog | CM LEGAL AGENT |
+| GAP-023 | START_HIER-templates ontbraken + 03_CLIENTS verwees naar niet-bestaande 00_START_HIER | Opgelost | — | CM VAULT AGENT |
 
 ---
 
