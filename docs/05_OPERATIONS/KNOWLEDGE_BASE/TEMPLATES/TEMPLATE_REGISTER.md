@@ -57,11 +57,7 @@ Dit register is de operationele template mapping voor Custommade Agency. Het bes
 | Ondertekening templates | Ondertekenbare documenten en approvals. | CM LEGAL AGENT | PDF en e-mailthread met akkoord of ondertekening. | Google Sheets/PDF/e-mail | Goedgekeurd via Google Sheets/PDF/e-mail. |
 | Moneybird finance templates | Facturen, bonnen, kwitanties, BTW-signalen, Open Posten en Cashflow-input. | CM MONEY AGENT | Financieel document, Moneybird-referentie of finance-signaal. | Moneybird en `06_FINANCE` | Goedgekeurd binnen finance-scope. |
 | `08_START_HIER/START_HIER_04_DEALS_TEMPLATE.md` | Startdocument voor een dealdossier. | CM LEGAL AGENT | Startkopie in `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER`. | Google Drive | Goedgekeurd |
-| `08_START_HIER/START_HIER_05_OPERATIONS_TEMPLATE.md` | Startdocument voor de operationele werklaag. | CM CONTROL AGENT | Startkopie in `05_OPERATIONS/00_START_HIER`. | Google Drive | Goedgekeurd |
-| `08_START_HIER/START_HIER_06_FINANCE_TEMPLATE.md` | Startdocument voor de finance-werklaag. | CM MONEY AGENT | Startkopie in `06_FINANCE/00_START_HIER`. | Google Drive | Goedgekeurd |
 | `08_START_HIER/START_HIER_07_LEGAL_TEMPLATE.md` | Startdocument voor de juridische werklaag. | CM LEGAL AGENT | Startkopie in `07_LEGAL/00_START_HIER`. | Google Drive | Goedgekeurd |
-| `08_START_HIER/START_HIER_08_MARKETING_TEMPLATE.md` | Startdocument voor de marketingwerklaag. | CM SOCIAL AGENT | Startkopie in `08_MARKETING/00_START_HIER`. | Google Drive | Goedgekeurd |
-| `08_START_HIER/START_HIER_09_CONTENT_TEMPLATE.md` | Startdocument voor de contentwerklaag. | CM SOCIAL AGENT | Startkopie in `09_CONTENT/00_START_HIER`. | Google Drive | Goedgekeurd |
 
 ## MAP- EN AGENTREGELS
 
