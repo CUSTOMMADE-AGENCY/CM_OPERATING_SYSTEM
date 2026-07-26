@@ -102,7 +102,7 @@ Vul in de Drive-kopie minimaal de volgende secties in:
 - Alleen noodzakelijke velden.
 - Geen vertrouwelijke of juridische brondata in de specificatie.
 - Duidelijke owner, source of truth en volgende stap.
-- Submapverwijzing conform de leidende baseline (let op GAP-017: baseline en spec worden nog afgestemd).
+- Submapverwijzing conform de leidende baseline (`07_LEGAL` bevat `00_START_HIER` conform GAP-017-oplossing A).
 
 ## Status
 
