@@ -1,8 +1,12 @@
 # ADR-2026-07-01 — CM OS V1 Production Baseline
 
+> **Recoverystatus:** `SUPERSEDED_FOR_RECOVERY`
+> **Actuele opvolger tijdens recovery:** `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md`
+> De V1.0-production-baseline blijft als ADR behouden, maar is tijdens de actieve recovery niet leidend.
+
 ## Status
 
-Accepted
+`SUPERSEDED_FOR_RECOVERY`
 
 ## Datum
 

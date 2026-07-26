@@ -11,6 +11,10 @@ De repository terugbrengen naar één consistente, uitvoerbare en vindbare Sourc
 - Branch: `cm-recovery-operations-structure`
 - Owner: Sophia / CM CONTROL
 
+## Governancevoorrang
+
+Tijdens de actieve recovery heeft dit Recovery Plan voorrang op de V1.0-production-baseline. De baseline-ADR blijft behouden met status `SUPERSEDED_FOR_RECOVERY`. Na afsluiting van recovery vereist herstel of vervanging van de baseline een expliciet besluit.
+
 ## Scope
 
 1. Governance-documenten onderling gelijkzetten.

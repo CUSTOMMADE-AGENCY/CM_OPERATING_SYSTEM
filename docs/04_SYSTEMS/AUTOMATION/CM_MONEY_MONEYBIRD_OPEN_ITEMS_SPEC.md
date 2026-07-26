@@ -138,7 +138,7 @@ factuur, conform de CM MONEY-taak *Open posten review*.
 - `docs/07_AI_AGENTS/AGENTS/CM_MONEY_AGENT.md` (passport, leidend)
 - `docs/04_SYSTEMS/MAKE_SCENARIO_MAP.md` (register-item)
 - `docs/07_AI_AGENTS/AGENT_HANDOFF_MATRIX.md` · `docs/07_AI_AGENTS/ESCALATION_PROTOCOLS.md`
-- `docs/08_MAP_SPECIFICATIONS/06_FINANCE.md` · `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md`
+- `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/06_FINANCE.md` · `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md`
 
 ## Changelog
 

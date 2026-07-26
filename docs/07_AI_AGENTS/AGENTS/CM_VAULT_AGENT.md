@@ -93,7 +93,7 @@ voor uitvoerende automatisering).
 ## 09 SOP's
 
 - `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/04_SYSTEMS/DRIVE_MAPPING.md`
-- `docs/08_MAP_SPECIFICATIONS/` (leidend voor mapinhoud)
+- `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/` (leidend voor mapinhoud)
 - `docs/03_SHARED_SERVICES/ARCHIVE_SOP.md` en `ARCHIVE_FLOW.md`
 - `docs/03_SHARED_SERVICES/TEMPLATES/99_TEMPLATE_GOVERNANCE/`
 

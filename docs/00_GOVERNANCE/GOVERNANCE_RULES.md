@@ -1,5 +1,9 @@
 # Governance-regels
 
+## Tijdelijke recoveryprioriteit
+
+Zolang `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` de status `ACTIEF` heeft, heeft die recovery-governance voorrang op de V1.0-production-baseline en op strijdige historische governance. De baseline-ADR heeft gedurende deze periode status `SUPERSEDED_FOR_RECOVERY`.
+
 ## Leidende beslissingen
 
 De leidende governance voor CM_OS staat in:
