@@ -51,32 +51,11 @@ Concrete dealcases, casefolders, live dealdossiers, Assets en Buyers staan niet 
 
 ## **5. SUBMAPPEN**
 
-`01_MASTER_BOUTIQUE` gebruikt alleen kennis- en methodiekcategorieën. Er worden geen casefolders, dealfolders of assetfolders onder deze map aangemaakt.
+`01_MASTER_BOUTIQUE` is in de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`) een root-only map: er worden geen vaste Drive-submappen aangemaakt. Er worden geen casefolders, dealfolders of assetfolders onder deze map aangemaakt; concrete deals en assets horen in `04_DEALS`.
 
-```text
-01_MASTER_BOUTIQUE
-├── 01_CONTEXT
-├── 02_PLAYBOOKS
-├── 03_METHODOLOGIES
-├── 04_MARKET_MODELS
-├── 05_RIGHTS_MODELS
-├── 06_ACQUISITION_FRAMEWORKS
-├── 07_BUYER_FRAMEWORKS
-├── 08_VALUATION_METHODS
-└── 09_DUE_DILIGENCE_METHODS
-```
+Kennis- en methodiekcategorieën (context, playbooks, methodieken, marktmodellen, rechtenmodellen, acquisitie- en buyer-frameworks, waarderings- en due-diligencemethodieken) zijn inhoudscategorieën binnen deze map, geen aparte Drive-submappen.
 
-| Submap | Gebruik |
-|---|---|
-| `01_CONTEXT` | Master Boutique-context, scope en domeinkaders. |
-| `02_PLAYBOOKS` | Herbruikbare playbooks zonder live dealdata. |
-| `03_METHODOLOGIES` | Algemene methodieken voor uitvoering en review. |
-| `04_MARKET_MODELS` | Marktmodellen en benchmarkkaders. |
-| `05_RIGHTS_MODELS` | Algemene rechtenmodellen en rights taxonomie. |
-| `06_ACQUISITION_FRAMEWORKS` | Acquisitiekaders en intakecriteria. |
-| `07_BUYER_FRAMEWORKS` | Buyer segmentatie- en kwalificatiekaders zonder buyerdossiers. |
-| `08_VALUATION_METHODS` | Waarderingsmethodieken en rekenlogica zonder live cases. |
-| `09_DUE_DILIGENCE_METHODS` | Due diligence methodieken, checklists en proceskaders. |
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` voor de leidende boomstructuur.
 
 ---
 

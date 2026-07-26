@@ -47,24 +47,11 @@
 
 ## **5. SUBMAPPEN**
 
-```text
-08_MARKETING
-├── 00_START_HIER
-├── BRAND
-├── NETWORK
-├── CAMPAIGNS
-├── PARTNERSHIPS
-└── 99_ARCHIEF
-```
+`08_MARKETING` is in de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`) een root-only map: er worden geen vaste Drive-submappen aangemaakt.
 
-| Submap | Gebruik |
-|---|---|
-| `00_START_HIER` | Startpunt: marketinginstructies, overzicht en referenties voor `08_MARKETING`. |
-| `BRAND` | CM-huisstijl, brand guidelines en identiteitsmateriaal. |
-| `NETWORK` | Netwerk-overzichten, contactlijsten en relatiebeheer. |
-| `CAMPAIGNS` | Campagneplanning, briefings en campagne-evaluaties. |
-| `PARTNERSHIPS` | Partnerovereenkomsten en samenwerkingsdocumenten voor CM-marketing. |
-| `99_ARCHIEF` | Afgeronde campagnes, verouderde brand-assets en niet-actieve partnerschappen. |
+Brand, netwerk, campagnes en partnerships zijn inhoudscategorieën binnen deze map, geen aparte Drive-submappen. Afronding en archivering lopen via de centrale `99_ARCHIVE`.
+
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` voor de leidende boomstructuur.
 
 ---
 
@@ -133,8 +120,8 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM SOCIAL AGENT; bi
 
 ## **13. ARCHIVEREGELS**
 
-- Afgeronde campagnes gaan naar `08_MARKETING/99_ARCHIEF`.
-- Verouderde brand-assets worden gearchiveerd; actuele versie blijft in `BRAND`.
+- Afgeronde campagnes gaan naar de centrale `99_ARCHIVE`.
+- Verouderde brand-assets worden gearchiveerd; de actuele versie blijft in `08_MARKETING`.
 - Geen enkel document wordt verwijderd zonder Sophia-approval.
 - CM VAULT AGENT ondersteunt archivering na instructie van CM SOCIAL AGENT.
 
@@ -213,7 +200,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 **Output vanuit `08_MARKETING`:**
 - Campagnemateriaal → externe kanalen en partijen (na Sophia-approval)
 - Brand-assets → intern gebruik en Canva (wanneer beschikbaar)
-- Afgeronde campagnes → `99_ARCHIEF`
+- Afgeronde campagnes → centrale `99_ARCHIVE`
 
 ---
 

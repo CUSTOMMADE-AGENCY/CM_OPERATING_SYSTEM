@@ -47,30 +47,17 @@
 
 ## **5. SUBMAPPEN**
 
-```text
-09_CONTENT
-├── 00_START_HIER
-├── ASSETS
-├── SOCIALMEDIA
-├── FORMATS
-├── CONTENT_CALENDAR
-└── 99_ARCHIEF
-```
+`09_CONTENT` is in de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`) een root-only map: er worden geen vaste Drive-submappen aangemaakt.
 
-| Submap | Gebruik |
-|---|---|
-| `00_START_HIER` | Startpunt: contentinstructies, overzicht en referenties voor `09_CONTENT`. |
-| `ASSETS` | Beeldmateriaal, video's, audio en grafische bestanden voor CM-kanalen. |
-| `SOCIALMEDIA` | Social media-posts, captions en postmateriaal voor CM-kanalen. |
-| `FORMATS` | Herbruikbare contentformats en visuele templates. |
-| `CONTENT_CALENDAR` | Contentkalender en planningsoverzichten voor CM. |
-| `99_ARCHIEF` | Gepubliceerde of afgeronde contentbestanden die niet meer actief zijn. |
+Assets, social media, formats en contentkalender zijn inhoudscategorieën binnen deze map, geen aparte Drive-submappen. Afronding en archivering lopen via de centrale `99_ARCHIVE`.
+
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` voor de leidende boomstructuur.
 
 ---
 
 ## **6. TEMPLATES**
 
-Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `09_CONTENT`. Contentformats worden beheerd in Canva (nog te bouwen) en intern in `09_CONTENT/FORMATS`.
+Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `09_CONTENT`. Contentformats worden beheerd in Canva (nog te bouwen) en intern in `09_CONTENT`.
 
 ---
 
@@ -130,7 +117,7 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM SOCIAL AGENT; bi
 
 ## **13. ARCHIVEREGELS**
 
-- Gepubliceerde of afgeronde contentbestanden gaan naar `09_CONTENT/99_ARCHIEF`.
+- Gepubliceerde of afgeronde contentbestanden gaan naar de centrale `99_ARCHIVE`.
 - Geen enkel contentbestand wordt permanent verwijderd zonder Sophia-approval.
 - CM VAULT AGENT ondersteunt archivering na instructie van CM SOCIAL AGENT.
 
@@ -207,7 +194,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Output vanuit `09_CONTENT`:**
 - Gepubliceerde content → CM's externe kanalen (na Sophia-approval)
-- Afgeronde content → `99_ARCHIEF`
+- Afgeronde content → centrale `99_ARCHIVE`
 
 ---
 

@@ -326,6 +326,8 @@ Bovendien maken B5/B6 submappen aan onder `01_MASTER_BOUTIQUE`, `05_OPERATIONS`,
 **Actie:**
 CM FLOW AGENT bevestigt eerst de norm met CM CONTROL AGENT en werkt daarna de scripts bij naar de goedgekeurde structuur uit `DRIVE_STRUCTURE.md`, inclusief het herstellen van de artist-/deal-nesting onder de dossiermap. Betreft de live Drive-structuur: uitvoeren volgens het geldende approval level.
 
+**Update 2026-07-26:** met de oplossing van GAP-021 (oplossing B) is de norm bevestigd: `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` zijn root-only. De scripts moeten deze submappen (en de verboden dealstructuur onder `01_MASTER_BOUTIQUE`, GAP-022) dus niet meer aanmaken. Dit blijft een script-/live-Drive-actie voor de owner.
+
 ---
 
 ### **GAP-017: 07_LEGAL.md Map Specification en DRIVE_MAPPING.md niet gelijk**
@@ -402,16 +404,18 @@ CM FLOW AGENT bepaalt welk script het canonieke target-structure script is, verw
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Hoog |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/{01_MASTER_BOUTIQUE,05_OPERATIONS,06_FINANCE,08_MARKETING,09_CONTENT}.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Eigenaar | CM CONTROL AGENT |
 
 **Beschrijving:**
-De leidende Drive production baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, exact gelijk aan `DRIVE_MAPPING.md`) houdt `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` bewust root-only. De Map Specifications (hoofdstuk 5) tonen voor deze vijf roots echter een volledige submapstructuur (bijv. `05_OPERATIONS`: `00_START_HIER`, `HR`, `TRAINING`, `TOOLS`, `PROCESSES`, `TEMPLATES_REFERENCE`, `99_ARCHIEF`). Volgens `DRIVE_STRUCTURE.md` beschrijft de Drive Structure de boom en zijn de Map Specifications leidend voor de *inhoud* per map, niet voor extra submappen. De Map Specs over-specificeren dus de boom t.o.v. de leidende norm.
+De leidende Drive production baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, exact gelijk aan `DRIVE_MAPPING.md`) houdt `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` bewust root-only. De Map Specifications (hoofdstuk 5) toonden voor deze vijf roots echter een volledige submapstructuur (bijv. `05_OPERATIONS`: `00_START_HIER`, `HR`, `TRAINING`, `TOOLS`, `PROCESSES`, `TEMPLATES_REFERENCE`, `99_ARCHIEF`). Volgens `DRIVE_STRUCTURE.md` beschrijft de Drive Structure de boom en zijn de Map Specifications leidend voor de *inhoud* per map, niet voor extra submappen. De Map Specs over-specificeerden dus de boom t.o.v. de leidende norm.
 
 **Actie:**
-De Owner Agents beslissen per root of de baseline submappen krijgt (dan `DRIVE_STRUCTURE.md` en `DRIVE_MAPPING.md` bijwerken) óf de Map Specifications de submapbomen verwijderen en zich tot inhoud beperken. CM CONTROL AGENT coördineert.
+Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing B — specs afslanken naar de baseline): hoofdstuk 5 van de vijf specs is root-only gemaakt; de submappen zijn geherformuleerd als inhoudscategorieën (geen aparte Drive-submappen). Losse verwijzingen naar de verwijderde submappen (uitvoerlocaties, archiveregels, source-of-truth-paden) zijn naar de rootmap of de centrale `99_ARCHIVE` gebracht. De START_HIER-templates voor `05/06/08/09` zijn verwijderd.
+
+**Vervolg (niet in deze scope):** de Drive-scripts (`create-os-custommade-target-structure.gs`/`OS_CUSTOMMADE_target_structure.gs`) maken deze submappen nog steeds aan; zij zijn nu de afwijkende partij en moeten door de owner naar root-only worden gebracht — bijgehouden onder GAP-016.
 
 ---
 
@@ -425,10 +429,10 @@ De Owner Agents beslissen per root of de baseline submappen krijgt (dan `DRIVE_S
 | Eigenaar | CM LEGAL AGENT |
 
 **Beschrijving:**
-`01_MASTER_BOUTIQUE` heeft in elke bron een andere structuur: de leidende baseline (`DRIVE_STRUCTURE.md` = `DRIVE_MAPPING.md`) is root-only (deals horen in `04_DEALS`), `01_MASTER_BOUTIQUE.md` definieert negen kennis-/methodiekcategorieën (`01_CONTEXT` … `09_DUE_DILIGENCE_METHODS`), en `create-os-custommade-target-structure.gs` maakt een dealstructuur aan (`00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`). Zowel `DRIVE_STRUCTURE.md` (regel 83) als `01_MASTER_BOUTIQUE.md` verbieden dealcase- en assetfolders onder `01_MASTER_BOUTIQUE` expliciet; het script schendt deze regel.
+`01_MASTER_BOUTIQUE` had in elke bron een andere structuur: de leidende baseline (`DRIVE_STRUCTURE.md` = `DRIVE_MAPPING.md`) is root-only (deals horen in `04_DEALS`), `01_MASTER_BOUTIQUE.md` definieerde negen kennis-/methodiekcategorieën (`01_CONTEXT` … `09_DUE_DILIGENCE_METHODS`), en `create-os-custommade-target-structure.gs` maakt een dealstructuur aan (`00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`). Zowel `DRIVE_STRUCTURE.md` (regel 83) als `01_MASTER_BOUTIQUE.md` verbieden dealcase- en assetfolders onder `01_MASTER_BOUTIQUE` expliciet; het script schendt deze regel.
 
 **Actie:**
-CM LEGAL AGENT (owner van `01_MASTER_BOUTIQUE`) stelt de definitieve structuur vast conform de baseline, verwijdert de verboden dealstructuur uit het script en stemt `01_MASTER_BOUTIQUE.md` af op de baseline.
+Deels opgelost op 2026-07-26 (oplossing B): `01_MASTER_BOUTIQUE.md` hoofdstuk 5 is root-only gemaakt conform de baseline; de negen categorieën staan nu als inhoudscategorieën beschreven, niet als Drive-submappen. **Openstaand:** de verboden dealstructuur zit nog in `create-os-custommade-target-structure.gs` en moet door de owner (CM LEGAL AGENT / CM FLOW AGENT) worden verwijderd — bijgehouden onder GAP-016. Status blijft `Open` tot het script is bijgewerkt.
 
 ---
 
@@ -450,7 +454,7 @@ Opgelost op 2026-07-26:
 - Geregistreerd in `00_TEMPLATE_INDEX.md`, `TEMPLATE_STATUS_REGISTER.md` en `TEMPLATE_REGISTER.md`.
 - `03_CLIENTS.md` gecorrigeerd: alle `00_START_HIER`-verwijzingen gewijzigd naar `01_ADMIN`.
 
-**Openstaand (niet-blokkerend):** de root-`00_START_HIER` voor `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` staat nog niet in de leidende Drive-baseline; afstemming loopt via GAP-021.
+**Update 2026-07-26:** met de oplossing van GAP-021 (oplossing B, specs root-only) zijn de START_HIER-templates voor `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` verwijderd; deze roots hebben geen `00_START_HIER`-startmap. `04_DEALS` (baseline) en `07_LEGAL` (spec; GAP-017) behouden hun START_HIER-template.
 
 ---
 
@@ -478,7 +482,7 @@ Opgelost op 2026-07-26:
 | GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Open | Middel | CM OPS AGENT |
 | GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Open | Hoog | CM FLOW AGENT |
 | GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
-| GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Open | Hoog | CM CONTROL AGENT |
+| GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Opgelost | — | CM CONTROL AGENT |
 | GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Open | Hoog | CM LEGAL AGENT |
 | GAP-023 | START_HIER-templates ontbraken + 03_CLIENTS verwees naar niet-bestaande 00_START_HIER | Opgelost | — | CM VAULT AGENT |
 

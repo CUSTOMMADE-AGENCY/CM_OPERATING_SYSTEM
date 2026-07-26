@@ -49,26 +49,11 @@
 
 ## **5. SUBMAPPEN**
 
-```text
-06_FINANCE
-├── 00_START_HIER
-├── MONEYBIRD_REFERENCE
-├── BELASTINGDIENST
-├── BANK
-├── STATEMENTS
-├── ADMIN_EXPORTS
-└── 99_ARCHIEF
-```
+`06_FINANCE` is in de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`) een root-only map: er worden geen vaste Drive-submappen aangemaakt. Moneybird blijft de financiële waarheid; `06_FINANCE` is een referentie- en werklaag.
 
-| Submap | Gebruik |
-|---|---|
-| `00_START_HIER` | Finance-instructies, overzicht en startpunt voor `06_FINANCE`. |
-| `MONEYBIRD_REFERENCE` | Exports, screenshots en referentiedocumenten uit Moneybird. |
-| `BELASTINGDIENST` | BTW-aangiften, inkomstenbelasting en belastingcorrespondentie. |
-| `BANK` | Bank statements, betalingsbewijzen en bankafschriften. |
-| `STATEMENTS` | Jaarlijkse en periodieke financiële overzichten. |
-| `ADMIN_EXPORTS` | Geëxporteerde finance-data voor rapportage, reconciliatie en analyse. |
-| `99_ARCHIEF` | Afgeronde, verouderde of gearchiveerde financiële documenten. |
+Moneybird-referenties, belastingdocumenten, bankafschriften, statements en admin-exports zijn inhoudscategorieën binnen deze map, geen aparte Drive-submappen. Afronding en archivering lopen via de centrale `99_ARCHIVE`.
+
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` voor de leidende boomstructuur.
 
 ---
 
@@ -135,7 +120,7 @@ Support Agents zijn geen mede-eigenaar. Bij conflict beslist CM MONEY AGENT; bij
 
 ## **13. ARCHIVEREGELS**
 
-- Afgeronde jaargebonden financiële documenten gaan naar `06_FINANCE/99_ARCHIEF` of naar `99_ARCHIVE/[JAAR]`.
+- Afgeronde jaargebonden financiële documenten gaan naar de centrale `99_ARCHIVE`.
 - Facturen, bonnen, kwitanties en belastingdocumenten worden nooit verwijderd.
 - Geen enkel document wordt verwijderd zonder Sophia-approval.
 - CM VAULT AGENT ondersteunt archivering na instructie van CM MONEY AGENT.
@@ -174,8 +159,8 @@ Incorrect: `btw aangifte nieuw definitief.pdf`
 |---|---|
 | Facturen, bonnen, kwitanties | Moneybird (primaire bron) |
 | BTW en Open Posten | Moneybird |
-| Cashflow | Moneybird (primair) + `06_FINANCE/STATEMENTS` (werkbestand) |
-| Belastingdocumenten | `06_FINANCE/BELASTINGDIENST` |
+| Cashflow | Moneybird (primair) + `06_FINANCE` (werkbestand) |
+| Belastingdocumenten | Moneybird en `06_FINANCE` |
 | Taakstatus finance | ClickUp |
 | Goedgekeurde beslissingen | Approval Register (`07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`) |
 

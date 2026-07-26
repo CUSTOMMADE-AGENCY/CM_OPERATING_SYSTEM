@@ -49,26 +49,11 @@
 
 ## **5. SUBMAPPEN**
 
-```text
-05_OPERATIONS
-├── 00_START_HIER
-├── HR
-├── TRAINING
-├── TOOLS
-├── PROCESSES
-├── TEMPLATES_REFERENCE
-└── 99_ARCHIEF
-```
+`05_OPERATIONS` is in de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`) een root-only map: er worden geen vaste Drive-submappen aangemaakt.
 
-| Submap | Gebruik |
-|---|---|
-| `00_START_HIER` | Startpunt: operationele instructies, overzicht en referenties voor `05_OPERATIONS`. |
-| `HR` | Interne HR-processen, teamstructuur en personeelsadministratie. |
-| `TRAINING` | Trainingsmateriaal voor intern team, onboarding van nieuwe teamleden. |
-| `TOOLS` | Handleidingen en instructies voor CM-tools: ClickUp, Make, Drive, GitHub, Gmail. |
-| `PROCESSES` | Procesomschrijvingen en operationele instructies voor intern gebruik. |
-| `TEMPLATES_REFERENCE` | Referentieversies van GitHub-templates voor intern gebruik. |
-| `99_ARCHIEF` | Afgeronde, verouderde of niet-actieve operationele documenten. |
+HR, training, tools, processen en template-referenties zijn inhoudscategorieën binnen deze map, geen aparte Drive-submappen. Afronding en archivering lopen via de centrale `99_ARCHIVE`.
+
+Zie `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` voor de leidende boomstructuur.
 
 ---
 
@@ -76,10 +61,10 @@
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
+| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `05_OPERATIONS` |
+| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `05_OPERATIONS` |
+| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `05_OPERATIONS` |
+| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `05_OPERATIONS` |
 
 ---
 
@@ -141,7 +126,7 @@ Support Agents zijn geen mede-eigenaar van de map. Bij conflict beslist CM CONTR
 
 ## **13. ARCHIVEREGELS**
 
-- Afgeronde of verouderde operationele documenten gaan naar `05_OPERATIONS/99_ARCHIEF`.
+- Afgeronde of verouderde operationele documenten gaan naar de centrale `99_ARCHIVE`.
 - Geen enkel document wordt verwijderd zonder Sophia-approval.
 - CM VAULT AGENT voert archivering uit na instructie van CM CONTROL AGENT of CM OPS AGENT.
 
@@ -151,8 +136,7 @@ Support Agents zijn geen mede-eigenaar van de map. Bij conflict beslist CM CONTR
 
 Zie `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` voor de volledige standaard.
 
-- Gebruik hoofdletters voor systeemmappen: `HR`, `TRAINING`, `TOOLS`
-- Gebruik underscores, geen spaties
+- Gebruik hoofdletters en underscores voor bestands- en inhoudscategorieën, geen spaties
 - Geen `final`, `new`, `copy`, `oud`, `v2` in bestandsnamen
 
 Correct: `PROCESS_INTAKE_CLIENT_2026.docx`
