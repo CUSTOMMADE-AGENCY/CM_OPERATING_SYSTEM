@@ -311,8 +311,8 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Hoog |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken bestanden | `scripts/google-drive/create-os-custommade-target-structure.gs`, `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` |
 | Eigenaar | CM FLOW AGENT |
 
@@ -326,7 +326,14 @@ Bovendien maken B5/B6 submappen aan onder `01_MASTER_BOUTIQUE`, `05_OPERATIONS`,
 **Actie:**
 CM FLOW AGENT bevestigt eerst de norm met CM CONTROL AGENT en werkt daarna de scripts bij naar de goedgekeurde structuur uit `DRIVE_STRUCTURE.md`, inclusief het herstellen van de artist-/deal-nesting onder de dossiermap. Betreft de live Drive-structuur: uitvoeren volgens het geldende approval level.
 
-**Update 2026-07-26:** met de oplossing van GAP-021 (oplossing B) is de norm bevestigd: `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` zijn root-only. De scripts moeten deze submappen (en de verboden dealstructuur onder `01_MASTER_BOUTIQUE`, GAP-022) dus niet meer aanmaken. Dit blijft een script-/live-Drive-actie voor de owner.
+**Opgelost op 2026-07-26 (broncode):** beide target-structure scripts zijn uitgelijnd op de baseline `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`:
+- `00_ADMIN` → `01_INBOX_REVIEW`, `02_GOVERNANCE_REFERENCE`, `03_TEMPLATES`, `04_REPORTS`, `05_APPROVALS`;
+- `07_LEGAL` → `APPROVALS`, `CONTRACTS`, `LEGAL_REVIEW`, `EVIDENCE`;
+- `99_ARCHIVE` → `ARTIST_MANAGEMENT`, `CLIENTS`, `DEALS`, `REVIEW_HOLD_OLD_STRUCTURE`, `LEGACY_ROOTS`, `MIGRATION_LOGS`;
+- `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING`, `09_CONTENT` → root-only (leeg);
+- `02_ARTIST_MANAGEMENT`/`03_CLIENTS`/`04_DEALS` → root-only op dit niveau; de plaatsingsdefecten zijn weg. Per-dossierstructuren (artist/client/deal) en `07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` worden door het PRIMARY-buildscript `create-cm-drive-structure.gs` aangemaakt (zie GAP-019).
+
+**Operationeel (buiten broncode):** het uitvoeren tegen de live Drive en het opruimen van eerder verkeerd aangemaakte mappen blijft een owner-actie volgens het geldende approval level.
 
 ---
 
@@ -368,8 +375,8 @@ CM OPS AGENT maakt `06_FINANCE.md` aan conform `MAP_SPECIFICATION_STANDARD.md` e
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Hoog |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken bestand | `scripts/google-drive/create-cm-drive-structure.gs` |
 | Eigenaar | CM FLOW AGENT |
 
@@ -379,7 +386,7 @@ Het bestand bevat twee samengevoegde scripts en is syntactisch ongeldig: functie
 Ook na de syntaxreparatie is het script onvolledig: het `CM_DRIVE_STRUCTURE`-object laat alle roots behalve `02_ARTIST_MANAGEMENT` leeg (`[]`), terwijl `DRIVE_MAPPING.md` en de Map Specifications submappen vereisen voor onder meer `00_ADMIN`, `07_LEGAL` en `99_ARCHIVE`. Omdat B4 is gelabeld als "PRIMARY for approved Drive build", zou dit script na herstel een onvolledige goedgekeurde structuur aanmaken.
 
 **Actie:**
-CM FLOW AGENT splitst het bestand in twee geldige scripts (of verwijdert het overtollige deel), stemt de clientstructuur af op de norm en vult `CM_DRIVE_STRUCTURE` aan met de vereiste submappen per root conform de vastgestelde norm.
+Opgelost op 2026-07-26: het bestand is herschreven tot één geldig, samenhangend PRIMARY-buildscript (syntaxfouten en dubbele declaraties weg). Het bouwt nu exact de baseline `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`: de 11 roots, de baseline-submappen voor `00_ADMIN`, `07_LEGAL` (incl. `APPROVALS/CM_APPROVAL_REGISTER`) en `99_ARCHIVE`, en per-artist dossiers onder `02_ARTIST_MANAGEMENT/[ARTIST]`. `01_MASTER_BOUTIQUE`/`05`/`06`/`08`/`09` blijven root-only. `createCmClientFolder()` gebruikt nu de baseline-clientstructuur (`01_ADMIN`, `02_CONTRACT`, `03_BRIEF_SCOPE`, `04_DELIVERABLES`, `05_COMMUNICATION`, `06_FINANCE`, `09_ARCHIVE`) en `createCmDealStructure()` de lean dealstructuur. Syntaxis gevalideerd met `node --check`.
 
 ---
 
@@ -397,6 +404,8 @@ Beide scripts declareren dezelfde constanten (`ROOT_FOLDER_ID`, `OS_CUSTOMMADE_T
 
 **Actie:**
 CM FLOW AGENT bepaalt welk script het canonieke target-structure script is, verwijdert of hernoemt het andere, en documenteert de governance-status.
+
+**Update 2026-07-26:** beide scripts zijn nu inhoudelijk uitgelijnd op de baseline (identieke, correcte `OS_CUSTOMMADE_TARGET_STRUCTURE`), dus welk script ook draait, het resultaat is gelijk. De resterende actie is uitsluitend het dedupliceren (canoniek kiezen / het andere verwijderen of hernoemen) om symboolcollisions in één Apps Script-project te voorkomen. Blijft `Open` als owner-beslissing.
 
 ---
 
@@ -423,8 +432,8 @@ Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing B — specs afslanken n
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Hoog |
+| Status | Opgelost |
+| Prioriteit | — |
 | Betrokken bestanden | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/01_MASTER_BOUTIQUE.md`, `scripts/google-drive/create-os-custommade-target-structure.gs` |
 | Eigenaar | CM LEGAL AGENT |
 
@@ -432,7 +441,7 @@ Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing B — specs afslanken n
 `01_MASTER_BOUTIQUE` had in elke bron een andere structuur: de leidende baseline (`DRIVE_STRUCTURE.md` = `DRIVE_MAPPING.md`) is root-only (deals horen in `04_DEALS`), `01_MASTER_BOUTIQUE.md` definieerde negen kennis-/methodiekcategorieën (`01_CONTEXT` … `09_DUE_DILIGENCE_METHODS`), en `create-os-custommade-target-structure.gs` maakt een dealstructuur aan (`00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`). Zowel `DRIVE_STRUCTURE.md` (regel 83) als `01_MASTER_BOUTIQUE.md` verbieden dealcase- en assetfolders onder `01_MASTER_BOUTIQUE` expliciet; het script schendt deze regel.
 
 **Actie:**
-Deels opgelost op 2026-07-26 (oplossing B): `01_MASTER_BOUTIQUE.md` hoofdstuk 5 is root-only gemaakt conform de baseline; de negen categorieën staan nu als inhoudscategorieën beschreven, niet als Drive-submappen. **Openstaand:** de verboden dealstructuur zit nog in `create-os-custommade-target-structure.gs` en moet door de owner (CM LEGAL AGENT / CM FLOW AGENT) worden verwijderd — bijgehouden onder GAP-016. Status blijft `Open` tot het script is bijgewerkt.
+Opgelost op 2026-07-26 (oplossing B): `01_MASTER_BOUTIQUE.md` hoofdstuk 5 is root-only gemaakt conform de baseline; de negen categorieën staan nu als inhoudscategorieën beschreven, niet als Drive-submappen. De verboden dealstructuur is verwijderd uit `create-os-custommade-target-structure.gs` (`01_MASTER_BOUTIQUE` is nu `[]`, root-only). Alle drie de bronnen (baseline, spec, script) zijn hiermee gelijk: `01_MASTER_BOUTIQUE` is root-only en bevat geen dealcase- of assetfolders.
 
 ---
 
@@ -477,13 +486,13 @@ Opgelost op 2026-07-26:
 | GAP-013 | Dode workflow-link in 06_FINANCE.md hoofdstuk 7 | Opgelost | — | CM CONTROL AGENT |
 | GAP-014 | 03_CLIENTS.md submapstructuur niet actueel | Opgelost | — | CM OPS AGENT |
 | GAP-015 | 99_ARCHIVE.md submapstructuur niet actueel | Opgelost | — | CM VAULT AGENT |
-| GAP-016 | Google Drive-scripts verouderd/afwijkend + plaatsingsdefecten artist/deal | Open | Hoog | CM FLOW AGENT |
+| GAP-016 | Google Drive-scripts verouderd/afwijkend + plaatsingsdefecten artist/deal | Opgelost | — | CM FLOW AGENT |
 | GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Open | Middel | CM LEGAL AGENT |
 | GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Open | Middel | CM OPS AGENT |
-| GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Open | Hoog | CM FLOW AGENT |
+| GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Opgelost | — | CM FLOW AGENT |
 | GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
 | GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Opgelost | — | CM CONTROL AGENT |
-| GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Open | Hoog | CM LEGAL AGENT |
+| GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Opgelost | — | CM LEGAL AGENT |
 | GAP-023 | START_HIER-templates ontbraken + 03_CLIENTS verwees naar niet-bestaande 00_START_HIER | Opgelost | — | CM VAULT AGENT |
 
 ---

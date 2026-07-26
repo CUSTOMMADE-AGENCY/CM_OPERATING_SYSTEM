@@ -31,69 +31,40 @@ const TARGET_STRUCTURE_HEADERS = [
   'error message'
 ];
 
+// Doelstructuur conform de leidende baseline docs/00_GOVERNANCE/DRIVE_STRUCTURE.md.
+// Roots die in de baseline root-only zijn (01_MASTER_BOUTIQUE, 05_OPERATIONS,
+// 06_FINANCE, 08_MARKETING, 09_CONTENT) krijgen bewust geen submappen.
+// Per-dossierstructuren en 07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER worden door
+// het PRIMARY-buildscript (create-cm-drive-structure.gs) aangemaakt, niet hier.
 const OS_CUSTOMMADE_TARGET_STRUCTURE = {
   '00_ADMIN': [
+    '01_INBOX_REVIEW',
+    '02_GOVERNANCE_REFERENCE',
     '03_TEMPLATES',
-    'GOVERNANCE_REFERENCE',
-    'HR',
-    'CURSUS_MASTERCLASSES'
+    '04_REPORTS',
+    '05_APPROVALS'
   ],
   '01_MASTER_BOUTIQUE': [],
   '02_ARTIST_MANAGEMENT': [],
   '03_CLIENTS': [],
   '04_DEALS': [],
-  '05_OPERATIONS': [
-    '00_START_HIER',
-    'HR',
-    'TRAINING',
-    'TOOLS',
-    'PROCESSES',
-    'TEMPLATES_REFERENCE',
-    '99_ARCHIEF'
-  ],
-  '06_FINANCE': [
-    '00_START_HIER',
-    'MONEYBIRD_REFERENCE',
-    'BELASTINGDIENST',
-    'BANK',
-    'STATEMENTS',
-    'ADMIN_EXPORTS',
-    '99_ARCHIEF'
-  ],
+  '05_OPERATIONS': [],
+  '06_FINANCE': [],
   '07_LEGAL': [
-    '00_START_HIER',
-    'CONTRACTEN',
-    'NDA',
-    'PARTNERS',
-    'FREELANCERS',
-    'ARTIESTEN',
-    'KLANTEN',
-    'LEVERANCIERS',
-    'RIGHTS',
     'APPROVALS',
-    '99_ARCHIEF'
+    'CONTRACTS',
+    'LEGAL_REVIEW',
+    'EVIDENCE'
   ],
-  '08_MARKETING': [
-    '00_START_HIER',
-    'BRAND',
-    'NETWORK',
-    'CAMPAIGNS',
-    'PARTNERSHIPS',
-    '99_ARCHIEF'
-  ],
-  '09_CONTENT': [
-    '00_START_HIER',
-    'ASSETS',
-    'SOCIALMEDIA',
-    'FORMATS',
-    'CONTENT_CALENDAR',
-    '99_ARCHIEF'
-  ],
+  '08_MARKETING': [],
+  '09_CONTENT': [],
   '99_ARCHIVE': [
-    '00_START_HIER',
+    'ARTIST_MANAGEMENT',
+    'CLIENTS',
+    'DEALS',
+    'REVIEW_HOLD_OLD_STRUCTURE',
     'LEGACY_ROOTS',
-    'REVIEW_HOLD',
-    '99_ARCHIEF'
+    'MIGRATION_LOGS'
   ]
 };
 
