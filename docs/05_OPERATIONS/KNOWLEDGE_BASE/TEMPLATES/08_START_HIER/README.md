@@ -17,4 +17,4 @@ De leidende Drive-boom staat in `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` (product
 
 De START_HIER-templates voor `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` zijn verwijderd (GAP-021, oplossing B): deze roots zijn in de baseline én in hun Map Specifications root-only, dus zij hebben geen `00_START_HIER`-startmap.
 
-`START_HIER_07_LEGAL_TEMPLATE.md` blijft behouden op basis van de huidige `07_LEGAL.md`-spec; of `07_LEGAL/00_START_HIER` live bestaat wordt afgestemd onder GAP-017 in `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/MAP_SPECIFICATION_GAP_REPORT.md`.
+`START_HIER_07_LEGAL_TEMPLATE.md` blijft behouden: met GAP-017 (oplossing A) is de baseline uitgebreid, zodat `07_LEGAL` een `00_START_HIER`-startmap heeft.

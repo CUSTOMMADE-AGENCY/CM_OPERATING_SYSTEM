@@ -341,16 +341,16 @@ CM FLOW AGENT bevestigt eerst de norm met CM CONTROL AGENT en werkt daarna de sc
 
 | Veld | Waarde |
 |---|---|
-| Status | Open |
-| Prioriteit | Middel |
-| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md`, `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
+| Status | Opgelost |
+| Prioriteit | — |
+| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md`, `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Eigenaar | CM LEGAL AGENT |
 
 **Beschrijving:**
 `07_LEGAL.md` hoofdstuk 5 specificeert `00_START_HIER`, `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `NDA`, `PARTNERS`, `FREELANCERS`, `ARTIESTEN`, `KLANTEN`, `LEVERANCIERS`, `RIGHTS`, `LEGAL_REVIEW`, `EVIDENCE`, `99_ARCHIEF`. De leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, exact gelijk aan `DRIVE_MAPPING.md`) vermeldt voor `07_LEGAL` alleen `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `LEGAL_REVIEW`, `EVIDENCE`. De Map Specification is dus rijker dan de baseline. Beide documenten claimen consistentie (zie GAP-002) maar zijn dat niet.
 
 **Actie:**
-CM LEGAL AGENT beslist welke submappen live bestaan en stemt `07_LEGAL.md` af op de baseline (of vult de baseline aan indien de extra submappen live moeten bestaan).
+Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing A — baseline uitbreiden): de leidende baseline is uitgebreid met de volledige legal-structuur. `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` tonen nu voor `07_LEGAL`: `00_START_HIER`, `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `NDA`, `PARTNERS`, `FREELANCERS`, `ARTIESTEN`, `KLANTEN`, `LEVERANCIERS`, `RIGHTS`, `LEGAL_REVIEW`, `EVIDENCE`, `99_ARCHIEF` — gelijk aan `07_LEGAL.md` hoofdstuk 5. De drie Drive-scripts zijn hierop uitgelijnd. `START_HIER_07_LEGAL_TEMPLATE.md` blijft geldig (`07_LEGAL/00_START_HIER` bestaat nu in de baseline).
 
 ---
 
@@ -487,7 +487,7 @@ Opgelost op 2026-07-26:
 | GAP-014 | 03_CLIENTS.md submapstructuur niet actueel | Opgelost | — | CM OPS AGENT |
 | GAP-015 | 99_ARCHIVE.md submapstructuur niet actueel | Opgelost | — | CM VAULT AGENT |
 | GAP-016 | Google Drive-scripts verouderd/afwijkend + plaatsingsdefecten artist/deal | Opgelost | — | CM FLOW AGENT |
-| GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Open | Middel | CM LEGAL AGENT |
+| GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Opgelost | — | CM LEGAL AGENT |
 | GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Open | Middel | CM OPS AGENT |
 | GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Opgelost | — | CM FLOW AGENT |
 | GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |

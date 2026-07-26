@@ -51,10 +51,19 @@ const OS_CUSTOMMADE_TARGET_STRUCTURE = {
   '05_OPERATIONS': [],
   '06_FINANCE': [],
   '07_LEGAL': [
+    '00_START_HIER',
     'APPROVALS',
     'CONTRACTS',
+    'NDA',
+    'PARTNERS',
+    'FREELANCERS',
+    'ARTIESTEN',
+    'KLANTEN',
+    'LEVERANCIERS',
+    'RIGHTS',
     'LEGAL_REVIEW',
-    'EVIDENCE'
+    'EVIDENCE',
+    '99_ARCHIEF'
   ],
   '08_MARKETING': [],
   '09_CONTENT': [],

@@ -60,11 +60,20 @@ OS_CUSTOMMADE
 ├── 05_OPERATIONS
 ├── 06_FINANCE
 ├── 07_LEGAL
+│   ├── 00_START_HIER
 │   ├── APPROVALS
 │   │   └── CM_APPROVAL_REGISTER
 │   ├── CONTRACTS
+│   ├── NDA
+│   ├── PARTNERS
+│   ├── FREELANCERS
+│   ├── ARTIESTEN
+│   ├── KLANTEN
+│   ├── LEVERANCIERS
+│   ├── RIGHTS
 │   ├── LEGAL_REVIEW
-│   └── EVIDENCE
+│   ├── EVIDENCE
+│   └── 99_ARCHIEF
 ├── 08_MARKETING
 ├── 09_CONTENT
 └── 99_ARCHIVE
@@ -137,7 +146,7 @@ Elke deal- of assetcase staat onder `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]
 
 ## Legal en archive regels
 
-- Legal gebruikt `APPROVALS`, `CONTRACTS`, `LEGAL_REVIEW` en `EVIDENCE` als vaste submappen.
+- Legal gebruikt `00_START_HIER`, `APPROVALS` (met `CM_APPROVAL_REGISTER`), `CONTRACTS`, `NDA`, `PARTNERS`, `FREELANCERS`, `ARTIESTEN`, `KLANTEN`, `LEVERANCIERS`, `RIGHTS`, `LEGAL_REVIEW`, `EVIDENCE` en `99_ARCHIEF` als vaste submappen.
 - Inactieve artists gaan volledig naar `OS_CUSTOMMADE/99_ARCHIVE/ARTIST_MANAGEMENT/[ARTIST_NAME]`.
 - Inactieve clients gaan volledig naar `OS_CUSTOMMADE/99_ARCHIVE/CLIENTS/[CLIENT_OR_PARTNER_NAME]`.
 - Afgeronde of superseded deals gaan naar `OS_CUSTOMMADE/99_ARCHIVE/DEALS/[DEAL_OR_ASSET_NAME]` of naar de case-eigen `99_ARCHIEF` zolang de case actief blijft.
