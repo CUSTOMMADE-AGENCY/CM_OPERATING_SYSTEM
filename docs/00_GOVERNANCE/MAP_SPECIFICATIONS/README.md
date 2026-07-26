@@ -14,6 +14,10 @@ Deze directory bevat de operationele Map Specifications voor de goedgekeurde hoo
 | [`DEAL_FOLDER/`](DEAL_FOLDER/README.md) | Navigatie voor deal-submapspecificaties. |
 | [`LEGAL_FOLDER/`](LEGAL_FOLDER/README.md) | Navigatie voor legal-submapspecificaties. |
 
+## Template Placement Map
+
+[`TEMPLATE_PLACEMENT_MAP.md`](TEMPLATE_PLACEMENT_MAP.md) legt vast welke template(s) in welke Drive-map thuishoren, voor de centrale Template Library én per artist-, client-, deal- en legal-submap. Het is de operationele brug tussen de Template Library en de goedgekeurde Drive-structuur en markeert openstaande template-gaps.
+
 ## Scope
 
 De scope is beperkt tot mapinhoud en operationele governance per hoofdfolder en dossiermap. Map Specifications beschrijven niet hoe Google Drive technisch werkt en vervangen geen Folder Standards, templates, workflows, SOPs of Playbooks.
