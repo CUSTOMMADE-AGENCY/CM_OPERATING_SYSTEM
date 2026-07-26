@@ -6,20 +6,20 @@ Deze kaart bepaalt **welke template(s) in welke Google Drive-map** onder `OS_CUS
 
 Gebruik deze kaart bij het inrichten of controleren van Drive-mappen. GitHub blijft leidend voor template-governance; Drive bevat uitsluitend werkbare kopieën of ingevulde operationele versies.
 
-> **Freeze-status.** De template build-freeze uit `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` is nog `ACTIEF` en Sprint 6 (Template Recovery) staat op `GEBLOKKEERD`. Deze kaart is **voorbereidend Sprint 6-materiaal**: ze legt de gewenste koppeling vast, maar geeft géén toestemming om templates aan te maken/wijzigen of de Drive te vullen. Dat gebeurt pas nadat Sprint 6 door de process owner (Sophia / CM CONTROL) is vrijgegeven.
+> **Freeze-status.** Sprint 6 (Template Recovery) is `VRIJGEGEVEN` op autorisatie van de accounteigenaar (2026-07-26); de template build-freeze is opgeheven. Deze kaart is leidend voor het aanvullen van templates en de Drive-uitrol.
 
 ## Leeswijzer
 
 - **Bron = spec**: de mapping komt rechtstreeks uit een bestaande Map Specification.
 - **Bron = afgeleid**: de mapping is afgeleid uit de Template Library en de mapfunctie, en wacht op review door de process owner.
-- **GAP**: de Map Specification vereist een template die nog niet in de Template Library bestaat. Deze gaps staan onderaan verzameld en moeten via de Template Review Process worden aangemaakt vóór operationeel gebruik.
 
 ## Statuslegenda
 
 | Status | Betekenis |
 |---|---|
 | ✅ Beschikbaar | Template bestaat in de Library en kan geplaatst worden. |
-| ⚠️ Ontbreekt | Template is vereist maar bestaat nog niet (GAP). |
+
+Alle eerder ontbrekende templates zijn in Sprint 6 aangemaakt (zie sectie 6).
 
 ---
 
@@ -56,31 +56,31 @@ Bron = spec (`MAP_SPECIFICATIONS/ARTIST_FOLDER/`). Werkbare kopieën worden opge
 
 | Submap | Vereiste template | Library-equivalent | Status |
 |---|---|---|---|
-| `01_ADMIN` | Intake Template | — | ⚠️ |
-| `01_ADMIN` | Contact Sheet Template | — | ⚠️ |
+| `01_ADMIN` | Intake Template | INTAKE_TEMPLATE | ✅ |
+| `01_ADMIN` | Contact Sheet Template | CONTACT_SHEET_TEMPLATE | ✅ |
 | `01_ADMIN` | Onboarding Summary Template | CLIENT_ONBOARDING_TEMPLATE (afgeleid) | ✅ |
-| `02_CONTRACT` | Contract Summary Template | — | ⚠️ |
-| `02_CONTRACT` | Approval Evidence Template | — | ⚠️ |
-| `02_CONTRACT` | Amendment Log Template | — | ⚠️ |
+| `02_CONTRACT` | Contract Summary Template | CONTRACT_SUMMARY_TEMPLATE | ✅ |
+| `02_CONTRACT` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
+| `02_CONTRACT` | Amendment Log Template | AMENDMENT_LOG_TEMPLATE | ✅ |
 | `03_STRATEGY` | Brand Audit Template | BRAND_AUDIT_TEMPLATE | ✅ |
 | `03_STRATEGY` | Business Audit Template | BUSINESS_AUDIT_TEMPLATE | ✅ |
 | `03_STRATEGY` | Roadmap Template | ARTIST_ROADMAP_TEMPLATE | ✅ |
-| `03_STRATEGY` | KPI Template | — | ⚠️ |
-| `03_STRATEGY` | Jaarplan Template | — | ⚠️ |
-| `04_RELEASES` | Release Register Template | RELEASE_STRATEGY_TEMPLATE + RELEASE_KICKOFF_TEMPLATE (afgeleid) | ✅ |
-| `04_RELEASES` | Approval Evidence Template | — | ⚠️ |
-| `04_RELEASES` | Version Log Template | — | ⚠️ |
-| `05_BOOKING` | Booking Register Template | — | ⚠️ |
-| `05_BOOKING` | Approval Evidence Template | — | ⚠️ |
-| `05_BOOKING` | Version Log Template | — | ⚠️ |
+| `03_STRATEGY` | KPI Template | KPI_TEMPLATE | ✅ |
+| `03_STRATEGY` | Jaarplan Template | JAARPLAN_TEMPLATE | ✅ |
+| `04_RELEASES` | Release Register Template | REGISTER_TEMPLATE (domein: Releases) + RELEASE_STRATEGY_TEMPLATE, RELEASE_KICKOFF_TEMPLATE | ✅ |
+| `04_RELEASES` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
+| `04_RELEASES` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
+| `05_BOOKING` | Booking Register Template | REGISTER_TEMPLATE (domein: Booking) | ✅ |
+| `05_BOOKING` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
+| `05_BOOKING` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
 | `06_FINANCE` | Monthly Report Template | MONTHLY_REPORT_TEMPLATE (afgeleid) | ✅ |
-| `07_SOCIALMEDIA` | Social Register Template | — | ⚠️ |
-| `07_SOCIALMEDIA` | Approval Evidence Template | — | ⚠️ |
-| `07_SOCIALMEDIA` | Version Log Template | — | ⚠️ |
-| `08_PRESS_EPK` | Press/EPK Register Template | — | ⚠️ |
-| `08_PRESS_EPK` | Approval Evidence Template | — | ⚠️ |
-| `08_PRESS_EPK` | Version Log Template | — | ⚠️ |
-| `09_ARCHIVE` | Archive Register Template | — | ⚠️ |
+| `07_SOCIALMEDIA` | Social Register Template | REGISTER_TEMPLATE (domein: Social) | ✅ |
+| `07_SOCIALMEDIA` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
+| `07_SOCIALMEDIA` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
+| `08_PRESS_EPK` | Press/EPK Register Template | REGISTER_TEMPLATE (domein: Press/EPK) | ✅ |
+| `08_PRESS_EPK` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
+| `08_PRESS_EPK` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
+| `09_ARCHIVE` | Archive Register Template | REGISTER_TEMPLATE (domein: Archive) | ✅ |
 
 ---
 
@@ -95,10 +95,10 @@ Bron = spec (`ROOTS/03_CLIENTS.md` §6). Nog geen aparte client-submapspecificat
 | `01_ADMIN` | CLIENT_PROFILE_TEMPLATE, CLIENT_ONBOARDING_TEMPLATE, EMAIL_INSTRUCTIONS_TEMPLATE, DO_NOTS_TEMPLATE | ✅ |
 | `03_BRIEF_SCOPE` | MANAGEMENT_PROPOSAL_TEMPLATE | ✅ |
 | `04_DELIVERABLES` | ARTIST_AUDIT_TEMPLATE, BUSINESS_AUDIT_TEMPLATE, RELEASE_STRATEGY_TEMPLATE, ARTIST_ROADMAP_TEMPLATE, MONTHLY_REPORT_TEMPLATE | ✅ |
-| `02_CONTRACT` | Contract Summary Template | ⚠️ |
+| `02_CONTRACT` | Contract Summary Template | ✅ |
 | `05_COMMUNICATION` | MEETING_RECAP_TEMPLATE | ✅ |
 | `06_FINANCE` | MONTHLY_REPORT_TEMPLATE | ✅ |
-| `09_ARCHIVE` | Archive Register Template | ⚠️ |
+| `09_ARCHIVE` | Archive Register Template | ✅ |
 
 ---
 
@@ -111,11 +111,11 @@ Bron = spec (`ROOTS/04_DEALS.md` §6). De ROOTS-spec mandateert reeds twee templ
 | `00_START_HIER` | DEAL_MEMO_TEMPLATE | afgeleid | ✅ |
 | `01_RECHTEN_REGISTER` | RIGHTS_AUDIT_TEMPLATE | ROOTS §6 | ✅ |
 | `01_RECHTEN_REGISTER` | MUSIC_RIGHTS_REGISTER | afgeleid | ✅ |
-| `02_CONTRACTEN_BEWIJS` | Contract Summary Template, Approval Evidence Template | afgeleid | ⚠️ |
+| `02_CONTRACTEN_BEWIJS` | Contract Summary Template, Approval Evidence Template | afgeleid | ✅ |
 | `03_WAARDERING_VERKOOPPAKKET` | DEAL_MEMO_TEMPLATE, PARTNERSHIP_BRIEF_TEMPLATE | afgeleid | ✅ |
 | `04_OUTREACH_CLICKUP` | DEAL_NEGOTIATION_TEMPLATE | ROOTS §6 | ✅ |
 | `04_OUTREACH_CLICKUP` | DEAL_PIPELINE_CLICKUP_REFERENCE, ACTION_TRACKER_CLICKUP_REFERENCE | afgeleid | ✅ |
-| `99_ARCHIEF` | Archive Register Template | afgeleid | ⚠️ |
+| `99_ARCHIEF` | Archive Register Template | afgeleid | ✅ |
 
 ---
 
@@ -127,31 +127,33 @@ Bron = spec (`ROOTS/07_LEGAL.md` §6). `APPROVALS/CM_APPROVAL_REGISTER` is het c
 |---|---|---|---|
 | `LEGAL_REVIEW` | RIGHTS_AUDIT_TEMPLATE | ROOTS §6 | ✅ |
 | `LEGAL_REVIEW` | MEETING_RECAP_TEMPLATE | afgeleid | ✅ |
-| `CONTRACTS` | Contract Summary Template | afgeleid | ⚠️ |
-| `EVIDENCE` | Approval Evidence Template | afgeleid | ⚠️ |
+| `CONTRACTS` | Contract Summary Template | afgeleid | ✅ |
+| `EVIDENCE` | Approval Evidence Template | afgeleid | ✅ |
 | `APPROVALS/CM_APPROVAL_REGISTER` | *(geen — actief Google Sheet-register, geen template-doel)* | — | — |
 
 ---
 
-## 6. Openstaande template-gaps
+## 6. Gedichte template-gaps
 
-De volgende templates worden door Map Specifications vereist maar bestaan nog niet in de Template Library. Ze moeten via `TEMPLATES/99_TEMPLATE_GOVERNANCE/TEMPLATE_REVIEW_PROCESS.md` worden aangemaakt vóór operationeel gebruik:
+De onderstaande, eerder ontbrekende templates zijn in Sprint 6 aangemaakt in de Template Library. Alle statussen in deze kaart staan daarmee op ✅.
 
-- Intake Template
-- Contact Sheet Template
-- Contract Summary Template
-- Approval Evidence Template
-- Amendment Log Template
-- KPI Template
-- Jaarplan Template
-- Register Template (per domein: Release, Booking, Social, Press/EPK, Archive)
-- Version Log Template
+| Template | Locatie in Library |
+|---|---|
+| INTAKE_TEMPLATE | `01_SHARED_SERVICES/INTAKE_TEMPLATE.md` |
+| CONTACT_SHEET_TEMPLATE | `01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md` |
+| CONTRACT_SUMMARY_TEMPLATE | `01_SHARED_SERVICES/CONTRACT_SUMMARY_TEMPLATE.md` |
+| APPROVAL_EVIDENCE_TEMPLATE | `01_SHARED_SERVICES/APPROVAL_EVIDENCE_TEMPLATE.md` |
+| AMENDMENT_LOG_TEMPLATE | `01_SHARED_SERVICES/AMENDMENT_LOG_TEMPLATE.md` |
+| REGISTER_TEMPLATE (domein-parameter) | `01_SHARED_SERVICES/REGISTER_TEMPLATE.md` |
+| VERSION_LOG_TEMPLATE | `01_SHARED_SERVICES/VERSION_LOG_TEMPLATE.md` |
+| KPI_TEMPLATE | `02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md` |
+| JAARPLAN_TEMPLATE | `02_ARTIST_MANAGEMENT/JAARPLAN_TEMPLATE.md` |
 
-Het aanmaken van deze ontbrekende templates valt onder Sprint 6 en gebeurt pas na vrijgave van de freeze. Tot dan wordt geen gap gedicht; per Drive-map wordt te zijner tijd alleen het reeds beschikbare, afgeleide alternatief geplaatst en wordt de gap gelogd in `TEMPLATE_GAP_LOG`.
+Het generieke `REGISTER_TEMPLATE` dekt de domein-registers (Releases, Booking, Social, Press/EPK, Archive) via de `[DOMEIN]`-parameter; er worden geen parallelle registerformats aangemaakt.
 
 ## Governance
 
 - Deze kaart valt onder de governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
-- De kaart respecteert de actieve build-freeze: ze documenteert de gewenste koppeling maar autoriseert geen template-creatie of Drive-uitrol.
+- Sprint 6 is vrijgegeven; de kaart is leidend voor template-aanvulling en Drive-uitrol.
 - Waar een ROOTS-spec (`ROOTS/03_CLIENTS.md`, `ROOTS/04_DEALS.md`, `ROOTS/07_LEGAL.md`) al een template mandateert, is die mapping leidend; afgeleide regels wachten op review door Sophia als process owner.
 - Wijzigingen verlopen via branch, commit, review en Pull Request.
