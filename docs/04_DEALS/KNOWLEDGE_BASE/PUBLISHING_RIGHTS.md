@@ -53,6 +53,6 @@ Publishing bepaalt wie geld ontvangt uit performance, mechanicals, sync en admin
 
 - [MASTER_RIGHTS](MASTER_RIGHTS.md)
 - [SPLIT_SHEETS](SPLIT_SHEETS.md)
-- [BUMA_STEMRA](BUMA_STEMRA.md)
+- [BUMA_STEMRA](../../05_OPERATIONS/KNOWLEDGE_BASE/BUMA_STEMRA.md)
 - [PUBLISHING_DEALS](PUBLISHING_DEALS.md)
 - [SYNC_LICENSING](SYNC_LICENSING.md)

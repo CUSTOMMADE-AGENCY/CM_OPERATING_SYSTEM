@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 
 ---
 
@@ -70,7 +70,7 @@
 
 ## **6. TEMPLATES**
 
-Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor `08_MARKETING`. Campagne-templates worden intern beheerd in Canva (nog te bouwen).
+Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `08_MARKETING`. Campagne-templates worden intern beheerd in Canva (nog te bouwen).
 
 ---
 
@@ -78,8 +78,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | Kwartaalplanning of nieuwe campagne |
-| Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | Uitvoering en oplevering van een marketingcampagne |
+| Marketing Planning Flow | `docs/08_MARKETING/MARKETING_PLANNING_FLOW.md` | Kwartaalplanning of nieuwe campagne |
+| Campaign Delivery Flow | `docs/08_MARKETING/CAMPAIGN_DELIVERY_FLOW.md` | Uitvoering en oplevering van een marketingcampagne |
 
 ---
 
@@ -87,7 +87,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | Marketing- en campagnebeheer, brand guidelines, externe verzending |
+| Marketing SOP | `docs/08_MARKETING/MARKETING_SOP.md` | Marketing- en campagnebeheer, brand guidelines, externe verzending |
 
 ---
 
@@ -240,17 +240,17 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Brand Partnership Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |

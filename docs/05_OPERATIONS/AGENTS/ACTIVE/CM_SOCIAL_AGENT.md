@@ -84,8 +84,8 @@ Canva · Website CMS · Google Drive · Gmail · ClickUp · ChatGPT · Claude ·
 
 ## 09 SOP's
 
-- `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` en `CONTENT_PUBLICATION_FLOW.md`
-- `docs/03_SHARED_SERVICES/MARKETING_SOP.md` en `MARKETING_PLANNING_FLOW.md`
+- `docs/09_CONTENT/CONTENT_PUBLICATION_SOP.md` en `CONTENT_PUBLICATION_FLOW.md`
+- `docs/08_MARKETING/MARKETING_SOP.md` en `MARKETING_PLANNING_FLOW.md`
 - `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/08_MARKETING.md` en `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/09_CONTENT.md`
 
 ## 10 Workflows
@@ -101,7 +101,7 @@ Canva · Website CMS · Google Drive · Gmail · ClickUp · ChatGPT · Claude ·
 ## 11 Templates
 
 Contentkalender, social post, case, blog, nieuwsbrief, persbericht en
-partnership/sponsor content templates uit `docs/03_SHARED_SERVICES/TEMPLATES/`.
+partnership/sponsor content templates uit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`.
 
 ## 12 Escalaties
 

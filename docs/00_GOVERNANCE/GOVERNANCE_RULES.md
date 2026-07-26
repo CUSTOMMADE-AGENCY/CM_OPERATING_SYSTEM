@@ -74,7 +74,7 @@ Deze regels beschermen het operating system van Custommade Agency Int. B.V. tege
 
 Voor elk nieuw CM-project, clientdossier, dealdossier, catalog-sale dossier, artist-management dossier, buyer package, Data Room, Pipeline of AI-agent output geldt: bestaande CM-templates zijn leidend.
 
-1. Controleer vóór het aanmaken van nieuwe bestanden altijd eerst de goedgekeurde templatebron: `docs/03_SHARED_SERVICES/TEMPLATES/`.
+1. Controleer vóór het aanmaken van nieuwe bestanden altijd eerst de goedgekeurde templatebron: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`.
 2. Maak geen nieuwe losse spreadsheets, trackers, briefs, registers of dealdocumenten wanneer er al een bestaand CM-template voor hetzelfde doel bestaat.
 3. Gebruik bestaande templates door ze te kopiëren naar de operationele projectmap in Google Drive en ze case-specifiek te hernoemen.
 4. Nieuwe templates mogen alleen worden aangemaakt als er aantoonbaar geen passend bestaand template is.
@@ -88,7 +88,7 @@ Voor elk nieuw CM-project, clientdossier, dealdossier, catalog-sale dossier, art
    - waarom nieuwe bestanden nodig waren;
    - welke governance-afwijkingen of template-gaps zijn geconstateerd.
 8. Template-afwijkingen moeten worden teruggekoppeld naar GitHub zodat de bron-template kan worden verbeterd in plaats van dat er parallelle formats ontstaan.
-9. Duplicate template-locaties zijn niet toegestaan. Operationele templates worden uitsluitend beheerd onder `docs/03_SHARED_SERVICES/TEMPLATES/`.
+9. Duplicate template-locaties zijn niet toegestaan. Operationele templates worden uitsluitend beheerd onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`.
 10. Drive mag werkbare kopieën bevatten, maar GitHub blijft de schone source of truth voor template-governance, SOPs, Playbooks en systeemdocumentatie.
 
 ## Lean Nederlandse Drive-structuur voor CM-cases

@@ -48,6 +48,6 @@ CM checkt distributor contracten op term, notice, fees, recoupment, takedown pro
 
 ## Gerelateerd
 
-- [MASTER_RIGHTS](MASTER_RIGHTS.md)
-- [RECORD_LABEL_DEALS](RECORD_LABEL_DEALS.md)
+- [MASTER_RIGHTS](../../04_DEALS/KNOWLEDGE_BASE/MASTER_RIGHTS.md)
+- [RECORD_LABEL_DEALS](../../04_DEALS/KNOWLEDGE_BASE/RECORD_LABEL_DEALS.md)
 - [ROYALTY_STREAMS](ROYALTY_STREAMS.md)

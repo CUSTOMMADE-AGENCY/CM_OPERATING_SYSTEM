@@ -96,13 +96,13 @@ Opsomming van expliciet verboden documenttypen en -locaties in deze map. Minimaa
 
 ### **Hoofdstuk 5 — Submappen**
 
-Tabel of codeblok met de verplichte submapstructuur. Gebruik exact de namen uit `docs/04_SYSTEMS/DRIVE_MAPPING.md`.
+Tabel of codeblok met de verplichte submapstructuur. Gebruik exact de namen uit `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`.
 
 Per submap: naam en gebruiksdefinitie.
 
 ### **Hoofdstuk 6 — Templates**
 
-Tabel met van toepassing zijnde templates uit `docs/03_SHARED_SERVICES/TEMPLATES/`:
+Tabel met van toepassing zijnde templates uit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`:
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
@@ -231,23 +231,23 @@ Lijst van veelgemaakte fouten bij gebruik van deze map, met correctie per fout:
 
 Controlelijst voor governance-review:
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md`
-- [ ] Owner Agent klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`
+- [ ] Owner Agent klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
+- [ ] Templates zijn geregistreerd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveerregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveerregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 Gerelateerde documentatie:
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Document Standards | `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md` |
 
 ---
@@ -256,7 +256,7 @@ Gerelateerde documentatie:
 
 - Schrijf in professioneel Nederlands.
 - Gebruik exacte CM-agentnamen zoals geregistreerd in `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md`.
-- Gebruik exacte mapnamen zoals vastgelegd in `docs/04_SYSTEMS/DRIVE_MAPPING.md`.
+- Gebruik exacte mapnamen zoals vastgelegd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`.
 - Vermeld geen clientnamen, artiestennamen of vertrouwelijke data.
 - Gebruik `TBD` voor koppelingen die nog niet hard bestaan.
 - Geen vrije structuuruitbreiding: voeg geen hoofdstukken toe buiten de 22 verplichte.
@@ -291,10 +291,10 @@ Voorbeelden:
 
 ## **8. RELATIE MET ANDERE GOVERNANCE**
 
-- `docs/04_SYSTEMS/DRIVE_MAPPING.md` is de primaire bron voor submapstructuren en eigenaarschap.
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` is de primaire bron voor submapstructuren en eigenaarschap.
 - `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` legt de rootstructuur vast.
 - `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` legt agenteigenaarschap vast.
 - `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` legt approvalniveaus vast.
-- `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` legt templatekoppelingen vast.
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` legt templatekoppelingen vast.
 - `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` legt naamconventies vast.
 - Bij conflict tussen een Map Specification en deze bronnen: de bronnen zijn leidend.

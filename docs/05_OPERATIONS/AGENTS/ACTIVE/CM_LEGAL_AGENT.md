@@ -87,8 +87,8 @@ Google Drive · Gmail · ClickUp · Sheets · ChatGPT · Claude · GitHub.
 
 ## 09 SOP's
 
-- `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` en `LEGAL_REVIEW_FLOW.md`
-- `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md`
+- `docs/07_LEGAL/LEGAL_REVIEW_SOP.md` en `LEGAL_REVIEW_FLOW.md`
+- `docs/07_LEGAL/CONTRACT_LIFECYCLE_FLOW.md`
 - `docs/05_OPERATIONS/PLAYBOOKS/` voor deals en rechten; `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md`
 
 ## 10 Workflows
@@ -104,7 +104,7 @@ Google Drive · Gmail · ClickUp · Sheets · ChatGPT · Claude · GitHub.
 ## 11 Templates
 
 Contract review-, red flag-, rights audit-, deal memo- en NDA-templates uit
-`docs/03_SHARED_SERVICES/TEMPLATES/` en `docs/01_MASTER_BOUTIQUE/` (o.a. Music
+`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` en `docs/01_MASTER_BOUTIQUE/` (o.a. Music
 Rights Register).
 
 ## 12 Escalaties

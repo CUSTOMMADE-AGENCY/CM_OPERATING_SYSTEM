@@ -49,5 +49,5 @@ CM maakt bij audits en deals een revenue map: payor, right type, gross/net, fee,
 ## Gerelateerd
 
 - [MUSIC_REVENUE_MODEL](MUSIC_REVENUE_MODEL.md)
-- [MUSIC_VALUATION](MUSIC_VALUATION.md)
-- [DUE_DILIGENCE](DUE_DILIGENCE.md)
+- [MUSIC_VALUATION](../../04_DEALS/KNOWLEDGE_BASE/MUSIC_VALUATION.md)
+- [DUE_DILIGENCE](../../04_DEALS/KNOWLEDGE_BASE/DUE_DILIGENCE.md)

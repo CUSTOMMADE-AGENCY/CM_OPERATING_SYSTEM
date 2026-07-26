@@ -65,31 +65,16 @@ OS_CUSTOMMADE
 └── 99_ARCHIVE
 ```
 
-De detailstructuren binnen artist-, client- en dealdossiers worden afzonderlijk beoordeeld. Tijdens de Repository Recovery worden geen templatebesluiten genomen en worden geen templatebestanden verplaatst, hernoemd of verwijderd.
+De detailstructuren binnen artist-, client- en dealdossiers worden via de Map Specifications beheerd. De Template Library is uitsluitend als inhoudelijk ongewijzigde bron naar de canonieke Operations-locatie verplaatst; inhoudelijke templatebesluiten vallen buiten deze correctie.
 
 ## Recoverystatus
 
-Status: `REPOSITORY RECOVERY — FASE 2 OPERATIONS CONSOLIDATION — GOEDGEKEURD / GEMERGED`
+Status: `VOLLEDIGE GITHUB-DOMEINSTRUCTUUR 00–09 — GEREALISEERD, IN REVIEW`
 
-Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Als procesincident is geregistreerd dat PR #194 vóór de vereiste expliciete review is gemerged. Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
+De actieve GitHub-documentatie is op inhoud en owner-lane geclassificeerd. De voormalige tussenlagen `docs/03_SHARED_SERVICES/` en `docs/04_SYSTEMS/` zijn geen actieve domeinen meer. Algemene systeemdocumentatie staat onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/`; de inhoudelijk ongewijzigde, canonieke Template Library staat onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`. `99_ARCHIVE` blijft uitsluitend een Drive-root en is geen actief GitHub-domein.
 
-Build freeze:
-
-- governanceherstel toegestaan;
-- repositorystructuurherstel toegestaan;
-- documentatieconsolidatie toegestaan binnen Governance en repository-root;
-- geen nieuwe templates;
-- geen nieuwe Agents;
-- geen nieuwe Automations;
-- geen inhoudelijke uitbreiding buiten de recovery-scope;
-- geen migratie van Knowledge Base, Playbooks, Agents, Automations, Shared Services of business lanes zonder volgende expliciete goedkeuring.
-
-Tijdens recovery is `CM_REPOSITORY_RECOVERY_PLAN.md` leidend. De V1.0-baseline-ADR heeft tijdelijk status `SUPERSEDED_FOR_RECOVERY`. Map Specifications staan canoniek onder `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/`; historische governance staat onder `docs/00_GOVERNANCE/HISTORY/`.
+Map Specifications onder `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/` beschrijven Drive-roots en Drive-dossiers; zij zijn governance-specificaties en geen GitHub-businessdomeinen.
 
 ## Reviewritme
 
 Review na iedere structuurwijziging en minimaal elk kwartaal.
-
-## Fase 2-status
-
-Operations Consolidation is via PR #197 naar `main` gemerged. De zes categorieën onder `docs/05_OPERATIONS/` zijn de canonieke documentatielaag; externe-platformdocumentatie die niet als systeemkennis of Automation-documentatie is geclassificeerd, blijft onder `docs/04_SYSTEMS/`. Lane-specifieke Shared Services-documentatie en de tijdens recovery bevroren Template Library blijven op hun bestaande locatie totdat een afzonderlijk, expliciet goedgekeurd consolidatiebesluit een nieuwe owner-lane vastlegt.

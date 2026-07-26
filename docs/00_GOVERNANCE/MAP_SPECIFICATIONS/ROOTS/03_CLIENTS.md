@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/03_SHARED_SERVICES/` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/03_CLIENTS/` |
 
 ---
 
@@ -80,16 +80,16 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Client Profile Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Client Onboarding Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Email Instructions Template | `docs/03_SHARED_SERVICES/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Do Nots Template | `docs/03_SHARED_SERVICES/TEMPLATES/DO_NOTS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Artist Audit Template (client-facing) | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/ARTIST_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
-| Business Audit Template (client-facing) | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
-| Release Strategy Template (client-facing) | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/RELEASE_STRATEGY_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
-| Artist Roadmap Template (client-facing) | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/ARTIST_ROADMAP_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
-| Monthly Report Template (client-facing) | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/MONTHLY_REPORT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
-| Management Proposal Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/MANAGEMENT_PROPOSAL_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
+| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
+| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
+| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
+| Artist Audit Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/ARTIST_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Business Audit Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Release Strategy Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/RELEASE_STRATEGY_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Artist Roadmap Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/ARTIST_ROADMAP_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Monthly Report Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/MONTHLY_REPORT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
+| Management Proposal Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/MANAGEMENT_PROPOSAL_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
 
 ---
 
@@ -97,8 +97,8 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Client Onboarding Workflow | `docs/03_SHARED_SERVICES/CLIENT_ONBOARDING.md` | Nieuwe client start samenwerking met CM |
-| Proposal Workflow | `docs/03_SHARED_SERVICES/PROPOSAL_WORKFLOW.md` | Proposal voor nieuwe of bestaande client |
+| Client Onboarding Workflow | `docs/03_CLIENTS/CLIENT_ONBOARDING.md` | Nieuwe client start samenwerking met CM |
+| Proposal Workflow | `docs/03_CLIENTS/PROPOSAL_WORKFLOW.md` | Proposal voor nieuwe of bestaande client |
 | Communication Process | `docs/05_OPERATIONS/WORKFLOWS/COMMUNICATION_PROCESS.md` | Correspondentie met client |
 | Meeting Process | `docs/05_OPERATIONS/WORKFLOWS/MEETING_PROCESS.md` | Client-meeting of call |
 
@@ -196,7 +196,7 @@ Incorrect: `client rapport juni nieuw.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Workflows en SOPs | GitHub (`docs/03_SHARED_SERVICES/`) |
+| Workflows en SOPs | GitHub (`docs/03_CLIENTS/`) |
 | Clientdossiers en deliverables | Drive (`03_CLIENTS/[CLIENT]/`) |
 | Taakstatus en projectfases | ClickUp |
 | Correspondentie | Gmail (`info@custommade.agency`) |
@@ -272,22 +272,22 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM OPS AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Owner Agent (CM OPS AGENT) klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
+- [ ] Templates zijn geregistreerd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Shared Services | `docs/03_SHARED_SERVICES/` |
+| Shared Services | `docs/03_CLIENTS/` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

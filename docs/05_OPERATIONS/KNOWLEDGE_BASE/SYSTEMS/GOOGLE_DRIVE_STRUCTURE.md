@@ -88,11 +88,11 @@ Elke commerciële-relatiefolder gebruikt waar relevant dezelfde genummerde produ
 
 ## Shared Services versus client-specifieke instructies
 
-`docs/03_SHARED_SERVICES/` is een GitHub-documentatiedomein, geen Google Drive-rootfolder.
+`docs/03_CLIENTS/` is een GitHub-documentatiedomein, geen Google Drive-rootfolder.
 
 Artist- en client-specifieke instructies staan in de relevante Drive-folder. Bijvoorbeeld:
 
-- General email protocol source: `docs/03_SHARED_SERVICES/`
+- General email protocol source: `docs/03_CLIENTS/`
 - Goudtje-specific email instructions: `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/03_STRATEGY` of `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/GOUDTJE_GET_PAID/01_ADMIN`, afhankelijk van gebruik
 - New client intake/briefing material: `OS_CUSTOMMADE/03_CLIENTS/[Client Name]/01_ADMIN`
 - Lean deal package: `OS_CUSTOMMADE/04_DEALS/[Deal Name]/03_WAARDERING_VERKOOPPAKKET`

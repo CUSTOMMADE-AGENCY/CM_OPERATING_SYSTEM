@@ -478,7 +478,7 @@ function buildMarkdownReport_(audit) {
   lines.push('');
   lines.push('- docs/00_GOVERNANCE/AS_BUILT_DOCUMENTATION.md');
   lines.push('- docs/00_GOVERNANCE/DRIVE_STRUCTURE.md');
-  lines.push('- docs/04_SYSTEMS/DRIVE_MAPPING.md');
+  lines.push('- docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md');
   lines.push('- docs/00_GOVERNANCE/CM_OS_BASELINE_REVIEW.md');
   lines.push('- docs/00_GOVERNANCE/CM_OS_RELEASES.md');
   lines.push('');

@@ -49,6 +49,6 @@ CM analyseert labeldeals op ownership, term, options, delivery commitment, royal
 ## Gerelateerd
 
 - [MASTER_RIGHTS](MASTER_RIGHTS.md)
-- [DISTRIBUTION](DISTRIBUTION.md)
+- [DISTRIBUTION](../../05_OPERATIONS/KNOWLEDGE_BASE/DISTRIBUTION.md)
 - [DEAL_TERMS](DEAL_TERMS.md)
 - [RED_FLAGS_LIBRARY](RED_FLAGS_LIBRARY.md)

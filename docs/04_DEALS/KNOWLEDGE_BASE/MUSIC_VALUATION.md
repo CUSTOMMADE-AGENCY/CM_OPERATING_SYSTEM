@@ -48,6 +48,6 @@ CM maakt low/base/high cases, scheidt inkomstenstromen en koppelt elk risico aan
 
 ## Gerelateerd
 
-- [MUSIC_REVENUE_MODEL](MUSIC_REVENUE_MODEL.md)
+- [MUSIC_REVENUE_MODEL](../../05_OPERATIONS/KNOWLEDGE_BASE/MUSIC_REVENUE_MODEL.md)
 - [CATALOG_ACQUISITIONS](CATALOG_ACQUISITIONS.md)
 - [DEAL_TERMS](DEAL_TERMS.md)

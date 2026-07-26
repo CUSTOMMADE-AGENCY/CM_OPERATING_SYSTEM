@@ -106,7 +106,7 @@ Maak of gebruik minimaal onderstaande Gmail templates volgens `CM - Lane - Purpo
 
 ## ClickUp task template documents
 
-De praktische ClickUp task templates voor Artist Management staan in `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/`. Deze documenten zijn de bouwinstructies voor taken, custom fields, subtasks, checklists, approval owners, GitHub workflow-links, Drive folders en Gmail templates.
+De praktische ClickUp task templates voor Artist Management staan in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/`. Deze documenten zijn de bouwinstructies voor taken, custom fields, subtasks, checklists, approval owners, GitHub workflow-links, Drive folders en Gmail templates.
 
 # Artist Management mappings
 
@@ -120,7 +120,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Onboarding` |
 | Task template name | `CM - Artist Management - Artist Onboarding Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ONBOARDING_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/ARTIST_ONBOARDING_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Workspace setup`, `Ready for Monthly Management` |
 | Required subtasks | Engagement basis bevestigen; Google Drive-artistmap aanmaken; artistinformatie en Assets verzamelen; intakegesprek plannen; rollen en approvals vastleggen; eerste artist roadmap bouwen; execution backlog aanmaken; Onboarding summary versturen; Monthly Management Flow-startpunt aanmaken |
 | Approval owner | Artist manager voor operationele inrichting; artist of aangewezen decision owner voor Scope, budget, public commitments en eerste artist roadmap |
@@ -138,7 +138,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brand Audit` |
 | Task template name | `CM - Artist Management - Brand Audit Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/BRAND_AUDIT_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/BRAND_AUDIT_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Findings opgesteld`, `Action list klaar` |
 | Required subtasks | Audit brief bevestigen; materialen verzamelen; positioning en story reviewen; visuele identiteit reviewen; content en platform presence reviewen; commercial en partner fit reviewen; gaps en risico's identificeren; verbeteracties prioriteren; Brand Audit-memo finaliseren |
 | Approval owner | CM strategy lead voor auditkwaliteit; artist voor public-facing recommendations en prioriteiten |
@@ -156,7 +156,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brandbook` |
 | Task template name | `CM - Artist Management - Artist Brandbook Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_BRANDBOOK_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/ARTIST_BRANDBOOK_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Discovery`, `Draft strategic direction`, `Draft visual direction`, `Distributed` |
 | Required subtasks | Brandbook brief bevestigen; source materials organiseren; artist/stakeholder discovery uitvoeren; artist positioning draften; artist story draften; tone of voice definiëren; visual identity guidance maken; content pillars maken; collaboration and partner use rules vastleggen; interne review uitvoeren; artist review verwerken; final approval vastleggen; approved Brandbook distribueren en reviewmoment plannen |
 | Approval owner | CM strategy lead voor Brandbook-Workflow; artist voor final approval en usage restrictions |
@@ -174,7 +174,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Roadmap` |
 | Task template name | `CM - Artist Management - Artist Roadmap Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_ROADMAP_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/ARTIST_ROADMAP_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Roadmap horizon bevestigd`, `Workstreams gedefinieerd`, `Backlog`, `Active priority` |
 | Required subtasks | Roadmap horizon bevestigen; workstreams definiëren; outcomes prioriteren; owners en deadlines vastleggen; roadmap aan ClickUp koppelen; risks en assumptions reviewen; approvals bevestigen; monthly cadence koppelen; roadmap-versies archiveren |
 | Approval owner | Artist manager voor roadmapstructuur; artist of aangewezen decision owner voor priorities, budget, Scope changes en strategic decisions |
@@ -192,7 +192,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Release Strategy - [Release Name]` |
 | Task template name | `CM - Artist Management - Release Strategy Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/RELEASE_STRATEGY_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/RELEASE_STRATEGY_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Release intake`, `Campaign planning`, `Launch readiness`, `Post-release review` |
 | Required subtasks | Release Scope en objective bevestigen; release inputs verzamelen; audience, positioning en messaging bepalen; timeline en milestones bouwen; channel owners vastleggen; budget en approvals checken; release checklist uitvoeren; launch readiness review plannen; go/no-go bevestigen; post-release results en learnings reviewen |
 | Approval owner | Release manager of artist manager voor planning; artist voor messaging, budget, release commitments en go/no-go |
@@ -210,7 +210,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Monthly Management - [YYYY-MM]` |
 | Task template name | `CM - Artist Management - Monthly Management Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/MONTHLY_MANAGEMENT_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/MONTHLY_MANAGEMENT_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Preparation`, `Monthly review`, `Follow-up`, `Escalated` |
 | Required subtasks | Vorige maand reviewen; completed work en missed deadlines bevestigen; actieve workstreams reviewen; artist goals en constraints reviewen; rights, royalties en deals reviewen; budget en commercial items reviewen; prioriteiten voor volgende maand bevestigen; ClickUp owners, dates, dependencies en statuses bijwerken; monthly summary versturen; evidence en approvals archiveren |
 | Approval owner | Artist manager voor monthly cycle; artist of aangewezen decision owner voor prioriteiten, budgetten, public commitments en strategic decisions |
@@ -228,7 +228,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Deal Negotiation - [Counterparty / Deal]` |
 | Task template name | `CM - Artist Management - Deal Negotiation Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Opportunity registered`, `Fit Check`, `Counsel review`, `Negotiation`, `Obligations active`, `Declined` |
 | Required subtasks | Opportunity registreren; Fit Check uitvoeren; deal inputs verzamelen; red flags identificeren; negotiation position bepalen; legal en specialist review coördineren; negotiation tracker bijwerken; material terms documenteren; final approval bevestigen; final documents archiveren; obligations tracker activeren |
 | Approval owner | Artist voor deal authority en final approval; counsel voor juridische review wanneer rights transfer, legal risk of signature speelt; artist manager voor coordination |
@@ -246,7 +246,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Brand Partnership - [Brand]` |
 | Task template name | `CM - Artist Management - Brand Partnership Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/BRAND_PARTNERSHIP_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/BRAND_PARTNERSHIP_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Lead registered`, `Partnership Fit Check`, `Negotiation`, `Execution`, `Proof of performance`, `Declined / parked` |
 | Required subtasks | Lead in Pipeline registreren; partnership Fit Check uitvoeren; restrictions en conflicts checken; partnership concept definiëren; commercial terms bepalen; negotiation en legal review coördineren; artist approval verkrijgen; execution checklist aanmaken; deliverables volgen; reporting/proof of performance package opleveren; partnership evalueren |
 | Approval owner | Artist voor brand fit, deliverables, usage, exclusivity en final approval; artist manager of brand partnership lead voor commercial coordination; counsel bij legal/signature risk |
@@ -264,7 +264,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 | ClickUp Folder | `Artist Management` |
 | ClickUp List | `AM - [Artist Name] - Artist Offboarding` |
 | Task template name | `CM - Artist Management - Artist Offboarding Flow` |
-| ClickUp template document | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/ARTIST_OFFBOARDING_TEMPLATE.md` |
+| ClickUp template document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/ARTIST_OFFBOARDING_TEMPLATE.md` |
 | Required statuses | Artist Management statusset + `Offboarding trigger`, `Close-out`, `Handover`, `Access review`, `Archived`, `Escalated` |
 | Required subtasks | Offboarding trigger bevestigen; agreement en obligations reviewen; close-out task list maken; deliverables afsluiten; open workstreams reviewen; handover package voorbereiden; access en confidentiality reviewen; final summary versturen; Success Fee triggers en open invoices checken; internal lessons learned vastleggen; workspace archiveren |
 | Approval owner | Artist manager voor close-out execution; CM leadership bij conflict, legal exposure, Success Fee of unresolved obligations; artist of decision owner voor handover acceptance |

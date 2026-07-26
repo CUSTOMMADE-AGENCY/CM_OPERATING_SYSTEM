@@ -48,7 +48,7 @@ CM beoordeelt brand fit, deliverables, usage rights, fee, exclusiviteit, categor
 
 ## Gerelateerd
 
-- [LICENSING](LICENSING.md)
-- [SYNC_LICENSING](SYNC_LICENSING.md)
+- [LICENSING](../../04_DEALS/KNOWLEDGE_BASE/LICENSING.md)
+- [SYNC_LICENSING](../../04_DEALS/KNOWLEDGE_BASE/SYNC_LICENSING.md)
 - [MANAGEMENT_DEALS](MANAGEMENT_DEALS.md)
-- [DEAL_TERMS](DEAL_TERMS.md)
+- [DEAL_TERMS](../../04_DEALS/KNOWLEDGE_BASE/DEAL_TERMS.md)
