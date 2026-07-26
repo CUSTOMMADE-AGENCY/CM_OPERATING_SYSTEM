@@ -83,8 +83,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
 | Finance Intake Flow (artist) | TBD | Finance-intake voor artist; output naar `02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` |
-| Finance Reconciliation Flow | `docs/03_SHARED_SERVICES/FINANCE_RECONCILIATION_FLOW.md` | Periodieke finance-reconciliatie |
-| Year End Finance Flow | `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md` | Jaarafsluiting en jaarrapportage |
+| Finance Reconciliation Flow | `docs/06_FINANCE/FINANCE_RECONCILIATION_FLOW.md` | Periodieke finance-reconciliatie |
+| Year End Finance Flow | `docs/06_FINANCE/YEAR_END_FINANCE_FLOW.md` | Jaarafsluiting en jaarrapportage |
 
 ---
 
@@ -92,7 +92,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | Finance-intake en -verwerking: Moneybird-exports, bankafschriften, BTW-aangifte-voorbereiding |
+| Finance Intake SOP | `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` | Finance-intake en -verwerking: Moneybird-exports, bankafschriften, BTW-aangifte-voorbereiding |
 
 ---
 

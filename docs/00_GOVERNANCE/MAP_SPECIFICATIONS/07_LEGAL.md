@@ -97,8 +97,8 @@
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Contract Lifecycle Flow | `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md` | Opstellen, ondertekening en beheer van contracten |
-| Legal Review Flow | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_FLOW.md` | Juridische beoordeling van documenten of overeenkomsten |
+| Contract Lifecycle Flow | `docs/07_LEGAL/CONTRACT_LIFECYCLE_FLOW.md` | Opstellen, ondertekening en beheer van contracten |
+| Legal Review Flow | `docs/07_LEGAL/LEGAL_REVIEW_FLOW.md` | Juridische beoordeling van documenten of overeenkomsten |
 
 ---
 
@@ -106,7 +106,7 @@
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Legal Review SOP | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` | Juridische review van contracten en documenten, Approval Register-beheer |
+| Legal Review SOP | `docs/07_LEGAL/LEGAL_REVIEW_SOP.md` | Juridische review van contracten en documenten, Approval Register-beheer |
 
 ---
 

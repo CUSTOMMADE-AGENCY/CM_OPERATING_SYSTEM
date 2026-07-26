@@ -2,21 +2,19 @@
 
 ## Doel
 
-Shared Services bevat herbruikbare standaarden die zowel Master Boutique als Artist Management ondersteunen, zonder lane-specifieke workflows te vermengen.
+Shared Services bevat na Fase 3 alleen de bevroren Template Library, de legacy redirect naar het Template Register en het gemengde Email Templates Register dat owner review vereist.
 
-## Reikwijdte
+## Actieve business lanes
 
-- Client onboarding-standaarden en client folder-standaarden.
-- Proposal-, meeting- en communicatieprocessen.
-- Finance-, legal-, archive- en process-change-flows.
-- Marketing- en content-publicatie-standaarden.
-- Client close-out-standaarden.
-- De centrale Template Library onder `TEMPLATES/`.
+- Clients: `docs/03_CLIENTS/`
+- Deals: `docs/04_DEALS/`
+- Finance: `docs/06_FINANCE/`
+- Legal: `docs/07_LEGAL/`
+- Marketing: `docs/08_MARKETING/`
+- Content: `docs/09_CONTENT/`
 
-## Regel
+Marketing bepaalt waarom, doelgroep, positionering, campagne en groei. Content bepaalt wat, format, productie, publicatie en hergebruik.
 
-Als een proces door beide revenue engines wordt gedeeld, hoort het hier. Is een proces specifiek voor transacties of artist-services, houd het dan in de betreffende lane.
+## Templatefreeze en review
 
-## Template Library
-
-Controleer altijd eerst `docs/03_SHARED_SERVICES/TEMPLATES/00_TEMPLATE_INDEX.md` voordat je nieuwe documenten, trackers, registers of deliverables aanmaakt. GitHub is leidend voor template-governance en template-specificaties.
+`TEMPLATES/` en `TEMPLATE_REGISTER.md` blijven ongewijzigd. `EMAIL_TEMPLATES.md` is **REVIEW_NODIG** omdat het meerdere lanes combineert en template-inhoud in Fase 3 niet mag worden gewijzigd of verplaatst.

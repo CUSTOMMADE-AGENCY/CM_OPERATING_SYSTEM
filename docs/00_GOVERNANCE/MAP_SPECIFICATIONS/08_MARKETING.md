@@ -78,8 +78,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | Kwartaalplanning of nieuwe campagne |
-| Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | Uitvoering en oplevering van een marketingcampagne |
+| Marketing Planning Flow | `docs/08_MARKETING/MARKETING_PLANNING_FLOW.md` | Kwartaalplanning of nieuwe campagne |
+| Campaign Delivery Flow | `docs/09_CONTENT/CAMPAIGN_DELIVERY_FLOW.md` | Uitvoering en oplevering van een marketingcampagne |
 
 ---
 
@@ -87,7 +87,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | Marketing- en campagnebeheer, brand guidelines, externe verzending |
+| Marketing SOP | `docs/08_MARKETING/MARKETING_SOP.md` | Marketing- en campagnebeheer, brand guidelines, externe verzending |
 
 ---
 

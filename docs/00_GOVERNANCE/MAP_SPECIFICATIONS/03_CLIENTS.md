@@ -97,8 +97,8 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Client Onboarding Workflow | `docs/03_SHARED_SERVICES/CLIENT_ONBOARDING.md` | Nieuwe client start samenwerking met CM |
-| Proposal Workflow | `docs/03_SHARED_SERVICES/PROPOSAL_WORKFLOW.md` | Proposal voor nieuwe of bestaande client |
+| Client Onboarding Workflow | `docs/03_CLIENTS/CLIENT_ONBOARDING.md` | Nieuwe client start samenwerking met CM |
+| Proposal Workflow | `docs/03_CLIENTS/PROPOSAL_WORKFLOW.md` | Proposal voor nieuwe of bestaande client |
 | Communication Process | `docs/05_OPERATIONS/WORKFLOWS/COMMUNICATION_PROCESS.md` | Correspondentie met client |
 | Meeting Process | `docs/05_OPERATIONS/WORKFLOWS/MEETING_PROCESS.md` | Client-meeting of call |
 

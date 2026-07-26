@@ -14,7 +14,7 @@ Deze audit controleert uitsluitend structuur, governance, compliance en risico's
 - `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`
 - `docs/04_SYSTEMS/DRIVE_MAPPING.md`
 - `docs/02_ARTIST_MANAGEMENT/ARTIST_FOLDER_STANDARD.md`
-- `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md`
+- `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md`
 
 ## Complete audit-baseline
 

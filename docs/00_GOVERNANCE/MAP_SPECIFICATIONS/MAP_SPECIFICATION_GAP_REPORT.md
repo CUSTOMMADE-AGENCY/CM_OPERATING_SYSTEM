@@ -73,10 +73,10 @@ Opgelost op 2026-07-01: 7 SOPs aangemaakt in `docs/03_SHARED_SERVICES/` en Map S
 |---|---|---|
 | Admin SOP | `docs/05_OPERATIONS/SOPS/ADMIN_SOP.md` | CM CONTROL AGENT |
 | Operations SOP | `docs/05_OPERATIONS/SOPS/OPERATIONS_SOP.md` | CM CONTROL AGENT |
-| Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | CM MONEY AGENT |
-| Legal Review SOP | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` | CM LEGAL AGENT |
-| Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | CM SOCIAL AGENT |
-| Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | CM SOCIAL AGENT |
+| Finance Intake SOP | `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` | CM MONEY AGENT |
+| Legal Review SOP | `docs/07_LEGAL/LEGAL_REVIEW_SOP.md` | CM LEGAL AGENT |
+| Marketing SOP | `docs/08_MARKETING/MARKETING_SOP.md` | CM SOCIAL AGENT |
+| Content Publication SOP | `docs/09_CONTENT/CONTENT_PUBLICATION_SOP.md` | CM SOCIAL AGENT |
 | Archive SOP | `docs/05_OPERATIONS/SOPS/ARCHIVE_SOP.md` | CM VAULT AGENT |
 
 ---
@@ -101,13 +101,13 @@ Opgelost op 2026-07-01: 11 Workflows aangemaakt in `docs/03_SHARED_SERVICES/` en
 | Intern Onboarding Flow | `docs/05_OPERATIONS/WORKFLOWS/INTERN_ONBOARDING_FLOW.md` | CM CONTROL AGENT |
 | Governance Export Flow | `docs/05_OPERATIONS/WORKFLOWS/GOVERNANCE_EXPORT_FLOW.md` | CM CONTROL AGENT |
 | Process Change Flow | `docs/05_OPERATIONS/WORKFLOWS/PROCESS_CHANGE_FLOW.md` | CM CONTROL AGENT |
-| Finance Reconciliation Flow | `docs/03_SHARED_SERVICES/FINANCE_RECONCILIATION_FLOW.md` | CM MONEY AGENT |
-| Year End Finance Flow | `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md` | CM MONEY AGENT |
-| Contract Lifecycle Flow | `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md` | CM LEGAL AGENT |
-| Legal Review Flow | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_FLOW.md` | CM LEGAL AGENT |
-| Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | CM SOCIAL AGENT |
-| Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | CM SOCIAL AGENT |
-| Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | CM SOCIAL AGENT |
+| Finance Reconciliation Flow | `docs/06_FINANCE/FINANCE_RECONCILIATION_FLOW.md` | CM MONEY AGENT |
+| Year End Finance Flow | `docs/06_FINANCE/YEAR_END_FINANCE_FLOW.md` | CM MONEY AGENT |
+| Contract Lifecycle Flow | `docs/07_LEGAL/CONTRACT_LIFECYCLE_FLOW.md` | CM LEGAL AGENT |
+| Legal Review Flow | `docs/07_LEGAL/LEGAL_REVIEW_FLOW.md` | CM LEGAL AGENT |
+| Marketing Planning Flow | `docs/08_MARKETING/MARKETING_PLANNING_FLOW.md` | CM SOCIAL AGENT |
+| Campaign Delivery Flow | `docs/09_CONTENT/CAMPAIGN_DELIVERY_FLOW.md` | CM SOCIAL AGENT |
+| Content Publication Flow | `docs/09_CONTENT/CONTENT_PUBLICATION_FLOW.md` | CM SOCIAL AGENT |
 | Archive Flow | `docs/05_OPERATIONS/WORKFLOWS/ARCHIVE_FLOW.md` | CM VAULT AGENT |
 
 ---
@@ -160,14 +160,14 @@ CM SOCIAL AGENT bouwt de Canva Brand Kit voor CM. Na oplevering: vermelden in de
 |---|---|
 | Status | Open |
 | Prioriteit | Middel |
-| Betrokken bestand | `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` (ontbreekt) |
+| Betrokken bestand | `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` (ontbreekt) |
 | Eigenaar | CM OPS AGENT |
 
 **Beschrijving:**
 `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` bestaat en documenteert de artistfolder-standaard. Een vergelijkbaar document voor de clientfolder-standaard (`03_CLIENTS`) ontbreekt. De `03_CLIENTS.md` Map Specification verwijst naar de Drive Mapping voor de submapstructuur, maar een aparte CLIENT_FOLDER_STANDARD.md is niet aangemaakt.
 
 **Actie:**
-CM OPS AGENT maakt `docs/03_SHARED_SERVICES/CLIENT_FOLDER_STANDARD.md` aan conform de schrijfstandaard in `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md`, of besluit dat de huidige DRIVE_MAPPING.md-sectie voldoende is.
+CM OPS AGENT maakt `docs/03_CLIENTS/CLIENT_FOLDER_STANDARD.md` aan conform de schrijfstandaard in `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md`, of besluit dat de huidige DRIVE_MAPPING.md-sectie voldoende is.
 
 ---
 

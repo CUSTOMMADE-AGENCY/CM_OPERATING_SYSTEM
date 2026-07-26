@@ -31,7 +31,7 @@ Deze Workflow start na goedkeuring van de Marketing Planning Flow. De Workflow d
 ### Stap 1 — Productie starten
 
 1. Produceer campagne-assets conform de goedgekeurde briefing.
-2. Sla werkversies op in het campagnedossier in `08_MARKETING`.
+2. Sla werkversies op in het contentproductiedossier in `09_CONTENT`.
 3. Markeer ClickUp-taken als `In uitvoering`.
 
 ### Stap 2 — Interne review
@@ -41,7 +41,7 @@ Deze Workflow start na goedkeuring van de Marketing Planning Flow. De Workflow d
    - Correctheid van boodschap en tone of voice
    - Volledigheid van deliverables conform briefing
 2. Feedback verwerken → nieuwe versie opslaan (geen `v2` of `final` in bestandsnaam; gebruik datumversie).
-3. Superseded versies markeren en archiveren in `08_MARKETING/99_ARCHIEF`.
+3. Superseded versies markeren en archiveren in `09_CONTENT/99_ARCHIEF`.
 
 ### Stap 3 — Sophia-approval voor externe publicatie
 
@@ -59,7 +59,7 @@ Deze Workflow start na goedkeuring van de Marketing Planning Flow. De Workflow d
 
 1. Controleer of alle deliverables zijn opgeleverd.
 2. Stel campagne-afsluitingsnotitie op: resultaten, opmerkingen, aanbevelingen.
-3. Archiveer afgerond campagnedossier naar `08_MARKETING/99_ARCHIEF`.
+3. Archiveer afgerond campagnedossier naar `09_CONTENT/99_ARCHIEF`.
 4. Sluit alle ClickUp-taken.
 
 ---
@@ -74,10 +74,10 @@ Deze Workflow start na goedkeuring van de Marketing Planning Flow. De Workflow d
 
 ## **Deliverables**
 
-- Geproduceerde en goedgekeurde campagne-assets in `08_MARKETING`
+- Geproduceerde en goedgekeurde campagne-assets in `09_CONTENT`
 - Bewijs van Sophia-goedkeuring en publicatiedatum
 - Campagne-afsluitingsnotitie
-- Gearchiveerd campagnedossier in `08_MARKETING/99_ARCHIEF`
+- Gearchiveerd campagnedossier in `09_CONTENT/99_ARCHIEF`
 
 ---
 
@@ -101,6 +101,6 @@ Escaleer naar Sophia bij:
 ## **Outputs**
 
 - Gepubliceerde of verzonden campagne-assets
-- Bewijs opgeslagen in `08_MARKETING`
+- Publicatiebewijs opgeslagen in `09_CONTENT`
 - Gearchiveerd campagnedossier
 - ClickUp-taken gesloten

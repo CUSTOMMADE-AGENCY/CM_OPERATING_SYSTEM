@@ -80,7 +80,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 |---|---|---|
 | Content productie workflow (artist) | `docs/02_ARTIST_MANAGEMENT/04_CONTENT_PRODUCTIE_WORKFLOW.md` | Contentproductie (artistspecifiek; als referentie voor CM-eigen content) |
 | Social publishing workflow (artist) | `docs/02_ARTIST_MANAGEMENT/05_SOCIAL_PUBLISHING_WORKFLOW.md` | Publicatie (artistspecifiek; als referentie) |
-| Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | Publicatie namens CM op eigen kanalen |
+| Content Publication Flow | `docs/09_CONTENT/CONTENT_PUBLICATION_FLOW.md` | Publicatie namens CM op eigen kanalen |
 
 ---
 
@@ -88,7 +88,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | Publicatieproces voor CM's eigen kanalen en contentkalenderbeheer |
+| Content Publication SOP | `docs/09_CONTENT/CONTENT_PUBLICATION_SOP.md` | Publicatieproces voor CM's eigen kanalen en contentkalenderbeheer |
 
 ---
 
