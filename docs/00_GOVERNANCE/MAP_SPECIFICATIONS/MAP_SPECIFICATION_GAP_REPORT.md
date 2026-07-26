@@ -307,6 +307,131 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 
 ---
 
+### **GAP-016: Google Drive-scripts niet gesynchroniseerd met DRIVE_MAPPING.md**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Hoog |
+| Betrokken bestanden | `scripts/google-drive/create-os-custommade-target-structure.gs`, `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` |
+| Eigenaar | CM FLOW AGENT |
+
+**Beschrijving:**
+Uit de mapgelijkheidscontrole (`docs/00_GOVERNANCE/HISTORY/AUDITS/MAP_EQUALITY_CONTROL_REPORT.md`) blijkt dat de Google Drive target-structure scripts een verouderde/afwijkende submapstructuur aanmaken bij `00_ADMIN` (`INBOX`/`HR`/`CURSUS_MASTERCLASSES` i.p.v. `01_INBOX_REVIEW`/`04_REPORTS`/`05_APPROVALS`), `03_CLIENTS` (`00_START_HIER`/`99_ARCHIEF` i.p.v. de clientdossierstructuur), `07_LEGAL` (`CONTRACTEN` i.p.v. `CONTRACTS`; geen `LEGAL_REVIEW`/`EVIDENCE`) en `99_ARCHIVE` (`REVIEW_HOLD`/`99_ARCHIEF` i.p.v. `REVIEW_HOLD_OLD_STRUCTURE`/`MIGRATION_LOGS`).
+
+Daarnaast bevat `create-os-custommade-target-structure.gs` (B5) twee plaatsingsdefecten: de negen artist-submappen (`02_ARTIST_MANAGEMENT`) en de zes deal-submappen (`04_DEALS`) worden direct onder de root aangemaakt, terwijl zowel B1 als B2 een tussenliggende `[ARTIST_NAME]`- respectievelijk `[DEAL_OR_ASSET_NAME]`-dossiermap vereisen. De remediatie mag deze mappen niet structureel onjuist laten aanmaken.
+
+Bovendien maken B5/B6 submappen aan onder `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT`, terwijl de leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, waarmee `DRIVE_MAPPING.md` exact overeenkomt) deze roots root-only houdt.
+
+**Actie:**
+CM FLOW AGENT bevestigt eerst de norm met CM CONTROL AGENT en werkt daarna de scripts bij naar de goedgekeurde structuur uit `DRIVE_STRUCTURE.md`, inclusief het herstellen van de artist-/deal-nesting onder de dossiermap. Betreft de live Drive-structuur: uitvoeren volgens het geldende approval level.
+
+---
+
+### **GAP-017: 07_LEGAL.md Map Specification en DRIVE_MAPPING.md niet gelijk**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Middel |
+| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md`, `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
+| Eigenaar | CM LEGAL AGENT |
+
+**Beschrijving:**
+`07_LEGAL.md` hoofdstuk 5 specificeert `00_START_HIER`, `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `NDA`, `PARTNERS`, `FREELANCERS`, `ARTIESTEN`, `KLANTEN`, `LEVERANCIERS`, `RIGHTS`, `LEGAL_REVIEW`, `EVIDENCE`, `99_ARCHIEF`. De leidende Drive-baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, exact gelijk aan `DRIVE_MAPPING.md`) vermeldt voor `07_LEGAL` alleen `APPROVALS/CM_APPROVAL_REGISTER`, `CONTRACTS`, `LEGAL_REVIEW`, `EVIDENCE`. De Map Specification is dus rijker dan de baseline. Beide documenten claimen consistentie (zie GAP-002) maar zijn dat niet.
+
+**Actie:**
+CM LEGAL AGENT beslist welke submappen live bestaan en stemt `07_LEGAL.md` af op de baseline (of vult de baseline aan indien de extra submappen live moeten bestaan).
+
+---
+
+### **GAP-018: ARTIST_FOLDER Map Specifications missen 06_FINANCE**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Middel |
+| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ARTIST_FOLDER/README.md` (en ontbrekend `06_FINANCE.md`) |
+| Eigenaar | CM OPS AGENT |
+
+**Beschrijving:**
+De artistdossierstructuur in `DRIVE_MAPPING.md` bevat `06_FINANCE`, maar `ARTIST_FOLDER/README.md` lijst deze submap niet en er is geen `06_FINANCE.md` Map Specification. De overige acht submappen (`01_ADMIN`, `02_CONTRACT`, `03_STRATEGY`, `04_RELEASES`, `05_BOOKING`, `07_SOCIALMEDIA`, `08_PRESS_EPK`, `09_ARCHIVE`) hebben wel een spec.
+
+**Actie:**
+CM OPS AGENT maakt `06_FINANCE.md` aan conform `MAP_SPECIFICATION_STANDARD.md` en neemt deze op in de navigatie, of documenteert waarom deze submap geen eigen spec heeft.
+
+---
+
+### **GAP-019: create-cm-drive-structure.gs is corrupt**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Hoog |
+| Betrokken bestand | `scripts/google-drive/create-cm-drive-structure.gs` |
+| Eigenaar | CM FLOW AGENT |
+
+**Beschrijving:**
+Het bestand bevat twee samengevoegde scripts en is syntactisch ongeldig: functie `normalizeFolderName_` heeft geen afsluitende `}`, een JSDoc-comment begint zonder `/**`-opener, en `createCmDriveStructure`/`getOrCreateFolder` zijn dubbel gedeclareerd. Daarnaast wijkt `CM_CLIENT_FOLDERS` (`02_BRAND`, `04_DEALS_RIGHTS`, `05_RELEASES`, `06_CONTENT`, `07_FINANCE`, `08_DELIVERABLES`) volledig af van de clientdossiernorm in `DRIVE_MAPPING.md`.
+
+Ook na de syntaxreparatie is het script onvolledig: het `CM_DRIVE_STRUCTURE`-object laat alle roots behalve `02_ARTIST_MANAGEMENT` leeg (`[]`), terwijl `DRIVE_MAPPING.md` en de Map Specifications submappen vereisen voor onder meer `00_ADMIN`, `07_LEGAL` en `99_ARCHIVE`. Omdat B4 is gelabeld als "PRIMARY for approved Drive build", zou dit script na herstel een onvolledige goedgekeurde structuur aanmaken.
+
+**Actie:**
+CM FLOW AGENT splitst het bestand in twee geldige scripts (of verwijdert het overtollige deel), stemt de clientstructuur af op de norm en vult `CM_DRIVE_STRUCTURE` aan met de vereiste submappen per root conform de vastgestelde norm.
+
+---
+
+### **GAP-020: Conflicterende target-structure scripts met identieke symboolnamen**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Middel |
+| Betrokken bestanden | `scripts/google-drive/create-os-custommade-target-structure.gs`, `scripts/google-drive/OS_CUSTOMMADE_target_structure.gs` |
+| Eigenaar | CM FLOW AGENT |
+
+**Beschrijving:**
+Beide scripts declareren dezelfde constanten (`ROOT_FOLDER_ID`, `OS_CUSTOMMADE_TARGET_STRUCTURE`) en gelijknamige functies (`createOsCustommadeTargetStructure`, `getOrCreateTargetFolder_`, e.a.) met verschillende structuurinhoud. In één Apps Script-project leidt dit tot duplicate-declaration collisions, en het is onduidelijk welk script leidend is.
+
+**Actie:**
+CM FLOW AGENT bepaalt welk script het canonieke target-structure script is, verwijdert of hernoemt het andere, en documenteert de governance-status.
+
+---
+
+### **GAP-021: Map Specifications tonen submappen die niet in de leidende Drive-baseline staan**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Hoog |
+| Betrokken bestanden | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/{01_MASTER_BOUTIQUE,05_OPERATIONS,06_FINANCE,08_MARKETING,09_CONTENT}.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
+| Eigenaar | CM CONTROL AGENT |
+
+**Beschrijving:**
+De leidende Drive production baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, exact gelijk aan `DRIVE_MAPPING.md`) houdt `01_MASTER_BOUTIQUE`, `05_OPERATIONS`, `06_FINANCE`, `08_MARKETING` en `09_CONTENT` bewust root-only. De Map Specifications (hoofdstuk 5) tonen voor deze vijf roots echter een volledige submapstructuur (bijv. `05_OPERATIONS`: `00_START_HIER`, `HR`, `TRAINING`, `TOOLS`, `PROCESSES`, `TEMPLATES_REFERENCE`, `99_ARCHIEF`). Volgens `DRIVE_STRUCTURE.md` beschrijft de Drive Structure de boom en zijn de Map Specifications leidend voor de *inhoud* per map, niet voor extra submappen. De Map Specs over-specificeren dus de boom t.o.v. de leidende norm.
+
+**Actie:**
+De Owner Agents beslissen per root of de baseline submappen krijgt (dan `DRIVE_STRUCTURE.md` en `DRIVE_MAPPING.md` bijwerken) óf de Map Specifications de submapbomen verwijderen en zich tot inhoud beperken. CM CONTROL AGENT coördineert.
+
+---
+
+### **GAP-022: 01_MASTER_BOUTIQUE drieweg-conflict inclusief verboden dealstructuur**
+
+| Veld | Waarde |
+|---|---|
+| Status | Open |
+| Prioriteit | Hoog |
+| Betrokken bestanden | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/01_MASTER_BOUTIQUE.md`, `scripts/google-drive/create-os-custommade-target-structure.gs` |
+| Eigenaar | CM LEGAL AGENT |
+
+**Beschrijving:**
+`01_MASTER_BOUTIQUE` heeft in elke bron een andere structuur: de leidende baseline (`DRIVE_STRUCTURE.md` = `DRIVE_MAPPING.md`) is root-only (deals horen in `04_DEALS`), `01_MASTER_BOUTIQUE.md` definieert negen kennis-/methodiekcategorieën (`01_CONTEXT` … `09_DUE_DILIGENCE_METHODS`), en `create-os-custommade-target-structure.gs` maakt een dealstructuur aan (`00_START_HIER`, `01_RECHTEN_REGISTER`, `02_CONTRACTEN_BEWIJS`, `03_WAARDERING_VERKOOPPAKKET`, `04_OUTREACH_CLICKUP`, `99_ARCHIEF`). Zowel `DRIVE_STRUCTURE.md` (regel 83) als `01_MASTER_BOUTIQUE.md` verbieden dealcase- en assetfolders onder `01_MASTER_BOUTIQUE` expliciet; het script schendt deze regel.
+
+**Actie:**
+CM LEGAL AGENT (owner van `01_MASTER_BOUTIQUE`) stelt de definitieve structuur vast conform de baseline, verwijdert de verboden dealstructuur uit het script en stemt `01_MASTER_BOUTIQUE.md` af op de baseline.
+
+---
+
 ## **STATUSOVERZICHT**
 
 | Gap ID | Beschrijving | Status | Prioriteit | Eigenaar |
@@ -326,6 +451,13 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 | GAP-013 | Dode workflow-link in 06_FINANCE.md hoofdstuk 7 | Opgelost | — | CM CONTROL AGENT |
 | GAP-014 | 03_CLIENTS.md submapstructuur niet actueel | Opgelost | — | CM OPS AGENT |
 | GAP-015 | 99_ARCHIVE.md submapstructuur niet actueel | Opgelost | — | CM VAULT AGENT |
+| GAP-016 | Google Drive-scripts verouderd/afwijkend + plaatsingsdefecten artist/deal | Open | Hoog | CM FLOW AGENT |
+| GAP-017 | 07_LEGAL.md en DRIVE_MAPPING.md 07_LEGAL niet gelijk | Open | Middel | CM LEGAL AGENT |
+| GAP-018 | ARTIST_FOLDER Map Specifications missen 06_FINANCE | Open | Middel | CM OPS AGENT |
+| GAP-019 | create-cm-drive-structure.gs is corrupt + laat vereiste roots leeg | Open | Hoog | CM FLOW AGENT |
+| GAP-020 | Conflicterende target-structure scripts met identieke symboolnamen | Open | Middel | CM FLOW AGENT |
+| GAP-021 | Map Specifications tonen submappen die niet in de leidende Drive-baseline staan | Open | Hoog | CM CONTROL AGENT |
+| GAP-022 | 01_MASTER_BOUTIQUE drieweg-conflict incl. verboden dealstructuur | Open | Hoog | CM LEGAL AGENT |
 
 ---
 
@@ -335,3 +467,7 @@ Voltooid. Directory aangemaakt met README.md en alle 11 Map Specifications op 20
 - Bij nieuwe gaps: voeg toe conform het formaat hierboven.
 - Bij opgeloste gaps: verander status naar `Opgelost` en noteer de datum.
 - Eigenaar van dit rapport: CM CONTROL AGENT.
+
+## **GERELATEERDE CONTROLES**
+
+- Mapgelijkheidscontrole (2026-07-26): [`docs/00_GOVERNANCE/HISTORY/AUDITS/MAP_EQUALITY_CONTROL_REPORT.md`](../../HISTORY/AUDITS/MAP_EQUALITY_CONTROL_REPORT.md) — bron van GAP-016 t/m GAP-020.
