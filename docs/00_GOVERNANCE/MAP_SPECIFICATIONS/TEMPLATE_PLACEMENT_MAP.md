@@ -6,6 +6,8 @@ Deze kaart bepaalt **welke template(s) in welke Google Drive-map** onder `OS_CUS
 
 Gebruik deze kaart bij het inrichten of controleren van Drive-mappen. GitHub blijft leidend voor template-governance; Drive bevat uitsluitend werkbare kopieën of ingevulde operationele versies.
 
+> **Freeze-status.** De template build-freeze uit `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` is nog `ACTIEF` en Sprint 6 (Template Recovery) staat op `GEBLOKKEERD`. Deze kaart is **voorbereidend Sprint 6-materiaal**: ze legt de gewenste koppeling vast, maar geeft géén toestemming om templates aan te maken/wijzigen of de Drive te vullen. Dat gebeurt pas nadat Sprint 6 door de process owner (Sophia / CM CONTROL) is vrijgegeven.
+
 ## Leeswijzer
 
 - **Bron = spec**: de mapping komt rechtstreeks uit een bestaande Map Specification.
@@ -84,15 +86,17 @@ Bron = spec (`MAP_SPECIFICATIONS/ARTIST_FOLDER/`). Werkbare kopieën worden opge
 
 ## 3. Client-dossier — `03_CLIENTS/[CLIENT_OR_PARTNER_NAME]`
 
-Bron = afgeleid. Nog geen aparte client-submapspecificaties; onderstaande mapping wacht op review en formalisering in `MAP_SPECIFICATIONS/CLIENT_FOLDER/`.
+Bron = spec (`ROOTS/03_CLIENTS.md` §6). Nog geen aparte client-submapspecificaties in `MAP_SPECIFICATIONS/CLIENT_FOLDER/`; onderstaande mapping neemt de gezaghebbende ROOTS-lijst over. De submap-toewijzing tegen de client-folder-structuur (`DRIVE_STRUCTURE.md`) wacht op review.
 
-| Submap | Voorgestelde template | Status |
+> Aandachtspunt voor review: `ROOTS/03_CLIENTS.md` verwijst naar `00_START_HIER`, terwijl de client-folder-regel in `DRIVE_STRUCTURE.md` `01_ADMIN` als eerste submap kent. Deze discrepantie moet in de client-folder-spec worden opgelost.
+
+| Submap | Template (bron: ROOTS §6) | Status |
 |---|---|---|
-| `01_ADMIN` | CLIENT_PROFILE_TEMPLATE, CLIENT_ONBOARDING_TEMPLATE | ✅ |
+| `01_ADMIN` | CLIENT_PROFILE_TEMPLATE, CLIENT_ONBOARDING_TEMPLATE, EMAIL_INSTRUCTIONS_TEMPLATE, DO_NOTS_TEMPLATE | ✅ |
+| `03_BRIEF_SCOPE` | MANAGEMENT_PROPOSAL_TEMPLATE | ✅ |
+| `04_DELIVERABLES` | ARTIST_AUDIT_TEMPLATE, BUSINESS_AUDIT_TEMPLATE, RELEASE_STRATEGY_TEMPLATE, ARTIST_ROADMAP_TEMPLATE, MONTHLY_REPORT_TEMPLATE | ✅ |
 | `02_CONTRACT` | Contract Summary Template | ⚠️ |
-| `03_BRIEF_SCOPE` | PARTNERSHIP_BRIEF_TEMPLATE | ✅ |
-| `04_DELIVERABLES` | BRAND_AUDIT_TEMPLATE, BUSINESS_AUDIT_TEMPLATE | ✅ |
-| `05_COMMUNICATION` | MEETING_RECAP_TEMPLATE, EMAIL_INSTRUCTIONS_TEMPLATE | ✅ |
+| `05_COMMUNICATION` | MEETING_RECAP_TEMPLATE | ✅ |
 | `06_FINANCE` | MONTHLY_REPORT_TEMPLATE | ✅ |
 | `09_ARCHIVE` | Archive Register Template | ⚠️ |
 
@@ -100,29 +104,32 @@ Bron = afgeleid. Nog geen aparte client-submapspecificaties; onderstaande mappin
 
 ## 4. Deal-/asset-case — `04_DEALS/[DEAL_OR_ASSET_NAME]`
 
-Bron = afgeleid. Nog geen aparte deal-submapspecificaties; onderstaande mapping wacht op review en formalisering in `MAP_SPECIFICATIONS/DEAL_FOLDER/`.
+Bron = spec (`ROOTS/04_DEALS.md` §6). De ROOTS-spec mandateert reeds twee templates; die worden hier één-op-één overgenomen. Overige regels zijn afgeleid en wachten op formalisering in `MAP_SPECIFICATIONS/DEAL_FOLDER/`.
 
-| Submap | Voorgestelde template | Status |
-|---|---|---|
-| `00_START_HIER` | DEAL_MEMO_TEMPLATE | ✅ |
-| `01_RECHTEN_REGISTER` | MUSIC_RIGHTS_REGISTER | ✅ |
-| `02_CONTRACTEN_BEWIJS` | Contract Summary Template, Approval Evidence Template | ⚠️ |
-| `03_WAARDERING_VERKOOPPAKKET` | PARTNERSHIP_BRIEF_TEMPLATE | ✅ |
-| `04_OUTREACH_CLICKUP` | DEAL_PIPELINE_CLICKUP_REFERENCE, ACTION_TRACKER_CLICKUP_REFERENCE | ✅ |
-| `99_ARCHIEF` | Archive Register Template | ⚠️ |
+| Submap | Template | Bron | Status |
+|---|---|---|---|
+| `00_START_HIER` | DEAL_MEMO_TEMPLATE | afgeleid | ✅ |
+| `01_RECHTEN_REGISTER` | RIGHTS_AUDIT_TEMPLATE | ROOTS §6 | ✅ |
+| `01_RECHTEN_REGISTER` | MUSIC_RIGHTS_REGISTER | afgeleid | ✅ |
+| `02_CONTRACTEN_BEWIJS` | Contract Summary Template, Approval Evidence Template | afgeleid | ⚠️ |
+| `03_WAARDERING_VERKOOPPAKKET` | DEAL_MEMO_TEMPLATE, PARTNERSHIP_BRIEF_TEMPLATE | afgeleid | ✅ |
+| `04_OUTREACH_CLICKUP` | DEAL_NEGOTIATION_TEMPLATE | ROOTS §6 | ✅ |
+| `04_OUTREACH_CLICKUP` | DEAL_PIPELINE_CLICKUP_REFERENCE, ACTION_TRACKER_CLICKUP_REFERENCE | afgeleid | ✅ |
+| `99_ARCHIEF` | Archive Register Template | afgeleid | ⚠️ |
 
 ---
 
 ## 5. Legal — `07_LEGAL`
 
-Bron = afgeleid. Nog geen aparte legal-submapspecificaties; onderstaande mapping wacht op review en formalisering in `MAP_SPECIFICATIONS/LEGAL_FOLDER/`.
+Bron = spec (`ROOTS/07_LEGAL.md` §6). `APPROVALS/CM_APPROVAL_REGISTER` is het centrale Approval Register (Google Sheet), **geen template-map** — daar wordt geen template geplaatst. Overige regels zijn afgeleid en wachten op formalisering in `MAP_SPECIFICATIONS/LEGAL_FOLDER/`.
 
-| Submap | Voorgestelde template | Status |
-|---|---|---|
-| `APPROVALS/CM_APPROVAL_REGISTER` | Approval Evidence Template | ⚠️ |
-| `CONTRACTS` | Contract Summary Template | ⚠️ |
-| `LEGAL_REVIEW` | MEETING_RECAP_TEMPLATE (afgeleid) | ✅ |
-| `EVIDENCE` | Approval Evidence Template | ⚠️ |
+| Submap | Template | Bron | Status |
+|---|---|---|---|
+| `LEGAL_REVIEW` | RIGHTS_AUDIT_TEMPLATE | ROOTS §6 | ✅ |
+| `LEGAL_REVIEW` | MEETING_RECAP_TEMPLATE | afgeleid | ✅ |
+| `CONTRACTS` | Contract Summary Template | afgeleid | ⚠️ |
+| `EVIDENCE` | Approval Evidence Template | afgeleid | ⚠️ |
+| `APPROVALS/CM_APPROVAL_REGISTER` | *(geen — actief Google Sheet-register, geen template-doel)* | — | — |
 
 ---
 
@@ -140,10 +147,11 @@ De volgende templates worden door Map Specifications vereist maar bestaan nog ni
 - Register Template (per domein: Release, Booking, Social, Press/EPK, Archive)
 - Version Log Template
 
-Tot een gap is gedicht, wordt in de betreffende Drive-map alleen het reeds beschikbare, afgeleide alternatief geplaatst en wordt de gap gelogd in `TEMPLATE_GAP_LOG`.
+Het aanmaken van deze ontbrekende templates valt onder Sprint 6 en gebeurt pas na vrijgave van de freeze. Tot dan wordt geen gap gedicht; per Drive-map wordt te zijner tijd alleen het reeds beschikbare, afgeleide alternatief geplaatst en wordt de gap gelogd in `TEMPLATE_GAP_LOG`.
 
 ## Governance
 
 - Deze kaart valt onder de governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
-- Afgeleide mappings (secties 3, 4, 5 en de afgeleide regels in sectie 2) worden pas production-baseline na review door Sophia als process owner.
+- De kaart respecteert de actieve build-freeze: ze documenteert de gewenste koppeling maar autoriseert geen template-creatie of Drive-uitrol.
+- Waar een ROOTS-spec (`ROOTS/03_CLIENTS.md`, `ROOTS/04_DEALS.md`, `ROOTS/07_LEGAL.md`) al een template mandateert, is die mapping leidend; afgeleide regels wachten op review door Sophia als process owner.
 - Wijzigingen verlopen via branch, commit, review en Pull Request.
