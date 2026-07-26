@@ -78,7 +78,7 @@ Geen vaste templates toegewezen aan `99_ARCHIVE`.
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Archive Flow | `docs/03_SHARED_SERVICES/ARCHIVE_FLOW.md` | Einde van samenwerking, deal-closing of periodiek review |
+| Archive Flow | `docs/05_OPERATIONS/WORKFLOWS/ARCHIVE_FLOW.md` | Einde van samenwerking, deal-closing of periodiek review |
 
 ---
 
@@ -86,7 +86,7 @@ Geen vaste templates toegewezen aan `99_ARCHIVE`.
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Archive SOP | `docs/03_SHARED_SERVICES/ARCHIVE_SOP.md` | Archiveringsprocedure voor inactieve dossiers, legacy-materiaal en migratielog-beheer |
+| Archive SOP | `docs/05_OPERATIONS/SOPS/ARCHIVE_SOP.md` | Archiveringsprocedure voor inactieve dossiers, legacy-materiaal en migratielog-beheer |
 
 ---
 
@@ -238,7 +238,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM VAULT AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] `REVIEW_HOLD` is leeg of alle items zijn geclassificeerd
@@ -250,7 +250,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Approval Log | `docs/00_GOVERNANCE/APPROVAL_LOG.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

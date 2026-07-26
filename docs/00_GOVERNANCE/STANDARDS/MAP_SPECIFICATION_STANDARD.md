@@ -138,7 +138,7 @@ Vermeld alleen Playbooks die hard bestaan in de repository. Gebruik `TBD` als er
 
 ### **Hoofdstuk 10 — Owner Agent**
 
-Vermeld de naam van de Owner Agent exact zoals geregistreerd in `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`. Elke Drive-map heeft exact één Owner Agent.
+Vermeld de naam van de Owner Agent exact zoals geregistreerd in `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md`. Elke Drive-map heeft exact één Owner Agent.
 
 Beschrijf in 1-2 zinnen wat de Owner Agent in deze map doet.
 
@@ -233,7 +233,7 @@ Controlelijst voor governance-review:
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md`
 - [ ] Owner Agent klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveerregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -244,8 +244,8 @@ Gerelateerde documentatie:
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Document Standards | `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md` |
@@ -255,7 +255,7 @@ Gerelateerde documentatie:
 ## **5. SCHRIJFREGELS**
 
 - Schrijf in professioneel Nederlands.
-- Gebruik exacte CM-agentnamen zoals geregistreerd in `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md`.
+- Gebruik exacte CM-agentnamen zoals geregistreerd in `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md`.
 - Gebruik exacte mapnamen zoals vastgelegd in `docs/04_SYSTEMS/DRIVE_MAPPING.md`.
 - Vermeld geen clientnamen, artiestennamen of vertrouwelijke data.
 - Gebruik `TBD` voor koppelingen die nog niet hard bestaan.
@@ -293,8 +293,8 @@ Voorbeelden:
 
 - `docs/04_SYSTEMS/DRIVE_MAPPING.md` is de primaire bron voor submapstructuren en eigenaarschap.
 - `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` legt de rootstructuur vast.
-- `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` legt agenteigenaarschap vast.
-- `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` legt approvalniveaus vast.
+- `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` legt agenteigenaarschap vast.
+- `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` legt approvalniveaus vast.
 - `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` legt templatekoppelingen vast.
 - `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` legt naamconventies vast.
 - Bij conflict tussen een Map Specification en deze bronnen: de bronnen zijn leidend.

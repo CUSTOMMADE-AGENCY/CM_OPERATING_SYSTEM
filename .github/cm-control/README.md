@@ -1,6 +1,6 @@
 # CM CONTROL GitHub Action v1
 
-Geautomatiseerde governance-review door CM CONTROL AGENT op pull requests. Operationaliseert de sectie **CM CONTROL GitHub Activation** uit `docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md`.
+Geautomatiseerde governance-review door CM CONTROL AGENT op pull requests. Operationaliseert de sectie **CM CONTROL GitHub Activation** uit `docs/05_OPERATIONS/AUTOMATIONS/CM_AGENT_ACTIVATION_STRATEGY.md`.
 
 De Action laat een LLM (via de **OpenAI Responses API**) een PR of issue toetsen aan de CM-governance en schrijft één verdict terug: **GO / CONDITIONAL GO / REVIEW REQUIRED / NO GO**. Het is een **advies**: er wordt nooit gemerged, gepusht of een bestand gewijzigd.
 

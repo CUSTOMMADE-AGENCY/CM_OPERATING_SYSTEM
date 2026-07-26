@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
+| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 
 ---
 
@@ -114,9 +114,9 @@
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| Rights Recovery Playbook | `docs/06_PLAYBOOKS/RIGHTS_RECOVERY_PLAYBOOK.md` | Rechtenteruggave en -herstel |
-| Publishing Playbook | `docs/06_PLAYBOOKS/PUBLISHING_PLAYBOOK.md` | Publishing-rechten en -deals |
-| Sync Playbook | `docs/06_PLAYBOOKS/SYNC_PLAYBOOK.md` | Sync-deals en licenties |
+| Rights Recovery Playbook | `docs/05_OPERATIONS/PLAYBOOKS/RIGHTS_RECOVERY_PLAYBOOK.md` | Rechtenteruggave en -herstel |
+| Publishing Playbook | `docs/05_OPERATIONS/PLAYBOOKS/PUBLISHING_PLAYBOOK.md` | Publishing-rechten en -deals |
+| Sync Playbook | `docs/05_OPERATIONS/PLAYBOOKS/SYNC_PLAYBOOK.md` | Sync-deals en licenties |
 
 ---
 
@@ -191,7 +191,7 @@ Incorrect: `nda nieuw getekend definitief.pdf`
 | Informatietype | Source of Truth |
 |---|---|
 | Getekende contracten | Drive (`07_LEGAL/CONTRACTS`, `ARTIESTEN`, `KLANTEN`, etc.) |
-| Legal governance (bron) | GitHub (`docs/00_GOVERNANCE/`, `docs/06_PLAYBOOKS/`) |
+| Legal governance (bron) | GitHub (`docs/00_GOVERNANCE/`, `docs/05_OPERATIONS/PLAYBOOKS/`) |
 | Approval Register | Drive (`07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`) |
 | Juridische correspondentie | Gmail |
 | Taakstatus | ClickUp |
@@ -268,7 +268,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM LEGAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approval Register aanwezig in `07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER`
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
 
@@ -279,8 +279,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Approval Log | `docs/00_GOVERNANCE/APPROVAL_LOG.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

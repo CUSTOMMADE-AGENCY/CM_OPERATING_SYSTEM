@@ -86,8 +86,8 @@ Gebruik exact deze submapstructuur:
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
-| Governance Export Flow | `docs/03_SHARED_SERVICES/GOVERNANCE_EXPORT_FLOW.md` | Na merge van governance-wijziging in GitHub |
+| Intern Onboarding Flow | `docs/05_OPERATIONS/WORKFLOWS/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
+| Governance Export Flow | `docs/05_OPERATIONS/WORKFLOWS/GOVERNANCE_EXPORT_FLOW.md` | Na merge van governance-wijziging in GitHub |
 
 ---
 
@@ -95,7 +95,7 @@ Gebruik exact deze submapstructuur:
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Admin SOP | `docs/03_SHARED_SERVICES/ADMIN_SOP.md` | Intern administratief beheer, intake-triage, governance-referenties en templatebeheer |
+| Admin SOP | `docs/05_OPERATIONS/SOPS/ADMIN_SOP.md` | Intern administratief beheer, intake-triage, governance-referenties en templatebeheer |
 
 ---
 
@@ -258,7 +258,7 @@ Incorrect: `onboarding nieuw definitief v2.pdf`
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM CONTROL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -269,8 +269,8 @@ Incorrect: `onboarding nieuw definitief v2.pdf`
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Document Standards | `docs/00_GOVERNANCE/DOCUMENT_STANDARDS.md` |

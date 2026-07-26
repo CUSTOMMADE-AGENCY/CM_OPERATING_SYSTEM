@@ -1,5 +1,15 @@
 # CM Release Notes
 
+## Repository Recovery — Fase 2 Operations Consolidation — 2026-07-26
+
+### Status
+
+`UITGEVOERD / IN REVIEW`
+
+Knowledge Base, algemene Playbooks, organisatiebrede SOPs en Workflows, Automation-documentatie en actieve/legacy Agent-documentatie zijn in de verplichte volgorde geconsolideerd onder `docs/05_OPERATIONS/`. Afwijkende rootvarianten van drie Agent-playbooks zijn behouden. Templates, business lanes en live technische logica bleven buiten scope. Zie `docs/00_GOVERNANCE/PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md`.
+
+---
+
 ## Repository Recovery — Fase 1 Governance Consolidation — 2026-07-26
 
 ### Status

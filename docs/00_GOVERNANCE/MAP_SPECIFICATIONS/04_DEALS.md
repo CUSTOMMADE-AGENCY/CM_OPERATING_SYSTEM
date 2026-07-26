@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/`, `docs/06_PLAYBOOKS/` |
+| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/`, `docs/05_OPERATIONS/PLAYBOOKS/` |
 
 ---
 
@@ -104,11 +104,11 @@ OS_CUSTOMMADE
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| Sell Side Process Playbook | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkooptraject aan verkoperskant |
-| Buy Side Process Playbook | `docs/06_PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankooptraject aan koperskant |
-| Deal Negotiation Playbook | `docs/06_PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling |
-| Catalog Acquisition Playbook | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop |
-| Buyer Outreach Playbook | `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie |
+| Sell Side Process Playbook | `docs/05_OPERATIONS/PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkooptraject aan verkoperskant |
+| Buy Side Process Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankooptraject aan koperskant |
+| Deal Negotiation Playbook | `docs/05_OPERATIONS/PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling |
+| Catalog Acquisition Playbook | `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop |
+| Buyer Outreach Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie |
 | APA Negotiation Playbook | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md` | APA-onderhandeling |
 | Catalog Valuation Playbook | `docs/01_MASTER_BOUTIQUE/CATALOG_VALUATION_PLAYBOOK.md` | Waardebepaling |
 
@@ -189,7 +189,7 @@ Incorrect: `deal memo nieuw definitief.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Deal-structuur en governance | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/06_PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
+| Deal-structuur en governance | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/05_OPERATIONS/PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
 | Rechtenregisters en contracten | Drive (`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/01_RECHTEN_REGISTER`, `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/02_CONTRACTEN_BEWIJS`) |
 | Taakstatus en dealfases | ClickUp |
 | Buyer-correspondentie | Gmail |
@@ -269,7 +269,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM LEGAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -281,9 +281,9 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Master Boutique Playbooks | `docs/01_MASTER_BOUTIQUE/` |
-| Deal Playbooks | `docs/06_PLAYBOOKS/` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Deal Playbooks | `docs/05_OPERATIONS/PLAYBOOKS/` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

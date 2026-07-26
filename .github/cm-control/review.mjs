@@ -3,7 +3,7 @@
  * CM CONTROL GitHub Action v1 — review runner.
  *
  * Operationaliseert "CM CONTROL GitHub Activation" uit
- * docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md (v1.1).
+ * docs/05_OPERATIONS/AUTOMATIONS/CM_AGENT_ACTIVATION_STRATEGY.md (v1.1).
  *
  * Wat het doet:
  *   1. Laadt de governance-context (base-ref) en de reviewer-instructie.

@@ -1,7 +1,7 @@
 name: CM CONTROL Review
 
 # CM CONTROL GitHub Action v1 — operationaliseert de sectie "CM CONTROL GitHub
-# Activation" uit docs/04_SYSTEMS/AUTOMATION/CM_AGENT_ACTIVATION_STRATEGY.md (v1.1).
+# Activation" uit docs/05_OPERATIONS/AUTOMATIONS/CM_AGENT_ACTIVATION_STRATEGY.md (v1.1).
 #
 # CM CONTROL voert een governance-review uit op een PR of issue en schrijft het
 # verdict (GO / CONDITIONAL GO / REVIEW_REQUIRED / NO_GO) terug.

@@ -68,7 +68,7 @@ Artistcontracten als primaire bron vallen onder `02_ARTIST_MANAGEMENT/[ARTIST]/0
 2. Sophia reageert → CM CONTROL AGENT werkt rij bij (beslissing + timestamp).
 3. Goedgekeurd → uitvoerende agent voert actie uit → status `Uitgevoerd`.
 4. Geweigerd → status `Geweigerd`, reden vastgelegd.
-5. Geen respons binnen deadline → status `Verlopen`, opschaling conform `docs/07_AI_AGENTS/ESCALATION_PROTOCOLS.md`.
+5. Geen respons binnen deadline → status `Verlopen`, opschaling conform `docs/05_OPERATIONS/AGENTS/ESCALATION_PROTOCOLS.md`.
 
 ### Stap 5 — Bewijsopslag
 

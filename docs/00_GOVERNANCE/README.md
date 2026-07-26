@@ -9,6 +9,8 @@ Deze map definieert hoe het Custommade Agency operating system is gestructureerd
 - `CM_REPOSITORY_RECOVERY_PLAN.md` — tijdelijke leidende governance tijdens de actieve recovery.
 - `MAP_SPECIFICATIONS/` — canonieke collectie van root- en child-Map Specifications.
 - `HISTORY/` — niet-leidende audit trail met status en opvolgerverwijzingen.
+- `PHASE_2_OPERATIONS_MIGRATION_PLAN.md` — file-level dependency map en rollbackplan voor Fase 2.
+- `PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md` — uitvoering, validatie en restrisico’s van Fase 2.
 - `PHASE_1_GOVERNANCE_CONSOLIDATION_REPORT.md` — Fase 1-overzicht, vergelijkingen, scans en risico's.
 - `CM_OPERATING_MODEL.md` — executive overview en primaire kaart van het volledige CM operating system.
 - `DRIVE_STRUCTURE.md` — goedgekeurde Google Drive-structuur en lane ownership.

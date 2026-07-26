@@ -89,3 +89,7 @@ Tijdens recovery is `CM_REPOSITORY_RECOVERY_PLAN.md` leidend. De V1.0-baseline-A
 ## Reviewritme
 
 Review na iedere structuurwijziging en minimaal elk kwartaal.
+
+## Fase 2-status
+
+Operations Consolidation is op branch `codex/phase-2-operations-consolidation` uitgevoerd en wacht op review. De zes categorieën onder `docs/05_OPERATIONS/` zijn nu de canonieke documentatielaag; externe-platformdocumentatie die niet als systeemkennis of Automation-documentatie is geclassificeerd, blijft onder `docs/04_SYSTEMS/`.

@@ -160,9 +160,9 @@ Een Level 4 actie zonder bijbehorende rij in de operationele approval audit trai
 | Document | Pad |
 |---|---|
 | Approval Log | `docs/00_GOVERNANCE/APPROVAL_LOG.md` |
-| Agent Responsibility Matrix | `docs/07_AI_AGENTS/AGENT_RESPONSIBILITY_MATRIX.md` |
-| Agent Handoff Matrix | `docs/07_AI_AGENTS/AGENT_HANDOFF_MATRIX.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
-| AI Task Autonomy Matrix | `docs/07_AI_AGENTS/AI_TASK_AUTONOMY_MATRIX.md` |
-| Escalation Protocols | `docs/07_AI_AGENTS/ESCALATION_PROTOCOLS.md` |
-| CM Agents Overview | `docs/07_AI_AGENTS/00_CM_AGENTS_OVERVIEW.md` |
+| Agent Responsibility Matrix | `docs/05_OPERATIONS/AGENTS/AGENT_RESPONSIBILITY_MATRIX.md` |
+| Agent Handoff Matrix | `docs/05_OPERATIONS/AGENTS/AGENT_HANDOFF_MATRIX.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
+| AI Task Autonomy Matrix | `docs/05_OPERATIONS/AGENTS/AI_TASK_AUTONOMY_MATRIX.md` |
+| Escalation Protocols | `docs/05_OPERATIONS/AGENTS/ESCALATION_PROTOCOLS.md` |
+| CM Agents Overview | `docs/05_OPERATIONS/AGENTS/00_CM_AGENTS_OVERVIEW.md` |

@@ -87,8 +87,8 @@
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
-| Process Change Flow | `docs/03_SHARED_SERVICES/PROCESS_CHANGE_FLOW.md` | Aanpassing van operationeel proces of governance-document |
+| Intern Onboarding Flow | `docs/05_OPERATIONS/WORKFLOWS/INTERN_ONBOARDING_FLOW.md` | Nieuwe teamlid, intern of freelancer start |
+| Process Change Flow | `docs/05_OPERATIONS/WORKFLOWS/PROCESS_CHANGE_FLOW.md` | Aanpassing van operationeel proces of governance-document |
 
 ---
 
@@ -96,8 +96,8 @@
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| File Management SOP | `docs/03_SHARED_SERVICES/FILE_MANAGEMENT.md` | Bestandsbeheer in operationele context |
-| Operations SOP | `docs/03_SHARED_SERVICES/OPERATIONS_SOP.md` | Proceswijzigingenbeheer, governance-bewaking en operationele rapportage |
+| File Management SOP | `docs/05_OPERATIONS/WORKFLOWS/FILE_MANAGEMENT.md` | Bestandsbeheer in operationele context |
+| Operations SOP | `docs/05_OPERATIONS/SOPS/OPERATIONS_SOP.md` | Proceswijzigingenbeheer, governance-bewaking en operationele rapportage |
 
 ---
 
@@ -246,7 +246,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM CONTROL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -258,8 +258,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Shared Services | `docs/03_SHARED_SERVICES/` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

@@ -95,8 +95,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| Brand Partnership Playbook | `docs/06_PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships voor CM of artists |
-| Networking Playbook | `docs/06_PLAYBOOKS/NETWORKING_PLAYBOOK.md` | Netwerkontwikkeling |
+| Brand Partnership Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships voor CM of artists |
+| Networking Playbook | `docs/05_OPERATIONS/PLAYBOOKS/NETWORKING_PLAYBOOK.md` | Netwerkontwikkeling |
 
 ---
 
@@ -170,7 +170,7 @@ Incorrect: `campagne brief nieuw definitief.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Marketing-playbooks en governance | GitHub (`docs/06_PLAYBOOKS/`) |
+| Marketing-playbooks en governance | GitHub (`docs/05_OPERATIONS/PLAYBOOKS/`) |
 | Brand-assets en campagnebestanden | Drive (`08_MARKETING/`) |
 | Taakstatus | ClickUp |
 | Marketingcorrespondentie | Gmail |
@@ -242,7 +242,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
 
@@ -252,8 +252,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Brand Partnership Playbook | `docs/06_PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Brand Partnership Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |
