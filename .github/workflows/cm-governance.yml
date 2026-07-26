@@ -21,7 +21,7 @@ jobs:
           set -euo pipefail
           required_files=(
             "README.md"
-            "GOVERNANCE_RULES.md"
+            "docs/00_GOVERNANCE/GOVERNANCE_RULES.md"
             "docs/00_GOVERNANCE/README.md"
             "docs/01_MASTER_BOUTIQUE/README.md"
             "docs/02_ARTIST_MANAGEMENT/README.md"
