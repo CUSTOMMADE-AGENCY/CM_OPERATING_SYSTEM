@@ -69,7 +69,7 @@ De detailstructuren binnen artist-, client- en dealdossiers worden afzonderlijk 
 
 ## Recoverystatus
 
-Status: `REPOSITORY RECOVERY — FASE 1 GOVERNANCE CONSOLIDATION — GOEDGEKEURD / GEMERGED`
+Status: `REPOSITORY RECOVERY — FASE 2 OPERATIONS CONSOLIDATION — GOEDGEKEURD / GEMERGED`
 
 Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Als procesincident is geregistreerd dat PR #194 vóór de vereiste expliciete review is gemerged. Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
 
@@ -92,4 +92,4 @@ Review na iedere structuurwijziging en minimaal elk kwartaal.
 
 ## Fase 2-status
 
-Operations Consolidation is op branch `codex/phase-2-operations-consolidation` uitgevoerd en wacht op review. De zes categorieën onder `docs/05_OPERATIONS/` zijn nu de canonieke documentatielaag; externe-platformdocumentatie die niet als systeemkennis of Automation-documentatie is geclassificeerd, blijft onder `docs/04_SYSTEMS/`.
+Operations Consolidation is via PR #197 naar `main` gemerged. De zes categorieën onder `docs/05_OPERATIONS/` zijn de canonieke documentatielaag; externe-platformdocumentatie die niet als systeemkennis of Automation-documentatie is geclassificeerd, blijft onder `docs/04_SYSTEMS/`. Lane-specifieke Shared Services-documentatie en de tijdens recovery bevroren Template Library blijven op hun bestaande locatie totdat een afzonderlijk, expliciet goedgekeurd consolidatiebesluit een nieuwe owner-lane vastlegt.

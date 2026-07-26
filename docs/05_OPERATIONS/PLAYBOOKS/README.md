@@ -4,6 +4,8 @@
 
 Deze categorie bevat beslisregels, scenario's en tactische aanpak.
 
+Dit bestand beschrijft uitsluitend de categoriescope. [`PLAYBOOK_INDEX.md`](PLAYBOOK_INDEX.md) is het enige actieve Playbook Index en het canonieke register voor de actieve agentplaybooks.
+
 ## Register
 
 - `docs/05_OPERATIONS/PLAYBOOKS/ARTIST_POSITIONING_PLAYBOOK.md`

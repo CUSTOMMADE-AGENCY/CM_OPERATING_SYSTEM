@@ -1,5 +1,7 @@
 # Operations Index
 
+> **Navigatiestatus:** aanvullende navigatie onder de primaire [`README.md`](README.md); dit bestand stelt geen alternatieve scope of structuur vast.
+
 ## Doel
 
 Centrale navigatiekaart voor organisatiebrede operationele documentatie binnen CM.
