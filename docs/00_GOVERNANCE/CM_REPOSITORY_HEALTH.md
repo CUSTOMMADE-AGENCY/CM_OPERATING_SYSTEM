@@ -4,7 +4,7 @@
 
 | Onderdeel | Status | Opmerking |
 |---|---|---|
-| Governance | GECONSOLIDEERD — TER REVIEW | Actieve recovery heeft voorrang op V1.0-baseline |
+| Governance | GOEDGEKEURD / GEMERGED | Fase 1 is via PR #194 gemerged naar `main`; de handmatige post-merge review is inhoudelijk akkoord |
 | Governance Rules | ÉÉN ACTIEVE VERSIE | Canoniek onder `docs/00_GOVERNANCE/`; rootversie historisch behouden |
 | V1.0 ADR | SUPERSEDED_FOR_RECOVERY | Behouden; opvolger is het actieve Recovery Plan |
 | Governance History | INGERICHT | Vijf verplichte categorieën, statusbanners en opvolgerverwijzingen |
@@ -23,6 +23,8 @@
 4. De twee inhoudelijk verschillende baseline-reviewvarianten vereisen geen samenvoeging, maar blijven als afzonderlijke historische bronnen bestaan.
 5. Operations, Knowledge Base, Playbooks, Agents, Automations, Shared Services, business lanes en templates wachten op een afzonderlijk goedgekeurde vervolgfase.
 
-## Stopcriterium
+## Post-merge review en procescorrectie
 
-Fase 1 blijft `TER REVIEW`. Geen vervolgconsolidatie en geen merge naar `main` zonder expliciete goedkeuring.
+Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Daarbij is als procesincident vastgesteld dat PR #194 is gemerged vóór de vereiste expliciete review.
+
+Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.

@@ -2,11 +2,15 @@
 
 ## Status en scope
 
-- Status: `TER REVIEW`
+- Status: `GOEDGEKEURD / GEMERGED`
 - Datum: 2026-07-26
+- Uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`
+- Merge: PR #194 is gemerged naar `main`.
+- Post-merge review: de handmatige review heeft inhoudelijk akkoord gegeven.
 - Scope: uitsluitend Governance en repository-rootdocumenten.
 - Niet uitgevoerd: migratie van Knowledge Base, Playbooks, Agents, Automations, Shared Services, business lanes of templates.
-- Stopmoment: na deze Fase 1 is expliciete goedkeuring vereist.
+- Procesincident: PR #194 is gemerged vóór de vereiste expliciete review.
+- Procesregel: voor toekomstige recovery-PR's geldt geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
 
 ## Governancebesluit
 
