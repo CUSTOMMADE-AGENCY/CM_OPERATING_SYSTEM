@@ -71,13 +71,13 @@ Opgelost op 2026-07-01: 7 SOPs aangemaakt in `docs/03_SHARED_SERVICES/` en Map S
 
 | SOP | Bestand | Eigenaar |
 |---|---|---|
-| Admin SOP | `docs/03_SHARED_SERVICES/ADMIN_SOP.md` | CM CONTROL AGENT |
-| Operations SOP | `docs/03_SHARED_SERVICES/OPERATIONS_SOP.md` | CM CONTROL AGENT |
+| Admin SOP | `docs/05_OPERATIONS/SOPS/ADMIN_SOP.md` | CM CONTROL AGENT |
+| Operations SOP | `docs/05_OPERATIONS/SOPS/OPERATIONS_SOP.md` | CM CONTROL AGENT |
 | Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | CM MONEY AGENT |
 | Legal Review SOP | `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` | CM LEGAL AGENT |
 | Marketing SOP | `docs/03_SHARED_SERVICES/MARKETING_SOP.md` | CM SOCIAL AGENT |
 | Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | CM SOCIAL AGENT |
-| Archive SOP | `docs/03_SHARED_SERVICES/ARCHIVE_SOP.md` | CM VAULT AGENT |
+| Archive SOP | `docs/05_OPERATIONS/SOPS/ARCHIVE_SOP.md` | CM VAULT AGENT |
 
 ---
 
@@ -98,9 +98,9 @@ Opgelost op 2026-07-01: 11 Workflows aangemaakt in `docs/03_SHARED_SERVICES/` en
 
 | Workflow | Bestand | Eigenaar |
 |---|---|---|
-| Intern Onboarding Flow | `docs/03_SHARED_SERVICES/INTERN_ONBOARDING_FLOW.md` | CM CONTROL AGENT |
-| Governance Export Flow | `docs/03_SHARED_SERVICES/GOVERNANCE_EXPORT_FLOW.md` | CM CONTROL AGENT |
-| Process Change Flow | `docs/03_SHARED_SERVICES/PROCESS_CHANGE_FLOW.md` | CM CONTROL AGENT |
+| Intern Onboarding Flow | `docs/05_OPERATIONS/WORKFLOWS/INTERN_ONBOARDING_FLOW.md` | CM CONTROL AGENT |
+| Governance Export Flow | `docs/05_OPERATIONS/WORKFLOWS/GOVERNANCE_EXPORT_FLOW.md` | CM CONTROL AGENT |
+| Process Change Flow | `docs/05_OPERATIONS/WORKFLOWS/PROCESS_CHANGE_FLOW.md` | CM CONTROL AGENT |
 | Finance Reconciliation Flow | `docs/03_SHARED_SERVICES/FINANCE_RECONCILIATION_FLOW.md` | CM MONEY AGENT |
 | Year End Finance Flow | `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md` | CM MONEY AGENT |
 | Contract Lifecycle Flow | `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md` | CM LEGAL AGENT |
@@ -108,7 +108,7 @@ Opgelost op 2026-07-01: 11 Workflows aangemaakt in `docs/03_SHARED_SERVICES/` en
 | Marketing Planning Flow | `docs/03_SHARED_SERVICES/MARKETING_PLANNING_FLOW.md` | CM SOCIAL AGENT |
 | Campaign Delivery Flow | `docs/03_SHARED_SERVICES/CAMPAIGN_DELIVERY_FLOW.md` | CM SOCIAL AGENT |
 | Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | CM SOCIAL AGENT |
-| Archive Flow | `docs/03_SHARED_SERVICES/ARCHIVE_FLOW.md` | CM VAULT AGENT |
+| Archive Flow | `docs/05_OPERATIONS/WORKFLOWS/ARCHIVE_FLOW.md` | CM VAULT AGENT |
 
 ---
 
@@ -198,7 +198,7 @@ Opgelost. `docs/00_GOVERNANCE/APPROVAL_LOG.md` verwijst al correct naar `OS_CUST
 | Eigenaar | CM CONTROL AGENT |
 
 **Beschrijving:**
-Zes Map Specifications kenden Level 3 approvalniveaus toe aan CM LEGAL AGENT, CM MONEY AGENT en CM SOCIAL AGENT. Conform `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` is het maximum autonomieniveau voor deze agents Level 2. De toegekende Level 3-acties betroffen intern aanmaken van dossiers en bijwerken van registers — intern uitvoerende taken die buiten de bevoegdheid van deze agents vallen.
+Zes Map Specifications kenden Level 3 approvalniveaus toe aan CM LEGAL AGENT, CM MONEY AGENT en CM SOCIAL AGENT. Conform `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` is het maximum autonomieniveau voor deze agents Level 2. De toegekende Level 3-acties betroffen intern aanmaken van dossiers en bijwerken van registers — intern uitvoerende taken die buiten de bevoegdheid van deze agents vallen.
 
 **Actie:**
 Opgelost op 2026-07-01: alle Level 3-rijen voor genoemde agents gewijzigd naar Level 2 in zes Map Specifications.

@@ -28,3 +28,13 @@
 Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Daarbij is als procesincident vastgesteld dat PR #194 is gemerged vóór de vereiste expliciete review.
 
 Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
+
+## Huidige status — Fase 2
+
+| Onderdeel | Status | Opmerking |
+|---|---|---|
+| Operations | GECONSOLIDEERD / IN REVIEW | Zes canonieke categorieën gevuld in verplichte migratievolgorde |
+| Agent- en Playbook-register | UNIEK | Eén actieve locatie per register |
+| Templates en business lanes | BEVROREN | Geen bestanden in de uitgesloten paden gewijzigd |
+| Technische logica | ONGEWIJZIGD | Alleen documentpaden in CM CONTROL-configuratie, workflow en runner bijgewerkt |
+| Validatie | UITGEVOERD | Resultaten en uitzonderingen staan in het Fase 2-rapport |

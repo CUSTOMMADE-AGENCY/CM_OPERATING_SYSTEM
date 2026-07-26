@@ -280,7 +280,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; dealflow bron `docs/01_MASTER_BOUTIQUE/DEALFLOW_CATALOG_ASSET.md` |
+| GitHub source document | `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; dealflow bron `docs/01_MASTER_BOUTIQUE/DEALFLOW_CATALOG_ASSET.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |
@@ -297,7 +297,7 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/03_SH
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/01_MASTER_BOUTIQUE/BUYER_OUTREACH_WORKFLOW.md`; aanvullend Playbook `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` |
+| GitHub source document | `docs/01_MASTER_BOUTIQUE/BUYER_OUTREACH_WORKFLOW.md`; aanvullend Playbook `docs/05_OPERATIONS/PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |
@@ -352,7 +352,7 @@ Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase be
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/05_KNOWLEDGE_BASE/LOI_GUIDE.md`; procesbron `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` |
+| GitHub source document | `docs/05_OPERATIONS/KNOWLEDGE_BASE/LOI_GUIDE.md`; procesbron `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |
@@ -371,7 +371,7 @@ Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase be
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; kennisbron `docs/05_KNOWLEDGE_BASE/APA_GUIDE.md` |
+| GitHub source document | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; kennisbron `docs/05_OPERATIONS/KNOWLEDGE_BASE/APA_GUIDE.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |
@@ -390,7 +390,7 @@ Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase be
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; APA-bron `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; sell-side bron `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` |
+| GitHub source document | `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; APA-bron `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md`; sell-side bron `docs/05_OPERATIONS/PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |
@@ -409,7 +409,7 @@ Deze workflow/list wordt pas aangemaakt wanneer de deal de due diligence fase be
 
 | Veld | Mapping |
 |---|---|
-| GitHub source document | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md`; commerciële bron `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; governance bron `docs/00_GOVERNANCE/CM_OPERATING_MODEL.md` |
+| GitHub source document | `docs/05_OPERATIONS/PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md`; commerciële bron `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md`; governance bron `docs/00_GOVERNANCE/CM_OPERATING_MODEL.md` |
 | Business lane | Master Boutique |
 | ClickUp Space | `CM` |
 | ClickUp Folder | `Master Boutique / Deals` |

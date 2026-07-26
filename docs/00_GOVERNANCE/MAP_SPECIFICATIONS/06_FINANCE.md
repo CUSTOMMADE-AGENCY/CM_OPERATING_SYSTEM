@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` V1.4 |
+| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` V1.4 |
 
 ---
 
@@ -258,8 +258,8 @@ Incorrect: `btw aangifte nieuw definitief.pdf`
 **Controlelijst:**
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM MONEY AGENT) klopt met `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` V1.4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Owner Agent (CM MONEY AGENT) klopt met `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` V1.4
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Moneybird is als primaire bron correct geconfigureerd
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -270,8 +270,8 @@ Incorrect: `btw aangifte nieuw definitief.pdf`
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Agent Register V1.4 | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register V1.4 | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

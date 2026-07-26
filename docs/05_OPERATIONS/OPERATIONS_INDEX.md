@@ -33,4 +33,4 @@ Automation
 
 ## Registratie
 
-Tijdens de Repository Recovery worden bestaande documenten eerst geïnventariseerd. Een document wordt pas verplaatst nadat de canonieke bestemming, duplicaatstatus en linkimpact zijn gecontroleerd.
+Fase 2 heeft de operationele documenten gecontroleerd geconsolideerd. Nieuwe of verplaatste documenten worden alleen geregistreerd nadat de canonieke bestemming, eigenaar, duplicaatstatus en linkimpact zijn gecontroleerd. Zie `docs/00_GOVERNANCE/PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md`.

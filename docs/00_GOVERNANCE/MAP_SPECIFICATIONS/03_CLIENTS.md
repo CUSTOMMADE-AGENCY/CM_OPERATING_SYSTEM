@@ -99,8 +99,8 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 |---|---|---|
 | Client Onboarding Workflow | `docs/03_SHARED_SERVICES/CLIENT_ONBOARDING.md` | Nieuwe client start samenwerking met CM |
 | Proposal Workflow | `docs/03_SHARED_SERVICES/PROPOSAL_WORKFLOW.md` | Proposal voor nieuwe of bestaande client |
-| Communication Process | `docs/03_SHARED_SERVICES/COMMUNICATION_PROCESS.md` | Correspondentie met client |
-| Meeting Process | `docs/03_SHARED_SERVICES/MEETING_PROCESS.md` | Client-meeting of call |
+| Communication Process | `docs/05_OPERATIONS/WORKFLOWS/COMMUNICATION_PROCESS.md` | Correspondentie met client |
+| Meeting Process | `docs/05_OPERATIONS/WORKFLOWS/MEETING_PROCESS.md` | Client-meeting of call |
 
 ---
 
@@ -108,7 +108,7 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| File Management SOP | `docs/03_SHARED_SERVICES/FILE_MANAGEMENT.md` | Bestandsbeheer in clientdossiers |
+| File Management SOP | `docs/05_OPERATIONS/WORKFLOWS/FILE_MANAGEMENT.md` | Bestandsbeheer in clientdossiers |
 
 ---
 
@@ -116,8 +116,8 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| Client Onboarding Playbook | `docs/06_PLAYBOOKS/CLIENT_ONBOARDING_PLAYBOOK.md` | Volledige client onboarding |
-| Brand Partnership Playbook | `docs/06_PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships met clients |
+| Client Onboarding Playbook | `docs/05_OPERATIONS/PLAYBOOKS/CLIENT_ONBOARDING_PLAYBOOK.md` | Volledige client onboarding |
+| Brand Partnership Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships met clients |
 
 ---
 
@@ -274,7 +274,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM OPS AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -286,8 +286,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Shared Services | `docs/03_SHARED_SERVICES/` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

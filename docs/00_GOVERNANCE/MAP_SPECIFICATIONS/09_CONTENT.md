@@ -166,7 +166,7 @@ Incorrect: `post instagram nieuw definitief 2.jpg`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Content-workflows en governance | GitHub (`docs/02_ARTIST_MANAGEMENT/`, `docs/06_PLAYBOOKS/`) |
+| Content-workflows en governance | GitHub (`docs/02_ARTIST_MANAGEMENT/`, `docs/05_OPERATIONS/PLAYBOOKS/`) |
 | Contentbestanden en assets | Drive (`09_CONTENT/`) |
 | Contentkalender en taakstatus | ClickUp |
 | Correspondentie | Gmail |
@@ -236,7 +236,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
 
@@ -246,7 +246,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 |---|---|
 | Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

@@ -111,11 +111,11 @@ Concrete dealcases, casefolders, live dealdossiers, Assets en Buyers staan niet 
 |---|---|---|
 | APA Negotiation Playbook | `docs/01_MASTER_BOUTIQUE/APA_NEGOTIATION_PLAYBOOK.md` | Algemene APA-onderhandelingsmethodiek. |
 | Catalog Valuation Playbook | `docs/01_MASTER_BOUTIQUE/CATALOG_VALUATION_PLAYBOOK.md` | Algemene waarderingsmethodiek. |
-| Buyer Outreach Playbook | `docs/06_PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie als generiek proces. |
-| Sell Side Process Playbook | `docs/06_PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkoopproces als generiek proces. |
-| Buy Side Process Playbook | `docs/06_PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankoopproces als generiek proces. |
-| Deal Negotiation Playbook | `docs/06_PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling als generieke methodiek. |
-| Catalog Acquisition Playbook | `docs/06_PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop als generiek proces. |
+| Buyer Outreach Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BUYER_OUTREACH_PLAYBOOK.md` | Buyer outreach en kwalificatie als generiek proces. |
+| Sell Side Process Playbook | `docs/05_OPERATIONS/PLAYBOOKS/SELL_SIDE_PROCESS_PLAYBOOK.md` | Verkoopproces als generiek proces. |
+| Buy Side Process Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BUY_SIDE_PROCESS_PLAYBOOK.md` | Aankoopproces als generiek proces. |
+| Deal Negotiation Playbook | `docs/05_OPERATIONS/PLAYBOOKS/DEAL_NEGOTIATION_PLAYBOOK.md` | Dealonderhandeling als generieke methodiek. |
+| Catalog Acquisition Playbook | `docs/05_OPERATIONS/PLAYBOOKS/CATALOG_ACQUISITION_PLAYBOOK.md` | Catalogusaankoop als generiek proces. |
 
 ---
 
@@ -191,7 +191,7 @@ Incorrect: `deal memo buyer final nieuw.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| Master Boutique-kennis en methodieken | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/06_PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
+| Master Boutique-kennis en methodieken | GitHub (`docs/01_MASTER_BOUTIQUE/`, `docs/05_OPERATIONS/PLAYBOOKS/`, `docs/00_GOVERNANCE/`) |
 | Concrete dealstructuur en live dealdossiers | Drive (`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`) |
 | Taakstatus voor methodiekupdates | ClickUp |
 | Buyer-correspondentie | Gmail |
@@ -227,7 +227,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Input naar `01_MASTER_BOUTIQUE`:**
 - `docs/01_MASTER_BOUTIQUE/` (GitHub) → context, methodieken, SOPs en workflows
-- `docs/06_PLAYBOOKS/` → generieke playbooks
+- `docs/05_OPERATIONS/PLAYBOOKS/` → generieke playbooks
 - CM PROSPECT AGENT → buyerkwalificatie-methodiek
 - CM MONEY AGENT → valuation-methodiek
 
@@ -278,8 +278,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Master Boutique-documentatie | `docs/01_MASTER_BOUTIQUE/` |
 | Deal Map Specification | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/04_DEALS.md` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

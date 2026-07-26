@@ -89,9 +89,9 @@ CM CONTROL rapporteert op basis van `CM_APPROVAL_REGISTER`:
 
 |Systeem                     |Koppeling                                                  |
 |----------------------------|-----------------------------------------------------------|
-|[`AI_AUTONOMY_LEVELS.md`](../07_AI_AGENTS/AI_AUTONOMY_LEVELS.md)     |Definieert wanneer Level 4 van toepassing is               |
-|[`AI_TASK_AUTONOMY_MATRIX.md`](../07_AI_AGENTS/AI_TASK_AUTONOMY_MATRIX.md)|Definieert welke taken Level 4 vereisen per agent          |
-|[`ESCALATION_PROTOCOLS.md`](../07_AI_AGENTS/ESCALATION_PROTOCOLS.md)   |Definieert tijdsdruk-protocol bij uitblijven respons       |
+|[`AI_AUTONOMY_LEVELS.md`](../05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md)     |Definieert wanneer Level 4 van toepassing is               |
+|[`AI_TASK_AUTONOMY_MATRIX.md`](../05_OPERATIONS/AGENTS/AI_TASK_AUTONOMY_MATRIX.md)|Definieert welke taken Level 4 vereisen per agent          |
+|[`ESCALATION_PROTOCOLS.md`](../05_OPERATIONS/AGENTS/ESCALATION_PROTOCOLS.md)   |Definieert tijdsdruk-protocol bij uitblijven respons       |
 |ClickUp                     |CM CONTROL maakt bijbehorende taak aan bij elk open verzoek|
 |GitHub                      |Governance-specificatie voor approvalregels, structuur, statussen en rapportage opgeslagen in repo     |
 

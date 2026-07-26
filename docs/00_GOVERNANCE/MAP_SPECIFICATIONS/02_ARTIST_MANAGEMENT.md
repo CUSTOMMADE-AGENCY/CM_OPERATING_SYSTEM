@@ -128,14 +128,14 @@ De volledige artistfolder-standaard staat in `docs/00_GOVERNANCE/ARTIST_FOLDER_S
 
 | Playbook | Pad (GitHub) | Scope |
 |---|---|---|
-| Artist Positioning Playbook | `docs/06_PLAYBOOKS/ARTIST_POSITIONING_PLAYBOOK.md` | Positionering en brand direction |
-| Release Campaign Playbook | `docs/06_PLAYBOOKS/RELEASE_CAMPAIGN_PLAYBOOK.md` | Releasecampagne van start tot publicatie |
-| Publishing Playbook | `docs/06_PLAYBOOKS/PUBLISHING_PLAYBOOK.md` | Publishing-rechten en -deals |
-| Sync Playbook | `docs/06_PLAYBOOKS/SYNC_PLAYBOOK.md` | Sync-deals en licenties |
-| Rights Recovery Playbook | `docs/06_PLAYBOOKS/RIGHTS_RECOVERY_PLAYBOOK.md` | Rechtenteruggave en -herstel |
-| Brand Partnership Playbook | `docs/06_PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships voor artists |
-| Career Development Playbook | `docs/06_PLAYBOOKS/CAREER_DEVELOPMENT_PLAYBOOK.md` | Loopbaanontwikkeling van artists |
-| Networking Playbook | `docs/06_PLAYBOOKS/NETWORKING_PLAYBOOK.md` | Netwerkontwikkeling voor artists |
+| Artist Positioning Playbook | `docs/05_OPERATIONS/PLAYBOOKS/ARTIST_POSITIONING_PLAYBOOK.md` | Positionering en brand direction |
+| Release Campaign Playbook | `docs/05_OPERATIONS/PLAYBOOKS/RELEASE_CAMPAIGN_PLAYBOOK.md` | Releasecampagne van start tot publicatie |
+| Publishing Playbook | `docs/05_OPERATIONS/PLAYBOOKS/PUBLISHING_PLAYBOOK.md` | Publishing-rechten en -deals |
+| Sync Playbook | `docs/05_OPERATIONS/PLAYBOOKS/SYNC_PLAYBOOK.md` | Sync-deals en licenties |
+| Rights Recovery Playbook | `docs/05_OPERATIONS/PLAYBOOKS/RIGHTS_RECOVERY_PLAYBOOK.md` | Rechtenteruggave en -herstel |
+| Brand Partnership Playbook | `docs/05_OPERATIONS/PLAYBOOKS/BRAND_PARTNERSHIP_PLAYBOOK.md` | Brand partnerships voor artists |
+| Career Development Playbook | `docs/05_OPERATIONS/PLAYBOOKS/CAREER_DEVELOPMENT_PLAYBOOK.md` | Loopbaanontwikkeling van artists |
+| Networking Playbook | `docs/05_OPERATIONS/PLAYBOOKS/NETWORKING_PLAYBOOK.md` | Netwerkontwikkeling voor artists |
 
 ---
 
@@ -217,7 +217,7 @@ Incorrect: `artiest release plan nieuw def v2.pdf`
 
 | Informatietype | Source of Truth |
 |---|---|
-| SOPs, workflows en playbooks | GitHub (`docs/02_ARTIST_MANAGEMENT/`, `docs/06_PLAYBOOKS/`) |
+| SOPs, workflows en playbooks | GitHub (`docs/02_ARTIST_MANAGEMENT/`, `docs/05_OPERATIONS/PLAYBOOKS/`) |
 | Artistdossiers en deliverables | Drive (`02_ARTIST_MANAGEMENT/[ARTIST]/`) |
 | Taakstatus en actiepunten | ClickUp |
 | Correspondentie | Gmail |
@@ -299,7 +299,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 - [ ] Submapstructuur klopt met `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md`
 - [ ] Owner Agent (CM OPS AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
-- [ ] Approvalniveaus kloppen met `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md`
+- [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
 - [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
@@ -313,8 +313,8 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Artist Folder Standard | `docs/00_GOVERNANCE/ARTIST_FOLDER_STANDARD.md` |
 | Artist Management Workflows | `docs/02_ARTIST_MANAGEMENT/` |
-| Agent Register | `docs/07_AI_AGENTS/CM_AGENT_REGISTER.md` |
-| AI Autonomy Levels | `docs/07_AI_AGENTS/AI_AUTONOMY_LEVELS.md` |
+| Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
+| AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
 | Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

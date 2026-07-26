@@ -57,7 +57,7 @@ De root-`README.md` concateneert twee README's: de bovenste (Engelstalig) verwij
 
 - **Architectuur:** één eenduidige `docs/`-tree; case-collision verdwenen; `GOVERNANCE_RULES.md` "geen duplicaten" hersteld.
 - **GitHub:** puur `docs/`-wijzigingen; geen wijziging aan agents, automations of code.
-- **Agent-impact:** geen — agent-passports (`docs/07_AI_AGENTS`) en playbooks blijven ongemoeid.
+- **Agent-impact:** geen — agent-passports (`docs/05_OPERATIONS/AGENTS`) en playbooks blijven ongemoeid.
 - **Automation-impact:** `.github/workflows/cm-governance.yml` moet mee — de `required-files`-lijst wordt omgezet van lowercase- naar UPPERCASE-README-paden. Geen Make-scenario, webhook of Apps Script raakt deze paden.
 - **Links/verwijzingen:** interne verwijzingen wijzen reeds naar UPPERCASE (startdocumenten in `README.md`); unieke verplaatste bestanden krijgen hun canonieke UPPERCASE-pad.
 - **Reversibel:** volledig via PR-revert; git-historie behoudt alle verwijderde tekst.
