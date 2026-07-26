@@ -48,6 +48,6 @@ CM vraagt SENA-statements op, controleert performer/producer-registraties en spl
 
 ## Gerelateerd
 
-- [SENA](SENA.md)
+- [SENA](../../05_OPERATIONS/KNOWLEDGE_BASE/SENA.md)
 - [MASTER_RIGHTS](MASTER_RIGHTS.md)
-- [ROYALTY_STREAMS](ROYALTY_STREAMS.md)
+- [ROYALTY_STREAMS](../../05_OPERATIONS/KNOWLEDGE_BASE/ROYALTY_STREAMS.md)

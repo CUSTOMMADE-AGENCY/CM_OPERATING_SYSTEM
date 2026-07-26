@@ -57,7 +57,7 @@ Deze SOP geldt voor alle operaties in `00_ADMIN`:
 ### Stap 3 — Template-beheer (`03_TEMPLATES`)
 
 1. Nieuwe of bijgewerkte template van Owner Agent ontvangen.
-2. Controleer of template is opgenomen in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`.
+2. Controleer of template is opgenomen in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`.
 3. Niet-geregistreerde template → terug naar Owner Agent voor registratie.
 4. Geregistreerde template → opslaan in `03_TEMPLATES` met juiste naamconventie.
 

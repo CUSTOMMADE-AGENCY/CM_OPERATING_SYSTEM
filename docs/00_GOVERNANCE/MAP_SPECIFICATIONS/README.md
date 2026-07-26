@@ -49,3 +49,7 @@ Folder Standards bepalen of een map bestaat en waar deze staat. Map Specificatio
 ## Gap report
 
 Openstaande of gecontroleerde afwijkingen worden bijgehouden in [`MAP_SPECIFICATION_GAP_REPORT.md`](MAP_SPECIFICATION_GAP_REPORT.md).
+
+## Scheiding GitHub en Drive
+
+`ROOTS/` specificeert uitsluitend de Drive-roots direct onder `OS_CUSTOMMADE`. De overige `*_FOLDER/`-groepen specificeren submappen binnen een Drive-dossier. Deze Map Specifications blijven governance-documentatie: mapnamen zoals `03_CLIENTS` en `04_DEALS` in specificaties zijn geen kopieën van de gelijknamige GitHub-businessdocumenten.

@@ -21,7 +21,7 @@ Deze Workflow geldt voor alle CM-contracten: managementovereenkomsten, NDA's, sa
 ## **Inputs**
 
 - Contractverzoek van Sophia, CM OPS AGENT of externe partij
-- Bestaande template uit `docs/03_SHARED_SERVICES/TEMPLATES/` (indien beschikbaar)
+- Bestaande template uit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` (indien beschikbaar)
 - Scope en partijgegevens van het te sluiten contract
 
 ---
@@ -43,7 +43,7 @@ Deze Workflow geldt voor alle CM-contracten: managementovereenkomsten, NDA's, sa
 
 ### Stap 3 — Legal review
 
-1. Voer legal review uit conform `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md`.
+1. Voer legal review uit conform `docs/07_LEGAL/LEGAL_REVIEW_SOP.md`.
 2. Sla review-notitie op in `07_LEGAL/LEGAL_REVIEW`.
 3. Juridisch risico → escaleer naar Sophia vóór verdere stappen.
 

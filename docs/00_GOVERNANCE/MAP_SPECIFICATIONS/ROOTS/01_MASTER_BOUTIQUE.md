@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.1 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/` |
 
 ---
 
@@ -84,7 +84,7 @@ Concrete dealcases, casefolders, live dealdossiers, Assets en Buyers staan niet 
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | Alleen als methodische referentie; operationele deal-output hoort onder `04_DEALS/[DEAL_OR_ASSET_NAME]`. |
+| Deal Negotiation Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | Alleen als methodische referentie; operationele deal-output hoort onder `04_DEALS/[DEAL_OR_ASSET_NAME]`. |
 
 ---
 
@@ -267,19 +267,19 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 - [ ] Inhoud beperkt tot Master Boutique-context, playbooks, methodieken, modellen, frameworks en algemene kennis.
 - [ ] Geen concrete dealcases of live dealdossiers onder `01_MASTER_BOUTIQUE`.
 - [ ] Concrete dealstructuur verwijst naar `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]`.
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`.
+- [ ] Templates zijn geregistreerd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`.
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`.
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Master Boutique-documentatie | `docs/01_MASTER_BOUTIQUE/` |
 | Deal Map Specification | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/04_DEALS.md` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

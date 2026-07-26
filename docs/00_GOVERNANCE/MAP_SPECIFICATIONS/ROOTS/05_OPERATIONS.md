@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 
 ---
 
@@ -76,10 +76,10 @@
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Email Instructions Template | `docs/03_SHARED_SERVICES/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Do Nots Template | `docs/03_SHARED_SERVICES/TEMPLATES/DO_NOTS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Client Profile Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
-| Client Onboarding Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
+| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
+| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
+| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
+| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `05_OPERATIONS/TEMPLATES_REFERENCE` |
 
 ---
 
@@ -244,22 +244,22 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM CONTROL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Owner Agent (CM CONTROL AGENT) klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
+- [ ] Templates zijn geregistreerd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
-| Shared Services | `docs/03_SHARED_SERVICES/` |
+| Shared Services | `docs/03_CLIENTS/` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

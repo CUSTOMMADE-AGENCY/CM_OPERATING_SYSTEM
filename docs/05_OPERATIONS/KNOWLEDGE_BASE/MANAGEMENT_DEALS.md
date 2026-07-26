@@ -49,5 +49,5 @@ CM werkt met duidelijke Scope per fase: strategie, deals, release, brand, operat
 ## Gerelateerd
 
 - [BRAND_PARTNERSHIPS](BRAND_PARTNERSHIPS.md)
-- [DEAL_TERMS](DEAL_TERMS.md)
+- [DEAL_TERMS](../../04_DEALS/KNOWLEDGE_BASE/DEAL_TERMS.md)
 - [ROYALTY_STREAMS](ROYALTY_STREAMS.md)

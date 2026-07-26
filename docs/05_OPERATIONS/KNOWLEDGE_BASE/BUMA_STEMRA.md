@@ -48,6 +48,6 @@ CM controleert Buma/Stemra-registraties tegen split sheets, publishing deals en 
 
 ## Gerelateerd
 
-- [PUBLISHING_RIGHTS](PUBLISHING_RIGHTS.md)
-- [SPLIT_SHEETS](SPLIT_SHEETS.md)
+- [PUBLISHING_RIGHTS](../../04_DEALS/KNOWLEDGE_BASE/PUBLISHING_RIGHTS.md)
+- [SPLIT_SHEETS](../../04_DEALS/KNOWLEDGE_BASE/SPLIT_SHEETS.md)
 - [ROYALTY_STREAMS](ROYALTY_STREAMS.md)

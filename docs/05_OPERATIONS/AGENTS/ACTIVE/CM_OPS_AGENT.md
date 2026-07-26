@@ -84,9 +84,9 @@ ClickUp · Google Drive · Gmail · Calendar · ChatGPT · Claude · GitHub.
 
 ## 09 SOP's
 
-- `docs/03_SHARED_SERVICES/` onboarding-, meeting- en delivery-flows.
+- `docs/03_CLIENTS/` onboarding-, meeting- en delivery-flows.
 - `docs/02_ARTIST_MANAGEMENT/` en `docs/05_OPERATIONS/PLAYBOOKS/` voor management en releases.
-- `docs/04_SYSTEMS/CLICKUP_STRUCTURE.md` en `CLICKUP_MAPPING.md`.
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/CLICKUP_STRUCTURE.md` en `CLICKUP_MAPPING.md`.
 
 ## 10 Workflows
 
@@ -102,7 +102,7 @@ ClickUp · Google Drive · Gmail · Calendar · ChatGPT · Claude · GitHub.
 
 Client onboarding, artist profile, artist roadmap, release strategy/kickoff,
 meeting recap en monthly report templates uit
-`docs/03_SHARED_SERVICES/TEMPLATES/`.
+`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`.
 
 ## 12 Escalaties
 

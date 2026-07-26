@@ -89,7 +89,7 @@ ClickUp · Gmail · Google Drive · Canva · LinkedIn · ChatGPT · Claude · Gi
 
 - `docs/05_OPERATIONS/PLAYBOOKS/` voor sales, deals en partnerships.
 - `docs/01_MASTER_BOUTIQUE/` voor Buyer/Data Room-trajecten.
-- `docs/03_SHARED_SERVICES/TEMPLATES/` voor prospect-/sponsor-/partnership-briefs.
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor prospect-/sponsor-/partnership-briefs.
 
 ## 10 Workflows
 
@@ -104,7 +104,7 @@ ClickUp · Gmail · Google Drive · Canva · LinkedIn · ChatGPT · Claude · Gi
 ## 11 Templates
 
 Prospect Brief, Sponsor Brief, Partnership Brief, Outreach Draft en Deal Memo
-templates uit `docs/03_SHARED_SERVICES/TEMPLATES/` en
+templates uit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` en
 `docs/01_MASTER_BOUTIQUE/`.
 
 ## 12 Escalaties

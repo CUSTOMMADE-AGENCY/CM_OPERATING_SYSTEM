@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` V1.4 |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` V1.4 |
 
 ---
 
@@ -74,7 +74,7 @@
 
 ## **6. TEMPLATES**
 
-Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor `06_FINANCE`. Moneybird-templates worden beheerd binnen Moneybird.
+Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `06_FINANCE`. Moneybird-templates worden beheerd binnen Moneybird.
 
 ---
 
@@ -83,8 +83,8 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
 | Finance Intake Flow (artist) | TBD | Finance-intake voor artist; output naar `02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE` |
-| Finance Reconciliation Flow | `docs/03_SHARED_SERVICES/FINANCE_RECONCILIATION_FLOW.md` | Periodieke finance-reconciliatie |
-| Year End Finance Flow | `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md` | Jaarafsluiting en jaarrapportage |
+| Finance Reconciliation Flow | `docs/06_FINANCE/FINANCE_RECONCILIATION_FLOW.md` | Periodieke finance-reconciliatie |
+| Year End Finance Flow | `docs/06_FINANCE/YEAR_END_FINANCE_FLOW.md` | Jaarafsluiting en jaarrapportage |
 
 ---
 
@@ -92,7 +92,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Finance Intake SOP | `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` | Finance-intake en -verwerking: Moneybird-exports, bankafschriften, BTW-aangifte-voorbereiding |
+| Finance Intake SOP | `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` | Finance-intake en -verwerking: Moneybird-exports, bankafschriften, BTW-aangifte-voorbereiding |
 
 ---
 
@@ -257,23 +257,23 @@ Incorrect: `btw aangifte nieuw definitief.pdf`
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
 - [ ] Owner Agent (CM MONEY AGENT) klopt met `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` V1.4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Moneybird is als primaire bron correct geconfigureerd
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Agent Register V1.4 | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |
 # 06_FINANCE Map Specification
 

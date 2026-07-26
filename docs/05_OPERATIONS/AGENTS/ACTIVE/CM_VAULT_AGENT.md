@@ -92,10 +92,10 @@ voor uitvoerende automatisering).
 
 ## 09 SOP's
 
-- `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/04_SYSTEMS/DRIVE_MAPPING.md`
+- `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` en `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`
 - `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/` (leidend voor mapinhoud)
 - `docs/05_OPERATIONS/SOPS/ARCHIVE_SOP.md` en `ARCHIVE_FLOW.md`
-- `docs/03_SHARED_SERVICES/TEMPLATES/99_TEMPLATE_GOVERNANCE/`
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/99_TEMPLATE_GOVERNANCE/`
 
 ## 10 Workflows
 
@@ -110,7 +110,7 @@ voor uitvoerende automatisering).
 ## 11 Templates
 
 Template Register en de mastertemplates onder
-`docs/03_SHARED_SERVICES/TEMPLATES/`; naming-conventies en de
+`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`; naming-conventies en de
 template-governance-specs (`TEMPLATE_STATUS_REGISTER`, `TEMPLATE_GAP_LOG_SPEC`,
 `TEMPLATE_REVIEW_PROCESS`).
 

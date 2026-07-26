@@ -82,8 +82,8 @@ Moneybird · Bank · Gmail · ClickUp · Google Drive · ChatGPT · Claude.
 
 ## 09 SOP's
 
-- `docs/03_SHARED_SERVICES/FINANCE_INTAKE_SOP.md` en `FINANCE_RECONCILIATION_FLOW.md`
-- `docs/03_SHARED_SERVICES/YEAR_END_FINANCE_FLOW.md`
+- `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` en `FINANCE_RECONCILIATION_FLOW.md`
+- `docs/06_FINANCE/YEAR_END_FINANCE_FLOW.md`
 - `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/06_FINANCE.md`
 
 ## 10 Workflows
@@ -99,7 +99,7 @@ Moneybird · Bank · Gmail · ClickUp · Google Drive · ChatGPT · Claude.
 ## 11 Templates
 
 Financiële rapporttemplates (open posten, BTW, cashflow, revenue, forecast) en de
-finance-referenties onder `docs/03_SHARED_SERVICES/` en
+finance-referenties onder `docs/03_CLIENTS/` en
 `OS_CUSTOMMADE/06_FINANCE`.
 
 ## 12 Escalaties

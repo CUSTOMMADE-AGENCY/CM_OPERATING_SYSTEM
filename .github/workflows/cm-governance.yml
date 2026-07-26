@@ -25,8 +25,13 @@ jobs:
             "docs/00_GOVERNANCE/README.md"
             "docs/01_MASTER_BOUTIQUE/README.md"
             "docs/02_ARTIST_MANAGEMENT/README.md"
-            "docs/03_SHARED_SERVICES/README.md"
-            "docs/04_SYSTEMS/README.md"
+            "docs/03_CLIENTS/README.md"
+            "docs/04_DEALS/README.md"
+            "docs/05_OPERATIONS/README.md"
+            "docs/06_FINANCE/README.md"
+            "docs/07_LEGAL/README.md"
+            "docs/08_MARKETING/README.md"
+            "docs/09_CONTENT/README.md"
           )
 
           for file in "${required_files[@]}"; do

@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/`, `docs/05_OPERATIONS/PLAYBOOKS/` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, `docs/01_MASTER_BOUTIQUE/`, `docs/05_OPERATIONS/PLAYBOOKS/` |
 
 ---
 
@@ -78,8 +78,8 @@ OS_CUSTOMMADE
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Rights Audit Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLIENT_DELIVERABLES/RIGHTS_AUDIT_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/01_RECHTEN_REGISTER` |
-| Deal Negotiation Template | `docs/03_SHARED_SERVICES/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/04_OUTREACH_CLICKUP` |
+| Rights Audit Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/RIGHTS_AUDIT_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/01_RECHTEN_REGISTER` |
+| Deal Negotiation Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/DEAL_NEGOTIATION_TEMPLATE.md` | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/04_OUTREACH_CLICKUP` |
 
 ---
 
@@ -267,23 +267,23 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM LEGAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Owner Agent (CM LEGAL AGENT) klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
-- [ ] Templates zijn geregistreerd in `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md`
+- [ ] Templates zijn geregistreerd in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Master Boutique Playbooks | `docs/01_MASTER_BOUTIQUE/` |
 | Deal Playbooks | `docs/05_OPERATIONS/PLAYBOOKS/` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |
 | Naming Conventions | `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md` |
-| Template Register | `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_REGISTER.md` |
+| Template Register | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_REGISTER.md` |
 | Map Specification Standard | `docs/00_GOVERNANCE/STANDARDS/MAP_SPECIFICATION_STANDARD.md` |

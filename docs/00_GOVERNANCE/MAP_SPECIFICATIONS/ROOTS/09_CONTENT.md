@@ -12,7 +12,7 @@
 | Status | Actief |
 | Versie | 1.0 |
 | Laatste review | 2026-07-01 |
-| Gebaseerd op | `docs/04_SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
+| Gebaseerd op | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md`, `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 
 ---
 
@@ -70,7 +70,7 @@
 
 ## **6. TEMPLATES**
 
-Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor `09_CONTENT`. Contentformats worden beheerd in Canva (nog te bouwen) en intern in `09_CONTENT/FORMATS`.
+Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voor `09_CONTENT`. Contentformats worden beheerd in Canva (nog te bouwen) en intern in `09_CONTENT/FORMATS`.
 
 ---
 
@@ -80,7 +80,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 |---|---|---|
 | Content productie workflow (artist) | `docs/02_ARTIST_MANAGEMENT/04_CONTENT_PRODUCTIE_WORKFLOW.md` | Contentproductie (artistspecifiek; als referentie voor CM-eigen content) |
 | Social publishing workflow (artist) | `docs/02_ARTIST_MANAGEMENT/05_SOCIAL_PUBLISHING_WORKFLOW.md` | Publicatie (artistspecifiek; als referentie) |
-| Content Publication Flow | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_FLOW.md` | Publicatie namens CM op eigen kanalen |
+| Content Publication Flow | `docs/09_CONTENT/CONTENT_PUBLICATION_FLOW.md` | Publicatie namens CM op eigen kanalen |
 
 ---
 
@@ -88,7 +88,7 @@ Geen vaste templates toegewezen vanuit `docs/03_SHARED_SERVICES/TEMPLATES/` voor
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Content Publication SOP | `docs/03_SHARED_SERVICES/CONTENT_PUBLICATION_SOP.md` | Publicatieproces voor CM's eigen kanalen en contentkalenderbeheer |
+| Content Publication SOP | `docs/09_CONTENT/CONTENT_PUBLICATION_SOP.md` | Publicatieproces voor CM's eigen kanalen en contentkalenderbeheer |
 
 ---
 
@@ -234,17 +234,17 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 
 **Controlelijst:**
 
-- [ ] Submapstructuur klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 5
-- [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 4
+- [ ] Submapstructuur klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 5
+- [ ] Owner Agent (CM SOCIAL AGENT) klopt met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 4
 - [ ] Approvalniveaus kloppen met `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md`
 - [ ] Naamconventies kloppen met `docs/00_GOVERNANCE/NAMING_CONVENTIONS.md`
-- [ ] Archiveregels kloppen met `docs/04_SYSTEMS/DRIVE_MAPPING.md` Section 8
+- [ ] Archiveregels kloppen met `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` Section 8
 
 **Gerelateerde documentatie:**
 
 | Document | Pad |
 |---|---|
-| Drive Mapping | `docs/04_SYSTEMS/DRIVE_MAPPING.md` |
+| Drive Mapping | `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/DRIVE_MAPPING.md` |
 | Drive Structure Governance | `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` |
 | Agent Register | `docs/05_OPERATIONS/AGENTS/CM_AGENT_REGISTER.md` |
 | AI Autonomy Levels | `docs/05_OPERATIONS/AGENTS/AI_AUTONOMY_LEVELS.md` |

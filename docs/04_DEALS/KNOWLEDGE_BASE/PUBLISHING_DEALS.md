@@ -50,5 +50,5 @@ CM beoordeelt publishing deals op Scope, repertoire, term, retention period, ter
 
 - [PUBLISHING_RIGHTS](PUBLISHING_RIGHTS.md)
 - [SPLIT_SHEETS](SPLIT_SHEETS.md)
-- [BUMA_STEMRA](BUMA_STEMRA.md)
+- [BUMA_STEMRA](../../05_OPERATIONS/KNOWLEDGE_BASE/BUMA_STEMRA.md)
 - [DEAL_TERMS](DEAL_TERMS.md)

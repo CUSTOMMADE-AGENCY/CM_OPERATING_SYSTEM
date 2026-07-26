@@ -89,7 +89,7 @@ Agents staan niet onder `SOPS`. Agents gebruiken Workflows, voeren taken uit vol
 
 ## TEMPLATES
 
-Tijdens de huidige recovery blijven bestaande templatebestanden en templatepaden ongewijzigd. Templateconsolidatie, hernoeming en inhoudelijke review worden pas uitgevoerd na afronding van de repositorystructuur en Governance-correcties.
+De canonieke, inhoudelijk ongewijzigde Template Library staat onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`. Verplaatsingen wijzigen uitsluitend het repositorypad; inhoudelijke template-review blijft een afzonderlijke fase.
 
 De voorgenomen naamcorrectie wordt apart beoordeeld:
 

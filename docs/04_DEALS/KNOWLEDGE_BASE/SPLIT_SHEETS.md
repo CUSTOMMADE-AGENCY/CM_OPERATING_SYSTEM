@@ -49,6 +49,6 @@ CM gebruikt split sheets als verplichte input bij artist releases, publishing au
 ## Gerelateerd
 
 - [PUBLISHING_RIGHTS](PUBLISHING_RIGHTS.md)
-- [BUMA_STEMRA](BUMA_STEMRA.md)
+- [BUMA_STEMRA](../../05_OPERATIONS/KNOWLEDGE_BASE/BUMA_STEMRA.md)
 - [DUE_DILIGENCE](DUE_DILIGENCE.md)
 - [RED_FLAGS_LIBRARY](RED_FLAGS_LIBRARY.md)
