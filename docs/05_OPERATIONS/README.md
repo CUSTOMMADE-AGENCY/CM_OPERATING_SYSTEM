@@ -4,6 +4,8 @@
 
 `05_OPERATIONS` bevat de bedrijfsbrede uitvoeringslaag van het CM Operating System.
 
+Dit bestand is de primaire ingang voor de scope en categorieën van `05_OPERATIONS`. De aanvullende [`OPERATIONS_INDEX.md`](OPERATIONS_INDEX.md) is uitsluitend de navigatiekaart en geen concurrerende primaire index.
+
 ## Structuur
 
 ```text
