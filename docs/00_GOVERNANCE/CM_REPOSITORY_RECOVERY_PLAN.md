@@ -9,7 +9,10 @@ De repository terugbrengen naar één consistente, uitvoerbare en vindbare Sourc
 - Status: `ACTIEF`
 - Build freeze: `ACTIEF`
 - Fase 1-uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`
-- Fase 1-status: `GOEDGEKEURD / GEMERGED` via PR #194 naar `main`; de handmatige post-merge review heeft inhoudelijk akkoord gegeven
+- Fase 1-status: `GOEDGEKEURD / GEMERGED`
+- Fase 1-merge: PR #194 is gemerged naar `main`
+- Fase 1-post-merge review: handmatig inhoudelijk akkoord
+- Fase 1-procesincident: PR #194 is gemerged vóór de vereiste expliciete review
 - Owner: Sophia / CM CONTROL
 
 ## Governancevoorrang

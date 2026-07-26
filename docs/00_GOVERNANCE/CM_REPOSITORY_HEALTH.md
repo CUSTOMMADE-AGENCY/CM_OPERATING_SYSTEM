@@ -25,6 +25,9 @@
 
 ## Post-merge review en procescorrectie
 
-Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven. Daarbij is als procesincident vastgesteld dat PR #194 is gemerged vóór de vereiste expliciete review.
+Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`.
+
+- Handmatige post-merge review: inhoudelijk akkoord.
+- Procesincident: PR #194 is gemerged vóór de vereiste expliciete review.
 
 Voor toekomstige recovery-PR's geldt: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.

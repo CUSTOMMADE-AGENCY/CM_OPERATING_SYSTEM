@@ -6,9 +6,11 @@
 
 `GOEDGEKEURD / GEMERGED`
 
-Fase 1 is uitgevoerd via branch `codex/voer-fase-1-governance-consolidatie-uit` en via PR #194 gemerged naar `main`. De handmatige post-merge review heeft inhoudelijk akkoord gegeven.
-
-Procesincident: PR #194 is gemerged vóór de vereiste expliciete review. Voor toekomstige recovery-PR's geldt daarom: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
+- Uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`.
+- Merge: PR #194 is gemerged naar `main`.
+- Handmatige post-merge review: inhoudelijk akkoord.
+- Procesincident: PR #194 is gemerged vóór de vereiste expliciete review.
+- Toekomstige recovery-PR's: geen merge zonder geslaagde CM CONTROL-review of expliciete Sophia-approval.
 
 ### Wijzigingen
 
