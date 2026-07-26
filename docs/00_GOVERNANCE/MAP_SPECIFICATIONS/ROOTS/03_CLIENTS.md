@@ -80,10 +80,10 @@ Per clientdossier een passende genummerde productiestructuur afhankelijk van het
 
 | Template | Pad (GitHub) | Uitvoer in Drive |
 |---|---|---|
-| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
-| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/00_START_HIER` |
+| Client Profile Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_PROFILE_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/01_ADMIN` |
+| Client Onboarding Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_ONBOARDING_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/01_ADMIN` |
+| Email Instructions Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/01_ADMIN` |
+| Do Nots Template | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/DO_NOTS_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/01_ADMIN` |
 | Artist Audit Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/ARTIST_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
 | Business Audit Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
 | Release Strategy Template (client-facing) | `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLIENT_DELIVERABLES/RELEASE_STRATEGY_TEMPLATE.md` | `03_CLIENTS/[CLIENT]/` |
@@ -235,7 +235,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 ## **19. AFHANKELIJKHEDEN**
 
 **Input naar `03_CLIENTS`:**
-- Client intake en briefing → `00_START_HIER`
+- Client intake en briefing → `01_ADMIN`
 - Contracten na ondertekening → `07_LEGAL/CONTRACTS` (referentie in clientdossier)
 - Finance-check bij onboarding door CM MONEY AGENT
 
@@ -264,7 +264,7 @@ Geen actieve automatiseringen. Make heeft nu 0 scenario's.
 | Artist opgeslagen in `03_CLIENTS` | Verplaats naar `02_ARTIST_MANAGEMENT/[ARTIST]` |
 | Primaire factuur opgeslagen in clientdossier | Registreer in Moneybird; gebruik `06_FINANCE` voor referenties |
 | Deliverable extern verzonden zonder Sophia-approval | Herstop; registreer in Approval Register; escaleer naar Sophia |
-| Contract opgeslagen in `03_CLIENTS` als primair document | Verplaats naar `07_LEGAL/CONTRACTS`; bewaar referentie in `00_START_HIER` |
+| Contract opgeslagen in `03_CLIENTS` als primair document | Verplaats naar `07_LEGAL/CONTRACTS`; bewaar referentie in `01_ADMIN` |
 
 ---
 
