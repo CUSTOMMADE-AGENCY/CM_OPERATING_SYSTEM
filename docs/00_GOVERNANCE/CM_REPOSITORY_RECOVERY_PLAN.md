@@ -7,7 +7,8 @@ De repository terugbrengen naar één consistente, uitvoerbare en vindbare Sourc
 ## Status
 
 - Status: `ACTIEF`
-- Build freeze: `ACTIEF`
+- Build freeze: `ACTIEF` (template-onderdeel vrijgegeven — zie Build freeze)
+- Template Recovery (Sprint 6): `VRIJGEGEVEN` op autorisatie van de accounteigenaar (2026-07-26)
 - Fase 1-uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`
 - Fase 2-branch: `codex/phase-2-operations-consolidation`
 - Fase 2-status: `UITGEVOERD / IN REVIEW`
@@ -24,7 +25,7 @@ Tijdens de actieve recovery heeft dit Recovery Plan voorrang op de V1.0-producti
 2. GitHub structureren volgens de actuele CM-domeinen.
 3. Workflows, SOPs, Playbooks, Automations, Agents en Knowledge Base centraliseren onder `docs/05_OPERATIONS/`.
 4. Business lanes controleren op duplicaten, verkeerde locaties en ontbrekende documentatie.
-5. Templates pas na afronding van de recovery beoordelen.
+5. Templates worden in Sprint 6 (Template Recovery) beoordeeld, aangevuld en aan de Drive-structuur gekoppeld. Sprint 6 is vrijgegeven op autorisatie van de accounteigenaar.
 
 ## Vastgestelde structuur
 
@@ -57,13 +58,13 @@ docs/
 | 3 | Operations Consolidatie | UITGEVOERD / IN REVIEW |
 | 4 | Business Lanes Audit | OPEN |
 | 5 | Drive-validatie | OPEN |
-| 6 | Template Recovery | GEBLOKKEERD |
+| 6 | Template Recovery | VRIJGEGEVEN |
 
 ## Build freeze
 
 Tijdens de recovery:
 
-- geen nieuwe templates;
+- **template-freeze opgeheven** (Sprint 6 vrijgegeven op autorisatie van de accounteigenaar, 2026-07-26): templates mogen worden aangemaakt, aangevuld en aan de Drive-structuur gekoppeld volgens `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`;
 - geen nieuwe Agents;
 - geen nieuwe Automations;
 - geen nieuwe operationele structuren buiten dit plan;
@@ -94,3 +95,5 @@ De recovery is klaar wanneer:
 - 2026-07-26: Fase 1 via branch `codex/voer-fase-1-governance-consolidatie-uit` en PR #194 gemerged naar `main`; handmatige post-merge review inhoudelijk akkoord, met het te vroege mergen als procesincident geregistreerd.
 
 - 2026-07-26: Fase 2 Operations Consolidation uitgevoerd op reviewbranch; niet gemerged.
+- 2026-07-26: Template Placement Map toegevoegd (PR #204) als voorbereidend Sprint 6-materiaal.
+- 2026-07-26: template build-freeze opgeheven en Sprint 6 (Template Recovery) vrijgegeven op expliciete autorisatie van de accounteigenaar; gap-templates aangemaakt en Drive-uitrol gestart.

@@ -6,7 +6,7 @@ Deze repository is de GitHub source of truth voor de Governance, Workflows, SOPs
 
 **CM Operating System — Recovery & Alignment**
 
-De repository wordt opnieuw uitgelijnd op de actuele CM-bedrijfsstructuur. De template build-freeze uit `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` blijft actief: templates worden pas in Sprint 6 (Template Recovery) inhoudelijk aangepast of aangemaakt. De koppeling template↔Drive-map is als voorbereidend Sprint 6-materiaal vastgelegd in `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`.
+De repository wordt opnieuw uitgelijnd op de actuele CM-bedrijfsstructuur. Sprint 6 (Template Recovery) is vrijgegeven op autorisatie van de accounteigenaar: de template build-freeze is opgeheven en templates worden aangevuld en aan de Drive-structuur gekoppeld volgens `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`.
 
 ## STARTDOCUMENTEN
 
@@ -89,7 +89,7 @@ Agents staan niet onder `SOPS`. Agents gebruiken Workflows, voeren taken uit vol
 
 ## TEMPLATES
 
-De canonieke Template Library staat onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`. Welke template in welke Google Drive-map thuishoort, is als voorbereidend Sprint 6-materiaal vastgelegd in `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`. De template build-freeze blijft actief tot Sprint 6; inhoudelijke template-review en Drive-uitrol volgen daar.
+De canonieke Template Library staat onder `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/`. Welke template in welke Google Drive-map thuishoort, is vastgelegd in `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`. Sprint 6 is vrijgegeven; inhoudelijke template-aanvulling en Drive-uitrol lopen volgens die kaart.
 
 De voorgenomen naamcorrectie wordt apart beoordeeld:
 
