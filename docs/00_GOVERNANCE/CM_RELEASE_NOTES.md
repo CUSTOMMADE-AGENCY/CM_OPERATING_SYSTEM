@@ -1,5 +1,31 @@
 # CM Release Notes
 
+## Repository Recovery — Fase 1 Governance Consolidation — 2026-07-26
+
+### Status
+
+`TER REVIEW — EXPLICIETE GOEDKEURING VEREIST`
+
+### Wijzigingen
+
+- Recoverygovernance expliciet boven de V1.0-production-baseline geplaatst.
+- Baseline-ADR behouden en gemarkeerd als `SUPERSEDED_FOR_RECOVERY`.
+- Eén actieve `GOVERNANCE_RULES.md` vastgesteld; voormalige rootversie historisch behouden.
+- Map Specifications inhoudelijk op root- en childniveau vergeleken en integraal naar Governance verplaatst.
+- Governance-historystructuur met `BASELINES`, `AUDITS`, `RECOVERY_REPORTS`, `SPRINT_REPORTS` en `SUPERSEDED` ingericht.
+- Historische documenten voorzien van status en actuele opvolger.
+- Markdown-links en tekstuele padreferenties op de moves gecontroleerd en geremedieerd.
+
+### Niet gewijzigd
+
+Templates zijn volledig bevroren gebleven. Knowledge Base, Playbooks, Agents, Automations, Shared Services en business lanes zijn niet gemigreerd.
+
+### Details
+
+Zie `docs/00_GOVERNANCE/PHASE_1_GOVERNANCE_CONSOLIDATION_REPORT.md`.
+
+---
+
 ## Repository Recovery — 2026-07-15
 
 ### Status

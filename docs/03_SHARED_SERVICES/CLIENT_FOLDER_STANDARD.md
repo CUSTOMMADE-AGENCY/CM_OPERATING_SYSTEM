@@ -6,7 +6,7 @@ Leg vast hoe client-, partner-, merk-, sponsor-, opdrachtgever- en media partner
 
 ## Map Specifications
 
-Deze Folder Standard beschrijft alleen de mapstructuur van een client- of partnerdossier. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/08_MAP_SPECIFICATIONS/`.
+Deze Folder Standard beschrijft alleen de mapstructuur van een client- of partnerdossier. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/`.
 
 ## Scope
 

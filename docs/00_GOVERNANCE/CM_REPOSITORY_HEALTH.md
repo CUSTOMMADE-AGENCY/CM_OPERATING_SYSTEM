@@ -1,30 +1,28 @@
 # CM Repository Health
 
-## Huidige status
+## Huidige status — Fase 1
 
 | Onderdeel | Status | Opmerking |
 |---|---|---|
-| Governance | HERSTEL ACTIEF | Kernstructuur wordt gelijkgezet |
-| README | AANGEPAST | Nieuwe domeinstructuur opgenomen |
-| AS_BUILT | AANGEPAST | Nieuwe GitHub- en Drive-root opgenomen |
-| Operations | BASIS AANGEMAAKT | Migratie bestaande inhoud nog open |
-| Workflows | OPEN | Inventarisatie nodig |
-| SOPs | OPEN | Inventarisatie nodig |
-| Playbooks | OPEN | Oude locaties nog controleren |
-| Automations | OPEN | Oude locaties nog controleren |
-| Agents | OPEN | Oude locaties nog controleren |
-| Knowledge Base | OPEN | Oude locaties nog controleren |
-| Templates | BEVROREN | Worden pas na recovery aangepast |
-| Broken links | ONBEKEND | Linkaudit nog uitvoeren |
-| Duplicaten | ONBEKEND | Repository-inventarisatie nog uitvoeren |
+| Governance | GECONSOLIDEERD — TER REVIEW | Actieve recovery heeft voorrang op V1.0-baseline |
+| Governance Rules | ÉÉN ACTIEVE VERSIE | Canoniek onder `docs/00_GOVERNANCE/`; rootversie historisch behouden |
+| V1.0 ADR | SUPERSEDED_FOR_RECOVERY | Behouden; opvolger is het actieve Recovery Plan |
+| Governance History | INGERICHT | Vijf verplichte categorieën, statusbanners en opvolgerverwijzingen |
+| Map Specifications | VERPLAATST | Canoniek onder `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/` |
+| Repository-root | GECONSOLIDEERD | Governancehistorie verplaatst; README en Playbooks bewust behouden |
+| Markdown-links | GESCAND | Geen door Fase 1 veroorzaakte gebroken relatieve Markdown-links |
+| Tekstuele paden | GESCAND | Geen actieve verwijzingen naar de voormalige Map Specifications-locatie |
+| Operations-content | NIET GEWIJZIGD | Migratie valt buiten Fase 1 |
+| Templates | BEVROREN | Geen templatebestand verplaatst, hernoemd of inhoudelijk aangepast |
 
 ## Open risico's
 
-1. Oude hoofdmappen kunnen nog verwijzingen bevatten naar `05_KNOWLEDGE_BASE`, `06_PLAYBOOKS` en `07_AI_AGENTS`.
-2. Governance-documenten kunnen nog oude Drive-detailstructuren bevatten.
-3. Oude Agents en Playbooks zijn nog niet fysiek gemigreerd.
-4. Repository heeft nog geen volledige link- en duplicatenaudit gehad.
+1. Historische documenten bevatten bewust oude padnamen en besluiten als auditbewijs; hun banner voorkomt dat zij als actief worden gelezen.
+2. Verkorte tekstverwijzingen zonder directory zijn niet altijd automatisch semantisch te valideren.
+3. Niet alle historische governance heeft een PDF-paar, ondanks een oudere PDF-governanceregel.
+4. De twee inhoudelijk verschillende baseline-reviewvarianten vereisen geen samenvoeging, maar blijven als afzonderlijke historische bronnen bestaan.
+5. Operations, Knowledge Base, Playbooks, Agents, Automations, Shared Services, business lanes en templates wachten op een afzonderlijk goedgekeurde vervolgfase.
 
-## Completion standard
+## Stopcriterium
 
-Status wordt `GEZOND` wanneer de Repository Checklist is afgerond, alle canonieke locaties kloppen en de herstel-PR is goedgekeurd en gemerged.
+Fase 1 blijft `TER REVIEW`. Geen vervolgconsolidatie en geen merge naar `main` zonder expliciete goedkeuring.

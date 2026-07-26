@@ -48,7 +48,7 @@ Deze SOP geldt voor alle operaties in `05_OPERATIONS`:
 ### Stap 2 — Governance-bewaking
 
 1. Controleer maandelijks of Map Specifications, SOPs en Workflows consistent zijn met elkaar en met de GitHub-bronnen.
-2. Constateer discrepantie → registreer als gap in `docs/08_MAP_SPECIFICATIONS/MAP_SPECIFICATION_GAP_REPORT.md`.
+2. Constateer discrepantie → registreer als gap in `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/MAP_SPECIFICATION_GAP_REPORT.md`.
 3. Prioriteer gap en wijs actie-eigenaar toe.
 4. Rapporteer openstaande gaps in maandelijkse Control Report.
 

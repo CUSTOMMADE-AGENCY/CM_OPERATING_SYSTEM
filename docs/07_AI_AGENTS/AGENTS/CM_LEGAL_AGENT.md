@@ -89,7 +89,7 @@ Google Drive · Gmail · ClickUp · Sheets · ChatGPT · Claude · GitHub.
 
 - `docs/03_SHARED_SERVICES/LEGAL_REVIEW_SOP.md` en `LEGAL_REVIEW_FLOW.md`
 - `docs/03_SHARED_SERVICES/CONTRACT_LIFECYCLE_FLOW.md`
-- `docs/06_PLAYBOOKS/` voor deals en rechten; `docs/08_MAP_SPECIFICATIONS/07_LEGAL.md`
+- `docs/06_PLAYBOOKS/` voor deals en rechten; `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/07_LEGAL.md`
 
 ## 10 Workflows
 

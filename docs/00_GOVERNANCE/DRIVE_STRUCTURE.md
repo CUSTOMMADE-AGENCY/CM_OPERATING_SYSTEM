@@ -8,7 +8,7 @@ GitHub en Google Drive hebben bewust verschillende structuren: GitHub is de sour
 
 ## Map Specifications
 
-Drive Structure beschrijft alleen de boomstructuur. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/08_MAP_SPECIFICATIONS/`.
+Drive Structure beschrijft alleen de boomstructuur. Voor de inhoud van iedere map zijn de Map Specifications leidend: `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/`.
 
 ## Rootfolder
 

@@ -24,7 +24,7 @@ Een Map Specification is geen beschrijving van wat Drive doet. Het is een operat
 
 ## **2. REIKWIJDTE**
 
-Deze standaard geldt voor alle Map Specification-bestanden onder `docs/08_MAP_SPECIFICATIONS/`. Elke hoofdmap onder `OS_CUSTOMMADE` in Google Drive heeft een bijbehorende Map Specification in deze directory.
+Deze standaard geldt voor alle Map Specification-bestanden onder `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/`. Elke hoofdmap onder `OS_CUSTOMMADE` in Google Drive heeft een bijbehorende Map Specification in deze directory.
 
 ---
 
@@ -282,7 +282,7 @@ Voorbeelden:
 
 | Onderdeel | Waarde |
 |---|---|
-| GitHub-locatie | `docs/08_MAP_SPECIFICATIONS/` |
+| GitHub-locatie | `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/` |
 | Eigenaar directory | CM CONTROL AGENT |
 | Beheer | CM VAULT AGENT |
 | Reviewritme | Kwartaal of bij structuurwijziging |

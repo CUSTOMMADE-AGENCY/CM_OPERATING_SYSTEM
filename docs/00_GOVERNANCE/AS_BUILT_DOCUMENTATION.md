@@ -20,6 +20,15 @@ Dit document legt vast hoe het CM Operating System vandaag daadwerkelijk is inge
 ```text
 docs/
 ├── 00_GOVERNANCE
+│   ├── ADR
+│   ├── HISTORY
+│   │   ├── BASELINES
+│   │   ├── AUDITS
+│   │   ├── RECOVERY_REPORTS
+│   │   ├── SPRINT_REPORTS
+│   │   └── SUPERSEDED
+│   ├── MAP_SPECIFICATIONS
+│   └── STANDARDS
 ├── 01_MASTER_BOUTIQUE
 ├── 02_ARTIST_MANAGEMENT
 ├── 03_CLIENTS
@@ -60,17 +69,20 @@ De detailstructuren binnen artist-, client- en dealdossiers worden afzonderlijk 
 
 ## Recoverystatus
 
-Status: `REPOSITORY RECOVERY`
+Status: `REPOSITORY RECOVERY — FASE 1 GOVERNANCE CONSOLIDATION TER REVIEW`
 
 Build freeze:
 
 - governanceherstel toegestaan;
 - repositorystructuurherstel toegestaan;
-- documentatieconsolidatie toegestaan;
+- documentatieconsolidatie toegestaan binnen Governance en repository-root;
 - geen nieuwe templates;
 - geen nieuwe Agents;
 - geen nieuwe Automations;
-- geen inhoudelijke uitbreiding buiten de recovery-scope.
+- geen inhoudelijke uitbreiding buiten de recovery-scope;
+- geen migratie van Knowledge Base, Playbooks, Agents, Automations, Shared Services of business lanes zonder volgende expliciete goedkeuring.
+
+Tijdens recovery is `CM_REPOSITORY_RECOVERY_PLAN.md` leidend. De V1.0-baseline-ADR heeft tijdelijk status `SUPERSEDED_FOR_RECOVERY`. Map Specifications staan canoniek onder `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/`; historische governance staat onder `docs/00_GOVERNANCE/HISTORY/`.
 
 ## Reviewritme
 
