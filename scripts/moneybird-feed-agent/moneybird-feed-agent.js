@@ -47,6 +47,11 @@ function loadConfig() {
     cfg.feedUrl = `https://moneybird.com/${envAdministrationId}/feed`;
   }
 
+  if (!cfg.administrationId || !/^\d+$/.test(String(cfg.administrationId))) {
+    throw new Error('MONEYBIRD_ADMIN_ID ontbreekt of is ongeldig. Zet deze lokaal via .env; commit de echte waarde nooit.');
+  }
+  cfg.feedUrl = `https://moneybird.com/${cfg.administrationId}/feed`;
+
   if (process.env.MONEYBIRD_API_TOKEN !== undefined && process.env.MONEYBIRD_API_TOKEN.trim() === '') {
     throw new Error('MONEYBIRD_API_TOKEN is gezet maar leeg.');
   }
