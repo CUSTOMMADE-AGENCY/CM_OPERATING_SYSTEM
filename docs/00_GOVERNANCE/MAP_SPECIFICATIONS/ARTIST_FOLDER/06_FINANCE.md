@@ -58,7 +58,7 @@ Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLA
 
 | Workflow | Pad (GitHub) | Trigger |
 |---|---|---|
-| Finance Reconciliation Flow | `docs/06_FINANCE/FINANCE_RECONCILIATION_FLOW.md` | Periodieke reconciliatie van artistfinanciën |
+| TBD | TBD | Artist-scoped finance workflow moet nog worden vastgesteld; gebruik niet de CM-brede root-finance flow |
 
 ---
 
@@ -66,7 +66,7 @@ Geen vaste templates toegewezen vanuit `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLA
 
 | SOP | Pad (GitHub) | Scope |
 |---|---|---|
-| Finance Intake SOP | `docs/06_FINANCE/FINANCE_INTAKE_SOP.md` | Intake en verwerking van financiële documenten |
+| TBD | TBD | Artist-scoped finance SOP moet nog worden vastgesteld; gebruik niet de CM-brede root-finance SOP |
 
 ---
 

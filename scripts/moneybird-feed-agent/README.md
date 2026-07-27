@@ -83,7 +83,7 @@ de agent detecteert automatisch wanneer de feed geladen is en gaat verder.
 
 | Sleutel | Standaard | Betekenis |
 |---|---|---|
-| `administrationId` | `174361138789615495` | Moneybird administratie-ID; lokaal te overschrijven met `MONEYBIRD_ADMIN_ID` of `MONEYBIRD_ADMINISTRATION_ID`. |
+| `administrationId` | leeg | Moneybird administratie-ID; verplicht lokaal instellen met `MONEYBIRD_ADMIN_ID` of `MONEYBIRD_ADMINISTRATION_ID`. |
 | `feedUrl` | Feed-URL | De feedpagina die geopend wordt; wordt automatisch opnieuw opgebouwd bij een admin-ID uit de omgeving. |
 | `batchLimit` | `25` | Maximaal aantal te verwerken documenten. |
 | `dryRun` | `false` | `true` = niets aanklikken, alleen loggen. |

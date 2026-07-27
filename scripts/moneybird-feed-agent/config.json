@@ -1,6 +1,6 @@
 {
-  "administrationId": "174361138789615495",
-  "feedUrl": "https://moneybird.com/174361138789615495/feed",
+  "administrationId": "",
+  "feedUrl": "",
   "batchLimit": 25,
   "dryRun": false,
   "headless": false,
@@ -14,9 +14,26 @@
     "loginPollMs": 2000
   },
   "classification": {
-    "INK": ["inkoopfactuur", "inkoop", "purchase invoice", "ink"],
-    "BON": ["bon", "kassabon", "kwitantie", "receipt", "bonnetje"],
-    "ALG": ["algemeen", "algemeen document", "general", "document", "alg"]
+    "INK": [
+      "inkoopfactuur",
+      "inkoop",
+      "purchase invoice",
+      "ink"
+    ],
+    "BON": [
+      "bon",
+      "kassabon",
+      "kwitantie",
+      "receipt",
+      "bonnetje"
+    ],
+    "ALG": [
+      "algemeen",
+      "algemeen document",
+      "general",
+      "document",
+      "alg"
+    ]
   },
   "safeButtons": [
     "Toevoegen",
@@ -34,8 +51,17 @@
     "geen contact geselecteerd"
   ],
   "selectors": {
-    "loginIndicators": ["input[name='email']", "input[type='password']", "form[action*='login']"],
-    "loggedInIndicators": ["table", ".feed", "[data-feed]", "nav"],
+    "loginIndicators": [
+      "input[name='email']",
+      "input[type='password']",
+      "form[action*='login']"
+    ],
+    "loggedInIndicators": [
+      "table",
+      ".feed",
+      "[data-feed]",
+      "nav"
+    ],
     "feedRow": "table tbody tr, .feed .feed-item, li.feed-item"
   }
 }

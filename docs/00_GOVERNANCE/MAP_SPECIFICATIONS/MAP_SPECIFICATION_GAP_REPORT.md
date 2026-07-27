@@ -426,7 +426,7 @@ De leidende Drive production baseline (`docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`, 
 **Actie:**
 Opgelost op 2026-07-26 (besluit repo-eigenaar: oplossing B — specs afslanken naar de baseline): hoofdstuk 5 van de vijf specs is root-only gemaakt; de submappen zijn geherformuleerd als inhoudscategorieën (geen aparte Drive-submappen). Losse verwijzingen naar de verwijderde submappen (uitvoerlocaties, archiveregels, source-of-truth-paden) zijn naar de rootmap of de centrale `99_ARCHIVE` gebracht. De START_HIER-templates voor `05/06/08/09` zijn verwijderd.
 
-**Vervolg (niet in deze scope):** de Drive-scripts (`create-os-custommade-target-structure.gs`/`OS_CUSTOMMADE_target_structure.gs`) maken deze submappen nog steeds aan; zij zijn nu de afwijkende partij en moeten door de owner naar root-only worden gebracht — bijgehouden onder GAP-016.
+**Validatie 2026-07-27:** de afwijkende duplicaat is onder GAP-020 verwijderd. Het behouden safe-roots script `OS_CUSTOMMADE_target_structure.gs` en het PRIMARY-buildscript `create-cm-drive-structure.gs` volgen de root-only baseline. Er is voor dit punt geen aanvullende scriptremediation meer nodig.
 
 ---
 
