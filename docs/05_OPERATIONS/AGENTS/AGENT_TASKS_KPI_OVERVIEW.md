@@ -327,7 +327,7 @@ Source-of-truth-volgorde: 1. GitHub · 2. Moneybird · 3. Google Drive · 4. Cli
 
 **Mandaat — mag niet:** documenten verwijderen · contractinhoud juridisch wijzigen · facturen inhoudelijk verwerken · content publiceren · nieuwe deals aanmaken · klantcommunicatie versturen · governance wijzigen zonder registratie · rechten-register wijzigen zonder LEGAL
 
-**Handoffs:** Inbound = documenten, templates, prompts, governance-updates via `REVIEW_HOLD`. Outbound → CONTROL (governance/structuur) · LEGAL (contracten/rechten) · MONEY (financiële documenten) · FLOW (automatisering van scans/alerts).
+**Handoffs:** Inbound = documenten, templates, prompts, governance-updates via `REVIEW_HOLD`. Outbound → CONTROL (governance/structuur) · LEGAL (contracten/rechten) · MONEY (financiële documenten) · FLOW (automatisering van scans/alerts én datamuterende plaatsing). VAULT signaleert en stelt voor; de eigenaar-agent beslist en **CM FLOW voert de datamuterende plaatsing uit**.
 
 ---
 
