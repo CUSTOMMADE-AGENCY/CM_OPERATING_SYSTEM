@@ -21,11 +21,12 @@ De agentlaag is governance- en documentatietechnisch sterk (alle 8 paspoorten zi
 certificeringspoorten zijn nog niet gehaald**. Alle agents staan feitelijk op
 **Level 1 — Governance Approved**: beschreven, maar nog niet actief.
 
-De bindende beperking is niet de documentatie maar de **uitvoeringslaag**: de
-automatiseringen die de agents "pull-based" laten werken staan grotendeels op `IDEA`,
-er zijn nog geen ingevulde agentpaspoorten met certificeringsscore, en er is geen
-geregistreerde functionele- of red-team-test. De activatiestrategie zelf staat nog op
-`Concept`.
+De zwaarste openstaande beperking zit in de **uitvoeringslaag**, met daarnaast een nog
+onvolledige documentatieset per agent: de automatiseringen die de agents "pull-based"
+laten werken staan grotendeels op `IDEA`, er zijn nog geen ingevulde agentpaspoorten met
+certificeringsscore, er is geen geregistreerde functionele- of red-team-test, en de
+per-agent productiestatus-approvals zijn nog niet vastgelegd. De activatiestrategie zelf
+staat nog op `Concept`.
 
 Sophia-approval voor activatie is bevestigd, maar approval is slechts **één** van zeven
 production-gates — de overige zes moeten eerst groen.
@@ -74,21 +75,28 @@ Scenariostatussen komen uit `MAKE_SCENARIO_MAP.md`. Geen enkel scenario staat op
 
 ## 4. Production Gate — status op agentlaag-niveau
 
-Bron: `AGENT_CERTIFICATION_STANDARD.md` §9. Geldt voor alle agents tenzij anders vermeld.
+Bron: `AGENT_CERTIFICATION_STANDARD.md` §9 (de **zeven** production-gates). Geldt voor alle
+agents tenzij anders vermeld. Legenda: ✅ groen · ⚠️ voorwaardelijk/deels (telt als
+nog-niet-gehaald) · ❌ rood.
 
-| Gate | Eigenaar | Status | Toelichting |
-|---|---|---|---|
-| Governance | CM CONTROL | ✅ | Scope, owner, approval-gates en verboden acties zijn `GOVERNANCE LOCKED` vastgelegd. |
-| Documentatie | CM VAULT | ✅ | Alle 8 paspoorten volgen de 18-sectiestandaard en zijn vindbaar. |
-| Techniek | CM FLOW | ❌ | Geen scenario op `ACTIVE`; rechten/logging/rollback niet productie-geverifieerd. |
-| Functionele test | Owner-agent + reviewer | ❌ | Geen testregistratie (§7) aanwezig. |
-| Red team test | CM CONTROL / reviewer | ❌ | Geen red-team-registratie (§8) aanwezig. |
-| Certificeringsscore + paspoort | CM CONTROL | ❌ | Geen agent heeft een ingevuld paspoort of score ≥90/100 (§6, §11). |
-| Approval | Sophia | ✅ | Bevestigd voor het activatietraject; blijft per production-status expliciet vereist. |
-| Monitoring | Owner-agent + support | ❌ | Monitoringritme is beschreven, maar niet actief (niets draait live). |
+| # | Gate | Eigenaar | Status | Toelichting |
+|---|---|---|---|---|
+| 1 | Governance | CM CONTROL | ✅ | Scope, owner, approval-gates en verboden acties zijn `GOVERNANCE LOCKED` vastgelegd. |
+| 2 | Documentatie | CM VAULT | ⚠️ | Agentdefinitie (18 secties) compleet en vindbaar, maar de verplichte set per agent — testplan en logspecificatie (`AGENT_LIFECYCLE.md`) — is nog niet aangetoond. Blijft rood tot compleet. |
+| 3 | Techniek | CM FLOW | ❌ | Geen scenario op `ACTIVE`; rechten/logging/rollback niet productie-geverifieerd. |
+| 4 | Functionele test | Owner-agent + reviewer | ❌ | Geen testregistratie (§7) aanwezig. |
+| 5 | Red team test | CM CONTROL / reviewer | ❌ | Geen red-team-registratie (§8) aanwezig. |
+| 6 | Approval | Sophia | ⚠️ | Approval op het activatietraject is gegeven, maar §9 vereist expliciete approval van de **productiestatus per agent**; die zijn nog niet vastgelegd. Blijft rood tot per-agent vastgelegd. |
+| 7 | Monitoring | Owner-agent + support | ❌ | Monitoringritme is beschreven, maar niet actief (niets draait live). |
 
-**Vier tot vijf van de zeven gates zijn nog rood** (Techniek, Functionele test, Red team,
-Certificering, Monitoring). Governance, Documentatie en Approval zijn groen.
+**Exacte telling:** van de zeven production-gates is alleen **Governance (1) volledig
+groen**. **Documentatie (2)** en **Approval (6)** zijn voorwaardelijk en tellen als
+nog-niet-gehaald tot ze zijn vastgelegd; **Techniek (3), Functionele test (4), Red team (5)
+en Monitoring (7)** zijn rood. Er is dus **één van zeven** gates gehaald.
+
+**Aanvullende certificeringsvoorwaarde (geen §9-gate):** naast de zeven gates vereist
+Level 3 een certificeringsscore ≥90/100 én een ingevuld agentpaspoort (§6, §11). Dat is
+voor **geen enkele** agent aanwezig.
 
 ---
 
@@ -172,8 +180,11 @@ Fase 2  Executie         OPS · MONEY · LEGAL · SOCIAL · PROSPECT   (per dome
 Fase 3  Sturing          CM CONTROL             (geconsolideerde digest naar Sophia)
 ```
 
-Per agent geldt binnen zijn fase telkens dezelfde route: scenario naar `TEST` → functionele
-test → red-team-test → paspoort invullen + score → Sophia-approval → `ACTIVE` + monitoring.
+Per agent geldt binnen zijn fase telkens dezelfde route, conform de scenariostatussen in
+`MAKE_SCENARIO_MAP.md` (`IDEA → REVIEW → TEST → BUILD → ACTIVE`): scenario naar `TEST` →
+functionele test + red-team-test → `BUILD` (monitoring, alerts, documentatie en technische
+verificatie afronden) → agentpaspoort invullen + score ≥90 → Sophia-approval van de
+productiestatus → `ACTIVE` + monitoring.
 
 ---
 
