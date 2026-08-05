@@ -1,0 +1,771 @@
+<title>CM_OS — Agentoverzicht</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f5f8;
+    --surface: #ffffff;
+    --surface-2: #fafbfc;
+    --border: #e2e5ec;
+    --border-strong: #cdd2de;
+    --ink: #1c2230;
+    --ink-soft: #4a5265;
+    --ink-faint: #737d92;
+    --accent: #4f46e5;
+    --accent-soft: #eef0fe;
+    /* layer accents */
+    --l-sturing: #b45309;
+    --l-sturing-bg: #fdf4e7;
+    --l-executie: #4338ca;
+    --l-executie-bg: #eef0fe;
+    --l-bescherming: #be123c;
+    --l-bescherming-bg: #fdeef2;
+    --l-infra: #0f766e;
+    --l-infra-bg: #e7f4f2;
+    --shadow: 0 1px 2px rgba(28,34,48,.04), 0 4px 16px rgba(28,34,48,.05);
+    --mono: ui-monospace, "SF Mono", "SFMono-Regular", "Menlo", "Consolas", monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1017;
+      --surface: #171a24;
+      --surface-2: #1c202c;
+      --border: #282d3b;
+      --border-strong: #38405280;
+      --ink: #e7e9f0;
+      --ink-soft: #a8b0c2;
+      --ink-faint: #7b8499;
+      --accent: #8b87f5;
+      --accent-soft: #232447;
+      --l-sturing: #e8a552; --l-sturing-bg: #2a2113;
+      --l-executie: #9a95f7; --l-executie-bg: #1e1f3a;
+      --l-bescherming: #f2708f; --l-bescherming-bg: #301620;
+      --l-infra: #4ec4b5; --l-infra-bg: #10261f;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f4f5f8; --surface: #ffffff; --surface-2: #fafbfc;
+    --border: #e2e5ec; --border-strong: #cdd2de;
+    --ink: #1c2230; --ink-soft: #4a5265; --ink-faint: #737d92;
+    --accent: #4f46e5; --accent-soft: #eef0fe;
+    --l-sturing: #b45309; --l-sturing-bg: #fdf4e7;
+    --l-executie: #4338ca; --l-executie-bg: #eef0fe;
+    --l-bescherming: #be123c; --l-bescherming-bg: #fdeef2;
+    --l-infra: #0f766e; --l-infra-bg: #e7f4f2;
+    --shadow: 0 1px 2px rgba(28,34,48,.04), 0 4px 16px rgba(28,34,48,.05);
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0e1017; --surface: #171a24; --surface-2: #1c202c;
+    --border: #282d3b; --border-strong: #38405280;
+    --ink: #e7e9f0; --ink-soft: #a8b0c2; --ink-faint: #7b8499;
+    --accent: #8b87f5; --accent-soft: #232447;
+    --l-sturing: #e8a552; --l-sturing-bg: #2a2113;
+    --l-executie: #9a95f7; --l-executie-bg: #1e1f3a;
+    --l-bescherming: #f2708f; --l-bescherming-bg: #301620;
+    --l-infra: #4ec4b5; --l-infra-bg: #10261f;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) clamp(16px, 4vw, 40px) 96px; }
+
+  /* ---- Masthead ---- */
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 8px; }
+  .kicker {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 12px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  }
+  .kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.05; margin: 0; letter-spacing: -.02em; text-wrap: balance; font-weight: 700; }
+  .lede { color: var(--ink-soft); font-size: clamp(15px, 1.6vw, 17px); max-width: 62ch; margin: 16px 0 0; }
+  .meta { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .meta span b { color: var(--ink-soft); font-weight: 500; }
+
+  /* ---- Section heads ---- */
+  .sec-head { margin: 56px 0 20px; }
+  .sec-head h2 { font-size: 13px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--ink-faint); margin: 0 0 6px; }
+  .sec-head .rule { height: 1px; background: var(--border-strong); }
+
+  /* ---- Overview matrix ---- */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+  thead th {
+    text-align: left; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; padding: 14px 16px; border-bottom: 1px solid var(--border-strong); background: var(--surface-2);
+  }
+  tbody td { padding: 13px 16px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--ink-soft); }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .q { font-style: italic; color: var(--ink-faint); }
+  .laag-pill {
+    display: inline-block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px; font-weight: 600; white-space: nowrap;
+  }
+  .p-sturing { color: var(--l-sturing); background: var(--l-sturing-bg); }
+  .p-executie { color: var(--l-executie); background: var(--l-executie-bg); }
+  .p-bescherming { color: var(--l-bescherming); background: var(--l-bescherming-bg); }
+  .p-infra { color: var(--l-infra); background: var(--l-infra-bg); }
+
+  /* ---- Agent cards ---- */
+  .cards { display: flex; flex-direction: column; gap: 22px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); overflow: hidden; position: relative;
+  }
+  .card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--laag); }
+  .card-head { padding: 22px 26px 18px 30px; border-bottom: 1px solid var(--border); }
+  .card-head .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+  .card-head h3 { margin: 0; font-size: 21px; letter-spacing: -.01em; font-weight: 700; }
+  .card-head .kernvraag { font-family: var(--mono); font-size: 12.5px; color: var(--laag); margin: 8px 0 0; }
+  .card-head .kernvraag::before { content: "› "; opacity: .7; }
+  .card-desc { color: var(--ink-soft); font-size: 14px; margin: 12px 0 0; max-width: 70ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .block { padding: 20px 26px 22px 30px; border-top: 1px solid var(--border); }
+  .block:nth-child(odd) { border-right: 1px solid var(--border); }
+  .block h4 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-faint); margin: 0 0 12px; font-weight: 600;
+  }
+  .block.full { grid-column: 1 / -1; }
+  ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  ul.tags { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  ul li { font-size: 13.5px; color: var(--ink-soft); padding-left: 16px; position: relative; }
+  ul li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 5px; height: 5px; border-radius: 1px; background: var(--laag); opacity: .8; }
+  ul.tags li { padding: 4px 10px; border: 1px solid var(--border-strong); border-radius: 6px; font-size: 12.5px; color: var(--ink-soft); }
+  ul.tags li::before { display: none; }
+
+  /* KPI list */
+  .kpi { display: flex; flex-direction: column; gap: 8px; }
+  .kpi-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13.5px; padding-bottom: 7px; border-bottom: 1px dashed var(--border); }
+  .kpi-row:last-child { border-bottom: none; }
+  .kpi-row .k { color: var(--ink-soft); }
+  .kpi-row .v { font-family: var(--mono); font-size: 12.5px; font-weight: 600; color: var(--laag); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* handoffs */
+  .flow { font-size: 13px; color: var(--ink-soft); }
+  .flow b { color: var(--ink); font-weight: 600; }
+  .arrow { color: var(--laag); font-weight: 700; padding: 0 4px; }
+
+  .note { font-size: 13px; color: var(--ink-soft); background: var(--surface-2); border: 1px solid var(--border); border-left: 3px solid var(--laag); border-radius: 8px; padding: 12px 14px; margin-top: 4px; }
+
+  /* governance */
+  .gov { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .gov-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow); }
+  .gov-card h4 { margin: 0 0 10px; font-size: 14px; }
+  .gov-card .mono-lead { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  .gov-card ul li { font-size: 13px; }
+  .gov-card ul li::before { background: var(--accent); }
+
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); line-height: 1.7; }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+    .block:nth-child(odd) { border-right: none; }
+    .card-head, .block { padding-left: 22px; padding-right: 20px; }
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker"><span class="dot"></span> CM Operating System · Agentregister</p>
+    <h1>Alle agents: taken, inputs &amp; KPI&#39;s</h1>
+    <p class="lede">Volledig overzicht van de acht actieve CM_OS-agents — hun verantwoordelijkheden, inputs, KPI&#39;s, tools, mandaatgrenzen en onderlinge handoffs. Bron: <code>docs/05_OPERATIONS/AGENTS/ACTIVE/</code>.</p>
+    <div class="meta">
+      <span><b>8</b> actieve agents</span>
+      <span><b>4</b> lagen</span>
+      <span>Status: <b>GOVERNANCE LOCKED</b></span>
+      <span>Repo: <b>CM_OPERATING_SYSTEM</b></span>
+    </div>
+  </header>
+
+  <!-- OVERVIEW MATRIX -->
+  <div class="sec-head" style="margin-top:40px;">
+    <h2>Overzichtsmatrix</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Agent</th><th>Laag</th><th>Kernvraag</th><th>Eigenaar van</th><th>Belangrijkste output</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CM CONTROL</td><td><span class="laag-pill p-sturing">Sturing</span></td><td class="q">Moeten we dit doen?</td><td>Prioriteiten, escalaties, governance, besluitvorming</td><td>Weekly Control Report</td></tr>
+        <tr><td>CM OPS</td><td><span class="laag-pill p-executie">Executie</span></td><td class="q">Hoe voeren we dit uit?</td><td>Projecten, releases, management, client delivery</td><td>Projectplan, roadmap, statusupdate</td></tr>
+        <tr><td>CM PROSPECT</td><td><span class="laag-pill p-executie">Executie</span></td><td class="q">Hoe krijgen we nieuwe business?</td><td>Sponsorships, partnerships, brand deals, nieuwe klanten</td><td>Prospect Brief, Opportunity Report</td></tr>
+        <tr><td>CM SOCIAL</td><td><span class="laag-pill p-executie">Executie</span></td><td class="q">Hoe maken we dit zichtbaar?</td><td>Social, website, SEO, nieuwsbrief, cases, pers</td><td>Contentkalender, media pitch</td></tr>
+        <tr><td>CM MONEY</td><td><span class="laag-pill p-executie">Executie</span></td><td class="q">Wat is de financiële waarheid?</td><td>Moneybird, facturen, BTW, cashflow, revenue</td><td>Open Posten- &amp; Cashflow Rapport</td></tr>
+        <tr><td>CM LEGAL</td><td><span class="laag-pill p-bescherming">Bescherming</span></td><td class="q">Is dit juridisch correct?</td><td>Contracten, rechten, deals, compliance, disputes</td><td>Contract Review, Rights Audit</td></tr>
+        <tr><td>CM VAULT</td><td><span class="laag-pill p-infra">Infrastructuur</span></td><td class="q">Waar staat de waarheid?</td><td>Drive, templates, SOP&#39;s, playbooks, archief</td><td>Source-of-Truth Report, Template Check</td></tr>
+        <tr><td>CM FLOW</td><td><span class="laag-pill p-infra">Infrastructuur</span></td><td class="q">Hoe automatiseren we dit?</td><td>Make, API&#39;s, webhooks, ClickUp &amp; GitHub automations</td><td>Automation Spec, Flow Health Report</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- AGENT CARDS -->
+  <div class="sec-head">
+    <h2>Per agent — volledig profiel</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="cards">
+
+    <!-- CONTROL -->
+    <article class="card" style="--laag: var(--l-sturing);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM CONTROL AGENT</h3><p class="kernvraag">Moeten we dit doen?</p></div>
+          <span class="laag-pill p-sturing">Sturing · fase 3</span>
+        </div>
+        <p class="card-desc">De dirigent tussen de acht agents. Bewaakt prioriteiten, governance, capaciteit en approval-gates, weegt risico en routeert werk naar de eigenaar-agent. Beslist niet inhoudelijk en voert geen operationeel werk uit. <b>CONTROL controleert.</b></p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Prioriteiten bepalen en bewaken</li>
+            <li>Werk routeren naar de juiste eigenaar-agent</li>
+            <li>Escalaties beoordelen en innemen</li>
+            <li>Governance bewaken &amp; conflicten signaleren</li>
+            <li>Kwaliteitscontrole op agent-output</li>
+            <li>Capaciteit bewaken · KPI&#39;s beoordelen</li>
+            <li>Besluitvorming voorbereiden (Go/No-Go)</li>
+            <li>Weekly &amp; Monthly Review</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Rapportages &amp; verzoeken van alle agents</li>
+            <li>Binnenkomende escalaties &amp; blockers</li>
+            <li>Beslispunten met risico en context</li>
+            <li>Week- en maandstatus + KPI&#39;s</li>
+            <li>Governance-signalen, cashflow-/legal-alerts</li>
+            <li>Strategische vraag / Go-No-Go-verzoek Sophia</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Open escalaties zonder eigenaar</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Governance conflicten</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Prioriteiten zonder eigenaar</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Weekly Reviews uitgevoerd</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Monthly Reviews uitgevoerd</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Approval Gate overtredingen</span><span class="v">0</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>ClickUp</li><li>GitHub</li><li>Google Drive</li><li>Gmail</li><li>Calendar</li><li>ChatGPT</li><li>Claude</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag nooit</h4>
+          <ul>
+            <li>Contracten tekenen (via LEGAL)</li>
+            <li>Financiële verplichtingen aangaan</li>
+            <li>Content publiceren · deals sluiten</li>
+            <li>Agents activeren zonder governance-besluit</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs (outbound)</h4>
+          <p class="flow">Inbound: <b>alle escalaties &amp; agentrapportages</b>. <span class="arrow">→</span> <b>OPS</b> (prioriteit/capaciteit) · <b>PROSPECT</b> (commerciële focus) · <b>LEGAL</b> (juridische escalatie) · <b>MONEY</b> (financieel risico) · <b>SOCIAL</b> (contentprioriteit) · <b>VAULT</b> (governance-updates) · <b>FLOW</b> (bouwopdracht, approval-gate) · <b>Sophia</b> (governance / bindend besluit).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- OPS -->
+    <article class="card" style="--laag: var(--l-executie);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM OPS AGENT</h3><p class="kernvraag">Hoe voeren we dit uit?</p></div>
+          <span class="laag-pill p-executie">Executie · fase 2</span>
+        </div>
+        <p class="card-desc">De operationele motor. Vertaalt afspraken, klanten, artiesten, releases en meetings naar acties, planning, deliverables en rapportages in ClickUp. <b>OPS voert uit.</b> Finance → MONEY, deals/contracten → LEGAL.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Client- &amp; artist-onboarding</li>
+            <li>Artist management</li>
+            <li>Projectmanagement · releaseplanning</li>
+            <li>Deliverable tracking</li>
+            <li>Meeting-opvolging · roadmaps</li>
+            <li>Monthly reporting</li>
+            <li>Operationele klantcommunicatie</li>
+            <li>Waiting-On-Client / -Sophia beheer</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Getekende deal (van LEGAL)</li>
+            <li>Nieuwe klant (van PROSPECT)</li>
+            <li>Projectbriefing · release-informatie</li>
+            <li>Meeting notes</li>
+            <li>Nieuwe deliverable of meeting</li>
+            <li>Briefing Sophia / ad-hoc verzoek</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Projecten met eigenaar</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Projecten met deadline</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Client onboarding compleet</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Meeting recaps binnen 24u</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Releaseplanning met rights check</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Deadlines zonder eigenaar</span><span class="v">0</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>ClickUp</li><li>Google Drive</li><li>Gmail</li><li>Calendar</li><li>ChatGPT</li><li>Claude</li><li>GitHub</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Contracten wijzigen · deals sluiten</li>
+            <li>Prijzen toezeggen · facturen verwerken</li>
+            <li>Publiceren zonder Sophia</li>
+            <li>Juridische/financiële conclusies trekken</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: getekende deal (<b>LEGAL</b>), nieuwe klant (<b>PROSPECT</b>). <span class="arrow">→</span> <b>MONEY</b> (finance) · <b>SOCIAL</b> (content/case) · <b>LEGAL</b> (contract/rechten) · <b>PROSPECT</b> (renewal/upsell) · <b>VAULT</b> (opslag/template) · <b>CONTROL</b> (prioriteit/capaciteit).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROSPECT -->
+    <article class="card" style="--laag: var(--l-executie);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM PROSPECT AGENT</h3><p class="kernvraag">Hoe krijgen we nieuwe business?</p></div>
+          <span class="laag-pill p-executie">Executie · fase 2</span>
+        </div>
+        <p class="card-desc">De groeimotor. Identificeert, kwalificeert en ontwikkelt commerciële kansen — sponsorships, partnerships, brand deals en nieuwe zakelijke klanten. Benadert nooit externe partijen zonder Sophia approval.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Lead intake &amp; kwalificatie</li>
+            <li>Prospect research · contacthistorie-check</li>
+            <li>Sponsorships · partnerships · brand deals</li>
+            <li>Product placement · sampling · endorsements</li>
+            <li>Event-activaties · nieuwe zakelijke klanten</li>
+            <li>Outreach-voorbereiding · follow-ups</li>
+            <li>CRM / pipeline-beheer</li>
+            <li>Renewals · upsells</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Nieuwe lead, introductie of inbound aanvraag</li>
+            <li>Gekwalificeerde lead</li>
+            <li>Sponsor-/partnershipkans</li>
+            <li>Renewal/upsell-signaal (van OPS)</li>
+            <li>Website inquiry · marktobservatie</li>
+            <li>Gerichte acquisitie-opdracht</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Nieuwe gekwalificeerde leads</span><span class="v">groei</span></div>
+            <div class="kpi-row"><span class="k">Prospects zonder contact-check</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Follow-ups op tijd</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Outreach zonder Sophia approval</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Gekwalif. kansen → LEGAL met brief</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Verlopen follow-ups &gt; 7 dagen</span><span class="v">0</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>ClickUp</li><li>Gmail</li><li>Google Drive</li><li>Canva</li><li>LinkedIn</li><li>ChatGPT</li><li>Claude</li><li>GitHub</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Externe partijen benaderen zonder Sophia</li>
+            <li>Voorstellen versturen · prijzen toezeggen</li>
+            <li>Contracten versturen · deals sluiten</li>
+            <li>Onderhandelen namens CM zonder Sophia</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: leads, introducties, renewal/upsell-signalen (<b>OPS</b>). <span class="arrow">→</span> <b>LEGAL</b> (gekwalificeerde kans/contract) · <b>OPS</b> (nieuwe klant na akkoord) · <b>SOCIAL</b> (partnership-/sponsorcontent) · <b>Sophia</b> (externe benadering &amp; voorstellen).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOCIAL -->
+    <article class="card" style="--laag: var(--l-executie);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM SOCIAL AGENT</h3><p class="kernvraag">Hoe maken we dit zichtbaar?</p></div>
+          <span class="laag-pill p-executie">Executie · fase 2</span>
+        </div>
+        <p class="card-desc">De zichtbaarheids- en contentlaag. Beheert contentstrategie en -kalender en produceert content voor social, website, SEO, nieuwsbrieven, cases, pers en media outreach. Publiceert nooit zonder Sophia approval.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Social media · website · SEO</li>
+            <li>Nieuwsbrieven · cases · blogs</li>
+            <li>Persberichten · media outreach</li>
+            <li>Contentstrategie &amp; -kalender</li>
+            <li>Thought leadership · personal branding</li>
+            <li>Partnership- &amp; sponsorcontent</li>
+          </ul>
+          <p class="note">Kanalen: Instagram · LinkedIn · TikTok · Website · Nieuwsbrief · Media/pers.</p>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Contentverzoek / projectresultaat (OPS)</li>
+            <li>Partnership (van PROSPECT)</li>
+            <li>Goedgekeurde deal (van LEGAL)</li>
+            <li>Omzetmijlpaal (van MONEY)</li>
+            <li>Planning + mijlpalen · kanaaldata</li>
+            <li>Campagnebriefing / website-update</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Content volgens planning</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Website updates op tijd</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Publicaties zonder approval</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Content met ontbrekende rechten</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Media outreach rapportage</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Leads uit content · SEO · engagement</span><span class="v">groei</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>Canva</li><li>Website CMS</li><li>Google Drive</li><li>Gmail</li><li>ClickUp</li><li>ChatGPT</li><li>Claude</li><li>GitHub</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Zelfstandig publiceren</li>
+            <li>Pers benaderen zonder goedkeuring</li>
+            <li>Juridische/financiële claims doen</li>
+            <li>Deals aankondigen / sponsordeals bevestigen</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: cases (<b>OPS</b>), partnerships (<b>PROSPECT</b>), deals (<b>LEGAL</b>), omzetmijlpalen (<b>MONEY</b>). <span class="arrow">→</span> <b>PROSPECT</b> (leads/sponsorinteresse) · <b>LEGAL</b> (rechten/claims) · <b>VAULT</b> (assets/archivering) · <b>Sophia</b> (publicatie &amp; pers).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- MONEY -->
+    <article class="card" style="--laag: var(--l-executie);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM MONEY AGENT</h3><p class="kernvraag">Wat is de financiële waarheid?</p></div>
+          <span class="laag-pill p-executie">Executie · fase 2</span>
+        </div>
+        <p class="card-desc">Bewaakt de financiële waarheid. Moneybird is leidend voor facturen, inkomende documenten, bank, BTW, open posten, cashflow, revenue en forecasting. Geen boekhouder — signaleert, controleert en rapporteert.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Facturen · offertes · periodieke facturen</li>
+            <li>Inkomend: bonnen, inkoopfacturen, kwitanties</li>
+            <li>Bank: transacties &amp; matchcontrole</li>
+            <li>BTW: aangiftes, gereedheid, controle</li>
+            <li>Rapportages · debiteuren/crediteuren</li>
+            <li>Open posten · herinneringen · achterstanden</li>
+            <li>Cashflow &amp; liquiditeitsbewaking</li>
+            <li>Revenue tracking · forecasting · compliance</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Nieuwe verkoop-/inkoopfactuur, bon, kwitantie</li>
+            <li>Banktransacties</li>
+            <li>Getekende deal met betaalvoorwaarden (LEGAL)</li>
+            <li>Periode-administratie · omzetdata</li>
+            <li>Verwachte in-/uitgaven</li>
+            <li>Cashflow-/budgetvraag (CONTROL/OPS)</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Open posten &gt; 30d zonder actie</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Open posten &gt; 60d zonder escalatie</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">BTW readiness vóór deadline</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Inkomend achterstand &gt; 7d</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Facturen zonder opvolging</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Cashflow forecast &amp; revenue report</span><span class="v">maandelijks</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>Moneybird</li><li>Bank</li><li>Gmail</li><li>ClickUp</li><li>Google Drive</li><li>ChatGPT</li><li>Claude</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Facturen/bonnen verwijderen</li>
+            <li>BTW indienen zonder Sophia</li>
+            <li>Fiscaal advies · jaarrekening opstellen</li>
+            <li>Betalingsregeling toezeggen / incasso starten</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: facturatie-signaal (<b>OPS</b>), getekende deals (<b>LEGAL</b>), cashflowvraag (<b>CONTROL</b>). <span class="arrow">→</span> <b>OPS</b> (projectinfo) · <b>LEGAL</b> (geschil/incasso) · <b>PROSPECT</b> (omzetkans) · <b>CONTROL</b> (cashflowrisico) · <b>VAULT</b> (archivering) · <b>Sophia</b> (BTW, regeling, incasso).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- LEGAL -->
+    <article class="card" style="--laag: var(--l-bescherming);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM LEGAL AGENT</h3><p class="kernvraag">Is dit juridisch correct?</p></div>
+          <span class="laag-pill p-bescherming">Bescherming · fase 2</span>
+        </div>
+        <p class="card-desc">Beschermt de commerciële, juridische en IE-positie van CM en haar cliënten. Reviewt contracten, NDA&#39;s en deals, voert rights audits uit en is autoritatief over het rechten-register. Sluit geen deals — beschermt deals.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Contracten &amp; NDA&#39;s (management, label, publishing, sync, sponsorship, booking…)</li>
+            <li>Catalog acquisitions · master sales · rights brokerage</li>
+            <li>Rights audits &amp; rechten-register-beheer</li>
+            <li>Compliance (NDA, AVG/GDPR, governance)</li>
+            <li>Disputes / geschillen &amp; dossiers</li>
+          </ul>
+          <p class="note">Domeinen: Contracts · Rights · Deals · Compliance · Disputes.</p>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Nieuw contract, concept, NDA, term sheet</li>
+            <li>Gekwalificeerde kans (van PROSPECT)</li>
+            <li>Rechten-/catalogusdata</li>
+            <li>Betalingsgeschil (van MONEY)</li>
+            <li>Claim of dispuut</li>
+            <li>Contractvraag (van OPS) · vervaldata-signaal</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Contracten beoordeeld</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Red Flags gerapporteerd</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Rights Audits compleet</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Contracten zonder review</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Governance overtredingen</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Juridische escalaties gedocumenteerd</span><span class="v">100%</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>Google Drive</li><li>Gmail</li><li>ClickUp</li><li>Sheets</li><li>ChatGPT</li><li>Claude</li><li>GitHub</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Contracten ondertekenen · voorwaarden accepteren</li>
+            <li>Deals sluiten · schikkingen treffen</li>
+            <li>Externe toezeggingen doen</li>
+            <li>Governance wijzigen · administratie voeren</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: gekwalificeerde deal (<b>PROSPECT</b>), contractvraag (<b>OPS</b>), betalingsgeschil (<b>MONEY</b>). <span class="arrow">→</span> <b>OPS</b> (getekende overeenkomst) · <b>MONEY</b> (betaalvoorwaarden/geschil) · <b>VAULT</b> (definitieve docs + archiefkopie register) · <b>CONTROL</b> (hoog risico) · <b>Sophia</b> (ondertekening, schikking, verplichting).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- VAULT -->
+    <article class="card" style="--laag: var(--l-infra);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM VAULT AGENT</h3><p class="kernvraag">Waar staat de waarheid?</p></div>
+          <span class="laag-pill p-infra">Infrastructuur · fase 1</span>
+        </div>
+        <p class="card-desc">Bewaakt de bron van waarheid: documenten, templates, SOP&#39;s, prompts, playbooks en governancebestanden op de juiste plek, correct benoemd, niet dubbel. Bezit de opslagstructuur, niet de inhoud. Verwijdert nooit — werkt met voorstellen.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Google Drive-structuur</li>
+            <li>Template-, SOP-, prompt- &amp; playbookbeheer</li>
+            <li>Knowledge Base · governance-documentatie</li>
+            <li>Archivering · source-of-truth-controle</li>
+            <li>Naming conventions · documentvalidatie</li>
+            <li>Duplicate checks</li>
+            <li>Ongeclassificeerde documenten verwerken</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Nieuw document/template/SOP/prompt/playbook</li>
+            <li>Nieuwe client- of dealmap</li>
+            <li>Bestand in <code>99_ARCHIVE/REVIEW_HOLD</code></li>
+            <li>Bestand zonder duidelijke eigenaar</li>
+            <li>Drive-scan · structuur-/governancewijziging</li>
+            <li>Validatie-/archiveringsverzoek van agent</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Templates met eigenaar-agent</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Templates met outputlocatie</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Documenten zonder eigenaar</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Dubbele master-templates</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Ongeclassificeerd &gt; 7 dagen</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Governance-conflicten gesignaleerd</span><span class="v">&lt; 48u</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>GitHub</li><li>Google Drive</li><li>ClickUp</li><li>Gmail</li><li>ChatGPT</li><li>Claude</li><li>Make (via FLOW)</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet</h4>
+          <ul>
+            <li>Documenten verwijderen</li>
+            <li>Contractinhoud/facturen wijzigen</li>
+            <li>Content publiceren · deals aanmaken</li>
+            <li>Rechten-register wijzigen zonder LEGAL</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: documenten, templates, prompts, governance-updates via <code>REVIEW_HOLD</code>. <span class="arrow">→</span> <b>CONTROL</b> (governance/structuur) · <b>LEGAL</b> (contracten/rechten) · <b>MONEY</b> (financiële documenten) · <b>FLOW</b> (automatisering van scans/alerts).</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- FLOW -->
+    <article class="card" style="--laag: var(--l-infra);">
+      <div class="card-head">
+        <div class="top">
+          <div><h3>CM FLOW AGENT</h3><p class="kernvraag">Hoe bouwen en automatiseren we dit?</p></div>
+          <span class="laag-pill p-infra">Infrastructuur · fase 1</span>
+        </div>
+        <p class="card-desc">De CTO &amp; AI Systems Engineer van CM_OS. Ontwerpt, bouwt en onderhoudt de technische infrastructuur: agent-architectuur, Make-scenario&#39;s, API&#39;s, webhooks, GitHub-structuur en systeemmodules. <b>FLOW bouwt.</b> Activeren vereist Sophia approval.</p>
+      </div>
+      <div class="grid">
+        <div class="block">
+          <h4>Verantwoordelijkheden</h4>
+          <ul>
+            <li>Agent development (ontwerp, prompts, tools, lifecycle, tests)</li>
+            <li>GitHub development (repo-architectuur, PR&#39;s, changelogs, AS_BUILT)</li>
+            <li>Automation development (Make, Apps Script, API/MCP, webhooks)</li>
+            <li>System development (datamodellen, ClickUp-architectuur, modules)</li>
+            <li>Monitoring, error logging &amp; workflow health checks</li>
+            <li>Automation backlog &amp; integratierisico&#39;s</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Inputs</h4>
+          <ul>
+            <li>Automatiserings-/bouwverzoeken van alle agents</li>
+            <li>Agent-behoefte + scope</li>
+            <li>Terugkerende handmatige taken</li>
+            <li>ClickUp-status- &amp; Drive-mapwijzigingen</li>
+            <li>Gmail-triggers · integratieverzoeken</li>
+            <li>Error reports · health-check-momenten</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>KPI&#39;s</h4>
+          <div class="kpi">
+            <div class="kpi-row"><span class="k">Workflows met eigenaar-agent</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Automatiseringen met testlog</span><span class="v">100%</span></div>
+            <div class="kpi-row"><span class="k">Live workflows zonder documentatie</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Fouten zonder logging</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Gebouwde agents zonder 18 secties</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Externe output zonder approval gate</span><span class="v">0</span></div>
+            <div class="kpi-row"><span class="k">Wekelijkse health check</span><span class="v">1×/week</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <ul class="tags"><li>Make</li><li>ClickUp</li><li>Gmail</li><li>Google Drive</li><li>GitHub</li><li>Apps Script</li><li>ChatGPT</li><li>Claude</li></ul>
+          <h4 style="margin-top:18px;">Mandaat — mag niet zonder Sophia</h4>
+          <ul>
+            <li>Nieuwe agent live/in governance activeren</li>
+            <li>Productie-/datamuterende automations activeren</li>
+            <li>Klantcommunicatie automatisch verzenden</li>
+            <li>Workflows live zonder testlog &amp; rollbackplan</li>
+          </ul>
+        </div>
+        <div class="block full">
+          <h4>Handoffs</h4>
+          <p class="flow">Inbound: bouwverzoeken van <b>alle agents</b>. <span class="arrow">→</span> <b>CONTROL</b> (systeem-/integratierisico, datamuterende flow) · <b>Sophia via CONTROL</b> (agent-activering, governance) · <b>VAULT</b> (documentatie/AS_BUILT) · <b>MONEY</b> (Moneybird-koppeling) · <b>SOCIAL</b> (Canva/website-automatisering).</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- GOVERNANCE -->
+  <div class="sec-head">
+    <h2>Governance &amp; rolverdeling</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="gov">
+    <div class="gov-card">
+      <p class="mono-lead">Kernrollen</p>
+      <h4>Wie doet wat</h4>
+      <ul>
+        <li><b>CM FLOW</b> bouwt (agents, GitHub, automations, systemen)</li>
+        <li><b>CM OPS</b> voert uit (mail, agenda, ClickUp, operationeel)</li>
+        <li><b>CM CONTROL</b> controleert (governance, kwaliteit, escalaties)</li>
+      </ul>
+    </div>
+    <div class="gov-card">
+      <p class="mono-lead">Source of truth</p>
+      <h4>Waar de waarheid staat</h4>
+      <ul>
+        <li>GitHub = source of truth</li>
+        <li>Moneybird = financiële waarheid</li>
+        <li>Drive = opslag · ClickUp = executie</li>
+        <li>Gmail = correspondentie &amp; bewijs</li>
+        <li>ChatGPT/Claude = analyse, geen opslag</li>
+      </ul>
+    </div>
+    <div class="gov-card">
+      <p class="mono-lead">Approval gate — Sophia</p>
+      <h4>Vereist expliciete goedkeuring</h4>
+      <ul>
+        <li>Ondertekenen van overeenkomsten</li>
+        <li>Publicatie van content · externe outreach</li>
+        <li>Financiële verplichtingen · prijsafspraken</li>
+        <li>Nieuwe partnerships</li>
+        <li>Wijzigingen in governance / agent-definities / mapstructuur</li>
+        <li>Verwijderen van documenten, templates of kennisbankcontent</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    CM Operating System — Agentregister · Bron: docs/05_OPERATIONS/AGENTS/ (8 actieve agents, GOVERNANCE LOCKED).<br>
+    Eén taak = één eigenaar · Bij twijfel: niet uitvoeren, vastleggen, escaleren naar CM CONTROL (ESCALATION_PROTOCOLS.md).
+  </footer>
+</div>
