@@ -1,18 +1,18 @@
 # CM VAULT V1 — Make Scenario
 
 **Make Scenario ID:** 6289645
-**Status:** ACTIVE sinds 2026-08-07 (geactiveerd door accounteigenaar) — **met openstaande governance-gates**, zie waarschuwing hieronder
-**Schedule:** Elke maandag om 09:00 (Amsterdam) · eerstvolgende run: ma 10 aug 2026
+**Status:** TE PAUZEREN → INACTIEF / TEST REQUIRED (besluit 2026-08-07: gates eerst). Kort ACTIVE geweest op 2026-08-07; activatie teruggedraaid.
+**Schedule:** Elke maandag om 09:00 (Amsterdam) — **schema staat uit tot na certificering** (geen run op 10 aug)
 
 ---
 
 > ⚠️ **TWEE OPENSTAANDE PUNTEN — LEES DIT EERST**
 >
-> **1. Governance-deviatie (activatie vóór gates).** `GOVERNANCE_RULES.md` bepaalt dat dit
-> scenario INACTIEF blijft *"totdat testlog, fallback en CM CONTROL approval zijn vastgelegd"*.
-> Het scenario is op 2026-08-07 door de accounteigenaar geactiveerd voordat die gates zijn
-> afgerond. Besluit vereist: **pauzeren tot de gates groen zijn**, óf een bewust vastgelegde
-> low-risk uitzondering (het scenario is read-only). Zie
+> **1. Governance-deviatie opgelost — BESLUIT: PAUZEREN.** `GOVERNANCE_RULES.md` houdt dit
+> scenario INACTIEF *"totdat testlog, fallback en CM CONTROL approval zijn vastgelegd"*. Het
+> scenario was op 2026-08-07 kort geactiveerd vóór die gates; Sophia heeft besloten het weer
+> te **pauzeren** tot de gates groen zijn. De accounteigenaar zet de scheduling-toggle in Make
+> uit; de run van 10 aug gaat niet door. Certificering verloopt gates-eerst. Zie
 > `AGENTS/CERTIFICATION/EVIDENCE/CM_VAULT_LIVE_ACTIVATION_2026-08-07.md`.
 >
 > **2. Deployed ≠ gedocumenteerd.** Dit document beschreef het scenario als

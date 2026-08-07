@@ -35,8 +35,20 @@ die nog moet worden beslecht:
 - **Optie B — gedocumenteerde low-risk uitzondering:** laat het read-only scenario lopen,
   maar leg de uitzondering + CM CONTROL-notering vast en werk `GOVERNANCE_RULES.md` bij.
 
-Tot dit besluit is genomen blijft dit een **open governance-item** en blijft CM VAULT
-**Level 1**. Dit besluit ligt bij Sophia (zie escalatie).
+### Besluit (2026-08-07): **Optie A — PAUZEREN**
+
+Sophia heeft gekozen voor **pauzeren tot de gates groen zijn**. Consequenties:
+
+- Het scenario wordt door de accounteigenaar in Make weer op **inactief** gezet
+  (scheduling-toggle uit). De geplande run van **ma 10 aug 09:00 gaat niet door**.
+- Certificering verloopt **gates-eerst**: handmatige `Run once` (test, geen live schema) →
+  testlog + rapportcontrole → fallback vastgelegd → CM CONTROL approval → **daarna** pas
+  opnieuw activeren.
+- De activatie van 2026-08-07 wordt hiermee **teruggedraaid**; scenariostatus in de registers
+  gaat terug naar **niet-live (PAUSED / TEST REQUIRED)**.
+
+CM VAULT blijft **Level 1**. Dit governance-item is met dit besluit **gesloten** (lijn:
+GOVERNANCE_RULES.md wordt strikt gevolgd).
 
 ## 1b. Deployed ≠ gedocumenteerd (read-only vs. folder-aanmakend)
 
