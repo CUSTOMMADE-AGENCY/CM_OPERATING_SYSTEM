@@ -151,6 +151,23 @@ De onderstaande, eerder ontbrekende templates zijn in Sprint 6 aangemaakt in de 
 
 Het generieke `REGISTER_TEMPLATE` dekt de domein-registers (Releases, Booking, Social, Press/EPK, Archive) via de `[DOMEIN]`-parameter; er worden geen parallelle registerformats aangemaakt.
 
+## Uitrol-script
+
+De operationele uitrol van deze kaart naar Google Drive verloopt via
+`scripts/google-drive/populate-cm-drive-templates.gs`. Waar
+`create-cm-drive-structure.gs` de goedgekeurde lege mappenboom bouwt, vult dit
+script iedere map met de juiste werkbare kopieen volgens de secties 1 t/m 5:
+
+- `populateCmDriveTemplates()` — centrale library + alle artist-dossiers + legal.
+- `populateCmArtistTemplates('ARTIEST')` — één artist-dossier.
+- `populateCmClientTemplates('CLIENT')` — één client-dossier.
+- `populateCmDealTemplates('DEAL')` — één deal-/asset-case.
+
+Het script is idempotent (maakt alleen ontbrekende bestanden aan), gebruikt de
+naamconventie `YYYY-MM-DD_[ENTITY]_[MAP]_[DOCUMENTTYPE]_vX.Y` voor dossierkopieen
+en verwijst in iedere kopie naar het canonieke GitHub-template. Draai eerst met
+`DRY_RUN = true` en controleer de log.
+
 ## Governance
 
 - Deze kaart valt onder de governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
