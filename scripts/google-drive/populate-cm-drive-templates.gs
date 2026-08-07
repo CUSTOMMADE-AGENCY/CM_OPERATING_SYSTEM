@@ -371,6 +371,7 @@ function populateCmLegalTemplates_(report) {
   Object.keys(LEGAL_PLACEMENT).forEach(function(submapName) {
     const submap = getOrCreateFolder_(legalFolder, submapName);
     LEGAL_PLACEMENT[submapName].forEach(function(entry) {
+      // Legal-submappen hebben geen numerieke prefix; submapnaam == map-token.
       ensureWorkingCopy_(submap, 'CM', submapName, entry[0], entry[1], report);
     });
   });
@@ -392,9 +393,8 @@ function populateDossier_(containerName, dossierName, placement, report) {
 
   Object.keys(placement).forEach(function(submapName) {
     const submap = getOrCreateFolder_(dossierFolder, submapName);
-    const mapToken = mapTokenFromSubfolder_(submapName);
     placement[submapName].forEach(function(entry) {
-      ensureWorkingCopy_(submap, entity, mapToken, entry[0], entry[1], report);
+      ensureWorkingCopy_(submap, entity, submapName, entry[0], entry[1], report);
     });
   });
 }
@@ -434,13 +434,14 @@ function ensureMasterDoc_(folder, templateKey, report) {
  * Zorgt dat een werkbare kopie voor deze [ENTITY]_[MAP]_[DOCTYPE] bestaat.
  * Idempotent: matcht op de stabiele sleutel, ongeacht datum en versie.
  */
-function ensureWorkingCopy_(folder, entity, mapToken, docType, templateKey, report) {
+function ensureWorkingCopy_(folder, entity, subfolderName, docType, templateKey, report) {
   const meta = TEMPLATE_LIBRARY[templateKey];
   if (!meta) {
     report.errors.push('Onbekende template in registry: ' + templateKey);
     return null;
   }
 
+  const mapToken = mapTokenFromSubfolder_(subfolderName);
   const key = '_' + entity + '_' + mapToken + '_' + docType + '_';
   if (workingCopyExists_(folder, key)) {
     report.skipped.push('KOPIE bestaat: ' + key.replace(/^_|_$/g, ''));
@@ -448,15 +449,25 @@ function ensureWorkingCopy_(folder, entity, mapToken, docType, templateKey, repo
   }
 
   const fileName = buildWorkingCopyName_(entity, mapToken, docType);
-  report.created.push('KOPIE: ' + fileName + ' <- ' + templateKey);
+  const master = findCentralMaster_(meta.submap, templateKey);
+  report.created.push('KOPIE: ' + fileName + ' <- ' + templateKey
+    + (master ? ' (kopie van master)' : ' (vers opgebouwd)'));
   if (DRY_RUN) {
     return null;
   }
 
-  // Bouw een werkbare kopie volgens de architectuurstandaard, met de juiste
-  // werkbare-kopie-metadata (DRAFT, entity). GitHub blijft leidend voor inhoud.
+  // Placement Map: dossiermappen krijgen werkbare kopieen HIERVAN (de master).
+  // Kopieer daarom de master als die bestaat — zo blijft eventueel verrijkte
+  // masterinhoud behouden — en patch alleen de kopie-specifieke metadata.
+  // Bestaat er (nog) geen master, bouw dan een vers architectuurstandaard-skelet.
+  if (master) {
+    const copy = master.makeCopy(fileName, folder);
+    patchWorkingCopyMetadata_(copy, meta, entity, subfolderName);
+    return copy;
+  }
+
   const doc = DocumentApp.create(fileName);
-  writeWorkingCopyBody_(doc, entity, mapToken, docType, templateKey, meta);
+  writeWorkingCopyBody_(doc, entity, subfolderName, templateKey, meta);
   const file = DriveApp.getFileById(doc.getId());
   moveFileTo_(file, folder);
   return file;
@@ -469,6 +480,67 @@ function workingCopyExists_(folder, key) {
     const name = files.next().getName().toLowerCase();
     if (name.indexOf(lowerKey) !== -1) {
       return true;
+    }
+  }
+  return false;
+}
+
+function findCentralMaster_(submapName, templateKey) {
+  const root = getRoot_();
+  const templatesFolder = getOrCreateFolderPath_(root, CENTRAL_LIBRARY_PATH);
+  const submaps = templatesFolder.getFoldersByName(submapName);
+  if (!submaps.hasNext()) {
+    return null;
+  }
+  const files = submaps.next().getFilesByName(templateKey);
+  return files.hasNext() ? files.next() : null;
+}
+
+/**
+ * Patcht de kopie-specifieke Documentgegevens en titel van een uit een master
+ * gekopieerde werkbare kopie. Masterinhoud (Doel, Werkwijze, enz.) blijft
+ * behouden; alleen Status, Versie, Werkbare kopie en de titel worden bijgewerkt.
+ */
+function patchWorkingCopyMetadata_(file, meta, entity, subfolderName) {
+  const doc = DocumentApp.openById(file.getId());
+  const body = doc.getBody();
+  setDocTitle_(body, meta.title + ' — ' + entity);
+  setDocFieldByLabel_(body, 'Status', 'DRAFT');
+  setDocFieldByLabel_(body, 'Versie', WORKING_COPY_VERSION);
+  setDocFieldByLabel_(body, 'Werkbare kopie', '[DOSSIER]/' + subfolderName + ' — ' + entity);
+  doc.saveAndClose();
+}
+
+/**
+ * Zet de eerste Heading 2 (hoofdtitel) op de nieuwe titel, in hoofdletters/vet.
+ */
+function setDocTitle_(body, newTitle) {
+  const paras = body.getParagraphs();
+  for (let i = 0; i < paras.length; i++) {
+    if (paras[i].getHeading() === DocumentApp.ParagraphHeading.HEADING2) {
+      paras[i].setText(String(newTitle).toUpperCase());
+      paras[i].editAsText().setBold(true);
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Zoekt in de Documentgegevens-tabel de rij met dit label in kolom 1 en zet de
+ * waarde in kolom 2. Robuust tegen verschoven rijen doordat op label gematcht
+ * wordt in plaats van op index.
+ */
+function setDocFieldByLabel_(body, label, value) {
+  const tables = body.getTables();
+  for (let t = 0; t < tables.length; t++) {
+    const table = tables[t];
+    for (let r = 0; r < table.getNumRows(); r++) {
+      const row = table.getRow(r);
+      if (row.getNumCells() >= 2 && row.getCell(0).getText().trim() === label) {
+        row.getCell(1).editAsText().setText(value).setFontSize(BODY_PT);
+        return true;
+      }
     }
   }
   return false;
@@ -498,24 +570,27 @@ const AI_INSTRUCTIES = [
 ];
 
 function writeMasterBody_(doc, templateKey, meta) {
+  // Status = DRAFT: de architectuurstandaard staat ACTIVE pas toe wanneer o.a.
+  // Owner Agent, Support Agents en de gekoppelde workflow zijn vastgelegd. Dit
+  // is een gegenereerd skelet met die velden op TBD, dus DRAFT tot review.
   writeTemplateBody_(doc, {
     templateKey: templateKey,
     meta: meta,
-    versie: '1.0',
-    status: 'ACTIVE',
+    versie: '0.1',
+    status: 'DRAFT',
     werkbareKopie: '00_ADMIN/03_TEMPLATES/' + meta.submap + ' (mastervoorraad)',
     isMaster: true,
     titleSuffix: 'MASTER',
   });
 }
 
-function writeWorkingCopyBody_(doc, entity, mapToken, docType, templateKey, meta) {
+function writeWorkingCopyBody_(doc, entity, subfolderName, templateKey, meta) {
   writeTemplateBody_(doc, {
     templateKey: templateKey,
     meta: meta,
     versie: WORKING_COPY_VERSION,
     status: 'DRAFT',
-    werkbareKopie: '[DOSSIER]/' + mapToken + ' — ' + entity,
+    werkbareKopie: '[DOSSIER]/' + subfolderName + ' — ' + entity,
     entity: entity,
     isMaster: false,
     titleSuffix: entity,
