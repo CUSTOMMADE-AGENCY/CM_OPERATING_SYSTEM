@@ -47,6 +47,9 @@ Buiten scope:
 | Artist onboarding trigger | Nieuwe artist vereist handmatige mapaanmaak en taakregistratie — foutgevoelig en traag. | ClickUp-task in artist onboarding bereikt status `Drive Ready`. | Task-ID, artistnaam, goedgekeurde velden. | Maak 9 verplichte subfolders in `02_ARTIST_MANAGEMENT/[ARTIST]`; schrijf Drive-link terug naar ClickUp. | Drive-link in ClickUp-task + bevestigingsmail. | CM FLOW AGENT | IDEA | Handmatige mapaanmaak via `create-cm-drive-structure.gs`. |
 | Moneybird open-items check | Openstaande facturen worden niet systematisch opgevolgd. | Weekly schedule maandag 09:30. | Moneybird open invoice lijst via API. | Maak per factuur ouder dan 14 dagen een follow-up task in ClickUp (indien nog niet aanwezig). | ClickUp-tasks + overzichtsmail. | CM MONEY AGENT | REVIEW | Handmatige Moneybird-review en manuele ClickUp-taak. Spec: `AUTOMATION/CM_MONEY_MONEYBIRD_OPEN_ITEMS_SPEC.md`. |
 | Weekly consolidated agent digest | Agents rapporteren los; geen gecombineerd overzicht voor Sophia. | Weekly schedule maandag 09:45. | Outputs CM VAULT V1, open ClickUp-tasks per agent, open approvals. | Aggregeer en stuur één digest-mail. | Wekelijks HTML-rapport naar `info@custommade.agency`. | CM CONTROL AGENT | IDEA | Handmatige weekly review per agent. |
+| Contract-/rechtenvervaldata signalering | Contract- en rechtenvervaldata worden niet systematisch bewaakt. | Weekly schedule + vervaldatum binnen signaleringsvenster. | Rechten-/dealregister met vervaldata en owner (`04_DEALS`, `07_LEGAL`). | Maak per naderende vervaldatum een signaleringstask in ClickUp (geen contractwijziging). | ClickUp-task + overzicht voor CM LEGAL AGENT. | CM LEGAL AGENT | IDEA | Handmatige registercheck volgens deal-checklist. |
+| Content calendar reminders | Publicatiemomenten en contentdeadlines worden gemist. | Weekly schedule + geplande publicatiedatum nadert. | Contentkalender met item, kanaal, owner en publicatiedatum. | Stuur reminder / maak opvolgtask; publicatie blijft push-with-approval. | Reminder + ClickUp-task voor CM SOCIAL AGENT. | CM SOCIAL AGENT | IDEA | Handmatige contentkalender-review. |
+| Pipeline follow-up reminders | Open leads en renewals blijven zonder opvolging liggen. | Follow-up-datum of renewal-datum nadert. | Pipeline-item met status, owner en follow-up-datum. | Maak follow-up-reminder/-task; externe outreach blijft push-with-approval. | ClickUp-task voor CM PROSPECT AGENT. | CM PROSPECT AGENT | IDEA | Handmatige pipeline-review. |
 
 ## **SCENARIO DESIGN CHECKLIST**
 
@@ -114,6 +117,7 @@ Escaleren naar CM FLOW AGENT wanneer:
 | Datum | Scenario | Wijziging | Reden | Owner | Reviewstatus |
 |---|---|---|---|---|---|
 | YYYY-MM-DD | Naam scenario | Wat is aangepast? | Waarom is dit nodig? | CM FLOW AGENT / CM OPS AGENT / CM CONTROL AGENT | Open / Approved / Rejected |
+| 2026-08-07 | Contract-/rechtenvervaldata signalering; Content calendar reminders; Pipeline follow-up reminders | Drie scenario's als `IDEA` geregistreerd. | Techniek-gate voor CM LEGAL, CM SOCIAL en CM PROSPECT een getraceerd pad geven richting Level 3 (zie `AGENTS/CERTIFICATION/`). | CM FLOW AGENT | Open |
 
 ## **REVIEWRITME**
 
