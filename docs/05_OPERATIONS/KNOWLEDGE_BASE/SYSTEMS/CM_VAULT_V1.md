@@ -215,6 +215,29 @@ uitzondering vastleggen (read-only scenario). Zo pauzeer/heractiveer je:
 
 ---
 
+## Beslispunt: read-only vs. mapaanmaak (CM FLOW-aanbeveling)
+
+Het uitgerolde blueprint is read-only; het oorspronkelijke ontwerp beoogde mapaanmaak
+(`createAFolder`). Beslissing nodig van CM FLOW / Sophia.
+
+**Aanbeveling: houd V1 read-only (audit + rapport).** Onderbouwing:
+
+- **Least privilege & approval-gates.** Mapaanmaak is een **datamuterende** actie. Volgens de
+  governance vereisen datamuterende automatiseringen een CM FLOW-test én CM CONTROL-akkoord;
+  een read-only audit is aanzienlijk eenvoudiger en veiliger naar Level 3 te certificeren.
+- **Rolzuiverheid.** CM VAULT is de "waar staat de waarheid?"-laag: signaleren en rapporteren.
+  Structuur-*bouwen* hoort bij het Apps Script `create-cm-drive-structure.gs` (idempotent,
+  onder menselijke controle) — die dekt de mapaanmaak al af.
+- **Geen dubbele bron van actie.** Twee systemen (Make + Apps Script) die dezelfde mappen
+  aanmaken vergroot de kans op conflicten; één schrijfpad (Apps Script) is schoner.
+
+**Consequentie als read-only de keuze is:** het operator-doc, de scope-tabel en de scenario-map
+(hierboven al gecorrigeerd) zijn dan definitief; het "createAFolder"-ontwerp vervalt voor V1.
+
+**Als mapaanmaak tóch in Make moet:** dan is dit een aparte, **als datamuterend gemarkeerde**
+capability (bv. `CM VAULT V1-write`) met eigen testlog, fallback, rollback en CM CONTROL
+approval — niet stilzwijgend binnen V1.
+
 ## Volgende versies
 
 - **V2 — Readiness Audit**: Controleert of verplichte documenten aanwezig zijn in submappen
