@@ -34,11 +34,11 @@
 |---|---|:--:|---|
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
 | 2 | Documentatie | ⚠️ | Testplan + logspecificatie voor VAULT aantonen |
-| 3 | Techniek | ⚠️ | CM VAULT V1 van `BUILD` → `ACTIVE` met monitoring/alerts (CM FLOW) |
+| 3 | Techniek | ⚠️ | CM VAULT V1 is **`ACTIVE`** (read-only, bevestigd via connector), maar met **open validatie-waarschuwing op module 11** (`EVIDENCE/CM_VAULT_LIVE_ACTIVATION_2026-08-07.md`); geslaagde run + fix/weerlegging nog nodig |
 | 4 | Functionele test | ⚠️ | Code-laag **PASS 5/5** (`EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`); live-omgevingscases nog open |
 | 5 | Red team | ⬜ | Alleen **safe-stop-deelbewijs** aangetoond; §4-eisen logging + escalatie + live-cases nog open — gate OPEN |
 | 6 | Approval | ⚠️ | Sophia-approval productiestatus (record §5) |
-| 7 | Monitoring | ⬜ | Actief monitoringritme op ACTIVE-scenario |
+| 7 | Monitoring | ⚠️ | Scenario gepland (nextExec ma 10 aug 09:00); run-history review start na eerste geslaagde run |
 | — | Score ≥90 + paspoort | ⬜ | Score invullen na volledige (incl. live) run |
 
 **Verste automation:** `CM VAULT V1` (Make scenario 6289645) — status `BUILD`. Dichtst bij
@@ -65,6 +65,8 @@ detection, naming-validatie, AS_BUILT-consistentie, source-of-truth-volgorde.
 
 ## 5. Openstaand voor Level 3
 
-1. CM VAULT V1 → `ACTIVE` met monitoring en rollback (CM FLOW).
-2. Functioneel testrapport + red-team-rapport (nadruk: poging tot delete).
-3. Score ≥90 invullen; Sophia-approval productiestatus vastleggen.
+1. ~~CM VAULT V1 → `ACTIVE`~~ ✅ gedaan 2026-08-07 (read-only, bevestigd via connector).
+2. Eerste **geslaagde** run (ma 10 aug 09:00) uitlezen als functionele + monitoring-evidence.
+3. Module-11 validatie-waarschuwing oplossen (CM FLOW) of weerleggen met een geslaagde run.
+4. Red-team logging + escalatie op scenario-laag; live-cases.
+5. Score ≥90 invullen; Sophia-approval productiestatus vastleggen.
