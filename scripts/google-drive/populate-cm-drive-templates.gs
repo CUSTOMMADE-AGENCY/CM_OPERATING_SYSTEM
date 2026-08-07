@@ -14,9 +14,14 @@
  * - Iedere artist-, client-, deal- en legal-map krijgt WERKBARE KOPIEEN van die
  *   masters, benoemd volgens de naamconventie:
  *       YYYY-MM-DD_[ENTITY]_[MAP]_[DOCUMENTTYPE]_v0.1
+ * - Iedere Doc wordt opgebouwd volgens de 14 verplichte onderdelen van
+ *   TEMPLATE_ARCHITECTUURSTANDAARD.md (leidend voor template-opbouw en
+ *   operationele kopieen), met TBD waar informatie nog ontbreekt. De vorm volgt
+ *   TEMPLATE_DESIGN_STANDARD.md: Montserrat, hoofdletters voor titels, geen
+ *   kleuren, geen emoji.
  * - GitHub blijft de source of truth voor template-inhoud; Drive bevat
- *   uitsluitend werkbare kopieen. Iedere kopie draagt een kopregel met een
- *   verwijzing naar het canonieke template in de GitHub Library.
+ *   uitsluitend werkbare kopieen. Iedere Doc verwijst onder Opslag naar het
+ *   canonieke template in de GitHub Library.
  *
  * Regels:
  * - Idempotent: maakt alleen ontbrekende bestanden aan; overschrijft, hernoemt
@@ -448,14 +453,8 @@ function ensureWorkingCopy_(folder, entity, mapToken, docType, templateKey, repo
     return null;
   }
 
-  // Kopieer van de centrale master als die bestaat; anders bouw een werkbare
-  // kopie met kopregel die naar het GitHub-template verwijst.
-  const master = findCentralMaster_(meta.submap, templateKey);
-  if (master) {
-    const copy = master.makeCopy(fileName, folder);
-    return copy;
-  }
-
+  // Bouw een werkbare kopie volgens de architectuurstandaard, met de juiste
+  // werkbare-kopie-metadata (DRAFT, entity). GitHub blijft leidend voor inhoud.
   const doc = DocumentApp.create(fileName);
   writeWorkingCopyBody_(doc, entity, mapToken, docType, templateKey, meta);
   const file = DriveApp.getFileById(doc.getId());
@@ -475,53 +474,186 @@ function workingCopyExists_(folder, key) {
   return false;
 }
 
-function findCentralMaster_(submapName, templateKey) {
-  const root = getRoot_();
-  const templatesFolder = getOrCreateFolderPath_(root, CENTRAL_LIBRARY_PATH);
-  const submaps = templatesFolder.getFoldersByName(submapName);
-  if (!submaps.hasNext()) {
-    return null;
-  }
-  const files = submaps.next().getFilesByName(templateKey);
-  return files.hasNext() ? files.next() : null;
-}
-
 // ---------------------------------------------------------------------------
 // Documentinhoud
+//
+// Opbouw volgt TEMPLATE_ARCHITECTUURSTANDAARD.md (leidend voor template-opbouw
+// en operationele kopieen): de 14 verplichte onderdelen, met TBD waar de
+// informatie nog niet beschikbaar is. Vorm volgt TEMPLATE_DESIGN_STANDARD.md:
+// Montserrat, hoofdtitels/subtitels in hoofdletters, geen kleuren, geen emoji.
 // ---------------------------------------------------------------------------
 
+// Vorm (TEMPLATE_DESIGN_STANDARD).
+const DESIGN_FONT = 'Montserrat';
+const BODY_PT = 10;
+
+// Verplichte AI-instructies conform TEMPLATE_ARCHITECTUURSTANDAARD.md.
+const AI_INSTRUCTIES = [
+  'Gebruik eerst de bestaande template-index voordat je nieuwe outputs of formats voorstelt.',
+  'Verzin nooit ontbrekende informatie; markeer onbekende of onzekere velden als TBD.',
+  'Benoem expliciet welke input ontbreekt wanneer de template niet volledig kan worden ingevuld.',
+  'Gebruik geen clientdata, vertrouwelijke informatie of getekende documenten in de template-specificatie.',
+  'Maak geen parallelle templates aan wanneer een bestaande template passend is.',
+  'Koppel afwijkingen aan TEMPLATE_GAP_LOG_SPEC.md en gebruik aan TEMPLATE_USAGE_REPORT_SPEC.md.',
+];
+
 function writeMasterBody_(doc, templateKey, meta) {
-  const body = doc.getBody();
-  body.appendParagraph(meta.title + ' — Master Template')
-    .setHeading(DocumentApp.ParagraphHeading.HEADING1);
-  body.appendParagraph('CM Template Library — mastervoorraad (werkbare kopie van GitHub).');
-  body.appendParagraph('Canoniek template: ' + LIBRARY_GITHUB_BASE + meta.libraryPath);
-  body.appendParagraph('');
-  body.appendParagraph('Governance: GitHub is de source of truth voor template-inhoud. '
-    + 'Werk inhoudelijke wijzigingen bij in GitHub via branch, commit en Pull Request; '
-    + 'dossiermappen krijgen werkbare kopieen van deze master.');
+  writeTemplateBody_(doc, {
+    templateKey: templateKey,
+    meta: meta,
+    versie: '1.0',
+    status: 'ACTIVE',
+    werkbareKopie: '00_ADMIN/03_TEMPLATES/' + meta.submap + ' (mastervoorraad)',
+    isMaster: true,
+    titleSuffix: 'MASTER',
+  });
 }
 
 function writeWorkingCopyBody_(doc, entity, mapToken, docType, templateKey, meta) {
+  writeTemplateBody_(doc, {
+    templateKey: templateKey,
+    meta: meta,
+    versie: WORKING_COPY_VERSION,
+    status: 'DRAFT',
+    werkbareKopie: '[DOSSIER]/' + mapToken + ' — ' + entity,
+    entity: entity,
+    isMaster: false,
+    titleSuffix: entity,
+  });
+}
+
+/**
+ * Bouwt een template-Doc volgens de 14 verplichte onderdelen van de
+ * TEMPLATE_ARCHITECTUURSTANDAARD. Onbekende velden staan expliciet op TBD.
+ */
+function writeTemplateBody_(doc, opts) {
   const body = doc.getBody();
-  body.appendParagraph(meta.title + ' — ' + entity)
-    .setHeading(DocumentApp.ParagraphHeading.HEADING1);
+  body.clear();
 
-  const table = body.appendTable([
-    ['Entity', entity],
-    ['Map', mapToken],
-    ['Documenttype', docType],
-    ['Template', templateKey],
-    ['Versie', WORKING_COPY_VERSION],
-    ['Datum', today_()],
+  const domein = domainForSubmap_(opts.meta.submap);
+
+  h2_(body, opts.meta.title + (opts.titleSuffix ? ' — ' + opts.titleSuffix : ''));
+
+  h3_(body, 'Documentgegevens');
+  kvTable_(body, [
+    ['Template naam', opts.templateKey],
+    ['Domein', domein],
+    ['Versie', opts.versie],
+    ['Status', opts.status],
+    ['Owner Agent', 'TBD'],
+    ['Support Agents', 'TBD'],
+    ['System of Record', 'GitHub template-specificatie'],
+    ['Werkbare kopie', opts.werkbareKopie],
+    ['Gekoppelde workflow', 'TBD'],
+    ['Laatste review', 'TBD'],
+    ['Volgende review', 'TBD'],
   ]);
-  table.setBorderColor('#cccccc');
 
-  body.appendParagraph('');
-  body.appendParagraph('Canoniek template: ' + LIBRARY_GITHUB_BASE + meta.libraryPath);
-  body.appendParagraph('Werkbare kopie. Vul in volgens de map-specificatie en de '
-    + 'naamconventie YYYY-MM-DD_[ENTITY]_[MAP]_[DOCUMENTTYPE]_vX.Y. '
-    + 'GitHub blijft leidend voor de template-inhoud.');
+  h3_(body, 'Doel');
+  p_(body, opts.isMaster
+    ? ('Mastervoorraad voor ' + opts.meta.title + '. Dossiermappen krijgen hiervan een werkbare kopie.')
+    : ('Werkbare kopie van ' + opts.meta.title + ' voor ' + opts.entity + '.'));
+
+  h3_(body, 'Wanneer gebruiken');
+  p_(body, 'TBD — zie de map-specificatie en het canonieke template.');
+
+  h3_(body, 'Wanneer niet gebruiken');
+  p_(body, 'TBD — niet voor documenten die buiten de mapfunctie vallen.');
+
+  h3_(body, 'Input');
+  p_(body, 'TBD — benodigde informatie, documenten of beslissingen voor gebruik.');
+
+  h3_(body, 'Werkwijze');
+  p_(body, 'TBD — stap voor stap invullen volgens het canonieke template.');
+
+  h3_(body, 'Beslismomenten');
+  p_(body, 'TBD — keuzes, approvals of escalaties.');
+
+  h3_(body, 'Output');
+  p_(body, 'TBD — verwacht resultaat van deze template.');
+
+  h3_(body, 'Kwaliteitscontrole');
+  p_(body, 'TBD — controlecriteria voor overdracht of publicatie.');
+
+  h3_(body, 'Goedkeuring');
+  p_(body, 'TBD — wie keurt goed en wanneer.');
+
+  h3_(body, 'Overdracht');
+  p_(body, 'TBD — aan wie of welk systeem de output wordt overgedragen.');
+
+  h3_(body, 'Opslag');
+  p_(body, 'System of Record: GitHub — ' + LIBRARY_GITHUB_BASE + opts.meta.libraryPath);
+  p_(body, 'Werkbare kopie: ' + opts.werkbareKopie
+    + '. Drive bevat uitsluitend werkbare kopieen; GitHub blijft leidend.');
+
+  h3_(body, 'AI-instructies');
+  AI_INSTRUCTIES.forEach(function(line) {
+    p_(body, '- ' + line);
+  });
+
+  h3_(body, 'Wijzigingslog');
+  kvTable_(body, [
+    ['Datum', 'Wijziging', 'Eigenaar', 'Reden'],
+    [today_(), opts.isMaster ? 'Master aangemaakt' : 'Werkbare kopie aangemaakt',
+      'TBD', 'Drive-uitrol Sprint 6'],
+  ]);
+
+  applyDocFont_(body);
+}
+
+// ---------------------------------------------------------------------------
+// Vorm-helpers (TEMPLATE_DESIGN_STANDARD)
+// ---------------------------------------------------------------------------
+
+function h2_(body, text) {
+  const p = body.appendParagraph(String(text).toUpperCase());
+  p.setHeading(DocumentApp.ParagraphHeading.HEADING2);
+  p.editAsText().setBold(true);
+  return p;
+}
+
+function h3_(body, text) {
+  const p = body.appendParagraph(String(text).toUpperCase());
+  p.setHeading(DocumentApp.ParagraphHeading.HEADING3);
+  p.editAsText().setBold(true);
+  return p;
+}
+
+function p_(body, text) {
+  const p = body.appendParagraph(String(text));
+  p.setHeading(DocumentApp.ParagraphHeading.NORMAL);
+  p.editAsText().setBold(false).setFontSize(BODY_PT);
+  return p;
+}
+
+function kvTable_(body, rows) {
+  const table = body.appendTable(rows);
+  for (let r = 0; r < table.getNumRows(); r++) {
+    const row = table.getRow(r);
+    for (let c = 0; c < row.getNumCells(); c++) {
+      row.getCell(c).editAsText().setFontSize(BODY_PT);
+    }
+  }
+  return table;
+}
+
+function applyDocFont_(body) {
+  const attrs = {};
+  attrs[DocumentApp.Attribute.FONT_FAMILY] = DESIGN_FONT;
+  body.setAttributes(attrs);
+}
+
+function domainForSubmap_(submapName) {
+  const domains = {
+    '01_SHARED_SERVICES': 'Shared Services',
+    '02_ARTIST_MANAGEMENT': 'Artist Management',
+    '03_MASTER_BOUTIQUE': 'Master Boutique',
+    '04_CLIENT_DELIVERABLES': 'Client Deliverables',
+    '05_CLICKUP_REFERENCES': 'ClickUp Reference',
+    '06_GMAIL_TEMPLATES': 'Gmail Templates',
+    '07_REPORTING': 'Reporting',
+  };
+  return domains[submapName] || 'TBD';
 }
 
 // ---------------------------------------------------------------------------

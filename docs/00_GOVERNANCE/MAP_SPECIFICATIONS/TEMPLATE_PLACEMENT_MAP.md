@@ -168,6 +168,12 @@ naamconventie `YYYY-MM-DD_[ENTITY]_[MAP]_[DOCUMENTTYPE]_vX.Y` voor dossierkopiee
 en verwijst in iedere kopie naar het canonieke GitHub-template. Draai eerst met
 `DRY_RUN = true` en controleer de log.
 
+De gegenereerde Google Docs worden opgebouwd volgens de 14 verplichte onderdelen
+van `TEMPLATE_ARCHITECTUURSTANDAARD.md` (leidend voor template-opbouw en
+operationele kopieen), met `TBD` waar informatie nog ontbreekt. De vorm volgt
+`docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` (Montserrat, hoofdletters voor
+titels, geen kleuren, geen emoji).
+
 ## Governance
 
 - Deze kaart valt onder de governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
