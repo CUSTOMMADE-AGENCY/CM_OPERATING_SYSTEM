@@ -19,6 +19,32 @@ De activatie is door de accounteigenaar in de Make-app uitgevoerd (schrijfacties
 connector zijn vanuit de sessie geblokkeerd; alleen lezen). Scenariostatus gaat hiermee van
 `BUILD` → `ACTIVE`.
 
+## 1a. Governance-deviatie — activatie vóór de gates
+
+`GOVERNANCE_RULES.md` bepaalt expliciet: *"Make heeft 1 gedocumenteerd scenario: CM VAULT V1.
+Status: INACTIEF / TEST REQUIRED. Niet live totdat testlog, fallback en CM CONTROL approval
+zijn vastgelegd."* Ook het readiness report vereist testing, red-team, score en per-agent
+approval **vóór** `ACTIVE`.
+
+Het scenario is geactiveerd **voordat** die gates zijn afgerond. Sophia's goedkeuring gold het
+**activatietraject**, niet de per-agent **productiestatus**. Dit is dus een **bewuste deviatie**
+die nog moet worden beslecht:
+
+- **Optie A — pauzeren:** zet het scenario weer op inactief tot testlog, fallback en
+  CM CONTROL approval zijn vastgelegd (strikte naleving `GOVERNANCE_RULES.md`).
+- **Optie B — gedocumenteerde low-risk uitzondering:** laat het read-only scenario lopen,
+  maar leg de uitzondering + CM CONTROL-notering vast en werk `GOVERNANCE_RULES.md` bij.
+
+Tot dit besluit is genomen blijft dit een **open governance-item** en blijft CM VAULT
+**Level 1**. Dit besluit ligt bij Sophia (zie escalatie).
+
+## 1b. Deployed ≠ gedocumenteerd (read-only vs. folder-aanmakend)
+
+Het operator-doc `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/CM_VAULT_V1.md` beschreef module 9
+als `createAFolder` (mapaanmaak). Het **uitgerolde** blueprint heeft daar een `SetVariable`
+(`ONTBREKEND`) — **read-only**. Het operator-doc is hierop gecorrigeerd. Of read-only de
+bedoeling is (V1 = audit) of een build-gap, is een **CM FLOW / Sophia beslispunt**.
+
 ## 2. Werkelijk gedrag — READ-ONLY (documentatiecorrectie)
 
 Analyse van het blueprint bevestigt dat CM VAULT V1 **uitsluitend leest en rapporteert**:
