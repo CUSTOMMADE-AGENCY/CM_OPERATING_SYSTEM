@@ -56,7 +56,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 
 | Agent | Gov | Doc | Techniek | Func. test | Red team | Approval | Monitoring | Score/Paspoort | Cert-niveau |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|---|
-| CM VAULT | ✅ | ⚠️ | ⚠️ `BUILD` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
+| CM VAULT | ✅ | ⚠️ | ⚠️ `BUILD` | ⚠️ code | ⚠️ code | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM FLOW | ✅ | ⚠️ | ⚠️ `BUILD` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM OPS | ✅ | ⚠️ | ⬜ `IDEA` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM MONEY | ✅ | ⚠️ | ⬜ `REVIEW` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
@@ -69,6 +69,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 - **Doc ⚠️** — agentdefinitie (18 secties) compleet; per-agent testplan/logspecificatie nog aan te tonen.
 - **Approval ⚠️** — Sophia heeft het *activatietraject* goedgekeurd; de *productiestatus per agent* wordt pas per agent vastgelegd nadat de gates groen zijn.
 - **Techniek** — geen scenario staat `ACTIVE`; *te reg.* = scenario nog te registreren in `MAKE_SCENARIO_MAP.md`.
+- **⚠️ code** (CM VAULT) — functionele + red-team-tests op de code-laag geslaagd (8/8, `EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`); live-omgevingscases, scenario-`ACTIVE`, monitoring en score nog open. CM VAULT blijft Level 1.
 
 ---
 
