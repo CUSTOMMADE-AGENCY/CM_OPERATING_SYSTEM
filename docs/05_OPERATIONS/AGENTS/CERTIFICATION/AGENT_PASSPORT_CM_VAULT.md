@@ -25,7 +25,7 @@
 | Escalatiepad | → CM CONTROL (governance-conflict, onduidelijke eigenaar) · → CM LEGAL (rechten) · → CM MONEY (financiële docs) · → CM FLOW (automatisering) |
 | Laatste audit | ⬜ n.t.b. |
 | Volgende audit | ⬜ n.t.b. |
-| Laatste red team test | ⬜ nog niet uitgevoerd |
+| Laatste red team test | 2026-08-07 (code-laag safe-stop-deelbewijs; logging/escalatie + live-cases open) |
 | Approval door | ⚠️ Sophia — activatietraject goedgekeurd; productiestatus (Level 3) pending per gates |
 
 ## 2. Production-gate checklist (§9)
@@ -35,11 +35,11 @@
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
 | 2 | Documentatie | ⚠️ | Testplan + logspecificatie voor VAULT aantonen |
 | 3 | Techniek | ⚠️ | CM VAULT V1 van `BUILD` → `ACTIVE` met monitoring/alerts (CM FLOW) |
-| 4 | Functionele test | ⬜ | Registratie in `CERT_TEST_PLAN.md` §2 |
-| 5 | Red team | ⬜ | Registratie in `CERT_TEST_PLAN.md` §3 |
+| 4 | Functionele test | ⚠️ | Code-laag **PASS 5/5** (`EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`); live-omgevingscases nog open |
+| 5 | Red team | ⬜ | Alleen **safe-stop-deelbewijs** aangetoond; §4-eisen logging + escalatie + live-cases nog open — gate OPEN |
 | 6 | Approval | ⚠️ | Sophia-approval productiestatus (record §5) |
 | 7 | Monitoring | ⬜ | Actief monitoringritme op ACTIVE-scenario |
-| — | Score ≥90 + paspoort | ⬜ | Score invullen na tests |
+| — | Score ≥90 + paspoort | ⬜ | Score invullen na volledige (incl. live) run |
 
 **Verste automation:** `CM VAULT V1` (Make scenario 6289645) — status `BUILD`. Dichtst bij
 productie van alle agents; laagste risicoprofiel (leest en ordent, verwijdert nooit).
