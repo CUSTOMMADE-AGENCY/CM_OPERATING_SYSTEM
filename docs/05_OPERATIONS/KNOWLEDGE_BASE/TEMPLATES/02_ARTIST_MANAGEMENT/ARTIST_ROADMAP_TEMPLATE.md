@@ -155,10 +155,10 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Doel→Taak, Eigenaar→Assignee, Deadline→Due date |
+| Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Hoofddoel→Taak, Eigenaar→Assignee, Deadline→Due date |
 | Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date |
 | Rights status = `OPEN`/`BLOCKED` | Make → ClickUp | Rights/legal opvolgtaak | Release→Taak, Rights status→Status |
-| Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Deal→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status |
+| Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status |
 | Financiële actuals | — | Niet vanuit roadmap naar Moneybird geschreven; Moneybird blijft financiële waarheid | Read-only referentie |
 
 ## 15 · WIJZIGINGSLOG
@@ -166,7 +166,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
 | 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
-| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt; secties en kolomkoppen Nederlandstalig. Status op NEEDS_REVIEW tot V2.1-review is afgerond. | CM OPS AGENT |
+| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt zodat elke source field-mapping in sectie 14 letterlijk naar een bestaande sectie 05-kolom verwijst (Hoofddoel, Kans); secties en kolomkoppen Nederlandstalig. Status op NEEDS_REVIEW tot V2.1-review is afgerond. | CM OPS AGENT |
 
 ---
 
