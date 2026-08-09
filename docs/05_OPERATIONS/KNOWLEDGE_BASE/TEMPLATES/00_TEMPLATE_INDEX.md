@@ -2,7 +2,7 @@
 
 ## Doel
 
-Dit indexbestand is de centrale navigatie voor de CM Template Library. Agents controleren altijd eerst `docs/03_SHARED_SERVICES/TEMPLATES/` voordat zij nieuwe documenten, trackers, briefs, registers of deliverables aanmaken.
+Dit indexbestand is de centrale navigatie voor de CM Template Library. Agents controleren altijd eerst `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voordat zij nieuwe documenten, trackers, briefs, registers of deliverables aanmaken.
 
 GitHub is leidend voor template-governance en template-specificaties. Drive bevat uitsluitend werkbare kopieën, ingevulde operationele versies of exports.
 
@@ -49,7 +49,7 @@ GitHub is leidend voor template-governance en template-specificaties. Drive beva
 ## Governancebronnen
 
 - `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` is leidend voor template-ontwerp.
-- `docs/03_SHARED_SERVICES/TEMPLATES/TEMPLATE_ARCHITECTUURSTANDAARD.md` is leidend voor template-opbouw, gebruik, AI-instructies en workflowkoppeling.
+- `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/TEMPLATE_ARCHITECTUURSTANDAARD.md` is leidend voor template-opbouw, gebruik, AI-instructies en workflowkoppeling.
 - `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` is leidend voor templategebruik.
 - Duplicate template-locaties zijn niet toegestaan.
 - Agents mogen geen eigen formats maken als een bestaande template past.
