@@ -6,116 +6,147 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Reporting |
 | Onderdeel van | CM Template Library / Reporting |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM MONEY AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
-| Approval | Ja — vóór verzending |
+| Approval | Ja — vóór externe/client-facing verzending |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Maandelijkse scanbare rapportage over voortgang, KPIs, acties en risicos voor management- of clientretainers, gevoed vanuit de KPI-set.
+Maandelijkse scanbare rapportage voor management- of clientretainers met highlights, KPI's, inkomsten/financials, acties, risico's en beslispunten. Het rapport vat leidende bronsystemen samen en wordt zelf geen alternatieve financiële of operationele waarheid.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Maandafsluiting voor management- of clientretainers.
+- Maandafsluiting.
+- Managementreview.
+- Client-facing maandrapportage.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
 | KPI-set | Ja | KPI Template |
-| Acties | Ja | ClickUp |
-| Financials | Ja | Moneybird |
+| Acties/status | Ja | ClickUp |
+| Financiële actuals | Indien relevant | Moneybird / royaltybron |
+| Roadmap/mijlpalen | Ja | Artist Roadmap / werkplan |
+| Besluiten/risico's | Indien relevant | Meeting Recap / dossier |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Samenvatting
+### MAANDOVERZICHT
 
-| Onderdeel | Kernboodschap |
+| Veld | Waarde |
 |---|---|
-| Maand | TBD |
-| Highlights | TBD |
-| Aandachtspunten | TBD |
+| Periode | TBD |
+| Primair resultaat | TBD |
+| Belangrijkste highlight | TBD |
+| Grootste aandachtspunt | TBD |
+| Beslissing nodig | TBD |
 
-### KPIs
+### KPI'S
 
-| KPI | Waarde | Trend | Doel |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
-| TBD | TBD | TBD | TBD |
+| KPI | Actueel | Doel | Trend | Bron | Opmerking |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Acties
+### FINANCIEEL
 
-| Actie | Status | Eigenaar | Deadline |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| Inkomstenlane / metric | Actueel | Doel | Forecast | Verschil | Bron |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Risicos
+### ACTIES
 
-| Risico | Impact | Mitigatie | Owner |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| Actie-ID | Actie | Eigenaar | Deadline | Status |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### RISICO'S & MITIGATIE
+
+| Risico-ID | Risico | Impact | Mitigatie | Eigenaar | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Trend | `UP` · `FLAT` · `DOWN` · `TBD` |
+| Actiestatus | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
+| Risicostatus | `OPEN` · `MITIGATING` · `CLOSED` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen ongefilterde datadump.
+> **01** — Geen ongefilterde datadump; alleen managementrelevante informatie.
 >
-> **02** — Client-facing → approval vóór verzending.
+> **02** — Financiële actuals hebben benoemde bron en worden niet door AI verzonnen.
+>
+> **03** — Client-facing verzending vereist approval.
+>
+> **04** — Open `BLOCKED` acties of materiële risico's mogen niet uit de samenvatting worden weggelaten.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Rapport opgeleverd + gearchiveerd.
+- Goedgekeurd maandrapport.
+- Acties/risico's teruggekoppeld naar ClickUp.
+- Gearchiveerde rapportkopie in Drive.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- KPIs met trend en doel.
-- Acties met eigenaar.
+- KPI's hebben actual, doel, trend en bron.
+- Financials zijn herleidbaar naar Moneybird/benoemde bron.
+- Acties en risico's hebben stabiele IDs, owner en status.
+- Samenvatting correspondeert met onderliggende data.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór verzending.
+Intern conform workflow; vóór externe/client-facing verzending volgens geldende approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Client/management
-- → Archief
+- → ClickUp
+- → Drive archief/reporting
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = rapportspecificatie · Drive = rapportkopie/export · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[DOSSIER]/06_FINANCE` of `04_DELIVERABLES`
+Drive: `[DOSSIER]/06_FINANCE` of `[DOSSIER]/04_DELIVERABLES` volgens dossierfunctie · `YYYY-MM_[ENTITY]_MONTHLY_REPORT_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Gebruik uitsluitend benoemde bronnen; verzin nooit KPI's, financials, status of risico's.
+- Onbekend = `TBD`.
+- Behoud A4-portret; splits brede onderwerpen in afzonderlijke blokken.
+- Finance actuals komen uit Moneybird/benoemde bron; ClickUp blijft actiebron.
+- Geen vertrouwelijke clientdata in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Maand-close | Make → KPI/Sheets | Rapport vullen | KPI→Section |
-| Rapport approved | Make → Gmail | Verzenden | Rapport→Attachment |
+| Maand-close | Make → rapportworkflow | Rapport vullen | KPI→KPI, Actueel→Actual, Doel→Target, Trend→Trend, Bron→Source |
+| Actie toegevoegd/gewijzigd | Make ↔ ClickUp | Actiestatus synchroniseren | Actie-ID→External ID, Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Rapport approved | Make → Gmail/Drive | Verzenden/archiveren | Periode→Period, rapportbestand→Attachment/Archive |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, finance/risico-blokken, stabiele Actie-/Risico-IDs, bronregels en valide automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend rapportkopieën/exports._
