@@ -6,95 +6,118 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Reference |
 | Onderdeel van | CM Template Library / ClickUp References |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM PROSPECT AGENT |
-| Support agents | CM FLOW AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Support agents | CM FLOW AGENT · CM LEGAL AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
-| Approval | Ja — bij pipelinewijziging |
+| Approval | Ja — bij pipeline-/stage-definitiewijziging |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Referentiespecificatie voor dealpipeline-statussen en de ClickUp-koppeling.
+Leidende referentiespecificatie voor dealpipeline-stages, minimale stage-gates en ClickUp-mapping. ClickUp beheert de operationele pipeline; andere templates gebruiken exact dezelfde machinewaarden.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Master Boutique pipeline, buyer outreach, dealopvolging.
+- Master Boutique pipeline.
+- Buyer outreach.
+- Dealopvolging.
+- Automation die pipeline-stages gebruikt.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Pipeline-statussen | Ja | ClickUp |
+| Pipeline-configuratie | Ja | ClickUp |
+| Stage-gates | Ja | Deal/Legal governance |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Statussen
+### PIPELINE-STAGES
 
-| Status | Betekenis | Vereiste |
+| Stage | Betekenis | Minimale vereiste | Volgende toegestane stap |
+|---|---|---|---|
+| `LEAD` | Nieuw contact/opportunity | Basisrecord | `QUALIFIED` |
+| `QUALIFIED` | Gekwalificeerde opportunity/buyer | Qualification | `DILIGENCE` of afsluiten |
+| `DILIGENCE` | In beoordeling | Passende NDA/qualification + diligenceproces | `CLOSING` of terug/afsluiten |
+| `CLOSING` | Juridische/commerciële afronding | Onderhandeling + closingdocumentatie | `CLOSED` of terug |
+| `CLOSED` | Afgesloten dealproces | Uitkomst vastgelegd | Eindstatus |
+
+### CLICKUP-VELDEN
+
+| Bronveld | ClickUp-doel | Verplicht |
 |---|---|---|
-| Lead | Nieuw contact | — |
-| Qualified | Gekwalificeerde buyer | Qualification |
-| Diligence | In beoordeling | NDA + Data Room |
-| Closing | Afronding | SPA/APA |
-| Closed | Afgerond | Approval |
+| Deal-ID / Buyer-ID | External ID / reference | Ja |
+| Stage | Status | Ja |
+| Eigenaar | Assignee | Ja |
+| Volgende actie | Next action / task context | Ja |
+| Deadline | Due date | Indien actie open |
 
-## 06 · DECISION GATES
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Pipeline-status wordt in ClickUp beheerd; dit is de definitie.
+> **01** — Pipeline-stage wordt operationeel in ClickUp beheerd.
 >
-> **02** — Diligence-fase → NDA + Qualification.
+> **02** — Alle gekoppelde templates gebruiken exact `LEAD · QUALIFIED · DILIGENCE · CLOSING · CLOSED`.
+>
+> **03** — `DILIGENCE` vereist de toepasselijke qualification/NDA-gates.
+>
+> **04** — Stage wordt niet door AI afgeleid zonder bronstatus; onbekend = `TBD`.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Statusdefinitie voor de buyer-pipeline.
+- Eén consistente pipeline-stage-definitie voor Deal Memo, Buyer Pipeline en automations.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elke status heeft betekenis en vereiste.
+- Geen alternatieve stagewaarden in gekoppelde templates.
+- ClickUp mapping gebruikt bestaande bronvelden.
+- Stage-gates zijn traceerbaar naar governance/workflow.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — bij pipelinewijziging.
+Wijziging van stage-definitie/gates: CM PROSPECT AGENT + CM FLOW AGENT en aanvullende governance waar nodig.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Buyer Pipeline
-- → ClickUp
+- → Deal Memo
+- → ClickUp / Make automations
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = stage-/mapping-specificatie · ClickUp = operationele pipeline/status · Drive = deal/evidence · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-ClickUp (pipeline)
+ClickUp = operationele pipeline. GitHub bevat deze canonical referentie.
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Gebruik uitsluitend de vijf gedefinieerde stage-machinewaarden.
+- Verzin nooit qualification, NDA, stage of closingstatus.
+- Maak geen parallelle pipeline-statusset.
+- Bij conflict tussen template en deze reference: deze reference geldt totdat governance anders besluit.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Status gewijzigd | ClickUp | Pipeline-update | — |
+| Stage gewijzigd | ClickUp / Make | Pipeline-context synchroniseren | Stage→Status, Deal-ID / Buyer-ID→Reference, Eigenaar→Assignee, Deadline→Due date, Volgende actie→Next action |
+| Stage `DILIGENCE` | Make → diligence workflow | Gatecontrole starten | Deal-ID / Buyer-ID→Reference, Stage→Status |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM PROSPECT AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM PROSPECT AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, canonical machine stages, stage-gates en expliciete ClickUp field mappings vastgesteld. | CM PROSPECT AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub voor stage-definitie; ClickUp voor operationele status._
