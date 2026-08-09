@@ -1,50 +1,72 @@
-# TEMPLATE_STATUS_REGISTER
-## Architectuurstandaard
+# TEMPLATE STATUS REGISTER — V2.2
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+## DOEL
 
-## Owner Agent
+Centraal statusregister voor de canonical CM Template Library. Dit register wordt samen met `00_TEMPLATE_INDEX.md` onderhouden.
+
+## OWNER
 
 CM VAULT AGENT
 
-## Support Agents
+## SUPPORT
 
 CM CONTROL AGENT
 
-## Doel
-
-Centraal statusregister voor de CM Template Library. Dit register ondersteunt review, governance en agent-ready navigatie.
-
-## Statusdefinities
+## STATUSDEFINITIES
 
 | Status | Betekenis | Gebruik |
-| --- | --- | --- |
-| ACTIVE | Goedgekeurd voor operationeel gebruik | Agents mogen kopiëren of gebruiken volgens workflow |
-| DRAFT | In opbouw, niet leidend | Alleen gebruiken na expliciete approval |
-| NEEDS_REVIEW | Inhoud moet worden gecontroleerd | Niet client-facing gebruiken zonder approval |
-| DEPRECATED | Vervangen of buiten gebruik | Niet gebruiken voor nieuwe cases |
+|---|---|---|
+| ACTIVE | Goedgekeurd voor operationeel gebruik | Agents mogen gebruiken volgens workflow/governance |
+| DRAFT | In opbouw | Niet leidend |
+| NEEDS_REVIEW | Review nodig | Niet zonder passende approval gebruiken |
+| DEPRECATED | Vervangen/buiten gebruik | Niet voor nieuwe cases |
 
-## Register
+## CANONICAL REGISTER
 
-| Template naam | Domein | Status | Owner Agent | Laatste review | Volgende review | Opmerking |
-| --- | --- | --- | --- | --- | --- | --- |
-| CLIENT_PROFILE_TEMPLATE | Shared Services | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| CLIENT_ONBOARDING_TEMPLATE | Shared Services | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| EMAIL_INSTRUCTIONS_TEMPLATE | Gmail Templates | ACTIVE | CM SOCIAL AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| DO_NOTS_TEMPLATE | Shared Services | ACTIVE | CM CONTROL AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| BRAND_AUDIT_TEMPLATE | Artist Management | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| BUSINESS_AUDIT_TEMPLATE | Artist Management | ACTIVE | CM MONEY AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| ARTIST_ROADMAP_TEMPLATE | Artist Management | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| MONTHLY_REPORT_TEMPLATE | Reporting | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| MEETING_RECAP_TEMPLATE | Shared Services | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| RELEASE_STRATEGY_TEMPLATE | Artist Management | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| RELEASE_KICKOFF_TEMPLATE | Artist Management | ACTIVE | CM OPS AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| DEAL_MEMO_TEMPLATE | Master Boutique | ACTIVE | CM PROSPECT AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| PARTNERSHIP_BRIEF_TEMPLATE | Master Boutique | ACTIVE | CM PROSPECT AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| MUSIC_RIGHTS_REGISTER | Master Boutique | ACTIVE | CM LEGAL AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| ACTION_TRACKER_CLICKUP_REFERENCE | ClickUp References | ACTIVE | CM FLOW AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
-| DEAL_PIPELINE_CLICKUP_REFERENCE | ClickUp References | ACTIVE | CM PROSPECT AGENT | 2026-07-01 | 2026-10-01 | Eerste centrale specificatie |
+| Template naam | Domein | Status | Owner Agent | Laatste review | Volgende review |
+|---|---|---|---|---|---|
+| INTAKE_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| CONTACT_SHEET_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| CLIENT_ONBOARDING_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| CLIENT_PROFILE_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| MEETING_RECAP_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| DO_NOTS_TEMPLATE | Shared Services / Governance | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
+| CONTRACT_SUMMARY_TEMPLATE | Shared Services / Legal | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
+| APPROVAL_EVIDENCE_TEMPLATE | Shared Services / Governance | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
+| AMENDMENT_LOG_TEMPLATE | Shared Services / Legal | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
+| REGISTER_TEMPLATE | Shared Services | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| VERSION_LOG_TEMPLATE | Shared Services / Governance | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
+| ARTIST_ROADMAP_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| RELEASE_STRATEGY_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| RELEASE_KICKOFF_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| KPI_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| JAARPLAN_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| DEAL_MEMO_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
+| PARTNERSHIP_BRIEF_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
+| MUSIC_RIGHTS_REGISTER | Master Boutique | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
+| RIGHTS_AUDIT_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
+| VALUATION_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM MONEY AGENT | 2026-08-10 | 2026-11-10 |
+| DATA_ROOM_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
+| BUYER_PIPELINE_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
+| BRAND_AUDIT_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| BUSINESS_AUDIT_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM MONEY AGENT | 2026-08-10 | 2026-11-10 |
+| ACTION_TRACKER_CLICKUP_REFERENCE | ClickUp References | ACTIVE — V2.2 | CM FLOW AGENT | 2026-08-10 | 2026-11-10 |
+| DEAL_PIPELINE_CLICKUP_REFERENCE | ClickUp References | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
+| EMAIL_INSTRUCTIONS_TEMPLATE | Gmail Templates | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
+| MONTHLY_REPORT_TEMPLATE | Reporting | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| START_HIER_04_DEALS_TEMPLATE | Start Hier / Deals | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
+| START_HIER_07_LEGAL_TEMPLATE | Start Hier / Legal | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
 
-## Onderhoudsregel
+## GAP-REGEL
 
-Wijzig dit register altijd samen met `00_TEMPLATE_INDEX.md` wanneer status, eigenaar, reviewdatum of reviewritme verandert.
+Namen die in legacy scripts/specs voorkomen maar niet in `00_TEMPLATE_INDEX.md` als canonical bestand staan, zijn geen ACTIVE templates. Registreer deze eerst als gap; maak geen fictieve template om een stale reference te vullen.
+
+## ONDERHOUDSREGEL
+
+Wijzig dit register altijd samen met `00_TEMPLATE_INDEX.md` wanneer canonical status, owner of reviewritme wijzigt.
+
+## WIJZIGINGSLOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-08-10 | V2.2 | Statusregister volledig gelijkgetrokken met canonical V2.2-index en kwartaalreviewdatum. | CM VAULT AGENT |
