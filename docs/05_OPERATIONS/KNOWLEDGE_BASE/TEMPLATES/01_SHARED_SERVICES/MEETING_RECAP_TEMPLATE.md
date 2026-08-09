@@ -11,101 +11,128 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM VAULT AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
-| Approval | Nee, tenzij extern gevoelig |
+| Approval | Nee, tenzij extern gevoelig of client-facing |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Kort verslag met besluiten, acties en opvolging, zodat afspraken niet verloren gaan en direct in ClickUp landen.
+Kort operationeel meetingverslag dat besluiten, acties, open punten en opvolging scheidt zodat afspraken direct naar ClickUp kunnen en beslissingen traceerbaar blijven.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Na interne of externe meetings met opvolging.
+- Na interne of externe meetings met besluiten of opvolging.
+- Na calls waarin deadlines, approvals of acties zijn afgesproken.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Meetingdatum | Ja | Agenda |
-| Aanwezigen | Ja | Meeting |
-| Besluiten | Ja | Meeting |
+| Meetingdatum | Ja | Agenda / meeting |
+| Onderwerp | Ja | Agenda / meeting |
+| Aanwezigen | Ja | Meeting / Contact Sheet |
+| Besluiten en acties | Ja | Meeting |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Besluiten
+### MEETINGCONTEXT
 
-| Besluit | Context | Eigenaar |
-|---|---|---|
-| TBD | TBD | TBD |
+| Veld | Waarde |
+|---|---|
+| Datum | TBD |
+| Onderwerp | TBD |
+| Dossierreferentie | TBD |
+| Aanwezigen / contactreferenties | TBD |
 
-### Acties
+### BESLUITEN
 
-| Actie | Eigenaar | Deadline | Status |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| Besluit-ID | Besluit | Context | Beslisser | Datum |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-### Open punten
+### ACTIES
 
-| Open punt | Beslisser | Deadline |
-|---|---|---|
-| TBD | TBD | TBD |
+| Actie-ID | Actie | Eigenaar | Deadline | Status |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### OPEN PUNTEN
+
+| Punt-ID | Open punt | Beslisser/eigenaar | Deadline | Status |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
+
+### GECONTROLEERDE STATUSSEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Actie/open punt status | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Elke actie heeft eigenaar en deadline.
+> **01** — Elke actie heeft eigenaar en deadline of expliciet `TBD`.
 >
-> **02** — Extern gevoelige recaps → approval vóór delen.
+> **02** — Een formeel besluit heeft een benoemde beslisser.
+>
+> **03** — Extern gevoelige/client-facing recap vereist approval vóór delen.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Verslag + ClickUp-acties.
+- Scanbaar verslag.
+- ClickUp-acties.
+- Traceerbare besluiten en open punten.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Besluiten en acties gescheiden.
-- Geen open actie zonder eigenaar.
+- Besluiten, acties en open punten zijn gescheiden.
+- IDs zijn stabiel voor automation.
+- Geen actie zonder eigenaar/deadline behalve expliciet `TBD`.
+- Status gebruikt gecontroleerde waarden.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Nee, tenzij extern gevoelig.
+Intern: niet vereist tenzij gevoelig. Extern/client-facing: conform geldende approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → ClickUp (acties)
+- → ClickUp
 - → Betrokken dossier
+- → Approval/Decision log indien besluit governance-impact heeft
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
 GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive/Gmail: `[DOSSIER]/05_COMMUNICATION`
+Drive: `[DOSSIER]/05_COMMUNICATION` of passende dossiermap · `YYYY-MM-DD_[ENTITY]_MEETING_RECAP_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index.
+- Verzin nooit besluiten, aanwezigen, owners of deadlines; onbekend = `TBD`.
+- Gebruik Contact Sheet-referenties waar passend.
+- Behoud A4-portret en stabiele IDs voor acties/besluiten/open punten.
+- Geen vertrouwelijke inhoud in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Recap opgeslagen | Make → ClickUp | Acties aanmaken | Actie→Task, Deadline→Due, Eigenaar→Assignee |
+| Actie toegevoegd/gewijzigd | Make → ClickUp | Taak aanmaken/bijwerken | Actie-ID→External ID, Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Open punt `BLOCKED` | Make → ClickUp | Escalatietaak | Punt-ID→External ID, Open punt→Taak, Beslisser/eigenaar→Assignee, Deadline→Due date |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, stabiele record-IDs, gecontroleerde status en valide automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
