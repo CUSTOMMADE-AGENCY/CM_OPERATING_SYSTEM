@@ -1,60 +1,79 @@
-# CM TEMPLATE INDEX
+# CM TEMPLATE INDEX — V2.2
 
-## Doel
+## DOEL
 
-Dit indexbestand is de centrale navigatie voor de CM Template Library. Agents controleren altijd eerst `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` voordat zij nieuwe documenten, trackers, briefs, registers of deliverables aanmaken.
+Centrale navigatie voor de canonical CM Template Library. Controleer deze index vóór het maken van een nieuw document, register, tracker, brief of deliverable.
 
-GitHub is leidend voor template-governance en template-specificaties. Drive bevat uitsluitend werkbare kopieën, ingevulde operationele versies of exports.
+## SYSTEEMREGELS
 
-## Gebruik
+- GitHub = canonical template-specificaties en governance.
+- Drive = werkbare kopieën, ingevulde documenten en exports.
+- ClickUp = uitvoering/status.
+- Moneybird = financiële waarheid.
+- Legal evidence / Rights Register = bron voor geverifieerde rechtenclaims.
+- Onbekende informatie = `TBD`; geen parallelle templates.
 
-1. Zoek de passende template in de tabel.
-2. Open de GitHub-specificatie.
-3. Kopieer alleen indien nodig naar de operationele Drive-map of verwijs naar ClickUp.
-4. Leg gebruik, kopie, opslaglocatie en gaps vast in TEMPLATE_USAGE_REPORT.
-5. Gebruik TEMPLATE_GAP_LOG wanneer verplichte velden ontbreken of de template niet past.
+## V2.2-STANDAARD
 
-## Template register
+Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md` V2.2: 15 secties, Nederlandstalige zichtbare structuur, A4-portret, brede records opgesplitst in gekoppelde blokken, gecontroleerde statussen waar automation daarvan afhankelijk is en sectie-14 mappings die naar echte sectie-05 velden verwijzen.
 
-| Template naam | Domein | Doel | Wanneer gebruiken | Owner Agent | Support Agents | System of Record | Drive werkbare kopie | Gekoppelde workflow | Approval nodig | Status | Laatste review | Volgende review |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [CLIENT_PROFILE_TEMPLATE](01_SHARED_SERVICES/CLIENT_PROFILE_TEMPLATE.md) | Shared Services | Centraal klantprofiel voor interne context, scope en werkafspraken. | Bij onboarding, herstart van samenwerking of overdracht tussen agents. | CM OPS AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive operationele klantmap | TBD – Sophia / VAULT beslissing | Client onboarding workflow | Ja, door Sophia of CM CONTROL AGENT | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [CLIENT_ONBOARDING_TEMPLATE](01_SHARED_SERVICES/CLIENT_ONBOARDING_TEMPLATE.md) | Shared Services | Checklist voor complete, consistente onboarding. | Wanneer een nieuwe client of artist operationeel wordt ingericht. | CM OPS AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive operationele klantmap | TBD – Sophia / VAULT beslissing | Client onboarding workflow | Ja, vóór live gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [EMAIL_INSTRUCTIONS_TEMPLATE](06_GMAIL_TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md) | Gmail Templates | Instructies voor consistente e-mailcommunicatie via info@custommade.agency. | Bij het opstellen of aanpassen van Gmail-templates. | CM SOCIAL AGENT | CM VAULT AGENT | GitHub template-specificatie; Gmail operationele template | TBD – Sophia / VAULT beslissing | Gmail communicatie workflow | Ja, bij externe templates | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [DO_NOTS_TEMPLATE](01_SHARED_SERVICES/DO_NOTS_TEMPLATE.md) | Shared Services | Operationele lijst met grenzen, verboden acties en escalatiepunten. | Bij onboarding, agent-instructies en workflow-controles. | CM CONTROL AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive operationele kopie indien nodig | TBD – Sophia / VAULT beslissing | Governance compliance workflow | Ja, bij wijziging | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [BRAND_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BRAND_AUDIT_TEMPLATE.md) | Artist Management | Scanbare audit voor artist brand, positionering en zichtbaarheid. | Bij artist intake, rebrand, releasevoorbereiding of kwartaalreview. | CM OPS AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive deliverable kopie | TBD – Sophia / VAULT beslissing | Brand audit workflow | Ja, vóór client-facing oplevering | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [BUSINESS_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md) | Artist Management | Operationele audit van artist business, inkomsten, team en systemen. | Bij retainerstart, kwartaalreview of strategische herpositionering. | CM MONEY AGENT | — | GitHub template-specificatie; Drive deliverable kopie | TBD – Sophia / VAULT beslissing | Business audit workflow | Ja, vóór client-facing oplevering | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [ARTIST_ROADMAP_TEMPLATE](02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md) | Artist Management | Roadmap voor doelen, releases, acties en beslismomenten. | Bij managementstart, kwartaalplanning of releaseplanning. | CM OPS AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive werkbare kopie | TBD – Sophia / VAULT beslissing | Artist roadmap workflow | Ja, bij client-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [MONTHLY_REPORT_TEMPLATE](07_REPORTING/MONTHLY_REPORT_TEMPLATE.md) | Reporting | Maandelijkse scanbare rapportage over voortgang, KPI’s, acties en risico’s. | Bij maandafsluiting voor management- of clientretainers. | CM OPS AGENT | — | GitHub template-specificatie; Drive rapportkopie/export | TBD – Sophia / VAULT beslissing | Monthly reporting workflow | Ja, vóór verzending | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [MEETING_RECAP_TEMPLATE](01_SHARED_SERVICES/MEETING_RECAP_TEMPLATE.md) | Shared Services | Kort verslag met besluiten, acties en opvolging. | Na interne of externe meetings waar opvolging nodig is. | CM OPS AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive of Gmail operationele kopie | TBD – Sophia / VAULT beslissing | Meeting process workflow | Nee, tenzij extern gevoelig | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [RELEASE_STRATEGY_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md) | Artist Management | Strategisch raamwerk voor releasepositionering, timing en acties. | Bij single, EP, album of campagneplanning. | CM OPS AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive werkbare kopie | TBD – Sophia / VAULT beslissing | Release strategy workflow | Ja, vóór client-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [RELEASE_KICKOFF_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_KICKOFF_TEMPLATE.md) | Artist Management | Kickoff-checklist voor releasecampagnes. | Aan de start van releaseplanning of campagneproductie. | CM OPS AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive werkbare kopie | TBD – Sophia / VAULT beslissing | Release kickoff workflow | Ja, bij campaign approval | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [DEAL_MEMO_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_MEMO_TEMPLATE.md) | Master Boutique | Compact dealoverzicht voor catalog sale, master resale of rights brokerage. | Bij dealkwalificatie, buyer-facing voorbereiding of interne approval. | CM PROSPECT AGENT | CM LEGAL AGENT; CM CONTROL AGENT | GitHub template-specificatie; Drive dealmap kopie | TBD – Sophia / VAULT beslissing | Deal memo workflow | Ja, vóór buyer-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [PARTNERSHIP_BRIEF_TEMPLATE](03_MASTER_BOUTIQUE/PARTNERSHIP_BRIEF_TEMPLATE.md) | Master Boutique | Brief voor mogelijke partners, buyers of commerciële samenwerkingen. | Bij partnership intake, outreachvoorbereiding of voorstelvorming. | CM PROSPECT AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive werkbare kopie | TBD – Sophia / VAULT beslissing | Partnership workflow | Ja, vóór externe verzending | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [MUSIC_RIGHTS_REGISTER](03_MASTER_BOUTIQUE/MUSIC_RIGHTS_REGISTER.md) | Master Boutique | Register-specificatie voor master-, publishing- en catalogusrechten. | Bij catalog sale, master resale, rights brokerage en diligencevoorbereiding. | CM LEGAL AGENT | CM PROSPECT AGENT | GitHub template-specificatie; Drive werkbare registerkopie | TBD – Sophia / VAULT beslissing | Rights register workflow | Ja, vóór buyer-facing of diligencegebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [RIGHTS_AUDIT_TEMPLATE](03_MASTER_BOUTIQUE/RIGHTS_AUDIT_TEMPLATE.md) | Master Boutique | Verificatie van chain of title, metadata en encumbrances vóór dealgebruik. | Vóór buyer-facing gebruik of due diligence van een catalog/master. | CM LEGAL AGENT | CM PROSPECT AGENT; CM CONTROL AGENT | GitHub template-specificatie; Drive dealmap kopie | TBD – Sophia / VAULT beslissing | Rights audit workflow | Ja, vóór diligence sign-off | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [VALUATION_TEMPLATE](03_MASTER_BOUTIQUE/VALUATION_TEMPLATE.md) | Master Boutique | Onderbouwde waardering van een catalog/master via multiples en aannames. | Bij dealkwalificatie, pricing of onderhandeling. | CM MONEY AGENT | CM PROSPECT AGENT; CM LEGAL AGENT | GitHub template-specificatie; Drive dealmap kopie | TBD – Sophia / VAULT beslissing | Valuation workflow | Ja, vóór buyer-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [DATA_ROOM_TEMPLATE](03_MASTER_BOUTIQUE/DATA_ROOM_TEMPLATE.md) | Master Boutique | Gestructureerde data room-index en access log voor due diligence. | Bij due diligence met gekwalificeerde buyers onder NDA. | CM PROSPECT AGENT | CM LEGAL AGENT; CM VAULT AGENT | GitHub template-specificatie; Drive dealmap kopie | TBD – Sophia / VAULT beslissing | Data room workflow | Ja, per access-toekenning | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [BUYER_PIPELINE_TEMPLATE](03_MASTER_BOUTIQUE/BUYER_PIPELINE_TEMPLATE.md) | Master Boutique | Pipeline van gekwalificeerde buyers met stage, NDA-status en opvolging. | Bij buyer outreach en dealopvolging. | CM PROSPECT AGENT | CM FLOW AGENT | GitHub template-specificatie; ClickUp pipeline + Drive dealmap | TBD – Sophia / VAULT beslissing | Buyer pipeline workflow | Ja, per stage-gate | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [ACTION_TRACKER_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/ACTION_TRACKER_CLICKUP_REFERENCE.md) | ClickUp References | Referentiespecificatie voor acties die in ClickUp uitgevoerd worden. | Bij projecten waar Drive/GitHub documentatie naar ClickUp-acties moet verwijzen. | CM FLOW AGENT | CM VAULT AGENT | GitHub template-specificatie; ClickUp operationeel systeem | TBD – Sophia / VAULT beslissing | ClickUp action tracking workflow | Nee, tenzij workflowwijziging | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [DEAL_PIPELINE_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/DEAL_PIPELINE_CLICKUP_REFERENCE.md) | ClickUp References | Referentiespecificatie voor dealpipeline-statussen en ClickUp-koppeling. | Bij Master Boutique pipeline, buyer outreach en dealopvolging. | CM PROSPECT AGENT | CM FLOW AGENT | GitHub template-specificatie; ClickUp pipeline | TBD – Sophia / VAULT beslissing | Deal pipeline workflow | Ja, bij pipelinewijziging | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [INTAKE_TEMPLATE](01_SHARED_SERVICES/INTAKE_TEMPLATE.md) | Shared Services | Gestructureerde intake van een nieuw dossier. | Bij start of overdracht van een dossier. | CM OPS AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive `[DOSSIER]/01_ADMIN` | Drive `[DOSSIER]/01_ADMIN` | Dossier onboarding workflow | Level 1 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [CONTACT_SHEET_TEMPLATE](01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md) | Shared Services | Overzicht van sleutelcontacten en rollen per dossier. | Bij dossieraanmaak of teamwijziging. | CM OPS AGENT | CM VAULT AGENT | GitHub template-specificatie; Drive `[DOSSIER]/01_ADMIN` | Drive `[DOSSIER]/01_ADMIN` | Dossier onboarding workflow | Level 1 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [CONTRACT_SUMMARY_TEMPLATE](01_SHARED_SERVICES/CONTRACT_SUMMARY_TEMPLATE.md) | Shared Services / Legal | Compacte samenvatting van een contract. | Bij vastleggen of reviewen van een overeenkomst. | CM LEGAL AGENT | CM CONTROL AGENT | GitHub template-specificatie; Drive `[DOSSIER]/02_CONTRACT` | Drive `[DOSSIER]/02_CONTRACT` | Legal review flow | Level 3/4 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [APPROVAL_EVIDENCE_TEMPLATE](01_SHARED_SERVICES/APPROVAL_EVIDENCE_TEMPLATE.md) | Shared Services / Governance | Bewijsstuk van een verleende goedkeuring. | Bij elke vast te leggen approval. | CM CONTROL AGENT | CM LEGAL AGENT | GitHub template-specificatie; Drive `07_LEGAL/EVIDENCE` | Drive `[DOSSIER]/02_CONTRACT` of `07_LEGAL/EVIDENCE` | Governance compliance workflow | Afhankelijk van actie | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [AMENDMENT_LOG_TEMPLATE](01_SHARED_SERVICES/AMENDMENT_LOG_TEMPLATE.md) | Shared Services / Legal | Logboek van contractwijzigingen. | Bij elke aanpassing van een contract. | CM LEGAL AGENT | CM CONTROL AGENT | GitHub template-specificatie; Drive `[DOSSIER]/02_CONTRACT` | Drive `[DOSSIER]/02_CONTRACT` | Legal review flow | Level 3/4 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [REGISTER_TEMPLATE](01_SHARED_SERVICES/REGISTER_TEMPLATE.md) | Shared Services | Generiek registeroverzicht per domeinmap. | Als index binnen een domeinmap van een dossier. | CM OPS AGENT | CM CONTROL AGENT | GitHub template-specificatie; Drive `[DOSSIER]/[DOMEINMAP]` | Drive `[DOSSIER]/[DOMEINMAP]` | Dossier hygiene workflow | Level 1 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [VERSION_LOG_TEMPLATE](01_SHARED_SERVICES/VERSION_LOG_TEMPLATE.md) | Shared Services / Governance | Versielog voor een document of deliverable. | Bij documenten met meerdere versies. | CM CONTROL AGENT | CM OPS AGENT | GitHub template-specificatie; Drive `[DOSSIER]/[DOMEINMAP]` | Drive `[DOSSIER]/[DOMEINMAP]` | Dossier hygiene workflow | Level 1 | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [KPI_TEMPLATE](02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md) | Artist Management | Kern-KPI's per artist met doel, waarde en trend. | Bij managementstart of kwartaalreview. | CM OPS AGENT | CM MONEY AGENT | GitHub template-specificatie; Drive `[ARTIST]/03_STRATEGY` | Drive `[ARTIST]/03_STRATEGY` | Artist roadmap workflow | Ja, bij client-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [JAARPLAN_TEMPLATE](02_ARTIST_MANAGEMENT/JAARPLAN_TEMPLATE.md) | Artist Management | Jaarplan per artist: doelen, releases en mijlpalen. | Bij jaarplanning of strategische herijking. | CM OPS AGENT | CM SOCIAL AGENT | GitHub template-specificatie; Drive `[ARTIST]/03_STRATEGY` | Drive `[ARTIST]/03_STRATEGY` | Artist roadmap workflow | Ja, vóór client-facing gebruik | ACTIVE (V2) | 2026-07-27 | 2026-10-27 |
-| [START_HIER_04_DEALS_TEMPLATE](08_START_HIER/START_HIER_04_DEALS_TEMPLATE.md) | Start Hier | Startdocument voor een dealdossier: status, instructies, document requests en governance. | Bij aanmaken van een nieuw dealdossier onder `04_DEALS`. | CM LEGAL AGENT | CM PROSPECT AGENT; CM MONEY AGENT; CM VAULT AGENT | GitHub template-specificatie; Drive `04_DEALS/[DEAL]/00_START_HIER` | `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER` | TBD | Ja, bij governancewijziging | ACTIVE | 2026-07-26 | 2026-10-26 |
-| [START_HIER_07_LEGAL_TEMPLATE](08_START_HIER/START_HIER_07_LEGAL_TEMPLATE.md) | Start Hier | Startdocument voor de juridische werklaag: instructies, overzicht en legal governance-referentie. | Bij inrichting of navigatie van `07_LEGAL`. | CM LEGAL AGENT | CM CONTROL AGENT | GitHub template-specificatie; Drive `07_LEGAL/00_START_HIER` | `07_LEGAL/00_START_HIER` | TBD | Ja, bij governancewijziging | ACTIVE | 2026-07-26 | 2026-10-26 |
+## CANONICAL TEMPLATE REGISTER
 
-## Governancebronnen
+| Template | Domein | Owner | Status | Laatste review | Volgende review |
+|---|---|---|---|---|---|
+| [INTAKE_TEMPLATE](01_SHARED_SERVICES/INTAKE_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [CONTACT_SHEET_TEMPLATE](01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [CLIENT_ONBOARDING_TEMPLATE](01_SHARED_SERVICES/CLIENT_ONBOARDING_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [CLIENT_PROFILE_TEMPLATE](01_SHARED_SERVICES/CLIENT_PROFILE_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [MEETING_RECAP_TEMPLATE](01_SHARED_SERVICES/MEETING_RECAP_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [DO_NOTS_TEMPLATE](01_SHARED_SERVICES/DO_NOTS_TEMPLATE.md) | Shared Services / Governance | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [CONTRACT_SUMMARY_TEMPLATE](01_SHARED_SERVICES/CONTRACT_SUMMARY_TEMPLATE.md) | Shared Services / Legal | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [APPROVAL_EVIDENCE_TEMPLATE](01_SHARED_SERVICES/APPROVAL_EVIDENCE_TEMPLATE.md) | Shared Services / Governance | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [AMENDMENT_LOG_TEMPLATE](01_SHARED_SERVICES/AMENDMENT_LOG_TEMPLATE.md) | Shared Services / Legal | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [REGISTER_TEMPLATE](01_SHARED_SERVICES/REGISTER_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [VERSION_LOG_TEMPLATE](01_SHARED_SERVICES/VERSION_LOG_TEMPLATE.md) | Shared Services / Governance | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [ARTIST_ROADMAP_TEMPLATE](02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [RELEASE_STRATEGY_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [RELEASE_KICKOFF_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_KICKOFF_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [KPI_TEMPLATE](02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [JAARPLAN_TEMPLATE](02_ARTIST_MANAGEMENT/JAARPLAN_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [DEAL_MEMO_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_MEMO_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [PARTNERSHIP_BRIEF_TEMPLATE](03_MASTER_BOUTIQUE/PARTNERSHIP_BRIEF_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [MUSIC_RIGHTS_REGISTER](03_MASTER_BOUTIQUE/MUSIC_RIGHTS_REGISTER.md) | Master Boutique | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [RIGHTS_AUDIT_TEMPLATE](03_MASTER_BOUTIQUE/RIGHTS_AUDIT_TEMPLATE.md) | Master Boutique | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [VALUATION_TEMPLATE](03_MASTER_BOUTIQUE/VALUATION_TEMPLATE.md) | Master Boutique | CM MONEY AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [DATA_ROOM_TEMPLATE](03_MASTER_BOUTIQUE/DATA_ROOM_TEMPLATE.md) | Master Boutique | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [BUYER_PIPELINE_TEMPLATE](03_MASTER_BOUTIQUE/BUYER_PIPELINE_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [BRAND_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BRAND_AUDIT_TEMPLATE.md) | Client Deliverables | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [BUSINESS_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md) | Client Deliverables | CM MONEY AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [ACTION_TRACKER_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/ACTION_TRACKER_CLICKUP_REFERENCE.md) | ClickUp References | CM FLOW AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [DEAL_PIPELINE_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/DEAL_PIPELINE_CLICKUP_REFERENCE.md) | ClickUp References | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [EMAIL_INSTRUCTIONS_TEMPLATE](06_GMAIL_TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md) | Gmail Templates | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [MONTHLY_REPORT_TEMPLATE](07_REPORTING/MONTHLY_REPORT_TEMPLATE.md) | Reporting | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [START_HIER_04_DEALS_TEMPLATE](08_START_HIER/START_HIER_04_DEALS_TEMPLATE.md) | Start Hier / Deals | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [START_HIER_07_LEGAL_TEMPLATE](08_START_HIER/START_HIER_07_LEGAL_TEMPLATE.md) | Start Hier / Legal | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 
-- `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` is leidend voor template-ontwerp (huisstijl, logo, layout).
-- `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md` is leidend voor template-opbouw: de verplichte 15-sectie machine-readable structuur. Vervangt de oude `TEMPLATE_ARCHITECTUURSTANDAARD.md` (V1, `SUPERSEDED`).
-- `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` is leidend voor templategebruik.
-- Alle templates met status `ACTIVE (V2)` volgen de 15-sectie V2-structuur met echte werk-tabellen en het CM-logo rechtsboven.
-- Superseded/dubbele template-locaties staan in `99_ARCHIVE_SUPERSEDED/` en zijn niet leidend. Duplicate template-locaties zijn niet toegestaan.
-- Agents mogen geen eigen formats maken als een bestaande template past.
+## NIET-CANONICAL / GAP-REGEL
+
+Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **geen bestaand canonical bestand in deze index heeft**, mag niet automatisch als template worden aangemaakt. Registreer dit als template/registry gap en los eerst de bronverwijzing op. Dit geldt onder meer voor stale references die tijdens de V2.2-migratie zijn aangetroffen, zoals `ARTIST_AUDIT_TEMPLATE`, `MANAGEMENT_PROPOSAL_TEMPLATE` en `DEAL_NEGOTIATION_TEMPLATE` zolang daarvoor geen canonical bestand in deze library bestaat.
+
+## GEBRUIK
+
+1. Zoek de passende canonical template in deze index.
+2. Gebruik de GitHub-specificatie als inhoudelijke bron.
+3. Maak of synchroniseer alleen een Drive-werkkopie/master via de goedgekeurde template-sync.
+4. Leg uitvoering/status in ClickUp vast waar van toepassing.
+5. Registreer ontbrekende functionaliteit in `TEMPLATE_GAP_LOG`; maak geen parallel format.
+
+## GOVERNANCEBRONNEN
+
+- `99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md`
+- `99_TEMPLATE_GOVERNANCE/TEMPLATE_REVIEW_PROCESS.md`
+- `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md`
+- `99_TEMPLATE_GOVERNANCE/TEMPLATE_STATUS_REGISTER.md`
+
+## WIJZIGINGSLOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-08-10 | V2.2 | Canonical index volledig herbouwd na V2.2-migratie; alleen bestaande canonical templates opgenomen en stale registry references expliciet uitgesloten. | CM VAULT AGENT |
