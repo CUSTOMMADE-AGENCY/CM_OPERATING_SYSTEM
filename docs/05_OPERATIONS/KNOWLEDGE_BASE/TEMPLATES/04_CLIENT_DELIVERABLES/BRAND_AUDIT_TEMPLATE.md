@@ -6,96 +6,124 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Client Deliverable |
 | Onderdeel van | CM Template Library / Client Deliverables |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM SOCIAL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | Ja — vóór client-facing oplevering |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Scanbare audit van artist brand, positionering en zichtbaarheid, met concrete bevindingen en aanbevelingen.
+Onderbouwde audit van artist brand, positionering, zichtbaarheid en consistentie die bevindingen omzet in geprioriteerde aanbevelingen en uitvoerbare acties.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Artist intake, rebrand, releasevoorbereiding of kwartaalreview.
+- Artist intake.
+- Rebrand.
+- Releasevoorbereiding.
+- Kwartaalreview.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Artist profiel | Ja | 01_ADMIN |
-| Kanalen | Ja | Social |
-| Markt/referenties | Ja | Onderzoek |
+| Artist profiel | Ja | Client/Artist Profile |
+| Kanalen/assets | Ja | Social / EPK / release-assets |
+| Markt/referenties | Ja | Benoemd onderzoek |
+| Doelen | Ja | Roadmap / Jaarplan |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Audit
+### AUDIT — BEVINDINGEN
 
-| Onderdeel | Bevinding | Score | Aanbeveling | Prioriteit |
-|---|---|---|---|---|
-| Identiteit | TBD | TBD | TBD | TBD |
-| Positionering | TBD | TBD | TBD | TBD |
-| Zichtbaarheid | TBD | TBD | TBD | TBD |
-| Consistentie | TBD | TBD | TBD | TBD |
+| Audit-ID | Onderdeel | Bevinding | Score | Bron/bewijs | Prioriteit |
+|---|---|---|---|---|---|
+| TBD | Identiteit | TBD | TBD | TBD | TBD |
+| TBD | Positionering | TBD | TBD | TBD | TBD |
+| TBD | Zichtbaarheid | TBD | TBD | TBD | TBD |
+| TBD | Consistentie | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### AUDIT — AANBEVELING & ACTIE
+
+| Audit-ID | Aanbeveling | Actie | Eigenaar | Deadline | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+_De twee blokken vormen via `Audit-ID` inhoudelijk één audit-item._
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Score | `1` · `2` · `3` · `4` · `5` · `TBD` |
+| Prioriteit | `LOW` · `MEDIUM` · `HIGH` · `CRITICAL` |
+| Actiestatus | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Bevindingen onderbouwd, geen losse meningen.
+> **01** — Geen bevinding zonder bron/bewijs of duidelijke observatiebasis.
 >
-> **02** — Client-facing → approval.
+> **02** — Score en prioriteit worden niet als objectief feit gepresenteerd zonder gehanteerde auditbasis.
+>
+> **03** — Client-facing oplevering vereist approval.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Auditrapport; aanbevelingen → roadmap.
+- Goedgekeurde Brand Audit.
+- Geprioriteerde acties voor Roadmap/ClickUp.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elke bevinding heeft aanbeveling en prioriteit.
+- Auditblokken koppelen via Audit-ID.
+- Iedere bevinding heeft bron/bewijs, aanbeveling en prioriteit.
+- Acties hebben owner/deadline/status of expliciet `TBD`.
+- Geen ongefundeerde claims.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór client-facing oplevering.
+Ja — vóór client-facing oplevering conform geldende approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → Roadmap
+- → Artist Roadmap
 - → ClickUp
+- → Release Strategy indien releasegerelateerd
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = auditspecificatie · Drive = werkkopie/deliverable · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[DOSSIER]/04_DELIVERABLES`
+Drive: `[DOSSIER]/04_DELIVERABLES` of `[ARTIST]/03_STRATEGY` volgens dossierfunctie.
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit marktfeiten, scores, bronnen of bevindingen; onbekend = `TBD`.
+- Benoem bron/observatiebasis per bevinding.
+- Behoud A4-portret; audit en actie koppelen via Audit-ID.
+- Geen vertrouwelijke clientdata in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Audit opgeleverd | Make → ClickUp | Acties uit aanbevelingen | Aanbeveling→Task |
+| Auditactie toegevoegd/gewijzigd | Make → ClickUp | Actie aanmaken/bijwerken | Audit-ID→External ID, Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status, Prioriteit→Priority |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige A4-portret audit/actieblokken, Audit-ID, bronveld, score/prioriteit/status-enums en valide mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën/deliverables._
