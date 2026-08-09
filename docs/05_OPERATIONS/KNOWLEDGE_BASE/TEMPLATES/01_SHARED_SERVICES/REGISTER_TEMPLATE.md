@@ -11,88 +11,102 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM CONTROL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | CM OPS AGENT — Level 1 |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Generiek registeroverzicht voor een dossier-domeinmap (Releases, Booking, Social, Press/EPK, Archive). Vul `[DOMEIN]` in per gebruik.
+Generiek register voor een dossier-domeinmap, bedoeld als scanbare index van items, status, owner, datum en bronlocatie. Gebruik alleen wanneer geen specialistisch register voor het betreffende domein bestaat.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
 - Als index binnen een domeinmap.
-- Bij het bijhouden van items, status en locatie.
+- Bij Releases, Booking, Social, Press/EPK, Archive of een ander goedgekeurd domein zonder specialistisch register.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Domein | Ja | Dossier |
+| Domein | Ja | Dossierstructuur |
 | Items | Ja | Domeinmap |
+| Owner/status | Ja | Dossier / ClickUp |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Register — [DOMEIN]
+### REGISTER — [DOMEIN]
 
-| Item | Status | Eigenaar | Locatie | Datum |
-|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD |
-| TBD | TBD | TBD | TBD | TBD |
+| Item-ID | Item | Status | Eigenaar | Datum | Locatie |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### GECONTROLEERDE STATUSSEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Register status | `ACTIVE` · `ON_HOLD` · `SUPERSEDED` · `ARCHIVED` · `TBD` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Superseded items verwijzen naar het archief.
+> **01** — Gebruik geen generiek register wanneer een specialistisch canonical register bestaat.
 >
-> **02** — Geen losse bestanden zonder registratie.
+> **02** — `SUPERSEDED` of `ARCHIVED` items verwijzen naar hun daadwerkelijke archieflocatie.
+>
+> **03** — Geen geregistreerde locatie verzinnen; onbekend = `TBD`.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Actuele index van de domeinmap.
+- Actuele index van de betreffende domeinmap.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elk item heeft status, eigenaar en locatie.
+- Elk item heeft unieke Item-ID.
+- Elk actief item heeft eigenaar, status en locatie of expliciet `TBD`.
+- Status gebruikt gecontroleerde waarden.
+- Geen dubbele actieve regels voor hetzelfde item.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Level 1 — CM OPS AGENT.
+Level 1 — CM OPS AGENT, tenzij domein-governance hoger niveau vereist.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Betreffende domeinmap
+- → ClickUp indien operationele actie volgt
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = spec · Drive = werkkopie/register · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[DOSSIER]/[DOMEINMAP]`
+Drive: `[DOSSIER]/[DOMEINMAP]` · `[DOMEIN]_REGISTER`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index op een specialistisch register.
+- Verzin nooit items, locaties, owners of statussen; onbekend = `TBD`.
+- Gebruik stabiele Item-ID's.
+- Behoud A4-portret en maximaal praktisch leesbare tabelbreedte.
+- Maak geen parallel register als canonical register bestaat.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Item toegevoegd | Make → ClickUp | Register-regel | Item→Row |
+| Register-item toegevoegd/gewijzigd | Make → ClickUp/Drive workflow | Itemcontext bijwerken | Item-ID→External ID, Item→Name, Status→Status, Eigenaar→Assignee, Datum→Date, Locatie→Reference |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, Item-ID, gecontroleerde statussen en specialistisch-register guardrail toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
