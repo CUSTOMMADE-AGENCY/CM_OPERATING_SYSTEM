@@ -11,8 +11,8 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
-| Status | ACTIVE — V2.1 |
-| Versie | V2.1 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
 | Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | CM OPS AGENT · client-facing → Sophia |
@@ -48,11 +48,17 @@ Stuurbare roadmap die doelen, releases, inkomsten, deals en beslismomenten van e
 
 _Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
-### Releases
+### Releases — planning
 
-| Release | Type | Master status | Rights status | Distributie-deadline | Releasedatum | Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil | Eigenaar | Status |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Release | Type | Master status | Rights status | Releasedatum | Distributie-deadline |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### Releases — business
+
+| Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil | Eigenaar | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
 _Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet._
 
@@ -71,11 +77,17 @@ _Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal
 
 _Actuals moeten herleidbaar zijn naar Moneybird of een benoemde royalty-/afrekenbron (kolom Bron). Nooit bedragen verzinnen; onbekend = TBD._
 
-### Deals & kansen
+### Deals & kansen — commercieel
 
-| Type | Kans | Tegenpartij | Waarde | Kans % | Gewogen waarde | Fase | Eigenaar | Volgende actie | Deadline |
-|---|---|---|---|---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Type | Kans | Tegenpartij | Waarde | Kans % | Gewogen waarde |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### Deals & kansen — opvolging
+
+| Fase | Eigenaar | Volgende actie | Deadline |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
 
 _Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. Gewogen waarde = waarde × kans %; dit is een forecast-/pipeline-metric, geen financiële waarheid. Fase = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
@@ -121,8 +133,10 @@ _Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen v
 
 - Elk doel heeft KPI, doel, deadline, eigenaar en gecontroleerde status.
 - Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en gecontroleerde status.
+- Release-planning en release-business blijven inhoudelijk één release-record; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
 - Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).
 - Elke deal heeft fase, eigenaar, volgende actie en deadline.
+- Deal-commercieel en deal-opvolging blijven inhoudelijk één deal-record; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
 - Geen open beslissing zonder goedkeurder.
 - Alle automation-velden gebruiken gecontroleerde waarden.
 - Iedere source field-mapping in sectie 14 verwijst letterlijk naar een bestaande kolom in sectie 05.
@@ -153,6 +167,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 - Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
 - Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 - Gebruik voor deal/pipeline-fase uitsluitend de waarden uit `DEAL_PIPELINE_CLICKUP_REFERENCE`.
+- Behoud A4-portret als standaard; splits brede werkvelden in logisch gekoppelde blokken in plaats van mixed portrait/landscape.
 
 ## 14 · AUTOMATISERINGSKOPPELINGEN
 
@@ -169,8 +184,9 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
 | 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
-| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, volgende actie, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt; secties en kolomkoppen Nederlandstalig. | CM OPS AGENT |
-| 2026-08-10 | V2.1 | Finale consistency-review: ontbrekende werkvelden bevestigd, pipeline-fasen gelijkgetrokken met `DEAL_PIPELINE_CLICKUP_REFERENCE`, automation mappings gevalideerd en status naar ACTIVE gezet. | CM OPS AGENT |
+| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, volgende actie, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; gecontroleerde statussen en automation hooks bijgewerkt. | CM OPS AGENT |
+| 2026-08-10 | V2.1 | Finale consistency-review: pipeline-fasen gelijkgetrokken met `DEAL_PIPELINE_CLICKUP_REFERENCE`, automation mappings gevalideerd en status naar ACTIVE gezet. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Printoptimalisatie: A4-portret behouden; Releases opgesplitst in Planning/Business en Deals & kansen in Commercieel/Opvolging zonder wijziging van de onderliggende recordlogica. | CM OPS AGENT |
 
 ---
 
