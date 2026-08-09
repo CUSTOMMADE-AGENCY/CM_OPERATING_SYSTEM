@@ -1,105 +1,121 @@
-# MONTHLY_REPORT_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — MONTHLY REPORT TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Maandelijkse scanbare rapportage over voortgang, KPI’s, acties en risico’s.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Reporting |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM MONEY AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Ja — vóór verzending |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij maandafsluiting voor management- of clientretainers.
+Maandelijkse scanbare rapportage over voortgang, KPIs, acties en risicos voor management- of clientretainers, gevoed vanuit de KPI-set.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Maandafsluiting voor management- of clientretainers.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| KPI-set | Ja | KPI Template |
+| Acties | Ja | ClickUp |
+| Financials | Ja | Moneybird |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM OPS AGENT
+### Samenvatting
 
-## System of Record
+| Onderdeel | Kernboodschap |
+|---|---|
+| Maand | TBD |
+| Highlights | TBD |
+| Aandachtspunten | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### KPIs
 
-## Opslaglocatie
+| KPI | Waarde | Trend | Doel |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/07_REPORTING/MONTHLY_REPORT_TEMPLATE.md`
+### Acties
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+| Actie | Status | Eigenaar | Deadline |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
 
-## Gekoppelde workflow
+### Risicos
 
-Monthly reporting workflow
+| Risico | Impact | Mitigatie | Owner |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
 
-## Inputvelden
+## 06 · DECISION GATES
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Maand | Rapportageperiode | Ja | Planning |  |
-| KPI | Kernmetric | Ja | Brondata | Geen ruwe clientdata in template |
-| Resultaat | Samenvatting uitkomst | Ja | Analyse |  |
-| Volgende actie | Actie voor komende maand | Ja | ClickUp |  |
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen ongefilterde datadump.
+>
+> **02** — Client-facing → approval vóór verzending.
 
-## Output
+## 07 · OUTPUT
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- Rapport opgeleverd + gearchiveerd.
 
-## Structuur / Tabs
+## 08 · QUALITY CONTROL
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Executive summary | Kort overzicht | Ja |
-| KPI blok | Belangrijkste metrics | Ja |
-| Acties | Gedaan en gepland | Ja |
-| Risico’s | Blokkades en beslissingen | Ja |
+- KPIs met trend en doel.
+- Acties met eigenaar.
 
-## Approval
+## 09 · APPROVAL
 
-Ja, vóór verzending. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+Ja — vóór verzending.
 
-## Kwaliteitscheck
+## 10 · HANDOFF
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- → Client/management
+- → Archief
 
-## Template Usage Report
+## 11 · SYSTEM OF RECORD
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Status
+## 12 · STORAGE
 
-ACTIVE
+Drive: `[DOSSIER]/06_FINANCE` of `04_DELIVERABLES`
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 13 · AI INSTRUCTIONS
 
-## Reviewritme
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 14 · AUTOMATION HOOKS
 
-## Wijzigingslog
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Maand-close | Make → KPI/Sheets | Rapport vullen | KPI→Section |
+| Rapport approved | Make → Gmail | Verzenden | Rapport→Attachment |
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

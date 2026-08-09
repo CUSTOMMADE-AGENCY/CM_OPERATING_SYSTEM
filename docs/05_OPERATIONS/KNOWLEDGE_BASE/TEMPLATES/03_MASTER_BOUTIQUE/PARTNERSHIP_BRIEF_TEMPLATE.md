@@ -1,105 +1,101 @@
-# PARTNERSHIP_BRIEF_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — PARTNERSHIP BRIEF TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
+
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Master Boutique |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM PROSPECT AGENT |
+| Support agents | CM SOCIAL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | MEDIUM |
+| Approval | Ja — vóór externe verzending |
+
+## 02 · PURPOSE
 
 Brief voor mogelijke partners, buyers of commerciële samenwerkingen.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-Bij partnership intake, outreachvoorbereiding of voorstelvorming.
+- Partnership intake, outreachvoorbereiding of voorstelvorming.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Context/partij | Ja | CRM |
+| Waardepropositie | Ja | Strategie |
 
-## Owner Agent
+## 05 · WORKING TEMPLATE
 
-CM PROSPECT AGENT
+### Brief
 
-## Support Agents
+| Sectie | Inhoud |
+|---|---|
+| Context | TBD |
+| Voorstel | TBD |
+| Wederzijdse waarde | TBD |
+| Scope/afbakening | TBD |
+| Voorgestelde vervolgstap | TBD |
 
-CM PROSPECT AGENT; CM SOCIAL AGENT
+## 06 · DECISION GATES
 
-## System of Record
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen definitieve contractvoorwaarden in de brief.
+>
+> **02** — Externe verzending → approval.
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+## 07 · OUTPUT
 
-## Opslaglocatie
+- Verstuurbare brief; input voor outreach.
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/03_MASTER_BOUTIQUE/PARTNERSHIP_BRIEF_TEMPLATE.md`
+## 08 · QUALITY CONTROL
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+- Waarde voor beide partijen expliciet.
 
-## Gekoppelde workflow
+## 09 · APPROVAL
 
-Partnership workflow
+Ja — vóór externe verzending.
 
-## Inputvelden
+## 10 · HANDOFF
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Partnerprofiel | Type partner/buyer | Ja | Research |  |
-| Doel | Waarom contact relevant is | Ja | Strategie |  |
-| Aanbod | Wat CM voorlegt | Ja | Deal memo |  |
-| CTA | Gevraagde vervolgstap | Ja | Outreach |  |
+- → Buyer Pipeline
+- → Outreach
 
-## Output
+## 11 · SYSTEM OF RECORD
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Structuur / Tabs
+## 12 · STORAGE
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Snapshot | Partner en context | Ja |
-| Fit | Waarom passend | Ja |
-| Voorstel | Aanbod en voorwaarden op hoofdlijn | Ja |
-| Next step | CTA en opvolging | Ja |
+Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET`
 
-## Approval
+## 13 · AI INSTRUCTIONS
 
-Ja, vóór externe verzending. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Kwaliteitscheck
+## 14 · AUTOMATION HOOKS
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Brief verstuurd | Make → Pipeline | Outreach-stap | Partij→Card |
 
-## Template Usage Report
+## 15 · CHANGELOG
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM PROSPECT AGENT |
 
-## Status
+---
 
-ACTIVE
-
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
-
-## Reviewritme
-
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
-
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

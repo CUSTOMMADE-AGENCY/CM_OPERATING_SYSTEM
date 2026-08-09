@@ -1,79 +1,76 @@
 <img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-# CUSTOMMADE AGENCY — CONTRACT SUMMARY TEMPLATE
+# CUSTOMMADE AGENCY — RIGHTS AUDIT TEMPLATE
 
 ## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
 |---|---|
 | Document type | Operational Template |
-| Onderdeel van | CM Template Library / Shared Services / Legal |
+| Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM LEGAL AGENT |
-| Support agents | CM CONTROL AGENT |
+| Support agents | CM PROSPECT AGENT |
 | Status | ACTIVE — V2 |
 | Versie | V2.0 |
 | Datum | JULI 2026 |
-| Risico | FINANCIAL / LEGAL |
-| Approval | Level 3/4 — Level 4 naar Sophia |
+| Risico | LEGAL |
+| Approval | Ja — vóór buyer-facing of diligencegebruik |
 
 ## 02 · PURPOSE
 
-Compacte samenvatting van een contract: partijen, looptijd, kernvoorwaarden en verplichtingen. Vervangt het getekende document niet, maar verwijst ernaar.
+Rechtenaudit die per werk verifieert of rechten, metadata en chain of title kloppen — de kwaliteitscontrole op de Music Rights Register vóór een deal.
 
 ## 03 · TRIGGER
 
-- Vastleggen of reviewen van een overeenkomst.
+- Deal-verificatie, due diligence, chain-of-title-check.
 
 ## 04 · INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Getekend contract (referentie) | Ja | 02_CONTRACT |
-| Partijen | Ja | Contract |
+| Music Rights Register | Ja | Rights Register |
+| Bronbewijs | Ja | 07_LEGAL/EVIDENCE |
 
 ## 05 · WORKING TEMPLATE
 
-### Contract
+### Audit per werk
 
-| Onderdeel | Waarde |
-|---|---|
-| Partijen | TBD |
-| Ingangsdatum | TBD |
-| Looptijd | TBD |
-| Opzegtermijn | TBD |
-| Kernvoorwaarden | TBD |
-| Vergoeding | TBD |
-| Bijzondere clausules | TBD |
-| Bronbestand (referentie) | TBD |
+| Track | Rights type | Claim | Bron | Bewijs aanwezig | Metadata OK | Chain of title | Bevinding | Status |
+|---|---|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+
+### Findings & risk
+
+| Bevinding | Risico | Impact op waarde | Mitigatie | Owner |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
 ## 06 · DECISION GATES
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Verwijs naar het getekende bronbestand; sluit het niet in.
+> **01** — Geen "verified" zonder bronbewijs.
 >
-> **02** — Onzekere voorwaarden markeren als TBD.
->
-> **03** — Level 4-beslissingen naar Sophia.
+> **02** — Openstaande findings blokkeren buyer-facing gebruik.
 
 ## 07 · OUTPUT
 
-- Naslag naast het getekende contract; input voor Amendment Log.
+- Auditrapport; verification status terug naar Rights Register.
 
 ## 08 · QUALITY CONTROL
 
-- Alle kernvelden ingevuld of TBD.
-- Bronverwijzing aanwezig.
+- Elke regel heeft bevinding en status.
 
 ## 09 · APPROVAL
 
-Level 3/4 — CM LEGAL AGENT; Level 4 naar Sophia. Vastgelegd via Approval Evidence.
+Ja — vóór buyer-facing of diligencegebruik.
 
 ## 10 · HANDOFF
 
-- → 02_CONTRACT
-- → Amendment Log
+- → Rights Register
+- → Deal Memo
+- → Data Room
 
 ## 11 · SYSTEM OF RECORD
 
@@ -81,7 +78,7 @@ GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financ
 
 ## 12 · STORAGE
 
-Drive: `[DOSSIER]/02_CONTRACT`
+Drive: `07_LEGAL/LEGAL_REVIEW` of `04_DEALS/[DEAL]/01_RECHTEN_REGISTER`
 
 ## 13 · AI INSTRUCTIONS
 
@@ -94,7 +91,8 @@ Drive: `[DOSSIER]/02_CONTRACT`
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Samenvatting opgeslagen | Make → ClickUp | Contract-record | Partij→Field, Einddatum→Reminder |
+| Audit afgerond | Make → Sheets | Register verification | Track→Status |
+| Finding geopend | Make → ClickUp | LEGAL-taak | Finding→Task |
 
 ## 15 · CHANGELOG
 

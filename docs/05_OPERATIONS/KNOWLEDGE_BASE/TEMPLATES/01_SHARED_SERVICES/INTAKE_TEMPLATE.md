@@ -1,93 +1,116 @@
-# INTAKE_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — INTAKE TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | INTAKE_TEMPLATE |
-| Domein | Shared Services |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM OPS AGENT |
-| Support Agents | CM VAULT AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[DOSSIER]/01_ADMIN` |
-| Gekoppelde workflow | Dossier onboarding workflow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | CM OPS AGENT — Level 1 |
 
-## Doel
+## 02 · PURPOSE
 
-Gestructureerde intake van een nieuw artist-, client- of partnerdossier, zodat een dossier correct kan worden geopend en overgedragen.
+Gestructureerde intake van een nieuw artist-, client- of partnerdossier, zodat het correct wordt geopend, herkend, beheerd en overgedragen.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Bij de start van een nieuw dossier.
-- Bij herstart van een samenwerking of overdracht tussen agents.
+- Start van een nieuw dossier.
+- Herstart van een samenwerking of overdracht tussen agents.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Contracten, facturen of getekende documenten.
-- Vertrouwelijke of ingevulde clientdata in de template-specificatie.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Naam en type dossier | Ja | Aanvraag |
+| Primaire stakeholder | Ja | Intake |
+| Scope en diensten | Ja | Proposal |
+| Herkomst lead | Nee | CRM / ClickUp |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Naam en type dossier (artist / client / partner).
-- Contactgegevens en primaire stakeholder.
-- Scope en verwachte diensten.
-- Herkomst van de lead of aanvraag.
+### Dossier-identificatie
 
-## Werkwijze
+| Veld | Waarde |
+|---|---|
+| Naam | TBD |
+| Type (artist/client/partner) | TBD |
+| Herkomst | TBD |
+| Owner agent | TBD |
+| Aanmaakdatum | TBD |
 
-1. Vul de dossieridentificatie in.
-2. Leg contact en stakeholders vast.
-3. Beschrijf scope en verwachte diensten op hoofdlijnen.
-4. Markeer ontbrekende informatie als `TBD`.
-5. Sla de werkbare kopie op in `[DOSSIER]/01_ADMIN`.
+### Stakeholders
 
-## Beslismomenten
+| Rol | Naam | Organisatie | Contact-referentie | Autoriteit |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-- Dossiertype bepaalt de mapstructuur (artist / client / deal).
-- Bij twijfel over classificatie: escaleren naar CM OPS AGENT.
+## 06 · DECISION GATES
 
-## Output
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen dossier zonder ingevulde intake.
+>
+> **02** — Bij twijfel over classificatie: escaleer naar CM OPS AGENT.
+>
+> **03** — Geen clientdata in de specificatie.
 
-- Ingevulde intake als basis voor onboarding en dossieraanmaak.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+## 07 · OUTPUT
 
-## Kwaliteitscontrole
+- Basisdossier geopend in Drive.
+- Onboarding-workflow gestart.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Dossiertype, owner en volgende stap duidelijk.
+## 08 · QUALITY CONTROL
 
-## Goedkeuring
+- Dossiertype bepaald.
+- Primaire stakeholder vastgelegd.
+- Naamconventie gevolgd.
 
-Level 1 — CM OPS AGENT. Approval wordt vastgelegd in de operationele map of ClickUp-taak.
+## 09 · APPROVAL
 
-## Overdracht
+Level 1 — CM OPS AGENT. Vastgelegd via Approval Evidence.
 
-Naar de onboarding-flow en het aangemaakte dossier in Drive.
+## 10 · HANDOFF
 
-## Opslag
+- → Dossier-onboarding workflow
+- → ClickUp onboardingtaak
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/01_SHARED_SERVICES/INTAKE_TEMPLATE.md`.
-Drive werkbare kopie: `[DOSSIER]/01_ADMIN`.
+## 11 · SYSTEM OF RECORD
 
-## AI-instructies
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+## 12 · STORAGE
 
-## Wijzigingslog
+Drive: `[DOSSIER]/01_ADMIN` · `YYYY-MM-DD_[ENTITY]_ADMIN_INTAKE_vX.Y`
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM OPS AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+## 13 · AI INSTRUCTIONS
+
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Intake voltooid | Make → ClickUp | Onboardingtaak aanmaken | Dossier→List, Owner→Assignee |
+| Dossier aangemaakt | Make → Drive | Standaard-submappen | Type→Foldertemplate |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

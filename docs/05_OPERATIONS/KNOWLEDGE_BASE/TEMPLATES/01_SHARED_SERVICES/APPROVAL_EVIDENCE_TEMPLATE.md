@@ -1,90 +1,97 @@
-# APPROVAL_EVIDENCE_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — APPROVAL EVIDENCE TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | APPROVAL_EVIDENCE_TEMPLATE |
-| Domein | Shared Services / Governance |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM CONTROL AGENT |
-| Support Agents | CM LEGAL AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[DOSSIER]/02_CONTRACT of 07_LEGAL/EVIDENCE` |
-| Gekoppelde workflow | Governance compliance workflow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services / Governance |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM CONTROL AGENT |
+| Support agents | CM LEGAL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | GOVERNANCE |
+| Approval | Bepaald door de onderliggende actie |
 
-## Doel
+## 02 · PURPOSE
 
-Bewijsstuk van een verleende goedkeuring: wat is goedgekeurd, door wie, wanneer en op welk niveau.
+Bewijsstuk van een verleende goedkeuring: wat is goedgekeurd, door wie, wanneer en op welk niveau. Onderbouwt Level 3/4-beslissingen.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Bij elke approval die vastgelegd moet worden.
-- Als onderbouwing bij Level 3/4-beslissingen.
+- Elke approval die vastgelegd moet worden.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Vertrouwelijke of ingevulde data in de template-specificatie.
-- Getekende documenten of operationele exports.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Onderwerp approval | Ja | Actie |
+| Approver + niveau | Ja | Governance |
+| Datum | Ja | Actie |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Onderwerp van de approval.
-- Approver en approvalniveau.
-- Datum en verwijzing naar de beslissing.
+### Approval-record
 
-## Werkwijze
+| Onderwerp | Approver | Niveau | Datum | Referentie |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-1. Beschrijf wat is goedgekeurd.
-2. Leg approver, niveau en datum vast.
-3. Verwijs naar het Approval Register waar van toepassing.
+## 06 · DECISION GATES
 
-## Beslismomenten
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Elke approval verwijst naar het Approval Register waar van toepassing.
+>
+> **02** — Geen actie op Level 4 zonder Sophia-approval.
 
-- Onvolledige of onzekere velden markeren als `TBD`.
-- Bij twijfel of afwijking escaleren naar de Owner Agent.
+## 07 · OUTPUT
 
-## Output
+- Vastgelegd bewijsstuk gekoppeld aan het dossier en het register.
 
-- Ingevuld, scanbaar document conform doel.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+## 08 · QUALITY CONTROL
 
-## Kwaliteitscontrole
+- Approver, niveau en datum aanwezig.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Owner, output en volgende stap duidelijk.
+## 09 · APPROVAL
 
-## Goedkeuring
+Niveau volgt de onderliggende actie; registratie door CM CONTROL AGENT.
 
-Level bepaald door de onderliggende actie; registratie door CM CONTROL AGENT.
+## 10 · HANDOFF
 
-## Overdracht
+- → 07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER
 
-Naar de betreffende Drive-map en, waar relevant, de gekoppelde ClickUp-taak.
+## 11 · SYSTEM OF RECORD
 
-## Opslag
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/01_SHARED_SERVICES/APPROVAL_EVIDENCE_TEMPLATE.md`.
-Drive werkbare kopie: `[DOSSIER]/02_CONTRACT of 07_LEGAL/EVIDENCE`.
+## 12 · STORAGE
 
-## AI-instructies
+Drive: `[DOSSIER]/02_CONTRACT` of `07_LEGAL/EVIDENCE`
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+## 13 · AI INSTRUCTIONS
 
-## Wijzigingslog
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM CONTROL AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Approval vastgelegd | Make → Sheets | Register-regel | Onderwerp→Row, Niveau→Field |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM CONTROL AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

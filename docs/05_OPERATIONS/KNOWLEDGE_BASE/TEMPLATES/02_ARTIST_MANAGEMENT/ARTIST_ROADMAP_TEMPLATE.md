@@ -1,105 +1,142 @@
-# ARTIST_ROADMAP_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — ARTIST ROADMAP TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Roadmap voor doelen, releases, acties en beslismomenten.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Artist Management |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | CM OPS AGENT · client-facing → Sophia |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij managementstart, kwartaalplanning of releaseplanning.
+Stuurbare roadmap die doelen, releases, revenue, deals en beslismomenten van een artist samenbrengt in één bron waaruit ClickUp-taken en KPI-tracking direct worden gegenereerd.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Managementstart of artist onboarding.
+- Kwartaalplanning of strategische herijking.
+- Releaseplanning.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Artist profile | Ja | 01_ADMIN |
+| Vorige roadmap | Nee | 03_STRATEGY / 09_ARCHIVE |
+| KPI-baseline | Ja | KPI Template |
+| Rechten- & contractstatus | Ja | 02_CONTRACT / Rights Register |
+| Pipeline | Ja | Deal Pipeline (ClickUp) |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM OPS AGENT; CM SOCIAL AGENT
+### Objectives
 
-## System of Record
+| Primary objective | KPI | Baseline | Target | Deadline | Owner | Status |
+|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Releases
 
-## Opslaglocatie
+| Release | Type | Master status | Distr. deadline | Release date | Marketing start | Budget | Owner | Status |
+|---|---|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md`
+### Revenue
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+| Revenue lane | Actual | Target | Forecast | Delta |
+|---|---|---|---|---|
+| Master royalties | TBD | TBD | TBD | TBD |
+| Publishing | TBD | TBD | TBD | TBD |
+| Neighbouring | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD |
+| Brand | TBD | TBD | TBD | TBD |
+| Sync | TBD | TBD | TBD | TBD |
 
-## Gekoppelde workflow
+### Deals
 
-Artist roadmap workflow
+| Opportunity | Counterparty | Value | Probability | Stage | Next action |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-## Inputvelden
+### Decisions
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Periode | Roadmapperiode | Ja | Planning |  |
-| Doel | Hoofddoel | Ja | Strategie |  |
-| Milestone | Belangrijk beslismoment | Ja | Planning |  |
-| Actiehouder | Verantwoordelijke rol | Ja | ClickUp | Uitvoering blijft in ClickUp |
+| Decision | Required by | Approver | Consequence | Status |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-## Output
+## 06 · DECISION GATES
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen release op de roadmap zonder rights-clearance (splits · features · samples).
+>
+> **02** — Geen budget-commit zonder approval op het bijbehorende niveau.
+>
+> **03** — Client-facing roadmap alleen na Sophia-approval.
+>
+> **04** — Elke DEALS-regel boven drempel → CM PROSPECT + LEGAL check.
 
-## Structuur / Tabs
+## 07 · OUTPUT
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Status | Huidige fase | Ja |
-| Roadmap | Mijlpalen per periode | Ja |
-| Beslissingen | Approval en keuzes | Ja |
-| Acties | ClickUp-referenties | Ja |
+- Goedgekeurde roadmap als werkkopie in Drive.
+- ClickUp-taken gegenereerd uit Objectives/Releases/Deals.
+- KPI-baseline gekoppeld.
 
-## Approval
+## 08 · QUALITY CONTROL
 
-Ja, bij client-facing gebruik. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+- Elke Objective heeft KPI, target, deadline en owner.
+- Elke Release heeft master-status en distributie-deadline.
+- Geen open Decision zonder approver.
 
-## Kwaliteitscheck
+## 09 · APPROVAL
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+CM OPS AGENT (Level 1–2). Client-facing of budget boven drempel → Sophia / CM CONTROL.
 
-## Template Usage Report
+## 10 · HANDOFF
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+- → ClickUp (taken)
+- → KPI Template
+- → Release Kickoff
 
-## Status
+## 11 · SYSTEM OF RECORD
 
-ACTIVE
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 12 · STORAGE
 
-## Reviewritme
+Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 13 · AI INSTRUCTIONS
 
-## Wijzigingslog
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Roadmap approved | Make → ClickUp | Taken aanmaken | Objective→Task, Owner→Assignee, Deadline→Due |
+| Release row toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distr. deadline→Due |
+| Deal row boven drempel | Make → ClickUp | Pipeline-kaart + LEGAL-taak | Value→Field, Stage→Status |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

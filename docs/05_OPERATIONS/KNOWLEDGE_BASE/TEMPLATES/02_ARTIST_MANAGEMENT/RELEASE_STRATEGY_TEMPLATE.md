@@ -1,105 +1,153 @@
-# RELEASE_STRATEGY_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — RELEASE STRATEGY TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Strategisch raamwerk voor releasepositionering, timing en acties.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Artist Management |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM SOCIAL AGENT · CM LEGAL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Ja — vóór client-facing gebruik |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij single, EP, album of campagneplanning.
+Strategisch raamwerk voor releasepositionering, timing en acties, met verplichte rights- en delivery-gates zodat een release nooit live gaat met openstaande rechten.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Single, EP, album of campagneplanning.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Release-info | Ja | Roadmap |
+| Rights/splits status | Ja | Rights Register |
+| Budget | Ja | 06_FINANCE |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM OPS AGENT; CM SOCIAL AGENT
+### Positionering
 
-## System of Record
+| Onderdeel | Waarde |
+|---|---|
+| Verhaal | TBD |
+| Doelgroep | TBD |
+| Hoek/USP | TBD |
+| Referenties | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Rights clearance
 
-## Opslaglocatie
+| Item | Status | Eigenaar | Bewijs |
+|---|---|---|---|
+| Master ownership | TBD | TBD | TBD |
+| Splits | TBD | TBD | TBD |
+| Features | TBD | TBD | TBD |
+| Samples | TBD | TBD | TBD |
+| Producer agreements | TBD | TBD | TBD |
+| Publishing | TBD | TBD | TBD |
+| Artwork permissions | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md`
+### Delivery
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+| Deliverable | Status | Deadline |
+|---|---|---|
+| Final master | TBD | TBD |
+| Clean version | TBD | TBD |
+| Instrumental | TBD | TBD |
+| Metadata | TBD | TBD |
+| ISRC | TBD | TBD |
+| UPC | TBD | TBD |
+| Lyrics | TBD | TBD |
+| Credits | TBD | TBD |
+| DSP delivery | TBD | TBD |
 
-## Gekoppelde workflow
+### Campaign
 
-Release strategy workflow
+| Onderdeel | Plan | Budget | Owner |
+|---|---|---|---|
+| Content | TBD | TBD | TBD |
+| PR | TBD | TBD | TBD |
+| Radio | TBD | TBD | TBD |
+| DSP pitching | TBD | TBD | TBD |
+| Influencers/UGC | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD |
+| Partnerships | TBD | TBD | TBD |
 
-## Inputvelden
+### Economics
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Release | Titel/type zonder vertrouwelijke inhoud | Ja | Artist input |  |
-| Doelgroep | Primaire doelgroep | Ja | Strategie |  |
-| Positionering | Hoek van de release | Ja | Brand audit |  |
-| Key dates | Belangrijke momenten | Ja | Planning |  |
+| Metric | Waarde |
+|---|---|
+| Budget | TBD |
+| Expected streams | TBD |
+| Projected royalties | TBD |
+| Break-even | TBD |
+| Marketing ROI | TBD |
 
-## Output
+## 06 · DECISION GATES
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen release live met openstaande rights-clearance (splits · features · samples · publishing).
+>
+> **02** — Geen live zonder complete delivery (master · metadata · ISRC/UPC).
+>
+> **03** — Campaign-budget → approval.
 
-## Structuur / Tabs
+## 07 · OUTPUT
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Overview | Releasecontext | Ja |
-| Positionering | Verhaal en doelgroep | Ja |
-| Planning | Mijlpalen en deadlines | Ja |
-| Acties | Campaign acties en owners | Ja |
+- Goedgekeurde release-strategie + Release Kickoff.
 
-## Approval
+## 08 · QUALITY CONTROL
 
-Ja, vóór client-facing gebruik. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+- Alle rights-items cleared of expliciet TBD met eigenaar.
+- Delivery-checklist compleet.
 
-## Kwaliteitscheck
+## 09 · APPROVAL
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+Ja — vóór client-facing gebruik; campaign approval bij budget.
 
-## Template Usage Report
+## 10 · HANDOFF
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+- → Release Kickoff
+- → ClickUp
 
-## Status
+## 11 · SYSTEM OF RECORD
 
-ACTIVE
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 12 · STORAGE
 
-## Reviewritme
+Drive: `[ARTIST]/04_RELEASES`
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 13 · AI INSTRUCTIONS
 
-## Wijzigingslog
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Rights cleared | Make → ClickUp | Release unblocken | Item→Status |
+| Strategy approved | Make → ClickUp | Kickoff-lijst | Release→List |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

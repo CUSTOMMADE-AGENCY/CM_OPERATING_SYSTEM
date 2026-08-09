@@ -1,104 +1,114 @@
-# EMAIL_INSTRUCTIONS_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — EMAIL COMMUNICATION STANDARD
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Instructies voor consistente e-mailcommunicatie via info@custommade.agency.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Gmail Templates |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM CONTROL AGENT |
+| Support agents | CM VAULT AGENT · CM SOCIAL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | MEDIUM |
+| Approval | Ja — bij externe templates |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij het opstellen of aanpassen van Gmail-templates.
+Centrale e-mailcommunicatie-standaard voor info@custommade.agency. Tone-of-voice is centraal; inhoudelijke autoriteit is domeingebonden — niet alle mail valt onder Social.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Opstellen of aanpassen van e-mail/Gmail-templates.
 
-## Owner Agent
+## 04 · INPUT
 
-CM SOCIAL AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Domein/onderwerp | Ja | Aanvraag |
+| Huisstijl/tone | Ja | Brand |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM VAULT AGENT
+### Tone-of-voice (centraal)
 
-## System of Record
+| Onderdeel | Standaard |
+|---|---|
+| Stem | TBD |
+| Opening | TBD |
+| Kern | TBD |
+| Afsluiting | TBD |
+| Handtekening | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Domein-autoriteit
 
-## Opslaglocatie
+| Domein | Owner agent | Type mail |
+|---|---|---|
+| OPS | CM OPS AGENT | Clients/artists |
+| PROSPECT | CM PROSPECT AGENT | Deals/partnerships |
+| LEGAL | CM LEGAL AGENT | Rights/contracten |
+| MONEY | CM MONEY AGENT | Finance/incasso |
+| SOCIAL | CM SOCIAL AGENT | PR/media/marketing |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/06_GMAIL_TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md`
+## 06 · DECISION GATES
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Tone-of-voice altijd volgens huisstijl.
+>
+> **02** — Inhoudelijke autoriteit volgt het domein, niet automatisch Social.
+>
+> **03** — Externe templates → approval.
 
-## Gekoppelde workflow
+## 07 · OUTPUT
 
-Gmail communicatie workflow
+- Consistente, domein-correcte e-mailtemplates.
 
-## Inputvelden
+## 08 · QUALITY CONTROL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Doelmail | Type e-mail | Ja | Workflow |  |
-| Afzender | Mailbox of rol | Ja | Governance | info@custommade.agency leidend |
-| Tone of voice | Gewenste stijl | Ja | CM standaard |  |
-| CTA | Gevraagde actie | Ja | Workflow |  |
+- Domein-owner bepaald.
+- Huisstijl gevolgd.
 
-## Output
+## 09 · APPROVAL
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+Ja — bij externe templates (CM CONTROL / domein-owner).
 
-## Structuur / Tabs
+## 10 · HANDOFF
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Gebruik | Wanneer deze mailinstructie geldt | Ja |
-| Opbouw | Onderwerp, opening, kern, CTA | Ja |
-| Checks | Geen vertrouwelijke gegevens of ongeautoriseerde toezeggingen | Ja |
+- → Gmail-templates
+- → Domein-agent
 
-## Approval
+## 11 · SYSTEM OF RECORD
 
-Ja, bij externe templates. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Kwaliteitscheck
+## 12 · STORAGE
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+Gmail / Drive: `[DOSSIER]/05_COMMUNICATION`
 
-## Template Usage Report
+## 13 · AI INSTRUCTIONS
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Status
+## 14 · AUTOMATION HOOKS
 
-ACTIVE
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Template gewijzigd | Make → Gmail | Template-update | Domein→Owner |
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 15 · CHANGELOG
 
-## Reviewritme
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM CONTROL AGENT |
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+---
 
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

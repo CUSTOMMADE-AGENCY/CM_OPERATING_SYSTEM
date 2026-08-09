@@ -1,105 +1,117 @@
-# CLIENT_ONBOARDING_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — CLIENT ONBOARDING TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Checklist voor complete, consistente onboarding.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM VAULT AGENT · CM MONEY AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | MEDIUM |
+| Approval | Ja — vóór live gebruik (Sophia bij client-facing) |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Wanneer een nieuwe client of artist operationeel wordt ingericht.
+Volledige onboarding-gate voor een nieuwe client of artist: elke poort moet dicht voordat het dossier operationeel live gaat. Grotendeels automatiseerbaar.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Nieuwe client of artist wordt operationeel ingericht.
+- Herstart van een samenwerking.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Getekend contract | Ja | 02_CONTRACT |
+| Scope | Ja | Proposal |
+| Billing / Moneybird | Ja | 06_FINANCE |
+| Toegangen | Ja | CM VAULT AGENT |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM VAULT AGENT
+### Onboarding-poorten
 
-## System of Record
+| Poort | Onderdeel | Status | Eigenaar | Bewijs/locatie |
+|---|---|---|---|---|
+| 1 | Contract getekend | TBD | CM LEGAL | 02_CONTRACT |
+| 1 | Scope bevestigd | TBD | CM OPS | Proposal |
+| 2 | Billing details + Moneybird-relatie | TBD | CM MONEY | 06_FINANCE |
+| 2 | Drive-dossier aangemaakt | TBD | CM OPS | Drive |
+| 2 | ClickUp-dossier aangemaakt | TBD | CM FLOW | ClickUp |
+| 2 | Gmail/contact ingericht | TBD | CM OPS | Gmail |
+| 3 | Rechten/document request | TBD | CM VAULT | Rights Register |
+| 3 | Stakeholder list | TBD | CM OPS | Contact Sheet |
+| 3 | Communication rhythm | TBD | CM OPS | Kickoff |
+| 3 | KPI baseline | TBD | CM OPS | KPI Template |
+| 3 | Roadmap | TBD | CM OPS | Roadmap |
+| 4 | Privacy/access review | TBD | CM CONTROL | Access notes |
+| 4 | Approval vóór live | TBD | Sophia | Approval Evidence |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+## 06 · DECISION GATES
 
-## Opslaglocatie
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen live gebruik zolang één poort openstaat.
+>
+> **02** — Poort 4 (approval) verplicht vóór go-live.
+>
+> **03** — Geen wachtwoorden of clientdata in de specificatie.
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/01_SHARED_SERVICES/CLIENT_ONBOARDING_TEMPLATE.md`
+## 07 · OUTPUT
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+- Volledig ingericht, gecontroleerd dossier dat operationeel live kan.
 
-## Gekoppelde workflow
+## 08 · QUALITY CONTROL
 
-Client onboarding workflow
+- Alle poorten dicht of expliciet TBD met eigenaar.
+- Approval vastgelegd.
 
-## Inputvelden
+## 09 · APPROVAL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Onboardingstatus | Fase van onboarding | Ja | Kickoff | Gebruik statusveld |
-| Benodigde toegang | Accounts, mappen en systemen | Ja | Client/Sophia | Geen wachtwoorden |
-| Documenten | Benodigde bewijsstukken | Ja | Drive request | Alleen referenties |
-| Open acties | Nog te voltooien acties | Ja | ClickUp | Uitvoering in ClickUp |
+Vóór live gebruik — Sophia / CM CONTROL bij client-facing.
 
-## Output
+## 10 · HANDOFF
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- → Operationele workflow
+- → Roadmap + KPI
 
-## Structuur / Tabs
+## 11 · SYSTEM OF RECORD
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Status | Onboardingfase en blokkades | Ja |
-| Checklist | Acties per systeem | Ja |
-| Document request | Benodigde input zonder gevoelige inhoud | Ja |
-| Handover | Overdracht naar operationele workflow | Ja |
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Approval
+## 12 · STORAGE
 
-Ja, vóór live gebruik. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+Drive: `[DOSSIER]/01_ADMIN` · `YYYY-MM-DD_[ENTITY]_ADMIN_ONBOARDING_vX.Y`
 
-## Kwaliteitscheck
+## 13 · AI INSTRUCTIONS
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Template Usage Report
+## 14 · AUTOMATION HOOKS
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Poort afgevinkt | Make → ClickUp | Status updaten | Poort→Subtask |
+| Alle poorten dicht | Make → Slack/Gmail | Go-live signaal | Dossier→Notificatie |
+| Onboarding gestart | Make → Moneybird | Relatie aanmaken | Client→Contact |
 
-## Status
+## 15 · CHANGELOG
 
-ACTIVE
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+---
 
-## Reviewritme
-
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
-
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

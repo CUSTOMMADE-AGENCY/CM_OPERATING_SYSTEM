@@ -1,89 +1,143 @@
-# KPI_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — KPI TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | KPI_TEMPLATE |
-| Domein | Artist Management |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM OPS AGENT |
-| Support Agents | CM MONEY AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[ARTIST]/03_STRATEGY` |
-| Gekoppelde workflow | Artist roadmap workflow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Artist Management |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM MONEY AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Ja — bij client-facing gebruik |
 
-## Doel
+## 02 · PURPOSE
 
-Overzicht van kern-KPI's per artist: doel, meetwaarde, actuele stand en trend.
+Kern-KPIs per artist, verdeeld in lanes (Audience, Release, Revenue, Business, Pipeline), als basis voor kwartaalmanagement.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Bij managementstart, kwartaalreview of strategische herijking.
-- Als vaste bijlage bij roadmap en jaarplan.
+- Managementstart, kwartaalreview of strategische herijking.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Vertrouwelijke of ingevulde data in de template-specificatie.
-- Getekende documenten of operationele exports.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Meetbronnen per lane | Ja | DSP/Moneybird/ClickUp |
+| Doelwaarden | Ja | Roadmap |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Relevante KPI's per lane (releases, publiek, inkomsten, bookings).
-- Doelwaarden en meetbron.
+### Audience
 
-## Werkwijze
+| KPI | Baseline | Actual | Target | Trend |
+|---|---|---|---|---|
+| Monthly listeners | TBD | TBD | TBD | TBD |
+| Followers | TBD | TBD | TBD | TBD |
+| Conversion | TBD | TBD | TBD | TBD |
+| Engagement | TBD | TBD | TBD | TBD |
+| Mailing/CRM audience | TBD | TBD | TBD | TBD |
 
-1. Kies de relevante KPI's.
-2. Leg doel, actuele waarde en meetbron vast.
-3. Actualiseer per review en signaleer afwijkingen.
+### Release
 
-## Beslismomenten
+| KPI | Baseline | Actual | Target | Trend |
+|---|---|---|---|---|
+| Streams | TBD | TBD | TBD | TBD |
+| Save rate | TBD | TBD | TBD | TBD |
+| Completion | TBD | TBD | TBD | TBD |
+| Playlist reach | TBD | TBD | TBD | TBD |
+| UGC | TBD | TBD | TBD | TBD |
 
-- Onvolledige of onzekere velden markeren als `TBD`.
-- Bij twijfel of afwijking escaleren naar de Owner Agent.
+### Revenue
 
-## Output
+| Lane | Actual | Target | Forecast | Delta |
+|---|---|---|---|---|
+| Master royalties | TBD | TBD | TBD | TBD |
+| Publishing | TBD | TBD | TBD | TBD |
+| Neighbouring | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD |
+| Brand | TBD | TBD | TBD | TBD |
+| Sync | TBD | TBD | TBD | TBD |
 
-- Ingevuld, scanbaar document conform doel.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+### Business
 
-## Kwaliteitscontrole
+| Metric | Actual | Target |
+|---|---|---|
+| Gross revenue | TBD | TBD |
+| Net revenue | TBD | TBD |
+| Costs | TBD | TBD |
+| Margin | TBD | TBD |
+| Recoupment | TBD | TBD |
+| Cash collected | TBD | TBD |
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Owner, output en volgende stap duidelijk.
+### Pipeline
 
-## Goedkeuring
+| Type | Count | Value | Weighted |
+|---|---|---|---|
+| Booking opportunities | TBD | TBD | TBD |
+| Brand opportunities | TBD | TBD | TBD |
+| Sync opportunities | TBD | TBD | TBD |
 
-Ja, bij client-facing gebruik — CM OPS AGENT.
+## 06 · DECISION GATES
 
-## Overdracht
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Elke KPI heeft meetbron en doel.
+>
+> **02** — Geen vanity metric zonder businesskoppeling.
 
-Naar de betreffende Drive-map en, waar relevant, de gekoppelde ClickUp-taak.
+## 07 · OUTPUT
 
-## Opslag
+- KPI-set gekoppeld aan roadmap en kwartaalreview.
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md`.
-Drive werkbare kopie: `[ARTIST]/03_STRATEGY`.
+## 08 · QUALITY CONTROL
 
-## AI-instructies
+- Alle lanes gevuld of TBD.
+- Meetbron per KPI.
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+## 09 · APPROVAL
 
-## Wijzigingslog
+Ja — bij client-facing gebruik.
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM OPS AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+## 10 · HANDOFF
+
+- → Roadmap
+- → Monthly Report
+
+## 11 · SYSTEM OF RECORD
+
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+
+## 12 · STORAGE
+
+Drive: `[ARTIST]/03_STRATEGY`
+
+## 13 · AI INSTRUCTIONS
+
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| KPI bijgewerkt | Make → Sheets/ClickUp | Dashboard updaten | KPI→Cell |
+| Kwartaal-close | Make → Monthly Report | Rapport vullen | Lane→Section |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
