@@ -1,64 +1,84 @@
-# TEMPLATE_REVIEW_PROCESS
-## Architectuurstandaard
+# TEMPLATE REVIEW PROCESS — V2.2
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
-
-## Owner Agent
+## OWNER
 
 CM VAULT AGENT
 
-## Support Agents
+## SUPPORT
 
 CM CONTROL AGENT
 
-## Doel
+## DOEL
 
-Proces voor het onderhouden, beoordelen en verbeteren van de CM Template Library.
+Proces voor het onderhouden, beoordelen en verbeteren van de CM Template Library volgens `TEMPLATE_ARCHITECTURE_STANDARD_V2.md` V2.2 en `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md`.
 
-## Leidende governance
+## LEIDENDE GOVERNANCE
 
-- `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` is leidend voor ontwerp.
-- `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` is leidend voor gebruik.
-- GitHub is leidend voor template-governance en template-standaarden.
-- Drive bevat alleen werkbare kopieën, ingevulde operationele versies of exports.
+- `TEMPLATE_ARCHITECTURE_STANDARD_V2.md` V2.2 = leidend voor structuur, taal, machine-readability en A4-portret.
+- `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` = leidend voor ontwerp/printbaarheid.
+- `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` = leidend voor bevoegdheid en gebruik.
+- GitHub = canonical template-specificatie.
+- Drive = werkbare kopieën, ingevulde operationele versies en exports.
+- ClickUp = uitvoering/status.
+- Moneybird = financiële waarheid.
 
-## Reviewmomenten
+## REVIEWMOMENTEN
 
 | Moment | Trigger | Owner | Output |
-| --- | --- | --- | --- |
-| Kwartaalreview | Standaard reviewritme | CM VAULT AGENT | Statusupdate en changelog |
-| Gap review | Nieuwe TEMPLATE_GAP_LOG items | Template owner | Besluit per gap |
-| Governancewijziging | Nieuwe of gewijzigde CM-regel | CM CONTROL AGENT | Template-aanpassing of statuswijziging |
-| Workflowwijziging | Proces of systeem wijzigt | Workflow owner | Geactualiseerde template-specificatie |
+|---|---|---|---|
+| Kwartaalreview | Standaard reviewritme | CM VAULT AGENT | Statusupdate + changelog |
+| Gap review | Nieuwe TEMPLATE_GAP_LOG-items | Template owner | Besluit per gap |
+| Governancewijziging | Nieuwe/gewijzigde CM-regel | CM CONTROL AGENT | Template-/statuswijziging |
+| Workflowwijziging | Proces/systeem wijzigt | Workflow owner | Geactualiseerde specificatie |
+| Visual/print review | Nieuwe generator/output | Template owner | A4-portret consistency-check |
 
-## Reviewstappen
+## VERPLICHTE REVIEWSTAPPEN
 
-1. Controleer status, owner, workflow en opslaglocatie.
-2. Controleer of de template binnen 10 seconden scanbaar is.
-3. Verwijder overbodige toelichting en dubbele velden.
-4. Controleer dat er geen clientdata of vertrouwelijke informatie staat.
-5. Controleer TEMPLATE_USAGE_REPORTS en TEMPLATE_GAP_LOGS op terugkerende problemen.
-6. Beslis: ACTIVE, DRAFT, NEEDS_REVIEW of DEPRECATED.
-7. Werk de changelog van de template bij.
-8. Werk `00_TEMPLATE_INDEX.md` en `TEMPLATE_STATUS_REGISTER.md` bij.
+1. Controleer owner, support, status, workflow, opslag en bronnen.
+2. Controleer exact alle 15 secties volgens V2.2.
+3. Controleer sectie 05: echte invulbare werk-tabellen, geen lege beschrijvingskaart.
+4. Controleer A4-portret; splits brede tabellen in logisch gekoppelde blokken met stabiele record-ID.
+5. Controleer dat iedere source field mapping in sectie 14 letterlijk bestaat in sectie 05.
+6. Controleer dat automation-statusvelden gecontroleerde waarden gebruiken.
+7. Controleer bronregels: Moneybird voor actuals; ClickUp voor uitvoering; Legal/Rights evidence voor rechtenclaims.
+8. Controleer dat geen bedragen, approvalgrenzen, rights claims, persoonsgegevens of ontbrekende informatie worden verzonnen; onbekend = `TBD`.
+9. Controleer scanbaarheid binnen circa 10 seconden en verwijder dubbele/overmatige uitleg.
+10. Controleer geen duplicate canonical template-locaties.
+11. Beslis `ACTIVE`, `DRAFT`, `NEEDS_REVIEW` of `DEPRECATED`.
+12. Werk template-changelog, `00_TEMPLATE_INDEX.md` en `TEMPLATE_STATUS_REGISTER.md` bij.
+13. Bij generatorwijziging: render minimaal één werkbare kopie en voer visuele DOCX/PDF-check uit vóór definitieve goedkeuring.
 
-## Approvalregels
+## APPROVALREGELS
 
 | Wijziging | Approval nodig |
-| --- | --- |
-| Tekstuele verduidelijking zonder veldwijziging | Nee |
-| Nieuw verplicht veld | Ja, template owner |
-| Workflowwijziging | Ja, workflow owner |
-| Client-facing templatewijziging | Ja, Sophia of CM CONTROL AGENT |
-| Deprecation | Ja, CM CONTROL AGENT |
+|---|---|
+| Tekstuele verduidelijking zonder veld-/workflowimpact | Nee |
+| Nieuw/verwijderd verplicht veld | Template owner |
+| Workflow-/automationwijziging | Workflow owner |
+| Client-facing templatewijziging | Sophia of CM CONTROL AGENT conform governance |
+| Legal/financial beslisregel | Relevante domein-owner + governance |
+| Deprecation | CM CONTROL AGENT |
 
-## Kwaliteitscheck
+## KWALITEITSCHECK VOOR ACTIVE
 
-- Template blijft lean, uitvoerbaar en scanbaar.
-- Geen duplicate template-locaties.
-- Geen eigen formats wanneer bestaande templates passen.
-- Gaps worden opgelost in de bron-template, niet in parallelle kopieën.
+Een template blijft/wordt alleen `ACTIVE` als:
 
-## Status
+- alle 15 secties aanwezig zijn;
+- werkvelden operationeel bruikbaar zijn;
+- A4-portret leesbaar is;
+- gekoppelde blokken eenduidige record-IDs gebruiken waar nodig;
+- automation mappings naar bestaande velden verwijzen;
+- controlled statuses consistent zijn;
+- bronsystemen correct zijn;
+- geen duplicate template-locaties bestaan;
+- de gegenereerde werkkopie visueel is gecontroleerd wanneer een generator de output maakt.
 
-ACTIVE
+## STATUS
+
+ACTIVE — V2.2
+
+## WIJZIGINGSLOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-08-10 | V2.2 | Reviewproces uitgebreid met A4-portret, record-ID, literal field mapping, bronregels en verplichte generator-outputcheck. | CM VAULT AGENT |
