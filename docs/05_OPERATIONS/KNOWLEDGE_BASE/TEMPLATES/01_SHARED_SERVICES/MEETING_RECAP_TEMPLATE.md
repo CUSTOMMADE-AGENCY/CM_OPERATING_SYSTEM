@@ -1,105 +1,111 @@
-# MEETING_RECAP_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — MEETING RECAP TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Kort verslag met besluiten, acties en opvolging.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Nee, tenzij extern gevoelig |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Na interne of externe meetings waar opvolging nodig is.
+Kort verslag met besluiten, acties en opvolging, zodat afspraken niet verloren gaan en direct in ClickUp landen.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Na interne of externe meetings met opvolging.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Meetingdatum | Ja | Agenda |
+| Aanwezigen | Ja | Meeting |
+| Besluiten | Ja | Meeting |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM OPS AGENT; CM VAULT AGENT
+### Besluiten
 
-## System of Record
+| Besluit | Context | Eigenaar |
+|---|---|---|
+| TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Acties
 
-## Opslaglocatie
+| Actie | Eigenaar | Deadline | Status |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/01_SHARED_SERVICES/MEETING_RECAP_TEMPLATE.md`
+### Open punten
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+| Open punt | Beslisser | Deadline |
+|---|---|---|
+| TBD | TBD | TBD |
 
-## Gekoppelde workflow
+## 06 · DECISION GATES
 
-Meeting process workflow
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Elke actie heeft eigenaar en deadline.
+>
+> **02** — Extern gevoelige recaps → approval vóór delen.
 
-## Inputvelden
+## 07 · OUTPUT
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Meetingdatum | Datum overleg | Ja | Agenda |  |
-| Aanwezigen | Rollen of namen indien toegestaan | Ja | Meeting |  |
-| Besluit | Vastgelegd besluit | Ja | Meeting |  |
-| Actie | Opvolgactie | Ja | ClickUp |  |
+- Verslag + ClickUp-acties.
 
-## Output
+## 08 · QUALITY CONTROL
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- Besluiten en acties gescheiden.
+- Geen open actie zonder eigenaar.
 
-## Structuur / Tabs
+## 09 · APPROVAL
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Context | Doel van overleg | Ja |
-| Besluiten | Wat is besloten | Ja |
-| Acties | Eigenaar en deadline | Ja |
-| Open punten | Nog te beslissen | Ja |
+Nee, tenzij extern gevoelig.
 
-## Approval
+## 10 · HANDOFF
 
-Nee, tenzij extern gevoelig. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+- → ClickUp (acties)
+- → Betrokken dossier
 
-## Kwaliteitscheck
+## 11 · SYSTEM OF RECORD
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Template Usage Report
+## 12 · STORAGE
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+Drive/Gmail: `[DOSSIER]/05_COMMUNICATION`
 
-## Status
+## 13 · AI INSTRUCTIONS
 
-ACTIVE
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 14 · AUTOMATION HOOKS
 
-## Reviewritme
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Recap opgeslagen | Make → ClickUp | Acties aanmaken | Actie→Task, Deadline→Due, Eigenaar→Assignee |
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 15 · CHANGELOG
 
-## Wijzigingslog
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

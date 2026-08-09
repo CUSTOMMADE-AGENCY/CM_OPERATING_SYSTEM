@@ -1,89 +1,97 @@
-# AMENDMENT_LOG_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — AMENDMENT LOG TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | AMENDMENT_LOG_TEMPLATE |
-| Domein | Shared Services / Legal |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM LEGAL AGENT |
-| Support Agents | CM CONTROL AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[DOSSIER]/02_CONTRACT` |
-| Gekoppelde workflow | Legal review flow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services / Legal |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM LEGAL AGENT |
+| Support agents | CM CONTROL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LEGAL |
+| Approval | Level 3/4 — Level 4 naar Sophia |
 
-## Doel
+## 02 · PURPOSE
 
 Chronologisch logboek van wijzigingen op een overeenkomst (amendments).
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Bij elke aanpassing of aanvulling op een bestaand contract.
+- Elke aanpassing of aanvulling op een bestaand contract.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Vertrouwelijke of ingevulde data in de template-specificatie.
-- Getekende documenten of operationele exports.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Contractreferentie | Ja | Contract Summary |
+| Wijziging | Ja | Amendment |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Contractreferentie.
-- Wijzigingsdatum, aard van de wijziging en reden.
-- Approver van de wijziging.
+### Amendments
 
-## Werkwijze
+| Datum | Wijziging | Reden | Approver | Approval Evidence |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-1. Voeg per amendment een regel toe.
-2. Leg datum, wijziging, reden en approver vast.
-3. Verwijs naar het bijbehorende Approval Evidence.
+## 06 · DECISION GATES
 
-## Beslismomenten
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Elke wijziging is gekoppeld aan een Approval Evidence.
+>
+> **02** — Level 4 → Sophia.
 
-- Onvolledige of onzekere velden markeren als `TBD`.
-- Bij twijfel of afwijking escaleren naar de Owner Agent.
+## 07 · OUTPUT
 
-## Output
+- Volledige wijzigingshistorie per contract.
 
-- Ingevuld, scanbaar document conform doel.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+## 08 · QUALITY CONTROL
 
-## Kwaliteitscontrole
+- Elke regel heeft datum, reden en approver.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Owner, output en volgende stap duidelijk.
-
-## Goedkeuring
+## 09 · APPROVAL
 
 Level 3/4 — CM LEGAL AGENT; Level 4 naar Sophia.
 
-## Overdracht
+## 10 · HANDOFF
 
-Naar de betreffende Drive-map en, waar relevant, de gekoppelde ClickUp-taak.
+- → Contract Summary
+- → 07_LEGAL
 
-## Opslag
+## 11 · SYSTEM OF RECORD
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/01_SHARED_SERVICES/AMENDMENT_LOG_TEMPLATE.md`.
-Drive werkbare kopie: `[DOSSIER]/02_CONTRACT`.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## AI-instructies
+## 12 · STORAGE
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+Drive: `[DOSSIER]/02_CONTRACT`
 
-## Wijzigingslog
+## 13 · AI INSTRUCTIONS
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM LEGAL AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Amendment toegevoegd | Make → ClickUp | Contract-reminder | Datum→Due |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM LEGAL AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

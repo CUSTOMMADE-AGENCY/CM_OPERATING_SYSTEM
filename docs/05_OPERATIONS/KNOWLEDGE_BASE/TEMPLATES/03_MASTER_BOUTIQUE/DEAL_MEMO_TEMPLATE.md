@@ -1,105 +1,178 @@
-# DEAL_MEMO_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — DEAL MEMO TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Compact dealoverzicht voor catalog sale, master resale of rights brokerage.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Master Boutique |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM PROSPECT AGENT |
+| Support agents | CM LEGAL AGENT · CM CONTROL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | FINANCIAL / LEGAL |
+| Approval | Ja — vóór buyer-facing gebruik (Level 4 → Sophia) |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij dealkwalificatie, buyer-facing voorbereiding of interne approval.
+Volwaardige acquisition/sale tool voor catalog sale, master resale of rights brokerage: asset, financials, valuation, deal structure, diligence en transactiestatus in één memo.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Dealkwalificatie, buyer-facing voorbereiding of interne approval.
 
-## Owner Agent
+## 04 · INPUT
 
-CM PROSPECT AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Music Rights Register | Ja | Rights Register |
+| Royalty statements | Ja | 06_FINANCE |
+| Chain of title | Ja | 02_CONTRACT |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM LEGAL AGENT; CM PROSPECT AGENT; CM CONTROL AGENT
+### Asset
 
-## System of Record
+| Veld | Waarde |
+|---|---|
+| Type (catalog/track/master/publishing/neighbouring) | TBD |
+| Aantal werken | TBD |
+| Releaseperiode | TBD |
+| Territory | TBD |
+| Rights % aangeboden | TBD |
+| Chain of title status | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Financials
 
-## Opslaglocatie
+| Bron | LTM | 3-jr historie | Toelichting |
+|---|---|---|---|
+| Master royalties | TBD | TBD | TBD |
+| Publishing royalties | TBD | TBD | TBD |
+| Neighbouring rights | TBD | TBD | TBD |
+| Sync | TBD | TBD | TBD |
+| Other | TBD | TBD | TBD |
+| Gross | TBD | TBD | TBD |
+| Net | TBD | TBD | TBD |
+| Recoupment status | TBD | TBD | TBD |
+| Outstanding advances | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/03_MASTER_BOUTIQUE/DEAL_MEMO_TEMPLATE.md`
+### Valuation
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+| Veld | Waarde |
+|---|---|
+| Valuation method | TBD |
+| LTM multiple | TBD |
+| NTM multiple | TBD |
+| Asking price | TBD |
+| Indicative offer | TBD |
+| Minimum acceptable value | TBD |
+| Assumptions | TBD |
 
-## Gekoppelde workflow
+### Deal structure
 
-Deal memo workflow
+| Veld | Waarde |
+|---|---|
+| Assignment/licence | TBD |
+| Perpetual/term | TBD |
+| Territory | TBD |
+| Exclusivity | TBD |
+| Payment structure | TBD |
+| Earn-out | TBD |
+| Holdback | TBD |
+| Seller participation | TBD |
+| Broker/CM fee | TBD |
 
-## Inputvelden
+### Diligence
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Dealtype | Catalog sale/master resale/rights brokerage | Ja | Intake |  |
-| Assets | Catalogus of rechtenpakket | Ja | Rights register | Geen volledige data in template |
-| Indicatieve waarde | Waarderingsrange indien beschikbaar | Nee | Valuation | Geen ingevulde bedragen |
-| Risico’s | Rights/diligence risico’s | Ja | Audit |  |
+| Item | Status | Bewijs |
+|---|---|---|
+| Rights verified | TBD | TBD |
+| Metadata verified | TBD | TBD |
+| Royalty statements | TBD | TBD |
+| Contracts | TBD | TBD |
+| Disputes | TBD | TBD |
+| Liens/encumbrances | TBD | TBD |
+| Claims | TBD | TBD |
+| Tax/VAT | TBD | TBD |
+| Approval status | TBD | TBD |
 
-## Output
+### Transaction
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+| Stap | Status | Datum |
+|---|---|---|
+| NDA | TBD | TBD |
+| Data room | TBD | TBD |
+| Buyer stage | TBD | TBD |
+| LOI | TBD | TBD |
+| Due diligence | TBD | TBD |
+| SPA/APA | TBD | TBD |
+| Closing | TBD | TBD |
 
-## Structuur / Tabs
+## 06 · DECISION GATES
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Deal snapshot | Kerngegevens | Ja |
-| Rights summary | Rechtenstatus | Ja |
-| Commercial view | Waarde en koperfit | Ja |
-| Approval | Beslissingen en voorwaarden | Ja |
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen buyer-facing gebruik zonder approval.
+>
+> **02** — Valuation onderbouwd en controleerbaar.
+>
+> **03** — Rechten geverifieerd via Rights Audit.
+>
+> **04** — Level 4-beslissingen naar Sophia.
+>
+> **05** — Geen data room access zonder NDA + Buyer Qualification.
 
-## Approval
+## 07 · OUTPUT
 
-Ja, vóór buyer-facing gebruik. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+- Buyer-facing deal memo; input voor Data Room en Buyer Pipeline.
 
-## Kwaliteitscheck
+## 08 · QUALITY CONTROL
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- Financials, valuation en diligence compleet of TBD.
+- Chain of title status bekend.
 
-## Template Usage Report
+## 09 · APPROVAL
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+Ja — vóór buyer-facing gebruik; Level 4 → Sophia.
 
-## Status
+## 10 · HANDOFF
 
-ACTIVE
+- → Data Room
+- → Buyer Pipeline
+- → 07_LEGAL
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 11 · SYSTEM OF RECORD
 
-## Reviewritme
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 12 · STORAGE
 
-## Wijzigingslog
+Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET`
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 13 · AI INSTRUCTIONS
+
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Memo approved | Make → ClickUp | Deal-kaart | Asset→Card, Stage→Status |
+| Buyer stage change | Make → Pipeline | Status updaten | Stage→Status |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM PROSPECT AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

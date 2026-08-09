@@ -1,105 +1,173 @@
-# ARTIST_ROADMAP_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — ARTIST ROADMAP TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Roadmap voor doelen, releases, acties en beslismomenten.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Artist Management |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
+| Status | NEEDS_REVIEW — V2.1 (V2.1-review nog niet afgerond) |
+| Versie | V2.1 |
+| Datum | AUGUSTUS 2026 |
+| Risico | LOW |
+| Approval | CM OPS AGENT · client-facing → Sophia |
 
-## Wanneer gebruiken
+## 02 · DOEL
 
-Bij managementstart, kwartaalplanning of releaseplanning.
+Stuurbare roadmap die doelen, releases, inkomsten, deals en beslismomenten van een artist samenbrengt in één bron waaruit ClickUp-taken en KPI-tracking direct worden gegenereerd. De roadmap plant en stuurt; hij vervangt Moneybird (financiële waarheid) of het Rights Register (rechtenwaarheid) niet.
 
-## Niet gebruiken voor
+## 03 · GEBRUIKSMOMENT
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Managementstart of artist onboarding.
+- Kwartaalplanning of strategische herijking.
+- Releaseplanning.
 
-## Owner Agent
+## 04 · BENODIGDE INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Artist profile | Ja | 01_ADMIN |
+| Vorige roadmap | Nee | 03_STRATEGY / 09_ARCHIVE |
+| KPI-baseline | Ja | KPI Template |
+| Rechten- & contractstatus | Ja | 02_CONTRACT / Rights Register |
+| Pipeline | Ja | Deal Pipeline (ClickUp) |
+| Financiële actuals | Ja | Moneybird / benoemde royalty-/afrekenbron |
 
-## Support Agents
+## 05 · WERKTEMPLATE
 
-CM OPS AGENT; CM SOCIAL AGENT
+### Doelen
 
-## System of Record
+| Hoofddoel | KPI | Baseline | Doel | Deadline | Eigenaar | Status |
+|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+_Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
-## Opslaglocatie
+### Releases
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md`
+| Release | Type | Master status | Rights status | Distributie-deadline | Releasedatum | Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil | Eigenaar | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+_Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet._
 
-## Gekoppelde workflow
+### Inkomsten
 
-Artist roadmap workflow
+| Inkomstenlane | Periode | Actueel | Doel | Forecast | Verschil | Bron |
+|---|---|---|---|---|---|---|
+| Master royalties | TBD | TBD | TBD | TBD | TBD | TBD |
+| Publishing | TBD | TBD | TBD | TBD | TBD | TBD |
+| Neighboring rights | TBD | TBD | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD | TBD | TBD |
+| Brand | TBD | TBD | TBD | TBD | TBD | TBD |
+| Sync | TBD | TBD | TBD | TBD | TBD | TBD |
+| Merch | TBD | TBD | TBD | TBD | TBD | TBD |
+| Overig | TBD | TBD | TBD | TBD | TBD | TBD |
 
-## Inputvelden
+_Actuals moeten herleidbaar zijn naar Moneybird of een benoemde royalty-/afrekenbron (kolom Bron). Nooit bedragen verzinnen; onbekend = TBD._
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Periode | Roadmapperiode | Ja | Planning |  |
-| Doel | Hoofddoel | Ja | Strategie |  |
-| Milestone | Belangrijk beslismoment | Ja | Planning |  |
-| Actiehouder | Verantwoordelijke rol | Ja | ClickUp | Uitvoering blijft in ClickUp |
+### Deals & kansen
 
-## Output
+| Type | Kans | Tegenpartij | Waarde | Kans % | Gewogen waarde | Fase | Eigenaar | Volgende actie | Deadline |
+|---|---|---|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+_Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. Gewogen waarde = waarde × kans %; dit is een forecast-/pipeline-metric, geen financiële waarheid. Fase = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
-## Structuur / Tabs
+### Beslissingen
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Status | Huidige fase | Ja |
-| Roadmap | Mijlpalen per periode | Ja |
-| Beslissingen | Approval en keuzes | Ja |
-| Acties | ClickUp-referenties | Ja |
+| Beslissing | Nodig vóór | Goedkeurder | Gevolg | Status |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-## Approval
+_Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
-Ja, bij client-facing gebruik. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+### Gecontroleerde statussen (voor automation)
 
-## Kwaliteitscheck
+| Veld | Toegestane waarden |
+|---|---|
+| Objective status | `NOT_STARTED` · `IN_PROGRESS` · `AT_RISK` · `DONE` |
+| Release status | `PLANNED` · `IN_PRODUCTION` · `SCHEDULED` · `RELEASED` · `ON_HOLD` |
+| Rights status | `CLEAR` · `OPEN` · `BLOCKED` |
+| Deal/pipeline-fase | conform `DEAL_PIPELINE_CLICKUP_REFERENCE`: `LEAD` · `QUALIFIED` · `PROPOSAL` · `NEGOTIATION` · `WON` · `LOST` |
+| Decision status | `OPEN` · `ESCALATED` · `DECIDED` |
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+_Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen vrije tekst._
 
-## Template Usage Report
+## 06 · BESLISPOORTEN
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen release op de roadmap zonder Rights status = `CLEAR` (splits · features · samples geverifieerd).
+>
+> **02** — Financiële toezegging boven de toepasselijke approvalgrens → escaleren conform CM approval governance.
+>
+> **03** — Client-facing roadmap alleen na Sophia-approval.
+>
+> **04** — Elke deal met een financiële toezegging boven de toepasselijke approvalgrens → CM PROSPECT + LEGAL check, conform CM approval governance.
 
-## Status
+## 07 · RESULTAAT
 
-ACTIVE
+- Goedgekeurde roadmap als werkkopie in Drive.
+- ClickUp-taken gegenereerd uit Doelen/Releases/Deals.
+- KPI-baseline gekoppeld.
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 08 · KWALITEITSCONTROLE
 
-## Reviewritme
+- Elk doel heeft KPI, doel, deadline en eigenaar.
+- Elke release heeft master-status, Rights status en distributie-deadline.
+- Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).
+- Geen open beslissing zonder goedkeurder.
+- Alle automation-velden gebruiken gecontroleerde waarden.
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 09 · GOEDKEURING
 
-## Wijzigingslog
+CM OPS AGENT (Level 1–2). Client-facing, of financiële toezegging boven de toepasselijke approvalgrens → escaleren naar Sophia / CM CONTROL conform CM approval governance.
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 10 · OVERDRACHT
+
+- → ClickUp (taken)
+- → KPI Template
+- → Release Kickoff
+
+## 11 · LEIDENDE BRON
+
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+
+## 12 · OPSLAG
+
+Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
+
+## 13 · AI-INSTRUCTIES
+
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Verzin nooit bedragen of approvalgrenzen; verwijs naar Moneybird respectievelijk CM approval governance.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATISERINGSKOPPELINGEN
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Doel→Taak, Eigenaar→Assignee, Deadline→Due date |
+| Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date |
+| Rights status = `OPEN`/`BLOCKED` | Make → ClickUp | Rights/legal opvolgtaak | Release→Taak, Rights status→Status |
+| Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Deal→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status |
+| Financiële actuals | — | Niet vanuit roadmap naar Moneybird geschreven; Moneybird blijft financiële waarheid | Read-only referentie |
+
+## 15 · WIJZIGINGSLOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt; secties en kolomkoppen Nederlandstalig. Status op NEEDS_REVIEW tot V2.1-review is afgerond. | CM OPS AGENT |
+
+---
+
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._

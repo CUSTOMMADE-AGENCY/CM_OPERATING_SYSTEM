@@ -1,105 +1,109 @@
-# CLIENT_PROFILE_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — CLIENT PROFILE TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Centraal klantprofiel voor interne context, scope en werkafspraken.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Ja — Sophia of CM CONTROL AGENT |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij onboarding, herstart van samenwerking of overdracht tussen agents.
+Centraal klantprofiel voor interne context, scope en werkafspraken, als bron van waarheid voor het dossier.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Onboarding, herstart of overdracht.
 
-## Owner Agent
+## 04 · INPUT
 
-CM OPS AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Clientidentificatie | Ja | Intake |
+| Scope en lane | Ja | Proposal |
+| Werkafspraken | Ja | Kickoff |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM VAULT AGENT; CM OPS AGENT
+### Profiel
 
-## System of Record
+| Veld | Waarde |
+|---|---|
+| Entity/naam | TBD |
+| Lane | TBD |
+| Scope | TBD |
+| Stakeholders (referentie) | TBD |
+| Communicatieritme | TBD |
+| Status | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+### Werkafspraken
 
-## Opslaglocatie
+| Onderwerp | Afspraak | Eigenaar |
+|---|---|---|
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/01_SHARED_SERVICES/CLIENT_PROFILE_TEMPLATE.md`
+## 06 · DECISION GATES
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen clientdata of vertrouwelijke gegevens in de specificatie.
 
-## Gekoppelde workflow
+## 07 · OUTPUT
 
-Client onboarding workflow
+- Actueel profiel als basis voor kickoff en uitvoering.
 
-## Inputvelden
+## 08 · QUALITY CONTROL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Clientgegevens | Identificatie zonder vertrouwelijke details | Ja | Intake | Geen clientdata in template |
-| Scope | Diensten en lane | Ja | Proposal/onboarding |  |
-| Stakeholders | Rollen en contacttypen | Ja | Client input | Geen privégegevens |
-| Werkafspraken | Communicatie en cadans | Ja | Kickoff |  |
-
-## Output
-
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
-
-## Structuur / Tabs
-
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Overview | Korte context en status | Ja |
-| Scope | Diensten, grenzen en verantwoordelijkheden | Ja |
-| Communicatie | Kanalen, ritme en voorkeuren | Ja |
-| Volgende stap | Eerstvolgende actie | Ja |
-
-## Approval
-
-Ja, door Sophia of CM CONTROL AGENT. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
-
-## Kwaliteitscheck
-
+- Scope en volgende stap duidelijk.
 - Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
 
-## Template Usage Report
+## 09 · APPROVAL
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+Ja — Sophia of CM CONTROL AGENT.
 
-## Status
+## 10 · HANDOFF
 
-ACTIVE
+- → Kickoff
+- → Roadmap
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+## 11 · SYSTEM OF RECORD
 
-## Reviewritme
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+## 12 · STORAGE
 
-## Wijzigingslog
+Drive: `[DOSSIER]/01_ADMIN`
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+## 13 · AI INSTRUCTIONS
+
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Profiel bijgewerkt | Make → ClickUp | Dossierveld updaten | Veld→Custom field |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

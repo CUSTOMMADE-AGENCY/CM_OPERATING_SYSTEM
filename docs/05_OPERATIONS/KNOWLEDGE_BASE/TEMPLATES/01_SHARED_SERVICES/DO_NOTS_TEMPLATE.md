@@ -1,104 +1,101 @@
-# DO_NOTS_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — DO NOTS TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Operationele lijst met grenzen, verboden acties en escalatiepunten.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM CONTROL AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | MEDIUM |
+| Approval | Ja — bij wijziging |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij onboarding, agent-instructies en workflow-controles.
+Operationele lijst met grenzen, verboden acties en escalatiepunten voor mensen en agents.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Onboarding, agent-instructies, workflow-controles.
 
-## Owner Agent
+## 04 · INPUT
 
-CM CONTROL AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Grenzen per lane | Ja | Governance |
+| Escalatieregels | Ja | CM CONTROL AGENT |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM VAULT AGENT; CM CONTROL AGENT
+### Do nots
 
-## System of Record
+| Verbod | Reden | Escalatie | Toegestane route |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+## 06 · DECISION GATES
 
-## Opslaglocatie
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Twijfel over bevoegdheid of scope → escaleer.
+>
+> **02** — Vertrouwelijke of juridische impact → escaleer.
+>
+> **03** — Alles met Level 4-gevolgen → Sophia.
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/01_SHARED_SERVICES/DO_NOTS_TEMPLATE.md`
+## 07 · OUTPUT
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+- Vastgelegde grenzen gekoppeld aan workflows/agents.
 
-## Gekoppelde workflow
+## 08 · QUALITY CONTROL
 
-Governance compliance workflow
+- Elke do-not heeft reden en escalatie.
+- Scanbaar binnen 10 seconden.
 
-## Inputvelden
+## 09 · APPROVAL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Verbod | Wat niet mag | Ja | Governance | Kort formuleren |
-| Reden | Waarom dit risico geeft | Ja | Governance |  |
-| Escalatie | Wie beslist | Ja | CM CONTROL AGENT |  |
-| Alternatief | Toegestane werkwijze | Nee | Workflow |  |
+Ja — bij wijziging (CM CONTROL AGENT).
 
-## Output
+## 10 · HANDOFF
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- → Agent-instructies
+- → Betreffende workflow
 
-## Structuur / Tabs
+## 11 · SYSTEM OF RECORD
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Do nots | Concrete verboden acties | Ja |
-| Escalatie | Wanneer Sophia/CM CONTROL AGENT nodig is | Ja |
-| Toegestane route | Correcte vervolgstap | Ja |
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Approval
+## 12 · STORAGE
 
-Ja, bij wijziging. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+Drive: `[DOSSIER]` of agent-context
 
-## Kwaliteitscheck
+## 13 · AI INSTRUCTIONS
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Template Usage Report
+## 14 · AUTOMATION HOOKS
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Do-not gewijzigd | Make → Agents | Instructie updaten | Regel→Agent guardrail |
 
-## Status
+## 15 · CHANGELOG
 
-ACTIVE
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM CONTROL AGENT |
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+---
 
-## Reviewritme
-
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
-
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

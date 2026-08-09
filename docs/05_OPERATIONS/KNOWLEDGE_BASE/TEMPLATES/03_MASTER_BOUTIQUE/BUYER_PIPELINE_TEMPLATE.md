@@ -1,63 +1,62 @@
 <img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-# CUSTOMMADE AGENCY — DEAL PIPELINE (CLICKUP REFERENCE)
+# CUSTOMMADE AGENCY — BUYER PIPELINE TEMPLATE
 
 ## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
 |---|---|
 | Document type | Operational Template |
-| Onderdeel van | CM Template Library / ClickUp References |
+| Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM PROSPECT AGENT |
 | Support agents | CM FLOW AGENT |
 | Status | ACTIVE — V2 |
 | Versie | V2.0 |
 | Datum | JULI 2026 |
-| Risico | LOW |
+| Risico | MEDIUM |
 | Approval | Ja — bij pipelinewijziging |
 
 ## 02 · PURPOSE
 
-Referentiespecificatie voor dealpipeline-statussen en de ClickUp-koppeling.
+Buyer-outreach en dealpipeline per asset: welke kopers in welke fase, met waarde, kans en volgende actie. Spiegelt de ClickUp-pipeline (geen duplicatie van uitvoering).
 
 ## 03 · TRIGGER
 
-- Master Boutique pipeline, buyer outreach, dealopvolging.
+- Buyer outreach, dealopvolging, Master Boutique pipeline.
 
 ## 04 · INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Pipeline-statussen | Ja | ClickUp |
+| Deal Memo + Valuation | Ja | Deal Memo |
+| Buyer leads | Ja | CRM/outreach |
 
 ## 05 · WORKING TEMPLATE
 
-### Statussen
+### Pipeline
 
-| Status | Betekenis | Vereiste |
-|---|---|---|
-| Lead | Nieuw contact | — |
-| Qualified | Gekwalificeerde buyer | Qualification |
-| Diligence | In beoordeling | NDA + Data Room |
-| Closing | Afronding | SPA/APA |
-| Closed | Afgerond | Approval |
+| Buyer | Type | Asset | Value | Probability | Stage | NDA | Qualification | Next action | Owner | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
 ## 06 · DECISION GATES
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Pipeline-status wordt in ClickUp beheerd; dit is de definitie.
+> **01** — Stage-overgang naar Diligence → NDA + Qualification vereist.
 >
-> **02** — Diligence-fase → NDA + Qualification.
+> **02** — Pipeline-status wordt in ClickUp beheerd; dit is de definitie/naslag.
+>
+> **03** — Value boven drempel → LEGAL + Sophia.
 
 ## 07 · OUTPUT
 
-- Statusdefinitie voor de buyer-pipeline.
+- Actuele buyer-pipeline gekoppeld aan ClickUp.
 
 ## 08 · QUALITY CONTROL
 
-- Elke status heeft betekenis en vereiste.
+- Elke buyer heeft stage en next action.
 
 ## 09 · APPROVAL
 
@@ -65,8 +64,9 @@ Ja — bij pipelinewijziging.
 
 ## 10 · HANDOFF
 
-- → Buyer Pipeline
-- → ClickUp
+- → ClickUp (pipeline)
+- → Data Room
+- → Deal Memo
 
 ## 11 · SYSTEM OF RECORD
 
@@ -74,7 +74,7 @@ GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financ
 
 ## 12 · STORAGE
 
-ClickUp (pipeline)
+Drive: `04_DEALS/[DEAL]/04_OUTREACH_CLICKUP`
 
 ## 13 · AI INSTRUCTIONS
 
@@ -87,7 +87,8 @@ ClickUp (pipeline)
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Status gewijzigd | ClickUp | Pipeline-update | — |
+| Buyer toegevoegd | Make → ClickUp | Pipeline-kaart | Buyer→Card, Stage→Status |
+| Stage change | Make → ClickUp | Status + taak | Stage→Status |
 
 ## 15 · CHANGELOG
 

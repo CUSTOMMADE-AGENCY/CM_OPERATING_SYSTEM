@@ -1,89 +1,98 @@
-# REGISTER_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — REGISTER TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | REGISTER_TEMPLATE |
-| Domein | Shared Services |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM OPS AGENT |
-| Support Agents | CM CONTROL AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[DOSSIER]/[DOMEINMAP]` |
-| Gekoppelde workflow | Dossier hygiene workflow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM CONTROL AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | CM OPS AGENT — Level 1 |
 
-## Doel
+## 02 · PURPOSE
 
-Generiek registeroverzicht voor een dossier-domeinmap (bijv. Releases, Booking, Social, Press/EPK, Archive): welke items bestaan, hun status en vindplaats. Vul `[DOMEIN]` in per gebruik.
+Generiek registeroverzicht voor een dossier-domeinmap (Releases, Booking, Social, Press/EPK, Archive). Vul `[DOMEIN]` in per gebruik.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Als index/overzicht binnen een domeinmap van een dossier.
+- Als index binnen een domeinmap.
 - Bij het bijhouden van items, status en locatie.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Vertrouwelijke of ingevulde data in de template-specificatie.
-- Getekende documenten of operationele exports.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Domein | Ja | Dossier |
+| Items | Ja | Domeinmap |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Domein en dossier.
-- Items met status, eigenaar en locatie.
+### Register — [DOMEIN]
 
-## Werkwijze
+| Item | Status | Eigenaar | Locatie | Datum |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
+| TBD | TBD | TBD | TBD | TBD |
 
-1. Vul het domein in (`[DOMEIN]`).
-2. Registreer per item: naam, status, eigenaar, locatie, datum.
-3. Houd het register actueel; verwijs superseded items naar het archief.
+## 06 · DECISION GATES
 
-## Beslismomenten
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Superseded items verwijzen naar het archief.
+>
+> **02** — Geen losse bestanden zonder registratie.
 
-- Onvolledige of onzekere velden markeren als `TBD`.
-- Bij twijfel of afwijking escaleren naar de Owner Agent.
+## 07 · OUTPUT
 
-## Output
+- Actuele index van de domeinmap.
 
-- Ingevuld, scanbaar document conform doel.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+## 08 · QUALITY CONTROL
 
-## Kwaliteitscontrole
+- Elk item heeft status, eigenaar en locatie.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Owner, output en volgende stap duidelijk.
-
-## Goedkeuring
+## 09 · APPROVAL
 
 Level 1 — CM OPS AGENT.
 
-## Overdracht
+## 10 · HANDOFF
 
-Naar de betreffende Drive-map en, waar relevant, de gekoppelde ClickUp-taak.
+- → Betreffende domeinmap
 
-## Opslag
+## 11 · SYSTEM OF RECORD
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/01_SHARED_SERVICES/REGISTER_TEMPLATE.md`.
-Drive werkbare kopie: `[DOSSIER]/[DOMEINMAP]`.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## AI-instructies
+## 12 · STORAGE
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+Drive: `[DOSSIER]/[DOMEINMAP]`
 
-## Wijzigingslog
+## 13 · AI INSTRUCTIONS
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM OPS AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Item toegevoegd | Make → ClickUp | Register-regel | Item→Row |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

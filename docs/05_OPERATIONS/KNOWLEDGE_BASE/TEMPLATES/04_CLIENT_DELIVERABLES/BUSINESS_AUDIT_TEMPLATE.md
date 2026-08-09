@@ -1,105 +1,101 @@
-# BUSINESS_AUDIT_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — BUSINESS AUDIT TEMPLATE
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Operationele audit van artist business, inkomsten, team en systemen.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Client Deliverables |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM MONEY AGENT |
+| Support agents | CM OPS AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | FINANCIAL |
+| Approval | Ja — vóór client-facing oplevering |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij retainerstart, kwartaalreview of strategische herpositionering.
+Operationele audit van artist business: inkomsten, team, systemen en processen, met prioriteiten.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Retainerstart, kwartaalreview of strategische herpositionering.
 
-## Owner Agent
+## 04 · INPUT
 
-CM MONEY AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| Inkomstenbronnen | Ja | 06_FINANCE |
+| Team/rollen | Ja | 01_ADMIN |
+| Systemen | Ja | Ops |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM OPS AGENT; CM MONEY AGENT
+### Audit
 
-## System of Record
+| Domein | Bevinding | Risico | Aanbeveling | Prioriteit |
+|---|---|---|---|---|
+| Inkomsten | TBD | TBD | TBD | TBD |
+| Team | TBD | TBD | TBD | TBD |
+| Systemen | TBD | TBD | TBD | TBD |
+| Processen | TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+## 06 · DECISION GATES
 
-## Opslaglocatie
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen vertrouwelijke financiële bronstukken in de specificatie.
+>
+> **02** — Client-facing → approval.
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/04_CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md`
+## 07 · OUTPUT
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+- Auditrapport; acties → ClickUp.
 
-## Gekoppelde workflow
+## 08 · QUALITY CONTROL
 
-Business audit workflow
+- Elke bevinding heeft aanbeveling.
 
-## Inputvelden
+## 09 · APPROVAL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Businessmodel | Inkomstenstromen | Ja | Client input | Geen bedragen in template |
-| Team | Rollen en verantwoordelijkheden | Ja | Client input |  |
-| Systemen | Tools en opslagplaatsen | Ja | Audit |  |
-| Risico | Belangrijkste operationele risico’s | Ja | Audit |  |
+Ja — vóór client-facing oplevering.
 
-## Output
+## 10 · HANDOFF
 
-- Schone, kopieerbare documentspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- → ClickUp
+- → Roadmap
 
-## Structuur / Tabs
+## 11 · SYSTEM OF RECORD
 
-| Sectie | Doel | Verplicht |
-| --- | --- | --- |
-| Overview | Kernbevindingen | Ja |
-| Business scan | Inkomsten, team, tools | Ja |
-| Risico’s | Operationele gaps | Ja |
-| Prioriteiten | Volgende acties | Ja |
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Approval
+## 12 · STORAGE
 
-Ja, vóór client-facing oplevering. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+Drive: `[DOSSIER]/04_DELIVERABLES`
 
-## Kwaliteitscheck
+## 13 · AI INSTRUCTIONS
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Template Usage Report
+## 14 · AUTOMATION HOOKS
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Audit opgeleverd | Make → ClickUp | Acties | Aanbeveling→Task |
 
-## Status
+## 15 · CHANGELOG
 
-ACTIVE
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM MONEY AGENT |
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+---
 
-## Reviewritme
-
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
-
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

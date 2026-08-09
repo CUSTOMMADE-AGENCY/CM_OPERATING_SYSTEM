@@ -1,89 +1,102 @@
-# CONTACT_SHEET_TEMPLATE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — CONTACT SHEET TEMPLATE
 
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | CONTACT_SHEET_TEMPLATE |
-| Domein | Shared Services |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM OPS AGENT |
-| Support Agents | CM VAULT AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | Drive `[DOSSIER]/01_ADMIN` |
-| Gekoppelde workflow | Dossier onboarding workflow |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / Shared Services |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM OPS AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | CM OPS AGENT — Level 1 |
 
-## Doel
+## 02 · PURPOSE
 
-Overzicht van sleutelcontacten en rollen binnen een dossier.
+Overzicht van sleutelcontacten en rollen per dossier. Verwijst naar de bron van de contactgegevens; bevat zelf geen persoons- of privégegevens.
 
-## Wanneer gebruiken
+## 03 · TRIGGER
 
-- Bij dossieraanmaak of wijziging in het team.
-- Bij overdracht tussen agents.
+- Dossieraanmaak of teamwijziging.
+- Overdracht tussen agents.
 
-## Niet gebruiken voor
+## 04 · INPUT
 
-- Vertrouwelijke of ingevulde data in de template-specificatie.
-- Getekende documenten of operationele exports.
-- Een alternatief format wanneer deze template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Rollen en aanspreekpunten | Ja | Intake / dossier |
+| Contact-records | Ja | Google Contacts / Gmail / Drive |
 
-## Input
+## 05 · WORKING TEMPLATE
 
-- Namen, rollen en contacttypen (geen privégegevens).
-- Primaire aanspreekpunten per lane.
+### Contacten (referentie, geen privégegevens)
 
-## Werkwijze
+| Rol | Naam | Organisatie | Contact-record / referentie | Preferred channel | Autoriteit | Status |
+|---|---|---|---|---|---|---|
+| Primair aanspreekpunt | TBD | TBD | TBD | TBD | TBD | TBD |
+| Finance | TBD | TBD | TBD | TBD | TBD | TBD |
+| Legal | TBD | TBD | TBD | TBD | TBD | TBD |
+| Content / Social | TBD | TBD | TBD | TBD | TBD | TBD |
 
-1. Vul rollen en contacttypen in.
-2. Markeer het primaire aanspreekpunt.
-3. Houd het overzicht actueel bij wijzigingen.
+## 06 · DECISION GATES
 
-## Beslismomenten
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen persoons- of privégegevens in dit bestand; alleen verwijzen naar de bron.
+>
+> **02** — Primair aanspreekpunt is altijd gemarkeerd.
 
-- Onvolledige of onzekere velden markeren als `TBD`.
-- Bij twijfel of afwijking escaleren naar de Owner Agent.
+## 07 · OUTPUT
 
-## Output
+- Actueel contactoverzicht met verwijzing naar de bronrecords.
 
-- Ingevuld, scanbaar document conform doel.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij gebruik.
+## 08 · QUALITY CONTROL
 
-## Kwaliteitscontrole
+- Elke rol heeft een aanspreekpunt of TBD.
+- Geen e-mailadressen/telefoonnummers in het bestand.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke data in de specificatie.
-- Owner, output en volgende stap duidelijk.
-
-## Goedkeuring
+## 09 · APPROVAL
 
 Level 1 — CM OPS AGENT.
 
-## Overdracht
+## 10 · HANDOFF
 
-Naar de betreffende Drive-map en, waar relevant, de gekoppelde ClickUp-taak.
+- → 01_ADMIN dossier
+- → Onboarding
 
-## Opslag
+## 11 · SYSTEM OF RECORD
 
-GitHub specificatie: `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md`.
-Drive werkbare kopie: `[DOSSIER]/01_ADMIN`.
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## AI-instructies
+## 12 · STORAGE
 
-- Gebruik eerst de template-index voordat een nieuw format wordt voorgesteld.
-- Verzin nooit ontbrekende informatie; markeer als `TBD`.
-- Gebruik geen clientdata of vertrouwelijke informatie in de specificatie.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+Drive: `[DOSSIER]/01_ADMIN` · `YYYY-MM-DD_[ENTITY]_ADMIN_CONTACTSHEET_vX.Y`
 
-## Wijzigingslog
+## 13 · AI INSTRUCTIONS
 
-| Datum | Wijziging | Eigenaar | Reden |
-| --- | --- | --- | --- |
-| 2026-07-26 | Eerste template-specificatie aangemaakt (Sprint 6). | CM OPS AGENT | Gap uit TEMPLATE_PLACEMENT_MAP gedicht. |
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+
+## 14 · AUTOMATION HOOKS
+
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Contact toegevoegd | Make → Google Contacts | Record koppelen | Naam→Contact, Referentie→Link |
+
+## 15 · CHANGELOG
+
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+
+---
+
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

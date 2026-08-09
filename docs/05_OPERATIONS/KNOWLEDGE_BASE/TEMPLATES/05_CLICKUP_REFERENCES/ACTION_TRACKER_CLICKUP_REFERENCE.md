@@ -1,104 +1,97 @@
-# ACTION_TRACKER_CLICKUP_REFERENCE
-## Architectuurstandaard
+<img src="../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md`.
+# CUSTOMMADE AGENCY — ACTION TRACKER (CLICKUP REFERENCE)
 
-## Doel
+## 01 · DOCUMENT CONTROL
 
-Referentiespecificatie voor acties die in ClickUp uitgevoerd worden.
+| Veld | Waarde |
+|---|---|
+| Document type | Operational Template |
+| Onderdeel van | CM Template Library / ClickUp References |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM FLOW AGENT |
+| Support agents | CM VAULT AGENT |
+| Status | ACTIVE — V2 |
+| Versie | V2.0 |
+| Datum | JULI 2026 |
+| Risico | LOW |
+| Approval | Nee, tenzij workflowwijziging |
 
-## Wanneer gebruiken
+## 02 · PURPOSE
 
-Bij projecten waar Drive/GitHub documentatie naar ClickUp-acties moet verwijzen.
+Referentiespecificatie voor acties die in ClickUp worden uitgevoerd. Dupliceert geen uitvoering; definieert de koppeling.
 
-## Niet gebruiken voor
+## 03 · TRIGGER
 
-- Ingevulde clientdata.
-- Vertrouwelijke informatie, getekende documenten of operationele exports.
-- Een alternatief format wanneer een bestaande CM-template past.
+- Documentatie die naar ClickUp-acties verwijst.
 
-## Owner Agent
+## 04 · INPUT
 
-CM FLOW AGENT
+| Input | Verplicht | Bron |
+|---|---|---|
+| ClickUp-lijst | Ja | ClickUp |
+| Filter/view | Ja | ClickUp |
 
-## Support Agents
+## 05 · WORKING TEMPLATE
 
-CM VAULT AGENT; CM OPS AGENT
+### Koppeling
 
-## System of Record
+| Onderdeel | Verwijzing |
+|---|---|
+| ClickUp-lijst | TBD |
+| Filter/view | TBD |
+| Eigenaar | CM FLOW AGENT |
+| Statussen | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie of operationele ingevulde versie.
+## 06 · DECISION GATES
 
-## Opslaglocatie
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Taken worden niet buiten ClickUp gedupliceerd.
 
-GitHub specificatie:
-`docs/03_SHARED_SERVICES/TEMPLATES/05_CLICKUP_REFERENCES/ACTION_TRACKER_CLICKUP_REFERENCE.md`
+## 07 · OUTPUT
 
-Drive werkbare kopie:
-TBD – Sophia / VAULT beslissing
+- Verwijzing naar de actuele ClickUp-acties.
 
-## Gekoppelde workflow
+## 08 · QUALITY CONTROL
 
-ClickUp action tracking workflow
+- Lijst en eigenaar benoemd.
 
-## Inputvelden
+## 09 · APPROVAL
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| ClickUp task ID | Unieke taakreferentie | Ja | ClickUp | Geen uitvoering in GitHub |
-| Actie | Korte actieomschrijving | Ja | ClickUp |  |
-| Owner | Verantwoordelijke rol | Ja | ClickUp |  |
-| Deadline | Datum of sprint | Nee | ClickUp |  |
+Nee, tenzij workflowwijziging.
 
-## Output
+## 10 · HANDOFF
 
-- Schone, kopieerbare registerspecificatie zonder clientdata.
-- Operationele kopie in Drive of ClickUp-referentie zodra een case daarom vraagt.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+- → ClickUp
 
-## Structuur / Tabs
+## 11 · SYSTEM OF RECORD
 
-| Tab | Doel | Verplicht |
-| --- | --- | --- |
-| Acties | Taskreferenties en status | Ja |
-| Besluiten | Beslissingen gekoppeld aan taken | Nee |
-| Risico’s | Blokkades gekoppeld aan taken | Nee |
+GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## Approval
+## 12 · STORAGE
 
-Nee, tenzij workflowwijziging. Approval wordt vastgelegd in de operationele projectmap of ClickUp-taak, niet in deze template-specificatie.
+ClickUp (systeem van uitvoering)
 
-## Kwaliteitscheck
+## 13 · AI INSTRUCTIONS
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten.
-- Duidelijke eigenaar, output en volgende stap.
-- Geen parallel format als deze template past.
+- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
+- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
+- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
 
-## Template Usage Report
+## 14 · AUTOMATION HOOKS
 
-Agents moeten bij gebruik vastleggen:
-- welke template is geraadpleegd;
-- of de template is gekopieerd;
-- waar de operationele versie staat;
-- welke afwijkingen of gaps zijn gevonden.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Actie aangemaakt | ClickUp | Uitvoering | — |
 
-## Status
+## 15 · CHANGELOG
 
-ACTIVE
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM FLOW AGENT |
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+---
 
-## Reviewritme
-
-- Laatste review: 2026-07-01
-- Volgende review: 2026-10-01
-- Ritme: elk kwartaal of eerder bij governancewijziging.
-
-## Wijzigingslog
-
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-01 | Eerste template-specificatie toegevoegd aan centrale CM Template Library. | CM VAULT AGENT |
+_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._

@@ -1,3 +1,5 @@
+> **STATUS: `SUPERSEDED`** — Vervangen door `99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md` (15-sectie machine-readable standaard). Dit V1-document (14 onderdelen) blijft bewaard voor historie en wordt niet meer gebruikt als leidende standaard.
+
 # TEMPLATE_ARCHITECTUURSTANDAARD
 
 ## Doel
