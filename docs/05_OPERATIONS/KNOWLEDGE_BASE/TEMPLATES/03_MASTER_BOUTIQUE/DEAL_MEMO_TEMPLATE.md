@@ -6,173 +6,181 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Deal Tool |
 | Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM PROSPECT AGENT |
-| Support agents | CM LEGAL AGENT · CM CONTROL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Support agents | CM LEGAL AGENT · CM MONEY AGENT · CM CONTROL AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | FINANCIAL / LEGAL |
-| Approval | Ja — vóór buyer-facing gebruik (Level 4 → Sophia) |
+| Approval | Ja — vóór buyer-facing gebruik; Level 4 → Sophia |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Volwaardige acquisition/sale tool voor catalog sale, master resale of rights brokerage: asset, financials, valuation, deal structure, diligence en transactiestatus in één memo.
+Transaction-ready deal memo voor catalog sale, master resale of rights brokerage. Brengt asset scope, rights status, financials, valuation, dealstructuur, diligence, buyer-stage en beslispunten samen zonder de onderliggende Rights Register, Valuation of contractstukken te vervangen.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Dealkwalificatie, buyer-facing voorbereiding of interne approval.
+- Dealkwalificatie.
+- Interne go/no-go.
+- Buyer-facing voorbereiding.
+- Onderhandeling en diligence.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
 | Music Rights Register | Ja | Rights Register |
-| Royalty statements | Ja | 06_FINANCE |
-| Chain of title | Ja | 02_CONTRACT |
+| Rights Audit | Ja vóór buyer-facing | Rights Audit |
+| Financials / statements | Ja | Moneybird / royalty statements |
+| Valuation | Ja vóór pricing | Valuation Template |
+| Buyer/pipeline-status | Indien outreach | ClickUp / Buyer Pipeline |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Asset
+### DEAL — IDENTITEIT & ASSET
 
-| Veld | Waarde |
+| Deal-ID | Asset/type | Aantal werken | Releaseperiode | Territory | Rights % aangeboden |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### DEAL — RIGHTS & CHAIN OF TITLE
+
+| Deal-ID | Rights scope | Chain of title status | Rights Audit status | Restricties/claims | Bron |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### FINANCIALS
+
+| Inkomstenlane | Periode | Actual | Historie/forecast | Bron | Opmerking |
+|---|---|---|---|---|---|
+| Master royalties | LTM | TBD | TBD | TBD | TBD |
+| Publishing | LTM | TBD | TBD | TBD | TBD |
+| Neighboring rights | LTM | TBD | TBD | TBD | TBD |
+| Sync | LTM | TBD | TBD | TBD | TBD |
+| Overig | LTM | TBD | TBD | TBD | TBD |
+
+### FINANCIËLE POSITIE
+
+| Deal-ID | Gross | Net | Recoupment status | Outstanding advances | Bron |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### WAARDERING
+
+| Deal-ID | Methode | Low | Base | High | Asking price |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### OFFER & DEALSTRUCTUUR
+
+| Deal-ID | Indicative offer | Minimum acceptabel | Assignment/licence | Term | Exclusiviteit |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### BETALINGSSTRUCTUUR
+
+| Deal-ID | Upfront | Earn-out | Holdback | Seller participation | CM/broker fee |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### DILIGENCE
+
+| Item | Status | Eigenaar | Bewijs/bron | Finding |
+|---|---|---|---|---|
+| Rights verified | TBD | TBD | TBD | TBD |
+| Metadata verified | TBD | TBD | TBD | TBD |
+| Royalty statements | TBD | TBD | TBD | TBD |
+| Contracts | TBD | TBD | TBD | TBD |
+| Disputes/claims | TBD | TBD | TBD | TBD |
+| Liens/encumbrances | TBD | TBD | TBD | TBD |
+| Tax/VAT | TBD | TBD | TBD | TBD |
+
+### TRANSACTIE
+
+| Deal-ID | Stage | Tegenpartij | Volgende actie | Eigenaar | Deadline |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+_Alle Deal-ID-blokken vormen inhoudelijk één deal-record._
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
 |---|---|
-| Type (catalog/track/master/publishing/neighbouring) | TBD |
-| Aantal werken | TBD |
-| Releaseperiode | TBD |
-| Territory | TBD |
-| Rights % aangeboden | TBD |
-| Chain of title status | TBD |
+| Deal stage | `LEAD` · `QUALIFIED` · `DILIGENCE` · `CLOSING` · `CLOSED` |
+| Diligence status | `NOT_STARTED` · `IN_PROGRESS` · `CLEAR` · `BLOCKED` |
 
-### Financials
-
-| Bron | LTM | 3-jr historie | Toelichting |
-|---|---|---|---|
-| Master royalties | TBD | TBD | TBD |
-| Publishing royalties | TBD | TBD | TBD |
-| Neighbouring rights | TBD | TBD | TBD |
-| Sync | TBD | TBD | TBD |
-| Other | TBD | TBD | TBD |
-| Gross | TBD | TBD | TBD |
-| Net | TBD | TBD | TBD |
-| Recoupment status | TBD | TBD | TBD |
-| Outstanding advances | TBD | TBD | TBD |
-
-### Valuation
-
-| Veld | Waarde |
-|---|---|
-| Valuation method | TBD |
-| LTM multiple | TBD |
-| NTM multiple | TBD |
-| Asking price | TBD |
-| Indicative offer | TBD |
-| Minimum acceptable value | TBD |
-| Assumptions | TBD |
-
-### Deal structure
-
-| Veld | Waarde |
-|---|---|
-| Assignment/licence | TBD |
-| Perpetual/term | TBD |
-| Territory | TBD |
-| Exclusivity | TBD |
-| Payment structure | TBD |
-| Earn-out | TBD |
-| Holdback | TBD |
-| Seller participation | TBD |
-| Broker/CM fee | TBD |
-
-### Diligence
-
-| Item | Status | Bewijs |
-|---|---|---|
-| Rights verified | TBD | TBD |
-| Metadata verified | TBD | TBD |
-| Royalty statements | TBD | TBD |
-| Contracts | TBD | TBD |
-| Disputes | TBD | TBD |
-| Liens/encumbrances | TBD | TBD |
-| Claims | TBD | TBD |
-| Tax/VAT | TBD | TBD |
-| Approval status | TBD | TBD |
-
-### Transaction
-
-| Stap | Status | Datum |
-|---|---|---|
-| NDA | TBD | TBD |
-| Data room | TBD | TBD |
-| Buyer stage | TBD | TBD |
-| LOI | TBD | TBD |
-| Due diligence | TBD | TBD |
-| SPA/APA | TBD | TBD |
-| Closing | TBD | TBD |
-
-## 06 · DECISION GATES
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen buyer-facing gebruik zonder approval.
+> **01** — Geen buyer-facing memo zonder passende approval en Rights Audit.
 >
-> **02** — Valuation onderbouwd en controleerbaar.
+> **02** — Geen valuation/pricing zonder herleidbare financials en aannames.
 >
-> **03** — Rechten geverifieerd via Rights Audit.
+> **03** — `BLOCKED` diligence blokkeert voortgang naar closing.
 >
-> **04** — Level 4-beslissingen naar Sophia.
+> **04** — Level 4-beslissingen → Sophia.
 >
-> **05** — Geen data room access zonder NDA + Buyer Qualification.
+> **05** — Geen Data Room access zonder NDA + Buyer Qualification.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Buyer-facing deal memo; input voor Data Room en Buyer Pipeline.
+- Intern/buyer-facing deal memo volgens approvalniveau.
+- Input voor Data Room, Buyer Pipeline, negotiation en closing.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Financials, valuation en diligence compleet of TBD.
-- Chain of title status bekend.
+- Alle blokken koppelen via Deal-ID.
+- Rights-, financial- en valuation-data hebben bron.
+- Stage komt overeen met officiële pipeline-definitie.
+- Volgende actie heeft owner en deadline.
+- Geen fictieve financials, offers, rights of approvalgrenzen.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór buyer-facing gebruik; Level 4 → Sophia.
+Vóór buyer-facing gebruik; Level 4 → Sophia conform geldende CM approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
+- → Buyer Pipeline / ClickUp
 - → Data Room
-- → Buyer Pipeline
-- → 07_LEGAL
+- → Legal / closing workflow
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = spec · Drive = dealwerkkopie/evidence · ClickUp = uitvoering/pipeline · Moneybird = financiële waarheid. Rights Register/Legal evidence = rechtenbron.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET`
+Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET` · `YYYY-MM-DD_[DEAL]_DEAL_MEMO_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit rights, financials, valuation, offer, buyer-stage of approval; onbekend = `TBD`.
+- Financial actuals komen uitsluitend uit benoemde financiële/royaltybronnen.
+- Gebruik deal stages uit `DEAL_PIPELINE_CLICKUP_REFERENCE`.
+- Behoud A4-portret; gebruik gekoppelde Deal-ID-blokken.
+- Geen confidential deal evidence of getekende documenten in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Memo approved | Make → ClickUp | Deal-kaart | Asset→Card, Stage→Status |
-| Buyer stage change | Make → Pipeline | Status updaten | Stage→Status |
+| Deal toegevoegd/gewijzigd | Make → ClickUp | Deal-record | Deal-ID→External ID, Tegenpartij→Counterparty, Stage→Status, Eigenaar→Assignee, Deadline→Due date, Volgende actie→Next action |
+| Diligence `BLOCKED` | Make → ClickUp | Legal/finding taak | Item→Taak, Eigenaar→Assignee, Status→Status, Finding→Description |
+| Stage `DILIGENCE` | Make → Data Room workflow | Access-gate starten | Deal-ID→Reference, Tegenpartij→Buyer |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM PROSPECT AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM PROSPECT AGENT |
+| 2026-08-10 | V2.2 | Deal-ID-architectuur, A4-portret-blokken voor rights/financials/valuation/dealstructuur/diligence, officiële pipeline stages en valide mappings toegevoegd. | CM PROSPECT AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën/evidence._
