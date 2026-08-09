@@ -10,43 +10,48 @@
 | Onderdeel van | CM Template Library / Artist Management |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
-| Support agents | CM SOCIAL AGENT · CM LEGAL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
-| Risico | LOW |
-| Approval | Ja — vóór client-facing gebruik |
+| Support agents | CM SOCIAL AGENT · CM LEGAL AGENT · CM MONEY AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
+| Risico | MEDIUM |
+| Approval | Ja — vóór client-facing gebruik en budgetcommitment |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Strategisch raamwerk voor releasepositionering, timing en acties, met verplichte rights- en delivery-gates zodat een release nooit live gaat met openstaande rechten.
+Stuurbare releasestrategie voor positionering, rechten, delivery, campagne en economics. De template blokkeert een release wanneer rights-clearance, kernassets of delivery-eisen niet op orde zijn en levert directe input voor Release Kickoff en ClickUp.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Single, EP, album of campagneplanning.
+- Single-, EP- of albumplanning.
+- Nieuwe releasecampagne.
+- Strategische herijking vóór distributie of marketingstart.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Release-info | Ja | Roadmap |
-| Rights/splits status | Ja | Rights Register |
-| Budget | Ja | 06_FINANCE |
+| Release-info | Ja | Artist Roadmap |
+| Rights/splits status | Ja | Rights Register / Legal evidence |
+| Budget | Ja | Moneybird / goedgekeurd budget |
+| Assets & delivery-info | Ja | Release-dossier |
+| KPI-doelen | Ja | KPI Template |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Positionering
+### POSITIONERING
 
-| Onderdeel | Waarde |
-|---|---|
-| Verhaal | TBD |
-| Doelgroep | TBD |
-| Hoek/USP | TBD |
-| Referenties | TBD |
+| Onderdeel | Waarde | Bron/onderbouwing |
+|---|---|---|
+| Verhaal | TBD | TBD |
+| Doelgroep | TBD | TBD |
+| Hoek/USP | TBD | TBD |
+| Referenties | TBD | TBD |
+| Primair doel | TBD | KPI Template / TBD |
 
-### Rights clearance
+### RIGHTS CLEARANCE
 
-| Item | Status | Eigenaar | Bewijs |
+| Item | Status | Eigenaar | Bewijs/bron |
 |---|---|---|---|
 | Master ownership | TBD | TBD | TBD |
 | Splits | TBD | TBD | TBD |
@@ -56,98 +61,134 @@ Strategisch raamwerk voor releasepositionering, timing en acties, met verplichte
 | Publishing | TBD | TBD | TBD |
 | Artwork permissions | TBD | TBD | TBD |
 
-### Delivery
+_Rights status gebruikt uitsluitend `CLEAR` · `OPEN` · `BLOCKED`._
 
-| Deliverable | Status | Deadline |
-|---|---|---|
-| Final master | TBD | TBD |
-| Clean version | TBD | TBD |
-| Instrumental | TBD | TBD |
-| Metadata | TBD | TBD |
-| ISRC | TBD | TBD |
-| UPC | TBD | TBD |
-| Lyrics | TBD | TBD |
-| Credits | TBD | TBD |
-| DSP delivery | TBD | TBD |
+### DELIVERY
 
-### Campaign
+| Deliverable | Status | Deadline | Eigenaar | Bron/locatie |
+|---|---|---|---|---|
+| Final master | TBD | TBD | TBD | TBD |
+| Clean version | TBD | TBD | TBD | TBD |
+| Instrumental | TBD | TBD | TBD | TBD |
+| Metadata | TBD | TBD | TBD | TBD |
+| ISRC | TBD | TBD | TBD | TBD |
+| UPC | TBD | TBD | TBD | TBD |
+| Lyrics | TBD | TBD | TBD | TBD |
+| Credits | TBD | TBD | TBD | TBD |
+| DSP delivery | TBD | TBD | TBD | TBD |
 
-| Onderdeel | Plan | Budget | Owner |
+### CAMPAGNE — PLAN
+
+| Onderdeel | Plan | Eigenaar | Deadline | Status |
+|---|---|---|---|---|
+| Content | TBD | TBD | TBD | TBD |
+| PR | TBD | TBD | TBD | TBD |
+| Radio | TBD | TBD | TBD | TBD |
+| DSP pitching | TBD | TBD | TBD | TBD |
+| Influencers/UGC | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD |
+| Partnerships | TBD | TBD | TBD | TBD |
+
+### CAMPAGNE — BUDGET
+
+| Onderdeel | Goedgekeurd budget | Werkelijke kosten | Verschil | Bron |
+|---|---|---|---|---|
+| Content | TBD | TBD | TBD | TBD |
+| PR | TBD | TBD | TBD | TBD |
+| Radio | TBD | TBD | TBD | TBD |
+| DSP pitching | TBD | TBD | TBD | TBD |
+| Influencers/UGC | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD |
+| Partnerships | TBD | TBD | TBD | TBD |
+
+_De twee campagneblokken vormen per onderdeel inhoudelijk één campagne-record. Werkelijke kosten komen uit Moneybird; deze template vervangt Moneybird niet._
+
+### ECONOMICS
+
+| Metric | Waarde | Bron | Status |
 |---|---|---|---|
-| Content | TBD | TBD | TBD |
-| PR | TBD | TBD | TBD |
-| Radio | TBD | TBD | TBD |
-| DSP pitching | TBD | TBD | TBD |
-| Influencers/UGC | TBD | TBD | TBD |
-| Live | TBD | TBD | TBD |
-| Partnerships | TBD | TBD | TBD |
+| Totaal goedgekeurd budget | TBD | TBD | TBD |
+| Expected streams | TBD | KPI / forecast | TBD |
+| Projected royalties | TBD | Forecast / TBD | TBD |
+| Break-even | TBD | Berekening / TBD | TBD |
+| Marketing ROI | TBD | Berekening / TBD | TBD |
 
-### Economics
+### GECONTROLEERDE STATUSSEN
 
-| Metric | Waarde |
+| Veld | Toegestane waarden |
 |---|---|
-| Budget | TBD |
-| Expected streams | TBD |
-| Projected royalties | TBD |
-| Break-even | TBD |
-| Marketing ROI | TBD |
+| Rights status | `CLEAR` · `OPEN` · `BLOCKED` |
+| Delivery status | `NOT_STARTED` · `IN_PROGRESS` · `READY` · `BLOCKED` |
+| Campagne status | `NOT_STARTED` · `IN_PROGRESS` · `READY` · `DONE` · `BLOCKED` |
 
-## 06 · DECISION GATES
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen release live met openstaande rights-clearance (splits · features · samples · publishing).
+> **01** — Geen release live zolang een verplicht rights-item niet `CLEAR` is.
 >
-> **02** — Geen live zonder complete delivery (master · metadata · ISRC/UPC).
+> **02** — Geen livegang zonder final master, metadata en distributie-identifiers gereed.
 >
-> **03** — Campaign-budget → approval.
+> **03** — Geen budgetcommitment zonder toepasselijke approval conform CM approval governance.
+>
+> **04** — Geen client-facing strategie zonder goedkeuring.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Goedgekeurde release-strategie + Release Kickoff.
+- Goedgekeurde releasestrategie.
+- Input voor Release Kickoff en ClickUp-campagne.
+- Financieel kader met herleidbare budgetbron.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Alle rights-items cleared of expliciet TBD met eigenaar.
-- Delivery-checklist compleet.
+- Alle rights-items hebben status, eigenaar en bron/bewijs.
+- Delivery heeft deadline en eigenaar.
+- Campagneplan en budget zijn per onderdeel gekoppeld.
+- Werkelijke kosten zijn herleidbaar naar Moneybird.
+- Automation-statusvelden gebruiken alleen gecontroleerde waarden.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór client-facing gebruik; campaign approval bij budget.
+Ja — vóór client-facing gebruik; financiële toezeggingen escaleren conform CM approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Release Kickoff
 - → ClickUp
+- → KPI Template
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
 GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[ARTIST]/04_RELEASES`
+Drive: `[ARTIST]/04_RELEASES` · `YYYY-MM-DD_[ARTIST]_[RELEASE]_RELEASE_STRATEGY_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index; maak geen parallelle template.
+- Verzin nooit rights-clearance, deadlines, bedragen of actuals; onbekend = `TBD`.
+- Werkelijke kosten komen uitsluitend uit Moneybird of benoemde financiële bron.
+- Behoud A4-portret; campagneplan en campagnebudget blijven gekoppelde blokken.
+- Geen clientdata of getekende contracten in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Rights cleared | Make → ClickUp | Release unblocken | Item→Status |
-| Strategy approved | Make → ClickUp | Kickoff-lijst | Release→List |
+| Rights status `OPEN`/`BLOCKED` | Make → ClickUp | Legal/rechten-taak | Item→Taak, Eigenaar→Assignee, Status→Status |
+| Delivery toegevoegd/gewijzigd | Make → ClickUp | Delivery-taak | Deliverable→Taak, Deadline→Due date, Eigenaar→Assignee, Status→Status |
+| Strategie goedgekeurd | Make → ClickUp | Release Kickoff starten | Onderdeel→Task, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Campagnekosten geactualiseerd | Make | Read-only financieel verwerken | Onderdeel→Item, Werkelijke kosten→Actual, Bron→Source |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, gecontroleerde statussen, rights/delivery-diepte, gekoppeld campagneplan/budget, Moneybird-bronregels en valide automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
