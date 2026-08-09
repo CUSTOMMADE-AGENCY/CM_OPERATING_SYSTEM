@@ -1,123 +1,124 @@
-# START_HIER_07_LEGAL_TEMPLATE
-## Architectuurstandaard
+# CUSTOMMADE AGENCY — START HIER 07 LEGAL TEMPLATE
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md` en is inhoudelijk afgestemd op `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/07_LEGAL.md`.
-
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | START_HIER_07_LEGAL_TEMPLATE |
-| Domein | Start Hier |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM LEGAL AGENT |
-| Support Agents | CM CONTROL AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | `OS_CUSTOMMADE/07_LEGAL/00_START_HIER` |
-| Gekoppelde workflow | TBD |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template / Start Hier |
+| Onderdeel van | CM Template Library / Start Hier / Legal |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM LEGAL AGENT |
+| Support agents | CM CONTROL AGENT · CM VAULT AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
+| Risico | LEGAL / GOVERNANCE |
+| Approval | Conform legal/governance |
 
-## Doel
+## 02 · DOEL
 
-Startdocument voor de Drive-map `07_LEGAL/00_START_HIER`. Het geeft direct de juridische instructies, het overzicht en de legal governance-referentie voor contracten, approvals, rechten en bewijsstukken.
+Startdocument voor `07_LEGAL/00_START_HIER`: maakt in één scan duidelijk welke juridische werklaag geldt, waar contracten/evidence/approvals horen, welke governance leidend is en welke open legal acties bestaan.
 
-## Wanneer gebruiken
+## 03 · GEBRUIKSMOMENT
 
-Bij inrichting van de `07_LEGAL`-map en als levend startpunt bij het navigeren of bijwerken van juridische documentatie in Drive.
+- Inrichting of review van `07_LEGAL`.
+- Nieuwe legal workflow of governancewijziging.
+- Overdracht van juridische beheercontext.
 
-## Niet gebruiken voor
+## 04 · BENODIGDE INPUT
 
-- Ingevulde vertrouwelijke of getekende juridische documenten in de template-specificatie.
-- Operationele dealdossiers (→ `04_DEALS`).
-- Een alternatief format wanneer deze START_HIER-template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Legal mapstructuur | Ja | Drive Structure / 07_LEGAL map spec |
+| Approval governance | Ja | Governance / Approval Register |
+| Open legal acties | Indien aanwezig | ClickUp / Legal review |
+| Belangrijke referenties | Ja | Knowledge Base / Legal evidence |
 
-## Owner Agent
+## 05 · WERKTEMPLATE
 
-CM LEGAL AGENT — bewaakt de juridische structuur, contracten, approvals en het approval register.
+### LEGAL — NAVIGATIE
 
-## Support Agents
+| Onderdeel | Doel | Canonical locatie | Owner |
+|---|---|---|---|
+| Contracten | TBD | TBD | TBD |
+| Approvals | TBD | TBD | TBD |
+| Evidence | TBD | TBD | TBD |
+| Legal review | TBD | TBD | TBD |
 
-| Agent | Rol in deze map |
-| --- | --- |
-| CM CONTROL AGENT | Governance-controle en escalatie. |
+### LEGAL — OPEN ACTIES
 
-## System of Record
+| Actie-ID | Actie | Bronreferentie | Eigenaar | Deadline | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en legal governance.
-Drive = werkbare kopie in `07_LEGAL/00_START_HIER`.
+### GECONTROLEERDE STATUSSEN
 
-## Opslaglocatie
+| Veld | Toegestane waarden |
+|---|---|
+| Actiestatus | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
 
-GitHub specificatie:
-`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/08_START_HIER/START_HIER_07_LEGAL_TEMPLATE.md`
+## 06 · BESLISPOORTEN
 
-Drive werkbare kopie:
-`OS_CUSTOMMADE/07_LEGAL/00_START_HIER/START_HIER_07_LEGAL.md`
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Het operationele approval audit trail staat uitsluitend in het geldende CM Approval Register.
+>
+> **02** — Deal-evidence blijft in het juiste dealdossier; 07_LEGAL is geen duplicatie van volledige dealdossiers.
+>
+> **03** — Geen vertrouwelijke/getekende juridische inhoud in de GitHub-specificatie.
+>
+> **04** — Bij onduidelijke bevoegdheid of Level 4-impact escaleren conform governance.
 
-## Gekoppelde workflow / SOP / Playbook
+## 07 · RESULTAAT
 
-- Workflow: TBD
-- SOP: TBD
-- Playbook: TBD
+- Scanbare legal navigatie.
+- Eenduidige source-of-truth verwijzingen.
+- Open legal acties gekoppeld aan ClickUp.
 
-## Inputvelden
+## 08 · KWALITEITSCONTROLE
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Mapoverzicht | Korte uitleg van de juridische werklaag | Ja | 07_LEGAL.md | Geen vertrouwelijke data |
-| Instructies | Hoe juridische documenten worden beheerd | Ja | CM LEGAL AGENT | Verwijs naar approval register |
-| Referenties | Belangrijke gekoppelde documenten | Ja | Knowledge Base | Alleen referenties |
+- Canonical locaties zijn benoemd of `TBD`.
+- Geen duplicate approval- of evidence-locaties.
+- Open acties hebben Actie-ID, owner, deadline en status.
 
-## START_HIER inhoud (in te vullen in Drive)
+## 09 · GOEDKEURING
 
-Vul in de Drive-kopie minimaal de volgende secties in:
+CM LEGAL AGENT; governance-impact conform CM CONTROL/approvalregels.
 
-1. **Doel van deze map** — De juridische werklaag van CM.
-2. **Wat hoort hier wel / niet** — Toegestane documenttypen conform `07_LEGAL.md`; operationele dealdossiers horen in `04_DEALS`.
-3. **Submappen** — Zie de actuele structuur in `07_LEGAL.md` hoofdstuk 5 en `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md`. Het approval register staat in `APPROVALS/CM_APPROVAL_REGISTER`.
-4. **Instructies** — Hoe de map te gebruiken en bij te werken.
-5. **Source of Truth** — GitHub = governance; Drive = opslag; het approval register in `07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER` is de enige operationele approval-locatie.
-6. **Approval en escalatie** — Escalatie naar CM LEGAL AGENT, daarna CM CONTROL AGENT.
+## 10 · OVERDRACHT
 
-## Output
+- → Contract/Approval/Legal workflows
+- → ClickUp
+- → Drive legal/evidence locaties
 
-- Schone, kopieerbare START_HIER-specificatie zonder vertrouwelijke juridische data.
-- Operationele startkopie in `07_LEGAL/00_START_HIER`.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+## 11 · LEIDENDE BRON
 
-## AI-instructies
+GitHub = legal governance/spec · Drive = juridische documenten/evidence · ClickUp = uitvoering · Moneybird = financiële waarheid. CM Approval Register = operationeel approval audit trail.
 
-- Raadpleeg eerst de template-index voordat je een nieuw format voorstelt.
-- Verzin nooit ontbrekende informatie; markeer onbekende velden als `TBD`.
-- Benoem expliciet welke input ontbreekt wanneer de template niet volledig kan worden ingevuld.
-- Gebruik geen clientdata, vertrouwelijke informatie of getekende documenten in de template-specificatie.
-- Maak geen parallelle START_HIER-templates aan wanneer deze past.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+## 12 · OPSLAG
 
-## Kwaliteitscheck
+Drive: `07_LEGAL/00_START_HIER` · `START_HIER_07_LEGAL`.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen vertrouwelijke of juridische brondata in de specificatie.
-- Duidelijke owner, source of truth en volgende stap.
-- Submapverwijzing conform de leidende baseline (`07_LEGAL` bevat `00_START_HIER` conform GAP-017-oplossing A).
+## 13 · AI-INSTRUCTIES
 
-## Status
+- Verzin nooit legal status, approval, evidence of locatie; onbekend = `TBD`.
+- Maak geen parallel approvalregister of legal mapstructuur.
+- Behoud A4-portret en compacte navigatieblokken.
+- Gebruik alleen referenties naar vertrouwelijke documenten.
 
-ACTIVE
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Legal actie toegevoegd/gewijzigd | Make → ClickUp | Legal taak | Actie-ID→External ID, Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status, Bronreferentie→Source |
 
-## Reviewritme
+## 15 · WIJZIGINGSLOG
 
-- Laatste review: 2026-07-26
-- Volgende review: 2026-10-26
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-26 | V1.0 | Eerste START_HIER-template voor 07_LEGAL. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Gemigreerd naar V2.2 met legal navigatie, Actie-ID, approval-register guardrail en automation mappings. | CM LEGAL AGENT |
 
-## Wijzigingslog
+---
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-26 | Eerste START_HIER-template voor `07_LEGAL` toegevoegd aan de CM Template Library. | CM VAULT AGENT |
+_Leidende bron: GitHub. Drive bevat de operationele legal werklaag._
