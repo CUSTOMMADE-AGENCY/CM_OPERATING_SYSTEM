@@ -11,133 +11,157 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM MONEY AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | Ja — bij client-facing gebruik |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Kern-KPIs per artist, verdeeld in lanes (Audience, Release, Revenue, Business, Pipeline), als basis voor kwartaalmanagement.
+Kern-KPI's per artist als stuurbare managementset voor audience, releases, inkomsten, business en pipeline. Elke KPI heeft een periode, bron, baseline, actuele waarde, doel en trend zodat de cijfers herleidbaar zijn en direct aan roadmap- en rapportagebeslissingen kunnen worden gekoppeld.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Managementstart, kwartaalreview of strategische herijking.
+- Managementstart.
+- Kwartaalreview.
+- Strategische herijking.
+- Maandrapportage wanneer KPI-actuals nodig zijn.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Meetbronnen per lane | Ja | DSP/Moneybird/ClickUp |
-| Doelwaarden | Ja | Roadmap |
+| Audience-/DSP-data | Ja | DSP / platformbron |
+| Financiële actuals | Ja indien van toepassing | Moneybird / benoemde royaltybron |
+| Pipeline-data | Ja | ClickUp |
+| Doelwaarden | Ja | Artist Roadmap / Jaarplan |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Audience
+### AUDIENCE
 
-| KPI | Baseline | Actual | Target | Trend |
-|---|---|---|---|---|
-| Monthly listeners | TBD | TBD | TBD | TBD |
-| Followers | TBD | TBD | TBD | TBD |
-| Conversion | TBD | TBD | TBD | TBD |
-| Engagement | TBD | TBD | TBD | TBD |
-| Mailing/CRM audience | TBD | TBD | TBD | TBD |
+| KPI | Periode | Baseline | Actueel | Doel | Trend | Bron |
+|---|---|---|---|---|---|---|
+| Monthly listeners | TBD | TBD | TBD | TBD | TBD | TBD |
+| Followers | TBD | TBD | TBD | TBD | TBD | TBD |
+| Conversion | TBD | TBD | TBD | TBD | TBD | TBD |
+| Engagement | TBD | TBD | TBD | TBD | TBD | TBD |
+| Mailing/CRM audience | TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Release
+### RELEASE
 
-| KPI | Baseline | Actual | Target | Trend |
-|---|---|---|---|---|
-| Streams | TBD | TBD | TBD | TBD |
-| Save rate | TBD | TBD | TBD | TBD |
-| Completion | TBD | TBD | TBD | TBD |
-| Playlist reach | TBD | TBD | TBD | TBD |
-| UGC | TBD | TBD | TBD | TBD |
+| KPI | Periode | Baseline | Actueel | Doel | Trend | Bron |
+|---|---|---|---|---|---|---|
+| Streams | TBD | TBD | TBD | TBD | TBD | TBD |
+| Save rate | TBD | TBD | TBD | TBD | TBD | TBD |
+| Completion | TBD | TBD | TBD | TBD | TBD | TBD |
+| Playlist reach | TBD | TBD | TBD | TBD | TBD | TBD |
+| UGC | TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Revenue
+### INKOMSTEN
 
-| Lane | Actual | Target | Forecast | Delta |
-|---|---|---|---|---|
-| Master royalties | TBD | TBD | TBD | TBD |
-| Publishing | TBD | TBD | TBD | TBD |
-| Neighbouring | TBD | TBD | TBD | TBD |
-| Live | TBD | TBD | TBD | TBD |
-| Brand | TBD | TBD | TBD | TBD |
-| Sync | TBD | TBD | TBD | TBD |
+| Inkomstenlane | Periode | Actueel | Doel | Forecast | Verschil | Bron |
+|---|---|---|---|---|---|---|
+| Master royalties | TBD | TBD | TBD | TBD | TBD | TBD |
+| Publishing | TBD | TBD | TBD | TBD | TBD | TBD |
+| Neighboring rights | TBD | TBD | TBD | TBD | TBD | TBD |
+| Live | TBD | TBD | TBD | TBD | TBD | TBD |
+| Brand | TBD | TBD | TBD | TBD | TBD | TBD |
+| Sync | TBD | TBD | TBD | TBD | TBD | TBD |
+| Merch | TBD | TBD | TBD | TBD | TBD | TBD |
+| Overig | TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Business
+_Financiële actuals komen uit Moneybird of een benoemde afreken-/royaltybron. De KPI-template vervangt Moneybird niet._
 
-| Metric | Actual | Target |
-|---|---|---|
-| Gross revenue | TBD | TBD |
-| Net revenue | TBD | TBD |
-| Costs | TBD | TBD |
-| Margin | TBD | TBD |
-| Recoupment | TBD | TBD |
-| Cash collected | TBD | TBD |
+### BUSINESS
 
-### Pipeline
+| KPI | Periode | Actueel | Doel | Verschil | Bron |
+|---|---|---|---|---|---|
+| Gross revenue | TBD | TBD | TBD | TBD | Moneybird / TBD |
+| Net revenue | TBD | TBD | TBD | TBD | Moneybird / TBD |
+| Costs | TBD | TBD | TBD | TBD | Moneybird / TBD |
+| Margin | TBD | TBD | TBD | TBD | Moneybird / TBD |
+| Recoupment | TBD | TBD | TBD | TBD | Royalty statement / TBD |
+| Cash collected | TBD | TBD | TBD | TBD | Moneybird / TBD |
 
-| Type | Count | Value | Weighted |
-|---|---|---|---|
-| Booking opportunities | TBD | TBD | TBD |
-| Brand opportunities | TBD | TBD | TBD |
-| Sync opportunities | TBD | TBD | TBD |
+### PIPELINE
 
-## 06 · DECISION GATES
+| Type | Aantal | Waarde | Kans % | Gewogen waarde | Bron |
+|---|---|---|---|---|---|
+| Booking | TBD | TBD | TBD | TBD | ClickUp |
+| Brand | TBD | TBD | TBD | TBD | ClickUp |
+| Sync | TBD | TBD | TBD | TBD | ClickUp |
+| Overig | TBD | TBD | TBD | TBD | ClickUp |
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Trend | `UP` · `FLAT` · `DOWN` · `TBD` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Elke KPI heeft meetbron en doel.
+> **01** — Elke actuele KPI heeft een benoemde periode en bron.
 >
-> **02** — Geen vanity metric zonder businesskoppeling.
+> **02** — Geen vanity metric zonder expliciete relatie met een doel, release of businessbeslissing.
+>
+> **03** — Financiële actuals worden niet door AI geschat of verzonnen.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- KPI-set gekoppeld aan roadmap en kwartaalreview.
+- Geverifieerde KPI-set gekoppeld aan Roadmap, Jaarplan en Monthly Report.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Alle lanes gevuld of TBD.
-- Meetbron per KPI.
+- Elke ingevulde actual heeft periode en bron.
+- Elke KPI heeft baseline en doel of expliciet `TBD`.
+- Financiële actuals zijn herleidbaar naar financiële bron.
+- Trend gebruikt uitsluitend gecontroleerde waarden.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
 Ja — bij client-facing gebruik.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → Roadmap
+- → Artist Roadmap
 - → Monthly Report
+- → Jaarplan
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
 GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[ARTIST]/03_STRATEGY`
+Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_KPI_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index; maak geen parallelle of dubbele template.
+- Verzin nooit ontbrekende KPI's, bedragen of brondata; onbekend = `TBD`.
+- Financiële actuals komen uitsluitend uit Moneybird of benoemde afrekenbronnen.
+- Behoud A4-portret; splits brede velden in gekoppelde blokken wanneer nodig.
+- Geen clientdata in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| KPI bijgewerkt | Make → Sheets/ClickUp | Dashboard updaten | KPI→Cell |
-| Kwartaal-close | Make → Monthly Report | Rapport vullen | Lane→Section |
+| KPI geactualiseerd | Make → ClickUp/rapportage | KPI-context bijwerken | KPI→Metric, Periode→Period, Actueel→Actual, Doel→Target, Trend→Trend, Bron→Source |
+| Financiële actual gewijzigd | Make | Alleen read-only verwerken | Inkomstenlane→Lane, Actueel→Actual, Bron→Source |
+| Kwartaalreview | Make → Monthly Report | Rapportsectie vullen | KPI→Metric, Actueel→Actual, Doel→Target, Trend→Trend |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, bron/periode per KPI, inkomstenlanes, gecontroleerde trendwaarden, A4-portret en geldige automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
