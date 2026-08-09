@@ -11,106 +11,136 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM VAULT AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | CM OPS AGENT — Level 1 |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Gestructureerde intake van een nieuw artist-, client- of partnerdossier, zodat het correct wordt geopend, herkend, beheerd en overgedragen.
+Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier zodat classificatie, scope, stakeholders, owner en vervolgstap vanaf het begin eenduidig zijn.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
 - Start van een nieuw dossier.
-- Herstart van een samenwerking of overdracht tussen agents.
+- Herstart van een samenwerking.
+- Overdracht tussen agents of teams.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Naam en type dossier | Ja | Aanvraag |
+| Naam en type dossier | Ja | Aanvraag / lead |
 | Primaire stakeholder | Ja | Intake |
-| Scope en diensten | Ja | Proposal |
+| Scope / gevraagde dienst | Ja | Aanvraag / proposal |
 | Herkomst lead | Nee | CRM / ClickUp |
+| Bestaande contract-/rights-context | Indien relevant | Legal / dossierbron |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Dossier-identificatie
+### DOSSIER-IDENTIFICATIE
 
-| Veld | Waarde |
-|---|---|
-| Naam | TBD |
-| Type (artist/client/partner) | TBD |
-| Herkomst | TBD |
-| Owner agent | TBD |
-| Aanmaakdatum | TBD |
+| Veld | Waarde | Bron |
+|---|---|---|
+| Naam | TBD | TBD |
+| Type | TBD | TBD |
+| Herkomst | TBD | TBD |
+| Owner agent | TBD | TBD |
+| Aanmaakdatum | TBD | TBD |
+| Gewenst resultaat | TBD | TBD |
 
-### Stakeholders
+### SCOPE
+
+| Onderdeel | In scope | Prioriteit | Opmerking |
+|---|---|---|---|
+| Management | TBD | TBD | TBD |
+| Career Strategy | TBD | TBD | TBD |
+| Deals & Rights | TBD | TBD | TBD |
+| Project / overig | TBD | TBD | TBD |
+
+### STAKEHOLDERS
 
 | Rol | Naam | Organisatie | Contact-referentie | Autoriteit |
 |---|---|---|---|---|
 | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### VOLGENDE STAP
+
+| Actie | Eigenaar | Deadline | Status |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
+
+### GECONTROLEERDE STATUSSEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Volgende stap status | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen dossier zonder ingevulde intake.
+> **01** — Geen actief dossier zonder vastgesteld dossiertype en owner.
 >
-> **02** — Bij twijfel over classificatie: escaleer naar CM OPS AGENT.
+> **02** — Bij onduidelijke scope of classificatie → CM OPS AGENT.
 >
-> **03** — Geen clientdata in de specificatie.
+> **03** — Geen vertrouwelijke clientdata in de GitHub-specificatie.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Basisdossier geopend in Drive.
-- Onboarding-workflow gestart.
+- Gekwalificeerde intake.
+- Dossier-onboarding gestart.
+- ClickUp-volgende stap met eigenaar en deadline.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Dossiertype bepaald.
-- Primaire stakeholder vastgelegd.
-- Naamconventie gevolgd.
+- Dossiertype, owner en gewenst resultaat zijn ingevuld.
+- Scope is expliciet in/out of `TBD`.
+- Stakeholders gebruiken contact-referenties in plaats van onnodige gevoelige gegevens.
+- Volgende stap heeft owner, deadline en gecontroleerde status.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Level 1 — CM OPS AGENT. Vastgelegd via Approval Evidence.
+Level 1 — CM OPS AGENT. Vastlegging conform geldende approval governance wanneer vereist.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → Dossier-onboarding workflow
-- → ClickUp onboardingtaak
+- → Client/artist onboarding
+- → ClickUp
+- → Drive dossierstructuur
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
 GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
 Drive: `[DOSSIER]/01_ADMIN` · `YYYY-MM-DD_[ENTITY]_ADMIN_INTAKE_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index.
+- Verzin nooit type, scope, stakeholder, owner of deadline; onbekend = `TBD`.
+- Gebruik contact-referenties waar mogelijk; sla geen onnodige persoonsgegevens in de spec op.
+- Behoud A4-portret en compacte tabellen.
+- Maak geen parallelle intake-template.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Intake voltooid | Make → ClickUp | Onboardingtaak aanmaken | Dossier→List, Owner→Assignee |
-| Dossier aangemaakt | Make → Drive | Standaard-submappen | Type→Foldertemplate |
+| Intake voltooid | Make → ClickUp | Onboardingtaak aanmaken | Naam→Taak/List, Owner agent→Assignee, Gewenst resultaat→Description |
+| Volgende stap toegevoegd | Make → ClickUp | Actie aanmaken | Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Dossier gekwalificeerd | Make → Drive | Dossierstructuur selecteren | Type→Foldertemplate |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, scope- en vervolgstapblokken, gecontroleerde status en valide automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
