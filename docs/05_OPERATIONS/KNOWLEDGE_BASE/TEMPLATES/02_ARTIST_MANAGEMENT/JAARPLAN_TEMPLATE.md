@@ -10,92 +10,132 @@
 | Onderdeel van | CM Template Library / Artist Management |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
-| Support agents | CM SOCIAL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LOW |
 | Approval | Ja — vóór client-facing gebruik |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Jaarplan per artist: doelen, releases, campagnes en mijlpalen per kwartaal, als kader boven de roadmap.
+Jaarplan per artist dat jaardoelen, KPI's, releases, commerciële prioriteiten en kwartaalmijlpalen omzet in een bestuurbaar kader boven de Artist Roadmap.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Jaarplanning of strategische herijking.
+- Jaarplanning.
+- Strategische herijking.
+- Start van nieuw managementjaar.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Jaardoelen | Ja | Strategie |
-| Release-pijplijn | Ja | Roadmap |
-| Budget | Ja | 06_FINANCE |
+| Jaardoelen | Ja | Strategie / management |
+| KPI-baseline | Ja | KPI Template |
+| Release-pipeline | Ja | Artist Roadmap |
+| Pipeline/deals | Ja | ClickUp |
+| Budgetkader | Ja | Moneybird / approval evidence |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Jaarplan per kwartaal
+### JAARDOELEN
 
-| Kwartaal | Doel | Releases/mijlpalen | Campagnes | Budget | Owner |
+| Jaardoel | KPI | Baseline | Jaardoel-waarde | Eigenaar | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### KWARTAALPLAN — STRATEGIE
+
+| Kwartaal | Prioriteit | Releases/mijlpalen | Campagne/deal-focus | Eigenaar | Status |
 |---|---|---|---|---|---|
 | Q1 | TBD | TBD | TBD | TBD | TBD |
 | Q2 | TBD | TBD | TBD | TBD | TBD |
 | Q3 | TBD | TBD | TBD | TBD | TBD |
 | Q4 | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### KWARTAALPLAN — FINANCIEEL
+
+| Kwartaal | Goedgekeurd budget | Omzetdoel | Forecast | Verschil | Bron |
+|---|---|---|---|---|---|
+| Q1 | TBD | TBD | TBD | TBD | TBD |
+| Q2 | TBD | TBD | TBD | TBD | TBD |
+| Q3 | TBD | TBD | TBD | TBD | TBD |
+| Q4 | TBD | TBD | TBD | TBD | TBD |
+
+_De twee kwartaalblokken vormen per kwartaal inhoudelijk één kwartaal-record. Financiële actuals/forecasts moeten naar een benoemde bron verwijzen; Moneybird blijft financiële waarheid._
+
+### GECONTROLEERDE STATUSSEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Doel/kwartaal status | `NOT_STARTED` · `IN_PROGRESS` · `AT_RISK` · `DONE` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Jaardoelen gekoppeld aan KPIs.
+> **01** — Elk jaardoel is gekoppeld aan minimaal één KPI.
 >
-> **02** — Budget per kwartaal → approval.
+> **02** — Elk kwartaal heeft eigenaar en status.
+>
+> **03** — Budgetcommitments volgen CM approval governance.
+>
+> **04** — Geen financieel getal zonder benoemde bron of `TBD`.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Jaarkader → kwartaal-roadmaps.
+- Goedgekeurd jaarkader.
+- Input voor kwartaal-roadmaps, KPI-reviews en releaseplanning.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elk kwartaal heeft doel en owner.
+- Jaardoelen hebben KPI, baseline, doelwaarde en eigenaar.
+- Strategie- en financiële kwartaalblokken sluiten per kwartaal op elkaar aan.
+- Financiële velden zijn herleidbaar.
+- Statusvelden gebruiken gecontroleerde waarden.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór client-facing gebruik.
+Ja — vóór client-facing gebruik; financiële toezeggingen volgens CM approval governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → Roadmap
-- → KPI
+- → Artist Roadmap
+- → KPI Template
+- → Release Strategy
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
 GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[ARTIST]/03_STRATEGY`
+Drive: `[ARTIST]/03_STRATEGY` · `YYYY_[ARTIST]_JAARPLAN_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Controleer eerst de Template Index.
+- Verzin nooit doelen, bedragen, status of bronnen; onbekend = `TBD`.
+- Financiële waarden moeten een benoemde bron hebben.
+- Behoud A4-portret; strategie en financieel blijven gekoppelde kwartaalblokken.
+- Geen clientdata in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Jaarplan approved | Make → ClickUp | Kwartaaltaken | Kwartaal→List |
+| Jaarplan goedgekeurd | Make → ClickUp | Kwartaalstructuur aanmaken | Kwartaal→List, Prioriteit→Description, Eigenaar→Assignee, Status→Status |
+| Jaardoel toegevoegd/gewijzigd | Make → ClickUp | Doeltaak bijwerken | Jaardoel→Taak, Eigenaar→Assignee, Status→Status |
+| Kwartaal `AT_RISK` | Make → ClickUp | Reviewtaak | Kwartaal→Taak, Eigenaar→Assignee |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, jaardoelen, gekoppelde kwartaalblokken, financiële bronregels, gecontroleerde statussen en valide automation mappings toegevoegd. | CM OPS AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën._
