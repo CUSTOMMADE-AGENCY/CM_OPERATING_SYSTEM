@@ -1,6 +1,11 @@
 /**
  * Synchroniseert de centrale Google Drive-master voor ARTIST_ROADMAP_TEMPLATE
- * met de canonieke GitHub-specificatie V2.1.
+ * met de canonieke GitHub-specificatie V2.2.
+ *
+ * Layoutstandaard:
+ * - A4 portret blijft de standaard voor printbaarheid.
+ * - Brede werkvelden worden opgesplitst in logisch gekoppelde tabellen.
+ * - Geen mixed portrait/landscape.
  *
  * Governance:
  * - GitHub = template-specificatie / leidende bron.
@@ -14,9 +19,9 @@
  * worden gemaakt, erven deze correcte masterinhoud.
  *
  * Gebruik:
- * 1. Laat DRY_RUN = true en draai syncArtistRoadmapV21().
+ * 1. Laat ROADMAP_SYNC_DRY_RUN = true en draai syncArtistRoadmapV22().
  * 2. Controleer de Logger-output.
- * 3. Zet DRY_RUN = false en draai opnieuw.
+ * 3. Zet ROADMAP_SYNC_DRY_RUN = false en draai opnieuw.
  */
 
 const ROADMAP_SYNC_DRY_RUN = true;
@@ -25,19 +30,21 @@ const ROADMAP_LIBRARY_PATH = ['00_ADMIN', '03_TEMPLATES', '02_ARTIST_MANAGEMENT'
 const ROADMAP_MASTER_NAME = 'ARTIST_ROADMAP_TEMPLATE';
 const ROADMAP_FONT = 'Montserrat';
 const ROADMAP_BODY_PT = 10;
+const ROADMAP_TABLE_PT = 8;
 
-function syncArtistRoadmapV21() {
+function syncArtistRoadmapV22() {
   const root = roadmapFindOrCreateFolder_(DriveApp.getRootFolder(), ROADMAP_ROOT);
   const library = roadmapFindOrCreatePath_(root, ROADMAP_LIBRARY_PATH);
   const existing = library.getFilesByName(ROADMAP_MASTER_NAME);
 
-  Logger.log('=== CM ARTIST ROADMAP V2.1 SYNC' + (ROADMAP_SYNC_DRY_RUN ? ' (DRY_RUN)' : '') + ' ===');
+  Logger.log('=== CM ARTIST ROADMAP V2.2 SYNC' + (ROADMAP_SYNC_DRY_RUN ? ' (DRY_RUN)' : '') + ' ===');
   Logger.log('Doel: ' + ROADMAP_ROOT + '/' + ROADMAP_LIBRARY_PATH.join('/') + '/' + ROADMAP_MASTER_NAME);
 
   if (ROADMAP_SYNC_DRY_RUN) {
     Logger.log(existing.hasNext()
-      ? 'MASTER bestaat en zou inhoudelijk worden gesynchroniseerd.'
-      : 'MASTER ontbreekt en zou worden aangemaakt.');
+      ? 'MASTER bestaat en zou inhoudelijk worden gesynchroniseerd naar V2.2.'
+      : 'MASTER ontbreekt en zou als V2.2 worden aangemaakt.');
+    Logger.log('A4 portret blijft behouden; brede tabellen worden logisch opgesplitst.');
     Logger.log('Geen ingevulde artist-roadmaps worden gewijzigd.');
     return;
   }
@@ -56,12 +63,17 @@ function syncArtistRoadmapV21() {
     }
   }
 
-  roadmapWriteV21_(doc);
+  roadmapWriteV22_(doc);
   doc.saveAndClose();
-  Logger.log('ARTIST_ROADMAP_TEMPLATE gesynchroniseerd naar V2.1 ACTIVE.');
+  Logger.log('ARTIST_ROADMAP_TEMPLATE gesynchroniseerd naar V2.2 ACTIVE (A4 portret).');
 }
 
-function roadmapWriteV21_(doc) {
+// Backwards-compatible alias zodat een bestaand Apps Script-menu/selectie niet breekt.
+function syncArtistRoadmapV21() {
+  return syncArtistRoadmapV22();
+}
+
+function roadmapWriteV22_(doc) {
   const body = doc.getBody();
   body.clear();
 
@@ -75,22 +87,25 @@ function roadmapWriteV21_(doc) {
     ['Entity', 'Custommade Agency Int. B.V.'],
     ['Owner agent', 'CM OPS AGENT'],
     ['Support agents', 'CM SOCIAL AGENT · CM MONEY AGENT'],
-    ['Status', 'ACTIVE — V2.1'],
-    ['Versie', 'V2.1'],
+    ['Status', 'ACTIVE — V2.2'],
+    ['Versie', 'V2.2'],
     ['Datum', 'AUGUSTUS 2026'],
     ['Risico', 'LOW'],
-    ['Approval', 'CM OPS AGENT · client-facing → Sophia'],
+    ['Approval', 'CM OPS AGENT · client-facing → Sophia']
   ]);
 
   roadmapH3_(body, '02 · DOEL');
-  roadmapP_(body, 'Stuurbare roadmap die doelen, releases, inkomsten, deals en beslismomenten van een artist samenbrengt in één bron waaruit ClickUp-taken en KPI-tracking direct worden gegenereerd. De roadmap plant en stuurt; hij vervangt Moneybird (financiële waarheid) of het Rights Register (rechtenwaarheid) niet.');
+  roadmapP_(body,
+    'Stuurbare roadmap die doelen, releases, inkomsten, deals en beslismomenten van een artist ' +
+    'samenbrengt in één bron waaruit ClickUp-taken en KPI-tracking direct worden gegenereerd. ' +
+    'De roadmap plant en stuurt; hij vervangt Moneybird (financiële waarheid) of het Rights Register ' +
+    '(rechtenwaarheid) niet.'
+  );
 
   roadmapH3_(body, '03 · GEBRUIKSMOMENT');
-  roadmapBullets_(body, [
-    'Managementstart of artist onboarding.',
-    'Kwartaalplanning of strategische herijking.',
-    'Releaseplanning.',
-  ]);
+  roadmapP_(body, '— Managementstart of artist onboarding.');
+  roadmapP_(body, '— Kwartaalplanning of strategische herijking.');
+  roadmapP_(body, '— Releaseplanning.');
 
   roadmapH3_(body, '04 · BENODIGDE INPUT');
   roadmapTable_(body, [
@@ -100,26 +115,36 @@ function roadmapWriteV21_(doc) {
     ['KPI-baseline', 'Ja', 'KPI Template'],
     ['Rechten- & contractstatus', 'Ja', '02_CONTRACT / Rights Register'],
     ['Pipeline', 'Ja', 'Deal Pipeline (ClickUp)'],
-    ['Financiële actuals', 'Ja', 'Moneybird / benoemde royalty-/afrekenbron'],
+    ['Financiële actuals', 'Ja', 'Moneybird / benoemde royalty-/afrekenbron']
   ]);
 
   roadmapH3_(body, '05 · WERKTEMPLATE');
 
-  roadmapH4_(body, 'DOELEN');
+  roadmapSub_(body, 'DOELEN');
   roadmapTable_(body, [
     ['Hoofddoel', 'KPI', 'Baseline', 'Doel', 'Deadline', 'Eigenaar', 'Status'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
-  roadmapP_(body, 'Status = gecontroleerde waarde (zie Gecontroleerde statussen).');
+  roadmapP_(body, 'Status = gecontroleerde waarde.');
 
-  roadmapH4_(body, 'RELEASES');
+  roadmapSub_(body, 'RELEASES — PLANNING');
   roadmapTable_(body, [
-    ['Release', 'Type', 'Master status', 'Rights status', 'Distributie-deadline', 'Releasedatum', 'Marketingstart', 'Goedgekeurd budget', 'Werkelijke kosten', 'Verschil', 'Eigenaar', 'Status'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
+    ['Release', 'Type', 'Master status', 'Rights status', 'Releasedatum', 'Distributie-deadline'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
-  roadmapP_(body, 'Rights status = CLEAR · OPEN · BLOCKED. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet.');
 
-  roadmapH4_(body, 'INKOMSTEN');
+  roadmapSub_(body, 'RELEASES — BUSINESS');
+  roadmapTable_(body, [
+    ['Marketingstart', 'Goedgekeurd budget', 'Werkelijke kosten', 'Verschil', 'Eigenaar', 'Status'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
+  ]);
+  roadmapP_(body,
+    'Rights status = CLEAR · OPEN · BLOCKED. Rights-clearance omvat minimaal splits, features en samples. ' +
+    'Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf. Beide releaseblokken ' +
+    'vormen inhoudelijk één release-record.'
+  );
+
+  roadmapSub_(body, 'INKOMSTEN');
   roadmapTable_(body, [
     ['Inkomstenlane', 'Periode', 'Actueel', 'Doel', 'Forecast', 'Verschil', 'Bron'],
     ['Master royalties', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
@@ -129,65 +154,77 @@ function roadmapWriteV21_(doc) {
     ['Brand', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
     ['Sync', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
     ['Merch', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
-    ['Overig', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
+    ['Overig', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
-  roadmapP_(body, 'Actuals moeten herleidbaar zijn naar Moneybird of een benoemde royalty-/afrekenbron (kolom Bron). Nooit bedragen verzinnen; onbekend = TBD.');
+  roadmapP_(body,
+    'Actuals moeten herleidbaar zijn naar Moneybird of een benoemde royalty-/afrekenbron. ' +
+    'Nooit bedragen verzinnen; onbekend = TBD.'
+  );
 
-  roadmapH4_(body, 'DEALS & KANSEN');
+  roadmapSub_(body, 'DEALS & KANSEN — COMMERCIEEL');
   roadmapTable_(body, [
-    ['Type', 'Kans', 'Tegenpartij', 'Waarde', 'Kans %', 'Gewogen waarde', 'Fase', 'Eigenaar', 'Volgende actie', 'Deadline'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
+    ['Type', 'Kans', 'Tegenpartij', 'Waarde', 'Kans %', 'Gewogen waarde'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
-  roadmapP_(body, 'Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. Gewogen waarde = waarde × kans %; dit is een forecast-/pipeline-metric, geen financiële waarheid.');
 
-  roadmapH4_(body, 'BESLISSINGEN');
+  roadmapSub_(body, 'DEALS & KANSEN — OPVOLGING');
+  roadmapTable_(body, [
+    ['Fase', 'Eigenaar', 'Volgende actie', 'Deadline'],
+    ['TBD', 'TBD', 'TBD', 'TBD']
+  ]);
+  roadmapP_(body,
+    'Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. ' +
+    'Gewogen waarde = waarde × kans %. Dit is een forecast-/pipeline-metric, geen financiële waarheid. ' +
+    'Beide dealblokken vormen inhoudelijk één deal-record.'
+  );
+
+  roadmapSub_(body, 'BESLISSINGEN');
   roadmapTable_(body, [
     ['Beslissing', 'Nodig vóór', 'Goedkeurder', 'Gevolg', 'Status'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
 
-  roadmapH4_(body, 'GECONTROLEERDE STATUSSEN (VOOR AUTOMATION)');
+  roadmapSub_(body, 'GECONTROLEERDE STATUSSEN');
   roadmapTable_(body, [
     ['Veld', 'Toegestane waarden'],
     ['Objective status', 'NOT_STARTED · IN_PROGRESS · AT_RISK · DONE'],
     ['Release status', 'PLANNED · IN_PRODUCTION · SCHEDULED · RELEASED · ON_HOLD'],
     ['Rights status', 'CLEAR · OPEN · BLOCKED'],
     ['Deal/pipeline-fase', 'LEAD · QUALIFIED · DILIGENCE · CLOSING · CLOSED'],
-    ['Decision status', 'OPEN · ESCALATED · DECIDED'],
+    ['Decision status', 'OPEN · ESCALATED · DECIDED']
   ]);
-  roadmapP_(body, 'Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen vrije tekst. Deal/pipeline-fase volgt DEAL_PIPELINE_CLICKUP_REFERENCE.');
 
   roadmapH3_(body, '06 · BESLISPOORTEN');
-  roadmapBullets_(body, [
-    'NIET-ONDERHANDELBAAR: geen release op de roadmap zonder Rights status = CLEAR (splits · features · samples geverifieerd).',
-    'Financiële toezegging boven de toepasselijke approvalgrens → escaleren conform CM approval governance.',
-    'Client-facing roadmap alleen na Sophia-approval.',
-    'Elke deal met een financiële toezegging boven de toepasselijke approvalgrens → CM PROSPECT + LEGAL check, conform CM approval governance.',
-  ]);
+  roadmapP_(body, '01 — Geen release zonder Rights status = CLEAR.');
+  roadmapP_(body, '02 — Financiële toezegging boven toepasselijke approvalgrens → escaleren conform CM approval governance.');
+  roadmapP_(body, '03 — Client-facing roadmap alleen na Sophia-approval.');
+  roadmapP_(body, '04 — Deal boven toepasselijke approvalgrens → CM PROSPECT + LEGAL check.');
 
   roadmapH3_(body, '07 · RESULTAAT');
-  roadmapBullets_(body, [
-    'Goedgekeurde roadmap als werkkopie in Drive.',
-    'ClickUp-taken gegenereerd uit Doelen/Releases/Deals.',
-    'KPI-baseline gekoppeld.',
-  ]);
+  roadmapP_(body, '— Goedgekeurde roadmap als werkkopie in Drive.');
+  roadmapP_(body, '— ClickUp-taken gegenereerd uit Doelen/Releases/Deals.');
+  roadmapP_(body, '— KPI-baseline gekoppeld.');
 
   roadmapH3_(body, '08 · KWALITEITSCONTROLE');
-  roadmapBullets_(body, [
-    'Elk doel heeft KPI, doel, deadline, eigenaar en gecontroleerde status.',
-    'Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en gecontroleerde status.',
-    'Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).',
-    'Elke deal heeft fase, eigenaar, volgende actie en deadline.',
-    'Geen open beslissing zonder goedkeurder.',
-    'Alle automation-velden gebruiken gecontroleerde waarden.',
-    'Iedere source field-mapping verwijst letterlijk naar een bestaande werktemplatekolom.',
-  ]);
+  roadmapP_(body, '— Elk doel heeft KPI, doel, deadline, eigenaar en status.');
+  roadmapP_(body, '— Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en status.');
+  roadmapP_(body, '— Release-planning en Release-business vormen één release-record.');
+  roadmapP_(body, '— Elke inkomstenregel met actual heeft een benoemde bron.');
+  roadmapP_(body, '— Elke deal heeft fase, eigenaar, volgende actie en deadline.');
+  roadmapP_(body, '— Deal-commercieel en Deal-opvolging vormen één deal-record.');
+  roadmapP_(body, '— Geen open beslissing zonder goedkeurder.');
+  roadmapP_(body, '— Iedere automation mapping verwijst naar een bestaand veld.');
 
   roadmapH3_(body, '09 · GOEDKEURING');
-  roadmapP_(body, 'CM OPS AGENT (Level 1–2). Client-facing, of financiële toezegging boven de toepasselijke approvalgrens → escaleren naar Sophia / CM CONTROL conform CM approval governance.');
+  roadmapP_(body,
+    'CM OPS AGENT (Level 1–2). Client-facing of financiële toezegging boven de toepasselijke approvalgrens ' +
+    '→ Sophia / CM CONTROL.'
+  );
 
   roadmapH3_(body, '10 · OVERDRACHT');
-  roadmapBullets_(body, ['ClickUp (taken)', 'KPI Template', 'Release Kickoff']);
+  roadmapP_(body, '— ClickUp');
+  roadmapP_(body, '— KPI Template');
+  roadmapP_(body, '— Release Kickoff');
 
   roadmapH3_(body, '11 · LEIDENDE BRON');
   roadmapP_(body, 'GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.');
@@ -196,14 +233,11 @@ function roadmapWriteV21_(doc) {
   roadmapP_(body, 'Drive: [ARTIST]/03_STRATEGY · YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y');
 
   roadmapH3_(body, '13 · AI-INSTRUCTIES');
-  roadmapBullets_(body, [
-    'Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.',
-    'Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.',
-    'Verzin nooit bedragen of approvalgrenzen; verwijs naar Moneybird respectievelijk CM approval governance.',
-    'Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.',
-    'Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.',
-    'Gebruik voor deal/pipeline-fase uitsluitend de waarden uit DEAL_PIPELINE_CLICKUP_REFERENCE.',
-  ]);
+  roadmapP_(body, '— Controleer eerst de Template Index; maak geen parallelle of dubbele template.');
+  roadmapP_(body, '— Onbekende informatie = TBD.');
+  roadmapP_(body, '— Verzin nooit bedragen of approvalgrenzen.');
+  roadmapP_(body, '— Gebruik voor deal/pipeline-fase uitsluitend de waarden uit DEAL_PIPELINE_CLICKUP_REFERENCE.');
+  roadmapP_(body, '— Behoud A4-portret; splits brede werkvelden in logisch gekoppelde blokken in plaats van mixed portrait/landscape.');
 
   roadmapH3_(body, '14 · AUTOMATISERINGSKOPPELINGEN');
   roadmapTable_(body, [
@@ -212,51 +246,42 @@ function roadmapWriteV21_(doc) {
     ['Release-regel toegevoegd', 'Make → ClickUp', 'Release-checklist', 'Release→List, Distributie-deadline→Due date, Eigenaar→Assignee, Status→Status'],
     ['Rights status = OPEN/BLOCKED', 'Make → ClickUp', 'Rights/legal opvolgtaak', 'Release→Taak, Rights status→Status'],
     ['Deal-regel toegevoegd/gewijzigd', 'Make → ClickUp', 'Pipeline-record', 'Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status, Volgende actie→Next action'],
-    ['Financiële actuals', '—', 'Niet vanuit roadmap naar Moneybird geschreven; Moneybird blijft financiële waarheid', 'Read-only referentie'],
+    ['Financiële actuals', '—', 'Niet naar Moneybird schrijven', 'Read-only referentie']
   ]);
 
   roadmapH3_(body, '15 · WIJZIGINGSLOG');
   roadmapTable_(body, [
     ['Datum', 'Versie', 'Wijziging', 'Owner'],
-    ['2026-07-27', 'V2.0', 'Herbouwd naar Template Architecture V2.', 'CM OPS AGENT'],
-    ['2026-08-09', 'V2.1', 'Werk-tabellen, rights, inkomsten, deals, statussen en automation uitgebreid.', 'CM OPS AGENT'],
-    ['2026-08-10', 'V2.1', 'Finale consistency-review; pipeline-fasen gelijkgetrokken; ACTIVE.', 'CM OPS AGENT'],
+    ['2026-08-10', 'V2.2', 'Printoptimalisatie: A4-portret behouden; Releases en Deals opgesplitst in gekoppelde werkblokken.', 'CM OPS AGENT']
   ]);
 
-  roadmapP_(body, 'Leidende bron: GitHub — docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md. Drive bevat uitsluitend werkbare kopieën.');
   roadmapApplyFont_(body);
 }
 
 function roadmapH2_(body, text) {
   const p = body.appendParagraph(String(text).toUpperCase());
   p.setHeading(DocumentApp.ParagraphHeading.HEADING2);
-  p.editAsText().setBold(true);
+  p.editAsText().setBold(true).setFontFamily(ROADMAP_FONT);
+  return p;
 }
 
 function roadmapH3_(body, text) {
   const p = body.appendParagraph(String(text).toUpperCase());
   p.setHeading(DocumentApp.ParagraphHeading.HEADING3);
-  p.editAsText().setBold(true);
+  p.editAsText().setBold(true).setFontFamily(ROADMAP_FONT);
+  return p;
 }
 
-function roadmapH4_(body, text) {
+function roadmapSub_(body, text) {
   const p = body.appendParagraph(String(text).toUpperCase());
-  p.setHeading(DocumentApp.ParagraphHeading.HEADING4);
-  p.editAsText().setBold(true);
+  p.editAsText().setBold(true).setFontFamily(ROADMAP_FONT);
+  return p;
 }
 
 function roadmapP_(body, text) {
   const p = body.appendParagraph(String(text));
-  p.setHeading(DocumentApp.ParagraphHeading.NORMAL);
-  p.editAsText().setBold(false).setFontSize(ROADMAP_BODY_PT);
-}
-
-function roadmapBullets_(body, lines) {
-  lines.forEach(function(line) {
-    const p = body.appendListItem(String(line));
-    p.setGlyphType(DocumentApp.GlyphType.BULLET);
-    p.editAsText().setFontSize(ROADMAP_BODY_PT);
-  });
+  p.editAsText().setFontFamily(ROADMAP_FONT).setFontSize(ROADMAP_BODY_PT);
+  return p;
 }
 
 function roadmapTable_(body, rows) {
@@ -264,8 +289,10 @@ function roadmapTable_(body, rows) {
   for (let r = 0; r < table.getNumRows(); r++) {
     const row = table.getRow(r);
     for (let c = 0; c < row.getNumCells(); c++) {
-      row.getCell(c).editAsText().setFontSize(ROADMAP_BODY_PT);
-      if (r === 0) row.getCell(c).editAsText().setBold(true);
+      const txt = row.getCell(c).editAsText();
+      txt.setFontFamily(ROADMAP_FONT);
+      txt.setFontSize(ROADMAP_TABLE_PT);
+      if (r === 0) txt.setBold(true);
     }
   }
   return table;
@@ -285,7 +312,8 @@ function roadmapFindOrCreatePath_(startFolder, parts) {
   return current;
 }
 
-function roadmapFindOrCreateFolder_(parent, name) {
-  const matches = parent.getFoldersByName(name);
-  return matches.hasNext() ? matches.next() : parent.createFolder(name);
+function roadmapFindOrCreateFolder_(parentFolder, folderName) {
+  const existing = parentFolder.getFoldersByName(folderName);
+  if (existing.hasNext()) return existing.next();
+  return parentFolder.createFolder(folderName);
 }
