@@ -1,127 +1,129 @@
-# START_HIER_04_DEALS_TEMPLATE
-## Architectuurstandaard
+# CUSTOMMADE AGENCY — START HIER 04 DEALS TEMPLATE
 
-Deze template volgt `TEMPLATE_ARCHITECTUURSTANDAARD.md` en is inhoudelijk afgestemd op `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/ROOTS/04_DEALS.md`.
-
-## Documentgegevens
+## 01 · DOCUMENT CONTROL
 
 | Veld | Waarde |
-| --- | --- |
-| Template naam | START_HIER_04_DEALS_TEMPLATE |
-| Domein | Start Hier |
-| Versie | 1.0 |
-| Status | ACTIVE |
-| Owner Agent | CM LEGAL AGENT |
-| Support Agents | CM PROSPECT AGENT, CM MONEY AGENT, CM VAULT AGENT |
-| System of Record | GitHub template-specificatie |
-| Werkbare kopie | `OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER` |
-| Gekoppelde workflow | TBD |
-| Laatste review | 2026-07-26 |
-| Volgende review | 2026-10-26 |
+|---|---|
+| Document type | Operational Template / Start Hier |
+| Onderdeel van | CM Template Library / Start Hier / Deals |
+| Entity | Custommade Agency Int. B.V. |
+| Owner agent | CM LEGAL AGENT |
+| Support agents | CM PROSPECT AGENT · CM MONEY AGENT · CM VAULT AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
+| Risico | MEDIUM |
+| Approval | Conform deal-governance |
 
-## Doel
+## 02 · DOEL
 
-Startdocument voor een dealdossier onder `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER`. Het geeft iedereen die het dossier opent direct de status, de instructies, de openstaande document requests en de governance-context van de dealcase.
+Startdocument voor elk dealdossier onder `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER`. Geeft in één scan scope, stage, open document requests, governance, owner en volgende actie.
 
-## Wanneer gebruiken
+## 03 · GEBRUIKSMOMENT
 
-Bij het aanmaken van een nieuw dealdossier onder `04_DEALS`, en als levend statusdocument gedurende de looptijd van de deal.
+- Nieuw dealdossier.
+- Dealoverdracht.
+- Materiële stage- of governancewijziging.
 
-## Niet gebruiken voor
+## 04 · BENODIGDE INPUT
 
-- Ingevulde vertrouwelijke dealdata of getekende contracten in de template-specificatie.
-- Algemene Master Boutique-kennis of methodieken (→ `01_MASTER_BOUTIQUE`).
-- Een alternatief format wanneer deze START_HIER-template past.
+| Input | Verplicht | Bron |
+|---|---|---|
+| Deal-ID / dealnaam | Ja | Deal intake / Deal Memo |
+| Dealstage | Ja | ClickUp / Deal Pipeline Reference |
+| Document requests | Ja | Legal / Prospect |
+| Governance-/approvalcontext | Ja | Legal / Approval Register |
 
-## Owner Agent
+## 05 · WERKTEMPLATE
 
-CM LEGAL AGENT — bewaakt de dealstructuur, governance en approvals van het dossier.
+### DEALSTART — CONTEXT
 
-## Support Agents
+| Deal-ID | Deal/asset | Scope | Stage | Owner | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-| Agent | Rol in deze map |
-| --- | --- |
-| CM PROSPECT AGENT | Buyer outreach, dealkwalificatie en pipeline-referenties. |
-| CM MONEY AGENT | Waardering en financiële onderbouwing. |
-| CM VAULT AGENT | Archivering en bewijsbeheer. |
+### DEALSTART — DOCUMENT REQUESTS
 
-## System of Record
+| Request-ID | Deal-ID | Document/verzoek | Eigenaar | Deadline | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-GitHub = template-governance en template-specificatie.
-Drive = werkbare kopie in `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER`.
+### DEALSTART — GOVERNANCE & VOLGENDE STAP
 
-## Opslaglocatie
+| Deal-ID | Approval-/restrictiereferentie | Volgende actie | Eigenaar | Deadline |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-GitHub specificatie:
-`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/08_START_HIER/START_HIER_04_DEALS_TEMPLATE.md`
+### GECONTROLEERDE WAARDEN
 
-Drive werkbare kopie:
-`OS_CUSTOMMADE/04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER/START_HIER_[DEAL_OR_ASSET_NAME].md`
+| Veld | Toegestane waarden |
+|---|---|
+| Stage | `LEAD` · `QUALIFIED` · `DILIGENCE` · `CLOSING` · `CLOSED` |
+| Status/request status | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
 
-## Gekoppelde workflow / SOP / Playbook
+## 06 · BESLISPOORTEN
 
-- Workflow: TBD
-- SOP: TBD
-- Playbook: TBD
+> **NIET-ONDERHANDELBAAR**
+>
+> **01** — Geen dealdossier zonder Deal-ID, owner en stage.
+>
+> **02** — Stage volgt `DEAL_PIPELINE_CLICKUP_REFERENCE`.
+>
+> **03** — Geen vertrouwelijke dealdata/getekende contracten in de GitHub-specificatie.
+>
+> **04** — Approval/restricties worden alleen via referentie vastgelegd; operationeel Approval Register blijft leidend.
 
-## Inputvelden
+## 07 · RESULTAAT
 
-| Veld | Beschrijving | Verplicht | Bron | Opmerking |
-| --- | --- | --- | --- | --- |
-| Dealnaam | Naam van de deal of asset | Ja | Dealintake | Geen vertrouwelijke data |
-| Dealstatus | Fase van de deal | Ja | Pipeline/ClickUp | Statusveld |
-| Document requests | Nog benodigde documenten | Ja | Legal/Prospect | Alleen referenties |
-| Governance-notities | Approvals, restricties en escalaties | Ja | CM LEGAL AGENT | Verwijs naar approval register |
+- Scanbare deal-startpagina.
+- Open document requests met owner/deadline.
+- Directe verwijzing naar volgende actie en governance.
 
-## START_HIER inhoud (in te vullen in Drive)
+## 08 · KWALITEITSCONTROLE
 
-Vul in de Drive-kopie minimaal de volgende secties in:
+- Deal-ID is consistent in alle blokken.
+- Requests hebben Request-ID, owner, deadline en status.
+- Geen parallelle stage- of approvaldefinitie.
 
-1. **Doel van dit dossier** — Wat deze dealcase inhoudt en de scope.
-2. **Wat hoort hier wel / niet** — Toegestane documenttypen (rechtenregister, contracten en bewijs, waardering en verkooppakket, outreach-referenties) en verboden documenten conform `04_DEALS.md`.
-3. **Submappen** — Zie de actuele structuur in `docs/00_GOVERNANCE/DRIVE_STRUCTURE.md` (Deal folder rule) en `04_DEALS.md` hoofdstuk 5.
-4. **Status en volgende stap** — Huidige fase en eerstvolgende actie.
-5. **Document requests** — Openstaande benodigde documenten.
-6. **Source of Truth** — GitHub = governance; Drive = opslag; ClickUp = uitvoering; Gmail = correspondentie.
-7. **Approval en escalatie** — Approvalniveau per actie; escalatie naar CM LEGAL AGENT, daarna CM CONTROL AGENT.
+## 09 · GOEDKEURING
 
-## Output
+Conform toepasselijke deal- en approvalgovernance.
 
-- Schone, kopieerbare START_HIER-specificatie zonder vertrouwelijke dealdata.
-- Operationele startkopie in de `00_START_HIER`-map van het dealdossier.
-- Vastlegging in TEMPLATE_USAGE_REPORT bij ieder gebruik.
+## 10 · OVERDRACHT
 
-## AI-instructies
+- → Deal Memo
+- → Buyer Pipeline / ClickUp
+- → Legal / Data Room waar relevant
 
-- Raadpleeg eerst de template-index voordat je een nieuw format voorstelt.
-- Verzin nooit ontbrekende informatie; markeer onbekende velden als `TBD`.
-- Benoem expliciet welke input ontbreekt wanneer de template niet volledig kan worden ingevuld.
-- Gebruik geen clientdata, vertrouwelijke informatie of getekende documenten in de template-specificatie.
-- Maak geen parallelle START_HIER-templates aan wanneer deze past.
-- Koppel afwijkingen aan `TEMPLATE_GAP_LOG_SPEC.md` en gebruik aan `TEMPLATE_USAGE_REPORT_SPEC.md`.
+## 11 · LEIDENDE BRON
 
-## Kwaliteitscheck
+GitHub = spec/governance · Drive = dealdossier/evidence · ClickUp = uitvoering/pipeline · Moneybird = financiële waarheid.
 
-- Binnen 10 seconden scanbaar.
-- Alleen noodzakelijke velden.
-- Geen client-, deal- of vertrouwelijke data in de specificatie.
-- Duidelijke owner, status, source of truth en volgende stap.
-- Submapverwijzing conform de leidende baseline.
+## 12 · OPSLAG
 
-## Status
+Drive: `04_DEALS/[DEAL_OR_ASSET_NAME]/00_START_HIER` · `START_HIER_[DEAL_OR_ASSET_NAME]`.
 
-ACTIVE
+## 13 · AI-INSTRUCTIES
 
-Toegestane statussen: ACTIVE, DRAFT, NEEDS_REVIEW, DEPRECATED.
+- Verzin nooit dealstage, approvals, documenten of deadlines; onbekend = `TBD`.
+- Gebruik alleen canonical dealstagewaarden.
+- Behoud A4-portret en gekoppelde Deal-ID-blokken.
+- Maak geen parallel START_HIER-format.
 
-## Reviewritme
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
-- Laatste review: 2026-07-26
-- Volgende review: 2026-10-26
-- Ritme: elk kwartaal of eerder bij governancewijziging.
+| Trigger | Systeem | Actie | Field mapping |
+|---|---|---|---|
+| Request toegevoegd/gewijzigd | Make → ClickUp | Document-request taak | Request-ID→External ID, Document/verzoek→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Dealstage gewijzigd | Make → ClickUp | Startpagina-context bijwerken | Deal-ID→Reference, Stage→Status, Owner→Assignee |
 
-## Wijzigingslog
+## 15 · WIJZIGINGSLOG
 
-| Datum | Wijziging | Owner |
-| --- | --- | --- |
-| 2026-07-26 | Eerste START_HIER-template voor `04_DEALS` toegevoegd aan de CM Template Library. | CM VAULT AGENT |
+| Datum | Versie | Wijziging | Owner |
+|---|---|---|---|
+| 2026-07-26 | V1.0 | Eerste START_HIER-template voor 04_DEALS. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Gemigreerd naar 15-sectie V2.2 met Deal-ID/Request-ID, pipeline stages, A4-portret en automation mappings. | CM LEGAL AGENT |
+
+---
+
+_Leidende bron: GitHub. Drive bevat de operationele startkopie._
