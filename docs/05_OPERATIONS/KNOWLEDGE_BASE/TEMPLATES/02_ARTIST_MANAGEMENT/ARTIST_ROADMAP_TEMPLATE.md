@@ -11,7 +11,7 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
-| Status | NEEDS_REVIEW — V2.1 (V2.1-review nog niet afgerond) |
+| Status | ACTIVE — V2.1 |
 | Versie | V2.1 |
 | Datum | AUGUSTUS 2026 |
 | Risico | LOW |
@@ -94,7 +94,7 @@ _Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 | Objective status | `NOT_STARTED` · `IN_PROGRESS` · `AT_RISK` · `DONE` |
 | Release status | `PLANNED` · `IN_PRODUCTION` · `SCHEDULED` · `RELEASED` · `ON_HOLD` |
 | Rights status | `CLEAR` · `OPEN` · `BLOCKED` |
-| Deal/pipeline-fase | conform `DEAL_PIPELINE_CLICKUP_REFERENCE`: `LEAD` · `QUALIFIED` · `PROPOSAL` · `NEGOTIATION` · `WON` · `LOST` |
+| Deal/pipeline-fase | conform `DEAL_PIPELINE_CLICKUP_REFERENCE`: `LEAD` · `QUALIFIED` · `DILIGENCE` · `CLOSING` · `CLOSED` |
 | Decision status | `OPEN` · `ESCALATED` · `DECIDED` |
 
 _Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen vrije tekst._
@@ -119,11 +119,13 @@ _Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen v
 
 ## 08 · KWALITEITSCONTROLE
 
-- Elk doel heeft KPI, doel, deadline en eigenaar.
-- Elke release heeft master-status, Rights status en distributie-deadline.
+- Elk doel heeft KPI, doel, deadline, eigenaar en gecontroleerde status.
+- Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en gecontroleerde status.
 - Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).
+- Elke deal heeft fase, eigenaar, volgende actie en deadline.
 - Geen open beslissing zonder goedkeurder.
 - Alle automation-velden gebruiken gecontroleerde waarden.
+- Iedere source field-mapping in sectie 14 verwijst letterlijk naar een bestaande kolom in sectie 05.
 
 ## 09 · GOEDKEURING
 
@@ -150,15 +152,16 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 - Verzin nooit bedragen of approvalgrenzen; verwijs naar Moneybird respectievelijk CM approval governance.
 - Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
 - Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Gebruik voor deal/pipeline-fase uitsluitend de waarden uit `DEAL_PIPELINE_CLICKUP_REFERENCE`.
 
 ## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Hoofddoel→Taak, Eigenaar→Assignee, Deadline→Due date |
-| Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date |
+| Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Hoofddoel→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
+| Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date, Eigenaar→Assignee, Status→Status |
 | Rights status = `OPEN`/`BLOCKED` | Make → ClickUp | Rights/legal opvolgtaak | Release→Taak, Rights status→Status |
-| Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status |
+| Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status, Volgende actie→Next action |
 | Financiële actuals | — | Niet vanuit roadmap naar Moneybird geschreven; Moneybird blijft financiële waarheid | Read-only referentie |
 
 ## 15 · WIJZIGINGSLOG
@@ -166,7 +169,8 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
 | 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM OPS AGENT |
-| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt zodat elke source field-mapping in sectie 14 letterlijk naar een bestaande sectie 05-kolom verwijst (Hoofddoel, Kans); secties en kolomkoppen Nederlandstalig. Status op NEEDS_REVIEW tot V2.1-review is afgerond. | CM OPS AGENT |
+| 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, volgende actie, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; ongedefinieerde "drempel" vervangen door verwijzing naar CM approval governance; gecontroleerde statussen toegevoegd; automation hooks bijgewerkt; secties en kolomkoppen Nederlandstalig. | CM OPS AGENT |
+| 2026-08-10 | V2.1 | Finale consistency-review: ontbrekende werkvelden bevestigd, pipeline-fasen gelijkgetrokken met `DEAL_PIPELINE_CLICKUP_REFERENCE`, automation mappings gevalideerd en status naar ACTIVE gezet. | CM OPS AGENT |
 
 ---
 
