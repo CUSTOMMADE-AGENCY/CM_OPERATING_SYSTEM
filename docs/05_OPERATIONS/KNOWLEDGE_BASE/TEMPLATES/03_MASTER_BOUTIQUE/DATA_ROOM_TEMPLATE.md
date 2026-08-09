@@ -6,107 +6,134 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Data Room Control |
 | Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM CONTROL AGENT |
-| Support agents | CM LEGAL AGENT · CM PROSPECT AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Support agents | CM LEGAL AGENT · CM PROSPECT AGENT · CM VAULT AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LEGAL / CONFIDENTIAL |
-| Approval | Ja — access alleen na NDA + Buyer Qualification |
+| Approval | Access alleen na toepasselijke NDA/qualification/approval |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Index en access-control van de deal data room: welke documenten aanwezig zijn, wie toegang heeft en onder welke voorwaarden. Beschermt vertrouwelijke informatie.
+Controleerbare data room-index en access log voor due diligence. Legt vast welke documentcategorieën beschikbaar zijn, welke buyer toegang heeft, onder welke voorwaarden en wanneer toegang vervalt zonder vertrouwelijke inhoud in de template-specificatie te dupliceren.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
 - Buyer bereikt diligence-fase.
+- Data room wordt geopend of gewijzigd.
+- Nieuwe buyer/access request.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Deal Memo + Valuation | Ja | Deal Memo |
+| Deal-ID | Ja | Deal Memo |
 | Rights Audit | Ja | Rights Audit |
-| NDA | Ja | 07_LEGAL |
+| Valuation / financial pack | Indien gedeeld | Valuation / Finance |
+| NDA-status | Ja vóór access indien vereist | Legal evidence |
+| Buyer qualification | Ja vóór gated access | Buyer Pipeline |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Document index
+### DOCUMENTINDEX
 
-| Document | Categorie | Locatie | Vertrouwelijk | Status |
-|---|---|---|---|---|
-| Rights register | Rights | TBD | Ja | TBD |
-| Royalty statements | Financials | TBD | Ja | TBD |
-| Contracts | Legal | TBD | Ja | TBD |
-| Valuation | Financials | TBD | Ja | TBD |
-| Chain of title | Legal | TBD | Ja | TBD |
-
-### Access log
-
-| Buyer | NDA | Qualification | Toegang verleend | Door | Vervalt |
+| Document-ID | Categorie | Document/referentie | Locatie | Classificatie | Status |
 |---|---|---|---|---|---|
 | TBD | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### ACCESS — BUYER
+
+| Access-ID | Buyer | Deal-ID | Qualification | NDA-status | Accessniveau |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### ACCESS — GELDIGHEID
+
+| Access-ID | Verleend door | Startdatum | Vervalt | Status | Bewijsreferentie |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+_De accessblokken vormen via `Access-ID` één access-record._
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Documentstatus | `MISSING` · `READY` · `WITHHELD` · `SUPERSEDED` |
+| Classificatie | `INTERNAL` · `CONFIDENTIAL` · `HIGHLY_CONFIDENTIAL` |
+| NDA-status | `NOT_REQUIRED` · `PENDING` · `SIGNED` · `EXPIRED` |
+| Accessniveau | `NONE` · `LIMITED` · `FULL` |
+| Accessstatus | `PENDING` · `ACTIVE` · `EXPIRED` · `REVOKED` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen access zonder getekende NDA én afgeronde Buyer Qualification.
+> **01** — Geen gated access zonder geldige voorwaarden volgens Legal/governance.
 >
-> **02** — Sophia-approval voor Full Data Room access.
+> **02** — Full access vereist de toepasselijke approval.
 >
-> **03** — Access logging altijd actief.
+> **03** — Access logging is verplicht; geen mondelinge/ontraceerbare toegang.
+>
+> **04** — Een buyer met `EXPIRED`/`REVOKED` access mag geen actieve toegang behouden.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Gecontroleerde data room met access log.
+- Gecontroleerde documentindex.
+- Traceerbare buyer-access records.
+- Input voor Buyer Pipeline en Legal review.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elke buyer heeft NDA + qualification vastgelegd.
-- Alle documenten geïndexeerd.
+- Documenten hebben Document-ID, locatie en classificatie.
+- Accessblokken koppelen via Access-ID.
+- NDA/qualification/accessstatus zijn expliciet.
+- Geen vertrouwelijke documentinhoud staat in de spec.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — access alleen na NDA + Buyer Qualification; Full access → Sophia.
+Access volgens geldende NDA-, qualification- en approval-governance; full access escaleren waar vereist.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Buyer Pipeline
-- → 07_LEGAL
+- → Legal evidence
+- → ClickUp diligence tasks
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = data-room-specificatie · Drive = daadwerkelijke data room/evidence · ClickUp = uitvoering · Moneybird = financiële waarheid.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `04_DEALS/[DEAL]/02_CONTRACTEN_BEWIJS`
+Drive: `04_DEALS/[DEAL]/02_CONTRACTEN_BEWIJS` of goedgekeurde data-roomlocatie.
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit NDA, qualification, access of documentstatus; onbekend = `TBD`.
+- Deel/verplaats geen data-roomdocumenten vanuit deze template; alleen refereren en status beheren.
+- Behoud A4-portret; accessblokken koppelen via Access-ID.
+- Geen confidential documentinhoud in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Access aangevraagd | Make → ClickUp | Qualification-check | Buyer→Task |
-| NDA getekend | Make → Docusign/Sheets | Access log | Buyer→Row |
+| Access request | Make → ClickUp | Qualification/access review | Access-ID→External ID, Buyer→Taak/Buyer, Deal-ID→Reference, NDA-status→Custom field, Accessniveau→Custom field |
+| Access `ACTIVE` | Make → access workflow | Toegang uitvoeren | Access-ID→Reference, Buyer→Buyer, Accessniveau→Access level, Vervalt→Expiry |
+| Access `EXPIRED`/`REVOKED` | Make → access workflow | Toegang intrekken | Access-ID→Reference, Status→Status |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM CONTROL AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM CONTROL AGENT |
+| 2026-08-10 | V2.2 | Document-ID/Access-ID, A4-portret accessblokken, classificatie/NDA/access-enums en veilige access mappings toegevoegd. | CM CONTROL AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat de daadwerkelijke data room/evidence._
