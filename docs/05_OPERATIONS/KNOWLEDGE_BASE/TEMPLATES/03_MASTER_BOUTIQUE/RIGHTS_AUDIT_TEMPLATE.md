@@ -6,100 +6,136 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Rights Audit |
 | Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM LEGAL AGENT |
-| Support agents | CM PROSPECT AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Support agents | CM PROSPECT AGENT · CM CONTROL AGENT |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | LEGAL |
 | Approval | Ja — vóór buyer-facing of diligencegebruik |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Rechtenaudit die per werk verifieert of rechten, metadata en chain of title kloppen — de kwaliteitscontrole op de Music Rights Register vóór een deal.
+Rechtenaudit die per Werk-ID controleert of claims, metadata, chain of title, restrictions en evidence uit het Music Rights Register voldoende zijn voor deal- of diligencegebruik.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Deal-verificatie, due diligence, chain-of-title-check.
+- Voor buyer-facing Deal Memo.
+- Due diligence.
+- Chain-of-title-review.
+- Materiële wijziging in Rights Register.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
 | Music Rights Register | Ja | Rights Register |
-| Bronbewijs | Ja | 07_LEGAL/EVIDENCE |
+| Brondocumenten/evidence | Ja | Legal evidence |
+| Deal scope | Indien deal | Deal Memo |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Audit per werk
+### AUDIT — CLAIM
 
-| Track | Rights type | Claim | Bron | Bewijs aanwezig | Metadata OK | Chain of title | Bevinding | Status |
-|---|---|---|---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Audit-ID | Werk-ID | Rights type | Claim | Bron/evidence | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Findings & risk
+### AUDIT — CONTROLES
 
-| Bevinding | Risico | Impact op waarde | Mitigatie | Owner |
+| Audit-ID | Metadata | Chain of title | Shares | Restricties | Disputes/liens |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+### FINDINGS & MITIGATIE
+
+| Finding-ID | Audit-ID | Bevinding | Risico | Impact | Mitigatie | Eigenaar |
+|---|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+
+### FINDING — OPVOLGING
+
+| Finding-ID | Deadline | Status | Bewijs oplossing | Laatst bijgewerkt |
 |---|---|---|---|---|
 | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+_De auditblokken koppelen via Audit-ID/Werk-ID; de findingblokken vormen via Finding-ID één finding-record._
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Audit status | `UNVERIFIED` · `PARTIAL` · `VERIFIED` · `BLOCKED` |
+| Finding risico | `LOW` · `MEDIUM` · `HIGH` · `CRITICAL` |
+| Finding status | `OPEN` · `IN_PROGRESS` · `RESOLVED` · `ACCEPTED_RISK` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Geen "verified" zonder bronbewijs.
+> **01** — Geen `VERIFIED` zonder herleidbare bron/evidence.
 >
-> **02** — Openstaande findings blokkeren buyer-facing gebruik.
+> **02** — `BLOCKED` audit of open `HIGH/CRITICAL` finding blokkeert buyer-facing gebruik tenzij expliciet conform governance geaccepteerd.
+>
+> **03** — AI corrigeert geen shares of chain-of-title-gaten uit zichzelf.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Auditrapport; verification status terug naar Rights Register.
+- Auditstatus per work/right claim.
+- Findings met risk, owner en mitigatie.
+- Verificatie-input terug naar Rights Register en Deal Memo.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Elke regel heeft bevinding en status.
+- Iedere auditregel heeft Audit-ID en Werk-ID.
+- Iedere finding heeft Finding-ID, risico, owner en status.
+- `VERIFIED` vereist evidence.
+- Findings worden niet stilzwijgend gesloten.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór buyer-facing of diligencegebruik.
+CM LEGAL AGENT vóór buyer-facing/diligencegebruik; risk acceptance conform CM governance.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → Rights Register
+- → Music Rights Register
 - → Deal Memo
 - → Data Room
+- → ClickUp legal findings
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = audit-specificatie · Drive = workcopy/evidence · ClickUp = finding-uitvoering · Moneybird = financiële waarheid. Legal evidence blijft bron voor verificatie.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `07_LEGAL/LEGAL_REVIEW` of `04_DEALS/[DEAL]/01_RECHTEN_REGISTER`
+Drive: `04_DEALS/[DEAL]/01_RECHTEN_REGISTER` of `07_LEGAL/LEGAL_REVIEW` volgens workflow.
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit evidence, ownership, shares, status of oplossing; onbekend = `TBD`.
+- Alleen brononderbouwde claims mogen `VERIFIED` zijn.
+- Behoud A4-portret; gebruik gekoppelde Audit-ID/Finding-ID-blokken.
+- Geen vertrouwelijke evidence in de GitHub-specificatie.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Audit afgerond | Make → Sheets | Register verification | Track→Status |
-| Finding geopend | Make → ClickUp | LEGAL-taak | Finding→Task |
+| Auditstatus gewijzigd | Make → Rights workflow | Verification terugschrijven | Werk-ID→Record ID, Status→Verification status |
+| Finding `OPEN`/`IN_PROGRESS` | Make → ClickUp | LEGAL-taak | Finding-ID→External ID, Bevinding→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status, Risico→Priority |
+| Finding `RESOLVED` | Make → Rights workflow | Heraudit triggeren | Audit-ID→Reference, Bewijs oplossing→Evidence reference |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM LEGAL AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM LEGAL AGENT |
+| 2026-08-10 | V2.2 | Audit-ID/Werk-ID/Finding-ID-architectuur, A4-portret-blokken, risk/status-enums en diligence automation mappings toegevoegd. | CM LEGAL AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën/evidence._
