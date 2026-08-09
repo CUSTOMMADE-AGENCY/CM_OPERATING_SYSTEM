@@ -1,68 +1,102 @@
 <img src="../../../../../00_GOVERNANCE/BRAND/CM_LOGO.png" alt="Custommade Agency" width="72" align="right" />
 
-# TEMPLATE ARCHITECTURE STANDARD — V2
+# TEMPLATE ARCHITECTURE STANDARD — V2.2
 
-## Status
+## STATUS
 
-`ACTIVE` — leidend voor alle CM-templates. Vervangt `TEMPLATE_ARCHITECTUURSTANDAARD.md` (V1, 14 onderdelen), die op `SUPERSEDED` staat.
+`ACTIVE` — leidend voor alle CM-templates. V2.2 bouwt voort op V2.0 en maakt de Artist Roadmap V2.2 de referentie voor operationele opbouw, printbaarheid en automation-consistentie.
 
-## Doel
+## DOEL
 
-V2 maakt van iedere template één **machine-readable operating tool** met dezelfde vaste structuur, zodat dezelfde template zonder interpretatie bruikbaar is door:
+Iedere CM-template is één **machine-readable operationele tool** die zonder extra interpretatie bruikbaar is door medewerker, stagiair, AI-agent, Make en ClickUp. De template bevat echte werkruimte en geen lege samenvattingskaart.
 
-`Sophia → medewerker → stagiair → ChatGPT → Claude → Make → ClickUp`
+## VERPLICHTE STRUCTUUR — 15 SECTIES
 
-Een template is geen samenvattingskaart of inhoudsopgave, maar bevat **werkruimte** (ingevulde-tabel-structuren) waar direct in gewerkt en waaruit geautomatiseerd wordt.
-
-## Verplichte structuur — 15 secties
-
-Elke template bevat exact deze secties, in deze volgorde en nummering:
+Elke template bevat exact deze secties, in deze volgorde:
 
 | # | Sectie | Inhoud |
 |---|---|---|
-| 01 | DOCUMENT CONTROL | Metadata-tabel: type, onderdeel van, entity, owner + support agent, status, versie, datum, risico, approval. |
-| 02 | PURPOSE | Eén alinea: waarvoor de tool dient en welk resultaat hij oplevert. |
-| 03 | TRIGGER | Concrete gebeurtenissen die de template activeren. |
-| 04 | INPUT | Tabel: benodigde input, verplicht ja/nee, bron. |
-| 05 | WORKING TEMPLATE | De echte werkruimte: één of meer tabellen met kolommen die ingevuld worden. Dit is het hart van de template. |
-| 06 | DECISION GATES | Niet-onderhandelbare poorten/voorwaarden (zwart callout). Geen voortgang zonder. |
-| 07 | OUTPUT | Wat de template oplevert en waarheen het gaat. |
-| 08 | QUALITY CONTROL | Controlepunten vóór overdracht/publicatie. |
-| 09 | APPROVAL | Wie keurt goed, op welk niveau, hoe vastgelegd. |
-| 10 | HANDOFF | Naar welk systeem/rol de output gaat. |
-| 11 | SYSTEM OF RECORD | GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid. |
-| 12 | STORAGE | Drive-pad + naamconventie. |
-| 13 | AI INSTRUCTIONS | Regels voor agents/automation; nooit verzinnen; onbekend = `TBD`; verwijs naar de index. |
-| 14 | AUTOMATION HOOKS | Tabel: trigger → systeem → actie → field mapping (Make/ClickUp). |
-| 15 | CHANGELOG | Tabel: datum, versie, wijziging, owner. |
+| 01 | DOCUMENT CONTROL | Type, onderdeel, entity, owner/support, status, versie, datum, risico, approval. |
+| 02 | DOEL | Waarvoor de tool dient en welk resultaat hij oplevert. |
+| 03 | GEBRUIKSMOMENT | Concrete gebeurtenissen die de template activeren. |
+| 04 | BENODIGDE INPUT | Input, verplicht ja/nee, bron. |
+| 05 | WERKTEMPLATE | De echte invulbare werkruimte. |
+| 06 | BESLISPOORTEN | Niet-onderhandelbare voorwaarden vóór voortgang. |
+| 07 | RESULTAAT | Concrete output. |
+| 08 | KWALITEITSCONTROLE | Controlepunten vóór overdracht/publicatie. |
+| 09 | GOEDKEURING | Wie keurt goed en wanneer. |
+| 10 | OVERDRACHT | Naar welk systeem/rol de output gaat. |
+| 11 | LEIDENDE BRON | GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid. |
+| 12 | OPSLAG | Drive-pad + naamconventie. |
+| 13 | AI-INSTRUCTIES | Nooit verzinnen; onbekend = `TBD`; index eerst; bronregels respecteren. |
+| 14 | AUTOMATISERINGSKOPPELINGEN | Trigger → systeem → actie → veldmapping. |
+| 15 | WIJZIGINGSLOG | Datum, versie, wijziging, owner. |
 
-## Statusregel
+## TAALSTANDAARD
 
-Een template mag alleen `ACTIVE` zijn wanneer **alle 15 secties aanwezig** zijn en de WORKING TEMPLATE echte werk-tabellen bevat. Voldoet een template daar niet aan, dan is de status `DRAFT` of `NEEDS_REVIEW`.
+- Zichtbare structuur, toelichting en kolomkoppen zijn Nederlandstalig.
+- Gangbare muziekindustrietermen mogen Engels blijven wanneer vertaling minder precies is, waaronder master, publishing, neighboring rights, sync, DSP, KPI, pipeline, rights, release en deal.
+- Technische machinewaarden mogen Engels blijven, bijvoorbeeld `OPEN`, `BLOCKED`, `IN_PROGRESS`, `QUALIFIED`.
 
-## Huisstijl
+## A4-PORTRET EN PRINTREGEL
 
-Templates volgen `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md`: Montserrat, bold uppercase koppen met scheidingslijn, metadata-tabel bovenaan, zwarte callout-blokken, geen kleuren buiten zwart/wit. Het **CM-logo** staat rechtsboven in elke template.
+- Alle standaardtemplates worden ontworpen voor **A4-portret**.
+- Mixed portrait/landscape binnen één template is niet toegestaan als standaardoplossing.
+- Werk-tabellen met te veel kolommen worden opgesplitst in **logisch gekoppelde blokken** die samen één record vormen.
+- Elk gekoppeld blok moet expliciet vermelden dat de blokken inhoudelijk hetzelfde record vormen.
+- Een werk-tabel blijft bij voorkeur op maximaal circa 6–7 praktisch leesbare kolommen per blok.
+- Registers met extreem veel velden worden functioneel opgesplitst in blokken per record, bijvoorbeeld Identiteit, Rechten, Financieel en Verificatie.
 
-## Machine-readability
+## MACHINE-READABILITY
 
-- Elke werk-tabel heeft een vaste kolomkop-set zodat Make/ClickUp erop kunnen mappen (sectie 14).
-- Lege waarden zijn `TBD`, nooit weggelaten.
+- Elke automation mapping in sectie 14 verwijst letterlijk naar een bestaand veld in sectie 05.
+- Velden waarop Make/ClickUp mappen gebruiken gecontroleerde waarden; geen vrije statustekst.
+- Lege waarden zijn `TBD`, nooit stilzwijgend weggelaten.
 - Registers en logs zijn tabellen, geen vrije tekst.
+- Gesplitste werkblokken gebruiken een stabiele recordsleutel waar nodig zodat automation weet welke blokken bij elkaar horen.
 
-## AI-instructies (algemeen)
+## BRONREGELS
 
-- Agents controleren eerst de Template Index (`00_TEMPLATE_INDEX.md`) vóór het aanmaken van nieuwe output.
-- Agents verzinnen nooit ontbrekende informatie; onbekend = `TBD`.
-- Agents maken geen parallelle of dubbele template-locaties aan (zie `99_ARCHIVE_SUPERSEDED`).
-- Afwijkingen → `TEMPLATE_GAP_LOG`; gebruik → `TEMPLATE_USAGE_REPORT`.
+- GitHub is leidend voor template-specificaties en governance.
+- Drive bevat werkbare kopieën, ingevulde operationele documenten en exports.
+- ClickUp beheert uitvoering, taken, owners, deadlines en operationele status wanneer daarvoor een ClickUp-workflow bestaat.
+- Moneybird blijft financiële waarheid voor daadwerkelijke financiële transacties/actuals.
+- Rights Register / Legal evidence blijft leidend voor geverifieerde rechtenclaims; templates mogen deze bron niet vervangen.
 
-## Migratie
+## STATUSREGEL
 
-De 24+ bestaande templates worden naar V2 gemigreerd (P2). Master Boutique krijgt aanvullende diepte (P3): Music Rights Register, Deal Memo, Rights Audit, Valuation, Data Room, Buyer Pipeline.
+Een template mag alleen `ACTIVE` zijn wanneer:
 
-## Changelog
+1. alle 15 secties aanwezig zijn;
+2. sectie 05 echte werk-tabellen bevat;
+3. alle verplichte velden bestaan;
+4. sectie 14 alleen naar bestaande bronvelden mappt;
+5. eventuele statusvelden gecontroleerde waarden hebben;
+6. A4-portret leesbaar blijft of brede tabellen correct zijn opgesplitst;
+7. geen bedragen, approvalgrenzen, rechtenclaims of clientdata worden verzonnen.
+
+Anders is de status `DRAFT` of `NEEDS_REVIEW`.
+
+## HUISSTIJL
+
+Templates volgen `docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md`: Montserrat, vetgedrukte uppercase koppen, duidelijke tabellen, zwart/wit, CM-logo rechtsboven, compact en binnen circa 10 seconden scanbaar.
+
+## AI-INSTRUCTIES — ALGEMEEN
+
+- Controleer eerst `00_TEMPLATE_INDEX.md`.
+- Maak geen parallelle of dubbele template wanneer een canonical template bestaat.
+- Verzin nooit ontbrekende informatie; onbekend = `TBD`.
+- Gebruik alleen de benoemde bronsystemen.
+- Behoud A4-portret en splits brede werkvelden in gekoppelde blokken.
+- Log gaps in `TEMPLATE_GAP_LOG`; log gebruik in `TEMPLATE_USAGE_REPORT`.
+
+## REFERENTIETEMPLATE
+
+`02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md` V2.2 is de eerste goedgekeurde referentietemplate voor deze standaard.
+
+## WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
-| --- | --- | --- | --- |
-| 2026-07-27 | V2.0 | Eerste vaststelling 15-sectie machine-readable standaard; vervangt V1 (14 onderdelen). | CM CONTROL AGENT |
+|---|---|---|---|
+| 2026-07-27 | V2.0 | Eerste 15-sectie machine-readable standaard. | CM CONTROL AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige secties, A4-portret als norm, brede tabellen als gekoppelde blokken, gecontroleerde statussen en harde veldmapping-consistentie toegevoegd. | CM CONTROL AGENT |
