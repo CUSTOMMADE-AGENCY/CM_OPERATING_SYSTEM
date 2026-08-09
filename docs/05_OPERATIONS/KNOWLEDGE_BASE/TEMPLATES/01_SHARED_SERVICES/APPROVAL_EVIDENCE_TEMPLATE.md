@@ -11,87 +11,119 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM CONTROL AGENT |
 | Support agents | CM LEGAL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | GOVERNANCE |
-| Approval | Bepaald door de onderliggende actie |
+| Approval | Bepaald door onderliggende actie |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Bewijsstuk van een verleende goedkeuring: wat is goedgekeurd, door wie, wanneer en op welk niveau. Onderbouwt Level 3/4-beslissingen.
+Compact bewijsrecord van een verleende of geweigerde goedkeuring: onderwerp, besluit, approver, niveau, datum, voorwaarden en bewijsreferentie. Dit bewijsstuk ondersteunt het operationele Approval Register maar vervangt dat register niet.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Elke approval die vastgelegd moet worden.
+- Iedere approval die aantoonbaar moet worden vastgelegd.
+- Level 3/4-beslissing.
+- Budget-, client-facing-, legal- of governance-gate wanneer bewijs vereist is.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Onderwerp approval | Ja | Actie |
-| Approver + niveau | Ja | Governance |
-| Datum | Ja | Actie |
+| Onderwerp / actie | Ja | Workflow / dossier |
+| Approver | Ja | Governance |
+| Approvalniveau | Ja | Governance |
+| Besluit | Ja | Approval evidence / communicatie |
+| Bewijsreferentie | Ja | Gmail / Drive / registerbron |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Approval-record
+### APPROVAL-RECORD
 
-| Onderwerp | Approver | Niveau | Datum | Referentie |
-|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD |
+| Approval-ID | Onderwerp | Besluit | Approver | Niveau | Datum |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+### APPROVAL-VOORWAARDEN & BEWIJS
+
+| Approval-ID | Voorwaarden | Geldig tot | Bewijsreferentie | Dossierreferentie | Status |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
+
+_De twee blokken vormen via `Approval-ID` inhoudelijk één approval-record. Het operationele audit trail blijft in het geldende CM Approval Register._
+
+### GECONTROLEERDE WAARDEN
+
+| Veld | Toegestane waarden |
+|---|---|
+| Besluit | `APPROVED` · `REJECTED` · `CONDITIONAL` · `TBD` |
+| Status | `VALID` · `EXPIRED` · `SUPERSEDED` · `TBD` |
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Elke approval verwijst naar het Approval Register waar van toepassing.
+> **01** — Geen approval zonder identificeerbare approver en bewijsreferentie.
 >
-> **02** — Geen actie op Level 4 zonder Sophia-approval.
+> **02** — Level 4 vereist Sophia-approval conform governance.
+>
+> **03** — Een `CONDITIONAL` besluit moet voorwaarden expliciet vastleggen.
+>
+> **04** — Approval Evidence vervangt het operationele Approval Register niet.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Vastgelegd bewijsstuk gekoppeld aan het dossier en het register.
+- Traceerbaar approval-bewijsstuk.
+- Input voor Approval Register en betrokken workflow.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Approver, niveau en datum aanwezig.
+- Beide blokken gebruiken dezelfde Approval-ID.
+- Approver, niveau, datum, besluit en bewijsreferentie zijn ingevuld of expliciet `TBD`.
+- Besluit/status gebruiken gecontroleerde waarden.
+- Geen approval wordt afgeleid uit stilte of aannames.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Niveau volgt de onderliggende actie; registratie door CM CONTROL AGENT.
+Niveau volgt de onderliggende actie; governance-registratie door CM CONTROL AGENT.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
-- → 07_LEGAL/APPROVALS/CM_APPROVAL_REGISTER
+- → CM Approval Register
+- → Betrokken dossier/workflow
+- → ClickUp gate indien van toepassing
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = spec · Drive = werkkopie/evidence · ClickUp = uitvoering · Moneybird = financiële waarheid. Operationeel approval audit trail = geldend CM Approval Register.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `[DOSSIER]/02_CONTRACT` of `07_LEGAL/EVIDENCE`
+Drive: `[DOSSIER]/02_CONTRACT` of `07_LEGAL/EVIDENCE` volgens workflow.
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit approval, approver, niveau, datum, voorwaarden of bewijs; onbekend = `TBD`.
+- Controleer geldende approval governance vóór interpretatie.
+- Behoud A4-portret; gekoppelde approvalblokken gebruiken Approval-ID.
+- Geen vertrouwelijke bewijsinhoud in de GitHub-specificatie; alleen referenties.
+- Maak geen parallel approvalregister.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Approval vastgelegd | Make → Sheets | Register-regel | Onderwerp→Row, Niveau→Field |
+| Approval-record compleet | Make → Approval Register | Registerregel aanmaken/bijwerken | Approval-ID→ID, Onderwerp→Subject, Besluit→Decision, Approver→Approver, Niveau→Level, Datum→Date, Bewijsreferentie→Evidence |
+| Status `EXPIRED` | Make → ClickUp | Reviewtaak | Approval-ID→Reference, Onderwerp→Taak, Geldig tot→Due date |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM CONTROL AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM CONTROL AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, Approval-ID, besluit/status-enums, voorwaarden/bewijsblok en register-veilige automation mappings toegevoegd. | CM CONTROL AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën/evidence._
