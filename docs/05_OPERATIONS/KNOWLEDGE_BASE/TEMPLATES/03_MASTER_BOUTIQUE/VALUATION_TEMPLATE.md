@@ -6,120 +6,137 @@
 
 | Veld | Waarde |
 |---|---|
-| Document type | Operational Template |
+| Document type | Operational Template / Valuation |
 | Onderdeel van | CM Template Library / Master Boutique |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM MONEY AGENT |
 | Support agents | CM PROSPECT AGENT · CM LEGAL AGENT |
-| Status | ACTIVE — V2 |
-| Versie | V2.0 |
-| Datum | JULI 2026 |
+| Status | ACTIVE — V2.2 |
+| Versie | V2.2 |
+| Datum | AUGUSTUS 2026 |
 | Risico | FINANCIAL |
-| Approval | Ja — vóór buyer-facing gebruik (Level 4 → Sophia) |
+| Approval | Ja — vóór buyer-facing gebruik; Level 4 → Sophia |
 
-## 02 · PURPOSE
+## 02 · DOEL
 
-Onderbouwde waardering van een catalogus/asset op basis van historische en verwachte inkomsten, multiples en aannames.
+Onderbouwde waardering van een catalogus, master of rechtenasset op basis van historische inkomsten, forecast, rechtenstatus, multiples en expliciete aannames. De template maakt de waardering controleerbaar en herleidbaar.
 
-## 03 · TRIGGER
+## 03 · GEBRUIKSMOMENT
 
-- Deal-kwalificatie, prijsbepaling, buyer-facing voorbereiding.
+- Deal qualification.
+- Pricing / asking price.
+- Onderhandeling.
+- Buyer-facing waardering.
 
-## 04 · INPUT
+## 04 · BENODIGDE INPUT
 
 | Input | Verplicht | Bron |
 |---|---|---|
-| Financials | Ja | Deal Memo / 06_FINANCE |
+| Financial actuals | Ja | Moneybird / royalty statements |
 | Rights Audit | Ja | Rights Audit |
-| Marktmultiples | Ja | Master Boutique kennis |
+| Deal scope | Ja | Deal Memo / Rights Register |
+| Marktmultiples | Ja | Benoemde marktbron / deal intelligence |
+| Forecast-aannames | Ja | Onderbouwde analyse |
 
-## 05 · WORKING TEMPLATE
+## 05 · WERKTEMPLATE
 
-### Income basis
+### VALUATION — INKOMSTENBASIS
 
-| Lane | LTM | NTM forecast | Groei-aanname | Toelichting |
+| Lane | Periode | Actual | Forecast | Groei-aanname | Bron |
+|---|---|---|---|---|---|
+| Master | LTM | TBD | TBD | TBD | TBD |
+| Publishing | LTM | TBD | TBD | TBD | TBD |
+| Neighboring rights | LTM | TBD | TBD | TBD | TBD |
+| Sync | LTM | TBD | TBD | TBD | TBD |
+| Overig | LTM | TBD | TBD | TBD | TBD |
+
+### VALUATION — METHODEN
+
+| Methode | Basis | Multiple/rate | Uitkomst | Bron/onderbouwing |
 |---|---|---|---|---|
-| Master | TBD | TBD | TBD | TBD |
-| Publishing | TBD | TBD | TBD | TBD |
-| Neighbouring | TBD | TBD | TBD | TBD |
-| Sync | TBD | TBD | TBD | TBD |
-| Other | TBD | TBD | TBD | TBD |
+| LTM multiple | TBD | TBD | TBD | TBD |
+| NTM multiple | TBD | TBD | TBD | TBD |
+| DCF | TBD | TBD | TBD | TBD |
 
-### Valuation
+### VALUATION — RANGE
 
-| Methode | Multiple | Waarde | Toelichting |
-|---|---|---|---|
-| LTM multiple | TBD | TBD | TBD |
-| NTM multiple | TBD | TBD | TBD |
-| DCF | TBD | TBD | TBD |
+| Waarde-ID | Low | Base | High | Asking price | Minimum acceptabel |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-### Range & recommendation
+### AANNAMES & SENSITIVITEIT
 
-| Veld | Waarde |
-|---|---|
-| Low | TBD |
-| Base | TBD |
-| High | TBD |
-| Asking price | TBD |
-| Minimum acceptable | TBD |
-| Key assumptions | TBD |
-| Sensitivities | TBD |
+| Waarde-ID | Aanname | Base case | Downside | Upside | Bron |
+|---|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD |
 
-## 06 · DECISION GATES
+_De range- en aannameblokken vormen via `Waarde-ID` inhoudelijk één waarderingsrecord._
+
+## 06 · BESLISPOORTEN
 
 > **NIET-ONDERHANDELBAAR**
 >
-> **01** — Elke waarde heeft methode en aannames.
+> **01** — Geen valuation zonder herleidbare financiële actuals.
 >
-> **02** — Geen buyer-facing waardering zonder Rights Audit.
+> **02** — Geen buyer-facing valuation zonder Rights Audit.
 >
-> **03** — Level 4 → Sophia.
+> **03** — Iedere multiple/rate heeft bron of expliciet `TBD`.
+>
+> **04** — Level 4 → Sophia conform governance.
 
-## 07 · OUTPUT
+## 07 · RESULTAAT
 
-- Waarderingsrapport; input voor Deal Memo en Buyer Pipeline.
+- Low/base/high valuation range.
+- Asking price / minimum acceptabel als beslisinput.
+- Transparante aannames voor Deal Memo.
 
-## 08 · QUALITY CONTROL
+## 08 · KWALITEITSCONTROLE
 
-- Multiples en aannames onderbouwd.
-- Range met low/base/high.
+- Actuals hebben periode en bron.
+- Multiples/rates hebben bron/onderbouwing.
+- Range en sensitiviteit koppelen via Waarde-ID.
+- Geen forecast of marktmultiple wordt als feit gepresenteerd zonder bron/aannames.
 
-## 09 · APPROVAL
+## 09 · GOEDKEURING
 
-Ja — vóór buyer-facing gebruik; Level 4 → Sophia.
+CM MONEY AGENT; vóór buyer-facing gebruik conform deal-governance; Level 4 → Sophia.
 
-## 10 · HANDOFF
+## 10 · OVERDRACHT
 
 - → Deal Memo
+- → Buyer Pipeline
 - → Data Room
 
-## 11 · SYSTEM OF RECORD
+## 11 · LEIDENDE BRON
 
-GitHub = spec · Drive = werkkopie · ClickUp = uitvoering · Moneybird = financiële waarheid.
+GitHub = valuation-spec · Drive = werkkopie/evidence · ClickUp = uitvoering · Moneybird = financiële waarheid. Royalty statements/financial evidence blijven bron voor inkomstenactuals.
 
-## 12 · STORAGE
+## 12 · OPSLAG
 
-Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET`
+Drive: `04_DEALS/[DEAL]/03_WAARDERING_VERKOOPPAKKET` · `YYYY-MM-DD_[ASSET]_VALUATION_vX.Y`
 
-## 13 · AI INSTRUCTIONS
+## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index (00_TEMPLATE_INDEX.md); maak geen parallelle of dubbele template.
-- Verzin nooit ontbrekende informatie; onbekend of nog te bepalen = TBD.
-- Geen clientdata, vertrouwelijke gegevens of getekende documenten in de template-specificatie.
-- Log gebruik in TEMPLATE_USAGE_REPORT; markeer afwijkingen in TEMPLATE_GAP_LOG.
+- Verzin nooit actuals, multiples, forecast, asking price of assumptions; onbekend = `TBD`.
+- Benoem altijd bron of expliciete aanname.
+- Behoud A4-portret; gebruik gekoppelde Waarde-ID-blokken.
+- Rights Audit moet worden gecontroleerd vóór buyer-facing output.
+- Moneybird/royaltybron blijft financiële waarheid.
 
-## 14 · AUTOMATION HOOKS
+## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Valuation vastgesteld | Make → Deal Memo | Valuation-sectie vullen | Waarde→Field |
+| Waardering vastgesteld | Make → Deal Memo | Valuation-sectie vullen | Waarde-ID→Reference, Low→Low, Base→Base, High→High, Asking price→Asking price, Minimum acceptabel→Minimum |
+| Financial actual gewijzigd | Make | Heraudit valuation | Lane→Lane, Periode→Period, Actual→Actual, Bron→Source |
 
-## 15 · CHANGELOG
+## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2 (15 secties, werk-tabellen). | CM MONEY AGENT |
+| 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM MONEY AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur, bron/periode-verplichting, Waarde-ID, sensitiviteitsblok en valide Deal Memo mappings toegevoegd. | CM MONEY AGENT |
 
 ---
 
-_System of Record: GitHub. Drive bevat uitsluitend werkbare kopieën._
+_Leidende bron: GitHub. Drive bevat uitsluitend werkbare kopieën/evidence._
