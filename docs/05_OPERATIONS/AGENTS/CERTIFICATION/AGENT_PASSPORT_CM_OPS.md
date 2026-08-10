@@ -33,8 +33,8 @@
 | # | Gate | Status | Wat nog nodig is |
 |---|---|:--:|---|
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
-| 2 | Documentatie | ⚠️ | Testplan + logspecificatie voor OPS aantonen |
-| 3 | Techniek | ⬜ | Scenario's "Artist onboarding trigger" + "Approval follow-up reminder" + "Client setup folder creation" van `IDEA` → `ACTIVE` (CM FLOW) |
+| 2 | Documentatie | ⚠️ | Testplan + logspecificatie; **`CLICKUP_STRUCTURE.md` wijkt af van de live workspace** (`EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`) — reconciliatie nodig |
+| 3 | Techniek | ⬜ | Scenario's "Artist onboarding trigger" + "Approval follow-up reminder" + "Client setup folder creation" van `IDEA` → `ACTIVE` (CM FLOW); **ClickUp mist een Artist Management-home** (OPS-kerntaak) |
 | 4 | Functionele test | ⬜ | Registratie in `CERT_TEST_PLAN.md` §2 |
 | 5 | Red team | ⬜ | Registratie in `CERT_TEST_PLAN.md` §3 |
 | 6 | Approval | ⚠️ | Sophia-approval productiestatus (record §4) |
@@ -42,6 +42,11 @@
 | — | Score ≥90 + paspoort | ⬜ | Score invullen na tests |
 
 **Afhankelijkheid:** OPS-triggers draaien op de door CM FLOW ingerichte trigger-laag (fase 1).
+
+**Substraat-bevinding (2026-08-07):** de live ClickUp-workspace (`CUSTOMMMADE AGENCY`) wijkt af
+van `CLICKUP_STRUCTURE.md` (naam met typefout, 4 i.p.v. 6 folders, **geen Artist Management-home**,
+legacy `FIERCE`-lijst). Reconciliatie is de eerste OPS-gate. Zie
+`EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`.
 
 ## 3. Agent-specifieke testaccenten
 

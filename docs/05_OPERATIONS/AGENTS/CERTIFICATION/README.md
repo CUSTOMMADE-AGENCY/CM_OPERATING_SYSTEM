@@ -58,7 +58,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 |---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|---|
 | CM VAULT | ✅ | ⚠️ | ⬜ `PAUSED`¹ | ⚠️ code | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM FLOW | ✅ | ⚠️ | ⚠️ `BUILD` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
-| CM OPS | ✅ | ⚠️ | ⬜ `IDEA` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
+| CM OPS | ✅ | ⚠️² | ⬜ `IDEA` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM MONEY | ✅ | ⚠️ | ⬜ `REVIEW` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM LEGAL | ✅ | ⚠️ | ⬜ *(te reg.)* | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM SOCIAL | ✅ | ⚠️ | ⬜ *(te reg.)* | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
@@ -70,6 +70,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 - **Approval ⚠️** — Sophia heeft het *activatietraject* goedgekeurd; de *productiestatus per agent* wordt pas per agent vastgelegd nadat de gates groen zijn.
 - **Techniek** — geen scenario staat `ACTIVE`; *te reg.* = scenario nog te registreren in `MAKE_SCENARIO_MAP.md`.
 - **⚠️ code** (CM VAULT) — functionele tests op de code-laag geslaagd (**PASS 5/5**, `EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`). De red-team-gate blijft **open**: er is alleen *safe-stop*-deelbewijs; §4 vereist ook logging + escalatie (scenario-laag) plus live-cases. Score nog open. CM VAULT blijft Level 1.
+- **² Doc** (CM OPS) — de live ClickUp-workspace wijkt af van `CLICKUP_STRUCTURE.md` (naam met typefout `CUSTOMMMADE`, 4 i.p.v. 6 folders, **geen Artist Management-home**, legacy `FIERCE`-lijst). Reconciliatie is de eerste OPS-gate. Zie `EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`. OPS-automatiseringen staan op `IDEA`. OPS blijft Level 1.
 - **¹ `PAUSED`** (CM VAULT) — Make-scenario CM VAULT V1 was op 2026-08-07 kort live, maar is per **governance-besluit (Sophia) teruggezet naar gepauzeerd**: `GOVERNANCE_RULES.md` houdt het inactief tot testlog, fallback en CM CONTROL approval bestaan. Certificering verloopt gates-eerst; run van 10 aug gaat niet door. Open validatie-waarschuwing module 11. Zie `EVIDENCE/CM_VAULT_LIVE_ACTIVATION_2026-08-07.md`.
 
 ---
