@@ -15,7 +15,7 @@ CM CONTROL AGENT
 ## STATUSDEFINITIES
 
 | Status | Betekenis | Gebruik |
-|---|---|---|
+| --- | --- | --- |
 | ACTIVE | Goedgekeurd voor operationeel gebruik | Agents mogen gebruiken volgens workflow/governance |
 | DRAFT | In opbouw | Niet leidend |
 | NEEDS_REVIEW | Review nodig | Niet zonder passende approval gebruiken |
@@ -42,6 +42,7 @@ CM CONTROL AGENT
 | KPI_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
 | JAARPLAN_TEMPLATE | Artist Management | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
 | DEAL_MEMO_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
+| DEAL_NEGOTIATION_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
 | PARTNERSHIP_BRIEF_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
 | MUSIC_RIGHTS_REGISTER | Master Boutique | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
 | RIGHTS_AUDIT_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM LEGAL AGENT | 2026-08-10 | 2026-11-10 |
@@ -50,6 +51,8 @@ CM CONTROL AGENT
 | BUYER_PIPELINE_TEMPLATE | Master Boutique | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
 | BRAND_AUDIT_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
 | BUSINESS_AUDIT_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM MONEY AGENT | 2026-08-10 | 2026-11-10 |
+| ARTIST_AUDIT_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM OPS AGENT | 2026-08-10 | 2026-11-10 |
+| MANAGEMENT_PROPOSAL_TEMPLATE | Client Deliverables | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
 | ACTION_TRACKER_CLICKUP_REFERENCE | ClickUp References | ACTIVE — V2.2 | CM FLOW AGENT | 2026-08-10 | 2026-11-10 |
 | DEAL_PIPELINE_CLICKUP_REFERENCE | ClickUp References | ACTIVE — V2.2 | CM PROSPECT AGENT | 2026-08-10 | 2026-11-10 |
 | EMAIL_INSTRUCTIONS_TEMPLATE | Gmail Templates | ACTIVE — V2.2 | CM CONTROL AGENT | 2026-08-10 | 2026-11-10 |
@@ -70,3 +73,4 @@ Wijzig dit register altijd samen met `00_TEMPLATE_INDEX.md` wanneer canonical st
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
 | 2026-08-10 | V2.2 | Statusregister volledig gelijkgetrokken met canonical V2.2-index en kwartaalreviewdatum. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Artist Audit, Deal Negotiation en Management Proposal toegevoegd als canonical ACTIVE V2.2. | CM VAULT AGENT |
