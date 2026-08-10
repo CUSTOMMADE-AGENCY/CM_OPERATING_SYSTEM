@@ -104,12 +104,11 @@ _Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 | Veld | Toegestane waarden |
 |---|---|
 | Objective status | `NOT_STARTED` · `IN_PROGRESS` · `AT_RISK` · `DONE` |
-| Release status | `PLANNED` · `IN_PRODUCTION` · `SCHEDULED` · `RELEASED` · `ON_HOLD` |
 | Rights status | `CLEAR` · `OPEN` · `BLOCKED` |
 | Deal/pipeline-fase | conform `DEAL_PIPELINE_CLICKUP_REFERENCE`: `LEAD` · `QUALIFIED` · `DILIGENCE` · `CLOSING` · `CLOSED` |
 | Decision status | `OPEN` · `ESCALATED` · `DECIDED` |
 
-_Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen vrije tekst._
+_Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen vrije tekst. De lifecycle-status van een release (planned → released) wordt operationeel in ClickUp beheerd (ClickUp = uitvoering/status) en is daarom geen kolom in de Releases-werktabel._
 
 ## 06 · BESLISPOORTEN
 
@@ -188,6 +187,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | 2026-08-10 | V2.1 | Finale consistency-review: pipeline-fasen gelijkgetrokken met `DEAL_PIPELINE_CLICKUP_REFERENCE`, automation mappings gevalideerd en status naar ACTIVE gezet. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Printoptimalisatie: A4-portret behouden; Releases opgesplitst in Planning/Business en Deals & kansen in Commercieel/Opvolging zonder wijziging van de onderliggende recordlogica. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Kolom-exactheid: Releases-kolomset exact gelijkgetrokken met vereiste specificatie (Distributie-deadline vóór Releasedatum; Eigenaar/Status verwijderd uit Releases); sectie 08 en sectie 14 (release-mapping) meegecorrigeerd zodat elke mapping naar een bestaande kolom verwijst. Status teruggezet naar NEEDS_REVIEW in afwachting van finale review. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Finale consistency-check: verweesde gecontroleerde waarde `Release status` verwijderd (geen bijbehorende kolom na kolom-exactheid; release-lifecycle wordt in ClickUp beheerd). Overige ketens (werktabel → gecontroleerde waarden → beslispoorten → sectie 14) sluiten. | CM OPS AGENT |
 
 ---
 
