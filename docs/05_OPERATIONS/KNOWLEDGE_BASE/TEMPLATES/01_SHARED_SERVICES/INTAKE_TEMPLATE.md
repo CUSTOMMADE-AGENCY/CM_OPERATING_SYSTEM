@@ -10,22 +10,23 @@
 | Onderdeel van | CM Template Library / Shared Services |
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
-| Support agents | CM VAULT AGENT |
-| Status | ACTIVE — V2.2 |
-| Versie | V2.2 |
+| Support agents | CM VAULT AGENT · CM PROSPECT AGENT |
+| Status | ACTIVE — V2.3 |
+| Versie | V2.3 |
 | Datum | AUGUSTUS 2026 |
-| Risico | LOW |
-| Approval | CM OPS AGENT — Level 1 |
+| Risico | LOW / COMMERCIAL |
+| Approval | CM OPS AGENT; artist Fit Check Go/No-Go conform workflow |
 
 ## 02 · DOEL
 
-Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier zodat classificatie, scope, stakeholders, owner en vervolgstap vanaf het begin eenduidig zijn.
+Gestructureerde intake én kwalificatie voor een nieuw artist-, client-, partner- of dealdossier. Voor artist leads bevat deze template de CM Fit Check, zodat geen aparte Fit Check-template nodig is.
 
 ## 03 · GEBRUIKSMOMENT
 
-- Start van een nieuw dossier.
+- Start van een nieuw dossier of lead.
 - Herstart van een samenwerking.
 - Overdracht tussen agents of teams.
+- Artist lead vóór Brand Audit / betaalde voorfase.
 
 ## 04 · BENODIGDE INPUT
 
@@ -33,8 +34,9 @@ Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier 
 |---|---|---|
 | Naam en type dossier | Ja | Aanvraag / lead |
 | Primaire stakeholder | Ja | Intake |
-| Scope / gevraagde dienst | Ja | Aanvraag / proposal |
-| Herkomst lead | Nee | CRM / ClickUp |
+| Gevraagde dienst / hulpvraag | Ja | Aanvraag |
+| Budgetindicatie | Voor artist/client lead | Lead / gesprek |
+| Urgentie / gewenste start | Voor artist/client lead | Lead / gesprek |
 | Bestaande contract-/rights-context | Indien relevant | Legal / dossierbron |
 
 ## 05 · WERKTEMPLATE
@@ -50,9 +52,9 @@ Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier 
 | Aanmaakdatum | TBD | TBD |
 | Gewenst resultaat | TBD | TBD |
 
-### SCOPE
+### HULPVRAAG & SCOPE-INDICATIE
 
-| Onderdeel | In scope | Prioriteit | Opmerking |
+| Onderdeel | Gevraagd / relevant | Prioriteit | Opmerking |
 |---|---|---|---|
 | Management | TBD | TBD | TBD |
 | Career Strategy | TBD | TBD | TBD |
@@ -65,6 +67,24 @@ Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier 
 |---|---|---|---|---|
 | TBD | TBD | TBD | TBD | TBD |
 
+### CM FIT CHECK — ALLEEN BIJ ARTIST/CLIENT LEAD
+
+| Criterium | Beoordeling | Onderbouwing / bron |
+|---|---|---|
+| Strategic fit met CM | TBD | TBD |
+| Budget fit | TBD | TBD |
+| Urgentie / timing | TBD | TBD |
+| Commercieel potentieel | TBD | TBD |
+| Uitvoerbaarheid / capaciteit | TBD | TBD |
+| Risico / blocker | TBD | TBD |
+| Aanbevolen eerstvolgende dienst | TBD | TBD |
+
+### FIT BESLUIT
+
+| Besluit | Beslisser | Reden | Volgende stap |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
+
 ### VOLGENDE STAP
 
 | Actie | Eigenaar | Deadline | Status |
@@ -75,6 +95,8 @@ Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier 
 
 | Veld | Toegestane waarden |
 |---|---|
+| Fit beoordeling | `POSITIVE` · `CONDITIONAL` · `NEGATIVE` · `TBD` |
+| Fit besluit | `GO` · `NO_GO` · `REVIEW` · `NOT_APPLICABLE` |
 | Volgende stap status | `NOT_STARTED` · `IN_PROGRESS` · `BLOCKED` · `DONE` |
 
 ## 06 · BESLISPOORTEN
@@ -83,32 +105,35 @@ Gestructureerde intake voor een nieuw artist-, client-, partner- of dealdossier 
 >
 > **01** — Geen actief dossier zonder vastgesteld dossiertype en owner.
 >
-> **02** — Bij onduidelijke scope of classificatie → CM OPS AGENT.
+> **02** — Voor artist/client leads: geen Brand Audit of verdere investering zonder Fit besluit `GO` of expliciete `REVIEW`-approval.
 >
-> **03** — Geen vertrouwelijke clientdata in de GitHub-specificatie.
+> **03** — Fit-beoordelingen hebben onderbouwing; geen aannames over budget, rechten of capaciteit.
+>
+> **04** — Geen vertrouwelijke clientdata in de GitHub-specificatie.
 
 ## 07 · RESULTAAT
 
 - Gekwalificeerde intake.
-- Dossier-onboarding gestart.
-- ClickUp-volgende stap met eigenaar en deadline.
+- Voor artist/client leads: gedocumenteerd CM Fit besluit.
+- Duidelijke volgende stap in ClickUp.
 
 ## 08 · KWALITEITSCONTROLE
 
 - Dossiertype, owner en gewenst resultaat zijn ingevuld.
-- Scope is expliciet in/out of `TBD`.
-- Stakeholders gebruiken contact-referenties in plaats van onnodige gevoelige gegevens.
+- Gevraagde scope is expliciet.
+- Fit Check wordt alleen gebruikt waar relevant en bevat onderbouwing.
 - Volgende stap heeft owner, deadline en gecontroleerde status.
 
 ## 09 · GOEDKEURING
 
-Level 1 — CM OPS AGENT. Vastlegging conform geldende approval governance wanneer vereist.
+CM OPS AGENT voor intake; artist/client Go/No-Go conform Artist Client Workflow en geldende approval governance.
 
 ## 10 · OVERDRACHT
 
-- → Client/artist onboarding
-- → ClickUp
-- → Drive dossierstructuur
+- `GO` → Brand Audit / passende betaalde voorfase
+- `REVIEW` → approval / aanvullende informatie
+- `NO_GO` → ClickUp sluiten / nette afwijzing
+- Daarna → Client/artist onboarding pas na contract/payment gate
 
 ## 11 · LEIDENDE BRON
 
@@ -120,26 +145,27 @@ Drive: `[DOSSIER]/01_ADMIN` · `YYYY-MM-DD_[ENTITY]_ADMIN_INTAKE_vX.Y`
 
 ## 13 · AI-INSTRUCTIES
 
-- Controleer eerst de Template Index.
-- Verzin nooit type, scope, stakeholder, owner of deadline; onbekend = `TBD`.
-- Gebruik contact-referenties waar mogelijk; sla geen onnodige persoonsgegevens in de spec op.
+- Maak geen aparte CM Fit Check-template; gebruik dit Fit Check-blok.
+- Verzin nooit budget, fit, scope, stakeholder, owner of deadline; onbekend = `TBD`.
+- Een fit-score is adviserend; de workflow/approval bepaalt de doorgang.
 - Behoud A4-portret en compacte tabellen.
-- Maak geen parallelle intake-template.
 
 ## 14 · AUTOMATISERINGSKOPPELINGEN
 
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
-| Intake voltooid | Make → ClickUp | Onboardingtaak aanmaken | Naam→Taak/List, Owner agent→Assignee, Gewenst resultaat→Description |
-| Volgende stap toegevoegd | Make → ClickUp | Actie aanmaken | Actie→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
-| Dossier gekwalificeerd | Make → Drive | Dossierstructuur selecteren | Type→Foldertemplate |
+| Intake voltooid | Make → ClickUp | Lead/intaketaak bijwerken | Naam→Task/Entity, Owner agent→Assignee, Gewenst resultaat→Description |
+| Fit besluit `GO` | Make → ClickUp | Brand Audit / vervolgfase openen | Naam→Entity, Besluit→Gate, Aanbevolen eerstvolgende dienst→Next phase |
+| Fit besluit `NO_GO` | Make → ClickUp | Lead sluiten | Naam→Entity, Besluit→Status, Reden→Comment |
+| Volgende stap toegevoegd | Make → ClickUp | Actie aanmaken | Actie→Task, Eigenaar→Assignee, Deadline→Due date, Status→Status |
 
 ## 15 · WIJZIGINGSLOG
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
 | 2026-07-27 | V2.0 | Herbouwd naar Template Architecture V2. | CM OPS AGENT |
-| 2026-08-10 | V2.2 | Nederlandstalige structuur, scope- en vervolgstapblokken, gecontroleerde status en valide automation mappings toegevoegd. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Nederlandstalige structuur en automation mappings toegevoegd. | CM OPS AGENT |
+| 2026-08-10 | V2.3 | CM Fit Check geïntegreerd; aparte Fit Check-template bewust geschrapt om duplicatie te voorkomen. | CM OPS AGENT |
 
 ---
 
