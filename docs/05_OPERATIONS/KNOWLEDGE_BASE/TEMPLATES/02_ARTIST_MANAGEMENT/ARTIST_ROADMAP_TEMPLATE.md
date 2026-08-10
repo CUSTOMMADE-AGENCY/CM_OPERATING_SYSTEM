@@ -11,7 +11,7 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
-| Status | ACTIVE — V2.2 |
+| Status | NEEDS_REVIEW — V2.2 (kolom-exactheid gecontroleerd; wacht op finale review) |
 | Versie | V2.2 |
 | Datum | AUGUSTUS 2026 |
 | Risico | LOW |
@@ -50,15 +50,15 @@ _Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
 ### Releases — planning
 
-| Release | Type | Master status | Rights status | Releasedatum | Distributie-deadline |
+| Release | Type | Master status | Rights status | Distributie-deadline | Releasedatum |
 |---|---|---|---|---|---|
 | TBD | TBD | TBD | TBD | TBD | TBD |
 
 ### Releases — business
 
-| Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil | Eigenaar | Status |
-|---|---|---|---|---|---|
-| TBD | TBD | TBD | TBD | TBD | TBD |
+| Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
 
 _Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet._
 
@@ -132,7 +132,7 @@ _Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen v
 ## 08 · KWALITEITSCONTROLE
 
 - Elk doel heeft KPI, doel, deadline, eigenaar en gecontroleerde status.
-- Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en gecontroleerde status.
+- Elke release heeft master-status, Rights status en distributie-deadline.
 - Release-planning en release-business blijven inhoudelijk één release-record; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
 - Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).
 - Elke deal heeft fase, eigenaar, volgende actie en deadline.
@@ -174,7 +174,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | Trigger | Systeem | Actie | Field mapping |
 |---|---|---|---|
 | Roadmap approved | Make → ClickUp | Doel-taken aanmaken | Hoofddoel→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status |
-| Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date, Eigenaar→Assignee, Status→Status |
+| Release-regel toegevoegd | Make → ClickUp | Release-checklist | Release→List, Distributie-deadline→Due date |
 | Rights status = `OPEN`/`BLOCKED` | Make → ClickUp | Rights/legal opvolgtaak | Release→Taak, Rights status→Status |
 | Deal-regel toegevoegd/gewijzigd | Make → ClickUp | Pipeline-record | Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status, Volgende actie→Next action |
 | Financiële actuals | — | Niet vanuit roadmap naar Moneybird geschreven; Moneybird blijft financiële waarheid | Read-only referentie |
@@ -187,6 +187,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | 2026-08-09 | V2.1 | Inkomsten gesplitst in 8 lanes met Periode/Bron; Deals uitgebreid (Kans %, gewogen waarde, eigenaar, volgende actie, deadline); Rights status (`CLEAR`/`OPEN`/`BLOCKED`) + budget/kosten/verschil in Releases; gecontroleerde statussen en automation hooks bijgewerkt. | CM OPS AGENT |
 | 2026-08-10 | V2.1 | Finale consistency-review: pipeline-fasen gelijkgetrokken met `DEAL_PIPELINE_CLICKUP_REFERENCE`, automation mappings gevalideerd en status naar ACTIVE gezet. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Printoptimalisatie: A4-portret behouden; Releases opgesplitst in Planning/Business en Deals & kansen in Commercieel/Opvolging zonder wijziging van de onderliggende recordlogica. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Kolom-exactheid: Releases-kolomset exact gelijkgetrokken met vereiste specificatie (Distributie-deadline vóór Releasedatum; Eigenaar/Status verwijderd uit Releases); sectie 08 en sectie 14 (release-mapping) meegecorrigeerd zodat elke mapping naar een bestaande kolom verwijst. Status teruggezet naar NEEDS_REVIEW in afwachting van finale review. | CM OPS AGENT |
 
 ---
 
