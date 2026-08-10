@@ -1,5 +1,5 @@
 /**
- * CM ARTIST PROVISIONING ENGINE — V1.1
+ * CM ARTIST PROVISIONING ENGINE — V1.2
  *
  * Maakt per artist één gekoppelde operationele workspace:
  * - 9-folder Drive-structuur conform ARTIST_FOLDER_STANDARD
@@ -25,7 +25,7 @@
 const CM_ARTIST_PROVISION_DRY_RUN = true;
 const CM_ARTIST_OS_ROOT = 'OS_CUSTOMMADE';
 const CM_ARTIST_ROOT_FOLDER = '02_ARTIST_MANAGEMENT';
-const CM_TEMPLATE_LIBRARY_PATH = ['00_ADMIN', '03_TEMPLATES'];
+const CMAP_TEMPLATE_LIBRARY_ROUTE = ['00_ADMIN', '03_TEMPLATES'];
 const CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID = '901523770695';
 const CM_CLICKUP_BASE_URL = 'https://api.clickup.com/api/v2';
 const CM_ARTIST_MANIFEST_NAME = '_CM_ARTIST_MANIFEST.json';
@@ -70,11 +70,32 @@ const CM_ARTIST_ONBOARDING_WORKSTREAMS = [
 ];
 
 /**
- * Test alleen de ClickUp Script Property/API-koppeling. Schrijft niets.
+ * Read-only ClickUp API test.
  * Verwacht Script Property: CLICKUP_API_TOKEN.
  */
-function testCmClickUpApiToken() {
-  const result = cmClickUpRequest_('get', '/user', null, false);
+function checkClickUpConnection() {
+  const token = PropertiesService.getScriptProperties().getProperty('CLICKUP_API_TOKEN');
+  if (!token) throw new Error('CLICKUP_API_TOKEN ontbreekt in Script Properties.');
+
+  const response = UrlFetchApp.fetch(CM_CLICKUP_BASE_URL + '/user', {
+    method: 'get',
+    muteHttpExceptions: true,
+    headers: {
+      Authorization: token,
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const statusCode = response.getResponseCode();
+  const body = response.getContentText();
+  Logger.log('HTTP status: ' + statusCode);
+  Logger.log(body);
+
+  if (statusCode < 200 || statusCode >= 300) {
+    throw new Error('ClickUp API fout ' + statusCode + ': ' + body);
+  }
+
+  const result = JSON.parse(body || '{}');
   const summary = {
     ok: !!(result && result.user && result.user.id),
     userId: result && result.user ? result.user.id : null,
@@ -87,9 +108,9 @@ function testCmClickUpApiToken() {
 
 /**
  * Hoofdfunctie.
- * Voorbeeld vanuit Apps Script editor:
+ * Voorbeeld:
  * provisionCmArtist({
- *   artistName: 'ARTIST NAAM',
+ *   artistName: 'CALSEY',
  *   contractReady: true,
  *   activeManagement: true,
  *   yearHorizon: true
@@ -109,7 +130,7 @@ function provisionCmArtist(options) {
   try {
     const osRoot = cmArtistFindFolderByName_(DriveApp.getRootFolder(), CM_ARTIST_OS_ROOT, true);
     const artistRootLane = cmArtistFindFolderByName_(osRoot, CM_ARTIST_ROOT_FOLDER, true);
-    const templateLibrary = cmArtistFindPath_(osRoot, CM_TEMPLATE_LIBRARY_PATH, true);
+    const templateLibrary = cmArtistFindPath_(osRoot, CMAP_TEMPLATE_LIBRARY_ROUTE, true);
 
     const artistFolder = cmArtistFindFolderByName_(artistRootLane, cfg.artistName, false);
     const existingManifest = artistFolder ? cmArtistReadManifest_(artistFolder) : null;
@@ -191,16 +212,20 @@ function provisionCmArtistConditionalTemplate(artistName, masterName, targetFold
     Logger.log('[DRY_RUN] Would provision ' + masterName + ' for ' + artistName + ' → ' + targetFolderName + '/' + targetName);
     return;
   }
+
   const osRoot = cmArtistFindFolderByName_(DriveApp.getRootFolder(), CM_ARTIST_OS_ROOT, true);
   const artistLane = cmArtistFindFolderByName_(osRoot, CM_ARTIST_ROOT_FOLDER, true);
   const artistFolder = cmArtistFindFolderByName_(artistLane, artistName, false);
   if (!artistFolder) throw new Error('Artistfolder niet gevonden: ' + artistName);
+
   const targetFolder = cmArtistFindFolderByName_(artistFolder, targetFolderName, false);
   if (!targetFolder) throw new Error('Artist subfolder niet gevonden: ' + targetFolderName);
-  const templateLibrary = cmArtistFindPath_(osRoot, CM_TEMPLATE_LIBRARY_PATH, true);
+
+  const templateLibrary = cmArtistFindPath_(osRoot, CMAP_TEMPLATE_LIBRARY_ROUTE, true);
   const master = cmArtistFindFileRecursive_(templateLibrary, masterName);
   if (!master) throw new Error('Canonical template master niet gevonden: ' + masterName);
   if (targetFolder.getFilesByName(targetName).hasNext()) return;
+
   master.makeCopy(targetName, targetFolder);
 }
 
@@ -208,6 +233,7 @@ function cmArtistValidateOptions_(options) {
   const name = String(options.artistName || '').trim();
   if (!name) throw new Error('artistName is verplicht.');
   if (/[\\\/]/.test(name)) throw new Error('artistName bevat een ongeldig padteken.');
+
   return {
     artistName: name,
     contractReady: options.contractReady === true,
@@ -218,28 +244,37 @@ function cmArtistValidateOptions_(options) {
 
 function cmArtistPlanDryRun_(artistFolder, cfg, report) {
   report.drive.rootId = artistFolder ? artistFolder.getId() : '[WOULD_CREATE]';
+
   CM_ARTIST_FOLDERS.forEach(function(name) {
     const exists = artistFolder && cmArtistFindFolderByName_(artistFolder, name, false);
     (exists ? report.drive.existingFolders : report.drive.createdFolders).push(name);
   });
-  CM_ARTIST_ONBOARDING_TEMPLATES.concat(cfg.activeManagement ? CM_ARTIST_ACTIVE_MANAGEMENT_TEMPLATES : [])
-    .filter(function(t) { return !t.conditional || cfg[t.conditional] === true; })
+
+  CM_ARTIST_ONBOARDING_TEMPLATES
+    .concat(cfg.activeManagement ? CM_ARTIST_ACTIVE_MANAGEMENT_TEMPLATES : [])
+    .filter(function(t) {
+      return !t.conditional || cfg[t.conditional] === true;
+    })
     .forEach(function(t) {
       const name = cmArtistResolveTargetName_(t.targetName, cfg.artistName);
       const exists = artistFolder && cmArtistFindFileByNameInStandardFolder_(artistFolder, t.targetFolder, name);
       (exists ? report.drive.existingFiles : report.drive.createdFiles).push(name);
     });
+
   report.clickup.createdTasks.push('[DRY RUN] ClickUp writes skipped; live run performs discovery before create.');
 }
 
 function cmArtistProvisionTemplateSet_(templateSet, cfg, templateLibrary, folders, manifest, report) {
   templateSet.forEach(function(t) {
     if (t.conditional && cfg[t.conditional] !== true) return;
+
     const targetFolder = folders[t.targetFolder];
     if (!targetFolder) throw new Error('Target folder ontbreekt: ' + t.targetFolder);
+
     const targetName = cmArtistResolveTargetName_(t.targetName, cfg.artistName);
     const existing = targetFolder.getFilesByName(targetName);
     let file;
+
     if (existing.hasNext()) {
       file = existing.next();
       report.drive.existingFiles.push(targetName);
@@ -249,6 +284,7 @@ function cmArtistProvisionTemplateSet_(templateSet, cfg, templateLibrary, folder
       file = master.makeCopy(targetName, targetFolder);
       report.drive.createdFiles.push(targetName);
     }
+
     manifest.templates[t.master] = {
       TEMPLATE_TYPE: t.master,
       DRIVE_FILE_ID: file.getId(),
@@ -282,6 +318,7 @@ function cmArtistEnsureClickUpParent_(cfg, artistId, artistFolder, manifest) {
     status: 'onboarding',
     priority: 2,
   };
+
   const created = cmClickUpRequest_('post', '/list/' + CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID + '/task', payload, false);
   created.__created = true;
   return created;
@@ -312,6 +349,7 @@ function cmArtistEnsureClickUpSubtask_(cfg, artistId, parentId, workstream, mani
     status: 'to do',
     priority: 2,
   };
+
   const created = cmClickUpRequest_('post', '/list/' + CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID + '/task', payload, false);
   created.__created = true;
   return created;
@@ -324,10 +362,12 @@ function cmArtistDiscoverClickUpParent_(artistName) {
     String(artistName).trim().toUpperCase() + ' — MANAGEMENT ONBOARDING',
     'ONBOARD ' + String(artistName).trim().toUpperCase(),
   ];
+
   const matches = tasks.filter(function(task) {
     if (task.parent) return false;
     return exactNames.indexOf(String(task.name || '').trim().toUpperCase()) >= 0;
   });
+
   if (matches.length > 1) {
     const management = matches.filter(function(task) {
       return String(task.name || '').toUpperCase().indexOf('MANAGEMENT ONBOARDING') >= 0;
@@ -335,15 +375,19 @@ function cmArtistDiscoverClickUpParent_(artistName) {
     if (management.length === 1) return management[0];
     throw new Error('Meerdere mogelijke ClickUp artist-parenttaken gevonden voor ' + artistName + '. Handmatige review vereist.');
   }
+
   return matches.length === 1 ? matches[0] : null;
 }
 
 function cmArtistDiscoverClickUpSubtask_(parentId, taskName) {
   const tasks = cmArtistListClickUpTasks_();
   const expected = String(taskName).trim().toUpperCase();
+
   const matches = tasks.filter(function(task) {
-    return String(task.parent || '') === String(parentId) && String(task.name || '').trim().toUpperCase() === expected;
+    return String(task.parent || '') === String(parentId) &&
+      String(task.name || '').trim().toUpperCase() === expected;
   });
+
   if (matches.length > 1) throw new Error('Dubbele ClickUp subtask gevonden: ' + taskName);
   return matches.length === 1 ? matches[0] : null;
 }
@@ -355,30 +399,52 @@ function cmArtistListClickUpTasks_() {
     null,
     false
   );
+
   return response && response.tasks ? response.tasks : [];
 }
 
 function cmClickUpRequest_(method, path, payload, allow404) {
   const token = PropertiesService.getScriptProperties().getProperty('CLICKUP_API_TOKEN');
   if (!token) throw new Error('Script Property CLICKUP_API_TOKEN ontbreekt. Geen token in code opslaan.');
+
   const params = {
     method: method,
     muteHttpExceptions: true,
-    headers: { Authorization: token, 'Content-Type': 'application/json' },
+    headers: {
+      Authorization: token,
+      'Content-Type': 'application/json',
+    },
   };
-  if (payload !== null && payload !== undefined) params.payload = JSON.stringify(payload);
+
+  if (payload !== null && payload !== undefined) {
+    params.payload = JSON.stringify(payload);
+  }
+
   const response = UrlFetchApp.fetch(CM_CLICKUP_BASE_URL + path, params);
   const code = response.getResponseCode();
+
   if (allow404 && code === 404) return null;
+
   if (code < 200 || code >= 300) {
     throw new Error('ClickUp HTTP ' + code + ': ' + response.getContentText());
   }
+
   return JSON.parse(response.getContentText() || '{}');
 }
 
 function cmArtistGenerateId_(artistName) {
-  const slug = artistName.toUpperCase().replace(/[^A-Z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 20) || 'ARTIST';
-  const stamp = Utilities.formatDate(new Date(), Session.getScriptTimeZone() || 'Europe/Amsterdam', 'yyyyMMdd');
+  const slug = artistName
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 20) || 'ARTIST';
+
+  const stamp = Utilities.formatDate(
+    new Date(),
+    Session.getScriptTimeZone() || 'Europe/Amsterdam',
+    'yyyyMMdd'
+  );
+
   const entropy = Utilities.getUuid().replace(/-/g, '').slice(0, 6).toUpperCase();
   return 'ART-' + stamp + '-' + slug + '-' + entropy;
 }
@@ -405,17 +471,20 @@ function cmArtistFindPath_(start, parts, required) {
 function cmArtistFindFileRecursive_(folder, fileName) {
   const direct = folder.getFilesByName(fileName);
   if (direct.hasNext()) return direct.next();
+
   const folders = folder.getFolders();
   while (folders.hasNext()) {
     const found = cmArtistFindFileRecursive_(folders.next(), fileName);
     if (found) return found;
   }
+
   return null;
 }
 
 function cmArtistFindFileByNameInStandardFolder_(artistFolder, folderName, fileName) {
   const folder = cmArtistFindFolderByName_(artistFolder, folderName, false);
   if (!folder) return null;
+
   const files = folder.getFilesByName(fileName);
   return files.hasNext() ? files.next() : null;
 }
@@ -423,13 +492,19 @@ function cmArtistFindFileByNameInStandardFolder_(artistFolder, folderName, fileN
 function cmArtistReadManifest_(artistFolder) {
   const files = artistFolder.getFilesByName(CM_ARTIST_MANIFEST_NAME);
   if (!files.hasNext()) return null;
+
   const text = files.next().getBlob().getDataAsString('UTF-8');
-  try { return JSON.parse(text); } catch (e) { throw new Error('Artist manifest bevat ongeldige JSON.'); }
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    throw new Error('Artist manifest bevat ongeldige JSON.');
+  }
 }
 
 function cmArtistWriteManifest_(artistFolder, manifest) {
   const content = JSON.stringify(manifest, null, 2);
   const files = artistFolder.getFilesByName(CM_ARTIST_MANIFEST_NAME);
+
   if (files.hasNext()) {
     files.next().setContent(content);
   } else {
