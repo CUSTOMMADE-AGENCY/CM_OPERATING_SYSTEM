@@ -15,15 +15,15 @@ Centrale navigatie voor de canonical CM Template Library. Controleer deze index 
 
 ## V2.2-STANDAARD
 
-Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md` V2.2: 15 secties, Nederlandstalige zichtbare structuur, A4-portret, brede records opgesplitst in gekoppelde blokken, gecontroleerde statussen waar automation daarvan afhankelijk is en sectie-14 mappings die naar echte sectie-05 velden verwijzen.
+Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_ARCHITECTURE_STANDARD_V2.md` V2.2: 15 secties, Nederlandstalige zichtbare structuur, A4-portret, brede records opgesplitst in gekoppelde blokken, gecontroleerde statussen waar automation daarvan afhankelijk is en sectie-14 mappings die naar echte sectie-05 velden verwijzen. Individuele templates kunnen een hogere contentversie hebben zonder de architectuurstandaard te wijzigen.
 
 ## CANONICAL TEMPLATE REGISTER
 
 | Template | Domein | Owner | Status | Laatste review | Volgende review |
 |---|---|---|---|---|---|
-| [INTAKE_TEMPLATE](01_SHARED_SERVICES/INTAKE_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
-| [CONTACT_SHEET_TEMPLATE](01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
-| [CLIENT_ONBOARDING_TEMPLATE](01_SHARED_SERVICES/CLIENT_ONBOARDING_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [INTAKE_TEMPLATE](01_SHARED_SERVICES/INTAKE_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.3 | 2026-08-10 | 2026-11-10 |
+| [CONTACT_SHEET_TEMPLATE](01_SHARED_SERVICES/CONTACT_SHEET_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.3 | 2026-08-10 | 2026-11-10 |
+| [CLIENT_ONBOARDING_TEMPLATE](01_SHARED_SERVICES/CLIENT_ONBOARDING_TEMPLATE.md) | Shared Services / Start Here | CM OPS AGENT | ACTIVE — V2.3 | 2026-08-10 | 2026-11-10 |
 | [CLIENT_PROFILE_TEMPLATE](01_SHARED_SERVICES/CLIENT_PROFILE_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [MEETING_RECAP_TEMPLATE](01_SHARED_SERVICES/MEETING_RECAP_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [DO_NOTS_TEMPLATE](01_SHARED_SERVICES/DO_NOTS_TEMPLATE.md) | Shared Services / Governance | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
@@ -32,11 +32,13 @@ Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_AR
 | [AMENDMENT_LOG_TEMPLATE](01_SHARED_SERVICES/AMENDMENT_LOG_TEMPLATE.md) | Shared Services / Legal | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [REGISTER_TEMPLATE](01_SHARED_SERVICES/REGISTER_TEMPLATE.md) | Shared Services | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [VERSION_LOG_TEMPLATE](01_SHARED_SERVICES/VERSION_LOG_TEMPLATE.md) | Shared Services / Governance | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [CLOSE_OUT_NOTE_TEMPLATE](01_SHARED_SERVICES/CLOSE_OUT_NOTE_TEMPLATE.md) | Shared Services / Close-out | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [ARTIST_ROADMAP_TEMPLATE](02_ARTIST_MANAGEMENT/ARTIST_ROADMAP_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [RELEASE_STRATEGY_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_STRATEGY_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [RELEASE_KICKOFF_TEMPLATE](02_ARTIST_MANAGEMENT/RELEASE_KICKOFF_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [KPI_TEMPLATE](02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [JAARPLAN_TEMPLATE](02_ARTIST_MANAGEMENT/JAARPLAN_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [ARTIST_BRANDBOOK_TEMPLATE](02_ARTIST_MANAGEMENT/ARTIST_BRANDBOOK_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [DEAL_MEMO_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_MEMO_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [DEAL_NEGOTIATION_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_NEGOTIATION_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [PARTNERSHIP_BRIEF_TEMPLATE](03_MASTER_BOUTIQUE/PARTNERSHIP_BRIEF_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
@@ -56,9 +58,18 @@ Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_AR
 | [START_HIER_04_DEALS_TEMPLATE](08_START_HIER/START_HIER_04_DEALS_TEMPLATE.md) | Start Hier / Deals | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [START_HIER_07_LEGAL_TEMPLATE](08_START_HIER/START_HIER_07_LEGAL_TEMPLATE.md) | Start Hier / Legal | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 
+## LEAN ARTIST-REGELS
+
+- `CLIENT_ONBOARDING_TEMPLATE` is de enige Start Here/onboarding-cockpit voor artists/clients; geen `START_HIER_ARTIST_TEMPLATE`.
+- CM Fit Check is onderdeel van `INTAKE_TEMPLATE`; geen aparte Fit Check-template.
+- Team Roster-functionaliteit zit in `CONTACT_SHEET_TEMPLATE`; geen parallel roster.
+- Open inputs en wekelijkse executionstatus horen in ClickUp, niet in aparte Drive-trackers.
+- Decision-, risk- en approvalinformatie blijft in het relevante domeindocument/governance; geen generieke parallelle artistlogs.
+- Scope approval is een workflow-gate; de commerciële uitwerking blijft in `MANAGEMENT_PROPOSAL_TEMPLATE`.
+
 ## NIET-CANONICAL / GAP-REGEL
 
-Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **geen bestaand canonical bestand in deze index heeft**, mag niet automatisch als template worden aangemaakt. Registreer dit als template/registry gap en los eerst de bronverwijzing op. `ARTIST_AUDIT_TEMPLATE`, `DEAL_NEGOTIATION_TEMPLATE` en `MANAGEMENT_PROPOSAL_TEMPLATE` zijn per 2026-08-10 canonical V2.2 en vallen niet langer onder deze stale-reference regel.
+Een naam die in oude scripts, map-specs of superseded registers voorkomt maar geen bestaand canonical bestand in deze index heeft, mag niet automatisch als template worden aangemaakt. Registreer dit als template/registry gap en los eerst de bronverwijzing op.
 
 ## GEBRUIK
 
@@ -79,5 +90,6 @@ Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-08-10 | V2.2 | Canonical index volledig herbouwd na V2.2-migratie; alleen bestaande canonical templates opgenomen. | CM VAULT AGENT |
-| 2026-08-10 | V2.2 | Artist Audit, Deal Negotiation en Management Proposal als canonical ACTIVE V2.2 toegevoegd; stale-reference waarschuwing bijgewerkt. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Canonical index volledig herbouwd na V2.2-migratie. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Artist Audit, Deal Negotiation en Management Proposal canonical toegevoegd. | CM VAULT AGENT |
+| 2026-08-10 | V2.2/V2.3 | Lean artist-architectuur vastgelegd; Artist Brandbook en Close-out Note toegevoegd; Intake, Contact Sheet en Onboarding aangescherpt zonder parallelle templates. | CM VAULT AGENT |
