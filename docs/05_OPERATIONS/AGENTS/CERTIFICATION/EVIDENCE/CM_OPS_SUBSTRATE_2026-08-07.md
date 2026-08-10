@@ -44,6 +44,13 @@ Workspace
 ➡️ **Dit is een source-of-truth-conflict** (governance vereist één bron per onderwerp). Dat is
 de **primaire** OPS-documentatie-bevinding — niet los "doc vs. werkelijkheid".
 
+**Let op — het conflict zit óók binnen één bestand.** `CLICKUP_MAPPING.md` bevat **beide**
+structuren: de "Core rule" (regels 9-23) en de detail-workflow-mappings (bv. regels 115-121:
+Space `CM`, Folder `Artist Management`, List `AM - [Artist] - Artist Onboarding`) volgen **A**,
+terwijl de tweede helft ("Compacte ClickUp-mapping") **B** volgt. Alleen `CLICKUP_STRUCTURE.md`
+archiveren lost het conflict dus **niet** op — bij keuze voor B moeten ook de A-secties ín
+`CLICKUP_MAPPING.md` worden herschreven/gedeprecate.
+
 ## 4. Welke structuur matcht de werkelijkheid? → de compacte mapping (B)
 
 De deployment volgt **B** (compacte structuur), niet A. Vergelijking deployed ↔ B:
@@ -64,6 +71,18 @@ compacte mapping (B) legt AM **onder `CLIENTS`**. Een aparte AM-folder zou een *
 structuur** creëren en wordt daarom **afgeraden**. De echte gap is dat de deployed `CLIENTS`
 de gedocumenteerde OPS-lijsten mist, plus de ontbrekende `MARKETING`-folder.
 
+## 5a. Live provisioning-engine wijst naar `ACTIVE CLIENTS`
+
+`scripts/google-drive/provision-cm-artist.gs` (bestaat, actief) draait **artist-onboarding**
+en hard-codeert `CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID = '901523770695'` — dat is de deployed
+`ACTIVE CLIENTS`-lijst. Het script maakt daar de onboarding **parent-task én subtasks** aan.
+
+Gevolg voor de reconciliatie: de compacte mapping (B) beschrijft een **aparte
+`Artist Onboarding`-lijst**, maar de werkelijkheid draait onboarding nu in `ACTIVE CLIENTS`.
+Een nieuwe `Artist Onboarding`-lijst toevoegen **zonder** dit script te retargeten/migreren
+levert **twee uitvoerlocaties** op en laat de nieuwe lijst leeg. Retargeting + migratie van
+`provision-cm-artist.gs` hoort dus expliciet bij de deployment-reconciliatie.
+
 ## 6. Impact op de OPS-gates
 
 - **Documentatie-gate:** geblokkeerd door het **source-of-truth-conflict** tussen A en B —
@@ -77,18 +96,23 @@ OPS blijft **Level 1**.
 ## 7. Beslispunten (CM FLOW / OPS / Sophia)
 
 1. **Source of truth:** kies A (6-folder `CM`) of B (compacte `CUSTOMMADE AGENCY`) als canoniek.
-   **Aanbeveling: B** — die matcht de werkelijke workspace; deprecate/archiveer A in
-   `CLICKUP_STRUCTURE.md`.
+   **Aanbeveling: B** — die matcht de werkelijke workspace. Let op: deprecaten betekent niet
+   alleen `CLICKUP_STRUCTURE.md` archiveren, maar **ook de A-secties ín `CLICKUP_MAPPING.md`
+   herschrijven** (Core rule 9-23 + de per-workflow A-mappings).
 2. **Space-naam:** typefout `CUSTOMMMADE` (3× M) → `CUSTOMMADE` (2× M) in ClickUp corrigeren.
 3. **`CLIENTS` aanvullen** met de OPS-lijsten uit B (Client/Artist Onboarding, Roadmaps,
    Monthly Management, Meetings & Follow-up, Offboarding).
-4. **`MARKETING`-folder** toevoegen (SOCIAL-home) of bewust weglaten.
-5. **`FIERCE`-lijst** opruimen/archiveren conform governance.
+4. **Provisioning-engine retargeten:** `provision-cm-artist.gs` (`CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID`)
+   naar de canonieke onboarding-lijst laten wijzen, met migratie van bestaande onboarding-taken —
+   anders twee uitvoerlocaties.
+5. **`MARKETING`-folder** toevoegen (SOCIAL-home) of bewust weglaten.
+6. **`FIERCE`-lijst** opruimen/archiveren conform governance.
 
 ## 8. Openstaand voor OPS Level 3
 
 1. Documentatie-conflict (A vs. B) beslecht; één canonieke ClickUp-structuur (beslispunt 1).
-2. Deployment gelijkgetrokken: space-naam, `CLIENTS`-lijsten, `MARKETING`, `FIERCE` (2-5).
+2. Deployment gelijkgetrokken: space-naam, `CLIENTS`-lijsten, provisioning-retarget,
+   `MARKETING`, `FIERCE` (beslispunten 2-6).
 3. De 3 OPS Make-scenario's van `IDEA` → `TEST` → `ACTIVE` (CM FLOW), binnen autonomy.
 4. Functioneel testrapport + red-team (nadruk: actie buiten scope — contract/publish/finance).
 5. Monitoring op ACTIVE-scenario's; score ≥90; Sophia-approval productiestatus.
