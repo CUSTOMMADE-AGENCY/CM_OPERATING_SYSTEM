@@ -1,5 +1,5 @@
 /**
- * CM ARTIST PROVISIONING ENGINE — V1.0
+ * CM ARTIST PROVISIONING ENGINE — V1.1
  *
  * Maakt per artist één gekoppelde operationele workspace:
  * - 9-folder Drive-structuur conform ARTIST_FOLDER_STANDARD
@@ -19,7 +19,7 @@
  * - DRY_RUN staat standaard aan.
  * - Bestaande artistfolders/templates worden niet overschreven.
  * - ClickUp token staat NOOIT in GitHub; gebruik Script Properties.
- * - Script is idempotent via _CM_ARTIST_MANIFEST.json en bestandsnamen.
+ * - Script is idempotent via manifest, exacte bestandsnamen en ClickUp discovery.
  */
 
 const CM_ARTIST_PROVISION_DRY_RUN = true;
@@ -42,7 +42,6 @@ const CM_ARTIST_FOLDERS = [
   '09_ARCHIVE',
 ];
 
-// Alleen de lean mandatory onboarding-set. Conditionele templates worden via aparte triggers geprovisioneerd.
 const CM_ARTIST_ONBOARDING_TEMPLATES = [
   { master: 'CLIENT_ONBOARDING_TEMPLATE', targetFolder: '01_ADMIN', targetName: '00_START_HERE_{ARTIST}' },
   { master: 'CLIENT_PROFILE_TEMPLATE', targetFolder: '01_ADMIN', targetName: 'CLIENT_PROFILE_{ARTIST}' },
@@ -59,7 +58,6 @@ const CM_ARTIST_ACTIVE_MANAGEMENT_TEMPLATES = [
   { master: 'JAARPLAN_TEMPLATE', targetFolder: '03_STRATEGY', targetName: 'JAARPLAN_{ARTIST}', conditional: 'yearHorizon' },
 ];
 
-// Lean workstreams: ClickUp beheert execution, niet Drive.
 const CM_ARTIST_ONBOARDING_WORKSTREAMS = [
   { key: 'ENGAGEMENT', name: '01 — Engagement, contract & scope', gates: ['P01', 'P02', 'P03'] },
   { key: 'FINANCE', name: '02 — Billing / Moneybird readiness', gates: ['P04'] },
@@ -70,6 +68,22 @@ const CM_ARTIST_ONBOARDING_WORKSTREAMS = [
   { key: 'STRATEGY', name: '07 — KPI baseline & roadmap start', gates: ['P11', 'P12'] },
   { key: 'GO_LIVE', name: '08 — Kickoff & go-live approval', gates: ['P14'] },
 ];
+
+/**
+ * Test alleen de ClickUp Script Property/API-koppeling. Schrijft niets.
+ * Verwacht Script Property: CLICKUP_API_TOKEN.
+ */
+function testCmClickUpApiToken() {
+  const result = cmClickUpRequest_('get', '/user', null, false);
+  const summary = {
+    ok: !!(result && result.user && result.user.id),
+    userId: result && result.user ? result.user.id : null,
+    username: result && result.user ? result.user.username : null,
+    email: result && result.user ? result.user.email : null,
+  };
+  Logger.log(JSON.stringify(summary, null, 2));
+  return summary;
+}
 
 /**
  * Hoofdfunctie.
@@ -167,16 +181,11 @@ function provisionCmArtist(options) {
   }
 }
 
-/** Alleen Drive + ClickUp status opnieuw controleren/synchroniseren vanuit manifest. */
 function syncCmArtistProvisioning(artistName) {
   if (!artistName) throw new Error('artistName is verplicht.');
   return provisionCmArtist({ artistName: artistName });
 }
 
-/**
- * Provision een conditionele template op trigger zonder de volledige artistset opnieuw te kopiëren.
- * Voorbeelden: RELEASE_STRATEGY_TEMPLATE, RELEASE_KICKOFF_TEMPLATE, DEAL_MEMO_TEMPLATE.
- */
 function provisionCmArtistConditionalTemplate(artistName, masterName, targetFolderName, targetName) {
   if (CM_ARTIST_PROVISION_DRY_RUN) {
     Logger.log('[DRY_RUN] Would provision ' + masterName + ' for ' + artistName + ' → ' + targetFolderName + '/' + targetName);
@@ -190,7 +199,7 @@ function provisionCmArtistConditionalTemplate(artistName, masterName, targetFold
   if (!targetFolder) throw new Error('Artist subfolder niet gevonden: ' + targetFolderName);
   const templateLibrary = cmArtistFindPath_(osRoot, CM_TEMPLATE_LIBRARY_PATH, true);
   const master = cmArtistFindFileRecursive_(templateLibrary, masterName);
-  if (!master) throw new Error('Canonical master niet gevonden: ' + masterName);
+  if (!master) throw new Error('Canonical template master niet gevonden: ' + masterName);
   if (targetFolder.getFilesByName(targetName).hasNext()) return;
   master.makeCopy(targetName, targetFolder);
 }
@@ -216,9 +225,11 @@ function cmArtistPlanDryRun_(artistFolder, cfg, report) {
   CM_ARTIST_ONBOARDING_TEMPLATES.concat(cfg.activeManagement ? CM_ARTIST_ACTIVE_MANAGEMENT_TEMPLATES : [])
     .filter(function(t) { return !t.conditional || cfg[t.conditional] === true; })
     .forEach(function(t) {
-      report.drive.createdFiles.push(cmArtistResolveTargetName_(t.targetName, cfg.artistName));
+      const name = cmArtistResolveTargetName_(t.targetName, cfg.artistName);
+      const exists = artistFolder && cmArtistFindFileByNameInStandardFolder_(artistFolder, t.targetFolder, name);
+      (exists ? report.drive.existingFiles : report.drive.createdFiles).push(name);
     });
-  report.clickup.createdTasks.push('[WOULD_CREATE/CONFIRM] artist parent + ' + CM_ARTIST_ONBOARDING_WORKSTREAMS.length + ' workstreams');
+  report.clickup.createdTasks.push('[DRY RUN] ClickUp writes skipped; live run performs discovery before create.');
 }
 
 function cmArtistProvisionTemplateSet_(templateSet, cfg, templateLibrary, folders, manifest, report) {
@@ -253,6 +264,12 @@ function cmArtistEnsureClickUpParent_(cfg, artistId, artistFolder, manifest) {
     if (existing && existing.id) return existing;
   }
 
+  const discovered = cmArtistDiscoverClickUpParent_(cfg.artistName);
+  if (discovered) {
+    discovered.__created = false;
+    return discovered;
+  }
+
   const payload = {
     name: cfg.artistName,
     description: [
@@ -277,6 +294,12 @@ function cmArtistEnsureClickUpSubtask_(cfg, artistId, parentId, workstream, mani
     if (existing && existing.id) return existing;
   }
 
+  const discovered = cmArtistDiscoverClickUpSubtask_(parentId, workstream.name);
+  if (discovered) {
+    discovered.__created = false;
+    return discovered;
+  }
+
   const payload = {
     name: workstream.name,
     parent: parentId,
@@ -292,6 +315,47 @@ function cmArtistEnsureClickUpSubtask_(cfg, artistId, parentId, workstream, mani
   const created = cmClickUpRequest_('post', '/list/' + CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID + '/task', payload, false);
   created.__created = true;
   return created;
+}
+
+function cmArtistDiscoverClickUpParent_(artistName) {
+  const tasks = cmArtistListClickUpTasks_();
+  const exactNames = [
+    String(artistName).trim().toUpperCase(),
+    String(artistName).trim().toUpperCase() + ' — MANAGEMENT ONBOARDING',
+    'ONBOARD ' + String(artistName).trim().toUpperCase(),
+  ];
+  const matches = tasks.filter(function(task) {
+    if (task.parent) return false;
+    return exactNames.indexOf(String(task.name || '').trim().toUpperCase()) >= 0;
+  });
+  if (matches.length > 1) {
+    const management = matches.filter(function(task) {
+      return String(task.name || '').toUpperCase().indexOf('MANAGEMENT ONBOARDING') >= 0;
+    });
+    if (management.length === 1) return management[0];
+    throw new Error('Meerdere mogelijke ClickUp artist-parenttaken gevonden voor ' + artistName + '. Handmatige review vereist.');
+  }
+  return matches.length === 1 ? matches[0] : null;
+}
+
+function cmArtistDiscoverClickUpSubtask_(parentId, taskName) {
+  const tasks = cmArtistListClickUpTasks_();
+  const expected = String(taskName).trim().toUpperCase();
+  const matches = tasks.filter(function(task) {
+    return String(task.parent || '') === String(parentId) && String(task.name || '').trim().toUpperCase() === expected;
+  });
+  if (matches.length > 1) throw new Error('Dubbele ClickUp subtask gevonden: ' + taskName);
+  return matches.length === 1 ? matches[0] : null;
+}
+
+function cmArtistListClickUpTasks_() {
+  const response = cmClickUpRequest_(
+    'get',
+    '/list/' + CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID + '/task?include_closed=true&subtasks=true&page=0',
+    null,
+    false
+  );
+  return response && response.tasks ? response.tasks : [];
 }
 
 function cmClickUpRequest_(method, path, payload, allow404) {
@@ -347,6 +411,13 @@ function cmArtistFindFileRecursive_(folder, fileName) {
     if (found) return found;
   }
   return null;
+}
+
+function cmArtistFindFileByNameInStandardFolder_(artistFolder, folderName, fileName) {
+  const folder = cmArtistFindFolderByName_(artistFolder, folderName, false);
+  if (!folder) return null;
+  const files = folder.getFilesByName(fileName);
+  return files.hasNext() ? files.next() : null;
 }
 
 function cmArtistReadManifest_(artistFolder) {
