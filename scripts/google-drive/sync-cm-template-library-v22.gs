@@ -2,7 +2,7 @@
  * CM TEMPLATE LIBRARY SYNC — V2.2
  *
  * Synchroniseert ALLE canonical CM template-masters uit GitHub naar de centrale
- * Google Drive template library en rendert het officiële CM-logo rechtsboven.
+ * Google Drive template library en rendert het officiële vlakke CM-logo rechtsboven.
  *
  * GOVERNANCE
  * - GitHub = canonical template-specificatie.
@@ -27,8 +27,8 @@ const CM_TEMPLATE_FONT = 'Montserrat';
 const CM_TEMPLATE_BODY_PT = 10;
 const CM_TEMPLATE_TABLE_PT = 8;
 
-// Officiële CM-brand asset in Google Drive.
-const CM_BRAND_LOGO_FILE_ID = '12eIxa4HJ-Ptn6TcFyTdVgdMjZQv7EVR5';
+// Officiële document-brand asset: vlak zwart CM-logo met transparante achtergrond.
+const CM_BRAND_LOGO_FILE_ID = '1zv0GE9SdS1PhPxg3sjV_njLfNA6lazfx';
 const CM_BRAND_LOGO_WIDTH_PT = 72;
 
 /** Alleen canonical, daadwerkelijk bestaande templates. */
