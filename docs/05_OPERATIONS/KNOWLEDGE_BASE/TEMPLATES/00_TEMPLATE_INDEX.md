@@ -38,6 +38,7 @@ Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_AR
 | [KPI_TEMPLATE](02_ARTIST_MANAGEMENT/KPI_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [JAARPLAN_TEMPLATE](02_ARTIST_MANAGEMENT/JAARPLAN_TEMPLATE.md) | Artist Management | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [DEAL_MEMO_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_MEMO_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [DEAL_NEGOTIATION_TEMPLATE](03_MASTER_BOUTIQUE/DEAL_NEGOTIATION_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [PARTNERSHIP_BRIEF_TEMPLATE](03_MASTER_BOUTIQUE/PARTNERSHIP_BRIEF_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [MUSIC_RIGHTS_REGISTER](03_MASTER_BOUTIQUE/MUSIC_RIGHTS_REGISTER.md) | Master Boutique | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [RIGHTS_AUDIT_TEMPLATE](03_MASTER_BOUTIQUE/RIGHTS_AUDIT_TEMPLATE.md) | Master Boutique | CM LEGAL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
@@ -46,6 +47,8 @@ Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_AR
 | [BUYER_PIPELINE_TEMPLATE](03_MASTER_BOUTIQUE/BUYER_PIPELINE_TEMPLATE.md) | Master Boutique | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [BRAND_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BRAND_AUDIT_TEMPLATE.md) | Client Deliverables | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [BUSINESS_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/BUSINESS_AUDIT_TEMPLATE.md) | Client Deliverables | CM MONEY AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [ARTIST_AUDIT_TEMPLATE](04_CLIENT_DELIVERABLES/ARTIST_AUDIT_TEMPLATE.md) | Client Deliverables | CM OPS AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
+| [MANAGEMENT_PROPOSAL_TEMPLATE](04_CLIENT_DELIVERABLES/MANAGEMENT_PROPOSAL_TEMPLATE.md) | Client Deliverables | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [ACTION_TRACKER_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/ACTION_TRACKER_CLICKUP_REFERENCE.md) | ClickUp References | CM FLOW AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [DEAL_PIPELINE_CLICKUP_REFERENCE](05_CLICKUP_REFERENCES/DEAL_PIPELINE_CLICKUP_REFERENCE.md) | ClickUp References | CM PROSPECT AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
 | [EMAIL_INSTRUCTIONS_TEMPLATE](06_GMAIL_TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md) | Gmail Templates | CM CONTROL AGENT | ACTIVE — V2.2 | 2026-08-10 | 2026-11-10 |
@@ -55,7 +58,7 @@ Alle onderstaande canonical templates volgen `99_TEMPLATE_GOVERNANCE/TEMPLATE_AR
 
 ## NIET-CANONICAL / GAP-REGEL
 
-Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **geen bestaand canonical bestand in deze index heeft**, mag niet automatisch als template worden aangemaakt. Registreer dit als template/registry gap en los eerst de bronverwijzing op. Dit geldt onder meer voor stale references die tijdens de V2.2-migratie zijn aangetroffen, zoals `ARTIST_AUDIT_TEMPLATE`, `MANAGEMENT_PROPOSAL_TEMPLATE` en `DEAL_NEGOTIATION_TEMPLATE` zolang daarvoor geen canonical bestand in deze library bestaat.
+Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **geen bestaand canonical bestand in deze index heeft**, mag niet automatisch als template worden aangemaakt. Registreer dit als template/registry gap en los eerst de bronverwijzing op. `ARTIST_AUDIT_TEMPLATE`, `DEAL_NEGOTIATION_TEMPLATE` en `MANAGEMENT_PROPOSAL_TEMPLATE` zijn per 2026-08-10 canonical V2.2 en vallen niet langer onder deze stale-reference regel.
 
 ## GEBRUIK
 
@@ -76,4 +79,5 @@ Een naam die in oude scripts, map-specs of superseded registers voorkomt maar **
 
 | Datum | Versie | Wijziging | Owner |
 |---|---|---|---|
-| 2026-08-10 | V2.2 | Canonical index volledig herbouwd na V2.2-migratie; alleen bestaande canonical templates opgenomen en stale registry references expliciet uitgesloten. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Canonical index volledig herbouwd na V2.2-migratie; alleen bestaande canonical templates opgenomen. | CM VAULT AGENT |
+| 2026-08-10 | V2.2 | Artist Audit, Deal Negotiation en Management Proposal als canonical ACTIVE V2.2 toegevoegd; stale-reference waarschuwing bijgewerkt. | CM VAULT AGENT |
