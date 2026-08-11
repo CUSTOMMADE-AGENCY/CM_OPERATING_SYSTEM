@@ -33,7 +33,7 @@
 | # | Gate | Status | Wat nog nodig is |
 |---|---|:--:|---|
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
-| 2 | Documentatie | ⚠️ | **Source-of-truth-conflict**: `CLICKUP_STRUCTURE.md` (6-folder `CM`) en `CLICKUP_MAPPING.md` (compacte `CUSTOMMADE AGENCY`) spreken elkaar tegen; deployment volgt de compacte versie (`EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`) — eerst één canonieke structuur kiezen |
+| 2 | Documentatie | ⚠️ | Source-of-truth-conflict **beslecht (2026-08-07): structuur B canoniek**. Docs gecanoniseerd (`CLICKUP_STRUCTURE.md` + `CLICKUP_MAPPING.md`); open follow-up: A-detailmappings herbeleggen + ClickUp gelijktrekken (`EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`) |
 | 3 | Techniek | ⬜ | Scenario's "Artist onboarding trigger" + "Approval follow-up reminder" + "Client setup folder creation" van `IDEA` → `ACTIVE` (CM FLOW); deployed **`CLIENTS`-folder mist de OPS-lijsten** (Client/Artist Onboarding, Roadmaps, Monthly Management, …) |
 | 4 | Functionele test | ⬜ | Registratie in `CERT_TEST_PLAN.md` §2 |
 | 5 | Red team | ⬜ | Registratie in `CERT_TEST_PLAN.md` §3 |

@@ -6,21 +6,38 @@ Dit document vertaalt elke CM GitHub Workflow naar de exacte ClickUp execution s
 
 ## Core rule
 
-GitHub documenteert het proces. ClickUp voert het proces uit. Google Drive bewaart client files en deliverables. Gmail verzorgt communicatie. ClickUp gebruikt één centrale `CM` Space; business lanes worden ingericht als folders binnen die Space. Er worden geen losse Spaces voor Artist Management, Master Boutique, Shared Operations of Governance aangemaakt.
+GitHub documenteert het proces. ClickUp voert het proces uit. Google Drive bewaart client files en deliverables. Gmail verzorgt communicatie. ClickUp gebruikt één centrale Space **`CUSTOMMADE AGENCY`**; business lanes worden ingericht als folders binnen die Space. Er worden geen losse Spaces aangemaakt.
 
-## Centrale ClickUp Space
+> **Canonieke structuur — besluit 2026-08-07: de compacte `CUSTOMMADE AGENCY`-structuur (B).**
+> Zie het hoofdstuk "Compacte ClickUp-mapping voor CM_OS agents" verderop. De eerdere
+> 6-folder `CM`-structuur (A) is **gedeprecate**: `CLICKUP_STRUCTURE.md` en de A-secties in dit
+> bestand ("Artist Management mappings" en "Master Boutique mappings") blijven uitsluitend als
+> workflow-detailreferentie staan en worden onder de B-folders herbelegd volgens de
+> vertaaltabel hieronder. **Bij elke tegenspraak geldt B.**
+
+## Centrale ClickUp Space (canoniek — structuur B)
 
 ```text
-CM
-├── Artist Management
-├── Master Boutique / Deals
-├── Clients
-├── Pipeline
-├── Shared Operations
-└── Governance & Systems
+CUSTOMMADE AGENCY
+├── PIPELINE        (CM PROSPECT)
+├── CLIENTS         (CM OPS — incl. client- én artist-onboarding/management)
+├── OPERATIONS      (CM CONTROL · CM MONEY · CM FLOW · CM VAULT)
+├── DEAL DESK       (CM LEGAL)
+└── MARKETING       (CM SOCIAL)
 ```
 
-Alle workflow-mappings hieronder gebruiken deze ene Space. Foldernamen mogen alleen worden uitgebreid wanneer de centrale `CM` Space behouden blijft en de uitbreiding geen parallelle Space creëert.
+### A → B folder-vertaling (voor de gedeprecate detail-mappings)
+
+| Structuur A (gedeprecate) | Structuur B (canoniek) |
+|---|---|
+| Artist Management | `CLIENTS` (lijsten `Artist Onboarding`, `Artist Roadmaps`, `Monthly Management`, …) |
+| Clients | `CLIENTS` |
+| Master Boutique / Deals | `DEAL DESK` |
+| Pipeline | `PIPELINE` |
+| Shared Operations | `OPERATIONS` |
+| Governance & Systems | `OPERATIONS` |
+
+De gedetailleerde workflow-mappings onder "Artist Management mappings" en "Master Boutique mappings" worden per B-folder herbelegd; tot dat is gebeurd gelden ze als referentie, niet als canonieke folderplaatsing.
 
 ## Terminologie en naamgeving
 
@@ -109,6 +126,12 @@ Maak of gebruik minimaal onderstaande Gmail templates volgens `CM - Lane - Purpo
 De praktische ClickUp task templates voor Artist Management staan in `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/CLICKUP/`. Deze documenten zijn de bouwinstructies voor taken, custom fields, subtasks, checklists, approval owners, GitHub workflow-links, Drive folders en Gmail templates.
 
 # Artist Management mappings
+
+> ⚠️ **GEDEPRECATE (structuur A).** Deze workflow-mappings gebruiken de oude Space `CM` en folder
+> `Artist Management`. Canoniek is nu **structuur B**: deze workflows horen onder folder
+> **`CLIENTS`** (space `CUSTOMMADE AGENCY`) — zie de A→B-vertaaltabel bovenaan. De inhoud
+> (statussen, templates, gates, Drive/Gmail-koppelingen) blijft geldig als referentie; alleen de
+> Space/folder-plaatsing wordt herbelegd.
 
 ## Artist Onboarding Flow
 
@@ -275,6 +298,11 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/05_OP
 ---
 
 # Master Boutique mappings
+
+> ⚠️ **GEDEPRECATE (structuur A).** Deze workflow-mappings gebruiken de oude Space `CM` en folder
+> `Master Boutique / Deals`. Canoniek is nu **structuur B**: deze workflows horen onder folder
+> **`DEAL DESK`** (space `CUSTOMMADE AGENCY`) — zie de A→B-vertaaltabel bovenaan. De inhoud blijft
+> geldig als referentie; alleen de Space/folder-plaatsing wordt herbelegd.
 
 ## Catalog Acquisition Flow
 
