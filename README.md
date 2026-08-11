@@ -4,9 +4,9 @@ Deze repository is de GitHub source of truth voor de Governance, Workflows, SOPs
 
 ## PRODUCTIESTATUS
 
-**CM Operating System — Recovery & Alignment**
+**CM Operating System — reguliere governance**
 
-De repository wordt opnieuw uitgelijnd op de actuele CM-bedrijfsstructuur. Sprint 6 (Template Recovery) is vrijgegeven op autorisatie van de accounteigenaar: de template build-freeze is opgeheven en templates worden aangevuld en aan de Drive-structuur gekoppeld volgens `docs/00_GOVERNANCE/MAP_SPECIFICATIONS/TEMPLATE_PLACEMENT_MAP.md`.
+De tijdelijke repository-recovery is `CLOSED / COMPLETED`. Actieve waarheid staat uitsluitend in de startdocumenten hieronder; recovery-, migratie-, sprint- en auditrapporten staan niet-leidend onder `docs/00_GOVERNANCE/HISTORY/`. Capability-statussen zijn bewijsgebonden: ontworpen, pre-production of gepauzeerde onderdelen worden niet als live gepresenteerd.
 
 ## STARTDOCUMENTEN
 

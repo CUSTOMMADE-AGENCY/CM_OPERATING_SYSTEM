@@ -1,5 +1,5 @@
 > **Historische status:** `SUPERSEDED`
-> **Actuele opvolger:** `docs/00_GOVERNANCE/GOVERNANCE_RULES.md` en, tijdens recovery, `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md`
+> **Actuele opvolger:** `docs/00_GOVERNANCE/GOVERNANCE_RULES.md`
 > Dit document blijft behouden als audit trail en is niet leidend voor nieuwe uitvoering.
 
 # Governance Rules

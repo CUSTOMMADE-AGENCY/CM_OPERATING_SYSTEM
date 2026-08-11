@@ -20,7 +20,7 @@ zichzelf tegen**, en de werkelijkheid volgt maar één van de twee versies.
 ```text
 Workspace
 └── Space: CUSTOMMMADE AGENCY            (id 90154573019 — let op: 3× M in de naam)
-    ├── (losse lijsten) CUSTOMMADE AGENCY SETUP · CM — FINANCE · CM — LEGAL · FIERCE · EMAIL ACTIES
+    ├── (losse lijsten) CUSTOMMADE AGENCY SETUP · CM — FINANCE · CM — LEGAL · EXTERNE_ENTITEIT · EMAIL ACTIES
     ├── PIPELINE      → LEADS · ACTIVE DEALS · WON · LOST
     ├── CLIENTS       → ACTIVE CLIENTS · ON HOLD · COMPLETED
     ├── OPERATIONS    → SOPS · TEMPLATES · AUTOMATIONS · OPEN POSTEN · CM — AI REVIEW
@@ -61,7 +61,7 @@ De deployment volgt **B** (compacte structuur), niet A. Vergelijking deployed �
 | Folders | PIPELINE · CLIENTS · OPERATIONS · DEAL DESK · **MARKETING** | PIPELINE · CLIENTS · OPERATIONS · DEAL DESK | **MARKETING ontbreekt** (SOCIAL-home) |
 | CLIENTS-lijsten | Client Onboarding · Artist Onboarding · Active Client Management · Artist Roadmaps · Projects & Deliverables · Releases · Monthly Management · Client Meetings & Follow-up · Offboarding (9) | ACTIVE CLIENTS · ON HOLD · COMPLETED (3) | **CLIENTS onderbouwd**: de OPS-onboarding/management/roadmap-lijsten ontbreken |
 | Artist Management | lijsten **onder CLIENTS** | (nog niet aanwezig, want CLIENTS onderbouwd) | — |
-| FIERCE | — | losse lijst `FIERCE` | legacy, in strijd met governance-regel "geen FIERCE-referenties" |
+| EXTERNE_ENTITEIT | — | losse lijst `EXTERNE_ENTITEIT` | legacy, in strijd met governance-regel "geen EXTERNE_ENTITEIT-referenties" |
 
 ## 5. Correctie t.o.v. v1 van dit record
 
@@ -110,13 +110,13 @@ OPS blijft **Level 1**.
    naar de canonieke onboarding-lijst laten wijzen, met migratie van bestaande onboarding-taken —
    anders twee uitvoerlocaties.
 5. **`MARKETING`-folder** toevoegen (SOCIAL-home) of bewust weglaten.
-6. **`FIERCE`-lijst** opruimen/archiveren conform governance.
+6. **`EXTERNE_ENTITEIT`-lijst** opruimen/archiveren conform governance.
 
 ## 8. Openstaand voor OPS Level 3
 
 1. Documentatie-conflict (A vs. B) beslecht; één canonieke ClickUp-structuur (beslispunt 1).
 2. Deployment gelijkgetrokken: space-naam, `CLIENTS`-lijsten, provisioning-retarget,
-   `MARKETING`, `FIERCE` (beslispunten 2-6).
+   `MARKETING`, `EXTERNE_ENTITEIT` (beslispunten 2-6).
 3. De 3 OPS Make-scenario's van `IDEA` → `TEST` → `ACTIVE` (CM FLOW), binnen autonomy.
 4. Functioneel testrapport + red-team (nadruk: actie buiten scope — contract/publish/finance).
 5. Monitoring op ACTIVE-scenario's; score ≥90; Sophia-approval productiestatus.

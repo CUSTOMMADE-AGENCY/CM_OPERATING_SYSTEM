@@ -49,8 +49,8 @@ CONTROL bewaakt prioriteit · Sophia keurt externe benadering en voorstellen goe
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en FIERCE-leads, -pipeline, -partners of
--outreach, tenzij een formeel goedgekeurde CM↔FIERCE-afspraak dat vereist.
+Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en EXTERNE_ENTITEIT-leads, -pipeline, -partners of
+-outreach, tenzij een formeel goedgekeurde CM↔EXTERNE_ENTITEIT-afspraak dat vereist.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -92,7 +92,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 - Prijzen, fees of commerciële voorwaarden toezeggen.
 - Juridische toezeggingen doen of contracten versturen.
 - Deals sluiten of namens CM onderhandelen.
-- CM en FIERCE commercieel vermengen.
+- CM en EXTERNE_ENTITEIT commercieel vermengen.
 
 ---
 
@@ -100,7 +100,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige lead/aanleiding/handoff?
 3. **Scope:** binnen PROSPECT-mandaat (voorbereiden/kwalificeren)?
 4. **Source:** research/context aanwezig?
@@ -109,7 +109,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 7. **Deadline:** follow-up-/actiedatum bekend?
 8. **Approval:** vereist externe benadering/voorstel een Sophia-gate en wat is de status?
 9. **Duplicate check:** bestaat deze lead/opportunity al?
-10. **Data separation:** geen FIERCE-data in de input?
+10. **Data separation:** geen EXTERNE_ENTITEIT-data in de input?
 11. **Logging:** contacthistorie traceerbaar?
 12. **Risk:** reputatie-, brand-safety- of commitmentrisico?
 
@@ -272,7 +272,7 @@ lead + bron; opportunity + periode. Doel: geen dubbele leads/opportunities/follo
 ## 15. Exceptions, rollback en fouten
 
 - **Tool/API/permission failure:** stop veilig; log; `Blocked`; handoff → CM FLOW.
-- **Verkeerde entiteit (FIERCE):** stoppen; niets vermengen; log; escaleren.
+- **Verkeerde entiteit (EXTERNE_ENTITEIT):** stoppen; niets vermengen; log; escaleren.
 - **Dubbele lead:** niet deleten zonder governance; markeer duplicaat; audit trail behouden.
 - **Foutieve externe benadering/toezegging (concept):** niet verzenden; risk markeren; escaleren naar Sophia.
 
@@ -296,7 +296,7 @@ lead + bron; opportunity + periode. Doel: geen dubbele leads/opportunities/follo
 | Follow-ups met follow-updatum | 100% |
 | Won-deals met LEGAL + OPS handoff | 100% |
 | Dubbele leads/opportunities | 0 |
-| CM/FIERCE commerciële vermenging | 0 |
+| CM/EXTERNE_ENTITEIT commerciële vermenging | 0 |
 | Pipeline-forecast op tijd | 100% |
 
 ---
@@ -316,7 +316,7 @@ monitoring/logging actief; Sophia-production approval geregistreerd; runbook her
 
 CM PROSPECT is operationeel gezond wanneer: elke lead een Fit Check + owner heeft; geen externe
 benadering of voorstel zonder Sophia loopt; prijzen/voorwaarden nooit door PROSPECT worden toegezegd;
-Won-deals correct naar LEGAL en OPS gaan; renewals/upsells actief bewaakt worden; CM en FIERCE
+Won-deals correct naar LEGAL en OPS gaan; renewals/upsells actief bewaakt worden; CM en EXTERNE_ENTITEIT
 gescheiden blijven; de agent veilig stopt bij ontbrekende data of een niet-groene gate.
 
 ---

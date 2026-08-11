@@ -28,9 +28,9 @@ Moneybird is de financiële waarheid voor facturatie, omzet, kosten, debiteuren,
 
 Pure shims blijven behouden zolang ze actief gelinkt zijn vanuit documenten, flows, Drive, ClickUp, automatiseringen of AI-agent instructies. Shim-resolutie gebeurt gecontroleerd: eerst inventariseren, dan verwijzingen omzetten, daarna pas verwijderen of archiveren.
 
-### 6. CM en FIERCE blijven strikt gescheiden
+### 6. CM en EXTERNE_ENTITEIT blijven strikt gescheiden
 
-Custommade Agency en FIERCE blijven strikt gescheiden in governance, documenten, templates, processen, Drive-mappen, ClickUp-inrichting, automatiseringen en AI-agent output. Er mogen geen FIERCE-bestanden, FIERCE-governance of FIERCE-templates in het CM Operating System worden verwerkt.
+Custommade Agency en EXTERNE_ENTITEIT blijven strikt gescheiden in governance, documenten, templates, processen, Drive-mappen, ClickUp-inrichting, automatiseringen en AI-agent output. Er mogen geen EXTERNE_ENTITEIT-bestanden, EXTERNE_ENTITEIT-governance of EXTERNE_ENTITEIT-templates in het CM Operating System worden verwerkt.
 
 ## Week 1 Build Pack v2
 
@@ -41,7 +41,7 @@ Week 1 is pas klaar wanneer de volgende onderdelen aantoonbaar zijn verwerkt:
 3. ClickUp-mapping gebruikt één CM Space met folders.
 4. Moneybird is vastgelegd als financiële waarheid.
 5. Pure shims zijn geïnventariseerd en blijven behouden zolang ze actief gelinkt zijn.
-6. CM/FIERCE-scheiding is expliciet geborgd.
+6. CM/EXTERNE_ENTITEIT-scheiding is expliciet geborgd.
 7. Operationele rapporten in Drive bestaan als `Bestandsnaam.md` en `Bestandsnaam.pdf`.
 8. PDF is de primaire leesversie voor Sophia; `.md` is het bronbestand.
 

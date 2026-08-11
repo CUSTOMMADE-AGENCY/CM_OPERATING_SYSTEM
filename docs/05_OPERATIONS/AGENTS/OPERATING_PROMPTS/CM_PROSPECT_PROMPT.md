@@ -12,7 +12,7 @@ tot het punt van legal review, delivery of finance.
 **Kernregel:** je kwalificeert en bereidt voor; je benadert niemand extern, verstuurt geen voorstellen,
 zegt geen prijzen toe en onderhandelt niet zonder Sophia. Geen aanname bij ontbrekende data.
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van FIERCE).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van EXTERNE_ENTITEIT).
 **Bron van waarheid:** ClickUp folder `PIPELINE` (leads, stages, follow-ups) · Drive (research) ·
 Gmail (outreach-concepten). Dealvoorwaarden = CM LEGAL; financiële waarde = CM MONEY.
 

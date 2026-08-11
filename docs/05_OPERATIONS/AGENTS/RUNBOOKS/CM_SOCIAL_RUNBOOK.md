@@ -48,8 +48,8 @@ context · VAULT bewaakt brand assets/templates · Sophia keurt publicatie en ex
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en FIERCE-content, -kanalen, -assets of
--communicatie, tenzij een formeel goedgekeurde CM↔FIERCE-afspraak dat vereist.
+Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en EXTERNE_ENTITEIT-content, -kanalen, -assets of
+-communicatie, tenzij een formeel goedgekeurde CM↔EXTERNE_ENTITEIT-afspraak dat vereist.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -89,7 +89,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 - Juridische claims doen; rights/usage vaststellen (→ CM LEGAL).
 - Financiële/performance-claims doen zonder verificatie (→ CM MONEY).
 - Deals/sponsoring aankondigen of bevestigen zonder goedkeuring.
-- CM en FIERCE-content vermengen.
+- CM en EXTERNE_ENTITEIT-content vermengen.
 
 ---
 
@@ -97,7 +97,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige aanleiding/handoff/kalendermoment?
 3. **Scope:** binnen SOCIAL-mandaat (voorbereiden/optimaliseren)?
 4. **Source:** bron/brief/asset aanwezig?
@@ -106,7 +106,7 @@ Via voorstel → governance review → ADR/PR → approval → implementatie →
 7. **Deadline:** publicatie-/opleverdatum bekend?
 8. **Approval:** vereist publicatie/pers een Sophia-gate; claims een LEGAL/MONEY-check?
 9. **Duplicate check:** bestaat dit content-item al?
-10. **Data separation:** geen FIERCE-content/-kanaal in de input?
+10. **Data separation:** geen EXTERNE_ENTITEIT-content/-kanaal in de input?
 11. **Rights/claims:** usage rights en claims geverifieerd?
 12. **Risk:** reputatie-, brand-safety- of juridisch risico?
 
@@ -282,7 +282,7 @@ campagne + asset; case + client. Doel: geen dubbele posts/campagnes/persberichte
 ## 16. Exceptions, rollback en fouten
 
 - **Tool/API/permission failure:** stop veilig; log; `Blocked`; handoff → CM FLOW.
-- **Verkeerde entiteit (FIERCE-kanaal/content):** stoppen; niets vermengen; log; escaleren.
+- **Verkeerde entiteit (EXTERNE_ENTITEIT-kanaal/content):** stoppen; niets vermengen; log; escaleren.
 - **Onbedoelde publicatie / ongeverifieerde claim:** direct signaleren; risk markeren; escaleren naar Sophia/LEGAL; corrigeren via de juiste owner.
 - **Dubbel content-item:** niet deleten zonder governance; markeer duplicaat; audit trail behouden.
 
@@ -306,7 +306,7 @@ campagne + asset; case + client. Doel: geen dubbele posts/campagnes/persberichte
 | Publicaties zonder goedkeuring | 0 |
 | Ongeverifieerde claims naar buiten | 0 |
 | Dubbele content-items | 0 |
-| CM/FIERCE-contentvermenging | 0 |
+| CM/EXTERNE_ENTITEIT-contentvermenging | 0 |
 | Content calendar op tijd | 100% |
 
 ---
@@ -326,7 +326,7 @@ veilige stop); monitoring/logging actief; Sophia-production approval geregistree
 
 CM SOCIAL is operationeel gezond wanneer: geen publicatie of persbenadering zonder Sophia-gate;
 elke externe claim geverifieerd is via LEGAL/MONEY; content-items owner + datum hebben; assets in de
-juiste Drive-mappen onder VAULT-governance staan; CM en FIERCE-content gescheiden blijven; de agent
+juiste Drive-mappen onder VAULT-governance staan; CM en EXTERNE_ENTITEIT-content gescheiden blijven; de agent
 veilig stopt bij ontbrekende rights, ongeverifieerde claims of een niet-groene gate.
 
 ---

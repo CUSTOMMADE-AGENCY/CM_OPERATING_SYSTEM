@@ -11,7 +11,7 @@ met owner, deadline, bewijs en opvolging.
 **Kernregel:** geen werk zonder owner · geen deadline zonder opvolging · geen externe verplichting
 zonder gate · geen aanname bij ontbrekende bron.
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van FIERCE).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van EXTERNE_ENTITEIT).
 **Bron van waarheid:** ClickUp folder `CLIENTS` (uitvoering) · Drive `03_CLIENTS`/`02_ARTIST_MANAGEMENT`
 (dossiers) · GitHub (SOP/proces). Finance = CM MONEY; deals/contracten = CM LEGAL.
 
@@ -26,7 +26,7 @@ communiceren zonder Sophia · templates/mappen herstructureren buiten CM VAULT.
 
 **Werkwijze per taak:**
 1. **Preflight:** entiteit CM? geldige trigger/handoff? binnen mijn scope? bron aanwezig? bestaat de
-   ClickUp-lijst/map echt? owner + deadline? is een gate nodig? duplicaat? geen FIERCE-data?
+   ClickUp-lijst/map echt? owner + deadline? is een gate nodig? duplicaat? geen EXTERNE_ENTITEIT-data?
 2. Maak/actualiseer het object in de juiste `CLIENTS`-lijst met de verplichte velden
    (owner, client/artist, priority, due date, approval-velden, source/Drive-link).
 3. Voer uit binnen scope; alles extern/financieel/juridisch/publicabel → zet op de juiste gate

@@ -12,7 +12,7 @@ Een map zonder volledig ingevulde inventarisregel mag niet worden gemigreerd.
 - Gebruik het volledige huidige pad, niet alleen de mapnaam.
 - Gebruik `HOLD` wanneer owner, risico, linkstatus, classificatie of nieuwe locatie nog niet duidelijk is.
 - Vul geen vertrouwelijke clientinformatie, contractinhoud of financiële details in GitHub in; verwijs alleen naar Drive item ID, mapnaam, owner en status.
-- FIERCE-content wordt niet naar CM gemigreerd en moet als `UITSLUITEN` of `HOLD - FIERCE REVIEW` worden gemarkeerd.
+- EXTERNE_ENTITEIT-content wordt niet naar CM gemigreerd en moet als `UITSLUITEN` of `HOLD - EXTERNE_ENTITEIT REVIEW` worden gemarkeerd.
 
 ## Statuswaarden
 
@@ -26,7 +26,7 @@ Gebruik één van deze statuswaarden:
 | `LEGAL/FINANCE REVIEW` | Legal, finance, contract-, rights- of Moneybird-status moet worden beoordeeld. |
 | `HOLD` | Migratie is geblokkeerd tot open punten zijn opgelost. |
 | `GOEDGEKEURD VOOR MIGRATIE` | Map is compleet beoordeeld en mag in een migratiebatch. |
-| `UITSLUITEN` | Map valt buiten CM-migratie, bijvoorbeeld FIERCE of niet-relevant. |
+| `UITSLUITEN` | Map valt buiten CM-migratie, bijvoorbeeld EXTERNE_ENTITEIT of niet-relevant. |
 | `GEMIGREERD` | Map is daadwerkelijk verplaatst of verwerkt. |
 | `GEVALIDEERD` | Post-migratie controle is afgerond. |
 
@@ -52,7 +52,7 @@ Gebruik één van deze risicowaarden:
 | `LAAG` | Weinig afhankelijkheden; owner, actie en doelpad zijn duidelijk. |
 | `MIDDEL` | Beperkte afhankelijkheden of duplicaatrisico. |
 | `HOOG` | Legal, finance, rights, owner-, link- of governance-risico. |
-| `KRITIEK` | FIERCE-risico, vertrouwelijke toegangsfout, actieve automation-afhankelijkheid of onduidelijke juridische/financiële status. |
+| `KRITIEK` | EXTERNE_ENTITEIT-risico, vertrouwelijke toegangsfout, actieve automation-afhankelijkheid of onduidelijke juridische/financiële status. |
 
 ## Inventaristabel
 
@@ -73,7 +73,7 @@ Gebruik deze velden wanneer de basistabel onvoldoende context geeft.
 | Parent folder ID |  |
 | URL |  |
 | Huidige root |  |
-| Maptype | `[artist / client / deal / operations / finance / legal / marketing / content / admin / archive / shim / FIERCE / onbekend]` |
+| Maptype | `[artist / client / deal / operations / finance / legal / marketing / content / admin / archive / shim / EXTERNE_ENTITEIT / onbekend]` |
 | Canonical naam |  |
 | Business lane |  |
 | Drive owner |  |
@@ -93,7 +93,7 @@ Gebruik deze velden wanneer de basistabel onvoldoende context geeft.
 | Automation-afhankelijkheid |  |
 | AI-agent instructie-afhankelijkheid |  |
 | Duplicaat/canonical besluit |  |
-| FIERCE-check |  |
+| EXTERNE_ENTITEIT-check |  |
 | HOLD-reden |  |
 | Open punten |  |
 | Reviewdatum |  |

@@ -1,9 +1,5 @@
 # Governance-regels
 
-## Tijdelijke recoveryprioriteit
-
-Zolang `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` de status `ACTIEF` heeft, heeft die recovery-governance voorrang op de V1.0-production-baseline en op strijdige historische governance. De baseline-ADR heeft gedurende deze periode status `SUPERSEDED_FOR_RECOVERY`.
-
 ## Leidende beslissingen
 
 De leidende governance voor CM_OS staat in:
@@ -206,7 +202,7 @@ Voor elke AI-agent output geldt:
 8. ClickUp = uitvoering.
 9. Moneybird = financiële waarheid voor facturen, bonnen, kwitanties en financiële documenten.
 10. GitHub = governance, SOPs, Playbooks, template source of truth en systeemdocumentatie.
-11. FIERCE en Custommade Agency blijven strikt gescheiden. Gebruik nooit FIERCE-governance, FIERCE-templates of FIERCE-mappen binnen Custommade Agency.
+11. EXTERNE_ENTITEIT en Custommade Agency blijven strikt gescheiden. Gebruik nooit EXTERNE_ENTITEIT-governance, EXTERNE_ENTITEIT-templates of EXTERNE_ENTITEIT-mappen binnen Custommade Agency.
 
 
 
@@ -242,4 +238,4 @@ Een projectmap of AI-output is pas governance-proof wanneer:
 5. ontbrekende templatebehoeften zijn teruggekoppeld naar GitHub;
 6. de output overdraagbaar is naar ClickUp voor uitvoering;
 7. de lean Nederlandse Drive-structuur wordt gebruikt zolang de deal de due diligence fase niet heeft bereikt;
-8. er geen vermenging is met FIERCE of andere entiteiten.
+8. er geen vermenging is met EXTERNE_ENTITEIT of andere entiteiten.

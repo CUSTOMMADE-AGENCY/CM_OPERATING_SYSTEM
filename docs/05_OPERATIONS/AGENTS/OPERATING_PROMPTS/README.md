@@ -21,10 +21,14 @@ Per agent:
 
 - Alle agents zijn **pre-production (Level 1)**. Laat een agent niets extern/bindend/muterend doen zonder
   de vereiste gate (meestal Sophia).
-- Entiteit = **uitsluitend CUSTOMMADE AGENCY** (strikt gescheiden van FIERCE).
+- Entiteit = **uitsluitend CUSTOMMADE AGENCY** (strikt gescheiden van EXTERNE_ENTITEIT).
 - Bij ontbrekende bron/onduidelijkheid: niet aannemen — vastleggen en escaleren.
 
 ## Bestanden
 
 `CM_CONTROL_PROMPT.md` · `CM_OPS_PROMPT.md` · `CM_MONEY_PROMPT.md` · `CM_LEGAL_PROMPT.md` ·
 `CM_PROSPECT_PROMPT.md` · `CM_SOCIAL_PROMPT.md` · `CM_VAULT_PROMPT.md` · `CM_FLOW_PROMPT.md`.
+
+## Prompt guardrail
+
+Prompts erven altijd de actuele states en permissions uit `../AGENT_CAPABILITY_REGISTER.md`. Een prompt mag geen connector, write of live capability veronderstellen zonder evidence.

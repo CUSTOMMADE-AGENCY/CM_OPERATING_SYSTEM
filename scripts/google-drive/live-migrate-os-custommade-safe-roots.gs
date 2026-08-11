@@ -44,7 +44,7 @@ const DIRECT_SAFE_ROOT_MAPPINGS = [
 const MARKETING_SOURCE_ROOT = '05_MARKETING';
 const HOLD_ROOTS = ['00_INBOX', '04_BUSINESS', '06_PROJECTS', '07_ARCHIVE'];
 const SENSITIVE_KEYWORDS = [
-  'fierce', 'legal', 'juridisch', 'finance', 'financ', 'rechten', 'rights',
+  'externe_entiteit', 'legal', 'juridisch', 'finance', 'financ', 'rechten', 'rights',
   'contract', 'contracten', 'contracts', 'agreement', 'agreements', 'overeenkomst',
   'royalty', 'royalties', 'invoice', 'factuur', 'facturen', 'tax', 'btw',
   'bank', 'payment', 'betalingen', 'nda', 'apa', 'loi', 'license', 'licence'
@@ -143,7 +143,7 @@ function migrateChildrenToTarget_(source, target, rootName, sourceName, targetNa
     const child = children.next();
     const childName = safeFolderName_(child, 'UNKNOWN');
     if (shouldHold_(childName)) {
-      logHoldItem_(rows, sourceName, child, source, rootName + '/' + sourceName + '/' + childName, 'HOLD_FIERCE_LEGAL_FINANCE_RIGHTS_CONTRACT_UNKNOWN_MIXED_OR_CONFLICT', effectiveDryRun);
+      logHoldItem_(rows, sourceName, child, source, rootName + '/' + sourceName + '/' + childName, 'HOLD_EXTERNE_ENTITEIT_LEGAL_FINANCE_RIGHTS_CONTRACT_UNKNOWN_MIXED_OR_CONFLICT', effectiveDryRun);
       continue;
     }
     migrateOneFolder_(child, source, target, rootName, sourceName, targetName, action, rows, effectiveDryRun);

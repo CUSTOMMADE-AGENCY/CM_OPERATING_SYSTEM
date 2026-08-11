@@ -55,7 +55,7 @@ Evidence: `docs/05_OPERATIONS/AGENTS/CERTIFICATION/EVIDENCE/CM_OPS_SUBSTRATE_202
    `Brand Partnership Flow`; die horen conform B **niet** onder `CLIENTS` maar respectievelijk
    onder **`DEAL DESK`** (legal/deal) en **`PIPELINE`** (partnerships/brand deals).
 4. **De ClickUp-inrichting zelf** (space-naam, ontbrekende lijsten/folders, provisioning-retarget,
-   FIERCE-opruiming) verloopt volgens `CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`.
+   EXTERNE_ENTITEIT-opruiming) verloopt volgens `CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`.
 
 ## Impact
 

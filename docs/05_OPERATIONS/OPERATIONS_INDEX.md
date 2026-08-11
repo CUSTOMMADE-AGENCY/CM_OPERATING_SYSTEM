@@ -35,4 +35,4 @@ Automation
 
 ## Registratie
 
-Fase 2 heeft de operationele documenten gecontroleerd geconsolideerd. Nieuwe of verplaatste documenten worden alleen geregistreerd nadat de canonieke bestemming, eigenaar, duplicaatstatus en linkimpact zijn gecontroleerd. Zie `docs/00_GOVERNANCE/PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md`.
+Fase 2 heeft de operationele documenten gecontroleerd geconsolideerd. Nieuwe of verplaatste documenten worden alleen geregistreerd nadat de canonieke bestemming, eigenaar, duplicaatstatus en linkimpact zijn gecontroleerd. Zie `docs/00_GOVERNANCE/HISTORY/MIGRATIONS/PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md`.

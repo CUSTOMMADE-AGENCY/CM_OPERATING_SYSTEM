@@ -222,3 +222,14 @@ Een agent is v2-documentair conform wanneer:
 - P0 gaps zijn gesloten.
 
 **Deze audit verleent geen production approval.**
+
+## 7. Remediationstatus na canonicalization
+
+De P0-documentconflicten zijn op 2026-08-11 gesloten:
+
+- `CM VAULT V1` is repositorybreed canoniek `PAUSED`, read-only en uitsluitend inspecterend/rapporterend; VAULT heeft `FORBIDDEN` op foldermutaties.
+- Folder create/rename/move is toegewezen aan FLOW, een approved script en een approval-gate.
+- `AGENT_CAPABILITY_REGISTER.md` legt centraal de verplichte connection states, permissions, actions, capability states, evidence/run-ID en failure policy vast.
+- ACTIVE, RUNBOOKS, build specs, operating prompts, certification en scenario-map blijven afzonderlijke lagen en verwijzen naar dezelfde runtimegrens.
+
+**Conformance verdict na remediation:** `PASS WITH REMEDIATION`. Dit verleent geen production approval en maakt geen ontworpen of gepauzeerde capability live.

@@ -70,7 +70,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 - **Approval ⚠️** — Sophia heeft het *activatietraject* goedgekeurd; de *productiestatus per agent* wordt pas per agent vastgelegd nadat de gates groen zijn.
 - **Techniek** — geen scenario staat `ACTIVE`; *te reg.* = scenario nog te registreren in `MAKE_SCENARIO_MAP.md`.
 - **⚠️ code** (CM VAULT) — functionele tests op de code-laag geslaagd (**PASS 5/5**, `EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`). De red-team-gate blijft **open**: er is alleen *safe-stop*-deelbewijs; §4 vereist ook logging + escalatie (scenario-laag) plus live-cases. Score nog open. CM VAULT blijft Level 1.
-- **² Doc** (CM OPS) — het source-of-truth-conflict tussen `CLICKUP_STRUCTURE.md` (6-folder `CM`) en `CLICKUP_MAPPING.md` (compacte `CUSTOMMADE AGENCY`) is **beslecht via ADR-2026-08-07: de compacte structuur (B) is canoniek**; docs gecanoniseerd. Open follow-up: ClickUp gelijktrekken (naam-typefout, `MARKETING`, `CLIENTS`-lijsten, provisioning-retarget, `FIERCE`) + A-detailmappings herbeleggen — `EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`. OPS-automatiseringen staan op `IDEA`. OPS blijft Level 1.
+- **² Doc** (CM OPS) — het source-of-truth-conflict tussen `CLICKUP_STRUCTURE.md` (6-folder `CM`) en `CLICKUP_MAPPING.md` (compacte `CUSTOMMADE AGENCY`) is **beslecht via ADR-2026-08-07: de compacte structuur (B) is canoniek**; docs gecanoniseerd. Open follow-up: ClickUp gelijktrekken (naam-typefout, `MARKETING`, `CLIENTS`-lijsten, provisioning-retarget, `EXTERNE_ENTITEIT`) + A-detailmappings herbeleggen — `EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`. OPS-automatiseringen staan op `IDEA`. OPS blijft Level 1.
 - **¹ `PAUSED`** (CM VAULT) — Make-scenario CM VAULT V1 was op 2026-08-07 kort live, maar is per **governance-besluit (Sophia) teruggezet naar gepauzeerd**: `GOVERNANCE_RULES.md` houdt het inactief tot testlog, fallback en CM CONTROL approval bestaan. Certificering verloopt gates-eerst; run van 10 aug gaat niet door. Open validatie-waarschuwing module 11. Zie `EVIDENCE/CM_VAULT_LIVE_ACTIVATION_2026-08-07.md`.
 
 ---
@@ -108,3 +108,7 @@ Level 3 kan worden verleend:
 5. Expliciete Sophia-approval van de productiestatus, vastgelegd in het approval-record.
 
 Zolang deze open staan, blijft de agent op **Level 1 — Governance Approved**.
+
+## Capability-evidence
+
+Statusverhoging vereist dat connection, permission, action, capability state, evidence/run-ID en failure policy in `../AGENT_CAPABILITY_REGISTER.md` zijn bijgewerkt. Ontbrekende evidence betekent geen connection claim.

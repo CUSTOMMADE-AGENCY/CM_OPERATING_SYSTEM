@@ -1,4 +1,4 @@
-# CM Repository Recovery Plan
+# CM Repository Recovery Plan — CLOSED
 
 ## Doel
 
@@ -6,18 +6,15 @@ De repository terugbrengen naar één consistente, uitvoerbare en vindbare Sourc
 
 ## Status
 
-- Status: `ACTIEF`
-- Build freeze: `ACTIEF` (template-onderdeel vrijgegeven — zie Build freeze)
-- Template Recovery (Sprint 6): `VRIJGEGEVEN` op autorisatie van de accounteigenaar (2026-07-26)
-- Fase 1-uitvoeringsbranch: `codex/voer-fase-1-governance-consolidatie-uit`
-- Fase 2-branch: `codex/phase-2-operations-consolidation`
-- Fase 2-status: `UITGEVOERD / IN REVIEW`
-- Fase 1-status: `GOEDGEKEURD / GEMERGED` via PR #194 naar `main`; de handmatige post-merge review heeft inhoudelijk akkoord gegeven
-- Owner: Sophia / CM CONTROL
+- Status: `CLOSED / COMPLETED` op 2026-08-11
+- Eindstatus: GitHub-domeinstructuur 00–09, governanceconsolidatie en Operations-migratie zijn uitgevoerd; resterende verbeteringen lopen via reguliere governance.
+- Build freeze: `GESLOTEN`; actuele templatebesluiten volgen de canonieke standaarden en registers.
+- Historische owner: Sophia / CM CONTROL
+- Dit plan staat in `HISTORY/RECOVERY_REPORTS/`, is niet leidend en claimt geen governancevoorrang.
 
 ## Governancevoorrang
 
-Tijdens de actieve recovery heeft dit Recovery Plan voorrang op de V1.0-production-baseline. De baseline-ADR blijft behouden met status `SUPERSEDED_FOR_RECOVERY`. Na afsluiting van recovery vereist herstel of vervanging van de baseline een expliciet besluit.
+Geen. Sinds sluiting gelden `docs/00_GOVERNANCE/DECISION_LOG.md`, `GOVERNANCE_RULES.md`, actuele ADR's en de overige canonieke governancebronnen. Heropening vereist een nieuw expliciet besluit; dit historische plan wordt niet opnieuw actief gemaakt.
 
 ## Scope
 

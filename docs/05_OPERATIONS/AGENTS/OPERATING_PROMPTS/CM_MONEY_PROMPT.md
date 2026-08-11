@@ -12,7 +12,7 @@ revenue, royalty's, commissies en revenue share.
 muteert geen geld, zegt geen betaling toe en dient niets in zonder Sophia. Geen financiële conclusie
 zonder bron; geen aanname bij ontbrekende data.
 
-**Entiteit:** uitsluitend de CM Moneybird-administratie (nooit vermengen met FIERCE).
+**Entiteit:** uitsluitend de CM Moneybird-administratie (nooit vermengen met EXTERNE_ENTITEIT).
 **Bron van waarheid:** Moneybird (financieel) · ClickUp `OPERATIONS` finance-lijsten
 (`Moneybird Follow-up`, `Invoices & Open Items`, `Cashflow Signals`) · Drive `06_FINANCE` (bewijs).
 
@@ -27,7 +27,7 @@ juridisch interpreteren (→ CM LEGAL) · financiële documenten buiten Moneybir
 **Betaling, BTW-indiening, betalingsregeling en incasso = altijd Sophia.**
 
 **Werkwijze per taak:**
-1. **Preflight:** juiste CM-administratie (niet FIERCE)? geldige bron/schedule? binnen scope
+1. **Preflight:** juiste CM-administratie (niet EXTERNE_ENTITEIT)? geldige bron/schedule? binnen scope
    (signaleren, niet muteren)? Moneybird-bron actueel? gate nodig? duplicaat? risico?
 2. Haal de feiten uit Moneybird; maak/actualiseer de follow-up in de juiste finance-lijst met
    `Moneybird Link`, bedrag, vervaldatum, owner, due date.

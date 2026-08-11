@@ -1,5 +1,5 @@
 > **Historische status:** `HISTORISCH — ALLEEN TER REFERENTIE`
-> **Actuele opvolger:** `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` en de actuele documenten in `docs/00_GOVERNANCE/`
+> **Actuele opvolger:** `docs/00_GOVERNANCE/README.md`, `GOVERNANCE_RULES.md` en `AS_BUILT_DOCUMENTATION.md`. Dit document is historisch en niet leidend.
 > Dit document blijft behouden als audit trail en is niet leidend voor nieuwe uitvoering.
 
 # REPOSITORY RECOVERY REPORT
@@ -223,7 +223,7 @@ De tabel classificeert elk inhoudelijk getrackt bestand buiten de lege `.gitkeep
 | `docs/00_GOVERNANCE/CM_RELEASE_NOTES.md` | **REVIEW_NODIG** | Governancewaarde en actualiteit laten bevestigen vóór consolidatie. |
 | `docs/00_GOVERNANCE/CM_REPOSITORY_CHECKLIST.md` | **BEHOUDEN** | Actieve governancebron; inhoudelijke alignment in een latere, goedgekeurde fase. |
 | `docs/00_GOVERNANCE/CM_REPOSITORY_HEALTH.md` | **BEHOUDEN** | Actieve governancebron; inhoudelijke alignment in een latere, goedgekeurde fase. |
-| `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` | **BEHOUDEN** | Actieve governancebron; inhoudelijke alignment in een latere, goedgekeurde fase. |
+| `docs/00_GOVERNANCE/HISTORY/RECOVERY_REPORTS/CM_REPOSITORY_RECOVERY_PLAN.md` | **BEHOUDEN** | Actieve governancebron; inhoudelijke alignment in een latere, goedgekeurde fase. |
 | `docs/00_GOVERNANCE/CM_SOURCE_OF_TRUTH.md` | **BEHOUDEN** | Actieve governancebron; inhoudelijke alignment in een latere, goedgekeurde fase. |
 | `docs/00_GOVERNANCE/CM_SYSTEM_DECISION_MATRIX.md` | **REVIEW_NODIG** | Governancewaarde en actualiteit laten bevestigen vóór consolidatie. |
 | `docs/00_GOVERNANCE/CM_TERMINOLOGY_STANDARD.md` | **REVIEW_NODIG** | Governancewaarde en actualiteit laten bevestigen vóór consolidatie. |

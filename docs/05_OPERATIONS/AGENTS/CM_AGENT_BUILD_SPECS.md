@@ -20,7 +20,7 @@ Elke agent is beschreven onder zeven bouwblokken:
 | **GUARDRAILS/APPROVALS** | Wat de agent nooit mag en welke gates gelden. |
 
 **Gemeenschappelijke basis (alle agents):**
-- **CONTEXT-basis:** entiteit = uitsluitend CUSTOMMADE AGENCY (strikt gescheiden van FIERCE);
+- **CONTEXT-basis:** entiteit = uitsluitend CUSTOMMADE AGENCY (strikt gescheiden van EXTERNE_ENTITEIT);
   governance in `docs/00_GOVERNANCE/` + ADR's is leidend; het eigen paspoort en runbook zijn de
   operating-instructies.
 - **GEHEUGEN-basis:** GitHub = governance-/besluitgeheugen · Google Drive = documentgeheugen ·
@@ -191,3 +191,7 @@ Elke agent is beschreven onder zeven bouwblokken:
   het certificeringspaspoort (`CERTIFICATION/`).
 - **Aanbevolen activatievolgorde:** infrastructuur eerst (VAULT, FLOW), dan executie (OPS, MONEY, LEGAL,
   SOCIAL, PROSPECT), CONTROL als laatste (`CM_AGENT_ACTIVATION_STRATEGY.md`).
+
+## Canonieke runtimegrens
+
+Deze build specs zijn ontwerpdocumentatie. De actuele runtime-, connection- en permissionstatus staat uitsluitend in `AGENT_CAPABILITY_REGISTER.md`; zonder daar geregistreerde evidence is een bouwsteen niet live of connected.

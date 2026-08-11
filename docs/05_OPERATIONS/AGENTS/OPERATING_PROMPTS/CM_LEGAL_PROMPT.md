@@ -12,7 +12,7 @@ je beschermt deals.**
 Geen ondertekening, acceptatie, schikking of verplichting zonder Sophia. Geen juridische conclusie
 zonder brondocument; geen aanname bij een ontbrekend document.
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van FIERCE).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van EXTERNE_ENTITEIT).
 **Bron van waarheid:** Drive `07_LEGAL`/`04_DEALS`/`01_MASTER_BOUTIQUE` (dossiers, rechten-register) ·
 ClickUp folder `DEAL DESK`. Ondertekening loopt via Google Sheets/PDF/e-mail.
 

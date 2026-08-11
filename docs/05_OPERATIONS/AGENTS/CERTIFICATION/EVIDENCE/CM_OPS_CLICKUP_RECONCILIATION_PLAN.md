@@ -29,7 +29,7 @@ ClickUp-structuur. De 6-folder `CM`-structuur (A) is gedeprecate.
 | 2 | **`CLIENTS` aanvullen** | Lijsten toevoegen: `Client Onboarding`, `Artist Onboarding`, `Active Client Management`, `Artist Roadmaps`, `Projects & Deliverables`, `Releases`, `Monthly Management`, `Client Meetings & Follow-up`, `Offboarding` (bestaande `ACTIVE CLIENTS`/`ON HOLD`/`COMPLETED` behouden of samenvoegen) |
 | 3 | **`MARKETING`-folder aanmaken** | Met SOCIAL-lijsten conform `CLICKUP_MAPPING.md` → Folder MARKETING |
 | 4 | **Provisioning retargeten** | `scripts/google-drive/provision-cm-artist.gs`: `CM_CLICKUP_ACTIVE_CLIENTS_LIST_ID` naar de nieuwe **`Artist Onboarding`**-lijst-ID; bestaande onboarding-taken migreren (anders twee uitvoerlocaties) |
-| 5 | **`FIERCE`-lijst opruimen** | Archiveren/verwijderen conform governance-regel "geen FIERCE-referenties" |
+| 5 | **`EXTERNE_ENTITEIT`-lijst opruimen** | Archiveren/verwijderen conform governance-regel "geen EXTERNE_ENTITEIT-referenties" |
 | 6 | **Losse space-lijsten herbeleggen** | `CM — FINANCE`/`OPEN POSTEN` → `OPERATIONS`; `CM — LEGAL` → `DEAL DESK`; `EMAIL ACTIES`/`SETUP` → besluit per lijst |
 
 ## Volgorde
@@ -44,7 +44,7 @@ ClickUp-structuur. De 6-folder `CM`-structuur (A) is gedeprecate.
 
 - Eén canonieke ClickUp-structuur in docs én werkelijkheid (B).
 - `CLIENTS` bevat de OPS-uitvoeringslijsten; provisioning schrijft naar de juiste lijst.
-- Geen A-restanten die als canoniek gelezen kunnen worden; geen `FIERCE`-lijst.
+- Geen A-restanten die als canoniek gelezen kunnen worden; geen `EXTERNE_ENTITEIT`-lijst.
 
 Pas hierna is de OPS **Documentatie-** en **Techniek-substraat**-basis klaar; daarna volgen de
 Make-scenario's (`IDEA` → `ACTIVE`), functionele/red-team-tests, monitoring, score en approval.

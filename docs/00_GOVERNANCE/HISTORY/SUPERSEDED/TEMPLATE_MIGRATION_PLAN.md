@@ -1,5 +1,5 @@
 > **Historische status:** `HISTORISCH — NIET UITVOEREN`
-> **Actuele opvolger:** `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` (templates blijven bevroren tot een expliciet goedgekeurde latere fase)
+> **Actuele opvolger:** `docs/00_GOVERNANCE/HISTORY/RECOVERY_REPORTS/CM_REPOSITORY_RECOVERY_PLAN.md` (templates blijven bevroren tot een expliciet goedgekeurde latere fase)
 > Dit document blijft behouden als audit trail en is niet leidend voor nieuwe uitvoering.
 
 # TEMPLATE MIGRATION PLAN

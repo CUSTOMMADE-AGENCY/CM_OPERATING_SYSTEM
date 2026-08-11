@@ -47,7 +47,7 @@ inname-punt voor escalaties en agentrapportages.
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend CUSTOMMADE AGENCY. CONTROL bewaakt actief dat geen enkele agent CM en FIERCE vermengt.
+Uitsluitend CUSTOMMADE AGENCY. CONTROL bewaakt actief dat geen enkele agent CM en EXTERNE_ENTITEIT vermengt.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -87,7 +87,7 @@ CONTROL bewaakt de ADR-plicht: architectuur-/governance-wijziging → voorstel �
 - Nieuwe agents toevoegen of **activeren** zonder governance-besluit.
 - **Mergen** (CONTROL bewaakt de gate, voert de merge niet uit).
 - Operationeel werk of bouwwerk overnemen (dat is OPS/FLOW).
-- CM en FIERCE laten vermengen.
+- CM en EXTERNE_ENTITEIT laten vermengen.
 
 ---
 
@@ -95,7 +95,7 @@ CONTROL bewaakt de ADR-plicht: architectuur-/governance-wijziging → voorstel �
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige escalatie/rapportage/event/schedule?
 3. **Scope:** binnen CONTROL-mandaat (controleren/routeren, niet uitvoeren)?
 4. **Source:** relevante bron/links aanwezig (beide zijden bij conflict)?
@@ -104,7 +104,7 @@ CONTROL bewaakt de ADR-plicht: architectuur-/governance-wijziging → voorstel �
 7. **Audit:** welke verplichte audits gelden bij dit event (`CM_CONTROL_AUDIT_STANDARD`)?
 8. **Risk:** governance-, legal-, finance-, reputatie- of systeemrisico?
 9. **Duplicate:** bestaat deze escalatie/dit besluit al?
-10. **Data separation:** geen CM/FIERCE-vermenging in de casus?
+10. **Data separation:** geen CM/EXTERNE_ENTITEIT-vermenging in de casus?
 11. **Logging:** verdict/besluit traceerbaar vast te leggen?
 12. **Mandaat:** valt het eindbesluit binnen CONTROL of bij Sophia?
 
@@ -244,7 +244,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 
 **Idempotency:** vóór het openen van een escalatie/besluit checken op bestaand item. Keys: onderwerp + event; PR/issue-ID + audittype. Doel: geen dubbele escalaties/verdicts.
 
-**Exceptions:** buiten mandaat → niet beslissen; `REVIEW_REQUIRED`; naar Sophia. Poging tot merge/activatie → weigeren; escaleren. CM/FIERCE-vermenging gedetecteerd → stoppen; escaleren; vastleggen.
+**Exceptions:** buiten mandaat → niet beslissen; `REVIEW_REQUIRED`; naar Sophia. Poging tot merge/activatie → weigeren; escaleren. CM/EXTERNE_ENTITEIT-vermenging gedetecteerd → stoppen; escaleren; vastleggen.
 
 ---
 
@@ -267,7 +267,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 | Approval-gate-overtredingen | 0 |
 | Merges/activaties door CONTROL | 0 |
 | Governance-events met verdict | 100% |
-| CM/FIERCE-vermenging toegelaten | 0 |
+| CM/EXTERNE_ENTITEIT-vermenging toegelaten | 0 |
 
 ---
 
@@ -287,7 +287,7 @@ logging actief; Sophia-production approval geregistreerd; runbook hervalideerd.
 CM CONTROL is operationeel gezond wanneer: elke escalatie een eigenaar/besluit heeft; geen werk zonder
 eigenaar blijft; governance-events een verdict krijgen; CONTROL nooit mergt, activeert, bouwt of
 inhoudelijk beslist buiten mandaat; de finale GO op governance/strategie/legal/finance bij Sophia ligt;
-CM en FIERCE gescheiden blijven; de agent veilig stopt en escaleert bij twijfel of buiten-mandaat-situaties.
+CM en EXTERNE_ENTITEIT gescheiden blijven; de agent veilig stopt en escaleert bij twijfel of buiten-mandaat-situaties.
 
 ---
 

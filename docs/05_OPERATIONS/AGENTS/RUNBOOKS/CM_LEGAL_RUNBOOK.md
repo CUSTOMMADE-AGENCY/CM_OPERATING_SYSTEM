@@ -48,8 +48,8 @@ archiveert · Sophia keurt ondertekening en bindende verplichtingen goed.
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend voor CUSTOMMADE AGENCY. Geen vermenging van CM- en FIERCE-contracten, -rechten,
--dossiers of -governance, tenzij een formeel goedgekeurde CM↔FIERCE-overeenkomst dat vereist.
+Uitsluitend voor CUSTOMMADE AGENCY. Geen vermenging van CM- en EXTERNE_ENTITEIT-contracten, -rechten,
+-dossiers of -governance, tenzij een formeel goedgekeurde CM↔EXTERNE_ENTITEIT-overeenkomst dat vereist.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -92,7 +92,7 @@ Governance/mandaat/structuurwijzigingen: voorstel → governance review → ADR/
 - Financiële administratie voeren of financiële waarheid bepalen.
 - Governance wijzigen.
 - Rechten/splits definitief vaststellen als bindend zonder Sophia-gate.
-- CM en FIERCE juridisch vermengen.
+- CM en EXTERNE_ENTITEIT juridisch vermengen.
 
 ---
 
@@ -100,7 +100,7 @@ Governance/mandaat/structuurwijzigingen: voorstel → governance review → ADR/
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige handoff/aanleiding (van PROSPECT/OPS/Sophia)?
 3. **Scope:** binnen LEGAL-mandaat (beschermen/adviseren, niet sluiten)?
 4. **Source:** zijn de relevante documenten (contract/deal) aanwezig?
@@ -109,7 +109,7 @@ Governance/mandaat/structuurwijzigingen: voorstel → governance review → ADR/
 7. **Deadline/vervaldatum:** bekend?
 8. **Approval:** vereist ondertekening/verplichting een Sophia-gate?
 9. **Duplicate check:** bestaat dit dossier/review al?
-10. **Data separation:** geen FIERCE-documenten in de input?
+10. **Data separation:** geen EXTERNE_ENTITEIT-documenten in de input?
 11. **Logging:** review traceerbaar (bron + red flags)?
 12. **Risk:** juridisch, rechten-, reputatie- of financieel risico?
 
@@ -282,7 +282,7 @@ deal-ID + reviewtype; artist + rights-run; contract-ID + versie. Doel: geen dubb
 ## 16. Exceptions, rollback en fouten
 
 - **Ontbrekend/onleesbaar document:** geen aanname; `Documents requested`/`Blocked`; red flag; owner toewijzen.
-- **Verkeerde entiteit (FIERCE):** stoppen; niets vermengen; log; escaleren.
+- **Verkeerde entiteit (EXTERNE_ENTITEIT):** stoppen; niets vermengen; log; escaleren.
 - **Dubbel dossier:** niet deleten; markeer duplicaat; VAULT bepaalt canoniek (verwijdert nooit).
 - **Foutieve externe toezegging (concept):** niet verzenden; risk markeren; escaleren naar Sophia.
 
@@ -306,7 +306,7 @@ deal-ID + reviewtype; artist + rights-run; contract-ID + versie. Doel: geen dubb
 | Reviews met red-flag-registratie | 100% |
 | Vervaldata zonder tijdige signalering | 0 |
 | Juridische conclusies zonder brondocument | 0 |
-| CM/FIERCE juridische vermenging | 0 |
+| CM/EXTERNE_ENTITEIT juridische vermenging | 0 |
 | Obligations met owner | 100% |
 
 ---
@@ -327,7 +327,7 @@ monitoring/logging actief; Sophia-production approval geregistreerd; runbook her
 CM LEGAL is operationeel gezond wanneer: elke deal via de checklist wordt beoordeeld; rechten nooit
 op aanname rusten; ondertekening/verplichting altijd via Sophia loopt; financiële voorwaarden via
 MONEY en delivery via OPS lopen; documenten in de juiste Drive-dossiers staan (VAULT-governance);
-CM en FIERCE gescheiden blijven; vervaldata tijdig gesignaleerd worden; de agent veilig stopt bij
+CM en EXTERNE_ENTITEIT gescheiden blijven; vervaldata tijdig gesignaleerd worden; de agent veilig stopt bij
 ontbrekende documenten of onduidelijke bevoegdheid.
 
 ---
