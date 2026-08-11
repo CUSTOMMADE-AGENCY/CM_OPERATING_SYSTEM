@@ -56,7 +56,7 @@ Legenda: ✅ groen (evidence aanwezig) · ⚠️ deels/voorwaardelijk · ⬜ ope
 
 | Agent | Gov | Doc | Techniek | Func. test | Red team | Approval | Monitoring | Score/Paspoort | Cert-niveau |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|---|
-| CM VAULT | ✅ | ⚠️ | ⬜ `PAUSED`¹ | ⚠️ code | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
+| CM VAULT | ✅ | ✅ | ⬜ `PAUSED`¹ | ⚠️ code | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM FLOW | ✅ | ⚠️ | ⚠️ `BUILD` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM OPS | ✅ | ⚠️² | ⬜ `IDEA` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
 | CM MONEY | ✅ | ⚠️ | ⬜ `REVIEW` | ⬜ | ⬜ | ⚠️ | ⬜ | ⬜ | Level 1 |
