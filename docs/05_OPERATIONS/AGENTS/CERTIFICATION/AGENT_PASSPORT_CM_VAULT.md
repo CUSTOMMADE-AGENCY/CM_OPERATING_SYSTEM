@@ -33,7 +33,7 @@
 | # | Gate | Status | Wat nog nodig is |
 |---|---|:--:|---|
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
-| 2 | Documentatie | ⚠️ | Testplan + logspecificatie voor VAULT aantonen |
+| 2 | Documentatie | ✅ | Testplan + logspecificatie aanwezig (`EVIDENCE/CM_VAULT_TESTPLAN_LOGSPEC.md`); paspoort compleet |
 | 3 | Techniek | ⬜ | CM VAULT V1 is **`PAUSED`** (governance-besluit: gates eerst). Read-only blueprint bevestigd; **open validatie-waarschuwing module 11**. Nodig: handmatige `Run once`-testlog, fallback, module-11-fix, dan pas activeren (`EVIDENCE/CM_VAULT_LIVE_ACTIVATION_2026-08-07.md`) |
 | 4 | Functionele test | ⚠️ | Code-laag **PASS 5/5** (`EVIDENCE/CM_VAULT_TEST_EXECUTION_2026-08-07.md`); live-omgevingscases nog open |
 | 5 | Red team | ⬜ | Alleen **safe-stop-deelbewijs** aangetoond; §4-eisen logging + escalatie + live-cases nog open — gate OPEN |
