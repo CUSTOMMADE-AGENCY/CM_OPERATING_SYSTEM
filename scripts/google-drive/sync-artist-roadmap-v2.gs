@@ -129,19 +129,19 @@ function roadmapWriteV22_(doc) {
 
   roadmapSub_(body, 'RELEASES — PLANNING');
   roadmapTable_(body, [
-    ['Release', 'Type', 'Master status', 'Rights status', 'Releasedatum', 'Distributie-deadline'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
+    ['Release-ID', 'Release', 'Type', 'Master status', 'Rights status', 'Distributie-deadline', 'Releasedatum'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
 
   roadmapSub_(body, 'RELEASES — BUSINESS');
   roadmapTable_(body, [
-    ['Marketingstart', 'Goedgekeurd budget', 'Werkelijke kosten', 'Verschil', 'Eigenaar', 'Status'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
+    ['Release-ID', 'Marketingstart', 'Goedgekeurd budget', 'Werkelijke kosten', 'Verschil'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
   roadmapP_(body,
     'Rights status = CLEAR · OPEN · BLOCKED. Rights-clearance omvat minimaal splits, features en samples. ' +
-    'Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf. Beide releaseblokken ' +
-    'vormen inhoudelijk één release-record.'
+    'Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf. Release-ID is de ' +
+    'onveranderlijke record-ID die planning en business koppelt; Release is een weergavelabel.'
   );
 
   roadmapSub_(body, 'INKOMSTEN');
@@ -163,19 +163,19 @@ function roadmapWriteV22_(doc) {
 
   roadmapSub_(body, 'DEALS & KANSEN — COMMERCIEEL');
   roadmapTable_(body, [
-    ['Type', 'Kans', 'Tegenpartij', 'Waarde', 'Kans %', 'Gewogen waarde'],
-    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
+    ['Kans-ID', 'Type', 'Kans', 'Tegenpartij', 'Waarde', 'Kans %', 'Gewogen waarde'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
 
   roadmapSub_(body, 'DEALS & KANSEN — OPVOLGING');
   roadmapTable_(body, [
-    ['Fase', 'Eigenaar', 'Volgende actie', 'Deadline'],
-    ['TBD', 'TBD', 'TBD', 'TBD']
+    ['Kans-ID', 'Fase', 'Eigenaar', 'Volgende actie', 'Deadline'],
+    ['TBD', 'TBD', 'TBD', 'TBD', 'TBD']
   ]);
   roadmapP_(body,
     'Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. ' +
     'Gewogen waarde = waarde × kans %. Dit is een forecast-/pipeline-metric, geen financiële waarheid. ' +
-    'Beide dealblokken vormen inhoudelijk één deal-record.'
+    'Kans-ID is de onveranderlijke record-ID die commercieel en opvolging koppelt; Kans is een weergavelabel.'
   );
 
   roadmapSub_(body, 'BESLISSINGEN');
@@ -188,7 +188,6 @@ function roadmapWriteV22_(doc) {
   roadmapTable_(body, [
     ['Veld', 'Toegestane waarden'],
     ['Objective status', 'NOT_STARTED · IN_PROGRESS · AT_RISK · DONE'],
-    ['Release status', 'PLANNED · IN_PRODUCTION · SCHEDULED · RELEASED · ON_HOLD'],
     ['Rights status', 'CLEAR · OPEN · BLOCKED'],
     ['Deal/pipeline-fase', 'LEAD · QUALIFIED · DILIGENCE · CLOSING · CLOSED'],
     ['Decision status', 'OPEN · ESCALATED · DECIDED']
@@ -207,11 +206,11 @@ function roadmapWriteV22_(doc) {
 
   roadmapH3_(body, '08 · KWALITEITSCONTROLE');
   roadmapP_(body, '— Elk doel heeft KPI, doel, deadline, eigenaar en status.');
-  roadmapP_(body, '— Elke release heeft master-status, Rights status, distributie-deadline, eigenaar en status.');
-  roadmapP_(body, '— Release-planning en Release-business vormen één release-record.');
+  roadmapP_(body, '— Elke release heeft master-status, Rights status en distributie-deadline.');
+  roadmapP_(body, '— Release-planning en Release-business vormen één release-record, gekoppeld via Release-ID.');
   roadmapP_(body, '— Elke inkomstenregel met actual heeft een benoemde bron.');
   roadmapP_(body, '— Elke deal heeft fase, eigenaar, volgende actie en deadline.');
-  roadmapP_(body, '— Deal-commercieel en Deal-opvolging vormen één deal-record.');
+  roadmapP_(body, '— Deal-commercieel en Deal-opvolging vormen één deal-record, gekoppeld via Kans-ID.');
   roadmapP_(body, '— Geen open beslissing zonder goedkeurder.');
   roadmapP_(body, '— Iedere automation mapping verwijst naar een bestaand veld.');
 
@@ -243,16 +242,17 @@ function roadmapWriteV22_(doc) {
   roadmapTable_(body, [
     ['Trigger', 'Systeem', 'Actie', 'Field mapping'],
     ['Roadmap approved', 'Make → ClickUp', 'Doel-taken aanmaken', 'Hoofddoel→Taak, Eigenaar→Assignee, Deadline→Due date, Status→Status'],
-    ['Release-regel toegevoegd', 'Make → ClickUp', 'Release-checklist', 'Release→List, Distributie-deadline→Due date, Eigenaar→Assignee, Status→Status'],
+    ['Release-regel toegevoegd', 'Make → ClickUp', 'Release-checklist', 'Release-ID→External ID, Release→List, Distributie-deadline→Due date'],
     ['Rights status = OPEN/BLOCKED', 'Make → ClickUp', 'Rights/legal opvolgtaak', 'Release→Taak, Rights status→Status'],
-    ['Deal-regel toegevoegd/gewijzigd', 'Make → ClickUp', 'Pipeline-record', 'Kans→Record, Eigenaar→Assignee, Deadline→Due date, Fase→Status, Volgende actie→Next action'],
+    ['Deal-regel toegevoegd/gewijzigd', 'Make → ClickUp', 'Pipeline-record', 'Kans-ID→External ID, Kans→Name, Eigenaar→Assignee, Deadline→Due date, Fase→Status, Volgende actie→Next action'],
     ['Financiële actuals', '—', 'Niet naar Moneybird schrijven', 'Read-only referentie']
   ]);
 
   roadmapH3_(body, '15 · WIJZIGINGSLOG');
   roadmapTable_(body, [
     ['Datum', 'Versie', 'Wijziging', 'Owner'],
-    ['2026-08-10', 'V2.2', 'Printoptimalisatie: A4-portret behouden; Releases en Deals opgesplitst in gekoppelde werkblokken.', 'CM OPS AGENT']
+    ['2026-08-10', 'V2.2', 'Printoptimalisatie: A4-portret behouden; Releases en Deals opgesplitst in gekoppelde werkblokken.', 'CM OPS AGENT'],
+    ['2026-08-11', 'V2.2', 'Generator gesynchroniseerd met canonieke markdown: exacte kolomsets, onveranderlijke Release-ID/Kans-ID record-keys, verweesde Release status verwijderd en bijgewerkte automation mappings.', 'CM OPS AGENT']
   ]);
 
   roadmapApplyFont_(body);
