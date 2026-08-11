@@ -33,7 +33,7 @@
 | # | Gate | Status | Wat nog nodig is |
 |---|---|:--:|---|
 | 1 | Governance | ✅ | — (`GOVERNANCE LOCKED`) |
-| 2 | Documentatie | ⚠️ | **Source-of-truth-conflict**: `CLICKUP_STRUCTURE.md` (6-folder `CM`) en `CLICKUP_MAPPING.md` (compacte `CUSTOMMADE AGENCY`) spreken elkaar tegen; deployment volgt de compacte versie (`EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`) — eerst één canonieke structuur kiezen |
+| 2 | Documentatie | ⚠️ | Source-of-truth-conflict **beslecht (2026-08-07): structuur B canoniek**. Docs gecanoniseerd (`CLICKUP_STRUCTURE.md` + `CLICKUP_MAPPING.md`); open follow-up: A-detailmappings herbeleggen + ClickUp gelijktrekken (`EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`) |
 | 3 | Techniek | ⬜ | Scenario's "Artist onboarding trigger" + "Approval follow-up reminder" + "Client setup folder creation" van `IDEA` → `ACTIVE` (CM FLOW); deployed **`CLIENTS`-folder mist de OPS-lijsten** (Client/Artist Onboarding, Roadmaps, Monthly Management, …) |
 | 4 | Functionele test | ⬜ | Registratie in `CERT_TEST_PLAN.md` §2 |
 | 5 | Red team | ⬜ | Registratie in `CERT_TEST_PLAN.md` §3 |
@@ -43,12 +43,12 @@
 
 **Afhankelijkheid:** OPS-triggers draaien op de door CM FLOW ingerichte trigger-laag (fase 1).
 
-**Substraat-bevinding (2026-08-07, v2):** OPS heeft twee ClickUp-bronnen die elkaar tegenspreken
+**Substraat-bevinding (2026-08-07):** OPS had twee tegenstrijdige ClickUp-bronnen
 (`CLICKUP_STRUCTURE.md` = 6-folder `CM`; `CLICKUP_MAPPING.md` = compacte `CUSTOMMADE AGENCY`).
-De live workspace volgt de **compacte** versie, maar met een naam-typefout (`CUSTOMMMADE`, 3× M),
-een ontbrekende `MARKETING`-folder en een onderbouwde `CLIENTS`-folder. Artist management hoort
-per de compacte mapping **onder `CLIENTS`** (geen aparte folder). Conflict beslechten is de eerste
-OPS-gate. Zie `EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`.
+**Beslecht via ADR-2026-08-07: de compacte structuur (B) is canoniek**; docs zijn gecanoniseerd.
+De live workspace volgt B, maar moet nog worden gelijkgetrokken (naam-typefout `CUSTOMMMADE`,
+ontbrekende `MARKETING`-folder, onderbouwde `CLIENTS`, provisioning-retarget, `FIERCE`). Artist
+management valt **onder `CLIENTS`**. Uitvoering: `EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`.
 
 ## 3. Agent-specifieke testaccenten
 

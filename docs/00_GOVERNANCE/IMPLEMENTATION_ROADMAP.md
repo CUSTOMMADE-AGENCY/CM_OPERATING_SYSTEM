@@ -84,13 +84,14 @@ OS_CUSTOMMADE
 
 ### ClickUp-principe
 
-Eén centrale Space:
+Eén centrale Space (canoniek, ADR-2026-08-07):
 
 ```text
-CUSTOMMADE AGENCY — OPERATING SYSTEM
+CUSTOMMADE AGENCY
 ```
 
-Folders per business lane/proces. Geen multi-Space structuur.
+Folders per business lane/proces: PIPELINE · CLIENTS · OPERATIONS · DEAL DESK · MARKETING.
+Geen multi-Space structuur. Zie `docs/05_OPERATIONS/KNOWLEDGE_BASE/SYSTEMS/CLICKUP_STRUCTURE.md`.
 
 ### Taken
 

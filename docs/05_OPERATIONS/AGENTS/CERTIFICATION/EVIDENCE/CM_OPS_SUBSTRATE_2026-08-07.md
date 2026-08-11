@@ -95,8 +95,12 @@ OPS blijft **Level 1**.
 
 ## 7. Beslispunten (CM FLOW / OPS / Sophia)
 
-1. **Source of truth:** kies A (6-folder `CM`) of B (compacte `CUSTOMMADE AGENCY`) als canoniek.
-   **Aanbeveling: B** — die matcht de werkelijke workspace. Let op: deprecaten betekent niet
+> **BESLUIT 2026-08-07: structuur B (compacte `CUSTOMMADE AGENCY`) is canoniek.** Uitwerking in
+> `CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`. Beslispunt 1 hieronder is hiermee gesloten; 2-6 zijn
+> de uitvoeringsstappen.
+
+1. **Source of truth:** ~~kies A of B~~ → **B gekozen** (compacte `CUSTOMMADE AGENCY`).
+   Deprecaten betekent niet
    alleen `CLICKUP_STRUCTURE.md` archiveren, maar **ook de A-secties ín `CLICKUP_MAPPING.md`
    herschrijven** (Core rule 9-23 + de per-workflow A-mappings).
 2. **Space-naam:** typefout `CUSTOMMMADE` (3× M) → `CUSTOMMADE` (2× M) in ClickUp corrigeren.
