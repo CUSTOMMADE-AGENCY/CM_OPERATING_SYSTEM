@@ -30,14 +30,24 @@ CUSTOMMADE AGENCY
 
 | Structuur A (gedeprecate) | Structuur B (canoniek) |
 |---|---|
-| Artist Management | `CLIENTS` (lijsten `Artist Onboarding`, `Artist Roadmaps`, `Monthly Management`, …) |
+| Artist Management (delivery/mgmt) | `CLIENTS` (lijsten `Artist Onboarding`, `Artist Roadmaps`, `Monthly Management`, …) |
 | Clients | `CLIENTS` |
 | Master Boutique / Deals | `DEAL DESK` |
 | Pipeline | `PIPELINE` |
 | Shared Operations | `OPERATIONS` |
 | Governance & Systems | `OPERATIONS` |
 
-De gedetailleerde workflow-mappings onder "Artist Management mappings" en "Master Boutique mappings" worden per B-folder herbelegd; tot dat is gebeurd gelden ze als referentie, niet als canonieke folderplaatsing.
+**Herbeleg per workflow, niet blind per folder.** De sectie "Artist Management mappings" bevat
+óók niet-delivery-workflows die conform B elders horen:
+
+| A-workflow (in "Artist Management") | Canonieke B-folder | Reden |
+|---|---|---|
+| Deal Negotiation Flow | `DEAL DESK` | legal/deal-onderhandeling |
+| Brand Partnership Flow | `PIPELINE` | partnership/brand deal |
+| overige artist-flows (Onboarding, Brandbook, Roadmap, Release Strategy, Monthly Management, Offboarding, Brand Audit) | `CLIENTS` | artist delivery/management |
+
+De detail-mappings gelden tot herbelegging als **referentie** (statussen, templates, gates,
+Drive/Gmail-koppelingen), niet als canonieke folderplaatsing.
 
 ## Terminologie en naamgeving
 
@@ -128,10 +138,11 @@ De praktische ClickUp task templates voor Artist Management staan in `docs/05_OP
 # Artist Management mappings
 
 > ⚠️ **GEDEPRECATE (structuur A).** Deze workflow-mappings gebruiken de oude Space `CM` en folder
-> `Artist Management`. Canoniek is nu **structuur B**: deze workflows horen onder folder
-> **`CLIENTS`** (space `CUSTOMMADE AGENCY`) — zie de A→B-vertaaltabel bovenaan. De inhoud
-> (statussen, templates, gates, Drive/Gmail-koppelingen) blijft geldig als referentie; alleen de
-> Space/folder-plaatsing wordt herbelegd.
+> `Artist Management`. Canoniek is nu **structuur B** (space `CUSTOMMADE AGENCY`). De meeste
+> artist-flows horen onder folder **`CLIENTS`**, **maar niet allemaal**: `Deal Negotiation Flow`
+> → **`DEAL DESK`** en `Brand Partnership Flow` → **`PIPELINE`** (zie de workflow-splitsingstabel
+> bovenaan). De inhoud (statussen, templates, gates, Drive/Gmail-koppelingen) blijft geldig als
+> referentie; alleen de Space/folder-plaatsing wordt herbelegd.
 
 ## Artist Onboarding Flow
 

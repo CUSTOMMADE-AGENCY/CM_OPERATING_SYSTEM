@@ -43,12 +43,12 @@
 
 **Afhankelijkheid:** OPS-triggers draaien op de door CM FLOW ingerichte trigger-laag (fase 1).
 
-**Substraat-bevinding (2026-08-07, v2):** OPS heeft twee ClickUp-bronnen die elkaar tegenspreken
+**Substraat-bevinding (2026-08-07):** OPS had twee tegenstrijdige ClickUp-bronnen
 (`CLICKUP_STRUCTURE.md` = 6-folder `CM`; `CLICKUP_MAPPING.md` = compacte `CUSTOMMADE AGENCY`).
-De live workspace volgt de **compacte** versie, maar met een naam-typefout (`CUSTOMMMADE`, 3× M),
-een ontbrekende `MARKETING`-folder en een onderbouwde `CLIENTS`-folder. Artist management hoort
-per de compacte mapping **onder `CLIENTS`** (geen aparte folder). Conflict beslechten is de eerste
-OPS-gate. Zie `EVIDENCE/CM_OPS_SUBSTRATE_2026-08-07.md`.
+**Beslecht via ADR-2026-08-07: de compacte structuur (B) is canoniek**; docs zijn gecanoniseerd.
+De live workspace volgt B, maar moet nog worden gelijkgetrokken (naam-typefout `CUSTOMMMADE`,
+ontbrekende `MARKETING`-folder, onderbouwde `CLIENTS`, provisioning-retarget, `FIERCE`). Artist
+management valt **onder `CLIENTS`**. Uitvoering: `EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`.
 
 ## 3. Agent-specifieke testaccenten
 
