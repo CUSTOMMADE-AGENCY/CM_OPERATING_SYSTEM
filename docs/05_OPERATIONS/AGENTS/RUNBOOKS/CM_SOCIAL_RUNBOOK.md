@@ -130,7 +130,7 @@ CM SOCIAL is eigenaar van folder **`MARKETING`** (space `CUSTOMMADE AGENCY`).
 
 ### 5.2 Statusmodel
 
-`Idea → Brief → Research → Draft → Internal review → Legal review needed → Client / artist approval needed → Sophia approval needed → Approved → Scheduled → Published` (+ `On hold` · `Blocked` · `Escalated`). Wijkt de live set af: niet zelf verzinnen; valideren via CM FLOW / CM CONTROL.
+`Idea → Brief → Research → Draft → Internal review → Legal review needed → Client / artist approval needed → Sophia approval needed → Approved → Scheduled → Published → Reported → Archived` (+ `Blocked`). Na publicatie loopt de lifecycle door via `Reported` (performance-tracking) en `Archived`. Wijkt de live set af: niet zelf verzinnen; valideren via CM FLOW / CM CONTROL.
 
 ### 5.3 Minimale taskvelden
 
@@ -188,7 +188,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 - **Execution:**
   1. Plan/scheduling in het juiste kanaal (`Scheduled`).
   2. Publiceer conform planning (`Published`) — uitsluitend na groene gate.
-  3. Archiveer definitieve assets in Drive `09_CONTENT` (VAULT-governance).
+  3. Zet performance-tracking op (`Reported`) en archiveer definitieve assets (`Archived`) in Drive `09_CONTENT` (VAULT-governance).
 - **Gate:** **publicatie = Sophia** (bevestigd vóór `Scheduled`/`Published`).
 - **Output:** gepubliceerde content + archief.
 - **QC:** publicatie alleen na groene gate; asset gearchiveerd; kanaal/datum correct.

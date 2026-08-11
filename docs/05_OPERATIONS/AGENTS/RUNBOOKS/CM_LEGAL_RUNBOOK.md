@@ -133,7 +133,7 @@ CM LEGAL is eigenaar van folder **`DEAL DESK`** (space `CUSTOMMADE AGENCY`).
 
 ### 5.2 Statusmodel
 
-`Intake → Scope check → Documents requested → Under review → Red flags identified → Business position needed → Counsel review → Negotiation → Approval needed → Sophia approval needed → Ready to sign → Signed` (+ `On hold` · `Blocked` · `Escalated`). Wijkt de live set af: niet zelf verzinnen; valideren via CM FLOW / CM CONTROL.
+`Intake → Scope check → Documents requested → Under review → Red flags identified → Business position needed → Counsel review → Negotiation → Approval needed → Sophia approval needed → Ready to sign → Signed → Obligations active → Closed` (+ `Rejected / parked` · `Blocked`). Na `Signed` loopt de deal door via `Obligations active` (Obligations Tracker) naar `Closed`. Wijkt de live set af: niet zelf verzinnen; valideren via CM FLOW / CM CONTROL.
 
 ### 5.3 Minimale taskvelden
 
@@ -159,7 +159,7 @@ content · geschillenregeling.** Ontbrekend of onduidelijk punt = red flag, niet
 
 ## 8. Workflow — Deal Intake & Scope check
 
-- **Trigger:** gekwalificeerde kans van CM PROSPECT (`Handoff to DEAL DESK`) of directe opdracht van Sophia.
+- **Trigger:** gekwalificeerde kans van CM PROSPECT (`Handoff to DEAL DESK`); **betalingsgeschil/wanbetaling van CM MONEY**; **contract-/rechtenvraag van CM OPS**; of directe opdracht van Sophia. (Alle inbound triggers uit `ACTIVE/CM_LEGAL_AGENT.md` landen via deze intake.)
 - **Preconditions:** counterparty bekend; dealtype bekend; brondocument of term sheet beschikbaar.
 - **Execution:**
   1. Duplicate check op deal/counterparty; maak intake in `Deal Intake`.
