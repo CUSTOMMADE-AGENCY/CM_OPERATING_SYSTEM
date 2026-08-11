@@ -45,8 +45,9 @@ const CT_COCKPIT_HEADERS = [
 function buildControlTower() {
   const ss = getOrCreateSpreadsheet_();
   buildLegenda_(ss);
-  buildCockpit_(ss);
+  // Agent-tabs eerst: de cockpit heeft hun echte sheet-ID (gid) nodig voor de links.
   CT_AGENTS.forEach(function (agent) { buildAgentTab_(ss, agent); });
+  buildCockpit_(ss);
   orderTabs_(ss);
   Logger.log('Control Tower gereed: ' + ss.getUrl());
   return ss.getUrl();
@@ -99,18 +100,19 @@ function buildAgentTab_(ss, agent) {
 function buildCockpit_(ss) {
   const sh = getOrCreateSheet_(ss, 'COCKPIT');
   setHeaderRow_(sh, CT_COCKPIT_HEADERS);
-  // Eén rij per agent, met live-tellingen uit de agent-tabs (COUNTIF op status/waiting-on).
+  // Eén rij per agent, met live-tellingen uit de agent-tabs.
   const rows = CT_AGENTS.map(function (agent) {
     const t = "'" + agent + "'";
+    const gid = ss.getSheetByName(agent).getSheetId(); // echte tab-ID voor de link
     return [
       agent,
       '=IFERROR(INDEX(' + t + '!D2:D, MATCH("🔴*", ' + t + '!D2:D, 0)), "🟢")', // eerste blocker of groen
-      '=COUNTA(' + t + '!A2:A)',
+      '=COUNTIFS(' + t + '!A2:A, "<>", ' + t + '!D2:D, "<>✅ Done")',           // open = nonempty & niet Done
       '=COUNTIF(' + t + '!D2:D, "⏳*")',
       '=COUNTIF(' + t + '!D2:D, "🔴*")',
       '=COUNTIF(' + t + '!D2:D, "🔒*")',
-      '=IFERROR(MAX(' + t + '!I2:I), "")',
-      '=HYPERLINK("#gid=0","open")',
+      '=IF(COUNTA(' + t + '!I2:I)=0, "", MAX(' + t + '!I2:I))',                // leeg als geen updates
+      '=HYPERLINK("#gid=' + gid + '","open")',
     ];
   });
   sh.getRange(2, 1, rows.length, CT_COCKPIT_HEADERS.length).setValues(rows);
