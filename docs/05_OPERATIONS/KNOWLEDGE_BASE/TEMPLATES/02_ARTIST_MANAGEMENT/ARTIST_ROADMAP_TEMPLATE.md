@@ -56,11 +56,11 @@ _Status = gecontroleerde waarde (zie Gecontroleerde statussen)._
 
 ### Releases — business
 
-| Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| Release | Marketingstart | Goedgekeurd budget | Werkelijke kosten | Verschil |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-_Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet._
+_Rights status = `CLEAR` · `OPEN` · `BLOCKED`. Rights-clearance omvat minimaal splits, features en samples. Werkelijke kosten komen uit Moneybird; de roadmap registreert geen kosten zelf en vervangt Moneybird niet. De kolom `Release` is de stabiele record-ID die de blokken planning en business koppelt — elke `Release`-waarde is uniek en komt in beide blokken op dezelfde regel voor._
 
 ### Inkomsten
 
@@ -85,11 +85,11 @@ _Actuals moeten herleidbaar zijn naar Moneybird of een benoemde royalty-/afreken
 
 ### Deals & kansen — opvolging
 
-| Fase | Eigenaar | Volgende actie | Deadline |
-|---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| Kans | Fase | Eigenaar | Volgende actie | Deadline |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
 
-_Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. Gewogen waarde = waarde × kans %; dit is een forecast-/pipeline-metric, geen financiële waarheid. Fase = gecontroleerde waarde (zie Gecontroleerde statussen)._
+_Type = booking · brand · sync · label · publishing · distribution · sponsorship · collaboration. Gewogen waarde = waarde × kans %; dit is een forecast-/pipeline-metric, geen financiële waarheid. Fase = gecontroleerde waarde (zie Gecontroleerde statussen). De kolom `Kans` is de stabiele record-ID die de blokken commercieel en opvolging koppelt — elke `Kans`-waarde is uniek en komt in beide blokken op dezelfde regel voor._
 
 ### Beslissingen
 
@@ -132,10 +132,10 @@ _Velden waarop Make/ClickUp mappen gebruiken uitsluitend deze waarden — geen v
 
 - Elk doel heeft KPI, doel, deadline, eigenaar en gecontroleerde status.
 - Elke release heeft master-status, Rights status en distributie-deadline.
-- Release-planning en release-business blijven inhoudelijk één release-record; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
+- Release-planning en release-business blijven inhoudelijk één release-record, gekoppeld via de stabiele record-ID `Release`; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
 - Elke inkomstenregel met een actual heeft een benoemde bron (Moneybird of afrekenbron).
 - Elke deal heeft fase, eigenaar, volgende actie en deadline.
-- Deal-commercieel en deal-opvolging blijven inhoudelijk één deal-record; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
+- Deal-commercieel en deal-opvolging blijven inhoudelijk één deal-record, gekoppeld via de stabiele record-ID `Kans`; de opsplitsing is uitsluitend voor A4-portretweergave en printbaarheid.
 - Geen open beslissing zonder goedkeurder.
 - Alle automation-velden gebruiken gecontroleerde waarden.
 - Iedere source field-mapping in sectie 14 verwijst letterlijk naar een bestaande kolom in sectie 05.
@@ -189,6 +189,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | 2026-08-10 | V2.2 | Kolom-exactheid: Releases-kolomset exact gelijkgetrokken met vereiste specificatie (Distributie-deadline vóór Releasedatum; Eigenaar/Status verwijderd uit Releases); sectie 08 en sectie 14 (release-mapping) meegecorrigeerd zodat elke mapping naar een bestaande kolom verwijst. Status teruggezet naar NEEDS_REVIEW in afwachting van finale review. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Finale consistency-check: verweesde gecontroleerde waarde `Release status` verwijderd (geen bijbehorende kolom na kolom-exactheid; release-lifecycle wordt in ClickUp beheerd). Overige ketens (werktabel → gecontroleerde waarden → beslispoorten → sectie 14) sluiten. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Status op ACTIVE gezet na afronding finale consistency-check; template en index-register in lijn (`ACTIVE — V2.2`). | CM OPS AGENT |
+| 2026-08-11 | V2.2 | Stabiele record-ID toegevoegd aan gesplitste blokken (`Release` in Releases — business; `Kans` in Deals & kansen — opvolging) zodat de blokken eenduidig koppelen bij meerdere records, conform `TEMPLATE_REVIEW_PROCESS.md` (record-ID-eis). | CM OPS AGENT |
 
 ---
 
