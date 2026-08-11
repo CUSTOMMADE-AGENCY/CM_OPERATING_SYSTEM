@@ -11,7 +11,7 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM OPS AGENT |
 | Support agents | CM SOCIAL AGENT · CM MONEY AGENT |
-| Status | NEEDS_REVIEW — V2.2 (kolom-exactheid gecontroleerd; wacht op finale review) |
+| Status | ACTIVE — V2.2 |
 | Versie | V2.2 |
 | Datum | AUGUSTUS 2026 |
 | Risico | LOW |
@@ -188,6 +188,7 @@ Drive: `[ARTIST]/03_STRATEGY` · `YYYY-MM-DD_[ARTIST]_ROADMAP_vX.Y`
 | 2026-08-10 | V2.2 | Printoptimalisatie: A4-portret behouden; Releases opgesplitst in Planning/Business en Deals & kansen in Commercieel/Opvolging zonder wijziging van de onderliggende recordlogica. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Kolom-exactheid: Releases-kolomset exact gelijkgetrokken met vereiste specificatie (Distributie-deadline vóór Releasedatum; Eigenaar/Status verwijderd uit Releases); sectie 08 en sectie 14 (release-mapping) meegecorrigeerd zodat elke mapping naar een bestaande kolom verwijst. Status teruggezet naar NEEDS_REVIEW in afwachting van finale review. | CM OPS AGENT |
 | 2026-08-10 | V2.2 | Finale consistency-check: verweesde gecontroleerde waarde `Release status` verwijderd (geen bijbehorende kolom na kolom-exactheid; release-lifecycle wordt in ClickUp beheerd). Overige ketens (werktabel → gecontroleerde waarden → beslispoorten → sectie 14) sluiten. | CM OPS AGENT |
+| 2026-08-10 | V2.2 | Status op ACTIVE gezet na afronding finale consistency-check; template en index-register in lijn (`ACTIVE — V2.2`). | CM OPS AGENT |
 
 ---
 
