@@ -266,10 +266,10 @@ function determineMigrationAction_(folderName, fullPath, rootFolder, governanceR
     };
   }
 
-  if (hasFierceSignal_(folderName, fullPath)) {
+  if (hasExterne entiteitSignal_(folderName, fullPath)) {
     return {
       action: 'handmatige review',
-      note: 'Mogelijk FIERCE-content; CM en FIERCE blijven strikt gescheiden. Niet migreren zonder uitsluitbesluit.',
+      note: 'Mogelijk EXTERNE_ENTITEIT-content; CM en EXTERNE_ENTITEIT blijven strikt gescheiden. Niet migreren zonder uitsluitbesluit.',
     };
   }
 
@@ -336,7 +336,7 @@ function writeSummary_(sheet, rootFolder, rows, exportTimestamp) {
     ['samenvoegen', actionCounts['samenvoegen'] || 0],
     ['archiveren', actionCounts['archiveren'] || 0],
     ['handmatige review', actionCounts['handmatige review'] || 0],
-    ['Governance instructie', 'Alleen inventarisatie. Geen Drive-wijzigingen. Definitieve migratieactie pas na owner-, link-, FIERCE-, legal/finance- en risicoreview.'],
+    ['Governance instructie', 'Alleen inventarisatie. Geen Drive-wijzigingen. Definitieve migratieactie pas na owner-, link-, EXTERNE_ENTITEIT-, legal/finance- en risicoreview.'],
   ];
   sheet.getRange(1, 1, summaryRows.length, 2).setValues(summaryRows);
   sheet.getRange(1, 1, 1, 2).setFontWeight('bold');
@@ -472,7 +472,7 @@ function hasDuplicateSignal_(folderName) {
     || /\((copy|kopie|duplicate|duplicaat)\)/i.test(folderName);
 }
 
-function hasFierceSignal_(folderName, fullPath) {
-  return /(^|[\s_\-/])fierce([\s_\-/]|$)/i.test(folderName)
-    || /(^|[\s_\-/])fierce([\s_\-/]|$)/i.test(fullPath);
+function hasExterne entiteitSignal_(folderName, fullPath) {
+  return /(^|[\s_\-/])externe_entiteit([\s_\-/]|$)/i.test(folderName)
+    || /(^|[\s_\-/])externe_entiteit([\s_\-/]|$)/i.test(fullPath);
 }

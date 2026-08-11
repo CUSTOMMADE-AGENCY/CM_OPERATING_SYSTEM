@@ -22,7 +22,7 @@ Belangrijke uitgangspunten:
 - GitHub is governance/source of truth.
 - Google Drive is opslag.
 - Moneybird blijft financiële waarheid.
-- CM en FIERCE blijven strikt gescheiden.
+- CM en EXTERNE_ENTITEIT blijven strikt gescheiden.
 - Pure shims blijven behouden zolang actieve links niet zijn omgezet.
 - Sprint 2A inventariseert alleen; migratie start pas na review en go/no-go.
 
@@ -119,7 +119,7 @@ De migratieactie is een **voorstel voor review**, geen definitief migratiebeslui
 Gebruik de export in deze volgorde:
 
 1. Filter eerst op `handmatige review`.
-   - Onbekende roots, FIERCE-signalen en governance-conflicten moeten vóór elke migratie worden opgelost.
+   - Onbekende roots, EXTERNE_ENTITEIT-signalen en governance-conflicten moeten vóór elke migratie worden opgelost.
 2. Filter op `verplaatsen`.
    - Controleer of de map naar de juiste governance-root moet, bijvoorbeeld artiesten naar `02_ARTIST_MANAGEMENT`.
 3. Filter op `samenvoegen`.

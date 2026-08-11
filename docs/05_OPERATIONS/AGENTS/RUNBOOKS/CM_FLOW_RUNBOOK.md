@@ -47,7 +47,7 @@ governance-act van activeren goed.** FLOW neemt geen inhoudelijk eigenaarschap o
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend CUSTOMMADE AGENCY. Automatiseringen mogen CM- en FIERCE-data/-systemen niet vermengen.
+Uitsluitend CUSTOMMADE AGENCY. Automatiseringen mogen CM- en EXTERNE_ENTITEIT-data/-systemen niet vermengen.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -86,7 +86,7 @@ Structurele systeem-/governance-wijziging: voorstel → governance review → **
 - Workflows live zetten zonder testlog én rollbackplan.
 - Governance wijzigen zonder registratie; mergen zonder governance-akkoord.
 - Inhoudelijke (legal/finance/content) beslissingen nemen.
-- CM en FIERCE-systemen/-data vermengen.
+- CM en EXTERNE_ENTITEIT-systemen/-data vermengen.
 
 ---
 
@@ -94,7 +94,7 @@ Structurele systeem-/governance-wijziging: voorstel → governance review → **
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige bouwopdracht/incident/aanvraag?
 3. **Scope:** binnen FLOW-mandaat (bouwen/testen, niet activeren)?
 4. **Source:** eisen/spec en scenario-registerregel aanwezig?
@@ -103,7 +103,7 @@ Structurele systeem-/governance-wijziging: voorstel → governance review → **
 7. **Deadline:** opleverdatum bekend?
 8. **Approval:** vereist live-zetting/datamutatie CM CONTROL + Sophia?
 9. **Duplicate check:** bestaat dit scenario/deze module al?
-10. **Data separation:** geen CM/FIERCE-vermenging; minimale rechten?
+10. **Data separation:** geen CM/EXTERNE_ENTITEIT-vermenging; minimale rechten?
 11. **Logging/rollback:** logging aan, fallback en rollback aanwezig?
 12. **Risk:** datamutatie-, security- of systeemrisico?
 
@@ -163,7 +163,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
   3. AS_BUILT/registers bijwerken (met CM VAULT).
 - **Gate:** **merge = governance-akkoord** (FLOW mergt niet zonder); architectuur = ADR.
 - **Output:** review-ready PR + bijgewerkte documentatie.
-- **QC:** geen governance-wijziging zonder ADR; CI groen; geen CM/FIERCE-vermenging.
+- **QC:** geen governance-wijziging zonder ADR; CI groen; geen CM/EXTERNE_ENTITEIT-vermenging.
 - **DoD:** PR klaar voor review; na akkoord gemerged door de bevoegde route.
 
 ---
@@ -172,7 +172,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 
 - **Trigger:** nieuwe koppeling (ClickUp/Drive/Gmail/Moneybird) nodig.
 - **Execution:**
-  1. Bepaal minimale rechten en datascope; scheid CM/FIERCE.
+  1. Bepaal minimale rechten en datascope; scheid CM/EXTERNE_ENTITEIT.
   2. Richt de connector in **test**; verifieer datastromen en foutpaden.
   3. Documenteer; lever ter activatie-gate aan.
 - **Gate:** datamuterende koppeling live → CM CONTROL + Sophia.
@@ -245,7 +245,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 | Governance-wijziging zonder ADR | 0 |
 | Merges zonder governance-akkoord | 0 |
 | Automatiseringen met minimale rechten | 100% |
-| CM/FIERCE-systeemvermenging | 0 |
+| CM/EXTERNE_ENTITEIT-systeemvermenging | 0 |
 | Kritieke incidenten binnen SLA afgehandeld | 100% |
 
 ---
@@ -266,7 +266,7 @@ approval geregistreerd; runbook hervalideerd.
 CM FLOW is operationeel gezond wanneer: niets live gaat zonder testlog, fallback, rollback en gate;
 agents/flows nooit zonder Sophia/CM CONTROL worden geactiveerd; test en productie gescheiden zijn;
 rechten minimaal zijn; governance nooit buiten ADR wijzigt; er niet gemerged wordt zonder akkoord;
-CM en FIERCE gescheiden blijven; de agent veilig stopt bij ontbrekende test, rollback of gate.
+CM en EXTERNE_ENTITEIT gescheiden blijven; de agent veilig stopt bij ontbrekende test, rollback of gate.
 
 ---
 

@@ -1,5 +1,5 @@
 > **Historische status:** `HISTORISCH — ALLEEN TER REFERENTIE`
-> **Actuele opvolger:** `docs/00_GOVERNANCE/CM_REPOSITORY_RECOVERY_PLAN.md` en de actuele documenten in `docs/00_GOVERNANCE/`
+> **Actuele opvolger:** `docs/00_GOVERNANCE/README.md`, `GOVERNANCE_RULES.md` en `AS_BUILT_DOCUMENTATION.md`. Dit document is historisch en niet leidend.
 > Dit document blijft behouden als audit trail en is niet leidend voor nieuwe uitvoering.
 
 # Sprint 3C — 06_PROJECTS/• EVENTS Remediation Report

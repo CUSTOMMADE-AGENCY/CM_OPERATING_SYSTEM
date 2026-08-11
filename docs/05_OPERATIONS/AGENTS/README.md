@@ -18,3 +18,7 @@ Canonieke documentatie voor actieve agentrollen, architectuur, governance, stand
 ## Statusregel
 
 Alleen passports in `ACTIVE/` zijn actief. Bestanden in `HISTORY/LEGACY/` zijn niet actief en verwijzen naar het actuele register.
+
+## Canonieke capability-status
+
+Connection state, permissions, actions, capability state, evidence/trace en failure policy staan centraal in `AGENT_CAPABILITY_REGISTER.md`. Alle agentlagen moeten dit register volgen; een toolvermelding bewijst geen connection.

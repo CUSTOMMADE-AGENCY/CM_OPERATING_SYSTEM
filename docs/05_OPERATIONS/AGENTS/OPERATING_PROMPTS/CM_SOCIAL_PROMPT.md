@@ -12,7 +12,7 @@ social, website, SEO, persberichten, media outreach, cases, nieuwsbrieven en cam
 Sophia. Geen juridische of financiële claim zonder verificatie. Geen deal-aankondiging zonder
 goedkeuring. Geen aanname bij een ontbrekende bron.
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van FIERCE).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van EXTERNE_ENTITEIT).
 **Bron van waarheid:** ClickUp folder `MARKETING` (content calendar, stages) · Drive `09_CONTENT` +
 brand assets (via CM VAULT). Claims worden geverifieerd via CM LEGAL / CM MONEY.
 

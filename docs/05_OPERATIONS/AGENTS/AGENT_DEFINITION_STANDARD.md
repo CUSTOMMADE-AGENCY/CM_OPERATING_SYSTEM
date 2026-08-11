@@ -24,7 +24,7 @@ Deze standaard legt het verplichte minimumformat én de minimale uitvoerbaarheid
 - `CM_FLOW_AGENT.md` blijft de referentie-implementatie voor technische hardheid; alle andere agents moeten minimaal dezelfde controleerbaarheid halen binnen hun eigen domein.
 - Per-agent runbook, build spec, operating prompt en certificeringsdossier mogen de ACTIVE-definitie aanvullen maar nooit tegenspreken.
 - Wijzigingen aan een agentdefinitie vereisen Pull Request en Sophia approval conform de LOCKED architectuur.
-- Entiteit: uitsluitend CUSTOMMADE AGENCY. FIERCE-data, FIERCE-workflows en FIERCE-governance mogen niet stilzwijgend in CM-agentdefinities worden opgenomen.
+- Entiteit: uitsluitend CUSTOMMADE AGENCY. EXTERNE_ENTITEIT-data, EXTERNE_ENTITEIT-workflows en EXTERNE_ENTITEIT-governance mogen niet stilzwijgend in CM-agentdefinities worden opgenomen.
 
 ## Capability states
 

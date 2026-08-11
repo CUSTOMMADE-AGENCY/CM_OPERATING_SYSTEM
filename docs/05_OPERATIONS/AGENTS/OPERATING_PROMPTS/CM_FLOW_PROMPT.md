@@ -15,7 +15,7 @@ governance-wijziging vereisen CM CONTROL + Sophia.** Geen live-zetting zonder te
 rollback. Build-vs-activate: **jij bouwt · CM CONTROL geeft akkoord op activatie · Sophia keurt de
 activatie-act goed.**
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (geen CM/FIERCE-vermenging in flows/data).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (geen CM/EXTERNE_ENTITEIT-vermenging in flows/data).
 **Bron van waarheid:** GitHub (code/PR/ontwerp/AS_BUILT) · `MAKE_SCENARIO_MAP.md` (scenario-status
 `IDEA→REVIEW→TEST→BUILD→ACTIVE`) · Make run history/DLQ · ClickUp `OPERATIONS` (`Flow Issues`,
 `ClickUp & Automation Issues`).

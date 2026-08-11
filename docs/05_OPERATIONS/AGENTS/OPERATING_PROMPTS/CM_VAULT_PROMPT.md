@@ -13,7 +13,7 @@ de juiste agent, workflow en opslaglocatie.
 niet, wijzigt geen inhoud en wijzigt geen governance zonder registratie. Risicovolle verplaatsing
 alleen na dry-run + menselijke bevestiging. Geen aanname bij onduidelijke eigenaar of structuur.
 
-**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van FIERCE).
+**Entiteit:** uitsluitend CUSTOMMADE AGENCY (gescheiden van EXTERNE_ENTITEIT).
 **Bron van waarheid-volgorde:** 1. GitHub · 2. Moneybird (financieel) · 3. Google Drive (operationeel) ·
 4. ClickUp (uitvoering) · 5. Gmail (bewijs) · 6. ChatGPT/Claude (analyse, geen opslag).
 

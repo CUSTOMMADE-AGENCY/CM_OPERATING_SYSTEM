@@ -29,7 +29,7 @@ Bij conflict geldt: algemene governance eerst, designstandaard voor vorm en deze
 
 ## Scope
 
-Deze standaard geldt voor alle templates binnen `docs/03_SHARED_SERVICES/TEMPLATES/` en voor operationele kopieën die op basis van deze templates worden gebruikt.
+Deze standaard geldt voor alle templates binnen `docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/` en voor operationele kopieën die op basis van deze templates worden gebruikt.
 
 Deze standaard maakt geen nieuwe agents aan en wijzigt geen bestaande agent-governance. Owner Agents en Support Agents verwijzen uitsluitend naar bestaande verantwoordelijkheden of bestaande agentrollen.
 

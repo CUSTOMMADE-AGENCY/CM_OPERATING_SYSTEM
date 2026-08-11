@@ -56,7 +56,7 @@ CM MONEY is de finance-executielaag van CM_OS:
 ### 1.2 Entiteitsscheiding
 
 Dit runbook geldt uitsluitend voor CUSTOMMADE AGENCY, met de **eigen CM Moneybird-administratie**
-(lokale administratie-id). CM MONEY mag **nooit** CM- en FIERCE-financiën, -facturen, -administraties
+(lokale administratie-id). CM MONEY mag **nooit** CM- en EXTERNE_ENTITEIT-financiën, -facturen, -administraties
 of -rapportages vermengen. Een MONEY-actie tegen de verkeerde administratie is een harde fout →
 stop, log, escaleer.
 
@@ -108,7 +108,7 @@ Binnen geactiveerde en geteste capabilities mag CM MONEY:
 - Betalingsregeling toezeggen of incasso starten zonder Sophia.
 - Een betaling uitvoeren of extern toezeggen.
 - Financiële documenten buiten Moneybird als waarheid behandelen.
-- CM- en FIERCE-financiën vermengen.
+- CM- en EXTERNE_ENTITEIT-financiën vermengen.
 
 ---
 
@@ -116,7 +116,7 @@ Binnen geactiveerde en geteste capabilities mag CM MONEY:
 
 ### 4.1 Preflight checklist
 
-1. **Entiteit/administratie:** juiste CM Moneybird-administratie (niet FIERCE)?
+1. **Entiteit/administratie:** juiste CM Moneybird-administratie (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige aanleiding/handoff/schedule?
 3. **Scope:** valt de taak binnen MONEY-mandaat (signaleren/rapporteren, niet muteren)?
 4. **Source:** is de Moneybird-/bankbron aanwezig en actueel?
@@ -125,7 +125,7 @@ Binnen geactiveerde en geteste capabilities mag CM MONEY:
 7. **Deadline/periode:** juiste boekperiode / due date bekend?
 8. **Approval:** vereist de actie een Sophia-/LEGAL-gate en wat is de status?
 9. **Duplicate check:** bestaat dit signaal/deze follow-up al?
-10. **Data separation:** geen FIERCE-data in de input?
+10. **Data separation:** geen EXTERNE_ENTITEIT-data in de input?
 11. **Logging:** is de controle traceerbaar (Moneybird-link + reden)?
 12. **Risk:** cashflow-, debiteuren-, compliance- of reputatierisico?
 
@@ -351,7 +351,7 @@ artist + royalty-run + periode. Doel: geen dubbele follow-ups, herinneringen of 
 ## 16. Exceptions, rollback en fouten
 
 - **Moneybird/bank/API-failure:** stop veilig; geen vervangende boekhouding aanmaken; log; status `Blocked`; handoff → CM FLOW.
-- **Verkeerde administratie (FIERCE):** direct stoppen; niets muteren; log; escaleren naar CM CONTROL/Sophia.
+- **Verkeerde administratie (EXTERNE_ENTITEIT):** direct stoppen; niets muteren; log; escaleren naar CM CONTROL/Sophia.
 - **Dubbele follow-up/herinnering:** niet deleten zonder governance; markeer duplicaat; audit trail behouden.
 - **Foutieve externe financiële toezegging (concept):** niet verzenden; markeer risk; escaleren naar Sophia.
 
@@ -377,7 +377,7 @@ artist + royalty-run + periode. Doel: geen dubbele follow-ups, herinneringen of 
 | Betaalacties/indieningen door MONEY zonder Sophia | 0 |
 | Dubbele follow-ups/herinneringen | 0 |
 | Financiële conclusies zonder Moneybird-bron | 0 |
-| CM/FIERCE-administratievermenging | 0 |
+| CM/EXTERNE_ENTITEIT-administratievermenging | 0 |
 | Financiële maandrapportages op tijd | 100% |
 
 ---
@@ -387,7 +387,7 @@ artist + royalty-run + periode. Doel: geen dubbele follow-ups, herinneringen of 
 Als LIVE / PRODUCTION RUNBOOK pas geldig wanneer minimaal:
 
 1. CM MONEY-certificeringspaspoort Level 3 / Production Approved is;
-2. de Moneybird-koppeling (juiste CM-administratie-id) actief, getest en gescheiden van FIERCE is;
+2. de Moneybird-koppeling (juiste CM-administratie-id) actief, getest en gescheiden van EXTERNE_ENTITEIT is;
 3. de `OPERATIONS`-finance-lijsten live bestaan;
 4. het Moneybird open-items-scenario (nu `REVIEW`) getest en geactiveerd is met correcte targets;
 5. functionele tests geslaagd zijn;
@@ -410,7 +410,7 @@ CM MONEY is operationeel gezond wanneer:
 - open posten, BTW, cashflow, revenue en royalty's aantoonbaar bewaakt worden;
 - geen betaling, indiening, regeling of incasso zonder Sophia plaatsvindt;
 - dealvoorwaarden nooit buiten LEGAL worden geïnterpreteerd;
-- CM en FIERCE financieel strikt gescheiden blijven;
+- CM en EXTERNE_ENTITEIT financieel strikt gescheiden blijven;
 - elk risico/ontbrekend document een owner + follow-up heeft;
 - automations niet buiten FLOW worden gewijzigd;
 - cashflow-/prioriteitsconflicten bij CONTROL/Sophia landen;
@@ -422,4 +422,4 @@ CM MONEY is operationeel gezond wanneer:
 
 | Datum | Versie | Wijziging |
 |---|---|---|
-| 2026-08-11 | v2.0 | Eerste MONEY-runbook op de governance-hardened v2.0-standaard (afgeleid van CM OPS v2.0), verankerd in Moneybird als financiële waarheid, de OPERATIONS-finance-lijsten en de CM↔FIERCE-administratiescheiding. |
+| 2026-08-11 | v2.0 | Eerste MONEY-runbook op de governance-hardened v2.0-standaard (afgeleid van CM OPS v2.0), verankerd in Moneybird als financiële waarheid, de OPERATIONS-finance-lijsten en de CM↔EXTERNE_ENTITEIT-administratiescheiding. |

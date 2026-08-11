@@ -47,7 +47,7 @@
 (`CLICKUP_STRUCTURE.md` = 6-folder `CM`; `CLICKUP_MAPPING.md` = compacte `CUSTOMMADE AGENCY`).
 **Beslecht via ADR-2026-08-07: de compacte structuur (B) is canoniek**; docs zijn gecanoniseerd.
 De live workspace volgt B, maar moet nog worden gelijkgetrokken (naam-typefout `CUSTOMMMADE`,
-ontbrekende `MARKETING`-folder, onderbouwde `CLIENTS`, provisioning-retarget, `FIERCE`). Artist
+ontbrekende `MARKETING`-folder, onderbouwde `CLIENTS`, provisioning-retarget, `EXTERNE_ENTITEIT`). Artist
 management valt **onder `CLIENTS`**. Uitvoering: `EVIDENCE/CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`.
 
 ## 3. Agent-specifieke testaccenten

@@ -50,7 +50,7 @@ verwijderen/governance-wijziging goed.
 
 ### 1.2 Entiteitsscheiding
 
-Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en FIERCE-documenten, -templates of -structuur.
+Uitsluitend CUSTOMMADE AGENCY. Geen vermenging van CM- en EXTERNE_ENTITEIT-documenten, -templates of -structuur.
 
 ### 1.3 Architectuurwijzigingen
 
@@ -90,7 +90,7 @@ VAULT wijzigt governance/structuur **niet zelf**: voorstel → governance review
 - Content publiceren; klantcommunicatie versturen; facturen verwerken.
 - Governance wijzigen zonder registratie; nieuwe agents aanmaken zonder governance-besluit.
 - Risicovolle verplaatsing zonder dry-run + bevestiging.
-- CM en FIERCE-documentstructuur vermengen.
+- CM en EXTERNE_ENTITEIT-documentstructuur vermengen.
 
 ---
 
@@ -98,7 +98,7 @@ VAULT wijzigt governance/structuur **niet zelf**: voorstel → governance review
 
 ### 4.1 Checklist
 
-1. **Entiteit:** CUSTOMMADE AGENCY (niet FIERCE)?
+1. **Entiteit:** CUSTOMMADE AGENCY (niet EXTERNE_ENTITEIT)?
 2. **Trigger:** geldige audit-/opdracht-/schedule-aanleiding?
 3. **Scope:** binnen VAULT-mandaat (lezen/valideren/voorstellen)?
 4. **Source:** juiste GitHub-/Drive-bron aanwezig?
@@ -107,7 +107,7 @@ VAULT wijzigt governance/structuur **niet zelf**: voorstel → governance review
 7. **Deadline:** review-/reactiedatum bekend?
 8. **Approval:** vereist de actie (verplaatsing/governance) een gate?
 9. **Duplicate check:** bestaat dit rapport/voorstel al?
-10. **Data separation:** geen FIERCE-documenten in de input?
+10. **Data separation:** geen EXTERNE_ENTITEIT-documenten in de input?
 11. **Logging:** bevinding traceerbaar (bron + reden)?
 12. **Risk:** verwijder-/verlies-/governance-risico?
 
@@ -242,7 +242,7 @@ Dezelfde 12 blokken: Trigger · Preconditions · Inputs · Execution · Handoffs
 | AS_BUILT = werkelijkheid | 100% |
 | Naming-/plaatsingsafwijkingen belegd | 100% |
 | Governance-wijziging zonder ADR | 0 |
-| CM/FIERCE-documentvermenging | 0 |
+| CM/EXTERNE_ENTITEIT-documentvermenging | 0 |
 
 ---
 
@@ -261,7 +261,7 @@ geregistreerd; runbook hervalideerd. Zie `CERTIFICATION/AGENT_PASSPORT_CM_VAULT.
 
 CM VAULT is operationeel gezond wanneer: niets ooit verwijderd wordt; duplicaten/naming/plaatsing als
 voorstel worden belegd; Template Register en AS_BUILT de werkelijkheid weergeven; governance nooit
-buiten ADR wijzigt; het rechten-register alleen met LEGAL wijzigt; CM en FIERCE gescheiden blijven;
+buiten ADR wijzigt; het rechten-register alleen met LEGAL wijzigt; CM en EXTERNE_ENTITEIT gescheiden blijven;
 de agent veilig stopt bij onduidelijke eigenaar, structuur of een verwijderverzoek.
 
 ---

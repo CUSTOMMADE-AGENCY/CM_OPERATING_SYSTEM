@@ -61,7 +61,7 @@ Classificeer elke map als één van deze lanes:
 - `09_CONTENT`
 - `99_ARCHIVE`
 - onbekend / buiten scope
-- FIERCE / uitsluiten
+- EXTERNE_ENTITEIT / uitsluiten
 
 Artiestendossiers horen onder `02_ARTIST_MANAGEMENT`. `03_CLIENTS` is uitsluitend voor merken, bedrijven, opdrachtgevers, sponsors, media partners en commerciële relaties.
 
@@ -100,7 +100,7 @@ Gebruik `behouden` wanneer:
 
 - de map al onder de juiste governance-root staat;
 - owner en beslisser bevestigd zijn;
-- geen FIERCE-risico bestaat;
+- geen EXTERNE_ENTITEIT-risico bestaat;
 - geen actieve linkwijziging nodig is;
 - legal/finance/confidentiality-risico is beoordeeld;
 - geen duplicaat- of canonical-conflict bestaat.
@@ -113,7 +113,7 @@ Gebruik `verplaatsen` wanneer:
 - het doelpad expliciet is vastgesteld;
 - owner en migratiebeslisser akkoord zijn;
 - actieve links, shortcuts en automation-afhankelijkheden een updateplan hebben;
-- de verplaatsing CM/FIERCE-scheiding niet schendt.
+- de verplaatsing CM/EXTERNE_ENTITEIT-scheiding niet schendt.
 
 Voorbeelden:
 
@@ -150,7 +150,7 @@ Gebruik `handmatige review` wanneer:
 
 - governance-root onbekend is;
 - owner of beslisser ontbreekt;
-- FIERCE-risico bestaat;
+- EXTERNE_ENTITEIT-risico bestaat;
 - legal-, finance-, rights- of confidentialiteitsstatus onduidelijk is;
 - artist/client/deal-classificatie conflicteert;
 - duplicaten bestaan zonder canonical keuze;
@@ -167,7 +167,7 @@ Gebruik `HOLD` bij minimaal één van deze situaties:
 - onbekende inhoudelijke owner;
 - owner en Drive-owner verschillen zonder inhoudelijke goedkeuring;
 - meerdere owners wijzen verschillende doelpaden aan;
-- mogelijk FIERCE-content;
+- mogelijk EXTERNE_ENTITEIT-content;
 - artist/client-conflict;
 - deal/lane-conflict;
 - legal-onduidelijkheid;
@@ -185,7 +185,7 @@ Handmatige review is verplicht voor:
 
 1. alle `handmatige review`-regels uit de export;
 2. alle mappen zonder governance root;
-3. alle FIERCE-signalen;
+3. alle EXTERNE_ENTITEIT-signalen;
 4. alle legal-, contract-, rights-, finance- en confidentialiteitsmappen;
 5. alle mappen met externe sharing;
 6. alle mappen met shortcuts of shim-afhankelijkheden;
@@ -203,7 +203,7 @@ Een map mag pas naar Sprint 2 migratie wanneer:
 - inhoudelijke owner en migratiebeslisser akkoord zijn;
 - migratieactie definitief is toegekend;
 - linkupdateplan gereed is of niet nodig is;
-- FIERCE is uitgesloten;
+- EXTERNE_ENTITEIT is uitgesloten;
 - legal/finance/confidentiality-risico is beoordeeld;
 - eventuele HOLD is opgeheven;
 - validatie na migratie is toegewezen aan een reviewer.

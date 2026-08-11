@@ -1,31 +1,46 @@
 # Governance
 
-## Doel
+## Doel en status
 
-Deze map definieert hoe het Custommade Agency operating system is gestructureerd, onderhouden en bestuurd.
+Deze map bestuurt het actuele CM Operating System. Recovery is `CLOSED / COMPLETED`; documenten onder `HISTORY/` zijn uitsluitend audit trail en hebben geen governancevoorrang.
 
-## Governance-index
+## Canonieke leesvolgorde
 
-- `CM_REPOSITORY_RECOVERY_PLAN.md` — tijdelijke leidende governance tijdens de actieve recovery.
-- `MAP_SPECIFICATIONS/` — canonieke collectie van root- en child-Map Specifications.
-- `HISTORY/` — niet-leidende audit trail met status en opvolgerverwijzingen.
-- `PHASE_2_OPERATIONS_MIGRATION_PLAN.md` — file-level dependency map en rollbackplan voor Fase 2.
-- `PHASE_2_OPERATIONS_CONSOLIDATION_REPORT.md` — uitvoering, validatie en restrisico’s van Fase 2.
-- `PHASE_1_GOVERNANCE_CONSOLIDATION_REPORT.md` — Fase 1-overzicht, vergelijkingen, scans en risico's.
-- `CM_OPERATING_MODEL.md` — executive overview en primaire kaart van het volledige CM operating system.
-- `DRIVE_STRUCTURE.md` — goedgekeurde Google Drive-structuur en lane ownership.
-- `NAMING_CONVENTIONS.md` — standaarden voor bestands-, map- en versienaamgeving.
-- `DOCUMENT_STANDARDS.md` — vereiste secties en kwaliteitslat voor SOPs/Playbooks.
-- `TEMPLATE_DESIGN_STANDARD.md` — ontwerpstandaard voor CM templates als operationele tools.
-- `VERSION_CONTROL.md` — GitHub-werkwijze voor gecontroleerde wijzigingen.
-- `WORKFLOW_DOCUMENTATION.md` — standaard voor het documenteren van Workflows.
-- `AS_BUILT_DOCUMENTATION.md` — vastlegging van hoe systemen daadwerkelijk zijn ingericht.
-- `AGILE_OPERATING_CYCLE.md` — lean verbetercadans voor wekelijkse, maandelijkse, kwartaal- en halfjaarlijkse OS-updates.
-- `DECISION_LOG.md` — chronologisch log voor governancebesluiten en structurele OS-keuzes.
-- `AI_TOOL_RADAR.md` — gecontroleerde radar voor AI-tools die binnen CM worden beoordeeld, getest of goedgekeurd.
-- `AUTOMATION_BACKLOG.md` — centrale backlog voor automatiseringskandidaten, prioriteiten en eigenaarschap.
-- `CM_CONTROL_AUDIT_STANDARD.md` — standaard voor aanvullende Control Audits op governance, repository, agents, architectuur en documentatie.
+1. `CM_OPERATING_MODEL.md` — systeemmodel en systeemgrenzen.
+2. `DECISION_LOG.md` en actuele `ADR/` — besluiten en uitzonderingen.
+3. `GOVERNANCE_RULES.md` — verplichte repository- en uitvoeringsregels.
+4. `AS_BUILT_DOCUMENTATION.md` — aantoonbare werkelijke toestand en capability states.
+5. `DRIVE_STRUCTURE.md` — Drive-structuur en lane ownership.
+6. `STANDARDS/` en `MAP_SPECIFICATIONS/` — actuele standaarden en mapspecificaties.
 
-## Regel
+## Actieve structuur
 
-Governance-documenten zijn intern en worden in professioneel Nederlands geschreven, met officiële CM-termen exact behouden.
+```text
+00_GOVERNANCE/
+├── README.md
+├── CM_OPERATING_MODEL.md
+├── GOVERNANCE_RULES.md
+├── AS_BUILT_DOCUMENTATION.md
+├── DECISION_LOG.md
+├── DRIVE_STRUCTURE.md
+├── ADR/
+├── STANDARDS/
+├── MAP_SPECIFICATIONS/
+└── HISTORY/
+    ├── AUDITS/
+    ├── BASELINES/
+    ├── MIGRATIONS/
+    ├── RECOVERY_REPORTS/
+    ├── SPRINT_REPORTS/
+    └── SUPERSEDED/
+```
+
+Andere documenten direct in deze map zijn gespecialiseerde actuele governancebronnen en mogen de bovenstaande prioriteit niet tegenspreken.
+
+## History-regel
+
+Afgeronde recovery-, migratie-, cleanup-, sprint-, baseline- en superseded-documentatie wordt met `git mv` naar de passende `HISTORY/`-categorie verplaatst. History-documenten worden niet als actief geciteerd. Semantische overlap wordt handmatig beoordeeld; alleen aantoonbaar exacte duplicaten zonder unieke dependencies mogen na expliciete review worden verwijderd.
+
+## Repositorygrens
+
+GitHub bevat alleen Governance, Workflows, SOPs, Playbooks, Automations, Agents, Knowledge Base en systeemdocumentatie. Geen live clientdata, getekende contracten, Drive-dumps of vertrouwelijke informatie.

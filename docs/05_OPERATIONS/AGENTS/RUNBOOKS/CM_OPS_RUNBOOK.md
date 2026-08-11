@@ -60,8 +60,8 @@ Taak → `Blocked` of `Escalated` → CM CONTROL met links naar beide bronnen.
 
 Dit runbook geldt uitsluitend voor CUSTOMMADE AGENCY.
 
-CM OPS mag geen FIERCE-documenten, taken, mappen, klanten, artiesten, financiën of governance
-vermengen met CUSTOMMADE AGENCY, tenzij een formeel goedgekeurde CM↔FIERCE-handoff of overeenkomst
+CM OPS mag geen EXTERNE_ENTITEIT-documenten, taken, mappen, klanten, artiesten, financiën of governance
+vermengen met CUSTOMMADE AGENCY, tenzij een formeel goedgekeurde CM↔EXTERNE_ENTITEIT-handoff of overeenkomst
 dat expliciet vereist.
 
 ### 1.3 Architectuurwijzigingen
@@ -115,7 +115,7 @@ Binnen geactiveerde en geteste capabilities mag CM OPS:
 - Publiceren namens CM of een artiest zonder vereiste approval.
 - Templates/mappen herstructureren buiten CM VAULT-governance.
 - Niet-bestaande ClickUp-lijsten, mappen, velden of automation-capabilities als "live" behandelen.
-- FIERCE en CUSTOMMADE AGENCY operationeel samenvoegen.
+- EXTERNE_ENTITEIT en CUSTOMMADE AGENCY operationeel samenvoegen.
 
 ---
 
@@ -134,7 +134,7 @@ CM OPS voert vóór uitvoering onderstaande controle uit.
 7. **Deadline:** is een geldige due date bekend?
 8. **Approval:** is een gate nodig en wat is de status?
 9. **Duplicate check:** bestaat deze taak/project/release al?
-10. **Data separation:** bevat de input geen onbedoelde FIERCE-data?
+10. **Data separation:** bevat de input geen onbedoelde EXTERNE_ENTITEIT-data?
 11. **Logging:** kan de uitvoering aantoonbaar worden gelogd?
 12. **Risk:** is er een juridisch, financieel, reputatie- of rights-risico?
 
@@ -780,7 +780,7 @@ Doel: geen dubbele onboarding, release, recap of projecttaken.
 | Scope-creep zonder approval | 0 |
 | Maandrapportages op tijd | 100% |
 | Taken zonder source/evidence waar vereist | 0 |
-| FIERCE/CM entiteitsvermenging | 0 |
+| EXTERNE_ENTITEIT/CM entiteitsvermenging | 0 |
 
 ---
 
@@ -817,7 +817,7 @@ CM OPS is operationeel gezond wanneer:
 - documentstructuur niet buiten VAULT-governance wordt gewijzigd;
 - automations niet buiten FLOW worden gebouwd;
 - prioriteitsconflicten bij CONTROL landen;
-- FIERCE en CUSTOMMADE AGENCY gescheiden blijven;
+- EXTERNE_ENTITEIT en CUSTOMMADE AGENCY gescheiden blijven;
 - Waiting-On-items niet verdwijnen maar aging + follow-up hebben;
 - externe verplichtingen via de juiste approval lopen;
 - reporting evidence-based is;

@@ -9,7 +9,7 @@ Waar de agentpaspoorten (`../ACTIVE/`) beschrijven **wat** een agent is, beschri
 ClickUp-structuur per ADR-2026-08-07, Drive `OS_CUSTOMMADE`, Make/Apps Script, Moneybird, Gmail).
 
 Bruikbaar door mensen én als operating-basis voor de AI-agents. Elk runbook volgt dezelfde
-governance-hardened v2.0-structuur: bronhiërarchie + conflictregel, entiteitsscheiding (CM↔FIERCE),
+governance-hardened v2.0-structuur: bronhiërarchie + conflictregel, entiteitsscheiding (CM↔EXTERNE_ENTITEIT),
 source-of-truth-matrix, mandaat, preflight, 12-blok workflowcontract, Waiting-On, handoff-contract,
 approval matrix, logging/audit + idempotency, exceptions, ritme, KPI's, production-readiness gate en DoD.
 
@@ -38,3 +38,7 @@ monitoring actief en Sophia-production approval geregistreerd.
 - Certificering/gates per agent: `../CERTIFICATION/`
 - Canonieke ClickUp-structuur: `../../KNOWLEDGE_BASE/SYSTEMS/CLICKUP_STRUCTURE.md` + ADR-2026-08-07
 - Scenario-status: `../../AUTOMATIONS/MAKE_SCENARIO_MAP.md`
+
+## Execution guardrail
+
+Elk runbook volgt `../AGENT_CAPABILITY_REGISTER.md`: de meest beperkende permission/state geldt, iedere run vereist evidence/trace en bij ontbrekend bewijs geldt safe stop.

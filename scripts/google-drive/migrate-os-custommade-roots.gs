@@ -14,7 +14,7 @@
  *   or archived.
  * - Archive decisions from the matrix are logged as review-only simulation rows;
  *   they are not executed and are intentionally blocked from mutation.
- * - FIERCE-content is flagged for exclusion and never receives a target path.
+ * - EXTERNE_ENTITEIT-content is flagged for exclusion and never receives a target path.
  */
 const ROOT_FOLDER_ID = '0B2aV9TqyUPDzd0F1WEd1RkVxNFk';
 const DRY_RUN = true;
@@ -84,7 +84,7 @@ const MATRIX_ROOT_DECISIONS = [
   {
     order: '2', source: '00_INBOX', target: 'HOLD tot owner-review; daarna dossier-specifiek doelpad',
     decision: 'opsplitsen / archiveren', action: 'alle items op HOLD-review zetten; geen archivering uitvoeren',
-    risk: 'Kritiek', dependencies: 'Classificatie, owner, FIERCE-scan, linkcontrole.', manualReview: true,
+    risk: 'Kritiek', dependencies: 'Classificatie, owner, EXTERNE_ENTITEIT-scan, linkcontrole.', manualReview: true,
   },
   {
     order: '3', source: '01_ARTIST_MANAGEMENT', target: 'OS_CUSTOMMADE/02_ARTIST_MANAGEMENT',
@@ -124,7 +124,7 @@ const MATRIX_ROOT_DECISIONS = [
 ];
 
 const CLASSIFICATION_RULES = {
-  FIERCE: ['fierce'],
+  EXTERNE_ENTITEIT: ['externe_entiteit'],
   FINANCE: ['finance', 'financ', 'factuur', 'facturen', 'invoice', 'invoices', 'boekhouding', 'accounting', 'tax', 'btw', 'belasting', 'budget', 'cashflow', 'royalty', 'royalties', 'payments', 'betaling', 'betalingen', 'bank', 'payroll', 'salaris'],
   LEGAL: ['legal', 'juridisch', 'contract', 'contracts', 'agreement', 'agreements', 'overeenkomst', 'rechten', 'rights', 'ip', 'nda', 'apa', 'loi', 'license', 'licence', 'licensing', 'compliance', 'privacy', 'terms'],
   OPERATIONS: ['operations', 'operationeel', 'ops', 'admin', 'hr', 'people', 'team', 'process', 'processen', 'sop', 'system', 'systems', 'tooling', 'planning', 'templates'],
@@ -283,11 +283,11 @@ function addMatrixRow_(rows, rootName, decision, status, folderId, note) {
 }
 
 function classifyChild_(sourceRootName, childName) {
-  if (matchesAny_(childName, CLASSIFICATION_RULES.FIERCE)) {
-    return holdDecision_('FIERCE_EXCLUDED', 'FIERCE-content uitsluiten van CM-migratie', 'Kritiek', 'FIERCE-content is uitgesloten.', 'Geen doelpad; owner-review vereist.');
+  if (matchesAny_(childName, CLASSIFICATION_RULES.EXTERNE_ENTITEIT)) {
+    return holdDecision_('EXTERNE_ENTITEIT_EXCLUDED', 'EXTERNE_ENTITEIT-content uitsluiten van CM-migratie', 'Kritiek', 'EXTERNE_ENTITEIT-content is uitgesloten.', 'Geen doelpad; owner-review vereist.');
   }
 
-  if (sourceRootName === '00_INBOX') return holdDecision_('HOLD_OWNER_REVIEW', 'inbox-item op HOLD zetten voor classificatie', 'Kritiek', 'Owner, FIERCE-scan, linkcontrole, legal/finance check.', 'Niet migreren in dry run.');
+  if (sourceRootName === '00_INBOX') return holdDecision_('HOLD_OWNER_REVIEW', 'inbox-item op HOLD zetten voor classificatie', 'Kritiek', 'Owner, EXTERNE_ENTITEIT-scan, linkcontrole, legal/finance check.', 'Niet migreren in dry run.');
   if (sourceRootName === '07_ARCHIVE') return holdDecision_('ARCHIVE_REVIEW_ONLY', 'archive-item inventariseren; archiveren geblokkeerd', 'Middel', 'Actieve dossiers, broncontext, shortcuts/shims controleren.', 'Geen archiefmutatie uitvoeren.');
 
   if (sourceRootName === '00_GOVERNANCE') return targetDecision_('00_ADMIN/GOVERNANCE_REFERENCE', 'governance-referentie simuleren', true, 'Middel', 'GitHub blijft source of truth; controleer dubbele SOPs en AI-agent links.');
@@ -369,7 +369,7 @@ function reviewUnexpectedRoots_(root, rows, rootName) {
         order: '2', oldLocation: rootName + '/' + folderName, newLocation: 'HOLD / REVIEW',
         decision: 'niet opgenomen in matrix', action: 'onverwachte root handmatige review',
         status: 'UNEXPECTED_ROOT_REVIEW_ONLY', risk: 'Hoog',
-        dependencies: 'Owner, classificatie, FIERCE-scan en linkcontrole vereist.',
+        dependencies: 'Owner, classificatie, EXTERNE_ENTITEIT-scan en linkcontrole vereist.',
         manualReview: 'ja', folderId: safeFolderId_(folder, ''), mutatesDrive: false,
         note: 'Geen migratie simuleren zonder matrixbesluit.',
       });
@@ -503,7 +503,7 @@ function writeGoNoGo_(sheet, readiness, rows, startedAt, logUrl) {
     ['Root is gekoppeld aan doelroot binnen OS_CUSTOMMADE of HOLD/UITSLUITEN', 'Ja', readiness.invalidTargetRows === 0 ? 'Ja' : 'Nee (' + readiness.invalidTargetRows + ')', readiness.invalidTargetRows === 0 ? 'PASS' : 'NO-GO'],
     ['Alle items hebben actie/status', 'Ja', readiness.rowsMissingActionOrStatus === 0 ? 'Ja' : 'Nee (' + readiness.rowsMissingActionOrStatus + ')', readiness.rowsMissingActionOrStatus === 0 ? 'PASS' : 'NO-GO'],
     ['Alle HOLD-items zijn uitgesloten van live migratie', 'Ja', readiness.holdMutationRows === 0 ? 'Ja' : 'Nee (' + readiness.holdMutationRows + ')', readiness.holdMutationRows === 0 ? 'PASS' : 'NO-GO'],
-    ['Owner/link/legal/finance/FIERCE checks zijn zichtbaar als reviewdependency', 'Ja', readiness.reviewRows + ' reviewregels', readiness.reviewRows > 0 ? 'PASS VOOR DRY RUN' : 'REVIEW'],
+    ['Owner/link/legal/finance/EXTERNE_ENTITEIT checks zijn zichtbaar als reviewdependency', 'Ja', readiness.reviewRows + ' reviewregels', readiness.reviewRows > 0 ? 'PASS VOOR DRY RUN' : 'REVIEW'],
     ['Conflictenlijst is aangemaakt', 'Ja', readiness.conflictRows + ' conflict-/blockerregels', 'PASS VOOR DRY RUN'],
     ['Handmatige review lijst is aangemaakt', 'Ja', readiness.manualReviewRows + ' reviewregels', 'PASS VOOR DRY RUN'],
     ['Go/No-Go conclusie', 'Verplicht', readiness.conclusion, readiness.goForLiveMigration ? 'GO' : 'NO-GO VOOR LIVE; GO VOOR DRY RUN'],
@@ -528,7 +528,7 @@ function evaluateReadiness_(rows) {
     return target && target !== 'HOLD / EXCLUDED' && target !== 'HOLD / REVIEW' && target.indexOf('OS_CUSTOMMADE') === -1 && target.indexOf('GitHub') === -1 && target.indexOf('GEEN DOELPAD') !== 0 && target.indexOf('HOLD') !== 0 && target.indexOf('Artist-') !== 0;
   }).length;
   const reviewRows = rows.filter(function(row) {
-    return row[9] === 'ja' || String(row[8]).match(/owner|link|legal|finance|FIERCE|permission|review/i);
+    return row[9] === 'ja' || String(row[8]).match(/owner|link|legal|finance|EXTERNE_ENTITEIT|permission|review/i);
   }).length;
   const goForLiveMigration = mutatingRows === 0 && holdMutationRows === 0 && rowsMissingActionOrStatus === 0 && invalidTargetRows === 0 && manualReviewRows === 0 && conflictRows === 0;
   return {
@@ -549,7 +549,7 @@ function isConflictRow_(row) {
   const risk = String(row[7] || '');
   const dependencies = String(row[8] || '');
   const note = String(row[13] || '');
-  return risk === 'Kritiek' || status.indexOf('FIERCE') !== -1 || status.indexOf('UNEXPECTED') !== -1 || status.indexOf('HOLD') !== -1 || /conflict|FIERCE|onbekend|ontbreekt|blocked|geblokkeerd|uitsluiten/i.test(dependencies + ' ' + note);
+  return risk === 'Kritiek' || status.indexOf('EXTERNE_ENTITEIT') !== -1 || status.indexOf('UNEXPECTED') !== -1 || status.indexOf('HOLD') !== -1 || /conflict|EXTERNE_ENTITEIT|onbekend|ontbreekt|blocked|geblokkeerd|uitsluiten/i.test(dependencies + ' ' + note);
 }
 
 function safeFolderName_(folder, fallback) {

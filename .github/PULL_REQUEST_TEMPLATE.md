@@ -19,6 +19,6 @@
 - [ ] Workflow documentation updated? yes/no
 - [ ] As-built documentation updated? yes/no
 - [ ] Naming conventions followed? yes/no
-- [ ] No FIERCE references? yes/no
+- [ ] No EXTERNE_ENTITEIT references? yes/no
 - [ ] No confidential client files? yes/no
 - [ ] Ready for review? yes/no

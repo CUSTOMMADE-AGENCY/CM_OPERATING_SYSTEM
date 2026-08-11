@@ -19,7 +19,7 @@ Dit document vertaalt de gelockte CM_OS-governance naar een uitvoerbare implemen
 | Gmail | Communicatie en templates |
 | ChatGPT / Claude / Codex | Analyse, verbetering en gecontroleerde uitvoering |
 
-Custommade Agency en FIERCE blijven strikt gescheiden.
+Custommade Agency en EXTERNE_ENTITEIT blijven strikt gescheiden.
 
 ## Sprint 1 — Drive Implementatie
 
@@ -55,7 +55,7 @@ OS_CUSTOMMADE
 
 - Alle roots bestaan exact volgens governance.
 - Geen oude roots actief.
-- Geen FIERCE-mappen of FIERCE-templates aanwezig.
+- Geen EXTERNE_ENTITEIT-mappen of EXTERNE_ENTITEIT-templates aanwezig.
 - PDF-leesversies aanwezig voor operationele rapporten.
 
 ## Sprint 2 — Drive Migratie
@@ -168,7 +168,7 @@ CM PROSPECT ondersteunt:
 - Geen Moneybird-data gedupliceerd als bron in Drive of ClickUp.
 - Automations volgen governance.
 - Fouten worden gelogd.
-- Geen FIERCE-vermenging.
+- Geen EXTERNE_ENTITEIT-vermenging.
 
 ## Sprint 6 — Dashboards
 
@@ -196,7 +196,7 @@ Stop met bouwen wanneer:
 1. een nieuwe governance-keuze nodig is;
 2. een bestand conflicteert met DECISION_LOG.md;
 3. een automation probeert Moneybird te vervangen;
-4. FIERCE en CM door elkaar lopen;
+4. EXTERNE_ENTITEIT en CM door elkaar lopen;
 5. een AI-agent nieuwe templates maakt zonder template-check.
 
 ## Eerstvolgende actie

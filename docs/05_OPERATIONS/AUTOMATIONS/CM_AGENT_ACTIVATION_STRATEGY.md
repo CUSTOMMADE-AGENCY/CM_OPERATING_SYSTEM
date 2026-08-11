@@ -27,7 +27,7 @@ Dit is geen nieuw schema; het maakt de Build-fases uit de architectuur concreet.
 
 ### Build-fase 1 — Infrastructuur (CM FLOW + CM VAULT)
 Fundament eerst: het automatiseringsplatform en de Drive-waarheid.
-- **CM VAULT V1** (Make) live: wekelijkse Drive-structuurcontrole.
+- **CM VAULT V1** (Make) `PAUSED`: ontworpen als read-only wekelijkse Drive-structuurcontrole; geen scheduled production-run.
 - Apps Script-basis (`scripts/google-drive/`) beheerd en gedocumenteerd.
 - CM FLOW richt de trigger-laag in waarop fase 2 draait.
 

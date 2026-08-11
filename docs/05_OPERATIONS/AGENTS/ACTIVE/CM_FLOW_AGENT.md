@@ -185,7 +185,7 @@ CM FLOW AGENT houdt bij: ontwerp, architectuur, implementatiebesluiten, testplan
 
 ## 17 Roadmap
 
-- Build-fase 1 (infra): Make-fundament + Drive-automatiseringen live (CM VAULT V1).
+- Build-fase 1 (infra): Make-fundament aanwezig; CM VAULT V1 is read-only en `PAUSED`, dus niet live.
 - V2 hardening: standaard bouwoutput afdwingen voor ontwerp, architectuur, implementatie, documentatie, testplan, deploymentplan en impactanalyse.
 - Agent Development: eerste door FLOW gebouwde agentconcepten opleveren ter
   Sophia approval.
