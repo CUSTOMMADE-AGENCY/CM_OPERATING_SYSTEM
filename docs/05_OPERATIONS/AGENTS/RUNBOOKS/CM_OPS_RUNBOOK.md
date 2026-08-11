@@ -9,6 +9,15 @@
 > workflow exact uitvoert** — stap voor stap, met de precieze lijst, map, template, gate en SLA.
 > Bruikbaar door een mens én als operating-basis voor de AI-agent.
 
+> ⚠️ **STATUS: DOEL-RUNBOOK — nog niet operationeel.** Dit beschrijft de **canonieke doeltoestand**
+> na reconciliatie en certificering. Het is nog **niet** live-uitvoerbaar omdat:
+> (1) de meeste `CLIENTS`-lijsten nog **in ClickUp moeten worden aangemaakt**
+> (`CM_OPS_CLICKUP_RECONCILIATION_PLAN.md`); (2) **CM OPS staat op Level 1** — geen autonome
+> ClickUp/Drive-mutaties tot de certificerings-gates groen zijn; (3) het provisioning-script staat
+> op **dry-run** en schrijft nog naar `ACTIVE CLIENTS` (retarget vereist). Voer stappen die mappen
+> of taken aanmaken pas uit **nadat** die randvoorwaarden zijn vervuld; tot dan is dit de
+> referentie-werkwijze, door mensen uit te voeren binnen de gates.
+
 ---
 
 ## 0. Hoe dit runbook werkt
@@ -27,8 +36,10 @@ Elke workflow heeft dezelfde 9 blokken:
 | **Escalatie** | Wanneer + naar welke agent. |
 | **DoD** | Definition of Done. |
 
-**Autonomy:** OPS werkt binnen Level 3 *binnen scope* — uitvoeren in ClickUp/Drive mag zelfstandig;
-alles wat extern, financieel, juridisch of publicabel is loopt via een gate (zie §6 Guardrails).
+**Autonomy:** OPS staat **nu op Level 1** (Governance Approved) — géén autonome ClickUp/Drive-mutaties;
+stappen worden door mensen uitgevoerd binnen de gates. Het **doel** is Level 3 *binnen scope*
+(zelfstandig uitvoeren in ClickUp/Drive) ná certificering; extern/financieel/juridisch/publicabel
+blijft ook dán een gate (zie §11 Guardrails).
 
 ---
 
@@ -58,8 +69,8 @@ Completed` (+ `On hold` · `Blocked` · `Escalated`).
 - **Trigger:** getekende management-afspraak van CM LEGAL (`Handoff to CLIENTS`), of nieuwe artist toegewezen door Sophia.
 - **Inputs:** artistnaam, getekende deal-referentie (Drive-link van LEGAL), contactgegevens, scope.
 - **Stappen:**
-  1. Maak taak in lijst **`Artist Onboarding`**, status `Intake`. Vul `Artist`, `Agent Owner=CM OPS`, `Priority`, `Due Date`.
-  2. Provisioneer de Drive-structuur: draai/controleer `provision-cm-artist.gs` → `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/` met de 9 submappen (`01_ADMIN`…`09_ARCHIVE`). Zet de Drive-link in `Drive Link`.
+  1. Maak taak in lijst **`Artist Onboarding`**, status `Intake`. Vul `Artist`, `Agent Owner=CM OPS`, `Priority`, `Due Date`. *(Randvoorwaarde: deze lijst bestaat pas na de ClickUp-reconciliatie; tot dan landt onboarding in `ACTIVE CLIENTS`.)*
+  2. Provisioneer de Drive-structuur via `provision-cm-artist.gs` → `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/` met de 9 submappen (`01_ADMIN`…`09_ARCHIVE`); zet de Drive-link in `Drive Link`. **Let op:** het script staat op `CM_ARTIST_PROVISION_DRY_RUN = true` (maakt niets aan) en schrijft ClickUp-taken naar `ACTIVE CLIENTS`. Vóór live gebruik: dry-run uitzetten via de gecontroleerde activatieprocedure **én** de lijst-ID retargeten naar `Artist Onboarding` (`CM_OPS_CLICKUP_RECONCILIATION_PLAN.md` stap 4). Zolang dry-run aan staat, worden de mappen **handmatig** aangemaakt of via `create-cm-drive-structure.gs`.
   3. Status → `Inputs verzamelen`: verzamel intake (rechten/splits-context via LEGAL, financiële context via MONEY) als subtaken.
   4. Status → `Planning`: maak de onboarding-checklist en de eerste `Artist Roadmap` (zie Workflow 4) met eigenaar + deadlines.
   5. Koppel elke taak aan de GitHub-SOP (`Source Link`) en de juiste Drive-map (`Drive Link`).
@@ -170,7 +181,7 @@ Completed` (+ `On hold` · `Blocked` · `Escalated`).
 - **Stappen:**
   1. Aggregeer per client/artist: opgeleverd, in uitvoering, geblokkeerd, open acties.
   2. Haal financiële context op bij **CM MONEY** (geen eigen finance-conclusies).
-  3. Stel het Monthly Report op (Drive `04_REPORTS` of client `04_DELIVERABLES`); markeer risico's + Waiting-On-Sophia.
+  3. Stel het Monthly Report op en bewaar het bij het juiste dossier: **artist** → `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST]/03_STRATEGY` (conform de artist provisioning-standaard, `MONTHLY_REPORT_TEMPLATE`); **client** → `OS_CUSTOMMADE/03_CLIENTS/[CLIENT]/04_DELIVERABLES`. CM-brede rapportage hoort in `00_ADMIN/04_REPORTS` (niet per artist). Markeer risico's + Waiting-On-Sophia.
   4. Lever aan CM CONTROL voor de Weekly/Monthly Control-cyclus.
 - **Gate:** externe deling → Sophia.
 - **Output:** Monthly Report per client/artist + geconsolideerde OPS-status.
