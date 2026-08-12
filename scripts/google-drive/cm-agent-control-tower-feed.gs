@@ -105,7 +105,13 @@ function ctfClickUpListRows_(listId, token) {
   var rows = [];
   var listName = listId;
   var page = 0;
-  for (var guard = 0; guard < 100; guard++) {  // guard: nooit oneindig loopen
+  var MAX_PAGES = 100;                          // 100 pagina's × 100 taken = 10.000 open items
+  for (var guard = 0; ; guard++) {
+    if (guard >= MAX_PAGES) {
+      // Guard bereikt zonder last_page: gooi i.p.v. een afgekapte set als "geslaagd" terug te
+      // geven — refreshControlTower() slaat de agent dan over en behoudt de vorige snapshot.
+      throw new Error('ClickUp list ' + listId + ' > ' + MAX_PAGES + ' pagina\'s; afgebroken.');
+    }
     var url = CTF_CLICKUP_BASE + '/list/' + listId +
       '/task?archived=false&include_closed=false&subtasks=false&page=' + page;
     var res = UrlFetchApp.fetch(url, {
@@ -179,7 +185,7 @@ function ctfMoneybirdRows_(adminId, token) {
       (inv.total_unpaid ? ('onbetaald ' + inv.total_unpaid) : ''),
       inv.state || 'open',
       inv.updated_at ? inv.updated_at.substring(0, 10) : '',
-      'Moneybird open post',
+      '', // reden/notitie leeg laten: anders overschrijft de placeholder handmatige aantekeningen
     ];
   });
 }
