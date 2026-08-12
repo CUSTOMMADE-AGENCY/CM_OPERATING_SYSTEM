@@ -37,8 +37,12 @@
       ligt klaar in `CERTIFICATION/EVIDENCE/CM_VAULT_TESTPLAN_LOGSPEC.md`).
 
 ### Fase 2 — Verbinden (CM FLOW)
-- [ ] Control Tower **voeden** met live data (Apps Script/Make → ClickUp-status, Moneybird open posten,
-      Waiting-On, escalaties).
+- [x] **Feed-script geschreven** (in-repo): `scripts/google-drive/cm-agent-control-tower-feed.gs` — vult de
+      Control Tower automatisch met ClickUp-status + Moneybird open posten (READ-ONLY op de bronnen,
+      schrijft alleen in de agent-tabs, tokens uit Script Properties, uurtrigger). Wordt volledig
+      functioneel zodra `AGENT_LIST_MAP` is ingevuld na de ClickUp-reconciliatie.
+- [ ] Control Tower **voeden** met live data: tokens/`AGENT_LIST_MAP` in Script Properties zetten,
+      `refreshControlTower()` autoriseren + `installControlTowerFeedTrigger()` draaien (CM FLOW).
 - [ ] De fase-2 Make-scenario's bouwen (OPS-onboarding, MONEY open-items, LEGAL/SOCIAL/PROSPECT reminders)
       via de scenario-lifecycle (`MAKE_SCENARIO_MAP.md`), elk met gate.
 - [ ] CM CONTROL **wekelijkse digest** activeren.
