@@ -35,30 +35,36 @@ function refreshControlTower() {
   const cfg = ctfConfig_();
   const ss = ctfOpenSheet_();
   const agentMap = cfg.agentListMap || {};
-  const summary = { agents: 0, rows: 0, errors: [] };
+  const summary = { agents: 0, rows: 0, skipped: 0, errors: [] };
 
   Object.keys(agentMap).forEach(function (agent) {
     const sh = ss.getSheetByName(agent);
     if (!sh) { summary.errors.push('Tab ontbreekt: ' + agent); return; }
     let rows = [];
+    let failed = false;
     (agentMap[agent] || []).forEach(function (listId) {
       try {
         rows = rows.concat(ctfClickUpListRows_(listId, cfg.clickUpToken));
       } catch (e) {
+        failed = true;
         summary.errors.push(agent + '/' + listId + ': ' + ctfMsg_(e));
       }
     });
     // MONEY: voeg open posten uit Moneybird toe (indien geconfigureerd).
     if (agent === 'CM MONEY' && cfg.moneybirdToken && cfg.moneybirdAdminId) {
       try { rows = rows.concat(ctfMoneybirdRows_(cfg.moneybirdAdminId, cfg.moneybirdToken)); }
-      catch (e) { summary.errors.push('Moneybird: ' + ctfMsg_(e)); }
+      catch (e) { failed = true; summary.errors.push('Moneybird: ' + ctfMsg_(e)); }
     }
+    // Bij een (tijdelijke) bronfout NIET overschrijven: bewaar de laatste geslaagde
+    // momentopname, zodat de cockpit tijdens een 401/429/5xx-storing geen blockers "verliest".
+    if (failed) { summary.skipped++; return; }
     ctfWriteAgentRows_(sh, rows);
     summary.agents++; summary.rows += rows.length;
   });
 
   Logger.log('Control Tower refresh: ' + summary.agents + ' agents, ' + summary.rows +
-    ' rijen. Fouten: ' + (summary.errors.length ? summary.errors.join(' | ') : 'geen'));
+    ' rijen, ' + summary.skipped + ' overgeslagen (bronfout → snapshot behouden). Fouten: ' +
+    (summary.errors.length ? summary.errors.join(' | ') : 'geen'));
   return summary;
 }
 
@@ -95,31 +101,48 @@ function ctfOpenSheet_() {
 
 // ---- ClickUp ----
 function ctfClickUpListRows_(listId, token) {
-  const url = CTF_CLICKUP_BASE + '/list/' + listId + '/task?archived=false&include_closed=false&subtasks=false';
-  const res = UrlFetchApp.fetch(url, {
-    method: 'get',
-    headers: { Authorization: token },
-    muteHttpExceptions: true,
-  });
-  if (res.getResponseCode() !== 200) {
-    throw new Error('ClickUp ' + res.getResponseCode() + ' voor list ' + listId);
+  // ClickUp pagineert /list/{id}/task in blokken van 100; loop tot last_page.
+  var rows = [];
+  var listName = listId;
+  var page = 0;
+  var MAX_PAGES = 100;                          // 100 pagina's × 100 taken = 10.000 open items
+  for (var guard = 0; ; guard++) {
+    if (guard >= MAX_PAGES) {
+      // Guard bereikt zonder last_page: gooi i.p.v. een afgekapte set als "geslaagd" terug te
+      // geven — refreshControlTower() slaat de agent dan over en behoudt de vorige snapshot.
+      throw new Error('ClickUp list ' + listId + ' > ' + MAX_PAGES + ' pagina\'s; afgebroken.');
+    }
+    var url = CTF_CLICKUP_BASE + '/list/' + listId +
+      '/task?archived=false&include_closed=false&subtasks=false&page=' + page;
+    var res = UrlFetchApp.fetch(url, {
+      method: 'get',
+      headers: { Authorization: token },
+      muteHttpExceptions: true,
+    });
+    if (res.getResponseCode() !== 200) {
+      throw new Error('ClickUp ' + res.getResponseCode() + ' voor list ' + listId);
+    }
+    var data = JSON.parse(res.getContentText());
+    var tasks = data.tasks || [];
+    if (page === 0 && tasks[0] && tasks[0].list && tasks[0].list.name) { listName = tasks[0].list.name; }
+    tasks.forEach(function (t) {
+      rows.push([
+        t.name || '',
+        listName,
+        t.url || '',
+        ctfMapStatus_(t.status && t.status.status),
+        (t.assignees && t.assignees.map(function (a) { return a.username; }).join(', ')) || '',
+        ctfDate_(t.due_date),
+        ctfCustomField_(t, ['Waiting-On', 'Waiting On']),
+        ctfCustomField_(t, ['Approval Status', 'Sophia Approval']),
+        ctfDate_(t.date_updated),
+        '', // reden/notitie — handmatig/CM CONTROL
+      ]);
+    });
+    if (data.last_page === true || tasks.length === 0) { break; }
+    page++;
   }
-  const data = JSON.parse(res.getContentText());
-  const listName = (data.tasks && data.tasks[0] && data.tasks[0].list && data.tasks[0].list.name) || listId;
-  return (data.tasks || []).map(function (t) {
-    return [
-      t.name || '',
-      listName,
-      t.url || '',
-      ctfMapStatus_(t.status && t.status.status),
-      (t.assignees && t.assignees.map(function (a) { return a.username; }).join(', ')) || '',
-      ctfDate_(t.due_date),
-      ctfCustomField_(t, ['Waiting-On', 'Waiting On']),
-      ctfCustomField_(t, ['Approval Status', 'Sophia Approval']),
-      ctfDate_(t.date_updated),
-      '', // reden/notitie — handmatig/CM CONTROL
-    ];
-  });
+  return rows;
 }
 
 function ctfCustomField_(task, names) {
@@ -140,7 +163,8 @@ function ctfCustomField_(task, names) {
 
 // ---- Moneybird ----
 function ctfMoneybirdRows_(adminId, token) {
-  const url = 'https://moneybird.com/api/v2/' + adminId + '/sales_invoices/filter/state:open.json';
+  const url = 'https://moneybird.com/api/v2/' + adminId +
+    '/sales_invoices.json?filter=' + encodeURIComponent('state:open');
   const res = UrlFetchApp.fetch(url, {
     method: 'get',
     headers: { Authorization: 'Bearer ' + token },
@@ -161,7 +185,7 @@ function ctfMoneybirdRows_(adminId, token) {
       (inv.total_unpaid ? ('onbetaald ' + inv.total_unpaid) : ''),
       inv.state || 'open',
       inv.updated_at ? inv.updated_at.substring(0, 10) : '',
-      'Moneybird open post',
+      '', // reden/notitie leeg laten: anders overschrijft de placeholder handmatige aantekeningen
     ];
   });
 }
@@ -169,10 +193,23 @@ function ctfMoneybirdRows_(adminId, token) {
 // ---- schrijven (alleen de datatabs van dit spiegel-blad) ----
 function ctfWriteAgentRows_(sh, rows) {
   const lastRow = sh.getLastRow();
+  // Bewaar handmatige notities (kolom J = index 9) per item-sleutel (kolom C = url, index 2),
+  // zodat operator-/CM CONTROL-aantekeningen niet bij elke refresh worden gewist.
+  const notes = {};
   if (lastRow >= CTF_DATA_FIRST_ROW) {
+    const existing = sh.getRange(CTF_DATA_FIRST_ROW, 1, lastRow - CTF_DATA_FIRST_ROW + 1, CTF_DATA_COLS).getValues();
+    existing.forEach(function (r) {
+      var key = r[2], note = r[9];
+      if (key && note) { notes[key] = note; }
+    });
     sh.getRange(CTF_DATA_FIRST_ROW, 1, lastRow - CTF_DATA_FIRST_ROW + 1, CTF_DATA_COLS).clearContent();
   }
   if (rows.length === 0) return;
+  // Her-koppel bewaarde notities op de url-sleutel (bestaande waarde in de rij wint).
+  rows.forEach(function (r) {
+    var key = r[2];
+    if (key && !r[9] && notes[key]) { r[9] = notes[key]; }
+  });
   sh.getRange(CTF_DATA_FIRST_ROW, 1, rows.length, CTF_DATA_COLS).setValues(rows);
 }
 
