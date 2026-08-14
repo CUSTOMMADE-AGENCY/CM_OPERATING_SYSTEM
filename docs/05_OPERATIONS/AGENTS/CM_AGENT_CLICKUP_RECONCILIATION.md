@@ -48,13 +48,19 @@
 | EMAIL ACTIES | `901524830195` | → **CM OPS** | Besluit Sophia (2026-08-14): e-mailacties/inbox-routing als uitvoering onder CM OPS. |
 | CUSTOMMADE AGENCY SETUP | `901523770687` | — geen agent | Setup/meta-lijst, geen operationele lane. |
 
-## Ontbrekend t.o.v. canoniek
+## MARKETING-folder (aangemaakt 2026-08-14)
 
-- **MARKETING-folder ontbreekt.** Canoniek is `MARKETING` de folder van **CM SOCIAL**. Die folder
-  bestaat nog niet in de live workspace. Gevolg: **CM SOCIAL heeft (nog) geen lijst-ID's** → de
-  feed slaat de SOCIAL-tab netjes over tot de folder + lijsten bestaan (graceful degradation).
-  - Aanbevolen SOCIAL-lijsten bij aanmaken (uit CLICKUP_MAPPING): `Content Calendar`,
-    `Website & SEO`, `Press & Media`, `Social Publishing`, `Campaigns`.
+Canoniek is `MARKETING` de folder van **CM SOCIAL**. De folder is nu aangemaakt in space
+`CUSTOMMADE AGENCY` (folder-id `901517324271`) met vijf lijsten, en CM SOCIAL is in de
+`AGENT_LIST_MAP` gevuld.
+
+| Lijst | Lijst-id | Agent Owner |
+|---|---|---|
+| Content Calendar | `901525134118` | CM SOCIAL |
+| Website & SEO | `901525134119` | CM SOCIAL |
+| Press & Media | `901525134120` | CM SOCIAL |
+| Social Publishing | `901525134121` | CM SOCIAL |
+| Campaigns | `901525134122` | CM SOCIAL |
 
 ## Kant-en-klare `AGENT_LIST_MAP` (Script Property)
 
@@ -78,7 +84,7 @@ ophaalt (WON/LOST/COMPLETED) — actieve lijsten blijven zonder suffix en tonen 
   "CM CONTROL": ["901524741463"],
   "CM FLOW": ["901523770702"],
   "CM VAULT": ["901523770699", "901523770700"],
-  "CM SOCIAL": []
+  "CM SOCIAL": ["901525134118", "901525134119", "901525134120", "901525134121", "901525134122"]
 }
 ```
 
@@ -87,28 +93,26 @@ ophaalt (WON/LOST/COMPLETED) — actieve lijsten blijven zonder suffix en tonen 
 > feed slaat die tab dan over zonder te breken. `CM MONEY` krijgt daarnaast automatisch de open
 > posten uit Moneybird (aparte feed-tak) zodra `MONEYBIRD_TOKEN` + `MONEYBIRD_ADMIN_ID` gezet zijn.
 >
-> **CM SOCIAL invullen na aanmaak MARKETING:** vervang `"CM SOCIAL": []` door de lijst-ID's van de
-> nieuwe MARKETING-lijsten, bv. `"CM SOCIAL": ["<Content Calendar-id>", "<Social Publishing-id>", …]`.
+> **CM SOCIAL is ingevuld** (MARKETING aangemaakt 2026-08-14, folder-id `901517324271`):
+> Content Calendar `901525134118`, Website & SEO `901525134119`, Press & Media `901525134120`,
+> Social Publishing `901525134121`, Campaigns `901525134122`.
 
 ## Besluiten (Sophia / CM CONTROL — 2026-08-14)
 
 1. ✅ **EMAIL ACTIES** (`901524830195`) → **CM OPS**. Verwerkt in `AGENT_LIST_MAP`.
 2. ✅ **Terminale lijsten tonen** — WON/LOST/COMPLETED toegevoegd aan de map; de feed-statusmapping
    markeert `won`/`lost`/`completed` als afgerond (✅ Done) zodat ze correct op de tab lezen.
-3. 🔨 **MARKETING-folder aanmaken** (ClickUp-schrijfactie) — akkoord. Uit te voeren door
-   jou/CM FLOW of via goedgekeurde connector; daarna CM SOCIAL-lijst-ID's invullen. Zie
-   "Uit te voeren ClickUp-schrijfacties".
-4. 🔨 **Space-naam-typo** `CUSTOMMMADE` → `CUSTOMMADE` corrigeren (ClickUp-schrijfactie) — akkoord.
+3. ✅ **MARKETING-folder aangemaakt** (2026-08-14, folder-id `901517324271`) met vijf lijsten;
+   CM SOCIAL is gevuld in de `AGENT_LIST_MAP`.
+4. ⏳ **Space-naam-typo** `CUSTOMMMADE` → `CUSTOMMADE` — **kan nog niet automatisch**: de ClickUp
+   MCP-toolset heeft geen "space hernoemen"-actie (alleen folders/lijsten). Handmatig te doen in de
+   ClickUp-UI: Space-instellingen → naam wijzigen naar `CUSTOMMADE AGENCY`. Cosmetisch; blokkeert
+   de feed niet.
 
-## Uit te voeren ClickUp-schrijfacties (door jou/CM FLOW of goedgekeurde connector)
+## Resterende handmatige actie
 
-Deze twee acties zijn **schrijfacties** en zijn READ-ONLY buiten deze reconciliatie gehouden:
-
-1. **MARKETING-folder aanmaken** in space `CUSTOMMADE AGENCY` (id `90154573019`) met de lijsten:
-   `Content Calendar`, `Website & SEO`, `Press & Media`, `Social Publishing`, `Campaigns`.
-   Eigenaar-agent: **CM SOCIAL**. Noteer de nieuwe lijst-ID's en vul ze in bij `"CM SOCIAL"` in
-   de `AGENT_LIST_MAP`.
-2. **Space hernoemen** `CUSTOMMMADE AGENCY` → `CUSTOMMADE AGENCY` (typefout, drie M'en → twee).
+- **Space hernoemen** `CUSTOMMMADE AGENCY` → `CUSTOMMADE AGENCY` in de ClickUp-UI (geen
+  API/MCP-tool beschikbaar voor space-rename).
 
 ## Guardrails toegepast in deze reconciliatie
 
