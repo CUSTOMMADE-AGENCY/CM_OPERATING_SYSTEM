@@ -20,6 +20,8 @@
  *   CLICKUP_TOKEN        = pk_xxx            (ClickUp personal API token, read-scope)
  *   AGENT_LIST_MAP       = {"CM OPS":["<listId>",...],"CM LEGAL":["<listId>"], ...}
  *                          (per agent de ClickUp-list-ID's die zijn tab voeden; vul na reconciliatie)
+ *                          Optioneel ":closed"-suffix op een list-ID (bv. "<listId>:closed") haalt
+ *                          óók afgeronde/gesloten taken op — voor terminale lijsten WON/LOST/COMPLETED.
  *   MONEYBIRD_TOKEN      = <token>           (optioneel; voor de MONEY-tab)
  *   MONEYBIRD_ADMIN_ID   = <administratie-id>(CM-administratie; nooit EXTERNE_ENTITEIT)
  *
@@ -100,8 +102,14 @@ function ctfOpenSheet_() {
 }
 
 // ---- ClickUp ----
-function ctfClickUpListRows_(listId, token) {
+function ctfClickUpListRows_(listToken, token) {
   // ClickUp pagineert /list/{id}/task in blokken van 100; loop tot last_page.
+  // listToken mag een ":closed"-suffix hebben (bv. "901523770692:closed") → dan worden ook
+  // afgeronde/gesloten taken opgehaald. Zo tonen terminale lijsten (WON/LOST/COMPLETED) hun
+  // items, zonder actieve lijsten met oude historie te overspoelen.
+  var parts = String(listToken).split(':');
+  var listId = parts[0];
+  var includeClosed = parts.indexOf('closed') !== -1;
   var rows = [];
   var listName = listId;
   var page = 0;
@@ -113,7 +121,8 @@ function ctfClickUpListRows_(listId, token) {
       throw new Error('ClickUp list ' + listId + ' > ' + MAX_PAGES + ' pagina\'s; afgebroken.');
     }
     var url = CTF_CLICKUP_BASE + '/list/' + listId +
-      '/task?archived=false&include_closed=false&subtasks=false&page=' + page;
+      '/task?archived=false&include_closed=' + (includeClosed ? 'true' : 'false') +
+      '&subtasks=false&page=' + page;
     var res = UrlFetchApp.fetch(url, {
       method: 'get',
       headers: { Authorization: token },
@@ -221,7 +230,7 @@ function ctfMapStatus_(status) {
   if (/(escal)/.test(s)) return '🔴 Blocked';
   if (/(waiting|wacht|on hold|hold)/.test(s)) return '⏳ Waiting-On';
   if (/(approval|sophia|gate)/.test(s)) return '🔒 Gate';
-  if (/(done|complete|closed|afgerond|published)/.test(s)) return '✅ Done';
+  if (/(done|complete|closed|afgerond|published|won|lost)/.test(s)) return '✅ Done';
   return '🟢 Op koers';
 }
 

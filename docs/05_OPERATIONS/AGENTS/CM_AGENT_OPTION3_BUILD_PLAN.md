@@ -46,7 +46,7 @@
       (FIERCE/EXTERNE_ENTITEIT uitgesloten; CM SOCIAL leeg tot MARKETING bestaat).
 - [ ] Control Tower **voeden** met live data: tokens + de gereconcilieerde `AGENT_LIST_MAP` in
       Script Properties zetten, `refreshControlTower()` autoriseren + `installControlTowerFeedTrigger()`
-      draaien (CM FLOW).
+      draaien (CM FLOW). **Klik-voor-klik:** `CM_AGENT_CONTROL_TOWER_DEPLOY_RUNBOOK.md`.
 - [ ] De fase-2 Make-scenario's bouwen (OPS-onboarding, MONEY open-items, LEGAL/SOCIAL/PROSPECT reminders)
       via de scenario-lifecycle (`MAKE_SCENARIO_MAP.md`), elk met gate.
 - [ ] CM CONTROL **wekelijkse digest** activeren.
