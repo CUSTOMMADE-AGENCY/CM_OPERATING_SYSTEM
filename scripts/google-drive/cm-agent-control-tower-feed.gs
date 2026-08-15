@@ -5,16 +5,20 @@
  *
  * Doel:
  * - Vult het "CM AGENT CONTROL TOWER"-blad automatisch: per agent-tab de open items uit
- *   ClickUp; de MONEY-tab tevens met open posten uit Moneybird.
+ *   ClickUp; de MONEY-tab tevens met open posten uit Moneybird; en per agent een bounded
+ *   signaal uit Gmail (recente ongelezen mails van een gemapt label) en Google Drive (recent
+ *   gewijzigde bestanden in de agent-map). Gmail/Drive draaien native — geen tokens nodig.
  * - Draait op een tijd-trigger (installControlTowerFeedTrigger()).
  *
  * Veiligheid / grenzen:
- * - READ-ONLY op de bronsystemen: haalt alleen data OP uit ClickUp/Moneybird; wijzigt daar niets.
+ * - READ-ONLY op alle bronnen: haalt alleen data OP uit ClickUp/Moneybird/Gmail/Drive; wijzigt,
+ *   markeert of verplaatst daar niets.
  * - Schrijft UITSLUITEND in de agent-datatabs van dit ene Control Tower-blad (spiegel), onder de
  *   kopregel. COCKPIT, LEGENDA en formules blijven ongemoeid. Verwijdert geen tabbladen.
- * - Tokens staan NOOIT in de code: lees ze uit Script Properties.
- * - Config-gedreven en degraderend: agents zonder geconfigureerde lijst-ID's worden overgeslagen
- *   (zolang de ClickUp-reconciliatie nog loopt), zonder de rest te breken.
+ * - Tokens staan NOOIT in de code: lees ze uit Script Properties. Gmail/Drive gebruiken de native
+ *   GmailApp/DriveApp van het CM-account (geen tokens); FIERCE/EXTERNE_ENTITEIT bewust uitgesloten.
+ * - Config-gedreven en degraderend: agents zonder geconfigureerde bron worden overgeslagen zonder
+ *   de rest te breken. Gmail/Drive zijn "bounded": alleen recente items, gecapt (geen inbox-kopie).
  *
  * Eenmalige setup (Project Settings → Script Properties):
  *   CLICKUP_TOKEN        = pk_xxx            (ClickUp personal API token, read-scope)
@@ -26,8 +30,11 @@
  *                          óók afgeronde/gesloten taken op — voor terminale lijsten WON/LOST/COMPLETED.
  *   MONEYBIRD_TOKEN      = <token>           (optioneel; voor de MONEY-tab)
  *   MONEYBIRD_ADMIN_ID   = <administratie-id>(CM-administratie; nooit EXTERNE_ENTITEIT)
+ *   AGENT_GMAIL_MAP      = {"CM MONEY":"FINANCE&FACTUREN", ...}   (optioneel; anders ingebouwde standaard)
+ *   AGENT_DRIVE_MAP      = {"CM MONEY":["<folderId>"], ...}       (optioneel; anders ingebouwde standaard)
  *
- * Daarna: run refreshControlTower() handmatig (autoriseer), dan installControlTowerFeedTrigger().
+ * Daarna: run refreshControlTower() handmatig (autoriseer — 1e keer óók Gmail/Drive-scopes),
+ * dan installControlTowerFeedTrigger().
  */
 
 const CTF_SHEET_NAME = 'CM AGENT CONTROL TOWER';
@@ -35,13 +42,49 @@ const CTF_CLICKUP_BASE = 'https://api.clickup.com/api/v2';
 const CTF_DATA_FIRST_ROW = 2;               // rij 1 = kopregel (van cm-agent-control-tower.gs)
 const CTF_DATA_COLS = 10;                    // A..J, zie CT_AGENT_HEADERS
 
+// Gmail/Drive = bounded signaal: alleen recente items, gecapt per agent (geen inbox-kopie).
+const CTF_RECENT_DAYS = 14;                  // venster voor Gmail-ongelezen en Drive-wijzigingen
+const CTF_GMAIL_MAX = 10;                    // max mails per agent
+const CTF_DRIVE_MAX = 10;                    // max recent gewijzigde bestanden per agent
+const CTF_DRIVE_MAX_FOLDERS = 80;           // scan-grens per agent (voorkomt time-outs)
+
+// Standaardmapping agent → Gmail-label (thematisch; FIERCE/EXTERNE_ENTITEIT bewust uitgesloten).
+// Overschrijfbaar via Script Property AGENT_GMAIL_MAP (JSON). Lege label = agent overgeslagen.
+const CTF_GMAIL_MAP_DEFAULT = {
+  'CM MONEY': 'FINANCE&FACTUREN',
+  'CM LEGAL': 'BUSINESS&LEGAL',
+  'CM CONTROL': 'TO-DO',
+  'CM OPS': 'ADMIN/BOEKINGEN',
+  'CM PROSPECT': 'ADMIN/SPONSORING',
+};
+
+// Standaardmapping agent → Drive-map(pen) onder OS_CUSTOMMADE (folder-ID's).
+// Overschrijfbaar via Script Property AGENT_DRIVE_MAP (JSON).
+const CTF_DRIVE_MAP_DEFAULT = {
+  'CM MONEY': ['1Yxs29O5zC0bC9VR-SjnEUc6ojR6620uK'],                                  // 06_FINANCE
+  'CM LEGAL': ['1gj-glzUt9n5fa38-jSZtR-5H2f3eh48X', '1ZKY7qOVggqThgY1VHcXv70uNdQvVPNpJ'], // 07_LEGAL, 04_DEALS
+  'CM OPS': ['12k8NabqqHAvc-W7RRec_a9inhQTR3pqt', '1fJoLC2PL2r5RGFHde0AmZ4Gs4A2eGtS1'],    // 03_CLIENTS, 02_ARTIST_MANAGEMENT
+  'CM PROSPECT': ['1izvO63CpCDdEJm1_bmYX3xCsbklsqg-J'],                               // 01_MASTER_BOUTIQUE
+  'CM SOCIAL': ['1sgz_QOmWrK-pQ2fOv_Qw-X-LPw6RZGQc', '1INi8P1nmqnHAOMyMORjKZkLI7N2wZOZH'], // 08_MARKETING, 09_CONTENT
+  'CM CONTROL': ['1gaDQm1QP44sbuUVbS8kkFFe_ul9RxRfE'],                               // 00_ADMIN
+  'CM VAULT': ['1UDYPPEKPH8WZV-Q2Gi-VY1mmIc6G83KE'],                                 // 05_OPERATIONS
+};
+
 function refreshControlTower() {
   const cfg = ctfConfig_();
   const ss = ctfOpenSheet_();
   const agentMap = cfg.agentListMap || {};
+  const gmailMap = cfg.gmailMap || {};
+  const driveMap = cfg.driveMap || {};
   const summary = { agents: 0, rows: 0, skipped: 0, errors: [] };
 
-  Object.keys(agentMap).forEach(function (agent) {
+  // Unie van alle agents die door één van de bronnen worden gevoed.
+  const allAgents = {};
+  [agentMap, gmailMap, driveMap].forEach(function (m) {
+    Object.keys(m).forEach(function (k) { allAgents[k] = true; });
+  });
+
+  Object.keys(allAgents).forEach(function (agent) {
     const sh = ss.getSheetByName(agent);
     if (!sh) { summary.errors.push('Tab ontbreekt: ' + agent); return; }
     let rows = [];
@@ -58,6 +101,16 @@ function refreshControlTower() {
     if (agent === 'CM MONEY' && cfg.moneybirdToken && cfg.moneybirdAdminId) {
       try { rows = rows.concat(ctfMoneybirdRows_(cfg.moneybirdAdminId, cfg.moneybirdToken)); }
       catch (e) { failed = true; summary.errors.push('Moneybird: ' + ctfMsg_(e)); }
+    }
+    // Gmail: recente ongelezen mails uit het gemapte label (bounded).
+    if (gmailMap[agent]) {
+      try { rows = rows.concat(ctfGmailRows_(gmailMap[agent])); }
+      catch (e) { failed = true; summary.errors.push(agent + ' Gmail: ' + ctfMsg_(e)); }
+    }
+    // Drive: recent gewijzigde bestanden in de gemapte agent-map(pen) (bounded).
+    if (driveMap[agent]) {
+      try { rows = rows.concat(ctfDriveRows_(driveMap[agent])); }
+      catch (e) { failed = true; summary.errors.push(agent + ' Drive: ' + ctfMsg_(e)); }
     }
     // Bij een (tijdelijke) bronfout NIET overschrijven: bewaar de laatste geslaagde
     // momentopname, zodat de cockpit tijdens een 401/429/5xx-storing geen blockers "verliest".
@@ -107,7 +160,15 @@ function ctfConfig_() {
     agentListMap: map,
     moneybirdToken: p.getProperty('MONEYBIRD_TOKEN') || '',
     moneybirdAdminId: p.getProperty('MONEYBIRD_ADMIN_ID') || '',
+    gmailMap: ctfParseMap_(p.getProperty('AGENT_GMAIL_MAP'), 'AGENT_GMAIL_MAP') || CTF_GMAIL_MAP_DEFAULT,
+    driveMap: ctfParseMap_(p.getProperty('AGENT_DRIVE_MAP'), 'AGENT_DRIVE_MAP') || CTF_DRIVE_MAP_DEFAULT,
   };
+}
+
+// Optionele override-map uit een Script Property; leeg = gebruik de ingebouwde standaard.
+function ctfParseMap_(raw, name) {
+  if (!raw) return null;
+  try { return JSON.parse(raw); } catch (e) { throw new Error(name + ' is geen geldige JSON.'); }
 }
 
 function ctfOpenSheet_() {
@@ -224,6 +285,69 @@ function ctfMbInvoices_(adminId, token, resource, filter, label, isPurchase) {
       '', // reden/notitie leeg laten: anders overschrijft de placeholder handmatige aantekeningen
     ];
   });
+}
+
+// ---- Gmail (native, geen token) ----
+// Recente ongelezen threads uit één label. READ-ONLY: leest alleen, markeert/verplaatst niets.
+function ctfGmailRows_(labelName) {
+  var label = GmailApp.getUserLabelByName(labelName);
+  if (!label) return [];                        // label bestaat niet (meer) → stil overslaan
+  var threads = label.getThreads(0, 50);        // 50 meest recente threads van dit label
+  var cutoff = Date.now() - CTF_RECENT_DAYS * 86400000;
+  var out = [];
+  for (var i = 0; i < threads.length && out.length < CTF_GMAIL_MAX; i++) {
+    var th = threads[i];
+    var d = th.getLastMessageDate();
+    if (th.isUnread() && d.getTime() >= cutoff) {
+      out.push([
+        th.getFirstMessageSubject() || '(geen onderwerp)',
+        'Gmail – ' + labelName,
+        th.getPermalink(),
+        '📧 Mail',
+        '', '', '', '',
+        ctfDate_(d.getTime()),
+        '',
+      ]);
+    }
+  }
+  return out;
+}
+
+// ---- Drive (native, geen token) ----
+// Recent gewijzigde bestanden in de agent-map(pen), begrensd gescand (voorkomt time-outs).
+function ctfDriveRows_(folderIds) {
+  var cutoff = Date.now() - CTF_RECENT_DAYS * 86400000;
+  var found = [];
+  var visited = 0;
+  (folderIds || []).forEach(function (rootId) {
+    var queue = [];
+    try { queue.push(DriveApp.getFolderById(rootId)); } catch (e) { return; }
+    while (queue.length && visited < CTF_DRIVE_MAX_FOLDERS) {
+      var folder = queue.shift();
+      visited++;
+      var name = folder.getName();
+      var files = folder.getFiles();
+      while (files.hasNext()) {
+        var f = files.next();
+        var t = f.getLastUpdated().getTime();
+        if (t >= cutoff) {
+          found.push({ t: t, row: [
+            f.getName(),
+            'Drive – ' + name,
+            f.getUrl(),
+            '📄 Bestand',
+            '', '', '', '',
+            ctfDate_(t),
+            '',
+          ] });
+        }
+      }
+      var subs = folder.getFolders();
+      while (subs.hasNext()) { queue.push(subs.next()); }
+    }
+  });
+  found.sort(function (a, b) { return b.t - a.t; });   // nieuwste eerst
+  return found.slice(0, CTF_DRIVE_MAX).map(function (x) { return x.row; });
 }
 
 // ---- schrijven (alleen de datatabs van dit spiegel-blad) ----
