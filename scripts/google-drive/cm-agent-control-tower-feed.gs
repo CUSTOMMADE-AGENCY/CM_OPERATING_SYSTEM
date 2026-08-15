@@ -18,6 +18,8 @@
  *
  * Eenmalige setup (Project Settings → Script Properties):
  *   CLICKUP_TOKEN        = pk_xxx            (ClickUp personal API token, read-scope)
+ *                          Ook aanvaard: CLICKUP_API_TOKEN / CM_CLICKUP_TOKEN / CM_CLICKUP_API_TOKEN
+ *                          (hergebruikt een bestaand projecttoken zonder dubbele eigenschap).
  *   AGENT_LIST_MAP       = {"CM OPS":["<listId>",...],"CM LEGAL":["<listId>"], ...}
  *                          (per agent de ClickUp-list-ID's die zijn tab voeden; vul na reconciliatie)
  *                          Optioneel ":closed"-suffix op een list-ID (bv. "<listId>:closed") haalt
@@ -80,10 +82,23 @@ function installControlTowerFeedTrigger() {
 }
 
 // ---- config ----
+// Aanvaard het ClickUp-token onder meerdere gangbare propertynamen, zodat de feed het bestaande
+// token van dit project hergebruikt zonder een dubbele eigenschap te vereisen.
+const CTF_CLICKUP_TOKEN_KEYS = [
+  'CLICKUP_TOKEN', 'CLICKUP_API_TOKEN', 'CM_CLICKUP_TOKEN', 'CM_CLICKUP_API_TOKEN',
+];
+
 function ctfConfig_() {
   const p = PropertiesService.getScriptProperties();
-  const token = p.getProperty('CLICKUP_TOKEN');
-  if (!token) throw new Error('CLICKUP_TOKEN ontbreekt in Script Properties.');
+  let token = '';
+  for (var i = 0; i < CTF_CLICKUP_TOKEN_KEYS.length; i++) {
+    token = p.getProperty(CTF_CLICKUP_TOKEN_KEYS[i]);
+    if (token) break;
+  }
+  if (!token) {
+    throw new Error('ClickUp-token ontbreekt in Script Properties (verwacht een van: ' +
+      CTF_CLICKUP_TOKEN_KEYS.join(', ') + ').');
+  }
   let map = {};
   const raw = p.getProperty('AGENT_LIST_MAP');
   if (raw) { try { map = JSON.parse(raw); } catch (e) { throw new Error('AGENT_LIST_MAP is geen geldige JSON.'); } }
