@@ -186,27 +186,39 @@ function ctfCustomField_(task, names) {
 }
 
 // ---- Moneybird ----
+// Open posten = debiteuren (open verkoopfacturen, geld dat binnenkomt) ÉN crediteuren (open
+// inkoopfacturen, geld dat betaald moet worden). Beide op de CM MONEY-tab.
 function ctfMoneybirdRows_(adminId, token) {
-  const url = 'https://moneybird.com/api/v2/' + adminId +
-    '/sales_invoices.json?filter=' + encodeURIComponent('state:open');
-  const res = UrlFetchApp.fetch(url, {
+  var out = [];
+  out = out.concat(ctfMbInvoices_(adminId, token, 'sales_invoices', 'state:open',
+    'Open Posten – Debiteuren (Moneybird)', false));
+  out = out.concat(ctfMbInvoices_(adminId, token, 'documents/purchase_invoices', 'state:open',
+    'Open Posten – Crediteuren (Moneybird)', true));
+  return out;
+}
+
+function ctfMbInvoices_(adminId, token, resource, filter, label, isPurchase) {
+  var url = 'https://moneybird.com/api/v2/' + adminId + '/' + resource +
+    '.json?filter=' + encodeURIComponent(filter);
+  var res = UrlFetchApp.fetch(url, {
     method: 'get',
     headers: { Authorization: 'Bearer ' + token },
     muteHttpExceptions: true,
   });
   if (res.getResponseCode() !== 200) {
-    throw new Error('Moneybird ' + res.getResponseCode());
+    throw new Error('Moneybird ' + resource + ' ' + res.getResponseCode());
   }
-  const invoices = JSON.parse(res.getContentText());
-  return (invoices || []).map(function (inv) {
+  var invoices = JSON.parse(res.getContentText()) || [];
+  return invoices.map(function (inv) {
+    var bedrag = inv.total_unpaid || inv.total_price_incl_tax || '';
     return [
-      'Factuur ' + (inv.invoice_id || inv.reference || inv.id),
-      'Open Posten (Moneybird)',
+      (isPurchase ? 'Inkoopfactuur ' : 'Verkoopfactuur ') + (inv.reference || inv.invoice_id || inv.id),
+      label,
       inv.url || '',
       '🔴 Blocked' /* open post = aandacht */,
       (inv.contact && (inv.contact.company_name || inv.contact.first_name)) || '',
       inv.due_date || '',
-      (inv.total_unpaid ? ('onbetaald ' + inv.total_unpaid) : ''),
+      (bedrag ? ((isPurchase ? 'te betalen ' : 'openstaand ') + bedrag) : ''),
       inv.state || 'open',
       inv.updated_at ? inv.updated_at.substring(0, 10) : '',
       '', // reden/notitie leeg laten: anders overschrijft de placeholder handmatige aantekeningen
