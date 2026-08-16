@@ -1,23 +1,44 @@
-<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog Engelstalig / pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. Inhoud ongewijzigd t.o.v. bron. -->
+<!-- RECONCILIATIE VEREIST (ADR-2026-07-02): dit bestand is verplaatst uit de opgeheven lowercase docs-tree en is nog deels pré-baseline. CM VAULT reconcilieert taal en formaat met de CM OS V1.0 standaard. -->
 
-# Gmail Templates
+# GMAIL TEMPLATES
 
-This register defines the reusable Gmail templates CM should maintain. Template bodies live in Gmail; GitHub records the approved template names, purpose, owner, and usage rules.
+## **DOEL**
 
-## Template rules
+Dit register definieert welke herbruikbare Gmail-templates Custommade Agency onderhoudt. Template-inhoud leeft operationeel in Gmail; GitHub registreert de goedgekeurde templatenamen, doelen, owners en gebruiksregels.
 
-- Use professional, concise language.
-- Personalize the first paragraph and action request.
-- Do not include confidential client information in reusable templates.
-- Keep deal-sensitive attachments in Drive or the approved portal.
+Alle Gmail-templates, drafts en replies volgen verplicht:
 
-## INTRODUCER
+`docs/05_OPERATIONS/KNOWLEDGE_BASE/TEMPLATES/06_GMAIL_TEMPLATES/EMAIL_INSTRUCTIONS_TEMPLATE.md`
+
+Deze centrale standaard is leidend voor:
+
+- tone of voice;
+- inhoudelijke autoriteit per Owner Agent;
+- threaded replies via Gmail `message_id` / `reply_message_id`;
+- gebruik van `info@custommade.agency`;
+- centrale CM-handtekening;
+- `REVIEW_REQUIRED` bij materiële onzekerheid;
+- recipient-, attachment- en Source of Truth-checks;
+- ClickUp-opvolging wanneer e-mail een actie of deadline creëert.
+
+## **TEMPLATEREGELS**
+
+- Gebruik professioneel, duidelijk en compact taalgebruik.
+- Personaliseer opening en call-to-action op basis van de actuele thread/context.
+- Artistcommunicatie mag warmer en persoonlijker zijn conform de centrale communicatiestandaard.
+- Vraag geen informatie opnieuw wanneer deze al aantoonbaar beschikbaar is in geldige CM-systemen.
+- Neem geen onbevestigde juridische, financiële, commerciële of rights-feiten op.
+- Plaats geen vertrouwelijke clientinformatie in herbruikbare templates.
+- Bewaar deal-sensitive attachments in Drive of de goedgekeurde operationele locatie.
+- Templates bepalen nooit zelfstandig approval; de toepasselijke governance blijft leidend.
+
+## **INTRODUCER**
 
 | Template | Purpose | When to use |
 | --- | --- | --- |
 | Introducer Agreement Mail | Send or follow up on introducer terms. | Before accepting active deal introductions. |
 
-## MASTER BOUTIQUE
+## **MASTER BOUTIQUE**
 
 | Template | Purpose | When to use |
 | --- | --- | --- |
@@ -33,7 +54,7 @@ This register defines the reusable Gmail templates CM should maintain. Template 
 | Closing Confirmation | Confirm transaction closing steps. | At closing completion. |
 | Success Fee Invoice | Send or coordinate success-fee invoice. | After fee trigger. |
 
-## ARTIST MANAGEMENT
+## **ARTIST MANAGEMENT**
 
 | Template | Purpose | When to use |
 | --- | --- | --- |
