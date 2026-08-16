@@ -1,75 +1,90 @@
 # CM_OS — Optie 3 Build Plan (combinatie)
 
-> Versie: v1.0 · Status: **BUILD PLAN (pre-production)** · Datum: 2026-08-11
-> Besluit accounteigenaar: **Optie 3** (huidige stack als fundament + gerichte AI-agent-laag).
+> Versie: v1.1 · Status: **BUILD / DEPLOYMENT PLAN (fase 2 actief, pre-production agents)** · Datum: 2026-08-16
+> Besluit accounteigenaar: **Optie 3** — huidige stack als fundament + gerichte AI-agent-laag.
 > Basis: `CM_AGENT_EXECUTION_OPTIONS.md`.
 
 ## Kern van Optie 3
 
-- **Fundament + connectielaag:** de huidige stack — ClickUp (uitvoering), Drive (documenten),
-  Moneybird (finance), GitHub (governance), Make + Apps Script (koppeling/automatisering).
-- **AI-brein:** **Claude Projects / custom GPTs per agent** (paspoort + runbook als instructie).
-  Geen aparte orchestrator in v1; die komt pas bij opschaling richting Optie 1.
-- **Controle:** **Google Sheet "Agent Control Tower"** (dit plan levert de opzet) + wekelijkse
-  CM CONTROL digest-mail.
-- **Autonomie:** per agent, exact volgens de runbook-guardrails.
+- **Fundament + connectielaag:** ClickUp (uitvoering), Drive (documenten), Moneybird (finance), GitHub (governance), Make + Apps Script (koppeling/automatisering).
+- **AI-brein:** per-agent operating prompts gekoppeld aan ACTIVE + RUNBOOK + BUILD SPEC + CERTIFICATION. ChatGPT/Claude zijn analyse-/interfacelagen en nooit officiële state.
+- **Controle:** Google Sheet **CM AGENT CONTROL TOWER** + CM CONTROL; de Sheet is een human-readable mirror, niet de source of truth.
+- **Runtimewaarheid:** `AGENT_CAPABILITY_REGISTER.md` voor connection/permission/capability state; `MAKE_SCENARIO_MAP.md` voor Make-status.
+- **Autonomie:** alleen aantoonbare capabilities; ontworpen capability ≠ connected capability ≠ bewezen live gedrag.
 
 ## Rolverdeling
 
 | Wie | Doet |
 |---|---|
-| **Ik (in de repo)** | Specs, Apps Script, operating-prompts, Control Tower-opzet, evidence — alles wat als code/documentatie in GitHub kan. |
-| **Accounteigenaar / CM FLOW** | Deployt in de eigen omgeving: Apps Script draaien, Make-scenario's aan/uit, ClickUp inrichten, Claude/GPT-projects aanmaken (connector-writes zijn in mijn sessie geblokkeerd). |
-| **Sophia** | Approval-gates: activatie, publicatie, finance, legal, productiestatus. |
+| **CM FLOW** | Bouwt/test integraties, scripts, automation, deployment, logging en rollback; beheert technische evidence. |
+| **Owner-agent** | Functionele acceptatie binnen eigen domein; geen capability buiten mandaat. |
+| **CM CONTROL** | Governance, conformance, prioriteit, escalaties en approval-routing. |
+| **Sophia** | Finale gates voor production activation, externe/bindende/high-impact writes, finance/legal/publicatie waar vereist. |
 
-## Fasering
+## Huidige status per fase
 
-### Fase 0 — Nu (in de repo, door mij)
-- [x] **Control Tower Sheet-opzet** — `scripts/google-drive/cm-agent-control-tower.gs` (maakt het
-      controleblad: cockpit + tab per agent; idempotent, verwijdert nooit).
-- [ ] **AI operating-prompts per agent** — de instructieteksten (brein) voor Claude Projects/GPTs,
-      afgeleid van paspoort + runbook + build spec. *(volgende stap)*
+### Fase 0 — Repo-fundament — **AFGEROND**
+- [x] Agent Definition Standard v2.0.
+- [x] Acht ACTIVE-definities met 18 verplichte secties als canonieke rol-/mandaatlaag.
+- [x] Acht runbooks v2.0.
+- [x] Build specs.
+- [x] Acht operating prompts.
+- [x] Certification passports.
+- [x] `AGENT_CAPABILITY_REGISTER.md` als runtime truth.
+- [x] FLOW v2-reference implementation.
+- [x] VAULT P0-conflict opgelost: CM VAULT V1 is read-only + `PAUSED`; folder creation hoort bij FLOW/Apps Script.
 
-### Fase 1 — Opzetten (door accounteigenaar / CM FLOW)
-- [ ] Control Tower Sheet deployen: script draaien in de CM Google-omgeving → blad `CM AGENT CONTROL TOWER`.
-- [ ] Per agent een **Claude Project / GPT** aanmaken en de operating-prompt erin plakken.
-- [ ] **CM VAULT als proef-agent** live afmaken: module-11-fix + `Run once` + `ACTIVE` (het traject
-      ligt klaar in `CERTIFICATION/EVIDENCE/CM_VAULT_TESTPLAN_LOGSPEC.md`).
+### Fase 1 — Control & substrate — **GROTENDEELS AFGEROND**
+- [x] Control Tower builder gedeployed; Google Sheet `CM AGENT CONTROL TOWER` bestaat.
+- [x] Tabs: COCKPIT + 8 agents + LEGENDA.
+- [x] Live ClickUp-reconciliatie uitgevoerd en `AGENT_LIST_MAP` vastgelegd.
+- [x] `EMAIL ACTIES` toegewezen aan CM OPS.
+- [x] Terminale lijsten WON/LOST/COMPLETED zichtbaar via opt-in `:closed`.
+- [x] MARKETING-folder + vijf CM SOCIAL-lijsten aangemaakt en gemapt.
+- [x] Externe-entiteit/FIERCE uitgesloten van alle CM-agentfeeds.
+- [ ] ClickUp space cosmetisch hernoemen `CUSTOMMMADE AGENCY` → `CUSTOMMADE AGENCY` (blokkeert execution niet).
 
-### Fase 2 — Verbinden (CM FLOW)
-- [x] **Feed-script geschreven** (in-repo): `scripts/google-drive/cm-agent-control-tower-feed.gs` — vult de
-      Control Tower automatisch met ClickUp-status + Moneybird open posten (READ-ONLY op de bronnen,
-      schrijft alleen in de agent-tabs, tokens uit Script Properties, uurtrigger). Wordt volledig
-      functioneel zodra `AGENT_LIST_MAP` is ingevuld na de ClickUp-reconciliatie.
-- [x] **`AGENT_LIST_MAP` gereconcilieerd** tegen de live ClickUp-structuur:
-      `docs/05_OPERATIONS/AGENTS/CM_AGENT_CLICKUP_RECONCILIATION.md` bevat de kant-en-klare JSON
-      (FIERCE/EXTERNE_ENTITEIT uitgesloten; CM SOCIAL leeg tot MARKETING bestaat).
-- [ ] Control Tower **voeden** met live data: tokens + de gereconcilieerde `AGENT_LIST_MAP` in
-      Script Properties zetten, `refreshControlTower()` autoriseren + `installControlTowerFeedTrigger()`
-      draaien (CM FLOW). **Klik-voor-klik:** `CM_AGENT_CONTROL_TOWER_DEPLOY_RUNBOOK.md`.
-- [ ] De fase-2 Make-scenario's bouwen (OPS-onboarding, MONEY open-items, LEGAL/SOCIAL/PROSPECT reminders)
-      via de scenario-lifecycle (`MAKE_SCENARIO_MAP.md`), elk met gate.
-- [ ] CM CONTROL **wekelijkse digest** activeren.
+### Fase 2 — Verbinden & execution proof — **ACTIEF**
+- [x] Control Tower feed-script geschreven en gedeployed.
+- [x] ClickUp-readfeed vult agent-tabs met echte ClickUp-objecten/links.
+- [x] Feed resilience: pagination, snapshot preservation, manual-note preservation.
+- [x] Token-property compatibility voor bestaande ClickUp Script Properties (PR #246).
+- [ ] Verifiëren/registreren dat uurtrigger structureel draait met recente run evidence.
+- [ ] Moneybird-feed technisch bewijzen met echte Moneybird API-evidence; tot die tijd blijft MONEY connection state conservatief.
+- [ ] **CM OPS als eerste end-to-end execution-agent bewijzen** volgens `CERTIFICATION/EVIDENCE/CM_OPS_EXECUTION_PROOF_V1.md`.
+- [ ] Na OPS-proof: MONEY → LEGAL → PROSPECT → SOCIAL v2/runtime-conformance en execution proof.
+- [ ] VAULT alleen opnieuw testen/activeren wanneer eigen production gates groen zijn; geen kunstmatige afhankelijkheid van FLOW/OPS.
+- [ ] CM CONTROL wekelijkse digest op echte runtime-evidence activeren.
 
-### Fase 3 — Opschalen (optioneel, richting Optie 1)
-- [ ] Bij groei: een echte agent-orchestrator + dashboard/audit-DB toevoegen — zonder herbouw, de
-      stack en Control Tower blijven bestaan.
+### Fase 3 — Production approval & opschalen — **NIET GESTART**
+- [ ] Per agent functionele tests + red-team tests.
+- [ ] Monitoring aantoonbaar actief.
+- [ ] Certification score ≥90.
+- [ ] Sophia production approval per agent.
+- [ ] Capability state pas daarna verhogen naar production/proven-live waar bewijs dit ondersteunt.
+- [ ] Later optioneel: dedicated orchestrator + audit/event store, zonder bestaande sources of truth te vervangen.
 
-## Autonomie- en gate-matrix (samenvatting)
+## Actuele autonomie- en gate-matrix
 
-| Agent | Model | Autonoom | Gate |
+| Agent | Actuele runtimebasis | Nu toegestaan | Nog niet bewezen / gate |
 |---|---|---|---|
-| VAULT | automatisering | hoog (verwijdert nooit) | verplaatsing = bevestiging |
-| FLOW | bouwer + AI | bouwen/testen | activeren/mergen = CONTROL + Sophia |
-| OPS | flow + AI-assist | ClickUp-uitvoering | extern/finance/legal/publicatie |
-| MONEY | Moneybird-flow + AI | signaleren (read-only) | betaling/BTW/incasso = Sophia |
-| LEGAL | AI-assistent | review/advies | ondertekening/verplichting = Sophia |
-| PROSPECT | AI-assist | prep/kwalificatie | outreach/voorstel/prijs = Sophia |
-| SOCIAL | AI-assist | content-prep | publicatie/pers = Sophia |
-| CONTROL | AI + orchestratie | prioriteren/routeren/audit | mergen/activeren nooit; GO = Sophia |
+| VAULT | Read-only audit; V1 `PAUSED` | Inspecteren/detecteren/rapporteren | Drive-mutation; production automation |
+| FLOW | GitHub + Make/Apps Script buildlaag | Ontwerpen/bouwen/testen | Production activation/datamutatie zonder gate |
+| OPS | ClickUp read-feed bewezen | Lezen, analyseren, voorbereiden | ClickUp write moet end-to-end bewezen worden |
+| MONEY | Control Tower ClickUp finance-items; Moneybird nog apart te bewijzen | Signaleren uit bewezen bronnen | Moneybird connection/write; betaling/BTW/incasso |
+| LEGAL | Documentatie/runbook | Review/draft na bronconnectie | Binding action/ondertekening/verplichting |
+| PROSPECT | ClickUp pipeline-feed | Research/kwalificatie binnen bewezen read | Outreach/voorstel/prijs zonder approval |
+| SOCIAL | MARKETING-lanes gemapt | Planning/read zodra items bestaan | Publicatie/pers zonder approval |
+| CONTROL | GitHub + cockpit/read | Review/routering/audit | Geen autonome final GO/merge/activation |
 
-## Directe volgende stap
+## Eerstvolgende production milestone
 
-1. Control Tower Sheet deployen (Apps Script hieronder).
-2. Ik lever de **8 operating-prompts** (Claude/GPT) — zeg "ga door" en ik zet ze klaar.
-3. VAULT als proef live afmaken (jouw Make-actie), dan lees ik de resultaten uit en zet de gates op groen.
+**CM OPS Execution Proof V1** is de eerstvolgende mijlpaal. De test moet één echte, laag-risico operationele workflow aantonen:
+
+`trigger/source object → OPS decision → approval check → ClickUp WRITE → result task/event ID → Control Tower/readback → QC → execution evidence → final status`.
+
+Een succesvolle test verhoogt niet automatisch OPS naar Level 3. Hij mag alleen de specifiek geteste ClickUp-write capability verhogen wanneer alle vereiste evidence, failure test en approval-grenzen aantoonbaar zijn.
+
+## Definition of progress
+
+Een fase telt alleen als afgerond wanneer de status door object-/run-evidence wordt ondersteund. Repo-documentatie, een toolnaam of een ontworpen script is op zichzelf geen bewijs dat iets connected of live is.
