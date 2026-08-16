@@ -1,6 +1,6 @@
 # CM OPS — EXECUTION PROOF V1
 
-> Status: **EXECUTED — FUNCTIONAL WRITE/READBACK PASS · OBSERVABILITY BLOCKED**
+> Status: **EXECUTED — FUNCTIONAL WRITE/READBACK PASS · OBSERVABILITY PENDING (TIMING RACE IDENTIFIED)**
 > Datum: 2026-08-16
 > Agent: CM OPS AGENT
 > Scope: uitsluitend één gecontroleerde, laag-risico ClickUp `create_task` proof. Geen generieke OPS-write capability en geen Level 3-promotie.
@@ -19,10 +19,10 @@ Verplichte keten:
 - **Direct ClickUp readback:** PASS
 - **Owner/deadline/scope-QC:** PASS
 - **Duplicate/idempotency failure-case:** PASS op agent/preflight-niveau — tweede write is bewust niet aangeroepen nadat dezelfde `run_id`/dedup-key al aan task `86cb5v116` was gekoppeld.
-- **Control Tower observation:** BLOCKED/PENDING — de nieuwe task was tijdens deze proof nog niet zichtbaar in de OPS-tab.
-- **Capability promotion:** **NIET TOEGESTAAN** totdat observability/feed-refresh aantoonbaar PASS is en CM CONTROL de evidence reviewt.
+- **Control Tower observation:** **PENDING / NOT YET OBSERVED** — geen technische feed-failure bewezen.
+- **Capability promotion:** **NIET TOEGESTAAN** totdat een refresh ná task creation de task aantoonbaar observeert en CM CONTROL de evidence reviewt.
 
-De functionele connector-write is dus bewezen, maar de end-to-end observability-keten is nog niet volledig gesloten.
+De functionele connector-write is dus bewezen. De observability-check tijdens de eerste execution window was niet beslissend, omdat de Control Tower vlak vóór de task creation was ververst.
 
 ## 2. Gekozen testtype
 
@@ -129,17 +129,19 @@ Tweede poging met dezelfde execution identity:
 
 ## 6. Control Tower / observability
 
-De Control Tower OPS-tab is na de ClickUp-write doorzocht op `CM OPS EXECUTION PROOF V1`.
+De eerste Control Tower-check vond de nieuwe task niet in de OPS-tab. Een latere metadata-check heeft de timing echter opgehelderd:
 
-**Waarneming tijdens de proof:** geen match.
+- **Control Tower `modifiedTime`: 2026-08-16 13:53:17 Europe/Amsterdam**
+- **ClickUp task `86cb5v116` created: circa 2026-08-16 13:53:43 Europe/Amsterdam**
+- verschil: de Control Tower-refresh lag ongeveer **26 seconden vóór** de task creation.
 
-Daarmee is bewezen:
-- de directe ClickUp write/read-keten werkt;
-- maar de Control Tower/feed-keten heeft deze nieuwe task tijdens de test nog niet geobserveerd.
+Daarom mag de eerste non-match **niet** als feed-failure worden geïnterpreteerd. De refresh kon een object dat nog niet bestond niet tonen.
 
-Mogelijke oorzaak moet door CM FLOW worden vastgesteld (bijv. feed-trigger/refresh/deploy-status). Er wordt hier geen oorzaak als feit aangenomen zonder execution-log.
+De repository-feedcode bevat `EMAIL ACTIES` via `AGENT_LIST_MAP` en haalt actieve taken uit de gemapte ClickUp-lijsten. Er is op basis van deze proof geen codefout in die read-query bewezen.
 
-**Resultaat:** `BLOCKED/PENDING` voor observability.
+**Actuele observability-status:** `PENDING / NOT YET OBSERVED`.
+
+**PASS-voorwaarde:** een Control Tower-refresh met timestamp ná de task creation toont task `86cb5v116` in `CM OPS`, of levert equivalente execution-evidence van een geslaagde post-creation feed-run.
 
 ## 7. Evidence record
 
@@ -157,9 +159,11 @@ Mogelijke oorzaak moet door CM FLOW worden vastgesteld (bijv. feed-trigger/refre
 | Finance/legal/external impact | NONE |
 | Failure-test type | duplicate run/dedup-key |
 | Failure-test PASS? | YES — pre-write safe stop, no second create call |
-| Control Tower observed? | **NO / PENDING** tijdens deze execution window |
+| Control Tower first checked | NO MATCH |
+| Control Tower refresh timing | ~26 sec vóór task creation |
+| Control Tower observed? | **PENDING — post-creation refresh nog te bewijzen** |
 | QC reviewer | CM CONTROL evidence review pending |
-| Final status | **BLOCKED — observability gate incomplete** |
+| Final status | **PENDING — observability gate incomplete, geen feed-failure vastgesteld** |
 | Capability promoted? | **NO** |
 
 ## 8. Capability promotion rule
@@ -178,7 +182,7 @@ De test bewijst technisch dat de huidige ClickUp-connector één task kan creër
 - finance/legal/publication actions.
 
 Voor promotie van exact `ClickUp create_task` zijn nog vereist:
-1. Control Tower/feed observation PASS voor het testobject of aantoonbaar equivalente observability-evidence;
+1. post-creation Control Tower/feed observation PASS voor het testobject of aantoonbaar equivalente observability-evidence;
 2. CM CONTROL review;
 3. capability-register update beperkt tot exact bewezen list/action-scope;
 4. geen verbreding van autonomy buiten de geteste gate.
@@ -195,7 +199,8 @@ Voor promotie van exact `ClickUp create_task` zijn nog vereist:
 - [x] Failure/idempotency guardrail PASS.
 - [x] Functionele QC PASS.
 - [x] Evidence record ingevuld.
-- [ ] Control Tower/feed observation PASS.
+- [x] Eerste Control Tower non-match verklaard als timing race, niet als bewezen feed-failure.
+- [ ] Post-creation Control Tower/feed observation PASS.
 - [ ] CM CONTROL evidence review PASS.
 - [ ] Pas daarna: beperkte capability-state/permission-update.
 
