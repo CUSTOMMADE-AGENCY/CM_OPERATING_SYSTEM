@@ -11,8 +11,8 @@
 | Entity | Custommade Agency Int. B.V. |
 | Owner agent | CM CONTROL AGENT |
 | Support agents | CM VAULT AGENT · CM SOCIAL AGENT · CM FLOW AGENT |
-| Status | ACTIVE — V2.4 |
-| Versie | V2.4 |
+| Status | ACTIVE — V2.5 |
+| Versie | V2.5 |
 | Datum | AUGUSTUS 2026 |
 | Risico | MEDIUM |
 | Approval | Sophia — goedgekeurd voor CM-breed Gmail-gebruik |
@@ -45,7 +45,7 @@ De standaard geldt uitsluitend voor Custommade Agency en uitsluitend voor Gmail.
 | Ontvangerreferentie | Ja bij extern | Gmail / Contacts |
 | Feiten en afspraken | Indien genoemd | Geldige Source of Truth |
 | Approvalniveau | Indien vereist | Governance |
-| Handtekeningbron | Ja | Goedgekeurde CM Gmail-signature voor `info@custommade.agency` |
+| Handtekeningbron | Ja | Goedgekeurde CM Gmail-signature voor `info@custommade.agency` + structurele specificatie in deze standaard |
 
 ## 05 · WERKTEMPLATE
 
@@ -233,8 +233,31 @@ Als één materiële check niet kan worden bevestigd: `REVIEW_REQUIRED`.
 - Mailbox: `info@custommade.agency`.
 - Er bestaat één centrale, goedgekeurde CM-handtekening.
 - Agents mogen de handtekening niet parafraseren, inkorten, uitbreiden of opnieuw ontwerpen.
-- De operationele signature-inhoud en HTML/opmaak worden in Gmail beheerd; GitHub legt de gebruiksregel vast, niet persoonlijke of dynamische signature-assets.
-- Wanneer exacte HTML/opmaak technisch niet kan worden behouden, wordt de draft gemarkeerd voor review vóór verzending.
+- De visuele signature-assets en actuele HTML-opmaak worden operationeel in Gmail beheerd.
+- GitHub legt de verplichte structurele opbouw vast, zodat alle agents dezelfde handtekening produceren wanneer zij een Gmail-draft via tooling maken.
+
+#### CANONIEKE STRUCTUUR — CM GMAIL-SIGNATURE
+
+De volgorde en regelafstand zijn verplicht:
+
+1. `Vriendelijke groet, Kind regards,`
+2. CM-logo volgens de actuele goedgekeurde Gmail-signature.
+3. **Exact één lege regel onder het logo.**
+4. `Sophia van Wijk`
+5. `Owner Custommade Agency`
+6. `+31 6 5780 3725`
+7. De actuele goedgekeurde social icons/links voor YouTube, LinkedIn, Instagram en TikTok.
+8. De actuele goedgekeurde confidentiality/disclaimertekst.
+
+**Niet toegestaan:**
+
+- alleen `Sophia` gebruiken;
+- `Founder of Custommade Agency` gebruiken;
+- de lege regel tussen logo en naam verwijderen;
+- `Owner Custommade Agency` herschrijven of vervangen;
+- logo, social icons of disclaimer zelfstandig verwijderen, vervangen of opnieuw ontwerpen.
+
+Wanneer een Gmail-tool de exacte visuele HTML niet automatisch overneemt, moet de agent de signature opbouwen conform deze structurele specificatie en de actuele Gmail-signature als visuele bron gebruiken. Als exacte weergave niet betrouwbaar kan worden bevestigd: `REVIEW_REQUIRED` vóór verzending.
 
 ### GECONTROLEERDE STATUSSEN
 
@@ -257,7 +280,7 @@ Als één materiële check niet kan worden bevestigd: `REVIEW_REQUIRED`.
 >
 > **05** — Een concept is een Draft en wordt niet verzonden zonder expliciete verzendopdracht.
 >
-> **06** — De centrale CM-handtekening wordt exact hergebruikt en niet door agents herschreven.
+> **06** — De centrale CM-handtekening wordt exact hergebruikt en niet door agents herschreven; de structurele opbouw uit V2.5 is verplicht.
 >
 > **07** — `Reply All` is nooit de automatische standaard.
 >
@@ -288,7 +311,8 @@ Als één materiële check niet kan worden bevestigd: `REVIEW_REQUIRED`.
 - Feiten zijn gecontroleerd tegen de juiste Source of Truth waar nodig.
 - Bij reply is het originele Gmail `message_id` gebruikt.
 - Draft staat in dezelfde thread als het bronbericht.
-- Goedgekeurde CM-handtekening is aanwezig.
+- Goedgekeurde CM-handtekening is aanwezig en volgt exact de canonieke structuur.
+- Onder het logo staat exact één lege regel, gevolgd door `Sophia van Wijk` en `Owner Custommade Agency`.
 - Geen onbevestigde juridische, financiële, commerciële of rights-commitment.
 - Ontvangers en attachments zijn gecontroleerd.
 - Call-to-action en next step zijn duidelijk waar relevant.
@@ -319,11 +343,11 @@ Sophia approval blijft verplicht waar Agent Architecture of Responsibility Matri
 
 ## 11 · LEIDENDE BRON
 
-GitHub = communicatiestandaard/spec · Gmail = operationele e-mail/draft + signaturebron · ClickUp = opvolging · Drive = operationele documenten/evidence · Moneybird = financiële waarheid.
+GitHub = communicatiestandaard/spec + canonieke signaturestructuur · Gmail = operationele e-mail/draft + visuele signature-assets/HTML · ClickUp = opvolging · Drive = operationele documenten/evidence · Moneybird = financiële waarheid.
 
 ## 12 · OPSLAG
 
-Gmail voor operationele templates/drafts en signature. Drive bevat relevante dossier-evidence waar de geldige dossierstructuur dit voorschrijft. GitHub bevat geen clientmailinhoud of persoonlijke signaturekopie.
+Gmail bevat operationele templates/drafts en de visuele signature-assets/HTML. Drive bevat relevante dossier-evidence waar de geldige dossierstructuur dit voorschrijft. GitHub bevat de structurele signature-specificatie, maar geen gedupliceerde logo-assets, social-iconbestanden of dynamische Gmail-HTML.
 
 ## 13 · AI-INSTRUCTIES
 
@@ -334,6 +358,8 @@ Gmail voor operationele templates/drafts en signature. Drive bevat relevante dos
 - Maak geen losse nieuwe mail wanneer een reply in dezelfde thread bedoeld is.
 - Gebruik standaard `info@custommade.agency` voor CM-communicatie.
 - Gebruik exact de goedgekeurde centrale CM-handtekening.
+- Handtekeningvolgorde: afsluiting → logo → één lege regel → `Sophia van Wijk` → `Owner Custommade Agency` → telefoon → socials → disclaimer.
+- Gebruik nooit `Sophia` als enige naam of `Founder of Custommade Agency` in de CM-handtekening.
 - Artistcommunicatie mag warmer, persoonlijker en meer betrokken zijn dan overige zakelijke CM-communicatie.
 - Bij twijfel over feit, afspraak of commitment: `REVIEW_REQUIRED`.
 - Verzin nooit juridische, financiële, commerciële of rights-feiten.
@@ -370,7 +396,8 @@ Gmail voor operationele templates/drafts en signature. Drive bevat relevante dos
 | 2026-08-10 | V2.2 | Nederlandstalige structuur, domeinrouting, Template-ID, gecontroleerde statussen en geldige Gmail/ClickUp mappings toegevoegd. | CM CONTROL AGENT |
 | 2026-08-16 | V2.3 | CM-brede Gmail-regel toegevoegd voor threaded replies, standaardmailbox, centrale signature en draft-only gedrag. | CM CONTROL AGENT |
 | 2026-08-16 | V2.4 | Inhoudelijke communicatiestandaard toegevoegd: toon per context, warmere artistcommunicatie, thread-context, Source of Truth, owner authority, commitment guardrails, recipient/attachment checks, ClickUp-opvolging, inbound classificatie, prioriteiten en Draft Quality Gate. Scope voorlopig uitsluitend Gmail. | CM CONTROL AGENT |
+| 2026-08-16 | V2.5 | Canonieke CM Gmail-signaturestructuur vastgelegd: logo, exact één lege regel, `Sophia van Wijk`, `Owner Custommade Agency`, telefoon, social icons/links en disclaimer; oude varianten zoals `Sophia` en `Founder of Custommade Agency` geblokkeerd. | CM CONTROL AGENT |
 
 ---
 
-_Leidende bron: GitHub. Gmail bevat operationele templates/drafts en de centrale signaturebron._
+_Leidende bron: GitHub voor communicatiestandaard en signaturestructuur. Gmail bevat operationele templates/drafts en de visuele signature-assets/HTML._
