@@ -33,15 +33,31 @@ Alle templates zijn:
 | Hoofdtitels | Heading 2, vet, hoofdletters |
 | Subtitels | Heading 3, vet, hoofdletters |
 | Kleuren | Zwart/wit; geen decoratieve kleuren |
-| Emoji's | Niet gebruiken |
-| Logo | CM-logo rechtsboven |
+| Emoji's | Niet gebruiken in canonieke/machine-readable velden; visuele presentatie alleen wanneer een onderliggende tekststatus behouden blijft |
+| Logo | CM-logo rechtsboven waar het documentformaat dit ondersteunt |
 | Taal | Nederlands; gangbare industry-/machine-termen mogen Engels blijven |
+
+## GOOGLE SHEETS
+
+Voor alle Google Sheets, dashboards, cockpits, trackers, registers en control towers is `docs/00_GOVERNANCE/GOOGLE_SHEETS_DESIGN_STANDARD.md` verplicht aanvullend leidend.
+
+Daarbij geldt organisatiebreed minimaal:
+
+- Montserrat;
+- zwart `#000000` als primaire header-/titelkleur;
+- wit `#FFFFFF` als headertekst;
+- Nederlands als standaardtaal;
+- geen donkerblauw `#1f2a44` als CM-headerkleur;
+- gecontroleerde, machine-readable statussen;
+- een scanbare cockpit voor managementdashboards;
+- geen eigen afwijkend design system per agent of script.
 
 ## TABELLEN EN PRINTBAARHEID
 
 - Gebruik tabellen, checklists, KPI-blokken, statussen, beslismomenten en actiepunten waar mogelijk.
 - Vermijd brede tabellen die kolomkoppen woord voor woord laten afbreken.
-- A4-portret is de standaard; gebruik niet standaard mixed portrait/landscape.
+- A4-portret is de standaard voor documenttemplates; operationele Google Sheets volgen de specifieke Google Sheets governance.
+- Gebruik niet standaard mixed portrait/landscape.
 - Als één record te veel velden heeft, splits het in logisch gekoppelde blokken.
 - Geef expliciet aan dat gekoppelde blokken samen één record vormen.
 - Gebruik waar nodig een recordsleutel om blokken betrouwbaar te koppelen voor automation.
@@ -67,13 +83,16 @@ Een template is alleen goedgekeurd wanneer:
 2. de gebruiker geen extra uitleg nodig heeft;
 3. het document direct tot actie leidt;
 4. de output consistent is;
-5. de template op A4-portret bruikbaar en printbaar is;
+5. de template op het toepasselijke formaat bruikbaar en waar relevant printbaar is;
 6. automation mappings naar bestaande velden verwijzen;
-7. eventuele gekoppelde tabelblokken ondubbelzinnig hetzelfde record representeren.
+7. eventuele gekoppelde tabelblokken ondubbelzinnig hetzelfde record representeren;
+8. Google Sheets voldoen aan `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
 
 ## REFERENTIE
 
 `ARTIST_ROADMAP_TEMPLATE` V2.2 is de referentie voor A4-portret, Nederlandstalige structuur, gekoppelde werkblokken en automation-consistentie.
+
+Voor Google Sheets is `GOOGLE_SHEETS_DESIGN_STANDARD.md` de organisatiebrede visuele en functionele referentie.
 
 ## CM REGEL
 
