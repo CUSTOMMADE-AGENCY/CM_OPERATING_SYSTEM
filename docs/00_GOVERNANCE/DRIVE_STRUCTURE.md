@@ -37,6 +37,8 @@ OS_CUSTOMMADE
 │       ├── 04_RELEASES
 │       ├── 05_BOOKING
 │       ├── 06_FINANCE
+│       │   └── ROYALTYSHEET
+│       │       └── [ARTIST]_ROYALTY_SHEET
 │       ├── 07_SOCIALMEDIA
 │       ├── 08_PRESS_EPK
 │       └── 09_ARCHIVE
@@ -100,7 +102,7 @@ OS_CUSTOMMADE
 
 Alle artiestendossiers staan onder `OS_CUSTOMMADE/02_ARTIST_MANAGEMENT/[ARTIST_NAME]`. Artists worden niet gemigreerd naar `03_CLIENTS` en er worden geen statuslagen onder `02_ARTIST_MANAGEMENT` aangemaakt.
 
-Elke artistfolder bevat exact:
+Elke actieve CM-managementartiest bevat exact:
 
 ```text
 [ARTIST_NAME]
@@ -110,10 +112,20 @@ Elke artistfolder bevat exact:
 ├── 04_RELEASES
 ├── 05_BOOKING
 ├── 06_FINANCE
+│   └── ROYALTYSHEET
+│       └── [ARTIST]_ROYALTY_SHEET
 ├── 07_SOCIALMEDIA
 ├── 08_PRESS_EPK
 └── 09_ARCHIVE
 ```
+
+### Verplichte Royalty Sheet
+
+Voor iedere actieve CM-managementartiest is `06_FINANCE/ROYALTYSHEET` een verplichte submap en `[ARTIST]_ROYALTY_SHEET` het verplichte operationele royalty-control bestand. Deze Sheet volgt `ARTIST_FOLDER_STANDARD.md`, `TEMPLATE_DESIGN_STANDARD.md` en `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
+
+De Royalty Sheet bevat minimaal neighboring rights/master-afspraken, auteursrechten/splits, approvals/evidence, statements, betalingen, recoupment/advances, contract/accountingreferenties en reminderlogica richting ClickUp.
+
+Dit geldt uitsluitend voor Custommade Agency managementartiesten; FIERCE wordt niet automatisch meegenomen.
 
 ## Client folder rule
 
