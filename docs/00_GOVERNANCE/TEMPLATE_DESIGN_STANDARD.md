@@ -65,6 +65,32 @@ Het logo wordt clean, zonder zichtbaar achtergrondblok, kader of tegel geplaatst
 
 Wanneer het formaat branding ondersteunt, wordt dezelfde CM-look toegepast. Wanneer branding technisch niet mogelijk is, blijven naamgeving, taal, structuur en metadata conform governance.
 
+## VERPLICHTE CM ARTIST ROYALTY SHEET
+
+Voor iedere actieve Custommade Agency managementartiest is de Royalty Sheet een verplichte operationele template/control layer.
+
+Canonieke locatie:
+
+`02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE/ROYALTYSHEET/[ARTIST]_ROYALTY_SHEET`
+
+De Royalty Sheet gebruikt verplicht de canonical clean CM-dashboardlayout uit deze standaard en `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
+
+Minimale functionele onderdelen:
+
+- cockpit met management-KPI's, open acties en deadlines;
+- neighboring rights / master- en labelafspraken;
+- auteursrechten, publishing en track-splits;
+- split approvals en evidence-links;
+- statement- en royaltycycli;
+- ontvangen statements en betalingen;
+- advance / recoupment-positie waar relevant;
+- contract- en accountingreferenties;
+- reminder- en follow-uplogica richting ClickUp.
+
+Bestandsnaam is exact `[ARTIST]_ROYALTY_SHEET`. De structuur en datavelden mogen niet per artiest willekeurig afwijken; artistdata verschilt, maar het governed template blijft gelijk.
+
+Drive is opslag/rechtenbewijs, ClickUp is uitvoering en Moneybird blijft financiële waarheid. Deze verplichting geldt uitsluitend voor CM-managementartiesten; FIERCE wordt niet automatisch gecombineerd.
+
 ## ONTWERPPRINCIPES
 
 Alle CM-bestanden zijn:
@@ -127,7 +153,8 @@ Een CM-bestand is alleen goedgekeurd wanneer:
 6. het visueel aansluit op de canonical clean CM-layout;
 7. het `Cm`-logo correct contrasteert: zwart-op-wit of wit-op-zwart;
 8. het geen zichtbaar logo-achtergrondblok bevat tenzij de volledige header bewust zwart is met wit logo;
-9. Google Sheets aanvullend voldoen aan `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
+9. Google Sheets aanvullend voldoen aan `GOOGLE_SHEETS_DESIGN_STANDARD.md`;
+10. een actieve CM-managementartiest beschikt over de verplichte `[ARTIST]_ROYALTY_SHEET` op de governed Drive-locatie.
 
 ## GOVERNANCE
 
