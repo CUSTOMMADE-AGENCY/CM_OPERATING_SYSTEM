@@ -57,6 +57,18 @@ Regels:
 - Kleur mag alleen functioneel worden gebruikt wanneer betekenis noodzakelijk is en die betekenis ook tekstueel zichtbaar blijft.
 - Een status mag nooit uitsluitend door kleur worden gecommuniceerd.
 
+## LOGO EN BRANDING
+
+- Het officiële Custommade Agency `Cm`-beeldmerk is het canonieke logo voor operationele CM Google Sheets.
+- Het logo is VERPLICHT op iedere nieuwe CM Sheet, dashboard, cockpit, control tower, tracker, register en artist-management Sheet met een visuele header/cockpit.
+- Standaardplaatsing is in of direct naast de bovenste cockpit-/titelheader, zonder machine-readable data te overlappen.
+- Het logo wordt altijd proportioneel geschaald: nooit uitrekken, vervormen, roteren, recoloren of opnieuw tekenen.
+- De zwarte/witte canonical variant wordt gebruikt; geen alternatieve kleuren zonder expliciete approval van Sophia / CM CONTROL.
+- Het logo hoeft niet op iedere afzonderlijke datatab terug te keren wanneer één workbook een duidelijke branded cockpit/header heeft; het workbook als geheel moet direct herkenbaar zijn als Custommade Agency.
+- Scripts en agents moeten het canonical logo-asset gebruiken en mogen geen eigen logo-interpretatie genereren.
+- Een Sheet met een visuele cockpit/header mag niet als `CM_CONFORM` worden gemarkeerd wanneer het logo ontbreekt.
+- Deze brandingregel geldt uitsluitend voor Custommade Agency. FIERCE gebruikt eigen governance en assets en wordt niet automatisch met CM-branding gecombineerd.
+
 ## DASHBOARD / COCKPIT
 
 Een managementdashboard begint met één scanbare cockpit. Deze bevat waar relevant minimaal:
@@ -106,12 +118,13 @@ Alle scripts die CM Google Sheets maken of formatteren moeten de centrale design
 - `FONT_FAMILY = Montserrat`;
 - `PRIMARY = #000000`;
 - `ON_PRIMARY = #FFFFFF`;
+- canonical CM-logo in de visuele workbookheader/cockpit;
 - Nederlands als standaardtaal;
 - gecontroleerde statuswaarden;
 - geen decoratieve kleuren;
 - geen emoji's in machine-readable statusvelden.
 
-Nieuwe scripts mogen geen eigen afwijkend design system hardcoden wanneer dezelfde waarde centraal kan worden hergebruikt.
+Nieuwe scripts mogen geen eigen afwijkend design system of logo hardcoden wanneer dezelfde waarde/asset centraal kan worden hergebruikt.
 
 ## BESTAANDE SHEETS
 
@@ -130,6 +143,8 @@ Migraties moeten:
 
 Een Google Sheet is pas CM-conform wanneer:
 
+- [ ] canonical CM-logo aanwezig is in de visuele workbookheader/cockpit;
+- [ ] logo proportioneel en onvervormd is weergegeven;
 - [ ] Montserrat is toegepast;
 - [ ] primaire headers zwart zijn;
 - [ ] headertekst wit is;
@@ -151,4 +166,4 @@ Review: bij wijziging van de CM design systematiek of minimaal jaarlijks.
 
 ## CM REGEL
 
-Zwart/wit. Montserrat. Nederlands. Scanbaar. Operationeel. Machine-readable waar nodig. Geen eigen designinterpretatie door agents of scripts.
+Canonical CM-logo. Zwart/wit. Montserrat. Nederlands. Scanbaar. Operationeel. Machine-readable waar nodig. Geen eigen designinterpretatie door agents of scripts.
