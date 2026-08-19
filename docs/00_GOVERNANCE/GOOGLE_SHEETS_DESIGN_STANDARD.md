@@ -4,157 +4,134 @@
 
 Deze standaard is verplicht voor alle Google Sheets van Custommade Agency, waaronder dashboards, cockpits, trackers, registers, artist-management sheets, KPI-overzichten, deal- en rights-overzichten, control towers en operationele werkbladen.
 
-Deze standaard vult `TEMPLATE_DESIGN_STANDARD.md` aan. Bij Google Sheets is dit document leidend voor visuele en functionele opmaak.
+Deze standaard vult `TEMPLATE_DESIGN_STANDARD.md` aan. De goedgekeurde GINIIO Royalty Control cockpit-layout is de canonical visuele referentie.
 
 ## REIKWIJDTE
 
-Geldt voor:
+Geldt voor alle nieuwe Sheets, door agents/scripts gegenereerde Sheets, centrale dashboards/control towers, artist-management dashboards en bestaande Sheets bij migratie/redesign. Afwijkingen alleen na expliciete approval van Sophia / CM CONTROL.
 
-- alle nieuwe Google Sheets;
-- alle door agents of scripts gegenereerde Google Sheets;
-- alle centrale CM-dashboards en control towers;
-- alle artist-management dashboards;
-- alle bestaande Sheets zodra deze inhoudelijk of technisch worden gemigreerd.
+## CANONICAL DASHBOARD LAYOUT
 
-Afwijkingen zijn alleen toegestaan na expliciete approval van Sophia / CM CONTROL en moeten in het wijzigingslog worden vastgelegd.
+Een CM-dashboard/cockpit volgt deze visuele architectuur:
+
+1. bovenaan een clean branded header met `Cm`-logo, titel, functionele subtitel en relevante metadata;
+2. veel witte ruimte en een duidelijke horizontale scheiding onder de header;
+3. management-KPI's direct onder de header in compacte, lichte KPI-blokken;
+4. urgente/komende acties in overzichtelijke secties;
+5. zwarte tabelheaders met witte tekst;
+6. witte body met zwarte tekst en subtiele lichtgrijze grid/scheidingslijnen;
+7. actievelden kort, duidelijk en operationeel;
+8. navigatie/bronverwijzingen onderaan of logisch bij de sectie;
+9. detaildata blijft op aparte machine-readable tabs;
+10. geen visuele drukte, gradients, decoratieve kleuren of zware schaduwen.
+
+## LOGO EN CONTRAST — HARD GATE
+
+Het officiële Custommade Agency `Cm`-beeldmerk is verplicht op iedere CM Sheet met visuele header/cockpit.
+
+Slechts twee combinaties zijn toegestaan:
+
+- **witte achtergrond + zwart `Cm`-logo**; of
+- **zwarte achtergrond + wit `Cm`-logo**.
+
+Verboden:
+
+- wit logo op witte achtergrond;
+- zwart logo op zwarte achtergrond;
+- een zichtbaar wit/zwart vierkant of tegel rond het logo wanneer de header zelf die kleur niet heeft;
+- logo vervormen, uitrekken, roteren, recoloren of opnieuw tekenen;
+- door agents gegenereerde alternatieve logo-interpretaties.
+
+Standaard voor de canonical clean cockpit is **witte achtergrond + zwart `Cm`-logo**. Een zwarte header met wit logo is toegestaan wanneer bewust voor een volledige zwarte headerbalk wordt gekozen.
+
+Een workbook mag niet als `CM_CONFORM` worden gemarkeerd wanneer deze contrastregel niet wordt gehaald.
 
 ## TAAL
 
-- Standaardtaal is professioneel Nederlands.
-- Gangbare muziek-, business-, rights-, data- en machine-termen mogen Engels blijven wanneer vertaling onnatuurlijk of functioneel onjuist is, waaronder: DSP, ISRC, master, publishing, neighboring rights, sync, recoupment, release, booking, KPI, ROI, pipeline en API.
-- Geen willekeurige mix van Nederlandse en Engelse statussen, headers of instructietekst.
-- Client-facing en interne managementteksten zijn Nederlands tenzij expliciet anders besloten.
+Professioneel Nederlands is standaard. Gangbare muziek-, business-, rights-, data- en machine-termen mogen Engels blijven wanneer functioneel logisch, zoals DSP, ISRC, master, publishing, neighboring rights, sync, recoupment, release, booking, KPI, ROI, pipeline en API.
 
 ## TYPOGRAFIE
 
 | Onderdeel | Standaard |
 |---|---|
 | Lettertype | Montserrat |
-| Body / reguliere cellen | 10 pt standaard |
-| Compacte werk-tabellen | 8 pt toegestaan indien nodig voor scanbaarheid |
-| Tabelheaders | Montserrat, vet, 9–10 pt |
-| Sectiekoppen | Montserrat, vet, 10–12 pt, hoofdletters |
-| Dashboard-/cockpittitel | Montserrat, vet, 16 pt |
-
-Een script of agent mag niet terugvallen op Arial, Calibri of een willekeurig ander lettertype wanneer Montserrat beschikbaar is.
+| Body | 10 pt standaard |
+| Compacte tabellen | 8–9 pt toegestaan |
+| Tabelheaders | vet, 8–10 pt |
+| Sectiekoppen | vet, 10–12 pt |
+| Cockpittitel | vet, circa 16–18 pt |
 
 ## KLEUREN
 
-CM gebruikt voor operationele Sheets een zwart/wit-systeem.
-
-| Onderdeel | Kleur |
-|---|---|
-| Primaire header / titelbalk | Zwart `#000000` |
-| Headertekst | Wit `#FFFFFF` |
-| Body | Wit `#FFFFFF` |
-| Bodytekst | Zwart `#000000` |
-| Subtiele functionele scheiding | Lichtgrijs toegestaan |
-
-Regels:
-
-- Donkerblauw `#1f2a44` is GEEN CM-standaard en mag niet meer worden gebruikt als primaire CM-headerkleur.
+- Primair zwart `#000000`.
+- Wit `#FFFFFF`.
+- Lichtgrijs uitsluitend voor subtiele functionele scheiding.
+- Donkerblauw `#1f2a44` is geen CM-standaard.
 - Geen decoratieve merkkleuren in operationele Sheets.
-- Kleur mag alleen functioneel worden gebruikt wanneer betekenis noodzakelijk is en die betekenis ook tekstueel zichtbaar blijft.
-- Een status mag nooit uitsluitend door kleur worden gecommuniceerd.
+- Statusbetekenis nooit uitsluitend via kleur communiceren.
 
-## LOGO EN BRANDING
+## COCKPITINHOUD
 
-- Het officiële Custommade Agency `Cm`-beeldmerk is het canonieke logo voor operationele CM Google Sheets.
-- Het logo is VERPLICHT op iedere nieuwe CM Sheet, dashboard, cockpit, control tower, tracker, register en artist-management Sheet met een visuele header/cockpit.
-- Standaardplaatsing is in of direct naast de bovenste cockpit-/titelheader, zonder machine-readable data te overlappen.
-- Het logo wordt altijd proportioneel geschaald: nooit uitrekken, vervormen, roteren, recoloren of opnieuw tekenen.
-- De zwarte/witte canonical variant wordt gebruikt; geen alternatieve kleuren zonder expliciete approval van Sophia / CM CONTROL.
-- Het logo hoeft niet op iedere afzonderlijke datatab terug te keren wanneer één workbook een duidelijke branded cockpit/header heeft; het workbook als geheel moet direct herkenbaar zijn als Custommade Agency.
-- Scripts en agents moeten het canonical logo-asset gebruiken en mogen geen eigen logo-interpretatie genereren.
-- Een Sheet met een visuele cockpit/header mag niet als `CM_CONFORM` worden gemarkeerd wanneer het logo ontbreekt.
-- Deze brandingregel geldt uitsluitend voor Custommade Agency. FIERCE gebruikt eigen governance en assets en wordt niet automatisch met CM-branding gecombineerd.
+Waar relevant bevat de cockpit:
 
-## DASHBOARD / COCKPIT
+- actuele managementstatus;
+- belangrijkste KPI's;
+- open beslissingen/gates;
+- risico's/blokkades;
+- eerstvolgende acties;
+- owners;
+- laatste update;
+- snelle links naar leidende bronnen.
 
-Een managementdashboard begint met één scanbare cockpit. Deze bevat waar relevant minimaal:
-
-1. actuele managementstatus;
-2. belangrijkste KPI's;
-3. open beslissingen / gates;
-4. risico's en blokkades;
-5. eerstvolgende acties;
-6. owners;
-7. laatste update;
-8. snelle links naar leidende bronnen.
-
-Een cockpit is geen rapport. De gebruiker moet binnen circa 10 seconden kunnen zien waar aandacht, besluitvorming en uitvoering nodig zijn.
+De gebruiker moet binnen circa 10 seconden kunnen zien waar aandacht, besluitvorming en uitvoering nodig zijn.
 
 ## TABELLEN
 
-- Rij 1 of de lokale tabelheader is zwart met witte, vette Montserrat-tekst.
-- Kopregel wordt bevroren wanneer dit de bruikbaarheid verbetert.
-- Tekstterugloop staat aan waar nodig.
-- Kolombreedtes worden afgestemd op leesbaarheid; geen onnodig brede kolommen.
-- Geen samengevoegde cellen in machine-readable datatabellen.
-- Samengevoegde cellen zijn alleen toegestaan voor visuele titel- of sectiebalken in een cockpit.
-- Onbekende waarden = `TBD` tenzij een gecontroleerde statuslijst een andere waarde voorschrijft.
-
-## STATUSSEN
-
-Statuswaarden moeten per template gecontroleerd en machine-readable zijn. Gebruik de canonieke statusset van het betreffende proces of register.
-
-Geen emoji's in canonieke statuswaarden of machine-readable velden.
-
-Voor visuele dashboards mag een aparte presentatiekolom bestaan, maar automation moet mappen op de onderliggende canonieke tekstwaarde.
+- Lokale tabelheaders zwart met witte, vette Montserrat-tekst.
+- Kopregel bevriezen wanneer nuttig.
+- Tekstterugloop waar nodig.
+- Geen onnodig brede kolommen.
+- Geen merged cells in machine-readable datatabellen.
+- Merged cells alleen in visuele cockpit/header/sectiebalken.
+- Onbekende waarden = `TBD`.
 
 ## DATA EN BRONNEN
 
-- Drive = opslag, documentatie, bewijs en operationele bronbestanden.
+- Drive = opslag, documentatie, bewijs en bronbestanden.
 - ClickUp = uitvoering.
 - Moneybird = financiële waarheid.
 - GitHub = governance, templatespecificaties en automationlogica.
-- Een dashboard mag brondata samenvatten maar creëert geen alternatieve financiële of rights-waarheid.
-- Bronlinks moeten naar het leidende bestand wijzen; bronbestanden niet dupliceren om een dashboard te vullen.
+- Dashboard vat samen maar creëert geen alternatieve financiële of rights-waarheid.
 
 ## AUTOMATION EN ENFORCEMENT
 
-Alle scripts die CM Google Sheets maken of formatteren moeten de centrale designwaarden gebruiken en minimaal afdwingen:
+Alle scripts/agents die CM Sheets maken of formatteren moeten centraal afdwingen:
 
 - `FONT_FAMILY = Montserrat`;
 - `PRIMARY = #000000`;
 - `ON_PRIMARY = #FFFFFF`;
-- canonical CM-logo in de visuele workbookheader/cockpit;
+- canonical `Cm`-logo;
+- geldige logo/background-combinatie;
 - Nederlands als standaardtaal;
-- gecontroleerde statuswaarden;
+- gecontroleerde statussen;
 - geen decoratieve kleuren;
-- geen emoji's in machine-readable statusvelden.
-
-Nieuwe scripts mogen geen eigen afwijkend design system of logo hardcoden wanneer dezelfde waarde/asset centraal kan worden hergebruikt.
-
-## BESTAANDE SHEETS
-
-Bestaande Sheets worden niet destructief herschreven alleen vanwege deze standaard. Bij eerstvolgende inhoudelijke update, migratie of redesign moeten zij naar deze standaard worden gebracht.
-
-Migraties moeten:
-
-- idempotent zijn waar praktisch mogelijk;
-- bestaande data behouden;
-- geen bronbestanden dupliceren;
-- geen user-entered data wissen;
-- wijzigingen loggen;
-- bij risicovolle wijzigingen eerst een DRY_RUN ondersteunen.
+- geen emoji's in machine-readable statussen.
 
 ## KWALITEITSCHECK
 
 Een Google Sheet is pas CM-conform wanneer:
 
-- [ ] canonical CM-logo aanwezig is in de visuele workbookheader/cockpit;
-- [ ] logo proportioneel en onvervormd is weergegeven;
+- [ ] canonical `Cm`-logo aanwezig is;
+- [ ] logo zwart-op-wit of wit-op-zwart is;
+- [ ] geen zichtbaar ongewenst logo-blok/tegel aanwezig is;
+- [ ] logo proportioneel en onvervormd is;
 - [ ] Montserrat is toegepast;
-- [ ] primaire headers zwart zijn;
-- [ ] headertekst wit is;
+- [ ] cockpit clean, ruim en binnen circa 10 seconden scanbaar is;
+- [ ] tabelheaders zwart/wit zijn;
 - [ ] standaardtaal Nederlands is;
-- [ ] Engelse termen alleen functioneel/industry-specifiek zijn;
-- [ ] cockpit/dashboard binnen circa 10 seconden scanbaar is;
 - [ ] statussen gecontroleerde waarden gebruiken;
-- [ ] geen emoji's in machine-readable statusvelden staan;
 - [ ] bronnen zijn gelinkt en niet onnodig gedupliceerd;
-- [ ] ClickUp-uitvoering niet als tweede taakadministratie in Drive wordt nagebouwd;
+- [ ] ClickUp uitvoering blijft;
 - [ ] Moneybird financiële waarheid blijft;
 - [ ] automation mappings naar bestaande velden verwijzen.
 
@@ -162,8 +139,9 @@ Een Google Sheet is pas CM-conform wanneer:
 
 Owner: CM OPS / CM CONTROL
 Approval voor afwijkingen: Sophia / CM CONTROL
-Review: bij wijziging van de CM design systematiek of minimaal jaarlijks.
+
+Deze branding geldt uitsluitend voor Custommade Agency. FIERCE gebruikt eigen governance en assets.
 
 ## CM REGEL
 
-Canonical CM-logo. Zwart/wit. Montserrat. Nederlands. Scanbaar. Operationeel. Machine-readable waar nodig. Geen eigen designinterpretatie door agents of scripts.
+Canonical clean dashboard. Witte achtergrond + zwart `Cm` als standaard. Zwarte achtergrond + wit `Cm` als toegestaan alternatief. Montserrat. Zwart/wit. Veel functionele witruimte. Scanbaar. Operationeel. Machine-readable waar nodig.
