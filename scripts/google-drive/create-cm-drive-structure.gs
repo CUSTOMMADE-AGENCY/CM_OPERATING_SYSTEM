@@ -65,15 +65,15 @@ const ROOT_SUBFOLDERS = {
 const LEGAL_APPROVALS_CHILD = 'CM_APPROVAL_REGISTER';
 const ARTIST_ROYALTY_FOLDER = 'ROYALTYSHEET';
 
+// Confirmed active CM-management scope (2026-08-19).
 const ARTISTS = [
   'CALSEY',
   'DANI DEAUX',
+  'DJ D-TRAIN',
   'DODO',
   'GINIIO',
   'GOUDTJE_GET_PAID',
-  'JAIRZINHO',
   'KALIBWOY',
-  'LATIFAH',
   'NAMIKOO',
 ];
 
@@ -152,9 +152,7 @@ function createArtistStructure_(artistsRoot, artistName) {
     }
   });
 
-  // Mandatory for every active CM management artist.
   getOrCreateFolder_(financeFolder, ARTIST_ROYALTY_FOLDER);
-
   return artistFolder;
 }
 
