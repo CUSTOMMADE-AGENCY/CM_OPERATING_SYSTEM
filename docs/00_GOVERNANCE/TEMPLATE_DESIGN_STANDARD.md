@@ -2,17 +2,72 @@
 
 ## DOEL
 
-Dit document definieert de ontwerpstandaard voor alle CM-templates. Templates zijn operationele tools: direct bruikbaar, compact, actiegericht en foutbestendig.
+Dit document definieert de ontwerpstandaard voor alle CM-bestanden en operationele artifacts. De standaard geldt organisatiebreed voor Sheets, Docs, PDF's, dashboards, control towers, trackers, registers, templates, rapportages en andere door CM, agents of scripts gegenereerde bestanden.
 
-Templates zijn geen SOP's, essays, rapporten of consultancydocumenten.
+Templates en bestanden zijn operationele tools: direct bruikbaar, compact, actiegericht, herkenbaar en foutbestendig.
 
 ## KERNPRINCIPE
 
-Een template moet binnen ongeveer 10 seconden scanbaar zijn. De gebruiker moet direct begrijpen wat het document is, wat ingevuld moet worden, welke beslispoorten gelden en wat de volgende stap is.
+Een CM-bestand moet binnen ongeveer 10 seconden scanbaar zijn. De gebruiker moet direct begrijpen wat het bestand is, wat belangrijk is, welke beslispoorten gelden en wat de volgende stap is.
+
+## CANONICAL CM VISUAL SYSTEM
+
+De goedgekeurde GINIIO Royalty Control cockpit-layout is vanaf 19-08-2026 de visuele referentie voor CM-bestanden.
+
+De stijl is:
+
+- clean en premium;
+- veel functionele witruimte;
+- zwart/wit;
+- Montserrat;
+- duidelijke visuele hiërarchie;
+- dunne zwarte of lichtgrijze scheidingslijnen;
+- compacte zwarte tabelheaders met witte tekst;
+- KPI-/statusblokken zonder decoratieve kleur;
+- geen zware kleurvlakken zonder functionele reden;
+- geen visuele drukte, gradients, schaduwen of decoratieve illustraties;
+- managementinformatie bovenaan, detailinformatie daaronder;
+- acties en status direct zichtbaar.
+
+### Logo-contrast — harde regel
+
+Het officiële `Cm`-beeldmerk mag NOOIT onleesbaar of als een wit-op-wit / zwart-op-zwart blok worden geplaatst.
+
+Toegestaan zijn uitsluitend:
+
+1. **witte achtergrond + zwart `Cm`-logo**; of
+2. **zwarte achtergrond + wit `Cm`-logo**.
+
+Het logo wordt clean, zonder zichtbaar achtergrondblok, kader of tegel geplaatst wanneer het asset transparantie ondersteunt. Het logo blijft proportioneel en mag nooit worden uitgerekt, vervormd, geroteerd, gerecolord of opnieuw getekend.
+
+## TOEPASSING PER BESTANDSTYPE
+
+### Sheets / dashboards / control towers
+
+- branded cockpit/header bovenaan;
+- management-KPI's en urgente acties eerst;
+- zwart/witte tabelheaders;
+- detailtabs functioneel en machine-readable;
+- geen decoratieve kleuren;
+- cockpit en datalaag visueel gescheiden.
+
+### Docs / rapporten / PDF's
+
+- dezelfde visuele hiërarchie vertaald naar pagina-opmaak;
+- clean voorblad of documentheader;
+- `Cm`-logo volgens de contrastregel;
+- duidelijke titel, subtitel/metadata en secties;
+- tabellen en callout-blokken in zwart/wit;
+- voldoende witruimte;
+- geen onnodige grafische elementen.
+
+### Overige bestanden / exports
+
+Wanneer het formaat branding ondersteunt, wordt dezelfde CM-look toegepast. Wanneer branding technisch niet mogelijk is, blijven naamgeving, taal, structuur en metadata conform governance.
 
 ## ONTWERPPRINCIPES
 
-Alle templates zijn:
+Alle CM-bestanden zijn:
 
 - overzichtelijk;
 - direct bruikbaar;
@@ -21,79 +76,66 @@ Alle templates zijn:
 - compact;
 - consistent;
 - machine-readable waar automation is voorzien;
-- printbaar zonder handmatige heropmaak.
+- printbaar zonder handmatige heropmaak waar relevant.
 
 ## DESIGN STANDAARD
 
 | Onderdeel | Standaard |
 |---|---|
-| Papier | A4-portret |
 | Lettertype | Montserrat |
-| Body | 10 pt; in compacte werk-tabellen alleen kleiner indien nodig voor leesbaarheid |
-| Hoofdtitels | Heading 2, vet, hoofdletters |
-| Subtitels | Heading 3, vet, hoofdletters |
-| Kleuren | Zwart/wit; geen decoratieve kleuren |
-| Emoji's | Niet gebruiken in canonieke/machine-readable velden; visuele presentatie alleen wanneer een onderliggende tekststatus behouden blijft |
-| Logo | CM-logo rechtsboven waar het documentformaat dit ondersteunt |
+| Body | 10 pt; compactere tabellen 8–9 pt indien nodig |
+| Hoofdtitels | vet, duidelijk dominant |
+| Sectietitels | vet, compact, functioneel |
+| Kleuren | Zwart/wit; lichtgrijs uitsluitend voor subtiele scheiding |
+| Logo | Canonical `Cm`; zwart op wit of wit op zwart |
 | Taal | Nederlands; gangbare industry-/machine-termen mogen Engels blijven |
+| Emoji's | Niet gebruiken in canonieke/machine-readable velden |
 
 ## GOOGLE SHEETS
 
-Voor alle Google Sheets, dashboards, cockpits, trackers, registers en control towers is `docs/00_GOVERNANCE/GOOGLE_SHEETS_DESIGN_STANDARD.md` verplicht aanvullend leidend.
-
-Daarbij geldt organisatiebreed minimaal:
-
-- Montserrat;
-- zwart `#000000` als primaire header-/titelkleur;
-- wit `#FFFFFF` als headertekst;
-- Nederlands als standaardtaal;
-- geen donkerblauw `#1f2a44` als CM-headerkleur;
-- gecontroleerde, machine-readable statussen;
-- een scanbare cockpit voor managementdashboards;
-- geen eigen afwijkend design system per agent of script.
+Voor Google Sheets, dashboards, cockpits, trackers, registers en control towers is `docs/00_GOVERNANCE/GOOGLE_SHEETS_DESIGN_STANDARD.md` verplicht aanvullend leidend.
 
 ## TABELLEN EN PRINTBAARHEID
 
 - Gebruik tabellen, checklists, KPI-blokken, statussen, beslismomenten en actiepunten waar mogelijk.
 - Vermijd brede tabellen die kolomkoppen woord voor woord laten afbreken.
-- A4-portret is de standaard voor documenttemplates; operationele Google Sheets volgen de specifieke Google Sheets governance.
-- Gebruik niet standaard mixed portrait/landscape.
-- Als één record te veel velden heeft, splits het in logisch gekoppelde blokken.
-- Geef expliciet aan dat gekoppelde blokken samen één record vormen.
-- Gebruik waar nodig een recordsleutel om blokken betrouwbaar te koppelen voor automation.
+- Geen samengevoegde cellen in machine-readable datatabellen.
+- Gebruik gekoppelde blokken wanneer één record te veel velden heeft.
 - Registers met veel velden worden gegroepeerd per functie, bijvoorbeeld Identiteit / Rechten / Financieel / Verificatie.
 
 ## MACHINE-READABILITY
 
 - Kolomnamen zijn stabiel en eenduidig.
-- Automation mapt alleen naar velden die daadwerkelijk in de werktemplate bestaan.
-- Statusvelden gebruiken gecontroleerde waarden als automation ervan afhankelijk is.
+- Automation mapt alleen naar velden die daadwerkelijk bestaan.
+- Statusvelden gebruiken gecontroleerde waarden.
 - Onbekende waarden = `TBD`.
 - Geen fictieve bedragen, approvalgrenzen, rechtenclaims of statussen.
 
 ## VERMIJDEN
 
-Geen lange paragrafen, essays, overmatige toelichtingen, dubbele vragen, theoretische uitleg, consultancy-jargon, open tekstvelden zonder doel, parallelle formats of brede onleesbare tabellen.
+Geen lange onnodige paragrafen, overmatige toelichtingen, consultancy-jargon, open tekstvelden zonder doel, parallelle formats, brede onleesbare tabellen, decoratieve kleurensystemen, gradients, zware schaduwen, logo-tegels of slecht logo-contrast.
 
 ## KWALITEITSTEST
 
-Een template is alleen goedgekeurd wanneer:
+Een CM-bestand is alleen goedgekeurd wanneer:
 
-1. een stagiair deze zelfstandig kan gebruiken;
+1. het zelfstandig bruikbaar is;
 2. de gebruiker geen extra uitleg nodig heeft;
-3. het document direct tot actie leidt;
-4. de output consistent is;
-5. de template op het toepasselijke formaat bruikbaar en waar relevant printbaar is;
-6. automation mappings naar bestaande velden verwijzen;
-7. eventuele gekoppelde tabelblokken ondubbelzinnig hetzelfde record representeren;
-8. Google Sheets voldoen aan `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
+3. het direct tot inzicht, besluit of actie leidt;
+4. output consistent is;
+5. automation mappings naar bestaande velden verwijzen;
+6. het visueel aansluit op de canonical clean CM-layout;
+7. het `Cm`-logo correct contrasteert: zwart-op-wit of wit-op-zwart;
+8. het geen zichtbaar logo-achtergrondblok bevat tenzij de volledige header bewust zwart is met wit logo;
+9. Google Sheets aanvullend voldoen aan `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
 
-## REFERENTIE
+## GOVERNANCE
 
-`ARTIST_ROADMAP_TEMPLATE` V2.2 is de referentie voor A4-portret, Nederlandstalige structuur, gekoppelde werkblokken en automation-consistentie.
+Owner: CM OPS / CM CONTROL
+Approval voor afwijkingen: Sophia / CM CONTROL
 
-Voor Google Sheets is `GOOGLE_SHEETS_DESIGN_STANDARD.md` de organisatiebrede visuele en functionele referentie.
+Deze standaard geldt uitsluitend voor Custommade Agency. FIERCE heeft eigen governance en branding en wordt niet automatisch gecombineerd met CM.
 
 ## CM REGEL
 
-Een template moet voelen als een operationele tool — niet als een notitieblok, rapport of consultancydocument.
+Clean. Zwart/wit. Montserrat. Canonical `Cm`. Zwart logo op wit óf wit logo op zwart. Veel functionele witruimte. Scanbaar. Operationeel. Geen eigen designinterpretatie door agents of scripts.
