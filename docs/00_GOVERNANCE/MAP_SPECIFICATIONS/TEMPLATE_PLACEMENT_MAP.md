@@ -18,8 +18,7 @@ Gebruik deze kaart bij het inrichten of controleren van Drive-mappen. GitHub bli
 | Status | Betekenis |
 |---|---|
 | ✅ Beschikbaar | Template bestaat in de Library en kan geplaatst worden. |
-
-Alle eerder ontbrekende templates zijn in Sprint 6 aangemaakt (zie sectie 6).
+| 🔒 Verplicht controlbestand | Governed operationeel bestand dat voor iedere actieve CM-managementartiest aanwezig moet zijn. |
 
 ---
 
@@ -46,15 +45,13 @@ De centrale Drive-template-map spiegelt de canonieke Library-structuur. Dit is d
 | `06_GMAIL_TEMPLATES` | EMAIL_INSTRUCTIONS_TEMPLATE | ✅ |
 | `07_REPORTING` | MONTHLY_REPORT_TEMPLATE | ✅ |
 
-> Let op: de huidige Drive-map `00_ADMIN/03_TEMPLATES` gebruikt afwijkende submapnamen (`ARTIST_MANAGEMENT`, `CONTRACTS`, `SOPS`, `MASTER_BOUTIQUE`, `REPORTING`, `WORKFLOWS`). Uitlijnen op bovenstaande canonieke namen is onderdeel van de Drive-rollout.
-
 ---
 
 ## 2. Artist-dossier — `02_ARTIST_MANAGEMENT/[ARTIST_NAME]`
 
-Bron = spec (`MAP_SPECIFICATIONS/ARTIST_FOLDER/`). Werkbare kopieën worden opgeslagen met de artiestnaam in de bestandsnaam volgens de naamconventie `YYYY-MM-DD_[ARTIST]_[MAP]_[DOCUMENTTYPE]_vX.Y`.
+Bron = `ARTIST_FOLDER_STANDARD.md` + `DRIVE_STRUCTURE.md` + relevante Map Specifications. Werkbare kopieën worden opgeslagen met de artiestnaam in de bestandsnaam volgens de geldende naamconventie, behalve governed controlbestanden waarvoor een expliciete vaste bestandsnaam is bepaald.
 
-| Submap | Vereiste template | Library-equivalent | Status |
+| Submap | Vereiste template/controlbestand | Library-equivalent / governance | Status |
 |---|---|---|---|
 | `01_ADMIN` | Intake Template | INTAKE_TEMPLATE | ✅ |
 | `01_ADMIN` | Contact Sheet Template | CONTACT_SHEET_TEMPLATE | ✅ |
@@ -74,6 +71,7 @@ Bron = spec (`MAP_SPECIFICATIONS/ARTIST_FOLDER/`). Werkbare kopieën worden opge
 | `05_BOOKING` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
 | `05_BOOKING` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
 | `06_FINANCE` | Monthly Report Template | MONTHLY_REPORT_TEMPLATE (afgeleid) | ✅ |
+| `06_FINANCE/ROYALTYSHEET` | `[ARTIST]_ROYALTY_SHEET` | ARTIST_FOLDER_STANDARD + TEMPLATE_DESIGN_STANDARD + GOOGLE_SHEETS_DESIGN_STANDARD | 🔒 |
 | `07_SOCIALMEDIA` | Social Register Template | REGISTER_TEMPLATE (domein: Social) | ✅ |
 | `07_SOCIALMEDIA` | Approval Evidence Template | APPROVAL_EVIDENCE_TEMPLATE | ✅ |
 | `07_SOCIALMEDIA` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
@@ -82,15 +80,23 @@ Bron = spec (`MAP_SPECIFICATIONS/ARTIST_FOLDER/`). Werkbare kopieën worden opge
 | `08_PRESS_EPK` | Version Log Template | VERSION_LOG_TEMPLATE | ✅ |
 | `09_ARCHIVE` | Archive Register Template | REGISTER_TEMPLATE (domein: Archive) | ✅ |
 
+### Royalty Sheet — harde placement rule
+
+Iedere actieve Custommade Agency managementartiest heeft verplicht:
+
+`02_ARTIST_MANAGEMENT/[ARTIST]/06_FINANCE/ROYALTYSHEET/[ARTIST]_ROYALTY_SHEET`
+
+Dit is geen optionele dossierkopie en gebruikt daarom niet de algemene datum-/versienaamconventie. De bestandsnaam is exact `[ARTIST]_ROYALTY_SHEET`.
+
+De Sheet volgt verplicht de canonical CM clean dashboardlayout en bevat minimaal neighboring rights/master- en labelafspraken, publishing/auteursrechten en track-splits, approvals/evidence, statements, betalingen, advances/recoupment, contract/accountingreferenties en reminder-/follow-uplogica richting ClickUp.
+
+Drive is opslag en rights/documentatiebron; ClickUp is uitvoering; Moneybird blijft financiële waarheid. Deze verplichting geldt uitsluitend voor CM-managementartiesten en wordt niet automatisch toegepast op FIERCE.
+
 ---
 
 ## 3. Client-dossier — `03_CLIENTS/[CLIENT_OR_PARTNER_NAME]`
 
-Bron = spec (`ROOTS/03_CLIENTS.md` §6). Nog geen aparte client-submapspecificaties in `MAP_SPECIFICATIONS/CLIENT_FOLDER/`; onderstaande mapping neemt de gezaghebbende ROOTS-lijst over. De submap-toewijzing tegen de client-folder-structuur (`DRIVE_STRUCTURE.md`) wacht op review.
-
-> Aandachtspunt voor review: `ROOTS/03_CLIENTS.md` verwijst naar `00_START_HIER`, terwijl de client-folder-regel in `DRIVE_STRUCTURE.md` `01_ADMIN` als eerste submap kent. Deze discrepantie moet in de client-folder-spec worden opgelost.
-
-| Submap | Template (bron: ROOTS §6) | Status |
+| Submap | Template | Status |
 |---|---|---|
 | `01_ADMIN` | CLIENT_PROFILE_TEMPLATE, CLIENT_ONBOARDING_TEMPLATE, EMAIL_INSTRUCTIONS_TEMPLATE, DO_NOTS_TEMPLATE | ✅ |
 | `03_BRIEF_SCOPE` | MANAGEMENT_PROPOSAL_TEMPLATE | ✅ |
@@ -103,8 +109,6 @@ Bron = spec (`ROOTS/03_CLIENTS.md` §6). Nog geen aparte client-submapspecificat
 ---
 
 ## 4. Deal-/asset-case — `04_DEALS/[DEAL_OR_ASSET_NAME]`
-
-Bron = spec (`ROOTS/04_DEALS.md` §6). De ROOTS-spec mandateert reeds twee templates; die worden hier één-op-één overgenomen. Overige regels zijn afgeleid en wachten op formalisering in `MAP_SPECIFICATIONS/DEAL_FOLDER/`.
 
 | Submap | Template | Bron | Status |
 |---|---|---|---|
@@ -121,8 +125,6 @@ Bron = spec (`ROOTS/04_DEALS.md` §6). De ROOTS-spec mandateert reeds twee templ
 
 ## 5. Legal — `07_LEGAL`
 
-Bron = spec (`ROOTS/07_LEGAL.md` §6). `APPROVALS/CM_APPROVAL_REGISTER` is het centrale Approval Register (Google Sheet), **geen template-map** — daar wordt geen template geplaatst. Overige regels zijn afgeleid en wachten op formalisering in `MAP_SPECIFICATIONS/LEGAL_FOLDER/`.
-
 | Submap | Template | Bron | Status |
 |---|---|---|---|
 | `LEGAL_REVIEW` | RIGHTS_AUDIT_TEMPLATE | ROOTS §6 | ✅ |
@@ -134,8 +136,6 @@ Bron = spec (`ROOTS/07_LEGAL.md` §6). `APPROVALS/CM_APPROVAL_REGISTER` is het c
 ---
 
 ## 6. Gedichte template-gaps
-
-De onderstaande, eerder ontbrekende templates zijn in Sprint 6 aangemaakt in de Template Library. Alle statussen in deze kaart staan daarmee op ✅.
 
 | Template | Locatie in Library |
 |---|---|
@@ -153,30 +153,16 @@ Het generieke `REGISTER_TEMPLATE` dekt de domein-registers (Releases, Booking, S
 
 ## Uitrol-script
 
-De operationele uitrol van deze kaart naar Google Drive verloopt via
-`scripts/google-drive/populate-cm-drive-templates.gs`. Waar
-`create-cm-drive-structure.gs` de goedgekeurde lege mappenboom bouwt, vult dit
-script iedere map met de juiste werkbare kopieen volgens de secties 1 t/m 5:
+De operationele uitrol naar Google Drive verloopt via `scripts/google-drive/populate-cm-drive-templates.gs`. `create-cm-drive-structure.gs` bouwt de governed mappenboom en maakt voor actieve CM-managementartiesten verplicht `06_FINANCE/ROYALTYSHEET` aan.
 
-- `populateCmDriveTemplates()` — centrale library + alle artist-dossiers + legal.
-- `populateCmArtistTemplates('ARTIEST')` — één artist-dossier.
-- `populateCmClientTemplates('CLIENT')` — één client-dossier.
-- `populateCmDealTemplates('DEAL')` — één deal-/asset-case.
+De Royalty Sheet is een governed controlbestand en moet door de relevante royalty-sheet build/populate automation als `[ARTIST]_ROYALTY_SHEET` in deze map worden aangemaakt of gecontroleerd. Het algemene template-populateproces mag geen parallelle royalty-sheetnaam of alternatieve locatie creëren.
 
-Het script is idempotent (maakt alleen ontbrekende bestanden aan), gebruikt de
-naamconventie `YYYY-MM-DD_[ENTITY]_[MAP]_[DOCUMENTTYPE]_vX.Y` voor dossierkopieen
-en verwijst in iedere kopie naar het canonieke GitHub-template. Draai eerst met
-`DRY_RUN = true` en controleer de log.
-
-De gegenereerde Google Docs worden opgebouwd volgens de 14 verplichte onderdelen
-van `TEMPLATE_ARCHITECTUURSTANDAARD.md` (leidend voor template-opbouw en
-operationele kopieen), met `TBD` waar informatie nog ontbreekt. De vorm volgt
-`docs/00_GOVERNANCE/TEMPLATE_DESIGN_STANDARD.md` (Montserrat, hoofdletters voor
-titels, geen kleuren, geen emoji).
+Alle gegenereerde CM-bestanden volgen `TEMPLATE_DESIGN_STANDARD.md`; Google Sheets volgen aanvullend `GOOGLE_SHEETS_DESIGN_STANDARD.md`.
 
 ## Governance
 
-- Deze kaart valt onder de governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
-- Sprint 6 is vrijgegeven; de kaart is leidend voor template-aanvulling en Drive-uitrol.
-- Waar een ROOTS-spec (`ROOTS/03_CLIENTS.md`, `ROOTS/04_DEALS.md`, `ROOTS/07_LEGAL.md`) al een template mandateert, is die mapping leidend; afgeleide regels wachten op review door Sophia als process owner.
-- Wijzigingen verlopen via branch, commit, review en Pull Request.
+- Governance-ladder: Drive Structure → Folder Standards → Map Specifications → **Template Placement Map** → Templates.
+- Voor artist Royalty Sheets zijn `DRIVE_STRUCTURE.md`, `ARTIST_FOLDER_STANDARD.md`, `TEMPLATE_DESIGN_STANDARD.md` en `GOOGLE_SHEETS_DESIGN_STANDARD.md` gezamenlijk leidend.
+- De Royalty Sheet is verplicht voor iedere actieve CM-managementartiest en heeft exact één governed Drive-locatie en bestandsnaam.
+- FIERCE heeft eigen governance en wordt niet automatisch gecombineerd met CM.
+- Wijzigingen verlopen via de geldende GitHub governance/reviewflow.
