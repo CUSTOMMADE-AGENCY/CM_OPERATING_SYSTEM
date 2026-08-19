@@ -2,17 +2,9 @@
  * Creates the approved Custommade Agency Google Drive folder structure.
  * Governance status: PRIMARY for approved Drive build.
  *
- * Bouwt exact de goedgekeurde structuur uit docs/00_GOVERNANCE/DRIVE_STRUCTURE.md
- * (production baseline). Roots die in de baseline root-only zijn
- * (01_MASTER_BOUTIQUE, 05_OPERATIONS, 06_FINANCE, 08_MARKETING, 09_CONTENT)
- * krijgen bewust geen submappen.
- *
- * Usage:
- * 1. Open Google Apps Script in the target Google account.
- * 2. Set PARENT_FOLDER_ID to a folder ID, or leave blank to use My Drive root.
- * 3. Run createCmDriveStructure().
- * 4. Optional: run createCmClientFolder('CLIENT_OR_PARTNER_NAME') of
- *    createCmDealStructure('DEAL_OR_ASSET_NAME') voor een nieuw dossier.
+ * Bouwt exact de goedgekeurde structuur uit docs/00_GOVERNANCE/DRIVE_STRUCTURE.md.
+ * Iedere actieve CM-managementartiest krijgt verplicht:
+ * 06_FINANCE/ROYALTYSHEET
  *
  * Rules:
  * - Creates missing folders only; never deletes, renames or moves content.
@@ -37,10 +29,6 @@ const CM_ROOT_FOLDERS = [
   '99_ARCHIVE',
 ];
 
-// Vaste root-level submappen conform de baseline. Roots die hier niet staan zijn
-// bewust root-only (01_MASTER_BOUTIQUE, 05_OPERATIONS, 06_FINANCE, 08_MARKETING,
-// 09_CONTENT). 02_ARTIST_MANAGEMENT/03_CLIENTS/04_DEALS krijgen per-dossier
-// structuren via de losse helperfuncties.
 const ROOT_SUBFOLDERS = {
   '00_ADMIN': [
     '01_INBOX_REVIEW',
@@ -74,8 +62,8 @@ const ROOT_SUBFOLDERS = {
   ],
 };
 
-// 07_LEGAL/APPROVALS bevat het centrale approval register als enige submap.
 const LEGAL_APPROVALS_CHILD = 'CM_APPROVAL_REGISTER';
+const ARTIST_ROYALTY_FOLDER = 'ROYALTYSHEET';
 
 const ARTISTS = [
   'CALSEY',
@@ -136,13 +124,38 @@ function createCmDriveStructure() {
 
     if (rootFolderName === '02_ARTIST_MANAGEMENT') {
       ARTISTS.forEach(function(artistName) {
-        const artistFolder = getOrCreateFolder_(rootFolder, artistName);
-        ARTIST_SUBFOLDERS.forEach(function(artistSubfolderName) {
-          getOrCreateFolder_(artistFolder, artistSubfolderName);
-        });
+        createArtistStructure_(rootFolder, artistName);
       });
     }
   });
+}
+
+function createCmArtistFolder(artistName) {
+  if (!artistName || String(artistName).trim() === '') {
+    throw new Error('artistName is required.');
+  }
+
+  const root = getOrCreateFolder_(getCmParentFolder_(), CM_DRIVE_ROOT);
+  const artistsRoot = getOrCreateFolder_(root, '02_ARTIST_MANAGEMENT');
+  const artistFolder = createArtistStructure_(artistsRoot, normalizeFolderName_(artistName));
+  return artistFolder.getUrl();
+}
+
+function createArtistStructure_(artistsRoot, artistName) {
+  const artistFolder = getOrCreateFolder_(artistsRoot, artistName);
+  let financeFolder = null;
+
+  ARTIST_SUBFOLDERS.forEach(function(folderName) {
+    const folder = getOrCreateFolder_(artistFolder, folderName);
+    if (folderName === '06_FINANCE') {
+      financeFolder = folder;
+    }
+  });
+
+  // Mandatory for every active CM management artist.
+  getOrCreateFolder_(financeFolder, ARTIST_ROYALTY_FOLDER);
+
+  return artistFolder;
 }
 
 function createCmClientFolder(clientName) {
@@ -181,18 +194,15 @@ function getCmParentFolder_() {
   if (PARENT_FOLDER_ID && PARENT_FOLDER_ID.trim() !== '') {
     return DriveApp.getFolderById(PARENT_FOLDER_ID.trim());
   }
-
   return DriveApp.getRootFolder();
 }
 
 function getOrCreateFolder_(parentFolder, folderName) {
   const existingFolders = parentFolder.getFoldersByName(folderName);
-
   if (existingFolders.hasNext()) {
     Logger.log('Exists: ' + folderName);
     return existingFolders.next();
   }
-
   const createdFolder = parentFolder.createFolder(folderName);
   Logger.log('Created: ' + folderName);
   return createdFolder;
