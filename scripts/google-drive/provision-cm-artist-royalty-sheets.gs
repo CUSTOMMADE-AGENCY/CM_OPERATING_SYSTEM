@@ -19,10 +19,8 @@
  * - Reuses/creates only the governed ROYALTYSHEET folder.
  * - Copies one canonical native Google Sheets master.
  * - Replaces [ARTIST] placeholders in the copied workbook only.
- * - Normalizes folder display names before constructing file names, so legacy
- *   whitespace (for example "GINIIO ") cannot create a malformed file name.
- * - Active artist scope = direct artist folders under 02_ARTIST_MANAGEMENT.
- *   Inactive artists belong in 99_ARCHIVE and are therefore not provisioned.
+ * - Normalizes folder display names before constructing file names.
+ * - Explicit inactive/archive exclusions override live-folder presence.
  * - Drive = storage/rights evidence; ClickUp = execution; Moneybird = financial truth.
  */
 
@@ -32,12 +30,12 @@ const CM_RS_ARTISTS_ROOT = '02_ARTIST_MANAGEMENT';
 const CM_RS_FINANCE_FOLDER = '06_FINANCE';
 const CM_RS_ROYALTY_FOLDER = 'ROYALTYSHEET';
 
-// Canonical blank CM Royalty Sheet master in:
-// OS_CUSTOMMADE/00_ADMIN/03_TEMPLATES/02_ARTIST_MANAGEMENT
 const CM_RS_MASTER_SPREADSHEET_ID = '1KuZvTbZ878kz-kdU-4qbPgD2mDH_SLu7dF6RcwbDl5g';
 const CM_RS_MASTER_FILE_NAME = 'CM_ARTIST_ROYALTY_SHEET_MASTER';
 
-// true = preview only; missing folders may still be safely created idempotently.
+// Confirmed inactive / archive scope. Keep normalized values only.
+const CM_RS_EXCLUDED_ARTISTS = ['JAIRZINHO', 'LATIFAH'];
+
 const CM_RS_DRY_RUN = true;
 
 function provisionCmArtistRoyaltySheets() {
@@ -46,7 +44,13 @@ function provisionCmArtistRoyaltySheets() {
   const folders = artistsRoot.getFolders();
 
   while (folders.hasNext()) {
-    provisionCmArtistRoyaltySheetInFolder_(folders.next(), report);
+    const folder = folders.next();
+    const artist = normalizeCmRsArtist_(folder.getName());
+    if (isCmRsExcludedArtist_(artist)) {
+      report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
+      continue;
+    }
+    provisionCmArtistRoyaltySheetInFolder_(folder, report);
   }
 
   logCmRsReport_(report);
@@ -61,11 +65,16 @@ function provisionCmArtistRoyaltySheet(artistName) {
   const report = newCmRsReport_();
   const artistsRoot = getCmRsArtistsRoot_();
   const normalized = normalizeCmRsArtist_(artistName);
+
+  if (isCmRsExcludedArtist_(normalized)) {
+    report.skipped.push(normalized + ': uitgesloten — inactive/archive scope');
+    logCmRsReport_(report);
+    return report;
+  }
+
   const folders = artistsRoot.getFolders();
   let match = null;
 
-  // Compare normalized values so legacy spacing/casing in folder names does not
-  // break one-artist provisioning.
   while (folders.hasNext()) {
     const folder = folders.next();
     if (normalizeCmRsArtist_(folder.getName()) === normalized) {
@@ -93,6 +102,12 @@ function auditCmArtistRoyaltySheets() {
   while (folders.hasNext()) {
     const artistFolder = folders.next();
     const artist = normalizeCmRsArtist_(artistFolder.getName());
+
+    if (isCmRsExcludedArtist_(artist)) {
+      report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
+      continue;
+    }
+
     const expectedName = artist + '_ROYALTY_SHEET';
     const finance = findChildFolder_(artistFolder, CM_RS_FINANCE_FOLDER);
 
@@ -121,6 +136,12 @@ function auditCmArtistRoyaltySheets() {
 
 function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
   const artist = normalizeCmRsArtist_(artistFolder.getName());
+
+  if (isCmRsExcludedArtist_(artist)) {
+    report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
+    return null;
+  }
+
   const expectedName = artist + '_ROYALTY_SHEET';
   const finance = getOrCreateCmRsFolder_(artistFolder, CM_RS_FINANCE_FOLDER);
   const royaltyFolder = getOrCreateCmRsFolder_(finance, CM_RS_ROYALTY_FOLDER);
@@ -132,9 +153,7 @@ function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
 
   const masterFile = DriveApp.getFileById(CM_RS_MASTER_SPREADSHEET_ID);
   if (masterFile.getName() !== CM_RS_MASTER_FILE_NAME) {
-    report.errors.push(
-      artist + ': master-ID verwijst niet naar verwachte master (' + masterFile.getName() + ')'
-    );
+    report.errors.push(artist + ': master-ID verwijst niet naar verwachte master (' + masterFile.getName() + ')');
     return null;
   }
 
@@ -147,20 +166,21 @@ function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
   const spreadsheet = SpreadsheetApp.openById(copy.getId());
 
   spreadsheet.getSheets().forEach(function(sheet) {
-    sheet.createTextFinder('[ARTIST]')
-      .matchCase(true)
-      .replaceAllWith(artist);
+    sheet.createTextFinder('[ARTIST]').matchCase(true).replaceAllWith(artist);
   });
 
   SpreadsheetApp.flush();
   return copy;
 }
 
+function isCmRsExcludedArtist_(artist) {
+  return CM_RS_EXCLUDED_ARTISTS.indexOf(normalizeCmRsArtist_(artist)) !== -1;
+}
+
 function getCmRsArtistsRoot_() {
   const parent = CM_RS_PARENT_FOLDER_ID && CM_RS_PARENT_FOLDER_ID.trim() !== ''
     ? DriveApp.getFolderById(CM_RS_PARENT_FOLDER_ID.trim())
     : DriveApp.getRootFolder();
-
   const root = getOrCreateCmRsFolder_(parent, CM_RS_DRIVE_ROOT);
   return getOrCreateCmRsFolder_(root, CM_RS_ARTISTS_ROOT);
 }
@@ -176,11 +196,7 @@ function findChildFolder_(parent, name) {
 }
 
 function normalizeCmRsArtist_(name) {
-  return String(name)
-    .trim()
-    .replace(/\s+/g, '_')
-    .replace(/[^A-Za-z0-9_\-]/g, '')
-    .toUpperCase();
+  return String(name).trim().replace(/\s+/g, '_').replace(/[^A-Za-z0-9_\-]/g, '').toUpperCase();
 }
 
 function newCmRsReport_() {
