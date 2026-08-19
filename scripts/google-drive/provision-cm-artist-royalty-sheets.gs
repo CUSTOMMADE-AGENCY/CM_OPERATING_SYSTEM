@@ -19,6 +19,8 @@
  * - Reuses/creates only the governed ROYALTYSHEET folder.
  * - Copies one canonical native Google Sheets master.
  * - Replaces [ARTIST] placeholders in the copied workbook only.
+ * - Normalizes folder display names before constructing file names, so legacy
+ *   whitespace (for example "GINIIO ") cannot create a malformed file name.
  * - Active artist scope = direct artist folders under 02_ARTIST_MANAGEMENT.
  *   Inactive artists belong in 99_ARCHIVE and are therefore not provisioned.
  * - Drive = storage/rights evidence; ClickUp = execution; Moneybird = financial truth.
@@ -38,26 +40,19 @@ const CM_RS_MASTER_FILE_NAME = 'CM_ARTIST_ROYALTY_SHEET_MASTER';
 // true = preview only; missing folders may still be safely created idempotently.
 const CM_RS_DRY_RUN = true;
 
-/**
- * Provision all active CM management artists.
- */
 function provisionCmArtistRoyaltySheets() {
   const report = newCmRsReport_();
   const artistsRoot = getCmRsArtistsRoot_();
   const folders = artistsRoot.getFolders();
 
   while (folders.hasNext()) {
-    const artistFolder = folders.next();
-    provisionCmArtistRoyaltySheetInFolder_(artistFolder, report);
+    provisionCmArtistRoyaltySheetInFolder_(folders.next(), report);
   }
 
   logCmRsReport_(report);
   return report;
 }
 
-/**
- * Provision one artist by folder/name.
- */
 function provisionCmArtistRoyaltySheet(artistName) {
   if (!artistName || String(artistName).trim() === '') {
     throw new Error('artistName is required.');
@@ -66,22 +61,30 @@ function provisionCmArtistRoyaltySheet(artistName) {
   const report = newCmRsReport_();
   const artistsRoot = getCmRsArtistsRoot_();
   const normalized = normalizeCmRsArtist_(artistName);
-  const matches = artistsRoot.getFoldersByName(normalized);
+  const folders = artistsRoot.getFolders();
+  let match = null;
 
-  if (!matches.hasNext()) {
+  // Compare normalized values so legacy spacing/casing in folder names does not
+  // break one-artist provisioning.
+  while (folders.hasNext()) {
+    const folder = folders.next();
+    if (normalizeCmRsArtist_(folder.getName()) === normalized) {
+      match = folder;
+      break;
+    }
+  }
+
+  if (!match) {
     report.errors.push('Artist folder ontbreekt onder 02_ARTIST_MANAGEMENT: ' + normalized);
     logCmRsReport_(report);
     return report;
   }
 
-  provisionCmArtistRoyaltySheetInFolder_(matches.next(), report);
+  provisionCmArtistRoyaltySheetInFolder_(match, report);
   logCmRsReport_(report);
   return report;
 }
 
-/**
- * Audit only: verifies folder + exact governed file for every active artist.
- */
 function auditCmArtistRoyaltySheets() {
   const report = newCmRsReport_();
   const artistsRoot = getCmRsArtistsRoot_();
@@ -89,7 +92,7 @@ function auditCmArtistRoyaltySheets() {
 
   while (folders.hasNext()) {
     const artistFolder = folders.next();
-    const artist = artistFolder.getName();
+    const artist = normalizeCmRsArtist_(artistFolder.getName());
     const expectedName = artist + '_ROYALTY_SHEET';
     const finance = findChildFolder_(artistFolder, CM_RS_FINANCE_FOLDER);
 
@@ -117,7 +120,7 @@ function auditCmArtistRoyaltySheets() {
 }
 
 function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
-  const artist = artistFolder.getName();
+  const artist = normalizeCmRsArtist_(artistFolder.getName());
   const expectedName = artist + '_ROYALTY_SHEET';
   const finance = getOrCreateCmRsFolder_(artistFolder, CM_RS_FINANCE_FOLDER);
   const royaltyFolder = getOrCreateCmRsFolder_(finance, CM_RS_ROYALTY_FOLDER);
