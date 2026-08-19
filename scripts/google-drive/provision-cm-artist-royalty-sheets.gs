@@ -14,13 +14,15 @@
  * [ARTIST]_ROYALTY_SHEET
  *
  * Rules:
+ * - Only active CM management ARTISTS are eligible.
+ * - Influencer/creator-only clients are explicitly excluded from artist royalty provisioning.
  * - Idempotent: creates only when the exact governed file name is absent.
  * - Never overwrites, renames, deletes or moves an existing artist Royalty Sheet.
  * - Reuses/creates only the governed ROYALTYSHEET folder.
  * - Copies one canonical native Google Sheets master.
  * - Replaces [ARTIST] placeholders in the copied workbook only.
  * - Normalizes folder display names before constructing file names.
- * - Explicit inactive/archive exclusions override live-folder presence.
+ * - Explicit inactive/archive and non-artist exclusions override live-folder presence.
  * - Drive = storage/rights evidence; ClickUp = execution; Moneybird = financial truth.
  */
 
@@ -36,6 +38,10 @@ const CM_RS_MASTER_FILE_NAME = 'CM_ARTIST_ROYALTY_SHEET_MASTER';
 // Confirmed inactive / archive scope. Keep normalized values only.
 const CM_RS_EXCLUDED_ARTISTS = ['JAIRZINHO', 'LATIFAH'];
 
+// Confirmed CM clients that are not artist-management royalty scope.
+// GOUDTJE_GET_PAID is managed as INFLUENCER/CREATOR, not as an artist.
+const CM_RS_NON_ARTIST_EXCLUSIONS = ['GOUDTJE_GET_PAID'];
+
 const CM_RS_DRY_RUN = true;
 
 function provisionCmArtistRoyaltySheets() {
@@ -48,6 +54,10 @@ function provisionCmArtistRoyaltySheets() {
     const artist = normalizeCmRsArtist_(folder.getName());
     if (isCmRsExcludedArtist_(artist)) {
       report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
+      continue;
+    }
+    if (isCmRsNonArtist_(artist)) {
+      report.skipped.push(artist + ': uitgesloten — influencer/creator, geen artist royalty scope');
       continue;
     }
     provisionCmArtistRoyaltySheetInFolder_(folder, report);
@@ -68,6 +78,11 @@ function provisionCmArtistRoyaltySheet(artistName) {
 
   if (isCmRsExcludedArtist_(normalized)) {
     report.skipped.push(normalized + ': uitgesloten — inactive/archive scope');
+    logCmRsReport_(report);
+    return report;
+  }
+  if (isCmRsNonArtist_(normalized)) {
+    report.skipped.push(normalized + ': uitgesloten — influencer/creator, geen artist royalty scope');
     logCmRsReport_(report);
     return report;
   }
@@ -107,6 +122,10 @@ function auditCmArtistRoyaltySheets() {
       report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
       continue;
     }
+    if (isCmRsNonArtist_(artist)) {
+      report.skipped.push(artist + ': uitgesloten — influencer/creator, geen artist royalty scope');
+      continue;
+    }
 
     const expectedName = artist + '_ROYALTY_SHEET';
     const finance = findChildFolder_(artistFolder, CM_RS_FINANCE_FOLDER);
@@ -139,6 +158,10 @@ function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
 
   if (isCmRsExcludedArtist_(artist)) {
     report.skipped.push(artist + ': uitgesloten — inactive/archive scope');
+    return null;
+  }
+  if (isCmRsNonArtist_(artist)) {
+    report.skipped.push(artist + ': uitgesloten — influencer/creator, geen artist royalty scope');
     return null;
   }
 
@@ -175,6 +198,10 @@ function provisionCmArtistRoyaltySheetInFolder_(artistFolder, report) {
 
 function isCmRsExcludedArtist_(artist) {
   return CM_RS_EXCLUDED_ARTISTS.indexOf(normalizeCmRsArtist_(artist)) !== -1;
+}
+
+function isCmRsNonArtist_(artist) {
+  return CM_RS_NON_ARTIST_EXCLUSIONS.indexOf(normalizeCmRsArtist_(artist)) !== -1;
 }
 
 function getCmRsArtistsRoot_() {
